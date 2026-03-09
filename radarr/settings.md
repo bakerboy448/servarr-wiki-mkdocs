@@ -224,9 +224,8 @@ Also, note that for each individual settings page, there are some options at the
 - `{MediaInfo VideoDynamicRangeType}` = DV HDR10
 
 > `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` do not currently support a `:EN+DE` suffix allowed in Sonarr to filter the languages included in the filename. There is an open [issue](https://github.com/Radarr/Radarr/issues/4710) regarding this.
-~~`MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.~~
-{.is-info}
-
+!!! info
+    ~~`MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.~~
 !!! info
     `MediaInfo VideoDynamicRangeType` will give possible values of: DV, DV HDR10, DV HLG, DV SDR, HDR10, HDR10Plus, HLG, and PQ.
 
