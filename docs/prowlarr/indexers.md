@@ -106,4 +106,4 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 # Supported Indexers
 
-- [See this wiki page for a list of supported indexers as of the latest nightly.](../prowlarr/supported-indexers/.md)
+- [See this wiki page for a list of supported indexers as of the latest nightly.](../prowlarr/supported-indexers.md)
