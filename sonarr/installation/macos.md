@@ -1,13 +1,9 @@
 ---
 title: Sonarr MacOS Installation
 description: MacOS installation guide for Sonarr
-published: true
-date: 2023-07-28T11:15:29.588Z
-tags: sonarr
-editor: markdown
-dateCreated: 2023-07-03T20:13:29.890Z
+tags:
+  - sonarr
 ---
-
 # MacOS (OSX)
 
 {#OSX}
