@@ -1,13 +1,15 @@
 ---
 title: Whisparr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration with Whisparr workflows
-published: true
-date: 2022-05-02T03:37:47.889Z
-tags: scripts, automation, custom, integration, hooks, api, whisparr
-editor: markdown
-dateCreated: 2022-04-03T03:49:14.966Z
+tags:
+  - scripts
+  - automation
+  - custom
+  - integration
+  - hooks
+  - api
+  - whisparr
 ---
-
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Whisparr via the [Connect Settings](/whisparr/settings#connections).
 
 # Overview

@@ -1,13 +1,14 @@
 ---
 title: Whisparr Tips and Tricks
 description: Advanced tips, optimization techniques, and workflow improvements for experienced Whisparr users
-published: true
-date: 2022-03-24T02:53:26.272Z
-tags: tips, tricks, optimization, workflow, advanced, whisparr
-editor: markdown
-dateCreated: 2021-08-14T15:12:58.934Z
+tags:
+  - tips
+  - tricks
+  - optimization
+  - workflow
+  - advanced
+  - whisparr
 ---
-
 # TRaSH's Custom Formats
 
 - [TRasH has a guide](https://trash-guides.info/Whisparr/) on how to use [Whisparr => Settings => Custom Formats](/whisparr/settings#custom-formats) as well as a shared repository of Custom Formats.

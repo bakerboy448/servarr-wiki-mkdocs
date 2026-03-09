@@ -1,13 +1,14 @@
 ---
 title: Whisparr Library
 description: Manage your adult video collection, monitor status, and organize content library in Whisparr
-published: true
-date: 2022-03-17T12:55:49.087Z
-tags: whisparr, library, collection, management, organization, content
-editor: markdown
-dateCreated: 2021-05-25T01:24:18.386Z
+tags:
+  - whisparr
+  - library
+  - collection
+  - management
+  - organization
+  - content
 ---
-
 # Movies
 
 ## Library View

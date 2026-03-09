@@ -1,13 +1,14 @@
 ---
 title: Whisparr System
 description: System information, logs, tasks, and status monitoring for Whisparr administration and troubleshooting
-published: true
-date: 2022-05-05T12:55:26.343Z
-tags: system, administration, logs, tasks, status, whisparr
-editor: markdown
-dateCreated: 2022-04-03T03:49:55.636Z
+tags:
+  - system
+  - administration
+  - logs
+  - tasks
+  - status
+  - whisparr
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

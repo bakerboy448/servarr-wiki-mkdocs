@@ -1,13 +1,10 @@
 ---
 title: Whisparr Appdata Directory
-description:
-published: true
-date: 2021-11-24T19:23:52.023Z
-tags: whisparr, appdata
-editor: markdown
-dateCreated: 2021-05-25T02:34:50.549Z
+description: 
+tags:
+  - whisparr
+  - appdata
 ---
-
 > Below are the default paths for the application data directory {.is-info}
 
 > All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}

@@ -1,13 +1,14 @@
 ---
 title: Whisparr Settings
 description: Comprehensive guide to configuring Whisparr settings for media profiles, quality definitions, indexers, and automation preferences
-published: true
-date: 2023-08-11T02:47:42.546Z
-tags: settings, configuration, whisparr, profiles, quality, indexers
-editor: markdown
-dateCreated: 2022-04-03T03:49:43.530Z
+tags:
+  - settings
+  - configuration
+  - whisparr
+  - profiles
+  - quality
+  - indexers
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
