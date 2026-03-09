@@ -58,4 +58,3 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 - [hotio/lidarr](https://hotio.dev/containers/lidarr/)
 - [lscr.io/linuxserver/lidarr](https://docs.linuxserver.io/images/docker-lidarr)
-{.links-list}

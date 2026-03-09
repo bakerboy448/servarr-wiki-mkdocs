@@ -47,7 +47,6 @@ It's therefore advisable to install Readarr as a system tray application if the 
 
 - [Windows x64 Installer](https://readarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
 - [Windows x32 Installer](https://readarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
-{.links-list}
 
 !!! info
     It is possible to install Readarr manually using the [x64 .zip download](https://readarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.

@@ -159,4 +159,3 @@ Text searches seem to be having a bit of a flaky issue, because it does that sea
 
 - [Readarr #2783: Metadata Server Issues (429) & Authors with missing books / Authors not found](https://github.com/Readarr/Readarr/issues/2783)
 - [Readarr #3486: Migrate to OpenLibrary as Metadata Backend](https://github.com/Readarr/Readarr/issues/3486)
-{.links-list}

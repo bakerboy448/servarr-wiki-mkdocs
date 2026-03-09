@@ -12,4 +12,3 @@ tags:
 - [Ubuntu](https://sonarr.tv/#downloads-linux-ubuntu)
 - [ArchLinux](https://aur.archlinux.org/packages/sonarr/)
 - [Gentoo](https://sonarr.tv/#downloads-linux-gentoo)
-{.links-list}

@@ -5,7 +5,6 @@ It is possible to run multiple instances of Whisparr. This is typically done whe
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)
 - [Docker Multiple Instances](#docker-multi)
-{.links-list}
 
 The following requirements should be noted:
 

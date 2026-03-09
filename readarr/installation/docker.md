@@ -87,4 +87,3 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 - [hotio/readarr](https://hotio.dev/containers/readarr/)
 - [lscr.io/linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)
-{.links-list}

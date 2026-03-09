@@ -19,7 +19,6 @@ tags:
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/whisparr/quick-start-guide)
 - [<i class="fas fa-cog"></i>&emsp;Environment Variables](/whisparr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/whisparr/faq)
-{.links-list}
 
 # User Guide
 
@@ -33,30 +32,25 @@ tags:
 - [<i class="fas fa-database"></i>&emsp;Application Data Directory](/whisparr/appdata-directory)
 - [<i class="fas fa-server"></i>&emsp; Configure Whisparr with a PostgreSQL Database](/whisparr/postgres-setup)
 - [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/whisparr/supported)
-{.links-list}
 
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/whisparr/troubleshooting)
 - [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
-{.links-list}
 
 # Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/whisparr/contributing)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://whisparr.com/docs/api/#/)
-{.links-list}
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Whisparr Discord*](https://whisparr.com/discord)
-{.links-list}
 
 # Links
 
 - [whisparr.com *Website*](https://whisparr.com)
 - [Donate *Donations*](https://whisparr.com/donate)
 - [GitHub *Source Code*](https://github.com/whisparr/whisparr)
-{.links-list}

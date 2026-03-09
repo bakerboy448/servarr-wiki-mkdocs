@@ -19,7 +19,6 @@ tags:
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/radarr/quick-start-guide)
 - [<i class="fas fa-cog"></i>&emsp;Environment Variables](/radarr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/radarr/faq)
-{.links-list}
 
 # User Guide
 
@@ -33,30 +32,25 @@ tags:
 - [<i class="fas fa-database"></i>&emsp;Application Data Directory](/radarr/appdata-directory)
 - [<i class="fas fa-server"></i>&emsp; Configure Radarr with a PostgreSQL Database](/radarr/postgres-setup)
 - [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/radarr/supported)
-{.links-list}
 
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/radarr/troubleshooting)
 - [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
-{.links-list}
 
 # Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/radarr/contributing)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://radarr.video/docs/api/#/)
-{.links-list}
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Radarr Discord*](https://radarr.video/discord)
-{.links-list}
 
 # Links
 
 - [radarr.video *Website*](https://radarr.video)
 - [Donate *Donations*](https://radarr.video/donate)
 - [GitHub *Source Code*](https://github.com/radarr/radarr)
-{.links-list}

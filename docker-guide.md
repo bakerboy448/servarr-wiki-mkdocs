@@ -493,7 +493,6 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
 # Interesting Docker Images
 
 - [rasmunk/sshfs](https://github.com/rasmunk/docker-volume-sshfs)
-{.links-list}
 - [hotio’s](https://hotio.dev/) The documentation and Dockerfile don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests (except Sonarr) which may be useful for testing.
   - [sonarr](https://hotio.dev/containers/sonarr)
   - [radarr](https://hotio.dev/containers/radarr)
@@ -510,7 +509,6 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
   - [bazarr](https://hotio.dev/containers/bazarr) for subtitles
   - [pullio](https://hotio.dev/pullio/) for auto updating containers
   - [unpackerr](https://hotio.dev/containers/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
-{.links-list}
 - [linuxserver.io](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained. However, avoid their 'suggested (optional)' paths.
   - [SWAG Proxy](https://hub.docker.com/r/linuxserver/swag)
   - [qbittorrent](https://hub.docker.com/r/linuxserver/qbittorrent/)
@@ -530,7 +528,6 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
   - [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/)
   - [radarr](https://hub.docker.com/r/binhex/arch-radarr/)
   - [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/)
-{.links-list}
 
 ## All-in-One Solutions
 
@@ -599,10 +596,8 @@ If you find yourself setting a UMASK of `000` (which is 777 for folders and 666 
 
 - [Sonarr Discord](https://discord.sonarr.tv/)
 - [Radarr Discord](https://radarr.video/discord)
-{.links-list}
 
 ## Forum Support (Reddit)
 
 - [/r/sonarr](http://reddit.com/r/sonarr)
 - [/r/radarr](http://reddit.com/r/radarr)
-{.links-list}

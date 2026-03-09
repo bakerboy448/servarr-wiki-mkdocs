@@ -39,4 +39,3 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 - [hotio/prowlarr](https://hotio.dev/containers/prowlarr/)
 - [lscr.io/linuxserver/prowlarr](https://docs.linuxserver.io/images/docker-prowlarr)
-{.links-list}

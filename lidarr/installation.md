@@ -16,4 +16,3 @@ tags:
 # Recommended Guides
 
 - [Setup Reverse Proxy *Complete guide for reverse proxy setup with Nginx or Apache*](/lidarr/installation/reverse-proxy)
-{.links-list}

@@ -35,7 +35,6 @@ The Servarr Team
 - [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/readarr/installation)
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/readarr/quick-start-guide)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/readarr/faq)
-{.links-list}
 
 # User Guide
 
@@ -50,31 +49,26 @@ The Servarr Team
 - [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/readarr/appdata-directory)
 - [<i class="fas fa-server"></i>&emsp; Configure Readarr with a PostgreSQL Database](/readarr/postgres-setup)
 - [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/readarr/supported)
-{.links-list}
 
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/readarr/troubleshooting)
 - [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
-{.links-list}
 - [<i class="fa-solid fa-signal"></i>&emsp;Readarr Metadata Issues *Status of Metadata and Known Issues*](/readarr/metadata-issues)
 
 # Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/readarr/contributing)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://readarr.com/docs/api/)
-{.links-list}
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Readarr Discord*](https://readarr.com/discord)
-{.links-list}
 
 # Links
 
 - [readarr.com *Website*](https://readarr.com)
 - [Donate *Donations*](https://readarr.com/donate)
 - [GitHub *Source Code*](https://github.com/readarr/readarr)
-{.links-list}

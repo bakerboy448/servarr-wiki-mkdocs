@@ -16,7 +16,6 @@ It is possible to run multiple instances of Sonarr. This is typically done when 
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)
 - [Docker Multiple Instances](#docker-multi)
-{.links-list}
 
 The following requirements should be noted:
 

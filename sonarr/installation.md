@@ -16,4 +16,3 @@ tags:
 
 - [Setup Reverse Proxy *Complete guide for reverse proxy setup with Nginx or Apache*](/sonarr/installation/reverse-proxy)
 - [Setup Multiple Instances *Setup guide for running multiple instances on various platforms*](/sonarr/installation/multiple-instances)
-{.links-list}
