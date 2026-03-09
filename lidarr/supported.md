@@ -74,7 +74,8 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-  > IP Torrents' native implementation does not support Search {.is-info}
+!!! info
+    IP Torrents' native implementation does not support Search 
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Nyaa {#nyaa}
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
@@ -82,8 +83,8 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
-  > The RSS feed must contain a `pubdate`. The release size is recommended as well.
-  {.is-info}
+!!! info
+    The RSS feed must contain a `pubdate`. The release size is recommended as well.
   - [Refer to the Settings Page](/lidarr/settings#indexer-settings)
 - TorrentLeech {#torrentleech}
   - Private Indexer
@@ -105,7 +106,8 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
 
- > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
+!!! info
+    You can use a "pretty address" like `SomePrettyName <email@example.org>` 
 
 - Emby (Media Browser) {#mediabrowser}
 - Gotify {#gotify}
