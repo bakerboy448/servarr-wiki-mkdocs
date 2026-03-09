@@ -10,7 +10,7 @@ tags:
 ---
 # By Platform
 
-[<i class="fab fa-windows" style="font-size: 3em;"></i>](/radarr/installation/windows)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-linux" style="font-size: 3em;"></i>](/radarr/installation/linux)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-apple" style="font-size: 3em;"></i>](/radarr/installation/macos)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-freebsd" style="font-size: 3em;"></i>](/radarr/installation/freebsd)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-docker" style="font-size: 3em;"></i>](/radarr/installation/docker)
+[:fontawesome-brands-windows:](/radarr/installation/windows)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-linux:](/radarr/installation/linux)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-apple:](/radarr/installation/macos)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-freebsd:](/radarr/installation/freebsd)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-docker:](/radarr/installation/docker)
 
 # Recommended Guides
 
