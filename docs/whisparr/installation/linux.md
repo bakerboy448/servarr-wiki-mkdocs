@@ -25,7 +25,7 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 **For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install) steps further below.**
 
-[Please see the \*Arr Community Installation Script](/install-script)
+[Please see the \*Arr Community Installation Script](../../install-script.md)
 
 ### Debian / Ubuntu Hands on Install
 

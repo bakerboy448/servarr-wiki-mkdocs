@@ -31,7 +31,7 @@ These instructions provide generic guidance that should apply to any Whisparr Do
   - Pulls every tag on update when you don't set a specific tag
   - Capabilities are hidden and some don't work at all on ARM platforms
 
-See this [Docker Guide](/docker-guide) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
+See this [Docker Guide](../../docker-guide.md) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
 
 ## Avoid Common Pitfalls
 
@@ -53,13 +53,13 @@ Permissions and ownership of files is one of the most common problems for Whispa
 Keep in mind that Whisparr will need read and write to the download folders as well as the final folders.
 
 !!! info
-    For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
+    For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](../../docker-guide.md) wiki article.
 
 ## Install Whisparr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 !!! info
-    Temporarily, you will need to use the :nightly ~~or :develop~~ tags with docker images, as there is no master nor develop branch. [See this FAQ entry for the meaning of the branches](/whisparr/faq#how-do-i-update-whisparr)
+    Temporarily, you will need to use the :nightly ~~or :develop~~ tags with docker images, as there is no master nor develop branch. [See this FAQ entry for the meaning of the branches](../../whisparr/faq.md#how-do-i-update-whisparr)
 
 - [hotio/whisparr](https://hotio.dev/containers/whisparr/)

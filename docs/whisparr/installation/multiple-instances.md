@@ -91,7 +91,7 @@ This is crucial, as it keeps all the data files from both instances in
 
 - Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 - Start Whisparr-4k (Service or Tray App)
-- Open up Whisparr-4k and Navigate within the app to [Settings => General => Host](/whisparr/settings/#host)
+- Open up Whisparr-4k and Navigate within the app to [Settings => General => Host](../../whisparr/settings/.md#host)
 - Change `Port Number` from `6969` to a different port e.g. `6970` so Whisparr and Whisparr4k do not conflict
 - You should now be able to start both apps
 - Continue to [Dealing with Updates](#dealing-with-updates)
