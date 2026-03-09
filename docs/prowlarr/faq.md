@@ -66,7 +66,7 @@ As of Prowlarr v1, Authentication is Mandatory.
 - `Basic` (Browser pop-up) - Basic Auth is not supported as of Prowlarr v1
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/prowlarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](../prowlarr/appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
 
 ### Authentication Required
 
@@ -115,9 +115,9 @@ The following attributes are optional, but recommended:
 
 - Yes.
 
-1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](/prowlarr/settings#indexer-proxies)
+1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](../prowlarr/settings.md#indexer-proxies)
 1. Add a tag to the created flaresolverr proxy
-1. Add the same tag to your [Indexer](/prowlarr/indexers)
+1. Add the same tag to your [Indexer](../prowlarr/indexers.md)
 
 !!! warning
     The tags must match & Cloudflare must be detected for Flaresolverr to be used. A Flaresolverr proxy is disabled if no tags are used.
@@ -282,7 +282,7 @@ With Full Sync enabled, if any of the above settings differ between the \*Arr ap
 - This is simple, please see the [Mac help documentation](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) for more information
 - Alternatively, you may need to self-sign Prowlarr `codesign --force --deep -s - /Applications/Prowlarr.app && xattr -rd com.apple.quarantine`
 
-![faq_1_mac.png](/assets/general/faq_1_mac.png)
+![faq_1_mac.png](../assets/general/faq_1_mac.png)
 
 ## Help, my Mac says Prowlarr.app is damaged and can’t be opened
 
@@ -301,8 +301,8 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 - This means your SQLite database that stores most of the information for Prowlarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-prowlarr)
-- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
-  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
+- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](../useful-tools.md#recovering-a-corrupt-db)
+  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
@@ -390,7 +390,7 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 
 - Find the location of the AppData directory for Prowlarr
   - Via the Prowlarr UI go to System => About
-  - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
+  - [Prowlarr Appdata Directory](../prowlarr/appdata-directory.md)
 - Stop Prowlarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -414,7 +414,7 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 - Re-install Prowlarr (if applicable / not already installed)
 - Find the location of the AppData directory for Prowlarr
   - Running Prowlarr once and via the UI go to System => About
-  - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
+  - [Prowlarr Appdata Directory](../prowlarr/appdata-directory.md)
 - Stop Prowlarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -429,7 +429,7 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 - Re-install Prowlarr (if applicable / not already installed)
 - Find the location of the AppData directory for Prowlarr
   - Running Prowlarr once and via the UI go to System => About
-  - [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
+  - [Prowlarr Appdata Directory](../prowlarr/appdata-directory.md)
 - Stop Prowlarr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -459,7 +459,7 @@ If you can only reach your web interface at `http://localhost:9696/` or `http://
 
 ## Finding Cookies
 
-Some sites cannot be logged into automatically and require you to login manually then give the cookies to Prowlarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
+Some sites cannot be logged into automatically and require you to login manually then give the cookies to Prowlarr to work. [Please see this article for details.](../useful-tools.md#finding-cookies)
 
 ## I got a pop-up that said config.xml was corrupt, what now
 
@@ -488,12 +488,12 @@ If your download client and Prowlarr are on the same machine there is no reason 
 
 ## Weird UI Issues
 
-- If you experience any weird UI issues or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
+- If you experience any weird UI issues or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](../useful-tools.md#clearing-cookies-and-local-storage) wiki article.
 
 ## VPNs, Jackett, and the \*ARRs
 
 !!! info
-    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](../vpn.md) page.
 
 - Unless you're in a repressive country like China or Australia, your BitTorrent client is typically the only thing that needs to be behind a VPN. Usenet does not require VPN protection as it uses encrypted SSL connections. For most countries including the UK, using secure DNS (like Cloudflare's 1.1.1.1 or Google's 8.8.8.8) is sufficient to resolve access issues without requiring a VPN. Other *Arr apps not connecting to trackers should not be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 

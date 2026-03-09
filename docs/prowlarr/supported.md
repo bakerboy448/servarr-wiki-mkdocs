@@ -21,73 +21,73 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 Prowlarr can automatically sync indexers with various applications
 
 - LazyLibrarian {#lazylibrarian}
-  - [Refer to the Settings Page](/prowlarr/settings#applications)
+  - [Refer to the Settings Page](../prowlarr/settings.md#applications)
 - Lidarr {#lidarr}
-  - [Refer to the Settings Page](/prowlarr/settings#applications)
+  - [Refer to the Settings Page](../prowlarr/settings.md#applications)
 - Mylar {#mylar}
-  - [Refer to the Settings Page](/prowlarr/settings#applications)
+  - [Refer to the Settings Page](../prowlarr/settings.md#applications)
 - Radarr {#radarr}
-  - [Refer to the Settings Page](/prowlarr/settings#applications)
+  - [Refer to the Settings Page](../prowlarr/settings.md#applications)
 - Readarr {#readarr}
-  - [Refer to the Settings Page](/prowlarr/settings#applications)
+  - [Refer to the Settings Page](../prowlarr/settings.md#applications)
 - Sonarr {#sonarr}
-  - [Refer to the Settings Page](/prowlarr/settings#applications)
+  - [Refer to the Settings Page](../prowlarr/settings.md#applications)
 
 # Download Clients
 
 {#downloadclient}
 
 - Aria2 {#aria2}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - Deluge {#deluge}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - Download Station {#torrentdownloadstation}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - Download Station {#usenetdownloadstation}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - Flood {#flood}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - Hadouken {#hadouken}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - NZBGet {#nzbget}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - NZBVortex {#nzbvortex}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - Pneumatic {#pneumatic}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - qBittorrent {#qbittorrent}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - rTorrent {#rtorrent}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - SABnzbd {#sabnzbd}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - Torrent Blackhole {#torrentblackhole}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - Transmission {#transmission}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - Usenet Blackhole {#usenetblackhole}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 - uTorrent {#utorrent}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
   - Due to utorrent being adware and formerly spyware, it is not reconmended. Most users use qBittorrent
 - Vuze {#vuze}
-  - [Refer to the Settings Page](/prowlarr/settings#download-clients)
+  - [Refer to the Settings Page](../prowlarr/settings.md#download-clients)
 
 # Indexer Proxies
 
 {#indexerproxy}
 
 - FlareSolverr {#flaresolverr}
-  - [Refer to the Settings Page](/prowlarr/settings#flaresolverr-proxy-settings)
+  - [Refer to the Settings Page](../prowlarr/settings.md#flaresolverr-proxy-settings)
   - [See TRaSH's Guides on "How to setup Flaresolverr"](https://trash-guides.info/Prowlarr/prowlarr-setup-flaresolverr/)
 - Http {#http}
-  - [Refer to the Settings Page](/prowlarr/settings#http-proxy-settings)
+  - [Refer to the Settings Page](../prowlarr/settings.md#http-proxy-settings)
   - [See TRaSH's Guides on "Setup proxy for certain indexers"](https://trash-guides.info/Prowlarr/prowlarr-setup-proxy/)
 - Socks4 {#socks4}
-  - [Refer to the Settings Page](/prowlarr/settings#socks4-proxy-settings)
+  - [Refer to the Settings Page](../prowlarr/settings.md#socks4-proxy-settings)
   - [See TRaSH's Guides on "Setup proxy for certain indexers"](https://trash-guides.info/Prowlarr/prowlarr-setup-proxy/)
 - Socks5 {#socks5}
-  - [Refer to the Settings Page](/prowlarr/settings#socks5-proxy-settings)
+  - [Refer to the Settings Page](../prowlarr/settings.md#socks5-proxy-settings)
   - [See TRaSH's Guides on "Setup proxy for certain indexers"](https://trash-guides.info/Prowlarr/prowlarr-setup-proxy/)
 
 # Notifications
@@ -96,7 +96,7 @@ Prowlarr can automatically sync indexers with various applications
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
-  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/prowlarr/custom-scripts) for more details.
+  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](../prowlarr/custom-scripts.md) for more details.
 - Discord {#discord}
   - By far one of the most common ways to push notifications of actions happening on your Prowlarr
 - Email {#email}

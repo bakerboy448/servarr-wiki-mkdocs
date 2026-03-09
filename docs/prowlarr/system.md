@@ -62,7 +62,7 @@ This page contains a list of health checks errors. These health checks are perio
 
 #### Branch is not a valid release branch
 
-- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](/prowlarr/faq#how-do-i-update-prowlarr).
+- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](../prowlarr/faq.md#how-do-i-update-prowlarr).
 
 #### Currently installed SQLite version is not supported
 
@@ -280,7 +280,7 @@ The queue will show you upcoming tasks as well as a history of recently ran task
 
 !!! info
     This section will be more tailored to the buttons and overall point of the page.
-    However, if you're looking for how to back/restore your Prowlarr instance [see our FAQ](/prowlarr/faq).
+    However, if you're looking for how to back/restore your Prowlarr instance [see our FAQ](../prowlarr/faq.md).
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
 

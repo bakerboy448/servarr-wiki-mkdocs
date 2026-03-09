@@ -23,7 +23,7 @@ tags:
 
 > This page is still in progress and not complete.
 
-> For a more detailed breakdown of all the settings, check [Prowlarr =>Settings](/prowlarr/settings)
+> For a more detailed breakdown of all the settings, check [Prowlarr =>Settings](../prowlarr/settings.md)
 
 In this guide we will try to explain the basic setup you need to do to get started with Prowlarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
@@ -35,15 +35,15 @@ The first thing to set up in Prowlarr is indexers. You will add each indexer ind
 
 Click on `Indexers`, and then click the + to add a new indexer.
 
-![addindexer.png](/assets/prowlarr/addindexer.png)
+![addindexer.png](../assets/prowlarr/addindexer.png)
 
 All indexers you can add (usenet and torrent) are listed, and you can type to partially match any existing entry. If the indexer you want to add doesn't exist in the list, you can add "Generic Newznab" (for usenet) or "Generic Torznab" (for torrents).
 
-![addgeneric.png](/assets/prowlarr/addgeneric.png)
+![addgeneric.png](../assets/prowlarr/addgeneric.png)
 
 Some indexers have special settings, but most are standard as shown.
 
-![addnewindexer.png](/assets/prowlarr/addnewindexer.png)
+![addnewindexer.png](../assets/prowlarr/addnewindexer.png)
 
 - Name - Select a name for this indexer. When it syncs to your apps, it will add `(Prowlarr)` behind it.
 - Enable - Check the box to enable this indexer.
@@ -51,11 +51,11 @@ Some indexers have special settings, but most are standard as shown.
 
 > Redirect is typically only needed for a handful of very specific indexers
 
-- Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
+- Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](../prowlarr/settings.md#applications). The Standard default, profile already exists, and looks like this:
 
 > You can have different settings per app by creating multiple instances of the indexer
 
-![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
+![ind_3_settingsapps.png](../assets/prowlarr/ind_3_settingsapps.png)
 
 - URL - Select the URL for Prowlarr to use. If blank, the default/first url is used.
 - Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.
@@ -84,15 +84,15 @@ After you've added your indexers, we then connect Prowlarr to your other apps.
 
 Click on `Settings` => `Apps`, and then click the + to add a supported app.
 
-![addapps.png](/assets/prowlarr/addapps.png)
+![addapps.png](../assets/prowlarr/addapps.png)
 
 All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you must add each of them separately.
 
-> Currently supported Apps can be found at the [More Info (Supported)](/prowlarr/supported#applications) page for this section
+> Currently supported Apps can be found at the [More Info (Supported)](../prowlarr/supported.md#applications) page for this section
 
 When you add an app, you will need to enter values in the pop-up screen:
 
-![addlidarr.png](/assets/prowlarr/addlidarr.png)
+![addlidarr.png](../assets/prowlarr/addlidarr.png)
 
 > Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. **Also note that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories.**
 
@@ -101,11 +101,11 @@ When you add an app, you will need to enter values in the pop-up screen:
 - Name - Enter a name for this App.
 - Sync Level - Select the sync level to use
   - `Add and Remove Only` - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.
-  - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync)
+  - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](../prowlarr/faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - `Disabled` - will keep indexers from syncing with the program entirely.
 
 !!! warning
-    `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
+    `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](../prowlarr/faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
 
 - Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
 - Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
@@ -119,7 +119,7 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 > When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it. e.g. `{Indexer Name} (Prowlarr)`
 
-![nzbgeek.png](/assets/prowlarr/nzbgeek.png)
+![nzbgeek.png](../assets/prowlarr/nzbgeek.png)
 
 You should then go into your program, and disable the non-Prowlarr version of the indexer. Once everything is running smoothly, you can delete those entries and leave just the (Prowlarr) versions in place.
 
@@ -145,12 +145,12 @@ Configure the sync profiles for to use for (an) application(s)
 
 Click on `Settings` => `Download Clients`, and then click the + to add a new download client. Your download client should already be configured to follow this guide.
 
-![downloadclients.png](/assets/prowlarr/downloadclients.png)
+![downloadclients.png](../assets/prowlarr/downloadclients.png)
 
-> Currently supported Download Clients can be found at the [More Info (Supported)](/prowlarr/supported#downloadclient) page for this section
+> Currently supported Download Clients can be found at the [More Info (Supported)](../prowlarr/supported.md#downloadclient) page for this section
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
-![nzbget.png](/assets/prowlarr/nzbget.png)
+![nzbget.png](../assets/prowlarr/nzbget.png)
 
 > Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
 
