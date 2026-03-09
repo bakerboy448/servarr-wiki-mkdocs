@@ -104,8 +104,8 @@ When you add an app, you will need to enter values in the pop-up screen:
   - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - `Disabled` - will keep indexers from syncing with the program entirely.
 
-> `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
-{.is-warning}
+!!! warning
+    `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
 
 - Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
 - Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.

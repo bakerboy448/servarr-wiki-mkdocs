@@ -72,8 +72,8 @@ This page contains a list of health checks errors. These health checks are perio
 
 - Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
 
-> This warning will not appear if your current version is less than 14 days old
-{.is-info}
+!!! info
+    This warning will not appear if your current version is less than 14 days old
 
 #### Cannot install update because startup folder is not writable by the user
 
@@ -105,9 +105,9 @@ This page contains a list of health checks errors. These health checks are perio
  proxy_set_header Connection $http_connection;
 ```
 
-> Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK
-> See <https://github.com/aspnet/AspNetCore/issues/17081>
-{.is-warning}
+!!! warning
+    Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK
+    See <https://github.com/aspnet/AspNetCore/issues/17081>
 
 - For Apache2 reverse proxy, you need to enable the following modules: proxy, proxy_http, and proxy_wstunnel. Then, add this websocket tunnel directive to your vhost configuration:
 
@@ -127,7 +127,8 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 - For Caddy (V1) use this:
 
-> Note: you will also need to add the websocket directive to your prowlarr configuration{.is-info}
+!!! info
+    Note: you will also need to add the websocket directive to your prowlarr configuration
 
 ```none
  proxy /prowlarr 127.0.0.1:9696 {
@@ -181,8 +182,8 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 - Your indexer(s) do not have (an) existing definition (file) this is typically due to your indexer being no longer supported and removed or the Cardigann YML definition no longer is accessible.
 
-> [YGG Users Click Here](https://github.com/Prowlarr/Indexers/pull/481#issue-2483856081)
-{.is-info}
+!!! info
+    [YGG Users Click Here](https://github.com/Prowlarr/Indexers/pull/481#issue-2483856081)
 
 #### Indexers are Obsolete
 
@@ -260,16 +261,16 @@ This page lists all scheduled tasks that Prowlarr runs
 
 - Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Prowlarr is on the most current version then triggering the update script to update Prowlarr. Settings=> Update
 
-> Note: If on Docker this will not update your container as a new image will need to be downloaded.
-{.is-warning}
+!!! warning
+    Note: If on Docker this will not update your container as a new image will need to be downloaded.
 
 - Backup - This will run a backup of your Prowlarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
 - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Prowlarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
 - Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Prowlarr
 
-> All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
-{.is-info}
+!!! info
+    All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 
 ## Queue
 
@@ -277,9 +278,9 @@ The queue will show you upcoming tasks as well as a history of recently ran task
 
 # Backup
 
-> This section will be more tailored to the buttons and overall point of the page.
-> However, if you're looking for how to back/restore your Prowlarr instance [see our FAQ](/prowlarr/faq).
-{.is-info}
+!!! info
+    This section will be more tailored to the buttons and overall point of the page.
+    However, if you're looking for how to back/restore your Prowlarr instance [see our FAQ](/prowlarr/faq).
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
 
@@ -300,8 +301,8 @@ Off to the right of each of the previous download you have two options.
 The update screen will show the past 5 updates that have been made as well as the current version you are on.
 This page will also display the update notes from the Developers telling you what has been fixed or added to Prowlarr (Rejoice!)
 
-> A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
-{.is-info}
+!!! info
+    A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 
 # Events
 
@@ -324,8 +325,8 @@ On the top row there are several options to allow you to control your log files.
   - Log Files - The bread and butter of any support issue more on log files can be found here.
   - Updater Log Files - This will show the log files associated with Prowlarr's updater script
 
-> If you're on docker this will be empty as you should be updating by downloading a new docker image
-{.is-info}
+!!! info
+    If you're on docker this will be empty as you should be updating by downloading a new docker image
 
 - Refresh - This will refresh the current page and display any newly created logs
 - Delete - This will clear all logs allowing you to start from fresh

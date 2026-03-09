@@ -50,14 +50,15 @@ But before you go there and post, be sure your request for help is the best it c
 
 The more we know, the easier it is to help you.
 
-> Please note we only support builds created by the servarr build platform {.is-info}
+!!! info
+    Please note we only support builds created by the servarr build platform 
 
 # Logging and Log Files
 
 It is likely beneficial to also review the [Indexer, Application, and Download Client Issues Common Problems](#indexer-application-and-download-client-issues).
 
-> If asked to provide the indexer response for development or debugging continue reading this blue section...otherwise continue to the steps below. For debugging indexer responses, it is likely helpful to go to `settings/development` (hidden page) in Prowlarr and temporarily enable Enhanced Indexer Logging to log the Indexer's Response.  It should not be kept on all the time
-{.is-info}
+!!! info
+    If asked to provide the indexer response for development or debugging continue reading this blue section...otherwise continue to the steps below. For debugging indexer responses, it is likely helpful to go to `settings/development` (hidden page) in Prowlarr and temporarily enable Enhanced Indexer Logging to log the Indexer's Response.  It should not be kept on all the time
 
 If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
@@ -67,8 +68,8 @@ If you're asked for debug logs your logs will contain `debug` and if you're aske
 
 To provide good and useful logs for sharing:
 
-> Ensure a spammy task is NOT running such as an RSS refresh
-{.is-warning}
+!!! warning
+    Ensure a spammy task is NOT running such as an RSS refresh
 
 1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
 2. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
@@ -109,8 +110,8 @@ To provide good and useful logs for sharing:
 
 The log files are located in Prowlarr's [Appdata Directory](/prowlarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
-> Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
-{.is-info}
+!!! info
+    Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
 ## Update Logs Location
 
@@ -180,7 +181,8 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any pinned github issues), please swing by our [discord](https://prowlarr.com/discord). If there are others with the same issue, then rest assured we are working on it.
 
-> Please ensure you did not try to use a database from `nightly` on the stable version. Branch hopping is ill-advised.{.is-info}
+!!! info
+    Please ensure you did not try to use a database from `nightly` on the stable version. Branch hopping is ill-advised.
 
 ### Permissions Issues
 
@@ -208,8 +210,8 @@ If you have any different `proxy_set_header` you must replace it with the line a
 - If you use application sync, Prowlarr also needs to be able to talk to your applications and the applications need to be able to talk to Prowlarr.
 - If you have a download client in Prowlarr for manual in-Prowlarr downloads, Prowlarr will need to be able to talk with your download client.
 
-> Note that logs indicating querying indexer ID 0: The 0 ID is a generic test endpoint that allows us to test if \*Arr can call back and connect to Prowlarr without actually relying on an indexer working.
-{.is-info}
+!!! info
+    Note that logs indicating querying indexer ID 0: The 0 ID is a generic test endpoint that allows us to test if \*Arr can call back and connect to Prowlarr without actually relying on an indexer working.
 
 ## DNS SSL Connection Issues
 
@@ -282,8 +284,8 @@ The indexer or application server terminated the connection unexpectedly during 
 
 ---
 
-> ISP interference with DNS/SSL is increasingly common. Start with DNS server changes, as this resolves most connection issues.
-{.is-info}
+!!! info
+    ISP interference with DNS/SSL is increasingly common. Start with DNS server changes, as this resolves most connection issues.
 
 ## Cannot determine the frame size or a corrupted frame was received
 
@@ -333,8 +335,8 @@ This is typically caused by:
 
 ## Searches Indexers and Trackers
 
-> Refer to the first FAQ question for the \*Arrs for how they work - searches are not automatically executed. For other troubleshooting, refer to the articles below.
-{.is-info}
+!!! info
+    Refer to the first FAQ question for the \*Arrs for how they work - searches are not automatically executed. For other troubleshooting, refer to the articles below.
 
 - [Lidarr Searching & Indexers](/lidarr/troubleshooting#searches-indexers-and-trackers)
 - [Radarr Searching & Indexers](/radarr/troubleshooting#searches-indexers-and-trackers)
