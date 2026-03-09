@@ -1,13 +1,11 @@
 ---
 title: Radarr FreeBSD Installation
 description: FreeBSD installation guide for Radarr
-published: true
-date: 2023-07-03T20:30:47.519Z
-tags: freebsd, installation, radarr
-editor: markdown
-dateCreated: 2023-07-03T20:11:02.991Z
+tags:
+  - freebsd
+  - installation
+  - radarr
 ---
-
 # FreeBSD
 
 The Radarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.

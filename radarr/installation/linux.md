@@ -1,13 +1,11 @@
 ---
 title: Radarr Linux Installation
 description: Linux installation guide for Radarr
-published: true
-date: 2026-01-20T01:24:57.132Z
-tags: radarr, installation, linux
-editor: markdown
-dateCreated: 2023-07-03T20:11:59.391Z
+tags:
+  - radarr
+  - installation
+  - linux
 ---
-
 # Linux
 
 ## Debian / Ubuntu
