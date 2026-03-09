@@ -1,13 +1,14 @@
 ---
 title: Radarr Supported
 description: Comprehensive list of supported indexers, download clients, and services for Radarr
-published: true
-date: 2024-06-16T13:47:46.803Z
-tags: radarr, supported, indexers, download-clients, services, compatibility
-editor: markdown
-dateCreated: 2021-06-23T07:55:24.002Z
+tags:
+  - radarr
+  - supported
+  - indexers
+  - download-clients
+  - services
+  - compatibility
 ---
-
 # Table of Contents
 
 > This page is a work in progress and requires additional effort.{.is-warning}

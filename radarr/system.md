@@ -1,13 +1,14 @@
 ---
 title: Radarr System
 description: System information, logs, scheduled tasks, and status monitoring for Radarr administration and troubleshooting
-published: true
-date: 2023-10-26T10:56:09.737Z
-tags: system, administration, logs, tasks, status, radarr
-editor: markdown
-dateCreated: 2021-05-25T02:28:35.194Z
+tags:
+  - system
+  - administration
+  - logs
+  - tasks
+  - status
+  - radarr
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

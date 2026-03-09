@@ -1,13 +1,15 @@
 ---
 title: Radarr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration in Radarr
-published: true
-date: 2025-08-12T13:58:51.517Z
-tags: radarr, scripts, automation, custom, integration, hooks, api
-editor: markdown
-dateCreated: 2021-06-16T15:55:44.765Z
+tags:
+  - radarr
+  - scripts
+  - automation
+  - custom
+  - integration
+  - hooks
+  - api
 ---
-
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Radarr via the [Connect Settings](/radarr/settings#connections).
 
 # Overview

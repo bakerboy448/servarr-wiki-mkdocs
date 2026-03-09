@@ -1,13 +1,10 @@
 ---
 title: Radarr Troubleshooting
 description: Troubleshooting for Radarr including getting log files, search troubleshooting and common problems, and downloading / importing troubleshooting and common problems
-published: true
-date: 2026-02-01T14:30:34.852Z
-tags: radarr, troubleshooting
-editor: markdown
-dateCreated: 2021-08-03T21:05:52.988Z
+tags:
+  - radarr
+  - troubleshooting
 ---
-
 # Asking for Help
 
 Do you need help? That's okay, everyone needs help sometimes. You can get real time help via chat on

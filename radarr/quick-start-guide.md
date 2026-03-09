@@ -1,13 +1,15 @@
 ---
 title: Radarr Quick Start Guide
 description: Step-by-step guide to setting up and configuring Radarr for movie management
-published: true
-date: 2023-10-08T19:12:23.566Z
-tags: radarr, quick-start, setup, configuration, guide, installation, movies
-editor: markdown
-dateCreated: 2021-06-20T20:05:44.814Z
+tags:
+  - radarr
+  - quick-start
+  - setup
+  - configuration
+  - guide
+  - installation
+  - movies
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

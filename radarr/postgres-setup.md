@@ -1,13 +1,12 @@
 ---
 title: Radarr Configuring PostgreSQL Database
 description: Configuring Radarr with a Postgres Database
-published: true
-date: 2025-05-29T21:30:30.766Z
-tags: radarr, postgres, database, installation
-editor: markdown
-dateCreated: 2022-01-10T15:42:34.178Z
+tags:
+  - radarr
+  - postgres
+  - database
+  - installation
 ---
-
 # Radarr and Postgres
 
 This document will go over the key points of migrating and setting up Postgres support in Radarr.

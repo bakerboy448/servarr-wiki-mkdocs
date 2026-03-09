@@ -1,13 +1,14 @@
 ---
 title: Radarr Library
 description: Manage your movie collection, monitor status, and organize film library in Radarr
-published: true
-date: 2022-11-14T15:04:06.364Z
-tags: radarr, library, movies, management, collection, organization
-editor: markdown
-dateCreated: 2021-05-25T01:24:18.386Z
+tags:
+  - radarr
+  - library
+  - movies
+  - management
+  - collection
+  - organization
 ---
-
 # Movies
 
 ## Library View

@@ -1,13 +1,14 @@
 ---
 title: Radarr Settings
 description: Description of Radarr's Settings Menus
-published: true
-date: 2025-01-03T03:39:01.266Z
-tags: settings, configuration, radarr, profiles, quality, indexers
-editor: markdown
-dateCreated: 2021-05-29T15:57:25.304Z
+tags:
+  - settings
+  - configuration
+  - radarr
+  - profiles
+  - quality
+  - indexers
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

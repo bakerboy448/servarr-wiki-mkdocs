@@ -1,13 +1,11 @@
 ---
 title: Radarr FAQ
 description: Radarr FAQ
-published: true
-date: 2025-09-12T22:47:21.936Z
-tags: radarr, troubleshooting, faq
-editor: markdown
-dateCreated: 2021-05-16T20:44:27.778Z
+tags:
+  - radarr
+  - troubleshooting
+  - faq
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
