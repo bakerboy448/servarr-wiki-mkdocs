@@ -53,7 +53,7 @@ Sonarr needs two databases, the default names of these are:
 
 Create the databases mentioned above using your favorite method - for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
 
-You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](/sonarr/postgres-setup#schema-creation).
+You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](../sonarr/postgres-setup.md#schema-creation).
 
 ### Schema creation
 

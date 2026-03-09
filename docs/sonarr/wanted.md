@@ -40,7 +40,7 @@ The Wanted => Cutoff Unmet section contains a list of the episodes that have not
 The cut off is where you essentially tell Sonarr that the quality of the video file is good enough for you and you no longer wish for Sonarr to keep searching for better.
 
 There are a couple of options available to you on this page
-![wanted-cut-off-unmet.png](/assets/sonarr/wanted-cut-off-unmet.png)
+![wanted-cut-off-unmet.png](../assets/sonarr/wanted-cut-off-unmet.png)
 
 1. Search Selected - By selecting episodes on your list you can perform an Automatic search to try to see if there are any upgrades to your existing files.
 1. Unmonitor Selected - By selecting certain episodes on your list you can tell Sonarr to no longer look for any upgrades by Unmonitoring that episode.

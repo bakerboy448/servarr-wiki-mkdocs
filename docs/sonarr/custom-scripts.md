@@ -10,7 +10,7 @@ tags:
   - hooks
   - api
 ---
-If you're looking to trigger a custom script, you can find more details here. Scripts are added to Sonarr via the [Connect Settings](/sonarr/settings#connections).
+If you're looking to trigger a custom script, you can find more details here. Scripts are added to Sonarr via the [Connect Settings](../sonarr/settings.md#connections).
 
 # Overview
 

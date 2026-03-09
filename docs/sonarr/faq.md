@@ -3,7 +3,7 @@ title: Sonarr FAQ
 description: Sonarr Frequently Asked Questions
 ---
 !!! info
-    For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](/sonarr/faq-v4)
+    For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](../sonarr/faq-v4.md)
 
 # Sonarr Basics
 
@@ -12,7 +12,7 @@ description: Sonarr Frequently Asked Questions
 - Sonarr does *not* regularly search for episode files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted episodes/newly uploaded releases, then compares that with its list of episodes that are missing or need to be upgraded. Any matches are downloaded. This lets Sonarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
 - So how do you deal with the present and past? When you're adding a show, you will need to set the correct path, profile and monitoring status then use the Start search for missing checkbox. If the show has had no episodes and hasn't been released yet, you do not need to initiate a search.
 - Put another way, Sonarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases uploaded in the past.
-- If you've already added the show, but now you want to search for it, you have a few choices. You can go to the show's page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](/sonarr/wanted) tab and search from there.
+- If you've already added the show, but now you want to search for it, you have a few choices. You can go to the show's page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](../sonarr/wanted.md) tab and search from there.
 - If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Sonarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed episodes.
 
 ### Instances When Auto Searching Does Occur
@@ -47,7 +47,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 1. Size
 
 !!! warning
-    REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](/sonarr/settings#file-management) and use [TRaSH's Repack/Proper Custom Format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#repackproper) with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/)
+    REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](../sonarr/settings.md#file-management) and use [TRaSH's Repack/Proper Custom Format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#repackproper) with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/)
 
 !!! info
     \* Use Custom Formats and TRaSH Guide's [season pack custom format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#season-pack) with a score greater than zero to prefer season packs.
@@ -73,7 +73,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 
 - Find the location of the AppData directory for Sonarr
   - Via the Sonarr UI go to System => About
-  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
+  - [Sonarr Appdata Directory](../sonarr/appdata-directory.md)
 - Stop Sonarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -97,7 +97,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 - Re-install Sonarr (if applicable / not already installed)
 - Find the location of the AppData directory for Sonarr
   - Running Sonarr once and via the UI go to System => About
-  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
+  - [Sonarr Appdata Directory](../sonarr/appdata-directory.md)
 - Stop Sonarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -112,7 +112,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 - Re-install Sonarr (if applicable / not already installed)
 - Find the location of the AppData directory for Sonarr
   - Running Sonarr once and via the UI go to System => About
-  - [Sonarr Appdata Directory](/sonarr/appdata-directory)
+  - [Sonarr Appdata Directory](../sonarr/appdata-directory.md)
 - Stop Sonarr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -141,9 +141,9 @@ chmod -R 0644 *
 {#help-i-have-forgotten-my-password}
 
 !!! info
-    Authentication is now mandatory in v4 of Sonarr and the `AuthenticationMethod` type `None` is no longer valid - please see this [v4 FAQ - Forced Authentication](/sonarr/faq-v4#forced-authentication) 
+    Authentication is now mandatory in v4 of Sonarr and the `AuthenticationMethod` type `None` is no longer valid - please see this [v4 FAQ - Forced Authentication](../sonarr/faq-v4.md#forced-authentication) 
 
-To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](/sonarr/appdata-directory)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](../sonarr/appdata-directory.md)
 
 1. Stop Sonarr
 1. Open config.xml in a text editor
@@ -215,7 +215,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - Please note that not all indexers support season/episode (standard) searches.
 - Series types can be modified from Mass Editor or from `Edit` when viewing a series. Note that the series type is selectable at import.
 
-- If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](/sonarr/settings#indexers)
+- If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](../sonarr/settings.md#indexers)
 
 ### Series Types
 
@@ -228,7 +228,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 Below are some example release names for each show type. The specific differentiating piece is noted in bold.
 
 !!! info
-    If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](/sonarr/settings#indexers)
+    If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](../sonarr/settings.md#indexers)
 
 #### Daily
 
@@ -429,7 +429,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 {#why-cant-i-add-a-new-series-when-i-know-the-tvdb-id}
 
 - Sonarr cannot add any series that does not have an English language title. If you try to add a series via TVDb ID that does not have an English title then the series will not be found. If no English title exists for that series on TheTVDb it will need to be added (if available).
-- Check the URL / series - Sonarr does not support movies; use [Radarr](/radarr) for movies
+- Check the URL / series - Sonarr does not support movies; use [Radarr](../radarr.md) for movies
 
 ## Title Slug in Use
 
@@ -480,7 +480,7 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## Weird UI Issues
 
-- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](../useful-tools.md#clearing-cookies-and-local-storage) wiki article.
 
 ## Web Interface Only Loads at localhost on Windows
 
@@ -488,11 +488,11 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## I got a pop-up that said config.xml was corrupt, what now
 
-- Sonarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Sonarr back online, you will need to delete `.xml` in your [AppData Folder](/sonarr/appdata-directory) once deleted start Sonarr and it will start on the default port (8989), you should now re-configure any settings you configured on the General Settings page.
+- Sonarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Sonarr back online, you will need to delete `.xml` in your [AppData Folder](../sonarr/appdata-directory.md) once deleted start Sonarr and it will start on the default port (8989), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
-- If you're on non-Windows, most likely your mono's certificates are out of date and need to be synced. [See the section about mono ssl in the installation article for details](/sonarr/installation#mono-ssl-issues)
+- If you're on non-Windows, most likely your mono's certificates are out of date and need to be synced. [See the section about mono ssl in the installation article for details](../sonarr/installation.md#mono-ssl-issues)
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
   - Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
   - If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
@@ -508,7 +508,7 @@ Depending on your OS, there are multiple possible ways.
 ## VPNs, Jackett, and the \*ARRs
 
 !!! info
-    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](../vpn.md) page.
 
 - Unless you're in a repressive country like China, Australia or the UK, your torrent client is typically the only thing that needs to be behind a VPN. If you're in a repressive country noted above it is likely your connection to your trackers needs to be VPN'd as well - in other words Jackett behind a VPN or Prowlarr using an Indexer Proxy. Other *Arr apps not connecting to trackers should not be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 - In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible.
@@ -540,7 +540,7 @@ Depending on your OS, there are multiple possible ways.
 ## Help, my Mac says Sonarr cannot be opened because the developer cannot be verified
 
 - This is simple, please see this link for more information [in the Mac help documentation](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
-[![Developer Cannot be verified](/assets/general/faq_1_mac.png)]
+[![Developer Cannot be verified](../assets/general/faq_1_mac.png)]
 
 ## Help, my Mac says Sonarr.app is damaged and cannot be opened
 
@@ -558,8 +558,8 @@ Depending on your OS, there are multiple possible ways.
 - This means your SQLite database that stores most of the information for Sonarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-sonarr)
-- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
-  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
+- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](../useful-tools.md#recovering-a-corrupt-db)
+  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
@@ -616,7 +616,7 @@ chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
 
 ## Query Successful - No Results Returned
 
-- [See this troubleshooting entry](/sonarr/troubleshooting#query-successful-no-results-returned)
+- [See this troubleshooting entry](../sonarr/troubleshooting.md#query-successful-no-results-returned)
 
 ## Why didn't Sonarr grab an episode I was expecting
 
@@ -625,26 +625,26 @@ First, make sure you read and understand the section above called ["How does Son
 1. Click the 'Manual Search' icon next to the episode listing in Sonarr. Are there any results? If no, then either Sonarr is having trouble communicating with your indexers, or your indexers do not have the episode, or the episode is improperly named/categorized on the indexer.
 1. **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
 1. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
-1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This can be caused by a number of reasons, for example the release is not properly tagged on your indexer causing it to not be returned to sonarr in an automatic search. This [troubleshooting entry](/sonarr/troubleshooting#searches-indexers-and-trackers) provides some tips on how to determine the cause. Having several indexers active can help solve this by providing more sources to the same content.
+1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This can be caused by a number of reasons, for example the release is not properly tagged on your indexer causing it to not be returned to sonarr in an automatic search. This [troubleshooting entry](../sonarr/troubleshooting.md#searches-indexers-and-trackers) provides some tips on how to determine the cause. Having several indexers active can help solve this by providing more sources to the same content.
 
 ## Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
 
-- See [this troubleshooting entry](/sonarr/troubleshooting#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
+- See [this troubleshooting entry](../sonarr/troubleshooting.md#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
 
 ## TBA Episode Naming
 
-- On TVDb, when episode names are unknown they'll be titled TBA and there is a cache on the TVDb API. The [Episode Title Required setting](/sonarr/settings#importing) in Sonarr controls import behavior when the title is TBA, but after 48 hours from series airing the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
+- On TVDb, when episode names are unknown they'll be titled TBA and there is a cache on the TVDb API. The [Episode Title Required setting](../sonarr/settings.md#importing) in Sonarr controls import behavior when the title is TBA, but after 48 hours from series airing the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
 - Details on TVDb and Skyhook's cache can be found in the FAQ [TVDb is updated why isn't Sonarr?](#tvdb-is-updated-why-isnt-sonarr)
 
 ## Sonarr says Unknown Series on Searches or Imports
 
-- See the [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](/sonarr/faq#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) entry
+- See the [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](../sonarr/faq.md#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) entry
 
 ## Jackett's /all Endpoint
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](../prowlarr.md)
 
 - **February 5 2022 Update: \*Arr Support has been discontinued for the jackett `\all` endpoint. Jackett /all endpoint is no longer supported (e.g. warnings will occur) as of v3.0.6.1457 due to the fact it only causes issues.**
 
@@ -661,17 +661,17 @@ First, make sure you read and understand the section above called ["How does Son
 ### Jackett /All Solutions
 
 - Add each tracker in Jackett manually as an indexer in \*Arr
-- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [Prowlarr](../prowlarr.md) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
 ## Jackett shows more results than Sonarr when manually searching
 
 - Check your configured categories for your tracker in Sonarr
-- This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](/sonarr/troubleshooting#searches-indexers-and-trackers).
+- This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](../sonarr/troubleshooting.md#searches-indexers-and-trackers).
 
 ## Finding Cookies
 
-- Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. [Please see this article for details.](/useful-tools#finding-cookies)
+- Some sites cannot be logged into automatically and require you to login manually then give the cookies to Sonarr to work. [Please see this article for details.](../useful-tools.md#finding-cookies)
 
 ## Unpack Torrents
 
@@ -684,7 +684,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 ## Forced Authentication
 
-- In Sonarr v4 (beta) authentication is mandatory. Please see the [Sonarr v4 FAQ - Forced Authentication](/sonarr/faq-v4#forced-authentication) for details
+- In Sonarr v4 (beta) authentication is mandatory. Please see the [Sonarr v4 FAQ - Forced Authentication](../sonarr/faq-v4.md#forced-authentication) for details
 
 ## Removing Completed Torrents
 
@@ -696,6 +696,6 @@ First, make sure you read and understand the section above called ["How does Son
 
 - Note that time or ratio settings here are set On Grab. They do not impact torrents you already have in your download client. They also do not work with a post-import category setting.
 
-- Some torrent clients do not have this ability. See [this page](/sonarr/settings#torrent-client-remove-download-compatibility) for details for your client.
+- Some torrent clients do not have this ability. See [this page](../sonarr/settings.md#torrent-client-remove-download-compatibility) for details for your client.
 
 - Setting extremely low seed times or ratios will not work, and is also poor torrent etiquette. You should **always** seed to at least a 1.0x ratio, or a couple of hours, for public trackers and whatever the requirements are for private trackers (plus a little buffer, because the way your download client calculates time and ratio is slightly different than your private tracker, and you don't want a hit and run for being a few minutes short of your requirement). Seeding for less than 1.0x ratio will mean that we will not provide you support in discord.

@@ -98,17 +98,17 @@ tags:
   - [Dates](#dates)
   - [Style](#style)
 
-This page will go through all the settings available in Sonarr and how they work. This is not meant to be a comprehensive "How to set up Sonarr." Refer to the [Quick Start](/sonarr/quick-start-guide) page instead.
+This page will go through all the settings available in Sonarr and how they work. This is not meant to be a comprehensive "How to set up Sonarr." Refer to the [Quick Start](../sonarr/quick-start-guide.md) page instead.
 
 # Menu options
 
 To get to the Settings page, please choose Settings from the left menu. The following sub-menu options will be available:
 
-![settings_1_menu.png](/assets/sonarr/settings_1_menu.png)
+![settings_1_menu.png](../assets/sonarr/settings_1_menu.png)
 
 Also, note that for each individual settings page, there are some options at the top of the menu:
 
-![settings_2_topmenu.png](/assets/sonarr/settings_2_topmenu.png)
+![settings_2_topmenu.png](../assets/sonarr/settings_2_topmenu.png)
 
 - Hide/Show advanced is important for any items that are marked below as `(Advanced Option)`, otherwise they will not show up. These menu items are shown in orange in the screenshots.
 
@@ -253,13 +253,13 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 
 Daily Episode Format - Set the naming convention for your Daily Series Type episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
-See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
+See [Standard Episode Format](../sonarr/settings.md#standard-episode-format) for more info about this dialog box.
 
 ## Anime Episode Format
 
 Anime Episode Format - Set the naming convention for your Anime Series Type episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
-See [Standard Episode Format](/sonarr/settings#standard-episode-format) for more info about this dialog box.
+See [Standard Episode Format](../sonarr/settings.md#standard-episode-format) for more info about this dialog box.
 
 ### Absolute Episode Number
 
@@ -514,7 +514,7 @@ Profiles is where Custom Format Scores are configured.
 
 Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
 
-Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See [Example 3](/sonarr/settings/#example-3))
+Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See [Example 3](../sonarr/settings/.md#example-3))
 
 ### How Delay Profiles Work
 
@@ -612,11 +612,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Indexers
 
 !!! info
-    Information on supported indexers can be found at the [More Info (Supported)](/sonarr/supported#indexers) page for this section
+    Information on supported indexers can be found at the [More Info (Supported)](../sonarr/supported.md#indexers) page for this section
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info (Supported)](/sonarr/supported#indexers) page
+- A list of supported indexers is located at the [More Info (Supported)](../sonarr/supported.md#indexers) page
 
 ### Indexer Settings
 
@@ -627,7 +627,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Usenet Indexer Configuration
 
 - Newznab - Here you will find presets of popular usenet indexers (that are prefilled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
-- Software that works with usenet and integrates quite well with Sonarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
+- Software that works with usenet and integrates quite well with Sonarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](../prowlarr.md) which integrate with both Usenet and Torrents
 - Regardless if you select a prefilled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2 or Prowlarr)
 - Name - The name of the indexer in Sonarr
@@ -639,7 +639,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Anime Standard Format Search - Also search for anime using the standard numbering (Only Applies for Anime Series Types) [More Information on Series Types here](/sonarr/faq#whats-the-different-series-types)
+- Anime Standard Format Search - Also search for anime using the standard numbering (Only Applies for Anime Series Types) [More Information on Series Types here](../sonarr/faq.md#whats-the-different-series-types)
 - (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
@@ -656,7 +656,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
-- One of the best and simplest ways to utilize Torrent trackers that are not natively supported with Sonarr is to utilize a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
+- One of the best and simplest ways to utilize Torrent trackers that are not natively supported with Sonarr is to utilize a second program such as [Prowlarr](../prowlarr.md) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Sonarr as a search indexer that houses all your information and sends it to Sonarr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett or Prowlarr)
@@ -669,7 +669,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - Anime Categories - The categories that Sonarr will use for Anime searches. No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Anime Standard Format Search - Also search for anime using the standard numbering (Only Applies for Anime Series Types) [More Information on Series Types here](/sonarr/faq#whats-the-different-series-types)
+- Anime Standard Format Search - Also search for anime using the standard numbering (Only Applies for Anime Series Types) [More Information on Series Types here](../sonarr/faq.md#whats-the-different-series-types)
 - (Advanced Option) Additional Parameters - Additional Torznab parameters to add to the query link
 - (Advanced Option) Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
 - (Advanced Option) Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
@@ -692,7 +692,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Retention - Usenet only: Set to zero to set for unlimited retention
 - Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Sonarr find episodes?](/sonarr/faq#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
+  - Please see [How does Sonarr find episodes?](../sonarr/faq.md#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -700,7 +700,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Download Clients
 
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](/sonarr/supported#download-clients) page for this section
+    Information on supported download clients can be found at the [More Info (Supported)](../sonarr/supported.md#download-clients) page for this section
 
 ## Overview
 
@@ -733,7 +733,7 @@ Click on `Settings` =>`Download Clients`, and then click the <kb>+</kb> to add a
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info Supported](/sonarr/supported#download-clients) page
+- A list of supported download clients is located at the [More Info Supported](../sonarr/supported.md#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -847,12 +847,12 @@ If you download using a BitTorrent client, the process is slightly different:
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
 !!! info
-    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](../docker-guide.md) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 # Import Lists
 
 !!! info
-    Information on supported list types can be found at the [More Info (Supported)](/sonarr/supported#lists) page for this section
+    Information on supported list types can be found at the [More Info (Supported)](../sonarr/supported.md#lists) page for this section
 
 ## Lists
 
@@ -880,7 +880,7 @@ If you download using a BitTorrent client, the process is slightly different:
 # Connect
 
 !!! info
-    Information on supported connection types can be found at the [More Info (Supported)](/sonarr/supported#notifications) page for this section
+    Information on supported connection types can be found at the [More Info (Supported)](../sonarr/supported.md#notifications) page for this section
 
 ## Connections
 
@@ -888,7 +888,7 @@ If you download using a BitTorrent client, the process is slightly different:
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info (Supported)](/sonarr/supported#notifications)
+- A list of supported notifications & connections is located at the [More Info (Supported)](../sonarr/supported.md#notifications)
 
 ## Connection Triggers
 
@@ -908,7 +908,7 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Metadata
 
 !!! info
-    Information on supported metadata consumers can be found at the [More Info (Supported)](/sonarr/supported#metadata) page for this section
+    Information on supported metadata consumers can be found at the [More Info (Supported)](../sonarr/supported.md#metadata) page for this section
 
 - Here you can select the type of metadata that will be consumed by your media player
 
@@ -999,7 +999,7 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Sonarr that you are running on.
-  - [Please see this FAQ entry for more information](/sonarr/faq#how-do-i-update-sonarr)
+  - [Please see this FAQ entry for more information](../sonarr/faq.md#how-do-i-update-sonarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Sonarr built-in updater or a script
   - Built-in - Use Sonarr's own updater

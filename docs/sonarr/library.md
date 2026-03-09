@@ -21,7 +21,7 @@ The filters options allows you to narrow your series down and is incredibly help
 
 The add new feature allows you to add a new series for Sonarr to monitor and download.
 
-- Root Folder - The selected [root/library folder](/sonarr/settings#root-folders) in Sonarr for this series to use
+- Root Folder - The selected [root/library folder](../sonarr/settings.md#root-folders) in Sonarr for this series to use
 - Monitor - How do you want the series monitored initially?
   - All Episodes - Monitor all episodes except specials
   - Future Episodes - Monitor episodes that have not aired yet
@@ -30,8 +30,8 @@ The add new feature allows you to add a new series for Sonarr to monitor and dow
   - First Season - Monitor all episodes of the first season; all other seasons will be ignored
   - Latest Season - Monitor all episodes of the latest season and future seasons
   - None - No episodes will be monitored
-- Quality Profile - The [quality profile](/sonarr/settings#quality-profiles) to use for this series
-- Series Type - Which Series Type to use for this series; this changes how searches occur [See the FAQ entry for more info](/sonarr/faq#whats-the-different-series-types)
+- Quality Profile - The [quality profile](../sonarr/settings.md#quality-profiles) to use for this series
+- Series Type - Which Series Type to use for this series; this changes how searches occur [See the FAQ entry for more info](../sonarr/faq.md#whats-the-different-series-types)
 - Season Folder - Enable or disable creation and usage of Season folders for this series
 - Tags - Used to assign series to release profiles, delay profiles, indexers, or just to organize your series
 - [ ] Start search for missing episodes - based on your selected monitor settings, search for all missing and monitored episodes in this series
