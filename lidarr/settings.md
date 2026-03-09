@@ -1,13 +1,15 @@
 ---
 title: Lidarr Settings
 description: Complete configuration guide for Lidarr settings including media management, profiles, quality definitions, and metadata preferences
-published: true
-date: 2022-07-24T14:21:19.994Z
-tags: settings, configuration, lidarr, profiles, quality, metadata, media
-editor: markdown
-dateCreated: 2021-06-14T21:36:07.513Z
+tags:
+  - settings
+  - configuration
+  - lidarr
+  - profiles
+  - quality
+  - metadata
+  - media
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

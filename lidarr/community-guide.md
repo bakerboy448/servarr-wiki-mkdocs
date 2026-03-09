@@ -1,13 +1,12 @@
 ---
 title: Davo's Community Lidarr Guide
 description: Like TRaSH Guides, but Davo for Lidarr
-published: true
-date: 2024-02-27T21:07:38.868Z
-tags: lidarr, guide, configuration, quality
-editor: markdown
-dateCreated: 2024-02-27T14:10:01.585Z
+tags:
+  - lidarr
+  - guide
+  - configuration
+  - quality
 ---
-
 This guide is primarily focused on FLAC quality with MP3-320 as a fallback. Since music files are much smaller than other media I prefer to grab FLAC quality (not 24-bit lossless). Lidarr is designed to follow artists and albums, not singles. If you prefer singles then Spotify or Apple Music is a better fit for you.
 
 This guide also assumes you are familiar with the basics of the ARR apps and omits details covered in other guides, such as adding indexers or download clients.

@@ -1,13 +1,14 @@
 ---
 title: Lidarr System
 description: System information, logs, scheduled tasks, and status monitoring for Lidarr administration and troubleshooting
-published: true
-date: 2023-10-12T15:55:59.868Z
-tags: system, administration, logs, tasks, status, lidarr
-editor: markdown
-dateCreated: 2021-06-14T21:36:28.225Z
+tags:
+  - system
+  - administration
+  - logs
+  - tasks
+  - status
+  - lidarr
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

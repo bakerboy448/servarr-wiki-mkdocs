@@ -1,13 +1,15 @@
 ---
 title: Lidarr Appdata Directory
 description: Guide to Lidarr application data directory structure, configuration files, and data management
-published: true
-date: 2021-11-24T19:22:06.078Z
-tags: lidarr, appdata, configuration, directory, files, data, structure
-editor: markdown
-dateCreated: 2021-06-09T15:53:13.142Z
+tags:
+  - lidarr
+  - appdata
+  - configuration
+  - directory
+  - files
+  - data
+  - structure
 ---
-
 > Below are the default paths for the application data directory {.is-info}
 
 > All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}

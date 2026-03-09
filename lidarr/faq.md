@@ -1,13 +1,14 @@
 ---
 title: Lidarr FAQ
 description: Frequently asked questions and common issues with solutions for Lidarr music management
-published: true
-date: 2026-01-07T17:57:56.010Z
-tags: lidarr, troubleshooting, faq, questions, help, common-issues
-editor: markdown
-dateCreated: 2021-06-14T14:33:41.344Z
+tags:
+  - lidarr
+  - troubleshooting
+  - faq
+  - questions
+  - help
+  - common-issues
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
