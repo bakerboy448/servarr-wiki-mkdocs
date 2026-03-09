@@ -1,13 +1,10 @@
 ---
 title: Readarr Settings (Retired)
 description: Configuration settings guide for the retired Readarr application
-published: true
-date: 2023-09-17T12:32:59.037Z
-tags: readarr, settings
-editor: markdown
-dateCreated: 2021-11-25T15:07:27.926Z
+tags:
+  - readarr
+  - settings
 ---
-
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.

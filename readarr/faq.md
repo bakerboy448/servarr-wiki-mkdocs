@@ -1,13 +1,12 @@
 ---
 title: Readarr FAQ (Retired)
 description: Frequently asked questions for the retired Readarr application
-published: true
-date: 2025-03-30T15:48:25.855Z
-tags: readarr, needs-love, troubleshooting, faq
-editor: markdown
-dateCreated: 2021-05-25T20:01:09.320Z
+tags:
+  - readarr
+  - needs-love
+  - troubleshooting
+  - faq
 ---
-
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.

@@ -1,13 +1,9 @@
 ---
 title: Readarr Quick Start Guide (Retired)
 description: Quick start guide for the retired Readarr application
-published: true
-date: 2024-08-23T18:13:33.210Z
-tags: readarr
-editor: markdown
-dateCreated: 2021-12-11T19:42:31.825Z
+tags:
+  - readarr
 ---
-
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.
