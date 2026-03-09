@@ -1,13 +1,9 @@
 ---
 title: Readarr (Retired)
 description: Ebook and audiobook collection manager - retired application no longer in active development
-published: true
-date: 2024-08-23T18:23:16.288Z
-tags: readarr
-editor: markdown
-dateCreated: 2021-08-15T13:12:38.327Z
+tags:
+  - readarr
 ---
-
 ![128.png](/assets/readarr/logos/128.png)
 
 > Readarr was an eBook and audiobook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available. It does not manage comics or magazines.

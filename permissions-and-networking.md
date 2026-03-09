@@ -1,13 +1,13 @@
 ---
 title: Networking and Permissions Troubleshooting Guide
 description: Comprehensive guide for resolving network connectivity and file permission issues
-published: true
-date: 2022-03-13T15:12:02.123Z
-tags: troubleshooting, networking, permissions, connectivity, access
-editor: markdown
-dateCreated: 2021-11-13T21:09:50.099Z
+tags:
+  - troubleshooting
+  - networking
+  - permissions
+  - connectivity
+  - access
 ---
-
 # Network Troubleshooting
 
 - Generally `curl` will be needed for much of the troubleshooting

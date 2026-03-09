@@ -1,13 +1,16 @@
 ---
 title: Donate
 description: Support the Servarr project development through donations and sponsorship
-published: true
-date: 2023-06-26T03:16:42.643Z
-tags: radarr, sonarr, lidarr, readarr, prowlarr, donate, support, sponsor
-editor: markdown
-dateCreated: 2021-05-30T17:43:32.301Z
+tags:
+  - radarr
+  - sonarr
+  - lidarr
+  - readarr
+  - prowlarr
+  - donate
+  - support
+  - sponsor
 ---
-
 # Donate
 
 We welcome any and all forms of contribution, but monetary contributions are especially helpful in allowing us to provide the best programs and services at no charge to our users. Should you find yourself with a few dollars to spare we promise to put it to good use!

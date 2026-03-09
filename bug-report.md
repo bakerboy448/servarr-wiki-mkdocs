@@ -1,13 +1,15 @@
 ---
 title: Report a Bug
 description: Guidelines for reporting bugs and issues across all Servarr applications including Sonarr, Radarr, Lidarr, Readarr, and Prowlarr
-published: true
-date: 2023-06-26T02:47:03.542Z
-tags: radarr, sonarr, lidarr, readarr, prowlarr, troubleshooting, scripts
-editor: markdown
-dateCreated: 2023-06-26T02:47:03.542Z
+tags:
+  - radarr
+  - sonarr
+  - lidarr
+  - readarr
+  - prowlarr
+  - troubleshooting
+  - scripts
 ---
-
 # Reporting a Bug
 
 Reporting a bug is as simple as opening a GitHub Issue on the correct project. However, before doing so, please search our list of open issues. If you are unsure as to if the issue you are experiencing is infact a bug, please stop by our discord server and ask first.

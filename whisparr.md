@@ -1,13 +1,13 @@
 ---
 title: Whisparr
 description: Whisparr wiki homepage
-published: true
-date: 2023-08-11T03:02:11.101Z
-tags: whisparr, installation, troubleshooting, scripts, postgres
-editor: markdown
-dateCreated: 2022-04-03T00:57:35.371Z
+tags:
+  - whisparr
+  - installation
+  - troubleshooting
+  - scripts
+  - postgres
 ---
-
 ![128.png](/assets/whisparr/logos/128.png)
 
 > Whisparr is an adult video collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new sites and scenes and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.

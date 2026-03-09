@@ -1,13 +1,15 @@
 ---
 title: Servarr Installation Script
 description: Community Installation Script for the Servarr Suite of Applications (excludes retired Readarr)
-published: true
-date: 2024-04-15T10:13:30.679Z
-tags: installation, scripts, sonarr, radarr, lidarr, prowlarr, whisparr
-editor: markdown
-dateCreated: 2022-02-03T15:12:29.483Z
+tags:
+  - installation
+  - scripts
+  - sonarr
+  - radarr
+  - lidarr
+  - prowlarr
+  - whisparr
 ---
-
 # Servarr Installation Script
 
 This is a community created and community supported **unofficial** [script to handle installation of Servarr Apps (Lidarr/Prowlarr/Radarr/Whisparr)](https://github.com/Servarr/Wiki/blob/master/servarr/servarr-install-script.sh) on a Linux operating system - commonly targeted towards Debian & Ubuntu or similar distributions.
