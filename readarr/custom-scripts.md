@@ -1,13 +1,11 @@
 ---
 title: Readarr Custom Scripts (Retired)
 description: Custom scripts guide for the retired Readarr application
-published: true
-date: 2022-05-02T03:36:38.595Z
-tags: readarr, needs-love, custom scripts
-editor: markdown
-dateCreated: 2021-06-23T06:41:11.792Z
+tags:
+  - readarr
+  - needs-love
+  - custom scripts
 ---
-
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.
