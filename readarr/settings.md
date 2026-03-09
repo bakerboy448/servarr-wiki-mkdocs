@@ -128,7 +128,8 @@ Also, note that for each individual settings page, there are some options at the
 
 # Media Management
 
-> Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
+!!! info
+    Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar
 
 ## Root Folders
 
@@ -147,14 +148,14 @@ Also, note that for each individual settings page, there are some options at the
 - Calibre Specific Settings (Only if Use Calibre is enabled)
   - Use Calibre - Enable / Disable the use of Calibre Content Server to manage your Root Folder.
 
-> \* **Only for use with ebooks, not audiobooks!**
-> \* Note that this **cannot be enabled on an existing root folder**.
-> \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
-> \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
-> \* Note that hard links do not work with Calibre integration.
-> \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
-> \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
-{.is-warning}
+!!! warning
+    \* **Only for use with ebooks, not audiobooks!**
+    \* Note that this **cannot be enabled on an existing root folder**.
+    \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
+    \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
+    \* Note that hard links do not work with Calibre integration.
+    \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
+    \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 
 - Calibre Host - The IP/domain of the host of the Calibre Content Server
 - Calibre Port - The Port that Calibre Content Server is listening on
@@ -180,10 +181,10 @@ Also, note that for each individual settings page, there are some options at the
 - Metadata Profile - Select the Metadata Profile to use for authors detected in this folder. To only load books that were explicitly added or detected select None.
 - Default Readarr Tags - Default tags for authors detected within this folder
 
-> Non-Windows Users:
-> \* If you're using an NFS mount ensure `nolock` is enabled.
-> \* If you're using an SMB mount ensure `nobrl` is enabled.
-{.is-warning}
+!!! warning
+    Non-Windows Users:
+    \* If you're using an NFS mount ensure `nolock` is enabled.
+    \* If you're using an SMB mount ensure `nobrl` is enabled.
 
 ## Remote Path Mappings
 
@@ -196,7 +197,8 @@ Also, note that for each individual settings page, there are some options at the
 
 **If you are using Calibre integration, you do not get to name book files. Calibre takes care of this for you. You should only change these settings if you are not using Calibre.**
 
-> Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through. `{.is-info}
+!!! info
+    Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through. `
 
 Commonly used naming schema are:
 
@@ -214,11 +216,11 @@ Commonly used naming schema are:
       - Download Client's Release Title is used
     - Manual (Ad-Hoc) Import: Original File Name
 
-> If you leave Rename Books unchecked, then none of the naming below applies - you have told Readarr you do not want any renaming done at all. The book will be imported directly into the author folder.
-{.is-info}
+!!! info
+    If you leave Rename Books unchecked, then none of the naming below applies - you have told Readarr you do not want any renaming done at all. The book will be imported directly into the author folder.
 
-> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
-{.is-info}
+!!! info
+    This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
 
 - Replace Illegal Characters - If disabled Readarr will remove illegal characters. If enabled Readarr will replace illegal characters. Examples include `\ # / $ * < >` and more.
 
@@ -294,15 +296,15 @@ Commonly used naming schema are:
 - `{Original Title}` = Author.Name.Book.Name.2018.AZW3-EVOLVE
 - `{Original Filename}` = 01-book name
 
-> Original Filename is not recommended. It is the literal original filename and may be obfuscated t1i0p3s7i8yuti. Original Title is the release name and should be used instead.
-{.is-info}
+!!! info
+    Original Filename is not recommended. It is the literal original filename and may be obfuscated t1i0p3s7i8yuti. Original Title is the release name and should be used instead.
 
 ## Author Folder Format
 
 - (Advanced Option) This is where you will set the naming convention for the author folder name.
 
-> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
-{.is-info}
+!!! info
+    This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
 
 ### Author
 
@@ -319,10 +321,11 @@ Commonly used naming schema are:
 - (Advanced Option) Create empty author folders - Select the box to create empty author folders when a new author is added.
 - (Advanced Option) Delete empty author folders -  Select the box to delete empty author folders if there are no books in it.
 
-> One of those boxes can be checked, but they should not BOTH be checked. {.is-warning}
+!!! warning
+    One of those boxes can be checked, but they should not BOTH be checked. 
 
-> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
-{.is-info}
+!!! info
+    This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
 
 ## Importing
 
@@ -337,8 +340,8 @@ Commonly used naming schema are:
 - Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
 - (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
 
-> If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
-{.is-info}
+!!! info
+    If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
 
 ## File Management
 
@@ -350,9 +353,9 @@ Commonly used naming schema are:
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
 
-> \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
-> \* `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
-{.is-info}
+!!! info
+    \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
+    \* `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
 
 - (Advanced Option) Watch Root Folders for file changes - Check this box to trigger a rescan when it is detected that the root folder had changes.
 - (Advanced Option) Rescan Author Folder after Refresh -  Choose when to rescan an author folder after refreshing the author.
@@ -369,24 +372,24 @@ Commonly used naming schema are:
 - (Advanced Option) Recycling Bin - Book files will go here when deleted instead of being permanently deleted
 - (Advanced Option) Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
-> It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
-{.is-warning}
+!!! warning
+    It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
 
 # Permissions
 
 - Set Permissions - Should `chmod` be run when files are imported/renamed?
   - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
 
-> The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
-{.is-info}
+!!! info
+    The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
 
-> This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
-{.is-warning}
+!!! warning
+    This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
 
 - chown Group - Group name or GID. Use GID for remote file systems
 
-> This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
-{.is-warning}
+!!! warning
+    This only works if the user running `Readarr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
 
 # Profiles
 
@@ -398,9 +401,9 @@ Quality profiles are used to determine what formats of books are acceptable for 
 
 - Set profiles for the quality of books you're looking to download.
 
-> When selecting an existing profile or adding an additional profile a new window will appear
-> Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
-{.is-info}
+!!! info
+    When selecting an existing profile or adding an additional profile a new window will appear
+    Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 
 - Plus icon (<kb>+</kb>) - Create a new quality profile
 
@@ -408,16 +411,16 @@ Quality profiles are used to determine what formats of books are acceptable for 
 - Upgrades Allowed - When this option is checked and you tell Readarr to download a `EPUB` as it is the first release of a specific book then later somebody is able to upload a `AZW3` Readarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
   - Upgrade Until - Once this quality is reached Readarr will no longer download movies
 
-> Note: This is only applicable if you have `AZW3` higher than `EPUB` within the `Qualities` section
-{.is-warning}
+!!! warning
+    Note: This is only applicable if you have `AZW3` higher than `EPUB` within the `Qualities` section
 
 - Qualities - Qualities higher in the list are more preferred regardless of wanted (enabled/checked) status. for ranking regardless of enabled status. Qualities within the same group are equal. Only checked (enabled) qualities are wanted (allowed)
   - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
 
   - [See Qualities](#qualities-defined)
 
-> By default the qualities are set from "worst" (bottom) to "best" (top)
-{.is-info}
+!!! info
+    By default the qualities are set from "worst" (bottom) to "best" (top)
 
 ## Metadata Profiles
 
@@ -430,11 +433,11 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 - Name - Enter a **UNIQUE** name for the metadata profile profile
 - Minimum Popularity - Enter the minimum popularity for a book to be added for an author.
 
-> Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up.
-{.is-warning}
+!!! warning
+    Setting this too high will result in books not being added to Readarr, but setting it too low will result in obscure publications showing up.
 
-> Set this to `10000000000` exactly to create a profile equivalent to `None` but still allow other filtering of editions and books. Note that `None` does not apply any metadata filters and you may get foreign editions.
-{.is-info}
+!!! info
+    Set this to `10000000000` exactly to create a profile equivalent to `None` but still allow other filtering of editions and books. Note that `None` does not apply any metadata filters and you may get foreign editions.
 
 - Minimum Pages - Enter the minimum number of pages a book must have to be added for an author.
 - Skip books with missing release date - Enable to skip books with a missing release date.
@@ -444,8 +447,8 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 - Allowed Languages - Enter a comma-separated list of ISO 639-3 language codes, or 'null' for allowable languages for your books
 - Must Not Contain - Enter words or phrases that a book title must not contain in order to be added.
 
-> You may create multiple metadata profiles, and apply a separate one to each author as needed. But, you may only apply a single metadata profile to any given author.
-{.is-info}
+!!! info
+    You may create multiple metadata profiles, and apply a separate one to each author as needed. But, you may only apply a single metadata profile to any given author.
 
 ## Release Profiles
 
@@ -458,13 +461,13 @@ Release profiles are used to determine if indexer release names qualify for down
 - Must Not Contain - Add a list of words or phrases that MUST NOT be in the release name in order to be considered valid.
 - Preferred (Words) - Here you can add terms or regex with scores (positive and negative) to be considered more or less preferable. For example, you may prefer "unabridged" with a positive score.
 
-> Releases with a higher preferred word score than the existing file are ALWAYS an upgrade!
-{.is-info}
+!!! info
+    Releases with a higher preferred word score than the existing file are ALWAYS an upgrade!
 
 - Include Preferred when Renaming Check this box to include your preferred words (or regex matches) in the `{Preferred Words}` file naming assignment token.
 
-> You should include `{Preferred Words}` in your file naming, and check this box if you're using them, because otherwise you can end up in a download loop.
-{.is-warning}
+!!! warning
+    You should include `{Preferred Words}` in your file naming, and check this box if you're using them, because otherwise you can end up in a download loop.
 
 - Indexer - In this drop-down, you can limit this release profile to a single indexer. This should almost always be left at `(any)`
 - Tags - Enter a tag here, to be able to apply this tag to authors with the same tag. If you do not apply a tag here, then this profile applies to ALL authors.
@@ -490,14 +493,15 @@ Delay profiles are also helpful if you want to emphasize one protocol (Usenet or
 
 The timer begins as soon as Readarr detects a books has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
-> The clock starts from the releases uploaded time and not from the time Readarr sees it. {.is-info}
+!!! info
+    The clock starts from the releases uploaded time and not from the time Readarr sees it. 
 
 During the delay period, any new releases that become available will be noted by Readarr. When the delay timer expires, Readarr will download the single release which best matches your quality preferences.
 
 The timer period can be different for Usenet and Torrents. Each profile can be associated with one or more tags to allow you to customize which shows have which profiles. A delay profile with no tag is considered the default and applies to all shows that do not have a specific tag.
 
-> Delay profiles start from the time stamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
-{.is-warning}
+!!! warning
+    Delay profiles start from the time stamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
 
 #### Examples
 
@@ -556,8 +560,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 # Indexers
 
-> Information on supported indexers can be found at the [More Info (Supported)](/readarr/supported#indexers) page for this section
-{.is-info}
+!!! info
+    Information on supported indexers can be found at the [More Info (Supported)](/readarr/supported#indexers) page for this section
 
 ## Supported Indexers
 
@@ -621,12 +625,13 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
   - Please see [How does Readarr find books?](/readarr/faq#how-does-readarr-find-books) for a better understanding of how RSS Sync will help you
 
-> If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.{.is-info}
+!!! info
+    If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
 
 # Download Clients
 
-> Information on supported download clients can be found at the [More Info (Supported)](/readarr/supported#download-clients) page for this section
-{.is-info}
+!!! info
+    Information on supported download clients can be found at the [More Info (Supported)](/readarr/supported#download-clients) page for this section
 
 ## Overview
 
@@ -711,7 +716,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 |     uTorrent      | :white_check_mark: |                            :white_check_mark:                            |
 |       Vuze        | :white_check_mark: |                            :white_check_mark:                            |
 
-> ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Readarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
+!!! info
+    ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Readarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.
 
 ## Completed Download Handling
 
@@ -762,13 +768,13 @@ If you download using a BitTorrent client, the process is slightly different:
 - If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect.  The typical solution is to add and remove the mapping.
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
-> If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
-{.is-info}
+!!! info
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 # Import Lists
 
-> Information on supported list types can be found at the [More Info (Supported)](/readarr/supported#lists) page for this section
-{.is-info}
+!!! info
+    Information on supported list types can be found at the [More Info (Supported)](/readarr/supported#lists) page for this section
 
 Import lists allow you to add items to Readarr automatically from your GoodReads shelves or from other users. This has the potential to add a lot of unexpected items to your Readarr database, so please use it with care.
 
@@ -810,8 +816,8 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Se
 
 # Connect
 
-> Information on supported connection types can be found at the [More Info (Supported)](/readarr/supported#notifications) page for this section
-{.is-info}
+!!! info
+    Information on supported connection types can be found at the [More Info (Supported)](/readarr/supported#notifications) page for this section
 
 ## Connections
 
@@ -841,8 +847,8 @@ Connections are how you want Readarr to communicate with the outside world.
 
 {#write-metadata-to-book-files}
 
-> Information on supported metadata consumers can be found at the [More Info (Supported)](/readarr/supported#metadata) page for this section
-{.is-info}
+!!! info
+    Information on supported metadata consumers can be found at the [More Info (Supported)](/readarr/supported#metadata) page for this section
 
 This page allows you to create/update metadata tags/covers.
 
@@ -885,8 +891,8 @@ If you are using audiobooks, you will use these options to control it.
 
 > It is highly recommended that you add a descriptive tag to an Import List aside from what is mentioned above.
 
-> Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.
-{.is-info}
+!!! info
+    Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.
 
 # General
 
@@ -902,18 +908,18 @@ This page is for general Readarr settings that are not covered in other sections
   - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
 - Port Number - The port number that you are wanting to use to access the webUI for Readarr
 
-> Note: If using Docker do not touch this setting.
-{.is-warning}
+!!! warning
+    Note: If using Docker do not touch this setting.
 
 - URL Base - For reverse proxy support, default is empty
 
-> Note: If using a reverse proxy (example: mydomain.com/readarr) you would enter '/readarr' for URL Base.
-{.is-info}
+!!! info
+    Note: If using a reverse proxy (example: mydomain.com/readarr) you would enter '/readarr' for URL Base.
 
 - Enable SSL - If you have SSL credentials and would like to secure communication to and from your Readarr enable this option.
 
-> Note: Do not use this unless you know what you're doing.
-{.is-warning}
+!!! warning
+    Note: Do not use this unless you know what you're doing.
 
 ## Security
 

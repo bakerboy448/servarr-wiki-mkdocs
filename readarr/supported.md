@@ -23,7 +23,8 @@ Thank you for being part of the Readarr journey. For any inquiries or assistance
 Sincerely,
 The Servarr Team
 
-> This page is a work in progress and requires additional effort.{.is-warning}
+!!! warning
+    This page is a work in progress and requires additional effort.
 
 This page is the disambiguation page for all "supported" wiki links (i.e. typically `More Info` in the UI).
 
@@ -150,16 +151,16 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - Bookshelves - Select which bookshelves to import from GoodReads
   - Authenticate with GoodReads - Click the button to authenticate with GoodReads.
 
-> Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authenticate with GoodReads to fetch the user's shelves.
-{.is-info}
+!!! info
+    Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authenticate with GoodReads to fetch the user's shelves.
 
 - GoodReads Owned Books {#goodreadsownedbooks}
   - (Advanced Option) User Id - Enter a userid here if it is not your userid you're added.
   - Bookshelves - Select which bookshelves to import from GoodReads
   - Authenticate with GoodReads - Click the button to authenticate with GoodReads.
 
-> Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authenticate with GoodReads to fetch the user's shelves.
-{.is-info}
+!!! info
+    Multiple GoodReads users may be added as separate lists. In addition to using an authenticated user other users can be added by enabling advanced options and entering the User ID, then clicking Authenticate with GoodReads to fetch the user's shelves.
 
 - GoodReads Lists {#goodreadslistimportlist}
   - List ID - Enter the GoodReads public List ID to add as a list

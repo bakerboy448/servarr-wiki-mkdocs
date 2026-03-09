@@ -122,8 +122,8 @@ If you're asked for debug logs your logs will contain `debug` and if you're aske
 
 To provide good and useful logs for sharing:
 
-> Ensure a spammy task is NOT running such as an RSS refresh
-{.is-warning}
+!!! warning
+    Ensure a spammy task is NOT running such as an RSS refresh
 
 1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
 2. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
@@ -163,8 +163,8 @@ To provide good and useful logs for sharing:
 
 The log files are located in Readarr's [Appdata Directory](/readarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
-> Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
-{.is-info}
+!!! info
+    Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
 ## Update Logs Location
 
@@ -234,7 +234,8 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/readarr) or swing by our [discord](https://readarr.com/discord), if there are others with the same issue, then rest assured we are working on it.
 
-> Please ensure you did not try to use a database from `nightly` on the stable version. Branch hopping is ill-advised.{.is-info}
+!!! info
+    Please ensure you did not try to use a database from `nightly` on the stable version. Branch hopping is ill-advised.
 
 ### Permissions Issues
 
@@ -252,8 +253,8 @@ Install the update (.exe) or extract (.zip) the contents over your existing inst
 
 Downloading and importing is where *most* people experience issues. From a high level perspective, Readarr needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even *bigger* variety of setups. This means that while there are some *common* setups, there isn’t one *right* setup and everyone’s setup can be a little different.
 
-> **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
-{.is-danger}
+!!! danger
+    **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
 
 When you reach out for help, be sure to read [asking for help](#asking-for-help) so that you can provide us with the details we’ll need.
 
@@ -320,8 +321,8 @@ Thus `/volume3/data` does not exist within Readarr's container or is not accessi
 - If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect.  The typical solution is to add and remove the mapping.
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
-> If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
-{.is-info}
+!!! info
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 #### Remote Mount or Remote Sync (Syncthing)
 
@@ -384,8 +385,8 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
-> Your download folder and your root/library folder MUST be separate
-{.is-warning}
+!!! warning
+    Your download folder and your root/library folder MUST be separate
 
 ### Incorrect category
 
@@ -461,8 +462,8 @@ You can also review some common permissions and networking troubleshooting comma
 
 ## Turn logging up to trace
 
-> **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
-{.is-danger}
+!!! danger
+    **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
 
 ## Testing an Indexer or Tracker
 
