@@ -10,7 +10,8 @@ tags:
 
 ## Debian / Ubuntu
 
-> Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
+!!! info
+    Note: Raspberry Pi OS and Raspbian are both flavors of Debian 
 
 ### Easy Install
 
@@ -22,8 +23,8 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 [Please see the \*Arr Community Installation Script](/install-script)
 
-> Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says ffprobe is not found this can typically be fixed with a reinstall.
-{.is-info}
+!!! info
+    Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says ffprobe is not found this can typically be fixed with a reinstall.
 
 ### Debian / Ubuntu Hands on Install
 
@@ -31,10 +32,10 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 You'll need to install the binaries using the below commands.
 
-> The steps below will download the stable version (`master` release branch) Radarr and install it into `/opt`
-> Radarr will run under the user `radarr` and group `media`; `media` is the commonly suggested group to run the \*Arrs, download clients, and media server under.
-> Radarr's configuration files will be stored in `/var/lib/radarr`
-{.is-success}
+!!! success
+    The steps below will download the stable version (`master` release branch) Radarr and install it into `/opt`
+    Radarr will run under the user `radarr` and group `media`; `media` is the commonly suggested group to run the \*Arrs, download clients, and media server under.
+    Radarr's configuration files will be stored in `/var/lib/radarr`
 
 - Ensure you have the required prerequisite packages:
 
@@ -42,17 +43,18 @@ You'll need to install the binaries using the below commands.
 sudo apt install curl sqlite3
 ```
 
-> **Installation Prerequisites**
-> The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
-> \* The user `radarr` is created
-> \* The user `radarr` is part of the group `media`
-> \* Your download clients and media server run as and are a part of the group `media`
-> \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
-> \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it for it
-> \* Previous/existing installations were using the `master` release branch noted on the [FAQ](/radarr/faq) or you update `master` in the download URL
-{.is-danger}
+!!! danger
+    **Installation Prerequisites**
+    The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
+    \* The user `radarr` is created
+    \* The user `radarr` is part of the group `media`
+    \* Your download clients and media server run as and are a part of the group `media`
+    \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
+    \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it for it
+    \* Previous/existing installations were using the `master` release branch noted on the [FAQ](/radarr/faq) or you update `master` in the download URL
 
-> By continuing below, you acknowledge that you have read and met the above requirements. {.is-success}
+!!! success
+    By continuing below, you acknowledge that you have read and met the above requirements. 
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
@@ -76,8 +78,8 @@ tar -xvzf Radarr*.linux*.tar.gz
 sudo mv Radarr /opt/
 ```
 
-> Note: This assumes you will run as the user `radarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Radarr.
-{.is-danger}
+!!! danger
+    Note: This assumes you will run as the user `radarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Radarr.
 
 - Ensure ownership of the binary directory.
 
@@ -87,8 +89,8 @@ sudo chown radarr:radarr -R /opt/Radarr
 
 - Configure systemd so Radarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/var/lib/radarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument. Note: that `$USER` is the User Radarr runs as and is defined below.
-{.is-danger}
+!!! danger
+    The below systemd creation script will use a data directory of `/var/lib/radarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Radarr` simply remove the `-data` argument. Note: that `$USER` is the User Radarr runs as and is defined below.
 
 ```shell
 cat << EOF | sudo tee /etc/systemd/system/radarr.service > /dev/null
@@ -129,8 +131,8 @@ rm Radarr*.linux*.tar.gz
 
 Typically to access the Radarr web GUI browse to `http://{Your server IP Address}:7878`
 
-> Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says Ffprobe is not found this can typically be fixed with a reinstall.
-{.is-info}
+!!! info
+    Radarr uses a bundled version of ffprobe for media file analysis and does not require ffprobe or ffmpeg to be installed on the system.  If Radarr says Ffprobe is not found this can typically be fixed with a reinstall.
 
 If Radarr did not appear to start, then check the status of the service:
 
@@ -138,15 +140,16 @@ If Radarr did not appear to start, then check the status of the service:
 sudo journalctl --since today -u radarr
 ```
 
-> If Radarr v6+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](/radarr/faq#radarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
-{.is-info}
+!!! info
+    If Radarr v6+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](/radarr/faq#radarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
 
 ---
 
 ### Uninstall
 
 To uninstall and purge:
-> Warning: This will destroy your application data. {.is-danger}
+!!! danger
+    Warning: This will destroy your application data. 
 
 ```bash
 sudo systemctl stop radarr
