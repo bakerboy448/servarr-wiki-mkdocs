@@ -1,13 +1,15 @@
 ---
 title: Sonarr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration
-published: true
-date: 2022-06-13T15:52:03.477Z
-tags: sonarr, scripts, automation, custom, integration, hooks, api
-editor: markdown
-dateCreated: 2021-06-16T15:55:53.999Z
+tags:
+  - sonarr
+  - scripts
+  - automation
+  - custom
+  - integration
+  - hooks
+  - api
 ---
-
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Sonarr via the [Connect Settings](/sonarr/settings#connections).
 
 # Overview

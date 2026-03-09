@@ -1,13 +1,10 @@
 ---
 title: TheXEM Moderation Guide
 description: Guide for how to map various scenarios in XEM for optimal use with Sonarr and other PVR software.
-published: true
-date: 2021-11-24T19:26:31.972Z
-tags: sonarr, xem
-editor: markdown
-dateCreated: 2021-10-03T16:48:28.241Z
+tags:
+  - sonarr
+  - xem
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

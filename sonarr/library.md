@@ -1,13 +1,14 @@
 ---
 title: Sonarr Library
 description: Manage your TV series collection, monitor status, and organize media in Sonarr
-published: true
-date: 2022-10-28T17:18:11.116Z
-tags: sonarr, library, series, management, collection, organization
-editor: markdown
-dateCreated: 2021-06-11T23:31:01.289Z
+tags:
+  - sonarr
+  - library
+  - series
+  - management
+  - collection
+  - organization
 ---
-
 # Series
 
 The series page shows your entire library and allows you to select individual series (however, searching can be more efficient in large libraries) and make searches for specific series, as well as being able to edit them. It also allows you to filter your series.

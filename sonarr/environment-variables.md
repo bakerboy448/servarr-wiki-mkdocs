@@ -1,13 +1,14 @@
 ---
 title: Sonarr Environment Variables
 description: Complete guide to Sonarr environment variables for configuration management including Docker, database, authentication, and server settings
-published: true
-date: 2025-12-16T17:03:24.201Z
-tags: sonarr, docker, installation, configuration, postgres, environment-variables
-editor: markdown
-dateCreated: 2025-09-06T22:34:56.401Z
+tags:
+  - sonarr
+  - docker
+  - installation
+  - configuration
+  - postgres
+  - environment-variables
 ---
-
 # Sonarr Environment Variables
 
 Sonarr has the ability to use environment variables to override entries in config.xml. The pattern for variable naming is predictable and can be used to set any config entry. Environment variables are comprised of 3 parts, delimited by two underscores:

@@ -1,13 +1,14 @@
 ---
 title: Sonarr System
 description: System information, logs, scheduled tasks, and status monitoring for Sonarr administration and troubleshooting
-published: true
-date: 2023-10-12T15:54:39.615Z
-tags: system, administration, logs, tasks, status, sonarr
-editor: markdown
-dateCreated: 2021-09-08T17:58:43.288Z
+tags:
+  - system
+  - administration
+  - logs
+  - tasks
+  - status
+  - sonarr
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

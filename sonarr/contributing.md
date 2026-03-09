@@ -1,13 +1,13 @@
 ---
 title: Sonarr Contributing
 description: Guide for contributing to Sonarr development including setup, building, testing, and submitting changes
-published: true
-date: 2023-09-03T13:55:05.394Z
-tags: sonarr, contributing, development, guide, setup
-editor: markdown
-dateCreated: 2021-06-11T23:10:04.820Z
+tags:
+  - sonarr
+  - contributing
+  - development
+  - guide
+  - setup
 ---
-
 # How to Contribute
 
 We're always looking for people to help make Sonarr even better, there are a number of ways to contribute.
