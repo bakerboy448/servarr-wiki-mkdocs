@@ -1,13 +1,13 @@
 ---
 title: Sonarr Multiple Instances
 description: Requirements and how to install multiple instances of Sonarr
-published: true
-date: 2024-07-13T15:27:26.468Z
-tags: installation, multiple-instances, configuration, setup, sonarr
-editor: markdown
-dateCreated: 2023-07-03T20:13:35.847Z
+tags:
+  - installation
+  - multiple-instances
+  - configuration
+  - setup
+  - sonarr
 ---
-
 # Multiple Instances
 
 It is possible to run multiple instances of Sonarr. This is typically done when one wants a 4K and 1080p copy of a series.

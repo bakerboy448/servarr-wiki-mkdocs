@@ -1,13 +1,9 @@
 ---
 title: Sonarr Docker Installation
 description: Docker installation guide for Sonarr
-published: true
-date: 2023-08-12T16:03:21.613Z
-tags: sonarr
-editor: markdown
-dateCreated: 2023-07-03T20:13:15.754Z
+tags:
+  - sonarr
 ---
-
 # Docker
 
 The Sonarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
