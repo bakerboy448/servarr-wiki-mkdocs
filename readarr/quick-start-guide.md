@@ -277,9 +277,8 @@ Downloading and importing is where most people experience issues. From a high le
 # How to import your existing organized media library
 
 > Note that Readarr does not regularly search for Books.  See these two FAQ Entries for details to understand how Readarr works.
-[How does Readarr find books?](/readarr/faq#how-does-readarr-find-books) and [How does Readarr work?](/readarr/faq#how-does-readarr-work)
-{.is-info}
-
+!!! info
+    [How does Readarr find books?](/readarr/faq#how-does-readarr-find-books) and [How does Readarr work?](/readarr/faq#how-does-readarr-work)
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 Coming soon - Contributions Welcome
