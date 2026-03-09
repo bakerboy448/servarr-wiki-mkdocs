@@ -1,13 +1,11 @@
 ---
 title: Prowlarr MacOS Installation
 description: MacOS installation guide for Prowlarr
-published: true
-date: 2025-09-15T02:43:44.795Z
-tags: prowlarr, installation, macos
-editor: markdown
-dateCreated: 2023-07-03T20:11:30.382Z
+tags:
+  - prowlarr
+  - installation
+  - macos
 ---
-
 # MacOS (OSX)
 
 {#OSX}

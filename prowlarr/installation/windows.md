@@ -1,13 +1,11 @@
 ---
 title: Prowlarr Windows Installation
 description: Windows installation guide for Prowlarr
-published: true
-date: 2023-08-28T19:43:08.146Z
-tags: installation, prowlarr, windows
-editor: markdown
-dateCreated: 2023-07-03T20:11:39.779Z
+tags:
+  - installation
+  - prowlarr
+  - windows
 ---
-
 # Windows
 
 Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows as Windows Service or system tray application.
