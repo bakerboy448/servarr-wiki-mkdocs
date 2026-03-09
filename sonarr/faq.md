@@ -2,8 +2,8 @@
 title: Sonarr FAQ
 description: Sonarr Frequently Asked Questions
 ---
-> For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](/sonarr/faq-v4)
-{.is-info}
+!!! info
+    For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](/sonarr/faq-v4)
 
 # Sonarr Basics
 
@@ -29,8 +29,8 @@ Active searching (via the indexer's API) is only done in the below situations. N
 
 ## How are possible downloads compared
 
-> Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
-{.is-info}
+!!! info
+    Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
 
 - The current logic [can always be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L41s).
 
@@ -46,11 +46,11 @@ Active searching (via the indexer's API) is only done in the below situations. N
 1. Age (If Usenet)
 1. Size
 
-> REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](/sonarr/settings#file-management) and use [TRaSH's Repack/Proper Custom Format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#repackproper) with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/)
-{.is-warning}
+!!! warning
+    REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](/sonarr/settings#file-management) and use [TRaSH's Repack/Proper Custom Format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#repackproper) with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/)
 
-> \* Use Custom Formats and TRaSH Guide's [season pack custom format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#season-pack) with a score greater than zero to prefer season packs.
-{.is-info}
+!!! info
+    \* Use Custom Formats and TRaSH Guide's [season pack custom format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#season-pack) with a score greater than zero to prefer season packs.
 
 ## How do I change from the Windows Service to a Tray App
 
@@ -79,8 +79,8 @@ Active searching (via the indexer's API) is only done in the below situations. N
 
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database or use [Toolbarr](https://github.com/Notifiarr/toolbarr).
-{.is-warning}
+!!! warning
+    Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database or use [Toolbarr](https://github.com/Notifiarr/toolbarr).
 
 #### Using zip backup
 
@@ -106,8 +106,8 @@ Active searching (via the indexer's API) is only done in the below situations. N
 
 #### File System Restore on Synology NAS
 
-> CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
-{.is-warning}
+!!! warning
+    CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 
 - Re-install Sonarr (if applicable / not already installed)
 - Find the location of the AppData directory for Sonarr
@@ -116,7 +116,8 @@ Active searching (via the indexer's API) is only done in the below situations. N
 - Stop Sonarr
 - Connect to the Synology NAS through SSH and log in as root
 
-> On some installations, the user is different than the below commands: `chown -R sc-Sonarr:Sonarr *` {.is-info}
+!!! info
+    On some installations, the user is different than the below commands: `chown -R sc-Sonarr:Sonarr *` 
 
 - Execute the following commands:
 
@@ -139,7 +140,8 @@ chmod -R 0644 *
 
 {#help-i-have-forgotten-my-password}
 
-> Authentication is now mandatory in v4 of Sonarr and the `AuthenticationMethod` type `None` is no longer valid - please see this [v4 FAQ - Forced Authentication](/sonarr/faq-v4#forced-authentication) {.is-info}
+!!! info
+    Authentication is now mandatory in v4 of Sonarr and the `AuthenticationMethod` type `None` is no longer valid - please see this [v4 FAQ - Forced Authentication](/sonarr/faq-v4#forced-authentication) 
 
 To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](/sonarr/appdata-directory)
 
@@ -161,7 +163,8 @@ This is expected. With a setup that supports [hardlinks](https://trash-guides.in
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Sonarr's settings, Sonarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped (i.e. paused). See [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for how to configure your download client optimally.
 
-> Hard links are enabled by default. [A hard link will not use any additional disk space](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/). The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then it will fall back and copy the file.{.is-info}
+!!! info
+    Hard links are enabled by default. [A hard link will not use any additional disk space](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/). The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then it will fall back and copy the file.
 
 ## I see that feature/bug X was fixed, Why can I not see it
 
@@ -195,8 +198,8 @@ Sonarr consists of two main branches of code, `main` and `develop`.
   - If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 - The other setting that can be changed is "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O.
 
-> It is not possible to disable this task. If this task is running for long enough that you feel it's the problem, something else is going on that needs to be solved instead of stopping this task.
-{.is-warning}
+!!! warning
+    It is not possible to disable this task. If this task is running for long enough that you feel it's the problem, something else is going on that needs to be solved instead of stopping this task.
 
 ## Why is there a number next to Activity
 
@@ -224,8 +227,8 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 Below are some example release names for each show type. The specific differentiating piece is noted in bold.
 
-> If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](/sonarr/settings#indexers)
-{.is-info}
+!!! info
+    If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](/sonarr/settings#indexers)
 
 #### Daily
 
@@ -255,7 +258,8 @@ Logs will show `Searching indexers for [The Witcher : S01E09 (09)]`
 
 {#rename-folders}
 
-> The same process applies for moving/changing Series paths as well{.is-info}
+!!! info
+    The same process applies for moving/changing Series paths as well
 
 If you have adjusted your Series Name format after Sonarr has already created some Series folders, Sonarr will not automatically rename existing folders. In order to trigger a rename of these folders the following steps should be taken:
 
@@ -266,8 +270,8 @@ If you have adjusted your Series Name format after Sonarr has already created so
 1. Change Root Folder to the same Root Folder that the series currently exist in
 1. Select "Yes, move the files"
 
-> If you are using Plex or Emby, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
-{.is-warning}
+!!! warning
+    If you are using Plex or Emby, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
 
 ## How do I update Sonarr
 
@@ -281,11 +285,11 @@ If you have adjusted your Series Name format after Sonarr has already created so
 - main - ![Current v4 Main/Latest](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Main&query=%24%5B%27v4-stable%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) - (Default/Stable): This has been tested by users on nightly (`develop`) branch and it's not known to have any major issues. This branch should be used by the majority of users. On GitHub, this is the `main` branch.
 - develop - ![Current v4 Develop/Nightly](https://img.shields.io/badge/dynamic/json?color=f5f5f5&label=Develop&query=%24%5B%27v4-nightly%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases) -  (Beta/Unstable) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch. **Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.** This version is updated immediately.
 
-> **Warning: You may not be able to go back to `main` after switching to this branch.** On GitHub, this is the `develop` branch.
-{.is-danger}
+!!! danger
+    **Warning: You may not be able to go back to `main` after switching to this branch.** On GitHub, this is the `develop` branch.
 
-> v3 **non-docker** installs **cannot** be upgraded directly to v4 and require installing Sonarr v4
-{.is-info}
+!!! info
+    v3 **non-docker** installs **cannot** be upgraded directly to v4 and require installing Sonarr v4
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:nightly`, or `:develop` to the end of your container tag depending on who makes your builds.
 
@@ -301,8 +305,8 @@ If you have adjusted your Series Name format after Sonarr has already created so
 1. Go to System and then the Updates tab
 1. Newer versions that are not yet installed will have an update button next to them, clicking that button will install the update.
 
-> v3 cannot be updated to beta v4 and requires manually installing. Refer to the [v4 Beta Announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/)
-{.is-info}
+!!! info
+    v3 cannot be updated to beta v4 and requires manually installing. Refer to the [v4 Beta Announcement](https://www.reddit.com/r/sonarr/comments/z3nb82/sonarr_v4_beta/)
 
 #### Docker
 
@@ -314,7 +318,8 @@ If you have adjusted your Series Name format after Sonarr has already created so
 
 ## Can I switch between branches
 
-> You can (almost) always increase your risk.{.is-info}
+!!! info
+    You can (almost) always increase your risk.
 
 - `main` can go to `develop`
 - See below or otherwise check with the development team to see if you can switch from `develop` to `main` for your given build.
@@ -337,9 +342,9 @@ If you have adjusted your Series Name format after Sonarr has already created so
 - Release groups use a year for the season S2010 and TVDb uses S01.
 - [XEM](http://thexem.info) works in most cases and keeps it running smooth without you ever knowing. However as with most things, there will always be a *problematic exceptions* and in this case there is a list of them.
 
-> Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM).
-> If this is observed, please submit them via the scene mapping form.
-{.is-info}
+!!! info
+    Certain indexers or release groups may follow TVDb rather than `Scene` (i.e. XEM).
+    If this is observed, please submit them via the scene mapping form.
 
 - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
 - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
@@ -347,8 +352,8 @@ If you have adjusted your Series Name format after Sonarr has already created so
 
 ### Problematic Shows
 
-> This by no means is an all inclusive list of shows that have known issues with scene mapping; however, these are some common ones.
-{.is-info}
+!!! info
+    This by no means is an all inclusive list of shows that have known issues with scene mapping; however, these are some common ones.
 
 - This is an incomplete list of the known shows and how/why they're problematic:
 - American Dad {#problemshow-americandad}
@@ -505,14 +510,14 @@ Depending on your OS, there are multiple possible ways.
 
 ## VPNs, Jackett, and the \*ARRs
 
-> For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
-{.is-info}
+!!! info
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
 
 - Unless you're in a repressive country like China, Australia or the UK, your torrent client is typically the only thing that needs to be behind a VPN. If you're in a repressive country noted above it is likely your connection to your trackers needs to be VPN'd as well - in other words Jackett behind a VPN or Prowlarr using an Indexer Proxy. Other *Arr apps not connecting to trackers should not be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 - In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible.
 
-> **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
-{.is-warning}
+!!! warning
+    **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
 
 - **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
@@ -546,8 +551,8 @@ Depending on your OS, there are multiple possible ways.
 
 ## I am getting an error: Database disk image is malformed
 
-> Database corruption occurring when upgrading to v4 means your existing v3 database is corrupt. v4 does not create database corruption. Downgrading to v3 or staying on v3 does not and will never fix the underlying corruption. **Sonarr v3 is end of life and unsupported**
-{.is-warning}
+!!! warning
+    Database corruption occurring when upgrading to v4 means your existing v3 database is corrupt. v4 does not create database corruption. Downgrading to v3 or staying on v3 does not and will never fix the underlying corruption. **Sonarr v3 is end of life and unsupported**
 
 - **Errors of `Error creating log database` indicate issues with logs.db**
   - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries

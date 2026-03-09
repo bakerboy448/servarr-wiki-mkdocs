@@ -34,13 +34,13 @@ tags:
 
 > This page is still in progress and not complete. Contributions are welcome
 
-> For a more detailed breakdown of all the settings, check [Sonarr =>Settings](/sonarr/settings)
-{.is-info}
+!!! info
+    For a more detailed breakdown of all the settings, check [Sonarr =>Settings](/sonarr/settings)
 
 In this guide we will try to explain the basic setup you need to do to get started with Sonarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
-> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
-{.is-warning}
+!!! warning
+    Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
 
 # Startup
 
@@ -61,8 +61,8 @@ Click on `Settings` => `Media Management` on the left menu.
 - Check the box to enable Rename Episodes.
 - Decide on your Standard, Daily, and Anime episode naming conventions. You should review the recommended naming conventions [in the TRaSH Guides documentation](https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme/).
 
-> If you choose not to include quality/resolution or release group, this is information you cannot regain later. It is highly recommended that you include those in your naming scheme.
-{.is-info}
+!!! info
+    If you choose not to include quality/resolution or release group, this is information you cannot regain later. It is highly recommended that you include those in your naming scheme.
 
 ## Importing
 
@@ -76,15 +76,15 @@ Click on `Settings` => `Media Management` on the left menu.
 
 Here we will add the root folder that Sonarr will be using to import your existing organized media library and where Sonarr will be importing (copy/hardlink/move) your media after your download client has downloaded it. This is the folder where your series and episodes are stored for your media player to play them. It is NOT where you download files to!
 
-> \* Non-Windows Users: If you're using an NFS mount ensure `nolock` is enabled.
-> \* If you're using an SMB mount ensure `nobrl` is enabled.
-{.is-warning}
+!!! warning
+    \* Non-Windows Users: If you're using an NFS mount ensure `nolock` is enabled.
+    \* If you're using an SMB mount ensure `nobrl` is enabled.
 
-> **The user and group you configured Sonarr to run as must have read & write access to this location.**
-{.is-info}
+!!! info
+    **The user and group you configured Sonarr to run as must have read & write access to this location.**
 
-> **Your download folder and media folder can’t be the same location**
-{.is-danger}
+!!! danger
+    **Your download folder and media folder can’t be the same location**
 
 Don’t forget to save your changes!
 
@@ -110,8 +110,8 @@ Most torrent trackers require [Prowlarr](/prowlarr) or Jackett to be used in Son
 
 Add at least one indexer in order for Sonarr to work properly.
 
-> See the [settings page](/sonarr/settings#indexers) and at the [More Info (Supported)](/sonarr/supported#indexers) page for this section for more information.
-{.is-info}
+!!! info
+    See the [settings page](/sonarr/settings#indexers) and at the [More Info (Supported)](/sonarr/supported#indexers) page for this section for more information.
 
 # Download Clients
 
@@ -119,8 +119,8 @@ Add at least one indexer in order for Sonarr to work properly.
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/sonarr/settings#download-clients), at the [More Info (Supported)](/sonarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
-{.is-info}
+!!! info
+    See the [settings page](/sonarr/settings#download-clients), at the [More Info (Supported)](/sonarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 ## {.tabset}
 

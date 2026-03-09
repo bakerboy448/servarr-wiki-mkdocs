@@ -21,7 +21,8 @@ But before you go there and post, be sure your request for help is the best it c
 
 The more we know, the easier it is to help you.
 
-> Please note we only support builds created by the Sonarr build platform {.is-info}
+!!! info
+    Please note we only support builds created by the Sonarr build platform 
 
 # Logging and Log Files
 
@@ -39,8 +40,8 @@ If you're asked for debug logs your logs will contain `debug` and if you're aske
 
 To provide good and useful logs for sharing:
 
-> Ensure a spammy task is NOT running such as an RSS refresh
-{.is-warning}
+!!! warning
+    Ensure a spammy task is NOT running such as an RSS refresh
 
 1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
 2. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
@@ -81,8 +82,8 @@ To provide good and useful logs for sharing:
 
 The log files are located in Sonarr's [Appdata Directory](/sonarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
-> Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
-{.is-info}
+!!! info
+    Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
 ## Update Logs Location
 
@@ -151,7 +152,8 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 In the event of a migration issue there is not much you can do immediately, if the issue is specific to you (or there are not yet any posts), please create a post on [our subreddit](https://reddit.com/r/sonarr) or swing by our [discord](https://discord.sonarr.tv/), if there are others with the same issue, then rest assured we are working on it.
 
-> Please ensure you did not try to use a database from `develop` on the stable version. Branch hopping is ill-advised.{.is-info}
+!!! info
+    Please ensure you did not try to use a database from `develop` on the stable version. Branch hopping is ill-advised.
 
 ### Permissions Issues
 
@@ -169,10 +171,10 @@ Install the update (.exe) or extract (.zip) the contents over your existing inst
 
 Downloading and importing is where *most* people experience issues. From a high level perspective,  Sonarr needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even *bigger* variety of setups. This means that while there are some *common* setups, there isn’t one *right* setup and everyone’s setup can be a little different.
 
-> **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.**
-> If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them.
-> It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
-{.is-danger}
+!!! danger
+    **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.**
+    If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them.
+    It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
 
 When you reach out for help, be sure to read [asking for help](#asking-for-help) so that you can provide us with the details we’ll need.
 
@@ -246,8 +248,8 @@ Thus `/volume3/data` does not exist within Sonarr's container or is not accessib
 - If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect.  The typical solution is to add and remove the mapping.
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
-> If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
-{.is-info}
+!!! info
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 #### Remote Mount or Remote Sync (Syncthing)
 
@@ -318,8 +320,8 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
-> Your download folder and your root/library folder MUST be separate
-{.is-warning}
+!!! warning
+    Your download folder and your root/library folder MUST be separate
 
 ### Incorrect category
 
@@ -419,8 +421,8 @@ You can also review some common permissions and networking troubleshooting comma
 
 ## Turn logging up to trace
 
-> **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
-{.is-danger}
+!!! danger
+    **The first step is to turn logging up to Trace, see [Logging and Log Files](#logging-and-log-files) for details on adjusting logging and searching logs. You’ll then reproduce the issue and use the trace level logs from that time frame to examine the issue.** If someone is helping you, put context from before/after in a [pastebin](https://0bin.net), [Gist](https://gist.com), or similar site to show them. It doesn’t need to be the whole file and it shouldn’t *just* be the error. You should also reproduce the issue while tasks that spam the log file aren’t running.
 
 ## Testing an Indexer or Tracker
 
@@ -673,8 +675,8 @@ Releases may be uploaded as `Series Title S02E45` or `Other Series Title S2022E4
 The series type affects how Sonarr searches. The series type should be selected based on how the series is being released on the indexers.
 [See this FAQ entry for more details](/sonarr/faq#whats-the-different-series-types)
 
-> If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](/sonarr/settings#indexers)
-{.is-info}
+!!! info
+    If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](/sonarr/settings#indexers)
 
 #### Daily
 
@@ -711,8 +713,8 @@ Logs will show something similar to
 
 The series/season/episode(s) is(are) not monitored. Check the monitoring status of the Series, Season, and Episode(s).
 
-> Season Packs will only be grabbed if all episodes in the season are monitored and the season pack upgrades all existing episodes or all episodes are missing.
-{.is-info}
+!!! info
+    Season Packs will only be grabbed if all episodes in the season are monitored and the season pack upgrades all existing episodes or all episodes are missing.
 
 ### Query Successful - No Results Returned
 
@@ -724,9 +726,9 @@ This is caused by your Indexer failing to return any results that are within the
 
 Incorrect categories is probably the most common cause of results showing in manual searches of an indexer/tracker, but *not* in \*Arr. The indexer/tracker *should* show the category in the search results, which should help you figure out what is missing. If you’re using Jackett or Prowlarr, each tracker has a list of specifically supported categories. Make sure you’re using the correct ones for Categories. Many find it helpful to have the list visible in one browser window while they edit the entry in Sonarr.
 
-> Note that if you have `Anime Categories` blank in your Indexer settings then the Indexer will not be used for Anime Series Type searches.
-> Similarly, if you have `Categories` blank in your Indexer settings then the Indexer will not be used for Standard nor Daily Series Type searches.
-{.is-info}
+!!! info
+    Note that if you have `Anime Categories` blank in your Indexer settings then the Indexer will not be used for Anime Series Type searches.
+    Similarly, if you have `Categories` blank in your Indexer settings then the Indexer will not be used for Standard nor Daily Series Type searches.
 
 ### Wrong Results
 

@@ -64,15 +64,15 @@ Must Contain and Must Not Contain remain in the release profile settings as was 
 The `{Preferred Words}` naming token used the term matched on the regex entry for naming in files.
 The `{Custom Formats}` naming token uses the Custom Format Name for naming in files.
 
-> It's recommended to screenshot or remove your Preferred Words release profiles PRIOR to upgrading.  Every Preferred Word line will become it's own Custom Format post migration.
-{.is-warning}
+!!! warning
+    It's recommended to screenshot or remove your Preferred Words release profiles PRIOR to upgrading.  Every Preferred Word line will become it's own Custom Format post migration.
 
 ## Where have language profiles gone
 
 Languages are handled differently in Sonarr v4. They are no longer managed via the old Language Profiles system, but are now part of Custom Formats. You will need to create custom formats for languages that you desire to grab, and then add these custom formats to your quality profiles with a rating appropriate to enforce a grab of that language.
 
-> See TRaSH Guide's [How to setup Language Custom Formats](https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats/) for more information
-{.is-info}
+!!! info
+    See TRaSH Guide's [How to setup Language Custom Formats](https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats/) for more information
 
 ### Only English
 

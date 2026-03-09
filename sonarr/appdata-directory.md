@@ -10,9 +10,11 @@ tags:
   - data
   - structure
 ---
-> Below are the default paths for the application data directory {.is-info}
+!!! info
+    Below are the default paths for the application data directory 
 
-> All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
+!!! warning
+    All instances of `$USER` are placeholders for the user the application is running under. 
 
 # Windows
 
@@ -22,8 +24,8 @@ tags:
 
 Unless otherwise specified Sonarr will store it's application data in the home folder of the user Sonarr is running under `/home/$USER/.config/Sonarr` or `~/.config/Sonarr`
 
-> For apt repo based installs, it defaults to `/var/lib/Sonarr`
-{.is-info}
+!!! info
+    For apt repo based installs, it defaults to `/var/lib/Sonarr`
 
 # MacOS (OSX)
 
@@ -43,7 +45,8 @@ If you are using the SynoCommunity package for Sonarr, this is where you should 
 
 `/volume1/@appstore/nzbdrone/.config/Sonarr`
 
-> The SynoCommunity still uses the original package name `nzbdrone` for the underlying package name {.is-info}
+!!! info
+    The SynoCommunity still uses the original package name `nzbdrone` for the underlying package name 
 
 # QNAP
 

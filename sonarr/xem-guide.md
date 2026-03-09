@@ -51,8 +51,8 @@ TheXEM has four different data sources or entity types that it currently support
 
 A proper XEM mapping for a particular show should *at the very least* have an entry in the scene column and an entry in the TVDB column with the applicable mapping type (see the paragraph called *Mapping types* below) between them.
 
-> Shows that do not have at least a scene column and a TVDB column are useless and will potentially be removed. The same goes for shows in which there is no direct or indirect connection between the scene column and the TVDB column.
-{.is-warning}
+!!! warning
+    Shows that do not have at least a scene column and a TVDB column are useless and will potentially be removed. The same goes for shows in which there is no direct or indirect connection between the scene column and the TVDB column.
 
 # Mapping types
 
@@ -70,8 +70,8 @@ Apart from a few very specific use cases absolute mapping is almost exclusively 
 
 Full mapping tells any service using TheXEM that between the two entities it connects both the absolute numbering and the SxxExx mapping are the same, meaning that the numbering is the same between both entities.
 
-> This means that if all you want to add to your mapping is a scene column and a TVDB column with full mapping between them, your series entry is obsolete as this works by default without an entry on TheXEM.
-{.is-info}
+!!! info
+    This means that if all you want to add to your mapping is a scene column and a TVDB column with full mapping between them, your series entry is obsolete as this works by default without an entry on TheXEM.
 
 ## ![Direct mapping](/assets/sonarr/xem-guide/mapping-direct.svg) Direct mapping
 
@@ -79,8 +79,8 @@ Direct mapping is only possible between the Master entity type and the entities 
 
 You can enable direct mapping by clicking the icon above the automatic mapping type. You'll see the user interface of the page shift around a little to make room for the connections you're about to draw. To connect an episode to another episode, you simply click an episode on the left side of the connection, followed by clicking the corresponding episode on the right side. If you did it well, the site will ask you to confirm the connection.
 
-> It is possible to link a single episode on one side to multiple episodes on the other, for instance if The TVDB considers two episodes as separate episodes while the scene combines them into one number. This is particularly interesting for Western cartoons.
-{.is-info}
+!!! info
+    It is possible to link a single episode on one side to multiple episodes on the other, for instance if The TVDB considers two episodes as separate episodes while the scene combines them into one number. This is particularly interesting for Western cartoons.
 
 # Examples
 
@@ -92,8 +92,8 @@ When mapping an anime show we always use the AniDB column. Whenever allowed at a
 
 Most anime shows can directly map between the scene column through AniDB and finally to The TVDB. A simple example would be the show [Ronia the Robber's Daughter](https://thexem.info/xem/show/1603). It needs mapping in the first place because the Japanese name used by release groups does not match the English name used by TVDB, but otherwise the mapping is simple: numbering is identical between the scene and AniDB so we use full mapping between those, while the only thing we know for certain between AniDB and TVDB is that the SxxExx numbering is identical.
 
-> AniDB resets the absolute numbering between each season because it considers each season its own show. When adding a new AniDB season, make sure that you enter its ID number and that you set the "Ab. Start" field for that new season to 1.
-{.is-info}
+!!! info
+    AniDB resets the absolute numbering between each season because it considers each season its own show. When adding a new AniDB season, make sure that you enter its ID number and that you set the "Ab. Start" field for that new season to 1.
 
 For an example of an anime show with multiple seasons, take a look at [Assassination Classroom](https://thexem.info/xem/show/2817). Make note of the separate aliases for the second season, which help Sonarr figure out that `[Release group] Ansatsu Kyoushitsu - 01 (1080p)` maps to S01E01 in TVDB while `[Release group] Ansatsu Kyoushitsu S2 - 01 (1080p)` maps to S02E01.
 
@@ -109,8 +109,8 @@ Children's cartoons often offer up a challenge when mapping the episodes because
 
 An example of this is the show [Paw Patrol](https://thexem.info/xem/show/4814). When you hover over episodes in the Master column you'll see that a single episode on the Scene side is linked to one or two episodes on the TVDB side. This particular type of mapping needs constant input as new episodes for the series air.
 
-> Bear in mind that mapping one episode on one side to multiple episodes on the other can make sense in cases like this, but mapping multiple episodes on one side to multiple episodes on the other does not. The software will allow you to do it, but please don't as Sonarr will not be able to do anything with that.
-{.is-warning}
+!!! warning
+    Bear in mind that mapping one episode on one side to multiple episodes on the other can make sense in cases like this, but mapping multiple episodes on one side to multiple episodes on the other does not. The software will allow you to do it, but please don't as Sonarr will not be able to do anything with that.
 
 ## Complex individual mapping
 
