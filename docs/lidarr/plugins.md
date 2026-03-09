@@ -46,7 +46,7 @@ image: lscr.io/linuxserver/lidarr:nightly
 
 ### Manually Installing
 
-- See the [Installation Docs](/lidarr/installation/) and simply change the branch in the url noted in the install docs from `master` to `nightly`, otherwise following the docs as-is.
+- See the [Installation Docs](../lidarr/installation/.md) and simply change the branch in the url noted in the install docs from `master` to `nightly`, otherwise following the docs as-is.
 
 ### Post Install
 

@@ -10,7 +10,7 @@ tags:
   - hooks
   - api
 ---
-If you're looking to trigger a custom script, you can find more details on this page. Scripts are added to Lidarr via the [Connect Settings](/lidarr/settings#connections).
+If you're looking to trigger a custom script, you can find more details on this page. Scripts are added to Lidarr via the [Connect Settings](../lidarr/settings.md#connections).
 
 # Overview
 

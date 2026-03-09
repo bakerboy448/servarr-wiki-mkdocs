@@ -45,7 +45,7 @@ tags:
 > This page is still in progress and not complete. Contributions are welcome
 
 !!! info
-    For a more detailed breakdown of all the settings, check [Lidarr =>Settings](/lidarr/settings)
+    For a more detailed breakdown of all the settings, check [Lidarr =>Settings](../lidarr/settings.md)
 
 In this guide we will try to explain the basic setup you need to do to get started with Lidarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
@@ -54,7 +54,7 @@ In this guide we will try to explain the basic setup you need to do to get start
 
 # Caveats
 
-In this guide we will explain the basic steps to begin working with Lidarr. This guide assumes that you have already installed the application. Installation instructions can be found at the following page [installation](/lidarr/installation). We will focus on the minimum setup/options to get a working configuration. There are additional setup and considerations if any of the following situations apply:
+In this guide we will explain the basic steps to begin working with Lidarr. This guide assumes that you have already installed the application. Installation instructions can be found at the following page [installation](../lidarr/installation.md). We will focus on the minimum setup/options to get a working configuration. There are additional setup and considerations if any of the following situations apply:
 
 - Existing library or files
 - Improper use case
@@ -126,7 +126,7 @@ This list could go on and on. Once again all `Releases` are correlated with a `A
 
 After installation and starting Lidarr, you access by opening a browser and go to `http://{your_ip_here}:8686`
 
-![lidarr_qs_startup.png](/assets/lidarr/quick-start-guide/lidarr_qs_startup.png)
+![lidarr_qs_startup.png](../assets/lidarr/quick-start-guide/lidarr_qs_startup.png)
 
 There are two options shown on the startup screen but we will not be utilizing those initially.
 
@@ -135,7 +135,7 @@ There are two options shown on the startup screen but we will not be utilizing t
 We will be using the default configuration of settings to configure Lidarr. This will utilize the existing Profiles, Quality, Tags, etc.
 
 !!! info
-    For a more detailed breakdown of all the settings, check [Lidarr > Settings](/lidarr/settings)
+    For a more detailed breakdown of all the settings, check [Lidarr > Settings](../lidarr/settings.md)
 
 ## Media Management
 
@@ -146,13 +146,13 @@ First we’re going to take a look at the `Media Management` where we will set t
 
 Click on `Settings` > `Media Management` on the left menu.
 
-![lidarr_qs_mediamanagement.png](/assets/lidarr/quick-start-guide/lidarr_qs_mediamanagement.png)
+![lidarr_qs_mediamanagement.png](../assets/lidarr/quick-start-guide/lidarr_qs_mediamanagement.png)
 
 Click on `Add (+)` of the `Root Folders`.
 
 You'll be presented with the following window:
 
-![lidarr_qs_rootfolder.png](/assets/lidarr/quick-start-guide/lidarr_qs_rootfolder.png)
+![lidarr_qs_rootfolder.png](../assets/lidarr/quick-start-guide/lidarr_qs_rootfolder.png)
 
 - **Name** - This is the `Friendly Name` of the storage location.
 - **Path** - This is the actual `Path` to the data storage location. The system/user must have the proper permissions to this storage path. This folder cannot be your download location!
@@ -208,7 +208,7 @@ Understanding the configuration/concepts behind `Indexers` are beyond the scope 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
 !!! info
-    See the [settings page](/lidarr/settings#download-clients), at the [More Info (Supported)](/lidarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+    See the [settings page](../lidarr/settings.md#download-clients), at the [More Info (Supported)](../lidarr/supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 
 === "Usenet"
@@ -242,11 +242,11 @@ If following this guide and your `Root Folder` did not have any media files you 
 
 `Library` > `Add New`
 
-![lidarr_qs_addnew.png](/assets/lidarr/quick-start-guide/lidarr_qs_addnew.png)
+![lidarr_qs_addnew.png](../assets/lidarr/quick-start-guide/lidarr_qs_addnew.png)
 
 This will link to the search screen to find an artist. Search and select the `Artist` you want to add. This will bring up the "Add new Artist" window.
 
-![lidarr_qs_addnewdylan.png](/assets/lidarr/quick-start-guide/lidarr_qs_addnewdylan.png)
+![lidarr_qs_addnewdylan.png](../assets/lidarr/quick-start-guide/lidarr_qs_addnewdylan.png)
 
 We will utilize the default selections. Which should include:
 
@@ -262,7 +262,7 @@ Click the newly added `Artist`. (Bob Dylan in this example)
 
 > The default `Metadata Profile` is in use the only `Releases` shown will be of the type `Studio Albums`.
 
-![lidarr_qs_dylan.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylan.png)
+![lidarr_qs_dylan.png](../assets/lidarr/quick-start-guide/lidarr_qs_dylan.png)
 
 !!! info
     Don't like the metadata downloaded? - Contribute to make it better!
@@ -273,13 +273,13 @@ Finally time to download/import your first `Release`!
 
 Find the `Release` that you are looking to add to your library. Select the Manual Search (human) icon next to the release.
 
-![lidarr_qs_dylanrelease.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylanrelease.png)
+![lidarr_qs_dylanrelease.png](../assets/lidarr/quick-start-guide/lidarr_qs_dylanrelease.png)
 
 This will bring up the `Release` selection window. This windows will display the results of the `Indexer` query or simply put the search results of available downloads.
 
-> The default `Quality Profile` allows any file type. The default `Release Profile` allows all downloads. For a detailed breakdown of these advanced settings, check [Lidarr > Settings](/lidarr/settings)
+> The default `Quality Profile` allows any file type. The default `Release Profile` allows all downloads. For a detailed breakdown of these advanced settings, check [Lidarr > Settings](../lidarr/settings.md)
 
-![lidarr_qs_dylandownload.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylandownload.png)
+![lidarr_qs_dylandownload.png](../assets/lidarr/quick-start-guide/lidarr_qs_dylandownload.png)
 
 Review the download window for the various provided information:
 
@@ -295,11 +295,11 @@ The download will be added to the `Queue` and will go through the various states
 
 Finally the download will be imported to your `Root Folder`. If everything is successful it should appear as below.
 
-![lidarr_qs_dylansucess.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylansuccess.png)
+![lidarr_qs_dylansucess.png](../assets/lidarr/quick-start-guide/lidarr_qs_dylansuccess.png)
 
 You can find your downloaded files in your `Root Folder` and are able to consume utilizing your media player of choice.
 
-![lidarr_qs_dylanfolder.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylanfolder.png)
+![lidarr_qs_dylanfolder.png](../assets/lidarr/quick-start-guide/lidarr_qs_dylanfolder.png)
 
 # Quick Start - Advanced
 
@@ -331,7 +331,7 @@ Specialty libraries create unique issues for any management system. These situat
 
 > Note that Lidarr does not regularly search for Releases.  See these two FAQ Entries for details to understand how Lidarr works.
 !!! info
-    [How does Lidarr find releases?](/lidarr/faq#how-does-lidarr-find-releases) and [How does Lidarr work?](/lidarr/faq#how-does-lidarr-work)
+    [How does Lidarr find releases?](../lidarr/faq.md#how-does-lidarr-find-releases) and [How does Lidarr work?](../lidarr/faq.md#how-does-lidarr-work)
 > Automated Import is a scheduled process and cannot be stopped once started
 !!! warning
     Do NOT add a `Root Folder` with existing files until you have reviewed this section in full
