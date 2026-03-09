@@ -50,7 +50,7 @@ The Servarr Team
 > This page is still in progress and not complete. Contributions are welcome
 
 !!! info
-    For a more detailed breakdown of all the settings, check [Readarr =>Settings](/readarr/settings)
+    For a more detailed breakdown of all the settings, check [Readarr =>Settings](../readarr/settings.md)
 
 In this guide we will try to explain the basic setup you need to do to get started with Readarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
@@ -61,7 +61,7 @@ In this guide we will try to explain the basic setup you need to do to get start
 
 After installation and starting up, you open a browser and go to `http://{your_ip_here}:8787`
 
-![qs_startup.png](/assets/readarr/qs_startup.png)
+![qs_startup.png](../assets/readarr/qs_startup.png)
 
 # Media Management
 
@@ -69,11 +69,11 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 `Settings` => `Media Management`
 
-![mediamanagement.png](/assets/readarr/mediamanagement.png)
+![mediamanagement.png](../assets/readarr/mediamanagement.png)
 
 # Book Naming
 
-![booknaming.png](/assets/readarr/booknaming.png)
+![booknaming.png](../assets/readarr/booknaming.png)
 
 - Enable/Disable Renaming of your books (as opposed to leaving the names that are currently there or as they were when you downloaded them).
 - If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ - % & + { }`).
@@ -85,7 +85,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 # Folders
 
-![folders.png](/assets/readarr/folders.png)
+![folders.png](../assets/readarr/folders.png)
 
 - (Advanced Option) Create Empty Author Folders - Enable to create empty author folders when a new author is added to Readarr.
 - (Advanced Option) Delete Empty Folders - Enable to delete empty author folders when there are no remaining books for that author.
@@ -98,7 +98,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 # Importing
 
-![importing.png](/assets/readarr/importing.png)
+![importing.png](../assets/readarr/importing.png)
 
 - (Advanced Option) Skip Free Space Check - If enabled skip checking free space prior to importing
 - (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
@@ -115,7 +115,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 # File Management
 
-![filemanagement.png](/assets/readarr/filemanagement.png)
+![filemanagement.png](../assets/readarr/filemanagement.png)
 
 - Books deleted from disk are automatically unmonitored in Readarr.
 
@@ -149,7 +149,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 # Root Folders and Calibre Integration
 
-![rootfolders1.png](/assets/readarr/rootfolders1.png)
+![rootfolders1.png](../assets/readarr/rootfolders1.png)
 
 Here we will add the root folder that Readarr will be using to import your existing organized media library and where Readarr will be importing (copy/hardlink/move) your media after your download client has downloaded it.
 
@@ -186,22 +186,22 @@ If you're using docker, your Calibre mounted book directory and your Readarr mou
 
 To do this, open Calibre, and click `Preferences / Sharing over the net`
 
-![calibreprefs.png](/assets/readarr/calibreprefs.png)
+![calibreprefs.png](../assets/readarr/calibreprefs.png)
 
 First, add a user account. The account DOES need "make changes" access.
 
-![calibreacct.png](/assets/readarr/calibreacct.png)
+![calibreacct.png](../assets/readarr/calibreacct.png)
 
 Then you will need to restart Calibre. Once back in, configure and start up the content server. It should show you that it's running. Set it to run automatically on startup. After saving, you will again need to restart Calibre. Make sure the sever is started when it comes back up, then you can move to the next section.
 
 !!! info
     You must select "Require username and password to access the content server" in order for Readarr to properly work. If you do not, you will get an error that says "Anonymous users are not allowed to make changes" when Readarr import a book!
 
-![calibreserver.png](/assets/readarr/calibreserver.png)
+![calibreserver.png](../assets/readarr/calibreserver.png)
 
 ## Calibre Integration
 
-![calibre1.png](/assets/readarr/calibre1.png)
+![calibre1.png](../assets/readarr/calibre1.png)
 
 The below are Calibre Specific Settings and only display if `Use Calibre` is enabled
 
@@ -236,8 +236,8 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 - Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
 
 !!! warning
-    If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
-    \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](/readarr/faq#metadata-profile-none-allowing-foreign-releases)**
+    If you add an individual book, and select `None`\* for the [metadata profile](../readarr/settings.md#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
+    \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](../readarr/faq.md#metadata-profile-none-allowing-foreign-releases)**
 
 # Download Clients
 
@@ -246,7 +246,7 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
 !!! info
-    See the [settings page](/readarr/settings#download-clients), at the [More Info (Supported)](/readarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+    See the [settings page](../readarr/settings.md#download-clients), at the [More Info (Supported)](../readarr/supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 
 === "Usenet"
@@ -278,7 +278,7 @@ Downloading and importing is where most people experience issues. From a high le
 
 > Note that Readarr does not regularly search for Books.  See these two FAQ Entries for details to understand how Readarr works.
 !!! info
-    [How does Readarr find books?](/readarr/faq#how-does-readarr-find-books) and [How does Readarr work?](/readarr/faq#how-does-readarr-work)
+    [How does Readarr find books?](../readarr/faq.md#how-does-readarr-find-books) and [How does Readarr work?](../readarr/faq.md#how-does-readarr-work)
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 Coming soon - Contributions Welcome
@@ -289,4 +289,4 @@ Coming soon - Contributions Welcome
 
 # Add New Books
 
-[Refer to the Library Page for additional information](/readarr/library#add-new)
+[Refer to the Library Page for additional information](../readarr/library.md#add-new)

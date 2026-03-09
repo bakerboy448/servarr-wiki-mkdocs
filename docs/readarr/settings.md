@@ -110,17 +110,17 @@ The Servarr Team
   - [Style](#style)
   - [Language](#language)
 
-This page will go through all the settings available in Readarr and how they work. This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](/readarr/quick-start-guide) page instead.
+This page will go through all the settings available in Readarr and how they work. This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](../readarr/quick-start-guide.md) page instead.
 
 # Menu options
 
 To get to the Settings page, please choose Settings from the left menu. The following sub-menu options will be available:
 
-![settings_1_menu.png](/assets/readarr/settings_1_menu.png)
+![settings_1_menu.png](../assets/readarr/settings_1_menu.png)
 
 Also, note that for each individual settings page, there are some options at the top of the menu:
 
-![settings_2_topmenu.png](/assets/readarr/settings_2_topmenu.png)
+![settings_2_topmenu.png](../assets/readarr/settings_2_topmenu.png)
 
 - Hide/Show advanced is important for any items that are marked below as `(Advanced Option)`, otherwise they will not show up. These menu items are shown in orange in the screenshots.
 
@@ -193,7 +193,7 @@ Also, note that for each individual settings page, there are some options at the
 
 ## Book File Naming
 
-![bookfilenaming.png](/assets/readarr/bookfilenaming.png)
+![bookfilenaming.png](../assets/readarr/bookfilenaming.png)
 
 **If you are using Calibre integration, you do not get to name book files. Calibre takes care of this for you. You should only change these settings if you are not using Calibre.**
 
@@ -316,7 +316,7 @@ Commonly used naming schema are:
 
 ## Folders
 
-![mm_folders.png](/assets/readarr/mm_folders.png)
+![mm_folders.png](../assets/readarr/mm_folders.png)
 
 - (Advanced Option) Create empty author folders - Select the box to create empty author folders when a new author is added.
 - (Advanced Option) Delete empty author folders -  Select the box to delete empty author folders if there are no books in it.
@@ -329,7 +329,7 @@ Commonly used naming schema are:
 
 ## Importing
 
-![mm_importing.png](/assets/readarr/mm_importing.png)
+![mm_importing.png](../assets/readarr/mm_importing.png)
 
 - (Advanced Option) Skip Free Space Check - If enabled skip checking free space prior to importing
 - (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
@@ -345,7 +345,7 @@ Commonly used naming schema are:
 
 ## File Management
 
-  ![mm_filemgmt.png](/assets/readarr/mm_filemgmt.png)
+  ![mm_filemgmt.png](../assets/readarr/mm_filemgmt.png)
 
 - Ignore Deleted Books - Check this box to unmonitor books detected as deleted or inaccessible from Readarr's root folder.
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
@@ -397,7 +397,7 @@ Commonly used naming schema are:
 
 Quality profiles are used to determine what formats of books are acceptable for a book in your library.
 
-![qualityprofile.png](/assets/readarr/qualityprofile.png)
+![qualityprofile.png](../assets/readarr/qualityprofile.png)
 
 - Set profiles for the quality of books you're looking to download.
 
@@ -428,7 +428,7 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 
 - Plus icon (<kb>+</kb>) - Create a new Metadata profile
 
-![metaprofiles.png](/assets/readarr/metaprofiles.png)
+![metaprofiles.png](../assets/readarr/metaprofiles.png)
 
 - Name - Enter a **UNIQUE** name for the metadata profile profile
 - Minimum Popularity - Enter the minimum popularity for a book to be added for an author.
@@ -454,7 +454,7 @@ Metadata profiles are used to determine which books from GoodReads to add under 
 
 Release profiles are used to determine if indexer release names qualify for downloading.
 
-![releaseprofiles.png](/assets/readarr/releaseprofiles.png)
+![releaseprofiles.png](../assets/readarr/releaseprofiles.png)
 
 - Enable Profile - Check the box to enable this profile.
 - Must Contain - Add a list of words or phrases that MUST be in the release name in order to be considered valid.
@@ -535,7 +535,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 # Quality
 
-![qualitydefinitions.png](/assets/readarr/qualitydefinitions.png)
+![qualitydefinitions.png](../assets/readarr/qualitydefinitions.png)
 
 ## Quality Table Meanings
 
@@ -561,11 +561,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Indexers
 
 !!! info
-    Information on supported indexers can be found at the [More Info (Supported)](/readarr/supported#indexers) page for this section
+    Information on supported indexers can be found at the [More Info (Supported)](../readarr/supported.md#indexers) page for this section
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info (Supported)](/readarr/supported#indexers) page
+- A list of supported indexers is located at the [More Info (Supported)](../readarr/supported.md#indexers) page
 
 ### Indexer Settings
 
@@ -576,7 +576,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Usenet Indexer Configuration
 
 - Newznab - Here you will find presets of popular usenet indexers (that are prefilled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
-- Software that works with usenet and integrates quite well with Readarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
+- Software that works with usenet and integrates quite well with Readarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](../prowlarr.md) which integrate with both Usenet and Torrents
 - Regardless if you select a prefilled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2 or Prowlarr)
 - Name - The name of the indexer in Readarr
@@ -595,7 +595,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
-- One of the simplest ways to utilize Torrent trackers with Readarr is by using a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Readarr and act as a search indexer that houses all your information and sends it to Readarr.
+- One of the simplest ways to utilize Torrent trackers with Readarr is by using a second program such as [Prowlarr](../prowlarr.md) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Readarr and act as a search indexer that houses all your information and sends it to Readarr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett)
@@ -623,7 +623,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Retention - Usenet only: Set to zero to set for unlimited retention
 - Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Readarr find books?](/readarr/faq#how-does-readarr-find-books) for a better understanding of how RSS Sync will help you
+  - Please see [How does Readarr find books?](../readarr/faq.md#how-does-readarr-find-books) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -631,7 +631,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Download Clients
 
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](/readarr/supported#download-clients) page for this section
+    Information on supported download clients can be found at the [More Info (Supported)](../readarr/supported.md#download-clients) page for this section
 
 ## Overview
 
@@ -661,7 +661,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info (Supported)](/readarr/supported#download-clients) page
+- A list of supported download clients is located at the [More Info (Supported)](../readarr/supported.md#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -769,16 +769,16 @@ If you download using a BitTorrent client, the process is slightly different:
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
 !!! info
-    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](../docker-guide.md) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 # Import Lists
 
 !!! info
-    Information on supported list types can be found at the [More Info (Supported)](/readarr/supported#lists) page for this section
+    Information on supported list types can be found at the [More Info (Supported)](../readarr/supported.md#lists) page for this section
 
 Import lists allow you to add items to Readarr automatically from your GoodReads shelves or from other users. This has the potential to add a lot of unexpected items to your Readarr database, so please use it with care.
 
-![importlists.png](/assets/readarr/importlists.png)
+![importlists.png](../assets/readarr/importlists.png)
 
 ## Import Lists
 
@@ -792,11 +792,11 @@ Anything on here has been excluded from being added by lists, and will never be 
 
 After clicking the <kb>+</kb>, choose what kind of list you'd like to add:
 
-![addlist.png](/assets/readarr/addlist.png)
+![addlist.png](../assets/readarr/addlist.png)
 
 In this instance, we're going to add a GoodReads Bookshelf list.
 
-![bookshelflist.png](/assets/readarr/bookshelflist.png)
+![bookshelflist.png](../assets/readarr/bookshelflist.png)
 
 - Name - Enter a name for this list.
 - Enable Automatic Add - If enabled have anything on the list automatically add to Readarr.
@@ -817,7 +817,7 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Se
 # Connect
 
 !!! info
-    Information on supported connection types can be found at the [More Info (Supported)](/readarr/supported#notifications) page for this section
+    Information on supported connection types can be found at the [More Info (Supported)](../readarr/supported.md#notifications) page for this section
 
 ## Connections
 
@@ -825,7 +825,7 @@ Connections are how you want Readarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info (Supported)](/readarr/supported#notifications) page
+- A list of supported notifications & connections is located at the [More Info (Supported)](../readarr/supported.md#notifications) page
 
 ## Connection Triggers
 
@@ -848,11 +848,11 @@ Connections are how you want Readarr to communicate with the outside world.
 {#write-metadata-to-book-files}
 
 !!! info
-    Information on supported metadata consumers can be found at the [More Info (Supported)](/readarr/supported#metadata) page for this section
+    Information on supported metadata consumers can be found at the [More Info (Supported)](../readarr/supported.md#metadata) page for this section
 
 This page allows you to create/update metadata tags/covers.
 
-![metadata.png](/assets/readarr/metadata.png)
+![metadata.png](../assets/readarr/metadata.png)
 
 ## Calibre Metadata
 
@@ -900,7 +900,7 @@ This page is for general Readarr settings that are not covered in other sections
 
 ## Host
 
-![genhost.png](/assets/readarr/genhost.png)
+![genhost.png](../assets/readarr/genhost.png)
 
 - Bind Address - Valid IP4 address or '*' for all interfaces
   - 0.0.0.0 or `*` - any address can connect
@@ -923,7 +923,7 @@ This page is for general Readarr settings that are not covered in other sections
 
 ## Security
 
-![gensecurity.png](/assets/readarr/gensecurity.png)
+![gensecurity.png](../assets/readarr/gensecurity.png)
 
 - Authentication - How would you like to authenticate to access your Readarr instance
   - None - You have no authentication to access your Readarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Readarr or your Readarr is not exposed to the web
@@ -937,7 +937,7 @@ This page is for general Readarr settings that are not covered in other sections
 
 ## Proxy
 
-![genproxy.png](/assets/readarr/genproxy.png)
+![genproxy.png](../assets/readarr/genproxy.png)
 
 - Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
@@ -952,7 +952,7 @@ This page is for general Readarr settings that are not covered in other sections
 
 ## Logging
 
-![genlogging.png](/assets/readarr/genlogging.png)
+![genlogging.png](../assets/readarr/genlogging.png)
 
 - Log level - Probably one of the most useful troubleshooting tools
   - Info - This is the most basic way that Readarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
@@ -961,18 +961,18 @@ This page is for general Readarr settings that are not covered in other sections
 
 ## Analytics
 
-![genanalytics.png](/assets/readarr/genanalytics.png)
+![genanalytics.png](../assets/readarr/genanalytics.png)
 
 - Analytics - Send anonymous usage and error information to Readarr's servers (Servarr). This includes information on your browser, which Readarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
 
 ## Updates
 
-![genupdates.png](/assets/readarr/genupdates.png)
+![genupdates.png](../assets/readarr/genupdates.png)
 
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Readarr that you are running on.
-  - [Please see this FAQ entry for more information](/readarr/faq#how-do-i-update-readarr)
+  - [Please see this FAQ entry for more information](../readarr/faq.md#how-do-i-update-readarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Readarr built-in updater or a script
   - Built-in - Use Readarr's own updater
@@ -985,7 +985,7 @@ This page is for general Readarr settings that are not covered in other sections
 
 ## Backups
 
-![genbackups.png](/assets/readarr/genbackups.png)
+![genbackups.png](../assets/readarr/genbackups.png)
 
 - The backup section allows you to tell Readarr how you would like for it to handle backups
 
@@ -1001,14 +1001,14 @@ This page allows you to customize the user interface display options.
 
 ## Calendar
 
-![uicalendar.png](/assets/readarr/uicalendar.png)
+![uicalendar.png](../assets/readarr/uicalendar.png)
 
 - First Day of Week - Here you can select what you think the first day of the week should be.
 - Week Column Header - Here you can select the header for the columns
 
 ## Dates
 
-![caldates.png](/assets/readarr/caldates.png)
+![caldates.png](../assets/readarr/caldates.png)
 
 - Short Date Format - How do you want Readarr to display short dates?
 - Long Date Format - How do you want Readarr to display long format dates?
@@ -1017,12 +1017,12 @@ This page allows you to customize the user interface display options.
 
 ## Style
 
-![calstyle.png](/assets/readarr/calstyle.png)
+![calstyle.png](../assets/readarr/calstyle.png)
 
 - Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
 
 ## Language
 
-![callanguage.png](/assets/readarr/callanguage.png)
+![callanguage.png](../assets/readarr/callanguage.png)
 
 - UI Language - Select the Language for Radarr to use within the application UI

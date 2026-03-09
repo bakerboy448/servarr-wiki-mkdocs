@@ -27,7 +27,7 @@ Thank you for being part of the Readarr journey. For any inquiries or assistance
 Sincerely,
 The Servarr Team
 
-If you're looking to trigger a custom script, you can find more details here. Scripts are added to Readarr via the [Connect Settings](/readarr/settings#connections).
+If you're looking to trigger a custom script, you can find more details here. Scripts are added to Readarr via the [Connect Settings](../readarr/settings.md#connections).
 
 # Overview
 

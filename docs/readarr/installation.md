@@ -25,9 +25,9 @@ The Servarr Team
 
 # By Platform
 
-[:fontawesome-brands-windows:](/readarr/installation/windows)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-linux:](/readarr/installation/linux)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-apple:](/readarr/installation/macos)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-freebsd:](/readarr/installation/freebsd)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-docker:](/readarr/installation/docker)
+[:fontawesome-brands-windows:](../readarr/installation/windows.md)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-linux:](../readarr/installation/linux.md)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-apple:](../readarr/installation/macos.md)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-freebsd:](../readarr/installation/freebsd.md)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-docker:](../readarr/installation/docker.md)
 
 # Recommended Guides
 
-- [Setup Reverse Proxy *Complete guide for reverse proxy setup with Nginx or Apache*](/readarr/installation/reverse-proxy)
-- [Setup Multiple Instances *Setup guide for running multiple instances on various platforms*](/readarr/installation/multiple-instances)
+- [Setup Reverse Proxy *Complete guide for reverse proxy setup with Nginx or Apache*](../readarr/installation/reverse-proxy.md)
+- [Setup Multiple Instances *Setup guide for running multiple instances on various platforms*](../readarr/installation/multiple-instances.md)

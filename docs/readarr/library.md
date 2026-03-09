@@ -64,17 +64,17 @@ This section is for managing your library of [authors](#authors) and [books](#bo
 
 # Add New
 
-![addnew.png](/assets/readarr/addnew.png)
+![addnew.png](../assets/readarr/addnew.png)
 
 - You can add new authors or individual books by entering the author's name or a book name here, and selecting it from the result list.
-  - You'll find the how-to in our [Quick Start Guide](/readarr/quick-start-guide)
+  - You'll find the how-to in our [Quick Start Guide](../readarr/quick-start-guide.md)
 - You can also add authors by GoodReads ID, ISBN, or ASIN as needed, using the format shown.
 
-![poe.png](/assets/readarr/poe.png)
+![poe.png](../assets/readarr/poe.png)
 
 - Click on the author or book name to add it to Readarr. A box will pop up with options for you.
 
-![addauthor.png](/assets/readarr/addauthor.png)
+![addauthor.png](../assets/readarr/addauthor.png)
 
 - Root Folder - Select the root folder here. Do not change this if you use Calibre Content Server.
 - Monitor - Select the monitoring state of all books for this author.
@@ -85,12 +85,12 @@ This section is for managing your library of [authors](#authors) and [books](#bo
 - Add {Author Name} or Add {Book Name} - Click the Add button to add this author to Readarr and start pulling metadata for all books by this author. This process can take some time, so it would be advisable not to add too many authors too quickly.
 
 !!! warning
-    If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
-    \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](/readarr/faq#metadata-profile-none-allowing-foreign-releases)**
+    If you add an individual book, and select `None`\* for the [metadata profile](../readarr/settings.md#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
+    \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](../readarr/faq.md#metadata-profile-none-allowing-foreign-releases)**
 
 # Unmapped Files
 
-![unmappedfiles.png](/assets/readarr/unmappedfiles.png)
+![unmappedfiles.png](../assets/readarr/unmappedfiles.png)
 
 If there are books listed here, then they are unrecognized by Readarr and are not listed as "existing" in Readarr, but they are in one of the root folders you've defined.
 

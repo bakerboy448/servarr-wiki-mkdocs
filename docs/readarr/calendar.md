@@ -25,7 +25,7 @@ Thank you for being part of the Readarr journey. For any inquiries or assistance
 Sincerely,
 The Servarr Team
 
-![calendar.png](/assets/readarr/calendar.png)
+![calendar.png](../assets/readarr/calendar.png)
 
 the Calendar page gives an overview, in the chosen timeframe, of books being released and their status in Readarr.
 
@@ -40,7 +40,7 @@ Click on *Search for Missing* to search for all missing, monitored books on the 
 
 Click on *iCal Link* to get a URL to add to Google Calendar.
 
-![ical.png](/assets/readarr/ical.png)
+![ical.png](../assets/readarr/ical.png)
 
 - Check to include unmonitored authors/books in the iCal feed.
 - Select the number of days in the past to include in the feed.
@@ -52,7 +52,7 @@ Click on *iCal Link* to get a URL to add to Google Calendar.
 
 Click on *Options* to change the overall settings for this page.
 
-![caloptions.png](/assets/readarr/caloptions.png)
+![caloptions.png](../assets/readarr/caloptions.png)
 
 ## Local
 
