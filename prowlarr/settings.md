@@ -1,13 +1,14 @@
 ---
 title: Prowlarr Settings
 description: Configuration guide for Prowlarr settings including applications, indexers, notifications, and general preferences
-published: true
-date: 2023-03-30T14:07:39.851Z
-tags: settings, configuration, prowlarr, indexers, applications, notifications
-editor: markdown
-dateCreated: 2021-06-06T15:04:48.057Z
+tags:
+  - settings
+  - configuration
+  - prowlarr
+  - indexers
+  - applications
+  - notifications
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

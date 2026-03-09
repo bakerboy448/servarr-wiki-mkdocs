@@ -1,13 +1,13 @@
 ---
 title: Prowlarr Contributing
 description: Guide for contributing to Prowlarr development including setup, building, testing, and submitting changes
-published: true
-date: 2022-11-16T19:35:23.515Z
-tags: prowlarr, development, contributing, guide, setup
-editor: markdown
-dateCreated: 2021-12-11T19:42:15.627Z
+tags:
+  - prowlarr
+  - development
+  - contributing
+  - guide
+  - setup
 ---
-
 # How to Contribute
 
 We're always looking for people to help make Prowlarr even better, there are a number of ways to contribute.

@@ -1,13 +1,14 @@
 ---
 title: Prowlarr Quick Start Guide
 description: Essential setup guide for new Prowlarr users covering installation, configuration, and indexer management
-published: true
-date: 2023-04-06T16:04:33.682Z
-tags: quick-start, setup, getting-started, indexers, configuration, prowlarr
-editor: markdown
-dateCreated: 2023-04-06T16:04:33.682Z
+tags:
+  - quick-start
+  - setup
+  - getting-started
+  - indexers
+  - configuration
+  - prowlarr
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

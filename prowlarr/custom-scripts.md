@@ -1,13 +1,15 @@
 ---
 title: Prowlarr Custom Scripts
 description: Guide for creating and implementing custom scripts for automation and integration with Prowlarr workflows
-published: true
-date: 2021-12-20T16:40:47.702Z
-tags: scripts, automation, custom, integration, hooks, api, prowlarr
-editor: markdown
-dateCreated: 2021-06-23T06:40:30.916Z
+tags:
+  - scripts
+  - automation
+  - custom
+  - integration
+  - hooks
+  - api
+  - prowlarr
 ---
-
 If you're looking to trigger a custom script, you can find more details here. Scripts are added to Prowlarr via the [Connect Settings](/prowlarr/settings#connections).
 
 # Overview

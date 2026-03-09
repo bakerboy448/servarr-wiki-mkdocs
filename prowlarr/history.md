@@ -1,13 +1,15 @@
 ---
 title: Prowlarr History
 description: View and manage search history, indexer statistics, and query logs in Prowlarr
-published: true
-date: 2021-11-24T19:23:05.283Z
-tags: prowlarr, history, search, logs, statistics, queries, monitoring
-editor: markdown
-dateCreated: 2021-06-08T23:32:35.055Z
+tags:
+  - prowlarr
+  - history
+  - search
+  - logs
+  - statistics
+  - queries
+  - monitoring
 ---
-
 This page will show you how to review and search your history, and the various settings available.
 
 # Opening History

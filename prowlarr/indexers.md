@@ -1,13 +1,15 @@
 ---
 title: Prowlarr Indexers
 description: Configure and manage indexers in Prowlarr for torrent and usenet search aggregation
-published: true
-date: 2025-12-16T17:09:47.110Z
-tags: prowlarr, indexers, configuration, search, torrent, usenet, aggregation
-editor: markdown
-dateCreated: 2021-06-06T11:45:31.974Z
+tags:
+  - prowlarr
+  - indexers
+  - configuration
+  - search
+  - torrent
+  - usenet
+  - aggregation
 ---
-
 This page will describe how to add and configure indexers in Prowlarr.
 
 # Adding an Indexer
