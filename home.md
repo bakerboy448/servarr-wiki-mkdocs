@@ -38,21 +38,21 @@ At times, one may be able to edit on the Wiki directly, just authenticate with G
 
 ## General Troubleshooting
 
-- [<i class="far fa-life-ring"></i>&emsp;General Permissions & Network Troubleshooting](/permissions-and-networking)
-- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
+- [:fontawesome-regular-life-ring:&emsp;General Permissions & Network Troubleshooting](/permissions-and-networking)
+- [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 
 ## Docker
 
-- [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
-- [<i class="fas fa-box-open"></i>&emsp;Installing Docker on an ARM-based Synology NAS](/docker-arm-synology)
+- [:fontawesome-brands-docker:&emsp;Docker Guide](/docker-guide)
+- [:fontawesome-solid-box-open:&emsp;Installing Docker on an ARM-based Synology NAS](/docker-arm-synology)
 
 ## XEM
 
-- [<i class="fab fa-xing"></i>&emsp;XEM Moderation Guide *Guide for how to map various scenarios in XEM*](/sonarr/xem-guide)
+- [:fontawesome-brands-xing:&emsp;XEM Moderation Guide *Guide for how to map various scenarios in XEM*](/sonarr/xem-guide)
 
 ## Guides & Tools
 
-- [<i class="fas fa-tools"></i>&emsp;Useful Tools *Servarr list of related apps and tools*](/useful-tools)
-- [<i class="fas fa-trash-alt"></i>&emsp;TRaSH's Guides *Tutorials and Guides for Radarr, Sonarr, Docker, and Download Clients*](https://trash-guides.info/)
-- [<i class="fas fa-swatchbook"></i>&emsp;Lidarr Community Guide *Davo's TRaSH Guide for Lidarr*](/lidarr/community-guide)
+- [:fontawesome-solid-tools:&emsp;Useful Tools *Servarr list of related apps and tools*](/useful-tools)
+- [:fontawesome-solid-trash-alt:&emsp;TRaSH's Guides *Tutorials and Guides for Radarr, Sonarr, Docker, and Download Clients*](https://trash-guides.info/)
+- [:fontawesome-solid-swatchbook:&emsp;Lidarr Community Guide *Davo's TRaSH Guide for Lidarr*](/lidarr/community-guide)
 - [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script for Servarr Apps*](/install-script)

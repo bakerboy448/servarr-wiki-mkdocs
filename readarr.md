@@ -32,40 +32,40 @@ The Servarr Team
 
 # Getting Started
 
-- [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/readarr/installation)
-- [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/readarr/quick-start-guide)
-- [<i class="far fa-question-circle"></i>&emsp;FAQ](/readarr/faq)
+- [:fontawesome-solid-plus-square:&emsp;Installation Guide](/readarr/installation)
+- [:fontawesome-solid-book-open:&emsp;Quick Start Guide](/readarr/quick-start-guide)
+- [:fontawesome-regular-question-circle:&emsp;FAQ](/readarr/faq)
 
 # User Guide
 
-- [<i class="fas fa-play"></i>&emsp;Library](/readarr/library)
-- [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/readarr/calendar)
-- [<i class="fas fa-clock"></i>&emsp;Activity](/readarr/activity)
-- [<i class="fas fa-search-minus"></i>&emsp;Wanted](/readarr/wanted)
-- [<i class="fas fa-cogs"></i>&emsp;Settings](/readarr/settings)
-- [<i class="fas fa-laptop"></i>&emsp;System](/readarr/system)
-- [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/readarr/custom-scripts)
-- [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/readarr/tips-and-tricks)
-- [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/readarr/appdata-directory)
-- [<i class="fas fa-server"></i>&emsp; Configure Readarr with a PostgreSQL Database](/readarr/postgres-setup)
-- [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/readarr/supported)
+- [:fontawesome-solid-play:&emsp;Library](/readarr/library)
+- [:fontawesome-solid-calendar-alt:&emsp;Calendar](/readarr/calendar)
+- [:fontawesome-solid-clock:&emsp;Activity](/readarr/activity)
+- [:fontawesome-solid-search-minus:&emsp;Wanted](/readarr/wanted)
+- [:fontawesome-solid-cogs:&emsp;Settings](/readarr/settings)
+- [:fontawesome-solid-laptop:&emsp;System](/readarr/system)
+- [:fontawesome-solid-scroll:&emsp;Custom Scripts](/readarr/custom-scripts)
+- [:fontawesome-solid-gifts:&emsp;Tips and Tricks](/readarr/tips-and-tricks)
+- [:fontawesome-solid-database:&emsp;Application Data (AppData) Directory](/readarr/appdata-directory)
+- [:fontawesome-solid-server:&emsp; Configure Readarr with a PostgreSQL Database](/readarr/postgres-setup)
+- [:fontawesome-solid-cogs:&emsp;Supported *More Info Disambiguation Page*](/readarr/supported)
 
 # Troubleshooting
 
-- [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/readarr/troubleshooting)
-- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
-- [<i class="fa-solid fa-signal"></i>&emsp;Readarr Metadata Issues *Status of Metadata and Known Issues*](/readarr/metadata-issues)
+- [:fontawesome-regular-life-ring:&emsp;General Troubleshooting](/readarr/troubleshooting)
+- [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
+- [:fontawesome-solid-signal:&emsp;Readarr Metadata Issues *Status of Metadata and Known Issues*](/readarr/metadata-issues)
 
 # Development
 
-- [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/readarr/contributing)
-- [<i class="fas fa-book"></i>&emsp;API Docs](https://readarr.com/docs/api/)
+- [:fontawesome-solid-laptop-code:&emsp;Contributing](/readarr/contributing)
+- [:fontawesome-solid-book:&emsp;API Docs](https://readarr.com/docs/api/)
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
-- [<i class="fab fa-discord"></i>&emsp;Discord *Official Readarr Discord*](https://readarr.com/discord)
+- [:fontawesome-brands-discord:&emsp;Discord *Official Readarr Discord*](https://readarr.com/discord)
 
 # Links
 

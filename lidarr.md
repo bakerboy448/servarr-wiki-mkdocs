@@ -11,40 +11,40 @@ tags:
 
 # Getting Started
 
-- [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/lidarr/installation)
-- [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/lidarr/quick-start-guide)
-- [<i class="fas fa-cog"></i>&emsp;Environment Variables](/lidarr/environment-variables)
-- [<i class="far fa-question-circle"></i>&emsp;FAQ](/lidarr/faq)
+- [:fontawesome-solid-plus-square:&emsp;Installation Guide](/lidarr/installation)
+- [:fontawesome-solid-book-open:&emsp;Quick Start Guide](/lidarr/quick-start-guide)
+- [:fontawesome-solid-cog:&emsp;Environment Variables](/lidarr/environment-variables)
+- [:fontawesome-regular-question-circle:&emsp;FAQ](/lidarr/faq)
 
 # User Guide
 
-- [<i class="fas fa-play"></i>&emsp;Library](/lidarr/library)
-- [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/lidarr/calendar)
-- [<i class="fas fa-clock"></i>&emsp;Activity](/lidarr/activity)
-- [<i class="fas fa-search-minus"></i>&emsp;Wanted](/lidarr/wanted)
-- [<i class="fas fa-cogs"></i>&emsp;Settings](/lidarr/settings)
-- [<i class="fas fa-laptop"></i>&emsp;System](/lidarr/system)
-- [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/lidarr/custom-scripts)
-- [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/lidarr/tips-and-tricks)
-- [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/lidarr/appdata-directory)
-- [<i class="fas fa-server"></i>&emsp;Configure Lidarr with a PostgreSQL Database](/lidarr/postgres-setup)
-- [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/lidarr/supported)
+- [:fontawesome-solid-play:&emsp;Library](/lidarr/library)
+- [:fontawesome-solid-calendar-alt:&emsp;Calendar](/lidarr/calendar)
+- [:fontawesome-solid-clock:&emsp;Activity](/lidarr/activity)
+- [:fontawesome-solid-search-minus:&emsp;Wanted](/lidarr/wanted)
+- [:fontawesome-solid-cogs:&emsp;Settings](/lidarr/settings)
+- [:fontawesome-solid-laptop:&emsp;System](/lidarr/system)
+- [:fontawesome-solid-scroll:&emsp;Custom Scripts](/lidarr/custom-scripts)
+- [:fontawesome-solid-gifts:&emsp;Tips and Tricks](/lidarr/tips-and-tricks)
+- [:fontawesome-solid-database:&emsp;Application Data (AppData) Directory](/lidarr/appdata-directory)
+- [:fontawesome-solid-server:&emsp;Configure Lidarr with a PostgreSQL Database](/lidarr/postgres-setup)
+- [:fontawesome-solid-cogs:&emsp;Supported *More Info Disambiguation Page*](/lidarr/supported)
 
 # Troubleshooting
 
-- [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/lidarr/troubleshooting)
-- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
+- [:fontawesome-regular-life-ring:&emsp;General Troubleshooting](/lidarr/troubleshooting)
+- [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 
 # Development
 
-- [<i class="fas fa-laptop-code"></i>&emsp;Contributing](https://github.com/Lidarr/Lidarr/blob/develop/CONTRIBUTING.md)
-- [<i class="fas fa-book"></i>&emsp;API Docs](https://lidarr.audio/docs/api/)
+- [:fontawesome-solid-laptop-code:&emsp;Contributing](https://github.com/Lidarr/Lidarr/blob/develop/CONTRIBUTING.md)
+- [:fontawesome-solid-book:&emsp;API Docs](https://lidarr.audio/docs/api/)
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
-- [<i class="fab fa-discord"></i>&emsp;Discord *Official Lidarr Discord*](https://lidarr.audio/discord)
+- [:fontawesome-brands-discord:&emsp;Discord *Official Lidarr Discord*](https://lidarr.audio/discord)
 
 # Links
 

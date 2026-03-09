@@ -11,47 +11,47 @@ tags:
 
 # Getting Started
 
-- [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/sonarr/installation)
-- [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/sonarr/quick-start-guide)
-- [<i class="fas fa-cog"></i>&emsp;Environment Variables](/sonarr/environment-variables)
-- [<i class="far fa-question-circle"></i>&emsp;FAQ](/sonarr/faq)
-- [<i class="far fa-question-circle"></i>&emsp;v4 FAQ *FAQ entries specific to v4 changes*](/sonarr/faq-v4)
+- [:fontawesome-solid-plus-square:&emsp;Installation Guide](/sonarr/installation)
+- [:fontawesome-solid-book-open:&emsp;Quick Start Guide](/sonarr/quick-start-guide)
+- [:fontawesome-solid-cog:&emsp;Environment Variables](/sonarr/environment-variables)
+- [:fontawesome-regular-question-circle:&emsp;FAQ](/sonarr/faq)
+- [:fontawesome-regular-question-circle:&emsp;v4 FAQ *FAQ entries specific to v4 changes*](/sonarr/faq-v4)
 
 # User Guide
 
-- [<i class="fas fa-play"></i>&emsp;Library](/sonarr/library)
-- [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/sonarr/calendar)
-- [<i class="fas fa-clock"></i>&emsp;Activity](/sonarr/activity)
-- [<i class="fas fa-search-minus"></i>&emsp;Wanted](/sonarr/wanted)
-- [<i class="fas fa-cogs"></i>&emsp;Settings](/sonarr/settings)
-- [<i class="fas fa-laptop"></i>&emsp;System](/sonarr/system)
-- [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/sonarr/custom-scripts)
-- [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/sonarr/tips-and-tricks)
-- [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/sonarr/appdata-directory)
-- [<i class="fas fa-server"></i>&emsp; Configure Sonarr with a PostgreSQL Database](/sonarr/postgres-setup)
-- [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/sonarr/supported)
+- [:fontawesome-solid-play:&emsp;Library](/sonarr/library)
+- [:fontawesome-solid-calendar-alt:&emsp;Calendar](/sonarr/calendar)
+- [:fontawesome-solid-clock:&emsp;Activity](/sonarr/activity)
+- [:fontawesome-solid-search-minus:&emsp;Wanted](/sonarr/wanted)
+- [:fontawesome-solid-cogs:&emsp;Settings](/sonarr/settings)
+- [:fontawesome-solid-laptop:&emsp;System](/sonarr/system)
+- [:fontawesome-solid-scroll:&emsp;Custom Scripts](/sonarr/custom-scripts)
+- [:fontawesome-solid-gifts:&emsp;Tips and Tricks](/sonarr/tips-and-tricks)
+- [:fontawesome-solid-database:&emsp;Application Data (AppData) Directory](/sonarr/appdata-directory)
+- [:fontawesome-solid-server:&emsp; Configure Sonarr with a PostgreSQL Database](/sonarr/postgres-setup)
+- [:fontawesome-solid-cogs:&emsp;Supported *More Info Disambiguation Page*](/sonarr/supported)
 
 # Troubleshooting
 
-- [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/sonarr/troubleshooting)
-- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
+- [:fontawesome-regular-life-ring:&emsp;General Troubleshooting](/sonarr/troubleshooting)
+- [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 
 # Development
 
-- [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/sonarr/contributing)
-- [<i class="fas fa-book"></i>&emsp; v4 Beta API Docs](https://sonarr.tv/docs/api)
+- [:fontawesome-solid-laptop-code:&emsp;Contributing](/sonarr/contributing)
+- [:fontawesome-solid-book:&emsp; v4 Beta API Docs](https://sonarr.tv/docs/api)
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
-- [<i class="fab fa-discord"></i>&emsp;Discord *Official Sonarr Discord*](https://discord.sonarr.tv/)
-- [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
-- [<i class="fab fa-wpforms"></i>&emsp;Forums *Official Sonarr Forums*](https://forums.sonarr.tv/)
+- [:fontawesome-brands-discord:&emsp;Discord *Official Sonarr Discord*](https://discord.sonarr.tv/)
+- [:fontawesome-brands-reddit:&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
+- [:fontawesome-brands-wpforms:&emsp;Forums *Official Sonarr Forums*](https://forums.sonarr.tv/)
 
 # Links
 
 - [sonarr.tv *Website*](https://sonarr.tv)
 - [sonarr.tv *Donations*](https://sonarr.tv/donate)
 - [GitHub *Source Code*](https://github.com/sonarr/sonarr)
-- [XEM Moderation Guide *<i class="fab fa-xing"></i>*](/sonarr/xem-guide)
+- [XEM Moderation Guide *:fontawesome-brands-xing:*](/sonarr/xem-guide)
