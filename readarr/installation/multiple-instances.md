@@ -1,11 +1,6 @@
 ---
 title: Readarr Multiple Instances (Retired)
 description: Requirements and how to install multiple instances of Readarr
-published: true
-date: 2024-07-13T15:28:36.572Z
-tags:
-editor: markdown
-dateCreated: 2023-07-03T20:12:51.889Z
 ---
 # Announcement: Retirement of Readarr
 
