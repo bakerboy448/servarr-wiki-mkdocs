@@ -326,8 +326,8 @@ When you see the movie you want click on it.
 
 1. Availability - When Radarr shall consider a movie is available.
 
-    > For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
-    {.is-info}
+!!! info
+    For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
 
     - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers (or really good public ones, e.g. rarbg.to) that do not have fakes.
     - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical Date on TMDb) This option is not recommended.
