@@ -11,7 +11,7 @@ tags:
 ---
 # By Platform
 
-[<i class="fab fa-windows" style="font-size: 3em;"></i>](/lidarr/installation/windows)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-linux" style="font-size: 3em;"></i>](/lidarr/installation/linux)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-apple" style="font-size: 3em;"></i>](/lidarr/installation/macos)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-freebsd" style="font-size: 3em;"></i>](/lidarr/installation/freebsd)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-docker" style="font-size: 3em;"></i>](/lidarr/installation/docker)
+[:fontawesome-brands-windows:](/lidarr/installation/windows)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-linux:](/lidarr/installation/linux)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-apple:](/lidarr/installation/macos)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-freebsd:](/lidarr/installation/freebsd)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-docker:](/lidarr/installation/docker)
 
 # Recommended Guides
 
