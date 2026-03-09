@@ -94,20 +94,21 @@ Library Import allows you to import existing organized movies and each movie's f
   - Any other uses that are not adding a movie to Radarr and importing the movie and its file from the root (library) folder that was input to Library Import
 - If you get an error of "path is already configured", [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie).
 
-> It is required that movie folders and files have the year in their name to be imported and parsed.{.is-warning}
+!!! warning
+    It is required that movie folders and files have the year in their name to be imported and parsed.
 
-> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
-> \* If you're using an SMB mount ensure `nobrl` is enabled.
-{.is-warning}
+!!! warning
+    \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
+    \* If you're using an SMB mount ensure `nobrl` is enabled.
 
-> **The user and group you configured Radarr to run as must have read & write access to this location.**
-{.is-info}
+!!! info
+    **The user and group you configured Radarr to run as must have read & write access to this location.**
 
-> Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
-{.is-info}
+!!! info
+    Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
 
-> **Your download folder and media folder can’t be the same location**
-{.is-danger}
+!!! danger
+    **Your download folder and media folder can’t be the same location**
 
 # Collections
 
@@ -120,13 +121,13 @@ Discover shows recommended Movies
 
 - If you do not have list(s), it will show the top 90 most recommended movies based on the TMDb movies recommended for the movies in your library in addition to the 10 recommendations from your most recent additions.
 
-> Tip: You can disable Radarr recommended movies and view only movies from your lists in `Options`.
-{.is-info}
+!!! info
+    Tip: You can disable Radarr recommended movies and view only movies from your lists in `Options`.
 
 - If you have list(s), it will show the recommendations noted above AND entries from your list(s).
 
-> Tip: Change the `Filter` to `New Non-Excluded` to only show movies that are not in your library.
-{.is-info}
+!!! info
+    Tip: Change the `Filter` to `New Non-Excluded` to only show movies that are not in your library.
 
 ![radarr-discover-empty.png](/assets/radarr/radarr-discover-empty.png)
 

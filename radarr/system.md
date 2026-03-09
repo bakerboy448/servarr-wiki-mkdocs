@@ -126,9 +126,9 @@ Cannot open assembly '/opt/Radarr/Radarr': File does not contain a valid CIL ima
 - To remedy, download the correct build for your architecture and replace your existing binaries (application)
 - In short you will need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded and then update your service file to not use mono.
 
-> DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-> YOU MUST DELETE THE OLD ONES FIRST.
-{.is-warning}
+!!! warning
+    DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
+    YOU MUST DELETE THE OLD ONES FIRST.
 
 - The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
 - This assumes you are on the `master` Radarr branch, so update the variable if needed
@@ -180,15 +180,15 @@ sudo systemctl start $app
 - Radarr is written in .NET and required Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
 - The upgrade procedure for Mono varies per platform.
 
-> Mono is no longer supported starting in Radarr version 4.0
-{.is-warning}
+!!! warning
+    Mono is no longer supported starting in Radarr version 4.0
 
 #### Currently installed SQLite version is not supported
 
 - Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0.
 
-> Note that Radarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
-{.is-info}
+!!! info
+    Note that Radarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
 #### Database Failed Integrity Check
 
@@ -201,8 +201,8 @@ sudo systemctl start $app
 
 - Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
 
-> This warning will not appear if your current version is less than 14 days old
-{.is-info}
+!!! info
+    This warning will not appear if your current version is less than 14 days old
 
 #### Cannot install update because startup folder is not writable by the user
 
@@ -236,9 +236,9 @@ sudo systemctl start $app
  proxy_set_header Connection $http_connection;
 ```
 
-> Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK
-> See <https://github.com/aspnet/AspNetCore/issues/17081>
-{.is-warning}
+!!! warning
+    Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK
+    See <https://github.com/aspnet/AspNetCore/issues/17081>
 
 ##### Apache2
 
@@ -353,8 +353,8 @@ Note: you will also need to add the websocket directive to your radarr configura
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 - Review our [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
 
-> Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
-{.is-warning}
+!!! warning
+    Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
 
 #### Bad Download Client Settings
 
@@ -528,8 +528,8 @@ A mount containing a movie path is read only and is not writable by the user Rad
 
 - Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Radarr is on the most current version then triggering the update script to update Radarr. Settings=> Update
 
-> Note: If on Docker this will not update your container as a new image will need to be downloaded.
-{.is-warning}
+!!! warning
+    Note: If on Docker this will not update your container as a new image will need to be downloaded.
 
 - Backup - This will run a backup of your Radarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
 - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Radarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
@@ -541,8 +541,8 @@ A mount containing a movie path is read only and is not writable by the user Rad
 - Refresh Movie - This goes through and refreshes all the metadata for all monitored and unmonitored movies
 - RSS Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
 
-> All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
-{.is-info}
+!!! info
+    All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 
 ## Queue
 
@@ -550,8 +550,8 @@ A mount containing a movie path is read only and is not writable by the user Rad
 
 # Backup
 
-> If you're looking for how to back/restore your Radarr instance click [the Radarr backup FAQ](/radarr/faq).
-{.is-info}
+!!! info
+    If you're looking for how to back/restore your Radarr instance click [the Radarr backup FAQ](/radarr/faq).
 
 - Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
 
@@ -569,14 +569,15 @@ A mount containing a movie path is read only and is not writable by the user Rad
 - The update screen will show the past 5 updates that have been made as well as the current version you are on.
 - This page will also display the update notes from the Developers telling you what has been fixed or added to Radarr (Rejoice!)
 
-> A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
-{.is-info}
+!!! info
+    A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 
 # Events
 
 - The events tab will show you what has been happening within your Radarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging.
 
-> Events are the equivalent of INFO Logs. {.is-info}
+!!! info
+    Events are the equivalent of INFO Logs. 
 
 - Components - This column will tell you what component within Radarr has been triggered
 - Message - This column will tell you what message as been sent from the component from the previous column.
@@ -595,8 +596,8 @@ A mount containing a movie path is read only and is not writable by the user Rad
   - Log Files - The bread and butter of any support issue more on log files can be found here.
   - Updater Log Files - This will show the log files associated with Radarr's updater script
 
-> If you're on docker this will be empty as you should be updating by downloading a new docker image
-{.is-info}
+!!! info
+    If you're on docker this will be empty as you should be updating by downloading a new docker image
 
 - Refresh - This will refresh the current page and display any newly created logs
 - Delete - This will clear all logs allowing you to start from fresh

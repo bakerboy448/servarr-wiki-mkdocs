@@ -11,7 +11,8 @@ tags:
 ---
 # Table of Contents
 
-> This page is a work in progress and requires additional effort.{.is-warning}
+!!! warning
+    This page is a work in progress and requires additional effort.
 
 This page is the disambiguation page for all `supported` wiki links (i.e. typically "more info" in the UI).
 
@@ -101,10 +102,10 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - This is primarily only supported by [Prowlarr](/prowlarr) and [Jackett](https://github.com/Jackett/Jackett)
   - [Refer to the Settings Page](/radarr/settings#indexer-settings)
 
-> Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
-> Please review your tracker rules and etiquette, keep your community alive.
-> We're not responsible if your account is banned for disobeying rules or accruing Hit and Runs (HnRs)/low-ratio.
-{.is-warning}
+!!! warning
+    Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
+    Please review your tracker rules and etiquette, keep your community alive.
+    We're not responsible if your account is banned for disobeying rules or accruing Hit and Runs (HnRs)/low-ratio.
 
 # Notifications
 
@@ -118,7 +119,8 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
 
-> You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
+!!! info
+    You can use a "pretty address" like `SomePrettyName <email@example.org>` 
 
 - Emby {#mediabrowser}
 - Gotify {#gotify}
