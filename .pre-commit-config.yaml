@@ -1,53 +1,33 @@
-default_stages: [pre-commit]
-fail_fast: true
-
 repos:
-  # General file checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
-        exclude: \.(png|jpg|jpeg|gif|svg|webp)$
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
+        exclude_types: [image]
       - id: end-of-file-fixer
-        exclude: \.(md|hash|png|jpg|jpeg|gif|svg|webp)$
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
+        exclude_types: [image]
       - id: check-yaml
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
       - id: check-json
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
       - id: check-merge-conflict
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
       - id: check-case-conflict
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
       - id: check-added-large-files
         args: ["--maxkb=1000"]
-        exclude: \.(png|jpg|jpeg|gif|svg|webp)$
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
+        exclude_types: [image]
 
-  # Markdown specific formatting and linting
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.37.0
+    rev: v0.44.0
     hooks:
       - id: markdownlint
-        args: ["--config", ".markdownlint.json", "--fix"]
-        files: \.md$
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
+        args: ["--fix"]
+        files: ^docs/
 
-  # Spell checking for markdown files
   - repo: https://github.com/crate-ci/typos
-    rev: v1.24.6
+    rev: v1.29.0
     hooks:
       - id: typos
-        args: ["--config", ".typos.toml"]
-        files: \.md$
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
 
-  # YAML formatting
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
-        files: \.(yaml|yml)$
-        args: ["--tab-width", "2"]
-        stages: [pre-commit, pre-merge-commit, pre-push, manual]
+        types_or: [yaml]
