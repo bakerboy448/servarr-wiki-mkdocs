@@ -101,7 +101,8 @@ Prowlarr can automatically sync indexers with various applications
   - By far one of the most common ways to push notifications of actions happening on your Prowlarr
 - Email {#email}
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
-  - > You can use a "pretty address" like `SomePrettyName <email@example.org>` {.is-info}
+!!! info
+    You can use a "pretty address" like `SomePrettyName <email@example.org>`
 - Gotify {#gotify}
 - Join {#join}
 - Notifiarr {#notifiarr}
