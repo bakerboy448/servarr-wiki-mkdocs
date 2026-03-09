@@ -1,6 +1,6 @@
 ---
 title: Whisparr Supported
-description: 
+description: Whisparr supported download clients, indexers, and notifications
 ---
 # Table of Contents
 
