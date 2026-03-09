@@ -14,7 +14,8 @@ Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info
 
 ## Portainer
 
-> **Portainer should be avoided for setting up docker containers** {.is-danger}
+!!! danger
+    **Portainer should be avoided for setting up docker containers** 
 
 - Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
 - Portainer should only for viewing docker container logs / container status.
@@ -48,8 +49,8 @@ If this advice is not followed, you may have to configure a Remote Path Mapping 
 Permissions and ownership of files is one of the most common problems for Sonarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
 Keep in mind that Sonarr will need read and write to the download folders as well as the final folders.
 
-> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
-{.is-info}
+!!! info
+    For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 
 ## Install Sonarr
 
