@@ -1,13 +1,10 @@
 ---
 title: Radarr Multiple Instances
 description: Requirements and how to install multiple instances of Radarr
-published: true
-date: 2024-07-13T15:28:02.725Z
-tags: installation, radarr
-editor: markdown
-dateCreated: 2023-07-03T20:12:10.189Z
+tags:
+  - installation
+  - radarr
 ---
-
 # Multiple Instances
 
 It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie. Note that you can (and probably should) [review TRaSH's guide and configure Radarr to use a second Radarr as a list](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/). This is helpful if you wish to keep both in sync.
