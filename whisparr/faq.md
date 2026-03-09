@@ -1,13 +1,13 @@
 ---
 title: Whisparr FAQ
 description: Reorganized Whisparr FAQ
-published: true
-date: 2022-09-25T03:01:32.421Z
-tags: faq, questions, answers, troubleshooting, whisparr
-editor: markdown
-dateCreated: 2022-04-03T03:49:19.500Z
+tags:
+  - faq
+  - questions
+  - answers
+  - troubleshooting
+  - whisparr
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

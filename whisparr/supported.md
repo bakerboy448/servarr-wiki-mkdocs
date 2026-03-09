@@ -1,13 +1,7 @@
 ---
 title: Whisparr Supported
-description:
-published: true
-date: 2022-03-18T08:29:26.231Z
-tags:
-editor: markdown
-dateCreated: 2021-06-23T07:55:24.002Z
+description: 
 ---
-
 # Table of Contents
 
 > This page is a work in progress and requires additional effort.{.is-warning}

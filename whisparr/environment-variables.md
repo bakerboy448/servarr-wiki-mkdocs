@@ -1,13 +1,14 @@
 ---
 title: Whisparr Environment Variables
 description: Complete guide to Whisparr environment variables for configuration management including Docker, database, authentication, and server settings
-published: true
-date: 2025-09-06T00:00:00.000Z
-tags: whisparr, configuration, environment-variables, docker, installation, postgres
-editor: markdown
-dateCreated: 2025-09-06T00:00:00.000Z
+tags:
+  - whisparr
+  - configuration
+  - environment-variables
+  - docker
+  - installation
+  - postgres
 ---
-
 # Whisparr Environment Variables
 
 Whisparr has the ability to use environment variables to override entries in config.xml. The pattern for variable naming is predictable and can be used to set any config entry. Environment variables are comprised of 3 parts, delimited by two underscores:
