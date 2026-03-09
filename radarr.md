@@ -15,39 +15,39 @@ tags:
 
 # Getting Started
 
-- [<i class="fas fa-plus-square"></i>&emsp;Installation Guide](/radarr/installation)
-- [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/radarr/quick-start-guide)
-- [<i class="fas fa-cog"></i>&emsp;Environment Variables](/radarr/environment-variables)
-- [<i class="far fa-question-circle"></i>&emsp;FAQ](/radarr/faq)
+- [:fontawesome-solid-plus-square:&emsp;Installation Guide](/radarr/installation)
+- [:fontawesome-solid-book-open:&emsp;Quick Start Guide](/radarr/quick-start-guide)
+- [:fontawesome-solid-cog:&emsp;Environment Variables](/radarr/environment-variables)
+- [:fontawesome-regular-question-circle:&emsp;FAQ](/radarr/faq)
 
 # User Guide
 
-- [<i class="fas fa-play"></i>&emsp;Library](/radarr/library)
-- [<i class="fas fa-calendar-alt"></i>&emsp;Calendar](/radarr/calendar)
-- [<i class="fas fa-clock"></i>&emsp;Activity](/radarr/activity)
-- [<i class="fas fa-cogs"></i>&emsp;Settings](/radarr/settings)
-- [<i class="fas fa-laptop"></i>&emsp;System](/radarr/system)
-- [<i class="fas fa-scroll"></i>&emsp;Custom Scripts](/radarr/custom-scripts)
-- [<i class="fas fa-gifts"></i>&emsp;Tips and Tricks](/radarr/tips-and-tricks)
-- [<i class="fas fa-database"></i>&emsp;Application Data Directory](/radarr/appdata-directory)
-- [<i class="fas fa-server"></i>&emsp; Configure Radarr with a PostgreSQL Database](/radarr/postgres-setup)
-- [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/radarr/supported)
+- [:fontawesome-solid-play:&emsp;Library](/radarr/library)
+- [:fontawesome-solid-calendar-alt:&emsp;Calendar](/radarr/calendar)
+- [:fontawesome-solid-clock:&emsp;Activity](/radarr/activity)
+- [:fontawesome-solid-cogs:&emsp;Settings](/radarr/settings)
+- [:fontawesome-solid-laptop:&emsp;System](/radarr/system)
+- [:fontawesome-solid-scroll:&emsp;Custom Scripts](/radarr/custom-scripts)
+- [:fontawesome-solid-gifts:&emsp;Tips and Tricks](/radarr/tips-and-tricks)
+- [:fontawesome-solid-database:&emsp;Application Data Directory](/radarr/appdata-directory)
+- [:fontawesome-solid-server:&emsp; Configure Radarr with a PostgreSQL Database](/radarr/postgres-setup)
+- [:fontawesome-solid-cogs:&emsp;Supported *More Info Disambiguation Page*](/radarr/supported)
 
 # Troubleshooting
 
-- [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/radarr/troubleshooting)
-- [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
+- [:fontawesome-regular-life-ring:&emsp;General Troubleshooting](/radarr/troubleshooting)
+- [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
 
 # Development
 
-- [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/radarr/contributing)
-- [<i class="fas fa-book"></i>&emsp;API Docs](https://radarr.video/docs/api/#/)
+- [:fontawesome-solid-laptop-code:&emsp;Contributing](/radarr/contributing)
+- [:fontawesome-solid-book:&emsp;API Docs](https://radarr.video/docs/api/#/)
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
-- [<i class="fab fa-discord"></i>&emsp;Discord *Official Radarr Discord*](https://radarr.video/discord)
+- [:fontawesome-brands-discord:&emsp;Discord *Official Radarr Discord*](https://radarr.video/discord)
 
 # Links
 
