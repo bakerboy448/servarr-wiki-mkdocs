@@ -9,6 +9,18 @@ updates:
       time: "12:00"
     target-branch: "main"
     groups:
-      github:
+      github-actions:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "12:00"
+    target-branch: "main"
+    groups:
+      pip:
         patterns:
           - "*"
