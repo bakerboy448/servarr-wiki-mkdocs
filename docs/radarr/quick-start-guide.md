@@ -38,7 +38,7 @@ tags:
 > This page is still in progress and not complete. Contributions are welcome
 
 !!! info
-    For a more detailed breakdown of all the settings, check [Radarr =>Settings](/radarr/settings)
+    For a more detailed breakdown of all the settings, check [Radarr =>Settings](../radarr/settings.md)
 
 In this guide we will try to explain the basic setup you need to do to get started with Radarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
@@ -49,7 +49,7 @@ In this guide we will try to explain the basic setup you need to do to get start
 
 After installation and starting up, you open a browser and go to `http://{your_ip_here}:7878`
 
-![Radarr-start.png](/assets/radarr/Radarr-start.png)
+![Radarr-start.png](../assets/radarr/Radarr-start.png)
 
 # Media Management
 
@@ -57,11 +57,11 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 `Settings` => `Media Management`
 
-![Radarr-settings-mm.png](/assets/radarr/Radarr-settings-mm.png)
+![Radarr-settings-mm.png](../assets/radarr/Radarr-settings-mm.png)
 
 ## Movie Naming
 
-![Radarr-settings-mm-movie-naming.png](/assets/radarr/Radarr-settings-mm-movie-naming.png)
+![Radarr-settings-mm-movie-naming.png](../assets/radarr/Radarr-settings-mm-movie-naming.png)
 
 1. Enable/Disable Renaming of your movies (as opposed to leaving the names that are currently there or as they were when you downloaded them).
 2. If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ # % & + { }`).
@@ -74,14 +74,14 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ## Importing
 
-![Radarr-settings-mm-importing.png](/assets/radarr/Radarr-settings-mm-importing.png)
+![Radarr-settings-mm-importing.png](../assets/radarr/Radarr-settings-mm-importing.png)
 
 1. *(Advanced Option) Enable `Use Hard links instead of Copy` more info how and why with examples [TRaSH's Hard links Guide](https://trash-guides.info/hardlinks).*
 1. *(Advanced Option) Import matching extra files (subtitles, nfo, etc) after importing a file.*
 
 ## File Management
 
-![Radarr-settings-mm-fm.png](/assets/radarr/Radarr-settings-mm-fm.png)
+![Radarr-settings-mm-fm.png](../assets/radarr/Radarr-settings-mm-fm.png)
 
 1. Movies deleted from disk are automatically unmonitored in Radarr.
     - You may want to delete a movie but do not want Radarr to re-download the movie. You would use this option.
@@ -90,7 +90,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ## Root Folders
 
-![Radarr-settings-mm-root-folder.png](/assets/radarr/Radarr-settings-mm-root-folder.png)
+![Radarr-settings-mm-root-folder.png](../assets/radarr/Radarr-settings-mm-root-folder.png)
 
 Here we will add the root folder that Radarr will be using to import your existing organized media library and where Radarr will be importing (copy/hardlink/move) your media after your download client has downloaded it.
 
@@ -113,13 +113,13 @@ Don’t forget to save your changes
 
 `Settings` => `Profiles`
 
-![Radarr-settings-profiles.png](/assets/radarr/Radarr-settings-profiles.png)
+![Radarr-settings-profiles.png](../assets/radarr/Radarr-settings-profiles.png)
 
 Here you’ll be allowed to configure profiles for which you can have for the quality, preferred language, and custom format scoring of a movie you’re looking to download.
 
 We recommend you to create your own profiles and only select the Quality Sources and Languages you actually want.
 
-For more information on foreign titles and languages see [this FAQ entry](/radarr/faq#how-does-radarr-handle-foreign-movies-or-foreign-titles)
+For more information on foreign titles and languages see [this FAQ entry](../radarr/faq.md#how-does-radarr-handle-foreign-movies-or-foreign-titles)
 
 Many users find [TRaSH's Custom Format Language Guide](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/#how-to-setup-language-custom-formats) helpful to specify the languages of movies they want.
 
@@ -129,14 +129,14 @@ Profiles is also where Custom Format Scores are configured.  It's strongly recom
 - [BR-DISK](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
 
 !!! info
-    More info at [Settings => Profiles](/radarr/settings#profiles).
-    To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
+    More info at [Settings => Profiles](../radarr/settings.md#profiles).
+    To see what the difference is between the Quality Sources look [at our Quality Definitions](../radarr/settings.md#qualities-defined).
 
 # Quality
 
 `Settings` => `Quality`
 
-![Radarr-settings-quality.png](/assets/radarr/Radarr-settings-quality.png)
+![Radarr-settings-quality.png](../assets/radarr/Radarr-settings-quality.png)
 
 Here you’re able to change/fine tune the min and max size of your wanted media files (when using Usenet keep in mind the RAR/PAR2 files)
 
@@ -147,7 +147,7 @@ Here you’re able to change/fine tune the min and max size of your wanted media
 
 `Settings` => `Indexers`
 
-![Radarr-settings-indexers.png](/assets/radarr/Radarr-settings-indexers.png)
+![Radarr-settings-indexers.png](../assets/radarr/Radarr-settings-indexers.png)
 
 Here you’ll be adding the indexer/tracker that you’ll be using to actually download any of your files.
 
@@ -155,18 +155,18 @@ Once you’ve clicked the <kb>+</kb> button to add a new indexer you’ll be pre
 
 There are two sections here: Usenet and Torrents. Based upon what download client you’ll be using you’ll want to select the type of indexer you’ll be going with.
 
-For torrent trackers - almost all require the use of [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett).
+For torrent trackers - almost all require the use of [Prowlarr](../prowlarr.md) or [Jackett](https://github.com/Jackett/Jackett).
 
 # Download Clients
 
 `Settings` => `Download Clients`
 
-![Radarr-settings-download-clients.png](/assets/radarr/Radarr-settings-download-clients.png)
+![Radarr-settings-download-clients.png](../assets/radarr/Radarr-settings-download-clients.png)
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and to have read & write access to the location the download client reports files the client downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
 !!! info
-    See the [settings page](/radarr/settings#download-clients), at the [More Info (Supported)](/radarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+    See the [settings page](../radarr/settings.md#download-clients), at the [More Info (Supported)](../radarr/supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 
 === "Usenet"
@@ -180,7 +180,7 @@ Downloading and importing is where most people experience issues. From a high le
     - When the download is completed, Radarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Radarr
     - Radarr will scan that completed file location for files that Radarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
     - Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hard links and atomic moves then Radarr will fall back and copy the file then delete from the source which is IO intensive.
-    - If the ["Completed Download Handling - Remove"](/radarr/settings#completed-download-handling) option is enabled in Radarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
+    - If the ["Completed Download Handling - Remove"](../radarr/settings.md#completed-download-handling) option is enabled in Radarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
 === "BitTorrent"
 
@@ -192,32 +192,32 @@ Downloading and importing is where most people experience issues. From a high le
     - Radarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
     - Completed downloads that are still seeding will have their files left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Radarr under the specific download client). When files are imported to your media folder Radarr will hardlinkthe file if supported by your setup or copy if not hard links are not supported.  Torrents that are paused and completed seeding will be atomic moved if hard links are supported or copy+delete if they are not.
     - Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then Radarr will fall back and copy the file.
-    - If the ["Completed Download Handling - Remove"](/radarr/settings#completed-download-handling) option is enabled in Radarr's settings, Radarr will delete the torrent from your client and ask the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
+    - If the ["Completed Download Handling - Remove"](../radarr/settings.md#completed-download-handling) option is enabled in Radarr's settings, Radarr will delete the torrent from your client and ask the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
 
 # How to import your existing organized media library
 
 !!! info
-    Note that Radarr does not regularly search for Movies.  See the [How does Radarr work?](/radarr/faq#how-does-radarr-work) FAQ Entry for details to understand how Radarr works.
+    Note that Radarr does not regularly search for Movies.  See the [How does Radarr work?](../radarr/faq.md#how-does-radarr-work) FAQ Entry for details to understand how Radarr works.
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 `Movies`
 
-![Radarr-movies.png](/assets/radarr/Radarr-movies.png)
+![Radarr-movies.png](../assets/radarr/Radarr-movies.png)
 
 Select `Import Existing Movies` or select `Import` from the sidebar.
 
 ## Import movies
 
-![Radarr-movies-import.png](/assets/radarr/Radarr-movies-import.png)
+![Radarr-movies-import.png](../assets/radarr/Radarr-movies-import.png)
 
 Select the root path you added earlier [in the root folders section.](#root-folders)
 
 ## Importing Existing Media
 
-![Radarr-importing-existing.png](/assets/radarr/Radarr-importing-existing.png)
+![Radarr-importing-existing.png](../assets/radarr/Radarr-importing-existing.png)
 
-Depending how well you got your existing movie folders named Radarr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directory follow this [guide](/radarr/tips-and-tricks#creating-a-folder-for-each-movie)
+Depending how well you got your existing movie folders named Radarr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directory follow this [guide](../radarr/tips-and-tricks.md#creating-a-folder-for-each-movie)
 
 1. Your movie folder name.
 1. Monitor - How you want the movie to be added to Radarr.
@@ -245,7 +245,7 @@ Once a movie is added to Radarr, Radarr will scan the movie's folder and attempt
 
 If you’re getting a error like this
 
-![Radarr-importing-existing-no-match.png](/assets/radarr/Radarr-importing-existing-no-match.png)
+![Radarr-importing-existing-no-match.png](../assets/radarr/Radarr-importing-existing-no-match.png)
 
 Then you probably made a mistake with your movie folder naming.
 
@@ -253,21 +253,21 @@ To fix this issue you can try the following
 
 Expand the error message
 
-![Radarr-importing-existing-no-match-expand.png](/assets/radarr/Radarr-importing-existing-no-match-expand.png)
+![Radarr-importing-existing-no-match-expand.png](../assets/radarr/Radarr-importing-existing-no-match-expand.png)
 
 and check on the [themoviedb](https://www.themoviedb.org/) if the year or title matches. in this example you will notice that the year is wrong and you can fix it by changing the year and click on the refresh icon.
 
-![radarr-importing-existing-no-match-expand-refresh.png](/assets/radarr/radarr-importing-existing-no-match-expand-refresh.png)
+![radarr-importing-existing-no-match-expand-refresh.png](../assets/radarr/radarr-importing-existing-no-match-expand-refresh.png)
 
 Or you can just use the tmdb:id or imdb:id (if tmdb is linked to imdb) and then select the found movie if matched.
 
-![Radarr-importing-existing-no-match-expand-tmdb.png](/assets/radarr/Radarr-importing-existing-no-match-expand-tmdb.png)
+![Radarr-importing-existing-no-match-expand-tmdb.png](../assets/radarr/Radarr-importing-existing-no-match-expand-tmdb.png)
 
-![Radarr-importing-existing-no-match-expand-imdb.png](/assets/radarr/Radarr-importing-existing-no-match-expand-imdb.png)
+![Radarr-importing-existing-no-match-expand-imdb.png](../assets/radarr/Radarr-importing-existing-no-match-expand-imdb.png)
 
 ### Fix faulty folder name after import
 
-![Radarr-wrong-folder-name.png](/assets/radarr/Radarr-wrong-folder-name.png)
+![Radarr-wrong-folder-name.png](../assets/radarr/Radarr-wrong-folder-name.png)
 
 You will notice after the fix we did during the import that the folder name still has the wrong year in it. To fix this we’re going to do a little magic trick.
 
@@ -277,11 +277,11 @@ Go to you movie overview
 
 On the top click on `Movie Editor`
 
-![Radarr-movie-editor.png](/assets/radarr/Radarr-movie-editor.png)
+![Radarr-movie-editor.png](../assets/radarr/Radarr-movie-editor.png)
 
 After activating it you select the movie(s) from where you want to have the folder(s) to be renamed.
 
-![Radarr-movie-editor-select.png](/assets/radarr/Radarr-movie-editor-select.png)
+![Radarr-movie-editor-select.png](../assets/radarr/Radarr-movie-editor-select.png)
 
 1. If you want all your movie folders renamed to your folder naming scheme you set earlier [movie naming section](#movie-naming).
 2. Select the movie(s) from where you want to have the folder(s) to be renamed.
@@ -289,13 +289,13 @@ After activating it you select the movie(s) from where you want to have the fold
 
 A new popup will be shown
 
-![Radarr-movie-editor-move-files-yes.png](/assets/radarr/Radarr-movie-editor-move-files-yes.png)
+![Radarr-movie-editor-move-files-yes.png](../assets/radarr/Radarr-movie-editor-move-files-yes.png)
 
 Select `Yes, Move the files`
 
 Then Magic
 
-![Radarr-correct-folder-name.png](/assets/radarr/Radarr-correct-folder-name.png)
+![Radarr-correct-folder-name.png](../assets/radarr/Radarr-correct-folder-name.png)
 
 As you can see the folder has been renamed to the correct year following your naming scheme.
 
@@ -305,17 +305,17 @@ After you imported your existing well organized media library it’s time to add
 
 `Movies` => `Add New`
 
-![Radarr-add-new.png](/assets/radarr/Radarr-add-new.png)
+![Radarr-add-new.png](../assets/radarr/Radarr-add-new.png)
 
 Type in the box the movie you want or use the tmdb:id or imdb:id.
 
 When typing out the movie name you will see it will start showing you results.
 
-![Radarr-movie-search.png](/assets/radarr/Radarr-movie-search.png)
+![Radarr-movie-search.png](../assets/radarr/Radarr-movie-search.png)
 
 When you see the movie you want click on it.
 
-![Radarr-movie-add.png](/assets/radarr/Radarr-movie-add.png)
+![Radarr-movie-add.png](../assets/radarr/Radarr-movie-add.png)
 
 1. Root Folder - Radarr will add the movie to the Root Folder you’ve setup [in the root folders section](#root-folders)
 1. Monitor - How you want the movie to be added to Radarr.
@@ -336,7 +336,7 @@ When you see the movie you want click on it.
 
 1. Quality Profile - Select your profile to use for this movie
 1. Tags - Here you can add certain tags for advanced usage.
-1. Search on Add - Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](/radarr/faq#how-does-radarr-find-movies)
+1. Search on Add - Make sure you enable this if you want Radarr search for the missing movie when added to Radarr [more info](../radarr/faq.md#how-does-radarr-find-movies)
 1. Click on `Add Movie` to add the movie to Radarr.
 
-    - If you get an error of "path is already configured" [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie)
+    - If you get an error of "path is already configured" [see this FAQ entry](../radarr/faq.md#path-is-already-configured-for-an-existing-movie)

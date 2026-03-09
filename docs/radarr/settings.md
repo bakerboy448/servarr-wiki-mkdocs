@@ -103,17 +103,17 @@ tags:
   - [Style](#style)
   - [Language](#language)
 
-This page will go through all the settings available in Radarr and how they work. This is not meant to be a comprehensive "how to set up Radarr." If you want that, please use the [Quick Start](/radarr/quick-start-guide) page instead.
+This page will go through all the settings available in Radarr and how they work. This is not meant to be a comprehensive "how to set up Radarr." If you want that, please use the [Quick Start](../radarr/quick-start-guide.md) page instead.
 
 # Menu options
 
 To get to the Settings page, choose Settings from the sidebar. The following sub-menu options will be available:
 
-![settings_1_menu.png](/assets/radarr/settings_1_menu.png)
+![settings_1_menu.png](../assets/radarr/settings_1_menu.png)
 
 Also, note that for each individual settings page, there are some options at the top of the menu:
 
-![settings_2_topmenu.png](/assets/radarr/settings_2_topmenu.png)
+![settings_2_topmenu.png](../assets/radarr/settings_2_topmenu.png)
 
 - Hide/Show advanced is important for any items that are marked below as `(Advanced Option)`, otherwise they will not show up. These menu items are shown in orange in the screenshots.
 
@@ -540,7 +540,7 @@ Profiles is where Custom Format Scores are configured.
     - [Custom format Flag stays after transcoding into other Codec and don't ignore scene name original file title](https://github.com/Radarr/Radarr/issues/7896)
 - Edition - This tag is matched against any Editions Radarr may parse. You can put any value Radarr will try to match that against what it parsed (case-insensitive).
 - Language - This language is matched against any language(s) Radarr parses. All languages previously selectable in profiles work here.
-- [Indexer Flag](/radarr/settings#indexer-flags) - This tag is matched against any Indexer Flags that Radarr may parse.
+- [Indexer Flag](../radarr/settings.md#indexer-flags) - This tag is matched against any Indexer Flags that Radarr may parse.
 - Source - The source where a release was ripped from (e.g. BLURAY).
 - Resolution - The resolution parsed from either the release name or mediainfo (if available).
 - Quality Modifier - Quality Modifier sets things like Telescene, Telesync, Remux, Regional. It disambiguates a given source and resolution pair when there are multiple quality (source) types that can apply.
@@ -571,11 +571,11 @@ Profiles is where Custom Format Scores are configured.
 # Indexers
 
 !!! info
-    Information on supported indexers can be found at the [More Info (Supported)](/radarr/supported#indexers) page for this section
+    Information on supported indexers can be found at the [More Info (Supported)](../radarr/supported.md#indexers) page for this section
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info (Supported)](/radarr/supported#indexers) page
+- A list of supported indexers is located at the [More Info (Supported)](../radarr/supported.md#indexers) page
 
 ### Indexer Settings
 
@@ -586,7 +586,7 @@ Profiles is where Custom Format Scores are configured.
 ### Usenet Indexer Configuration
 
 - Newznab - Here you will find presets of popular usenet indexers (that are prefilled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
-- Software that works with usenet and integrates quite well with Radarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
+- Software that works with usenet and integrates quite well with Radarr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](../prowlarr.md) which integrate with both Usenet and Torrents
 - Regardless if you select a pre-filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2 or Prowlarr)
 - Name - The name of the indexer in Radarr
@@ -607,7 +607,7 @@ Profiles is where Custom Format Scores are configured.
 ### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
-- One of the best and simplest ways to utilize Torrent trackers that are not natively supported with Radarr is to utilize a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Radarr as a search indexer that houses all your information and sends it to Radarr.
+- One of the best and simplest ways to utilize Torrent trackers that are not natively supported with Radarr is to utilize a second program such as [Prowlarr](../prowlarr.md) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Radarr as a search indexer that houses all your information and sends it to Radarr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett)
@@ -654,7 +654,7 @@ Profiles is where Custom Format Scores are configured.
   - This is helpful to delay searching for a release to give the community time to perform the best encodes.
   - Typically, a Movie Availability of `Released` with a delay of `-21` or `-14` is suggested.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Radarr find movies?](/radarr/faq#how-does-radarr-find-movies) for a better understanding of how RSS Sync will help you
+  - Please see [How does Radarr find movies?](../radarr/faq.md#how-does-radarr-find-movies) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -665,7 +665,7 @@ Profiles is where Custom Format Scores are configured.
 # Download Clients
 
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](/radarr/supported#download-clients) page for this section
+    Information on supported download clients can be found at the [More Info (Supported)](../radarr/supported.md#download-clients) page for this section
 
 ## Overview
 
@@ -695,7 +695,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info (Supported)](/radarr/supported#download-clients) page
+- A list of supported download clients is located at the [More Info (Supported)](../radarr/supported.md#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -810,12 +810,12 @@ If you download using a BitTorrent client, the process is slightly different:
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
 !!! info
-    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](../docker-guide.md) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 # Import Lists
 
 !!! info
-    Information on supported list types can be found at the [More Info (Supported)](/radarr/supported#lists) page for this section
+    Information on supported list types can be found at the [More Info (Supported)](../radarr/supported.md#lists) page for this section
 
 ## Lists
 
@@ -845,7 +845,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 # Connect
 
 !!! info
-    Information on supported connection types can be found at the [More Info (Supported)](/radarr/supported#notifications) page for this section
+    Information on supported connection types can be found at the [More Info (Supported)](../radarr/supported.md#notifications) page for this section
 
 ## Connections
 
@@ -853,7 +853,7 @@ Connections are how you want Radarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info (Supported)](/radarr/supported#notifications) page
+- A list of supported notifications & connections is located at the [More Info (Supported)](../radarr/supported.md#notifications) page
 
 ## Connection Triggers
 
@@ -878,7 +878,7 @@ Connections are how you want Radarr to communicate with the outside world.
 ## Metadata Consumers
 
 !!! info
-    Information on supported metadata consumers can be found at the [More Info (Supported)](/radarr/supported#metadata) page for this section
+    Information on supported metadata consumers can be found at the [More Info (Supported)](../radarr/supported.md#metadata) page for this section
 
 Here you can select the type of metadata that will be consumed by your media player
 
@@ -931,7 +931,7 @@ Kodi will be one of the most commonly used options here if that is the software 
 ## Security
 
 - Authentication - How would you like to authenticate to access your Radarr instance
-  - As of Radarr v5, Authentication is now mandatory. [See the Mandatory Auth FAQ entry for details.](/radarr/faq#forced-authentication)
+  - As of Radarr v5, Authentication is now mandatory. [See the Mandatory Auth FAQ entry for details.](../radarr/faq.md#forced-authentication)
   - ~~None - You have no authentication to access your Radarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web~~
   - Basic (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
@@ -968,7 +968,7 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Radarr that you are running on.
-  - [Please see this FAQ entry for more information](/radarr/faq#how-do-i-update-radarr)
+  - [Please see this FAQ entry for more information](../radarr/faq.md#how-do-i-update-radarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Radarr built-in updater or a script
   - Built-in - Use Radarr's own updater

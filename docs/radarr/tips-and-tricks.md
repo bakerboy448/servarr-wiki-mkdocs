@@ -11,7 +11,7 @@ tags:
 ---
 # TRaSH's Custom Formats
 
-- [TRasH has a guide](https://trash-guides.info/Radarr/) on how to use [Radarr => Settings => Custom Formats](/radarr/settings#custom-formats) as well as a shared repository of Custom Formats.
+- [TRasH has a guide](https://trash-guides.info/Radarr/) on how to use [Radarr => Settings => Custom Formats](../radarr/settings.md#custom-formats) as well as a shared repository of Custom Formats.
 
 # Syncing Two Radarr Instances
 
@@ -19,7 +19,7 @@ tags:
 
 # Renaming Movie Folders
 
-- [See this FAQ Entry](/radarr/faq#how-can-i-rename-my-movie-folders)
+- [See this FAQ Entry](../radarr/faq.md#how-can-i-rename-my-movie-folders)
 
 # Creating a Folder for Each Movie
 
@@ -36,7 +36,7 @@ tags:
 
 - To keep this pattern for future movies, you should set:
 
-- [Settings => Media Management (Advanced Settings Shown) => Movie Naming](/radarr/settings#media-management)
+- [Settings => Media Management (Advanced Settings Shown) => Movie Naming](../radarr/settings.md#media-management)
 
   - File: `{Movie CleanTitle} {(Release Year)} {Edition Tags} {[Quality Title]}`
   - Folder: `{Movie CleanTitle} {(Release Year)}`
@@ -113,12 +113,12 @@ If you use Prowlarr on full sync, then you should be setting these values in Pro
 
 1. In Radarr, go to Settings -> Indexers. Click on each indexer. In that indexer, click Show Advanced. Set the Seed Ratio value to at least "1", and the Seed Time value to at least 300. You may leave one of those values blank, if you only want either time or ratio. If you set both, the first value that is met triggers the removal (i.e. if it hits 1.0 ratio in 120 minutes, it would be removed even though it hasn't met the time value).
 
-	![radarr-seed-time.png](/images/radarr-seed-time.png)
+	![radarr-seed-time.png](../images/radarr-seed-time.png)
 
 1. Repeat this for all of your torrent indexers. You can set different goals for each indexer. Note that you should add 10-20% over what your private indexers require, because the way that your download client calculates time/ratio is slightly different than what your indexers do, and setting it too close to requirements can result in hit & runs.
 
 1. In Qbittorrent, go to Tools / Options / BitTorrent. You will have to check one of the seed goal items in order to be able to select from the drop-down. Change the drop-down to "Stop Torrent" (on older versions of Qbittorrent, this is Pause Torrent). Then you can un-check the box again, if you don't want Qbittorrent to have any default values set.
 
-	![qbit-remove-settings.png](/images/qbit-remove-settings.png)
+	![qbit-remove-settings.png](../images/qbit-remove-settings.png)
 
 Now you're done. New grabs should have the values you've set, and when they're done they should Stop in Qbittorrent, and be removed shortly thereafter by Radarr.

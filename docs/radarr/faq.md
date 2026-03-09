@@ -91,7 +91,7 @@ tags:
 - If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Radarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed movies.
 
 !!! info
-    Upgradinatorr can do periodic bulk searches which is useful to safely and sanely look for upgrades after major changes to one's quality profile. Use [Drazzlib's Python Script](/useful-tools#drazzilbs-userscripts) or [Cuban's Powershell Script](/useful-tools#just-a-bunch-of-starr-scripts)
+    Upgradinatorr can do periodic bulk searches which is useful to safely and sanely look for upgrades after major changes to one's quality profile. Use [Drazzlib's Python Script](../useful-tools.md#drazzilbs-userscripts) or [Cuban's Powershell Script](../useful-tools.md#just-a-bunch-of-starr-scripts)
 
 ## How does Radarr find movies
 
@@ -115,7 +115,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - `Basic` (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and removed in Radarr v6.
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/radarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](../radarr/appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
   - [OIDC Support](https://github.com/Radarr/Radarr/issues/7047#issuecomment-1696156068) is being explored for future versions (Ref [GHI #7047](https://github.com/Radarr/Radarr/issues/7047)) and is NOT currently supported.
 
 ### Authentication Required
@@ -156,7 +156,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
     This ranking applies to both releases that would be Quality and/or Custom  Format upgrades.
 
 !!! warning
-    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/radarr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).
+    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](../radarr/settings.md#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).
 
 ## What are Lists and what can they do for me
 
@@ -175,14 +175,14 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
 - You can trigger a list refresh manually by testing it, add the movies to Radarr, use Ombi, Petio, Overseer, or any similar app that adds them right away
 - This restriction is to not have our server and list providers get killed by people updating lists every 10 minutes.
-- In Radarr pre-v4.7 interval can be configured in [Settings => Lists](/radarr/settings#lists) for between 6-24 hours. The default is 24 hours.
+- In Radarr pre-v4.7 interval can be configured in [Settings => Lists](../radarr/settings.md#lists) for between 6-24 hours. The default is 24 hours.
 - In Radarr v4.7 these values are now hardcoded and not configurable. Times are based on the list type to minimize impact to third party services and allow Radarr's functionality with them to continue.
 
 ## Can all my movie files be stored in one folder
 
-- No. Radarr is a fork of [Sonarr](/sonarr) and thus requires that each movie be stored in individual folders. It is **highly unlikely** a flat file structure would ever be supported due to substantial backend modifications required.
+- No. Radarr is a fork of [Sonarr](../sonarr.md) and thus requires that each movie be stored in individual folders. It is **highly unlikely** a flat file structure would ever be supported due to substantial backend modifications required.
 - The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) addresses this request, but it is **unlikely** that it would allow all movie files to be housed in a single folder.
-- For information on how to move your movies from a single folder to separate folders, refer to the [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie).
+- For information on how to move your movies from a single folder to separate folders, refer to the [Tips and Tricks Section => Create a Folder for Each Movie](../radarr/tips-and-tricks.md#creating-a-folder-for-each-movie).
 
 ## Can I put all my movies in my library into one folder
 
@@ -257,7 +257,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 - Find the location of the AppData directory for Radarr
   - Via the Radarr UI go to System => About
-  - [Radarr Appdata Directory](/radarr/appdata-directory)
+  - [Radarr Appdata Directory](../radarr/appdata-directory.md)
 - Stop Radarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -281,7 +281,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - Re-install Radarr (if applicable / not already installed)
 - Find the location of the AppData directory for Radarr
   - Running Radarr once and via the UI go to System => About
-  - [Radarr Appdata Directory](/radarr/appdata-directory)
+  - [Radarr Appdata Directory](../radarr/appdata-directory.md)
 - Stop Radarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -296,7 +296,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - Re-install Radarr (if applicable / not already installed)
 - Find the location of the AppData directory for Radarr
   - Running Radarr once and via the UI go to System => About
-  - [Radarr Appdata Directory](/radarr/appdata-directory)
+  - [Radarr Appdata Directory](../radarr/appdata-directory.md)
 - Stop Radarr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -337,7 +337,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 ## Path is Already Configured for an Existing Movie
 
-![existing-movie.png](/assets/radarr/existing-movie.png)
+![existing-movie.png](../assets/radarr/existing-movie.png)
 
 - Library Import shows "Existing" or you get an error of "Path is configured for an existing movie"
 - This occurs when trying to add a movie or edit an existing movie's path that already is assigned to a different movie.
@@ -372,7 +372,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
   - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
 
-- See [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/faq)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
+- See [Tips and Tricks Section => Create a Folder for Each Movie](../radarr/faq.md)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
 
 ## Movie Folders Named Incorrectly
 
@@ -393,7 +393,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
     - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
       - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
       - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
-  - The [Tips and Tricks Section => Create a Folder for Each Movie](/radarr/tips-and-tricks#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
+  - The [Tips and Tricks Section => Create a Folder for Each Movie](../radarr/tips-and-tricks.md#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
 
 ## Can I disable the refresh movies task
 
@@ -432,8 +432,8 @@ This could be because your indexer poorly matched it, or the uploader didn't nam
 - This means your SQLite database that stores most of the information for Radarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-radarr). However, for users receiving this after upgrading to v4 it is highly unlikely the backup itself will work and you'll need to try the other recovery methods mentioned.
-- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
-  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
+- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](../useful-tools.md#recovering-a-corrupt-db)
+  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
@@ -535,7 +535,7 @@ After creating the symlink, restart Radarr. It will now use the system's SQLite 
 
 {#help-i-have-forgotten-my-password}
 
-To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](/radarr/appdata-directory)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](../radarr/appdata-directory.md)
 
 1. Stop Radarr
 1. Open config.xml in a text editor
@@ -556,7 +556,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Weird UI Issues
 
-- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](../useful-tools.md#clearing-cookies-and-local-storage) wiki article.
 
 ## Web Interface Only Loads at localhost on Windows
 
@@ -577,7 +577,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## I got a pop-up that said config.xml was corrupt, what now
 
-- Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/radarr/appdata-directory), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
+- Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](../radarr/appdata-directory.md), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
@@ -588,7 +588,7 @@ Depending on your OS, there are multiple possible ways.
 ## VPNs, Jackett, and the \*ARRs
 
 !!! info
-    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](../vpn.md) page.
 
 - Unless you're in a repressive country like China, Australia or the UK, your BitTorrent client is typically the only thing that needs to be behind a VPN. Usenet does not require VPN protection as it uses encrypted SSL connections. If you're in a repressive country noted above it is likely your connection to your trackers needs to be VPN'd as well - in other words Jackett behind a VPN or Prowlarr using an Indexer Proxy. Other *Arr apps not connecting to trackers should not be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 - In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible.
@@ -632,7 +632,7 @@ When doing an interactive search a second download button has been added titled 
 
 ## Jackett shows more results than when manually searching
 
-- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/radarr/troubleshooting) for more information.
+- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](../radarr/troubleshooting.md) for more information.
 
 ## How does Radarr determine the year of a movie
 
@@ -688,15 +688,15 @@ When doing an interactive search a second download button has been added titled 
 - If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
 
   - Add and Search for Movie when adding a movie
-![addmovie-add-and-search.png](/assets/radarr/addmovie-add-and-search.png)
+![addmovie-add-and-search.png](../assets/radarr/addmovie-add-and-search.png)
   - Search an existing Movie
-![searchmovie-movie-page.png](/assets/radarr/searchmovie-movie-page.png)
+![searchmovie-movie-page.png](../assets/radarr/searchmovie-movie-page.png)
 
 ## Jackett's /all Endpoint
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](../prowlarr.md)
 
 - **January 1 2022 Update: Jackett `/all` endpoint is no longer supported (e.g. warnings will occur) as of 4.0.0.5730 due to the fact it only causes issues.**
 
@@ -713,7 +713,7 @@ When doing an interactive search a second download button has been added titled 
 ### Jackett /All Solutions
 
 - Add each tracker in Jackett manually as an indexer in \*Arr
-- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [Prowlarr](../prowlarr.md) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
 ## Why are there two files? | Why is there a file left in downloads
