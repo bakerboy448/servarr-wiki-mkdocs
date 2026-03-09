@@ -10,7 +10,7 @@ tags:
 ---
 # By Platform
 
-[<i class="fab fa-windows" style="font-size: 3em;"></i>](/sonarr/installation/windows)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-linux" style="font-size: 3em;"></i>](/sonarr/installation/linux)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-apple" style="font-size: 3em;"></i>](/sonarr/installation/macos)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-freebsd" style="font-size: 3em;"></i>](/sonarr/installation/freebsd)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-docker" style="font-size: 3em;"></i>](/sonarr/installation/docker)
+[:fontawesome-brands-windows:](/sonarr/installation/windows)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-linux:](/sonarr/installation/linux)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-apple:](/sonarr/installation/macos)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-freebsd:](/sonarr/installation/freebsd)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-docker:](/sonarr/installation/docker)
 
 # Recommended Guides
 
