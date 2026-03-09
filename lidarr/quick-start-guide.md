@@ -77,9 +77,8 @@ From there the deviation is pretty substantial. Music library management is a ve
 Lidarr utilizes information from data aggregation services to properly tag and manage the music library. This third party data represents media in defined categories and types.
 
 > If the data does not exist in the 3rd party services it can NOT be managed by Lidarr.
-Details are below to participate and contribute.
-{.is-warning}
-
+!!! warning
+    Details are below to participate and contribute.
 The main service utilized is [MusicBrainz](https://musicbrainz.org/). This is free service that is community driven and ultimately exists and survives on your contributions and participation. Release creation and contribution is beyond the scope of this guide. Instructions can be found here: [How To Contribute](https://musicbrainz.org/doc/How_to_Contribute)
 
 Ultimately the data is defined by the 3rd party data standards. If the standards do not align with your use case - **Lidarr may not be the proper solution**. Other applications for the management of your media may include:
@@ -331,13 +330,11 @@ Specialty libraries create unique issues for any management system. These situat
 ## Importing existing library or files
 
 > Note that Lidarr does not regularly search for Releases.  See these two FAQ Entries for details to understand how Lidarr works.
-[How does Lidarr find releases?](/lidarr/faq#how-does-lidarr-find-releases) and [How does Lidarr work?](/lidarr/faq#how-does-lidarr-work)
-{.is-info}
-
+!!! info
+    [How does Lidarr find releases?](/lidarr/faq#how-does-lidarr-find-releases) and [How does Lidarr work?](/lidarr/faq#how-does-lidarr-work)
 > Automated Import is a scheduled process and cannot be stopped once started
-Do NOT add a `Root Folder` with existing files until you have reviewed this section in full
-{.is-warning}
-
+!!! warning
+    Do NOT add a `Root Folder` with existing files until you have reviewed this section in full
 Lidarr utilizes an automated system of adding `Release Artists` and `Releases` located in your `Root Folder`.
 
 If Lidarr's use case matches and you do not have unique or specialty libraries. You can proceed with importing your existing library.

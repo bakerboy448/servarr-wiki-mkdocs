@@ -26,7 +26,8 @@ This guide was been created by the amazing [Roxedus](https://github.com/Roxedus)
 
  First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
 
- > Do not even think about using the `latest` tag! {.is-danger}
+!!! danger
+    Do not even think about using the `latest` tag! 
 
 ```bash
 docker create --name=postgres14 \
@@ -113,11 +114,11 @@ Before starting a migration please ensure that you have run Lidarr against the c
       docker run --rm -v /absolute/path/to/lidarr.db:/lidarr.db:ro --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /lidarr.db "postgresql://qstick:qstick@localhost/lidarr-main"
       ```
 
-		> If you experience an error using pgloader it could be due to your DB being too large, to resolve this try adding `--with "prefetch rows = 100" --with "batch size = 1MB"` to the above command
-    {.is-warning}
+!!! warning
+    If you experience an error using pgloader it could be due to your DB being too large, to resolve this try adding `--with "prefetch rows = 100" --with "batch size = 1MB"` to the above command
 
-		> With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
-    {.is-info}
+!!! info
+    With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
 
 1. For those having the issues POST-MIGRATION from SQLite run the following:
 

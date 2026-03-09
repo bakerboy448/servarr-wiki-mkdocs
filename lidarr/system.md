@@ -470,8 +470,8 @@ chmod +x /opt/Lidarr/fpcalc
 
   - Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Lidarr is on the most current version then triggering the update script to update Lidarr. Settings=> Update
 
-  > Note: If on Docker this will not update your container as a new image will need to be downloaded.
-{.is-warning}
+!!! warning
+    Note: If on Docker this will not update your container as a new image will need to be downloaded.
 
   - Backup - This will run a backup of your Lidarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
   - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Lidarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
