@@ -53,5 +53,11 @@ Thumbs.db
 # Pre-commit
 .pre-commit-cache/
 
+# MkDocs build output
+site/
+
+# Migration artifacts
+mailmap.txt
+
 # Claude Code settings
 .claude/
