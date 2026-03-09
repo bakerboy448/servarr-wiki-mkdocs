@@ -1,0 +1,20 @@
+nav:
+  - index.md
+  - sonarr
+  - radarr
+  - lidarr
+  - readarr
+  - prowlarr
+  - whisparr
+  - servarr
+  - Definitions.md
+  - useful-tools.md
+  - permissions-and-networking.md
+  - docker-guide.md
+  - docker-arm-synology.md
+  - synology-packages.md
+  - install-script.md
+  - vpn.md
+  - donate.md
+  - bug-report.md
+  - CONTRIBUTING.md
