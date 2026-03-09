@@ -84,7 +84,8 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-  > IP Torrents' native implementation does not support Search. Use it via Prowlarr or Jackett as torznab instead {.is-info}
+!!! info
+    IP Torrents' native implementation does not support Search. Use it via Prowlarr or Jackett as torznab instead 
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
@@ -92,12 +93,13 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
   - Known Issues exist with the native Sonarr version
     - [Nyaa seeders/leechers not parsed properly anymore. #4614](https://github.com/Sonarr/Sonarr/issues/4614)
       - This can be fixed when / if [Pull Request #4637](https://github.com/Sonarr/Sonarr/pull/4637) is merged
-  - > Nyaa frowns upon automation and frequently will ban your IP. {.is-warning}
+!!! warning
+    Nyaa frowns upon automation and frequently will ban your IP.
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
-  > The RSS feed must contain a `pubdate`. The release size is recommended as well.
-  {.is-info}
+!!! info
+    The RSS feed must contain a `pubdate`. The release size is recommended as well.
   - [Refer to the Settings Page](/sonarr/settings#indexer-settings)
 - TorrentLeech {#torrentleech}
   - Private Indexer

@@ -236,9 +236,8 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 - `{Custom Formats}` = iNTERNAL or NF
 
 > \* Custom Formats will the name of the Custom Format
-\* `{Custom Formats:<Release Profile Name>}` is an additional option to use matches from specific release profiles only
-{.is-info}
-
+!!! info
+    \* `{Custom Formats:<Release Profile Name>}` is an additional option to use matches from specific release profiles only
 ### Original
 
 - `{Original Title}` = Series.Title.S01E01.WEBDL.NF.1080P.x264-EVOLVE
@@ -363,8 +362,8 @@ Name for the `Specials` (Season) folder
   - After Manual Refresh - You will have to manually rescan the disk
   - Never - Just as it says, never rescan the series folder.
     - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Sonarr.
+!!! warning
     - If you delete episode files manually or via Plex or another third party program, do not set this to `Never`.
-  {.is-warning}
 - Change File Date - Change file date on import/rescan
   - None - Sonarr will not change the date that shows in your given file browser
   - Local Release - The date the video was aired locally

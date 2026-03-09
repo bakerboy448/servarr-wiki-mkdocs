@@ -46,8 +46,8 @@ Sonarr is written in C# (backend) and JS (frontend). The backend is built on the
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
 > Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
-For css changes `yarn stylelint-windows --fix` {.is-info}
-
+!!! info
+    For css changes `yarn stylelint-windows --fix`
 ### Building the frontend
 
 - Navigate to the cloned directory
