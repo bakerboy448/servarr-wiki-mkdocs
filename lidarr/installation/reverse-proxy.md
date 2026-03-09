@@ -2,14 +2,15 @@
 
 Sample config examples for configuring Lidarr to be accessible through a reverse proxy.
 
-> These examples assumes the default port of `8686` and that you set a baseurl of `lidarr`. It also assumes your web server i.e nginx and Lidarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
-{.is-info}
+!!! info
+    These examples assumes the default port of `8686` and that you set a baseurl of `lidarr`. It also assumes your web server i.e nginx and Lidarr running on the same server accessible at `localhost`. If not, use the host IP address or a FDQN instead for the proxy pass.
 
 ## NGINX
 
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
+!!! warning
+    If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` 
 
 ```nginx
 location ^~ /lidarr {
@@ -49,10 +50,12 @@ Adding this line will include all files that end with `.conf` to the Nginx confi
 ### Subdomain
 
 Alternatively you can use a subdomain for lidarr. In this case you would visit `lidarr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
-> Many free DNS providers do not support this {.is-warning}
+!!! warning
+    Many free DNS providers do not support this 
 By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
-> For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `8686` and Lidarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `lidarr` is chosen (line 5). {.is-info}
-> If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` {.is-warning}
+!!! warning
+    For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `8686` and Lidarr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `lidarr` is chosen (line 5). {.is-info}
+    If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` 
 
 ```nginx
 server {

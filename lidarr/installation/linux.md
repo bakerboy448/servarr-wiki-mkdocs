@@ -10,7 +10,8 @@ tags:
 
 ## Debian / Ubuntu
 
-> Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
+!!! info
+    Note: Raspberry Pi OS and Raspbian are both flavors of Debian 
 
 ### Easy Install
 
@@ -28,10 +29,10 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 You'll need to install the binaries using the below commands.
 
-> The steps below will download Lidarr and install it into `/opt`
-> Lidarr will run under the user `lidarr` and group `media`
-> Lidarr's configuration files will be stored in `/var/lib/lidarr`
-{.is-success}
+!!! success
+    The steps below will download Lidarr and install it into `/opt`
+    Lidarr will run under the user `lidarr` and group `media`
+    Lidarr's configuration files will be stored in `/var/lib/lidarr`
 
 - Ensure you have the required prerequisite packages:
 
@@ -39,18 +40,20 @@ You'll need to install the binaries using the below commands.
 sudo apt install curl mediainfo sqlite3 libchromaprint-tools
 ```
 
-> Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. {.is-warning}
+!!! warning
+    Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. 
 
-> **Installation Prerequisites**
-> The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
-> \* The user `lidarr` is created
-> \* The user `lidarr` is part of the group `media`
-> \* Your download clients and media server run as and are a part of the group `media`
-> \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
-> \* You created the directory `/var/lib/lidarr` and ensured the user `lidarr` has read/write permissions for it
-{.is-success}
+!!! success
+    **Installation Prerequisites**
+    The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
+    \* The user `lidarr` is created
+    \* The user `lidarr` is part of the group `media`
+    \* Your download clients and media server run as and are a part of the group `media`
+    \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
+    \* You created the directory `/var/lib/lidarr` and ensured the user `lidarr` has read/write permissions for it
 
-> By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
+!!! warning
+    By continuing below, you acknowledge that you have read and met the above requirements. 
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
@@ -74,8 +77,8 @@ tar -xvzf Lidarr*.linux*.tar.gz
 sudo mv Lidarr/ /opt
 ```
 
-> This assumes you have created the user and will run as the user `lidarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Lidarr.
-{.is-danger}
+!!! danger
+    This assumes you have created the user and will run as the user `lidarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Lidarr.
 
 - Ensure ownership of the binary directory.
 
@@ -85,8 +88,8 @@ sudo chown -R lidarr:media /opt/Lidarr
 
 - Configure systemd so Lidarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/var/lib/lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument. Note: that `$USER` is the User Lidarr runs as and is defined below.
-{.is-danger}
+!!! danger
+    The below systemd creation script will use a data directory of `/var/lib/lidarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Lidarr` simply remove the `-data` argument. Note: that `$USER` is the User Lidarr runs as and is defined below.
 
 ```shell
 cat << EOF | sudo tee /etc/systemd/system/lidarr.service > /dev/null
@@ -133,15 +136,16 @@ If Lidarr did not appear to start, then check the status of the service:
 sudo journalctl --since today -u lidarr
 ```
 
-> If Lidarr v3+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](/lidarr/faq#lidarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
-{.is-info}
+!!! info
+    If Lidarr v3+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](/lidarr/faq#lidarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
 
 ---
 
 ### Uninstall
 
 To uninstall and purge:
-> Warning: This will destroy your application data. {.is-danger}
+!!! danger
+    Warning: This will destroy your application data. 
 
 ```bash
 sudo systemctl stop lidarr
