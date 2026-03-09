@@ -27,7 +27,8 @@ The Servarr Team
 
 ## Debian / Ubuntu
 
-> Note: Raspberry Pi OS and Raspbian are both flavors of Debian {.is-info}
+!!! info
+    Note: Raspberry Pi OS and Raspbian are both flavors of Debian 
 
 ### Easy Install
 
@@ -45,10 +46,10 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 You'll need to install the binaries using the below commands.
 
-> The steps below will download Readarr and install it into `/opt`
-> Readarr will run under the user `readarr` and group `media`; `media` is the commonly suggested group to run the \*Arrs, download clients, and media server under.
-> Readarr's configuration files will be stored in `/var/lib/readarr`
-{.is-warning}
+!!! warning
+    The steps below will download Readarr and install it into `/opt`
+    Readarr will run under the user `readarr` and group `media`; `media` is the commonly suggested group to run the \*Arrs, download clients, and media server under.
+    Readarr's configuration files will be stored in `/var/lib/readarr`
 
 - Ensure you have the required prerequisite packages:
 
@@ -56,19 +57,21 @@ You'll need to install the binaries using the below commands.
 sudo apt install curl sqlite3
 ```
 
-> Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. {.is-warning}
+!!! warning
+    Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. 
 
-> **Installation Prerequisites**
-> The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
-> \* The user `readarr` is created
-> \* The user `readarr` is part of the group `media`
-> \* Your download clients and media server run as and are a part of the group `media`
-> \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
-> \* If Calibre will be used, Calibre runs as the group `media` and the Calibre library has read/write permissions for `media`
-> \* You created the directory `/var/lib/readarr` and ensured the user `readarr` has read/write permissions for it
-{.is-danger}
+!!! danger
+    **Installation Prerequisites**
+    The below instructions are based on the following prerequisites. Change the instructions as needed to suit your specific needs if necessary.
+    \* The user `readarr` is created
+    \* The user `readarr` is part of the group `media`
+    \* Your download clients and media server run as and are a part of the group `media`
+    \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
+    \* If Calibre will be used, Calibre runs as the group `media` and the Calibre library has read/write permissions for `media`
+    \* You created the directory `/var/lib/readarr` and ensured the user `readarr` has read/write permissions for it
 
-> By continuing below, you acknowledge that you have read and met the above requirements. {.is-warning}
+!!! warning
+    By continuing below, you acknowledge that you have read and met the above requirements. 
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
@@ -92,8 +95,8 @@ tar -xvzf Readarr*.linux*.tar.gz
 sudo mv Readarr /opt/
 ```
 
-> Note: This assumes you have created the user and will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr. Please note that if use wish to use Calibre - Readarr will need permissions for that directory.
-{.is-danger}
+!!! danger
+    Note: This assumes you have created the user and will run as the user `readarr` and group `media`. You may change this to fit your usecase. It's important to choose these correctly to avoid permission issues with your media files. We suggest you keep at least the group name identical between your download client(s) and Readarr. Please note that if use wish to use Calibre - Readarr will need permissions for that directory.
 
 - Ensure ownership of the binary directory.
 
@@ -103,8 +106,8 @@ sudo chown readarr:readarr -R /opt/Readarr
 
 - Configure systemd so Readarr can autostart at boot.
 
-> The below systemd creation script will use a data directory of `/var/lib/readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument. Note: that `$USER` is the User Readarr runs as and is defined below.
-{.is-danger}
+!!! danger
+    The below systemd creation script will use a data directory of `/var/lib/readarr`. Ensure it exists or modify it as needed. For the default data directory of `/home/$USER/.config/Readarr` simply remove the `-data` argument. Note: that `$USER` is the User Readarr runs as and is defined below.
 
 ```shell
 cat << EOF | sudo tee /etc/systemd/system/readarr.service > /dev/null
@@ -156,7 +159,8 @@ sudo journalctl --since today -u readarr
 ### Uninstall
 
 To uninstall and purge:
-> Warning: This will destroy your application data. {.is-danger}
+!!! danger
+    Warning: This will destroy your application data. 
 
 ```bash
 sudo systemctl stop readarr

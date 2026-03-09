@@ -269,7 +269,8 @@ Write-Log 'END ====================='
   - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop readarr`
   - Disable automatic updates on one of your Readarr Instances`
 
-> Below is an example script to create a Readarr-audiobooks instance. The below systemd creation script will use a data directory of `/var/lib/readarr-audiobooks/`. Ensure the directory exists or modify it as needed.{.is-danger}
+!!! danger
+    Below is an example script to create a Readarr-audiobooks instance. The below systemd creation script will use a data directory of `/var/lib/readarr-audiobooks/`. Ensure the directory exists or modify it as needed.
 
 ```shell
 cat << EOF | sudo tee /etc/systemd/system/readarr-audiobooks.service > /dev/null
@@ -347,8 +348,8 @@ Now, you will be setting the ports and names for each instance.
 - If one of the instances uses the default port number, launch the other one first. Otherwise, launch any one of them.
 - Go to `Settings` > `General` in Readarr, and set the correct port.
 
-> Optionally: Toggle advanced options and set `Instance Name` to your liking.
-{.is-success}
+!!! success
+    Optionally: Toggle advanced options and set `Instance Name` to your liking.
 
 - Launch the other instance and do the same.
 
@@ -424,8 +425,8 @@ chmod +x readarrportchecker.zsh
 launchctl load ~/Library/LaunchAgents/local.readarr.portchecker.plist
 ```
 
-> `TODO`: possibly integrate this into a custom script for the update process, or observe file change instead of running every 300 seconds.
-{.is-info}
+!!! info
+    `TODO`: possibly integrate this into a custom script for the update process, or observe file change instead of running every 300 seconds.
 
 ## Docker Multiple Instances
 

@@ -31,7 +31,8 @@ These instructions provide generic guidance that should apply to any Readarr Doc
 
 ## Portainer
 
-> **Portainer should be avoided for setting up docker containers** {.is-danger}
+!!! danger
+    **Portainer should be avoided for setting up docker containers** 
 
 - Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
 - Portainer should only for viewing docker container logs / container status.
@@ -66,23 +67,23 @@ When creating a root folder, you can choose to use Calibre integration or not. T
 
 If you are running Calibre, you must first start the Calibre Content Server (Preferences / Sharing over the net), and also set up a user and password. This will require a Calibre restart.
 
-> Please note that Calibre Content Server and Calibre are NOT Calibre Web. Calibre Web is a separate tool unrelated to either of these programs, and is not required nor used by Readarr in any way.
-{.is-warning}
+!!! warning
+    Please note that Calibre Content Server and Calibre are NOT Calibre Web. Calibre Web is a separate tool unrelated to either of these programs, and is not required nor used by Readarr in any way.
 
 ### Ownership and Permissions
 
 Permissions and ownership of files is one of the most common problems for Readarr users, both inside and outside Docker. Most images have environment variables that can be used to override the default user, group and umask, you should decide this before setting up all of your containers. The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.
 Keep in mind that Readarr will need read and write to the download folders as well as the final folders.
 
-> For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
-{.is-info}
+!!! info
+    For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 
 ## Install Readarr
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
-> Temporarily, you will need to use the :nightly or :develop tags with docker images, as there is no master branch. [See this FAQ entry for the meaning of the branches](/readarr/faq#how-do-i-update-readarr)
-{.is-warning}
+!!! warning
+    Temporarily, you will need to use the :nightly or :develop tags with docker images, as there is no master branch. [See this FAQ entry for the meaning of the branches](/readarr/faq#how-do-i-update-readarr)
 
 - [hotio/readarr](https://hotio.dev/containers/readarr/)
 - [lscr.io/linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)
