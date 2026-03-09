@@ -32,7 +32,6 @@ Note that you can configure Readarr to use a second Readarr as a list. This is h
 - [Linux Multiple Instances](#linux-multi)
 - [MacOS Multiple Instances](#macos-multi)
 - [Docker Multiple Instances](#docker-multi)
-{.links-list}
 
 The following requirements should be noted:
 

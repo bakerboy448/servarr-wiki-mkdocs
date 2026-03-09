@@ -29,12 +29,10 @@ At times, one may be able to edit on the Wiki directly, just authenticate with G
 - [![16.png](/assets/readarr/logos/16.png)&emsp;Readarr *Books*](/readarr)
 - [![16.png](/assets/sonarr/logos/16.png)&emsp;Sonarr *TV*](/sonarr)
 - [![16.png](/assets/whisparr/logos/16.png)&emsp;Whisparr *Adult Videos*](/whisparr)
-{.links-list}
 
 ## Indexer Management
 
 - [![16.png](/assets/prowlarr/logos/16.png)&emsp;Prowlarr *Indexers*](/prowlarr)
-{.links-list}
 
 # Other
 
@@ -42,18 +40,15 @@ At times, one may be able to edit on the Wiki directly, just authenticate with G
 
 - [<i class="far fa-life-ring"></i>&emsp;General Permissions & Network Troubleshooting](/permissions-and-networking)
 - [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
-{.links-list}
 
 ## Docker
 
 - [<i class="fab fa-docker"></i>&emsp;Docker Guide](/docker-guide)
 - [<i class="fas fa-box-open"></i>&emsp;Installing Docker on an ARM-based Synology NAS](/docker-arm-synology)
-{.links-list}
 
 ## XEM
 
 - [<i class="fab fa-xing"></i>&emsp;XEM Moderation Guide *Guide for how to map various scenarios in XEM*](/sonarr/xem-guide)
-{.links-list}
 
 ## Guides & Tools
 
@@ -61,4 +56,3 @@ At times, one may be able to edit on the Wiki directly, just authenticate with G
 - [<i class="fas fa-trash-alt"></i>&emsp;TRaSH's Guides *Tutorials and Guides for Radarr, Sonarr, Docker, and Download Clients*](https://trash-guides.info/)
 - [<i class="fas fa-swatchbook"></i>&emsp;Lidarr Community Guide *Davo's TRaSH Guide for Lidarr*](/lidarr/community-guide)
 - [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script for Servarr Apps*](/install-script)
-{.links-list}

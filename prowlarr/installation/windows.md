@@ -24,7 +24,6 @@ Otherwise, a system tray application can be used if the user can remain logged i
 
 - [Windows x64 Installer](https://prowlarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
 - [Windows x32 Installer](https://prowlarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
-{.links-list}
 
 !!! info
     It is possible to install Prowlarr manually using the [x64 .zip download](https://prowlarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.

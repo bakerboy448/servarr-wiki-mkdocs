@@ -102,7 +102,6 @@ See the below entries for how to switch from unsupported, end-of-life mono versi
 - [Fixing Docker installs](#fixing-docker-installs)
 - [Fixing FreeBSD installs](#fixing-freebsd-installs)
 - [Fixing Standalone installs](#fixing-standalone-installs)
-{.links-list}
 
 ##### Fixing Docker installs
 

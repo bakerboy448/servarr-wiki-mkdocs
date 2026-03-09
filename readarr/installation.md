@@ -31,4 +31,3 @@ The Servarr Team
 
 - [Setup Reverse Proxy *Complete guide for reverse proxy setup with Nginx or Apache*](/readarr/installation/reverse-proxy)
 - [Setup Multiple Instances *Setup guide for running multiple instances on various platforms*](/readarr/installation/multiple-instances)
-{.links-list}

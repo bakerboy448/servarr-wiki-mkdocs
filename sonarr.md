@@ -16,7 +16,6 @@ tags:
 - [<i class="fas fa-cog"></i>&emsp;Environment Variables](/sonarr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/sonarr/faq)
 - [<i class="far fa-question-circle"></i>&emsp;v4 FAQ *FAQ entries specific to v4 changes*](/sonarr/faq-v4)
-{.links-list}
 
 # User Guide
 
@@ -31,19 +30,16 @@ tags:
 - [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/sonarr/appdata-directory)
 - [<i class="fas fa-server"></i>&emsp; Configure Sonarr with a PostgreSQL Database](/sonarr/postgres-setup)
 - [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/sonarr/supported)
-{.links-list}
 
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/sonarr/troubleshooting)
 - [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
-{.links-list}
 
 # Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](/sonarr/contributing)
 - [<i class="fas fa-book"></i>&emsp; v4 Beta API Docs](https://sonarr.tv/docs/api)
-{.links-list}
 
 # Support
 
@@ -52,7 +48,6 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Sonarr Discord*](https://discord.sonarr.tv/)
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
 - [<i class="fab fa-wpforms"></i>&emsp;Forums *Official Sonarr Forums*](https://forums.sonarr.tv/)
-{.links-list}
 
 # Links
 
@@ -60,4 +55,3 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 - [sonarr.tv *Donations*](https://sonarr.tv/donate)
 - [GitHub *Source Code*](https://github.com/sonarr/sonarr)
 - [XEM Moderation Guide *<i class="fab fa-xing"></i>*](/sonarr/xem-guide)
-{.links-list}

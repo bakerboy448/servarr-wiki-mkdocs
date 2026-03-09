@@ -74,14 +74,12 @@ Note that the application's database can be found in the Application Data Direct
 - [Radarr Appdata Directory](/radarr/appdata-directory)
 - [Readarr Appdata Directory](/readarr/appdata-directory)
 - [Sonarr Appdata Directory](/sonarr/appdata-directory)
-{.links-list}
 
 !!! info
     There are two options to recover the database which are listed below.
 
 - [Using DB Browser for SQLite and using the UI](#recovering-a-corrupt-db-ui-windows)
 - [Using Sqlite's `.recover` function](#command-line-db-recovery)
-{.links-list}
 
 ## Recovering a Corrupt DB (UI) (Windows)
 

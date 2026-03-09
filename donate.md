@@ -25,4 +25,4 @@ We currently use OpenCollective, GitHub Sponsors, or Bitcoin to accept donations
 
 ## Donate Buttons
 
-[![Lidarr.png](/assets/lidarr/logos/48.png)](https://lidarr.audio/donate)&emsp;[![Prowlarr.png](/assets/prowlarr/logos/48.png)](https://prowlarr.com/donate)&emsp;[![Radarr.png](/assets/radarr/logos/48.png)](https://radarr.video/donate)&emsp;[![Readarr.png](/assets/readarr/logos/48.png)](https://readarr.com/donate)&emsp;[![Sonarr.png](/assets/sonarr/logos/48.png)](https://sonarr.tv/donate)&emsp;[![Whisparr.png](/assets/whisparr/logos/48.png)](https://whisparr.com/donate)&emsp;{.links-list}
+[![Lidarr.png](/assets/lidarr/logos/48.png)](https://lidarr.audio/donate)&emsp;[![Prowlarr.png](/assets/prowlarr/logos/48.png)](https://prowlarr.com/donate)&emsp;[![Radarr.png](/assets/radarr/logos/48.png)](https://radarr.video/donate)&emsp;[![Readarr.png](/assets/readarr/logos/48.png)](https://readarr.com/donate)&emsp;[![Sonarr.png](/assets/sonarr/logos/48.png)](https://sonarr.tv/donate)&emsp;[![Whisparr.png](/assets/whisparr/logos/48.png)](https://whisparr.com/donate)&emsp;

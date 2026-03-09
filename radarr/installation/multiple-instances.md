@@ -27,7 +27,6 @@ The following requirements should be noted:
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)
 - [Docker Multiple Instances](#docker-multi)
-{.links-list}
 
 ## Windows Multiple Instances
 

@@ -348,7 +348,6 @@ If you have adjusted your Series Name format after Sonarr has already created so
 
 - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
 - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-{.links-list}
 
 ### Problematic Shows
 
@@ -362,14 +361,12 @@ If you have adjusted your Series Name format after Sonarr has already created so
   - If you have an indexer / release groups with Season 19 episodes, please submit them via the scene mapping form and ensure they are not already requested
     - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
     - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-   {.links-list}
 - Paw Patrol {#problemshow-pawpatrol}
   - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
 - Pokémon {#problemshow-pokemon}
   - On TheXem, [Pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDb and not XEM mapping, please submit them via the scene mapping form and ensure they are not already requested
     - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
     - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
-   {.links-list}
 - La Casa de Papel / Money Heist  {#problemshow-moneyheist}
   - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information can be found on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
 - Kamen Rider {#problemshow-kamenrider}

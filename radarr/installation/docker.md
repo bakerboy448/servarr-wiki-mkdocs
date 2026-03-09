@@ -60,4 +60,3 @@ To install and use these Docker images, you will need to keep the above in mind 
 
 - [hotio/radarr](https://hotio.dev/containers/radarr/)
 - [lscr.io/linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr)
-{.links-list}

@@ -63,4 +63,3 @@ To install and use these Docker images, you will need to keep the above in mind 
     Temporarily, you will need to use the :nightly ~~or :develop~~ tags with docker images, as there is no master nor develop branch. [See this FAQ entry for the meaning of the branches](/whisparr/faq#how-do-i-update-whisparr)
 
 - [hotio/whisparr](https://hotio.dev/containers/whisparr/)
-{.links-list}

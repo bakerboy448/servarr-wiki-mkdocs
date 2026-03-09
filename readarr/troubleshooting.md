@@ -100,7 +100,6 @@ Do you need help? That's okay, everyone needs help sometimes. You can get real t
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Readarr Discord*](https://readarr.com/discord)
 - [<i class="fab fa-reddit"></i>&emsp;Reddit *Official Readarr Subreddit*](https://reddit.com/r/readarr)
-{.links-list}
 
 But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Readarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
@@ -112,7 +111,6 @@ It is likely beneficial to also review the Common Troubleshooting problems:
 
 - [Downloads and Importing Common Problems](#common-problems)
 - [Searching Indexers and Trackers Common Problems](#common-problems-1)
-{.links-list}
 
 If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 

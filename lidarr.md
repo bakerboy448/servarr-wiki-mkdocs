@@ -15,7 +15,6 @@ tags:
 - [<i class="fas fa-book-open"></i>&emsp;Quick Start Guide](/lidarr/quick-start-guide)
 - [<i class="fas fa-cog"></i>&emsp;Environment Variables](/lidarr/environment-variables)
 - [<i class="far fa-question-circle"></i>&emsp;FAQ](/lidarr/faq)
-{.links-list}
 
 # User Guide
 
@@ -30,30 +29,25 @@ tags:
 - [<i class="fas fa-database"></i>&emsp;Application Data (AppData) Directory](/lidarr/appdata-directory)
 - [<i class="fas fa-server"></i>&emsp;Configure Lidarr with a PostgreSQL Database](/lidarr/postgres-setup)
 - [<i class="fas fa-cogs"></i>&emsp;Supported *More Info Disambiguation Page*](/lidarr/supported)
-{.links-list}
 
 # Troubleshooting
 
 - [<i class="far fa-life-ring"></i>&emsp;General Troubleshooting](/lidarr/troubleshooting)
 - [<i class="fas fa-shield-alt"></i>&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
-{.links-list}
 
 # Development
 
 - [<i class="fas fa-laptop-code"></i>&emsp;Contributing](https://github.com/Lidarr/Lidarr/blob/develop/CONTRIBUTING.md)
 - [<i class="fas fa-book"></i>&emsp;API Docs](https://lidarr.audio/docs/api/)
-{.links-list}
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [<i class="fab fa-discord"></i>&emsp;Discord *Official Lidarr Discord*](https://lidarr.audio/discord)
-{.links-list}
 
 # Links
 
 - [lidarr.audio *Website*](https://lidarr.audio)
 - [Donate *Donations*](https://lidarr.audio/donate)
 - [GitHub *Source Code*](https://github.com/lidarr/lidarr)
-{.links-list}
