@@ -1,13 +1,14 @@
 ---
 title: Sonarr Quick Start Guide
 description: Step-by-step guide to setting up and configuring Sonarr for TV series management
-published: true
-date: 2024-07-19T20:16:08.572Z
-tags: sonarr, quick-start, setup, configuration, guide, installation
-editor: markdown
-dateCreated: 2021-09-03T19:14:22.283Z
+tags:
+  - sonarr
+  - quick-start
+  - setup
+  - configuration
+  - guide
+  - installation
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

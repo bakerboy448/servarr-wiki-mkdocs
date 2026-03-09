@@ -1,13 +1,14 @@
 ---
 title: Sonarr Wanted
 description: Managing wanted episodes, manual searches, and download monitoring in Sonarr's Wanted section
-published: true
-date: 2021-11-29T22:12:55.806Z
-tags: wanted, episodes, search, monitoring, missing, sonarr
-editor: markdown
-dateCreated: 2021-06-10T01:40:02.329Z
+tags:
+  - wanted
+  - episodes
+  - search
+  - monitoring
+  - missing
+  - sonarr
 ---
-
 # Wanted
 
 The Wanted => Missing section contains a list of the episodes you have marked to monitor that are missing from your disk (haven't been downloaded yet).

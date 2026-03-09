@@ -1,13 +1,7 @@
 ---
 title: Sonarr FAQ
 description: Sonarr Frequently Asked Questions
-published: true
-date: 2025-10-31T12:30:19.410Z
-tags:
-editor: markdown
-dateCreated: 2025-10-31T12:02:16.100Z
 ---
-
 > For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](/sonarr/faq-v4)
 {.is-info}
 

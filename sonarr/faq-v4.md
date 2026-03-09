@@ -1,13 +1,7 @@
 ---
 title: Sonarr v4 FAQ
 description: Sonarr v4 FAQ
-published: true
-date: 2025-03-30T15:46:47.811Z
-tags:
-editor: markdown
-dateCreated: 2022-11-25T14:02:10.493Z
 ---
-
 # Sonarr v4 FAQ
 
 ## What Changed

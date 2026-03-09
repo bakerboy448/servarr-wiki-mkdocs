@@ -1,13 +1,14 @@
 ---
 title: Sonarr Troubleshooting
 description: Common issues, error codes, and solutions for troubleshooting Sonarr installation, configuration, and operational problems
-published: true
-date: 2026-02-01T14:30:13.515Z
-tags: sonarr, troubleshooting, support, issues, debugging, errors
-editor: markdown
-dateCreated: 2021-06-20T19:13:01.108Z
+tags:
+  - sonarr
+  - troubleshooting
+  - support
+  - issues
+  - debugging
+  - errors
 ---
-
 # Asking for Help
 
 Do you need help? That's okay, everyone needs help sometimes. You can get help on

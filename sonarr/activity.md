@@ -1,13 +1,14 @@
 ---
 title: Sonarr Activity
 description: Monitor download progress, search history, and queue management in Sonarr
-published: true
-date: 2022-02-06T09:07:34.371Z
-tags: sonarr, activity, queue, downloads, history, monitoring
-editor: markdown
-dateCreated: 2021-06-11T23:32:31.144Z
+tags:
+  - sonarr
+  - activity
+  - queue
+  - downloads
+  - history
+  - monitoring
 ---
-
 # Activity
 
 The activity tab is where you can see past and present activities that \*Arr  has done. Including imports, deletes, upgrades, grabs, renames, and failures.

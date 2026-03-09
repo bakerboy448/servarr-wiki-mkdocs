@@ -1,13 +1,14 @@
 ---
 title: Sonarr Supported
 description: Comprehensive list of supported indexers, download clients, and services for Sonarr
-published: true
-date: 2024-08-02T12:07:02.466Z
-tags: sonarr, supported, indexers, download-clients, services, compatibility
-editor: markdown
-dateCreated: 2021-06-23T07:55:33.769Z
+tags:
+  - sonarr
+  - supported
+  - indexers
+  - download-clients
+  - services
+  - compatibility
 ---
-
 > This page is a work in progress and requires additional effort. {.is-warning}
 
 This page is the disambiguation page for all "supported" wiki links (i.e. typically `More Info` in the UI).

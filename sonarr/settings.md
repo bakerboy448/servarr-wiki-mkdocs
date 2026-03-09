@@ -1,13 +1,14 @@
 ---
 title: Sonarr Settings
 description: Documentation of Sonarr Settings Page. Needs work to reflect v4 changes.
-published: true
-date: 2025-05-15T17:27:34.383Z
-tags: settings, configuration, sonarr, profiles, quality, indexers
-editor: markdown
-dateCreated: 2021-06-11T23:29:12.300Z
+tags:
+  - settings
+  - configuration
+  - sonarr
+  - profiles
+  - quality
+  - indexers
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
