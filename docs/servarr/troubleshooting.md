@@ -9,7 +9,7 @@ tags:
 ---
 # Logging and Log Files
 
-- [Lidarr](/lidarr/troubleshooting#logging-and-log-files)
-- [Prowlarr](/prowlarr/troubleshooting#logging-and-log-files)
-- [Radarr](/radarr/troubleshooting#logging-and-log-files)
-- [Readarr](/readarr/troubleshooting#logging-and-log-files)
+- [Lidarr](../lidarr/troubleshooting.md#logging-and-log-files)
+- [Prowlarr](../prowlarr/troubleshooting.md#logging-and-log-files)
+- [Radarr](../radarr/troubleshooting.md#logging-and-log-files)
+- [Readarr](../readarr/troubleshooting.md#logging-and-log-files)
