@@ -20,17 +20,17 @@ tags:
 
 # Servarr Synology Packages
 
-> These packages can be considered "beta". They are not maintained/developed by the Servarr team. No support is available for the packages. Use at your own risk.
-{.is-danger}
+!!! danger
+    These packages can be considered "beta". They are not maintained/developed by the Servarr team. No support is available for the packages. Use at your own risk.
 
 - The Servarr Team now creates and maintains Synology Packages
 - Installation instructions are noted below for the specific DSM versions
 
-> Generally the existing SynoCommunity versions are not compatible with the Servarr versions without some hoop jumping. This means it would be required to delete the old package after doing a [backup of your database *the link is for a Radarr example, but the instructions/concepts are the same*](/radarr/faq#how-do-i-backuprestore-radarr). Which can be done through the web interface of the \*Arr app.
-{.is-warning}
+!!! warning
+    Generally the existing SynoCommunity versions are not compatible with the Servarr versions without some hoop jumping. This means it would be required to delete the old package after doing a [backup of your database *the link is for a Radarr example, but the instructions/concepts are the same*](/radarr/faq#how-do-i-backuprestore-radarr). Which can be done through the web interface of the \*Arr app.
 
-> SynoCommunity has a list of [NAS by Architecture](https://github.com/SynoCommunity/spksrc/wiki/Architecture-per-Synology-model) which will assist you in identifying the correct package.
-{.is-info}
+!!! info
+    SynoCommunity has a list of [NAS by Architecture](https://github.com/SynoCommunity/spksrc/wiki/Architecture-per-Synology-model) which will assist you in identifying the correct package.
 
 # DSM 6.x
 
@@ -45,8 +45,8 @@ tags:
 - Note that the Sonarr package requires additional steps for **all** architectures.
 - Note that the standalone Mono package from the SynoCommunity is not required anymore, it currently is bundled within our package.
 
-> For NAS running on a `comcerto2k` (*all packages*) and Sonarr (*all NAS architectures*), you will need to install the Bubblewrap package and perform the manual steps noted. **Bubblewrap must be installed prior to attempting to install the \*Arr Packages**
-{.is-warning}
+!!! warning
+    For NAS running on a `comcerto2k` (*all packages*) and Sonarr (*all NAS architectures*), you will need to install the Bubblewrap package and perform the manual steps noted. **Bubblewrap must be installed prior to attempting to install the \*Arr Packages**
 
 - Download the release of Bubblewrap for your NAS's architecture from [the Servarr Synology Package GitHub](https://github.com/Servarr/spksrc/releases) and [manually install the package](https://kb.synology.com/en-us/DSM/tutorial/How_to_install_applications_with_Package_Center#x_anchor_id6) via package manager.
 - Complete the below Bubblewrap Installation Steps for DSM 7.X
@@ -56,8 +56,8 @@ tags:
 
 Bubblewrap allows us to run programs in a basic container so that we can use new enough libraries to run .NET6.
 
-> **Due to the restrictions in DSM 7.0+, some manual setup is required after installation.**
-{.is-danger}
+!!! danger
+    **Due to the restrictions in DSM 7.0+, some manual setup is required after installation.**
 
 ### Simple Bubblewrap Installation
 

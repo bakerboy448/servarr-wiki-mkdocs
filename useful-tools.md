@@ -76,7 +76,8 @@ Note that the application's database can be found in the Application Data Direct
 - [Sonarr Appdata Directory](/sonarr/appdata-directory)
 {.links-list}
 
-> There are two options to recover the database which are listed below.{.is-info}
+!!! info
+    There are two options to recover the database which are listed below.
 
 - [Using DB Browser for SQLite and using the UI](#recovering-a-corrupt-db-ui-windows)
 - [Using Sqlite's `.recover` function](#command-line-db-recovery)
@@ -87,10 +88,11 @@ Note that the application's database can be found in the Application Data Direct
 {#windows}
 {#recovering-a-corrupt-db-ui}
 
-> Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database). The steps to do so are linked below {.is-info}
+!!! info
+    Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database). The steps to do so are linked below 
 
-> [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
-{.is-info}
+!!! info
+    [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
 
 1. Stop the application
 1. Make a copy of your corrupt database (`.db`) and copy any `.shm` and `.wal` files with it
@@ -123,10 +125,11 @@ Please note that the gif does not cover the `VACUUM;` command
 
 The below instructions are for \*Nix Operating Systems, but the concept will be similar on Windows Command Line.
 
-> This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
-{.is-info}
+!!! info
+    This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
 
-> Given sqlite3 is required by \*Arrs it is assumed you have sqlite3 installed on your system {.is-info}
+!!! info
+    Given sqlite3 is required by \*Arrs it is assumed you have sqlite3 installed on your system 
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
@@ -155,8 +158,8 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 1. Paste your copied cookie string to that box
 1. Click Save
 
-> If user agent is required for your tracker, it can be found in the Request Headers
-{.is-info}
+!!! info
+    If user agent is required for your tracker, it can be found in the Request Headers
 
 ### Notes
 
@@ -344,7 +347,8 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 
 [Jdupes](https://codeberg.org/jbruchon/jdupes) is a program for identifying and taking actions upon duplicate files.
 
-> TRaSH [has a guide](https://trash-guides.info/jdupes) as well {.is-info}
+!!! info
+    TRaSH [has a guide](https://trash-guides.info/jdupes) as well 
 
 - `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files and print a summary of the results
 

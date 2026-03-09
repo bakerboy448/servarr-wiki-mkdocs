@@ -66,17 +66,18 @@ tags:
 
 # The Best Docker Setup
 
-> `Multiple users and a shared group` does not apply to Unraid which does things a little differently and runs all containers as `nobody:users`. See TRaSH's Hardlink's Unraid Guide for details and the `Consistent and well planned paths` section that does apply.
-{.is-info}
+!!! info
+    `Multiple users and a shared group` does not apply to Unraid which does things a little differently and runs all containers as `nobody:users`. See TRaSH's Hardlink's Unraid Guide for details and the `Consistent and well planned paths` section that does apply.
 
 **TL;DR**: An [eponymous](https://www.dictionary.com/browse/eponymous) user per daemon and a shared group with a umask of `002`. Consistent path definitions between *all* containers that maintains the folder structure. Using one volume (so the download folder and library folder are on the same file system)  makes [hardlinks](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-hardlinks) and [instant moves (atomic moves)](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/#what-are-instant-moves-atomic-moves) possible for Sonarr, Radarr, Lidarr and Readarr. And most of all, ignore *most* of the Docker image’s path documentation!
 
-> Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
-{.is-info}
+!!! info
+    Note: Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 
 # Portainer
 
-> **Portainer should be avoided for setting up docker containers** {.is-danger}
+!!! danger
+    **Portainer should be avoided for setting up docker containers** 
 
 - Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
 - Portainer should only for viewing docker container logs / container status.
@@ -95,13 +96,13 @@ See this [Docker Guide](/docker-guide) and [TRaSH's Docker Tutorial](https://tra
 
 This article will not show you specifics about the best Docker setup, but it describes an overview that you can use to make your own setup the best that it can be. The idea is that you run each Docker container as its own user, with a shared group and consistent volumes so every container sees the same path layout. This is easy to say, but not so easy to understand and explain.
 
-> Reminder that many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
-{.is-warning}
+!!! warning
+    Reminder that many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks/) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 
 # Multiple users and a shared group
 
-> This does not apply to Unraid which does things a little differently and runs all containers as `nobody:users` and should generally be the same single user and single group.
-{.is-info}
+!!! info
+    This does not apply to Unraid which does things a little differently and runs all containers as `nobody:users` and should generally be the same single user and single group.
 
 ## Permissions
 
@@ -129,8 +130,8 @@ Don’t forget that your `/config` volume will *also* need to have correct owner
 
 # Consistent and well planned paths
 
-> Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
-{.is-info}
+!!! info
+    Many folks find [TRaSH's Hardlink Tutorial](https://trash-guides.info/hardlinks) helpful and easier to understand than this guide. This guide is more conceptual in nature while TRaSH's tutorial walks you through the process.
 
 The easiest and most important detail is to create unified path definitions across all the containers.
 
@@ -242,8 +243,8 @@ If you use the latest version of the abandoned [RadarrSync](https://github.com/S
 
 This is the best option for most users, it lets you control and configure many containers and their interdependence in one file. A good starting place is Docker’s own [Get started with Docker Compose](https://docs.docker.com/compose/gettingstarted/). You can use [composerize](https://composerize.com) or [ghcr.io/red5d/docker-autocompose](#get-docker-compose) to convert `docker run` commands into a single `docker-compose.yml` file.
 
-> The below is *not* a complete working example! The containers only have PID, UID, UMASK and example paths defined to keep it simple.
-{.is-warning}
+!!! warning
+    The below is *not* a complete working example! The containers only have PID, UID, UMASK and example paths defined to keep it simple.
 
 ```yml
     # sonarr
@@ -308,8 +309,8 @@ This is the best option for most users, it lets you control and configure many c
 
 ## docker run
 
-> Like the Docker Compose example above, the following `docker run` commands are stripped down to *only* the PUID, PGID, UMASK and volumes in order to act as an obvious example.
-{.is-warning}
+!!! warning
+    Like the Docker Compose example above, the following `docker run` commands are stripped down to *only* the PUID, PGID, UMASK and volumes in order to act as an obvious example.
 
 ```shell
     # sonarr
@@ -412,8 +413,8 @@ For more information, see the [docker exec](https://docs.docker.com/engine/refer
     docker system prune --all --volumes
 ```
 
-> Remove unused containers, networks, volumes, images and build cache. As the WARNING this command gives says, this will remove all of the previously mentioned items for anything not in use by a running container. In a correctly configured environment, this is fine. But be aware and proceed cautiously the first time. See the [Docker system prune](https://docs.docker.com/engine/reference/commandline/system_prune/) documentation for more details.
-{.is-warning}
+!!! warning
+    Remove unused containers, networks, volumes, images and build cache. As the WARNING this command gives says, this will remove all of the previously mentioned items for anything not in use by a running container. In a correctly configured environment, this is fine. But be aware and proceed cautiously the first time. See the [Docker system prune](https://docs.docker.com/engine/reference/commandline/system_prune/) documentation for more details.
 
 ## Get docker run command
 
@@ -425,8 +426,8 @@ Getting the `docker run` command from GUI managers can be hard, this Docker imag
 
 ## Get docker-compose
 
-> Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/compose/)
-{.is-info}
+!!! info
+    Additionally, you may check out [TRaSH's Guide for docker-compose](https://trash-guides.info/compose/)
 
 Getting a `docker-compose.yml` from running instances is possible with [docker-autocompose](https://github.com/Red5d/docker-autocompose), in case you’ve already started your containers with `docker run` or `docker create` and want to change to `docker-compose` style. It is also great for sharing your settings with others, since it doesn’t matter what management software you’re using. The last argument(s) are your container names and you can pass in as many as needed at the same time. The first container name is required, more are optional. You can see container names in the **NAMES** column of `docker ps`, they're usually set by you or might be generated based on the image like `binhex-qbittorrent`. It is *not* the image name, like `binhex/arch-qbittorrentvpn`.
 
@@ -567,8 +568,8 @@ QBITTORRENT_HOST=qbittorrent.internal
 
 This works with any container name in your Docker setup. If your qBittorrent container is named `qbittorrent`, other containers can reach it at `qbittorrent.internal` without any additional configuration.
 
-> **Note**: This is especially important when using [Hotio's VPN feature](https://hotio.dev/containers/qbittorrent/) or any VPN container setup, as it ensures reliable DNS resolution even when routing traffic through VPN tunnels.
-{.is-info}
+!!! info
+    **Note**: This is especially important when using [Hotio's VPN feature](https://hotio.dev/containers/qbittorrent/) or any VPN container setup, as it ensures reliable DNS resolution even when routing traffic through VPN tunnels.
 
 # Common Problems
 
