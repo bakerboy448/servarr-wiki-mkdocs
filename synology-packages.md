@@ -1,13 +1,16 @@
 ---
 title: Synology Packages
 description: Servarr Synology Packages
-published: true
-date: 2023-12-05T13:38:09.343Z
-tags: installation, lidarr, prowlarr, radarr, readarr, scripts, sonarr, synology
-editor: markdown
-dateCreated: 2022-05-06T13:45:19.731Z
+tags:
+  - installation
+  - lidarr
+  - prowlarr
+  - radarr
+  - readarr
+  - scripts
+  - sonarr
+  - synology
 ---
-
 - [Servarr Synology Packages](#servarr-synology-packages)
 - [DSM 6.x](#dsm-6x)
 - [DSM 7.x](#dsm-7x)

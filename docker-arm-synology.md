@@ -1,13 +1,13 @@
 ---
 title: Installing Docker on a Synology ARM NAS
 description: Step-by-step guide for installing Docker on ARM-based Synology NAS devices and running Servarr applications
-published: true
-date: 2022-05-18T15:47:17.201Z
-tags: docker, synology, arm, installation, nas
-editor: markdown
-dateCreated: 2021-07-12T20:22:05.719Z
+tags:
+  - docker
+  - synology
+  - arm
+  - installation
+  - nas
 ---
-
 # Introduction
 
 Synology only offer a Docker package on their `x64` based NAS. Using this method to install Docker on an `aarch64` NAS is totally unsupported/untested and totally at your own risk. It is entirely possible it will destroy your NAS.

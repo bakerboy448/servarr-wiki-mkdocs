@@ -1,13 +1,13 @@
 ---
 title: README
 description: Project overview and contribution guidelines for the Servarr Wiki documentation repository
-published: true
-date: 2021-11-24T19:21:45.638Z
-tags: readme, documentation, contributing, project, overview
-editor: markdown
-dateCreated: 2021-05-16T16:59:34.386Z
+tags:
+  - readme
+  - documentation
+  - contributing
+  - project
+  - overview
 ---
-
 # Wiki
 
 Welcome to the consolidated wiki for Lidarr, Prowlarr, Radarr, Readarr, and Sonarr. Collectively they are commonly referred to as "\*Arr" or "\*Arrs". They are designed to automagically grab, sort, organize, and monitor your Music, Movie, E-Book, or TV Show collections for Lidarr, Radarr, Readarr, and Sonarr; and to manage your indexers and keep them in sync with the aforementioned apps for Prowlarr.

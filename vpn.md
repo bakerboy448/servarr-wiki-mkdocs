@@ -1,13 +1,14 @@
 ---
 title: VPN Guide
 description: VPN setup and configuration guide for Servarr applications - When and how to use VPNs properly
-published: true
-date: 2025-01-07T00:00:00.000Z
-tags: vpn, networking, docker, security, troubleshooting, gluetun
-editor: markdown
-dateCreated: 2025-01-07T00:00:00.000Z
+tags:
+  - vpn
+  - networking
+  - docker
+  - security
+  - troubleshooting
+  - gluetun
 ---
-
 # VPN Guide for Servarr Applications
 
 ## Table of Contents

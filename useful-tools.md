@@ -1,13 +1,16 @@
 ---
 title: Useful Tools
 description: companions to the *Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the *Arr Development Team.
-published: true
-date: 2024-12-10T21:27:40.985Z
-tags: docker, lidarr, prowlarr, radarr, readarr, scripts, sonarr, whisparr
-editor: markdown
-dateCreated: 2021-06-05T20:51:53.183Z
+tags:
+  - docker
+  - lidarr
+  - prowlarr
+  - radarr
+  - readarr
+  - scripts
+  - sonarr
+  - whisparr
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
