@@ -27,8 +27,8 @@ The Servarr Team
 
 {#OSX}
 
-> Readarr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
-{.is-warning}
+!!! warning
+    Readarr is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.
 
 1. Download the [MacOS App](https://readarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true) or  the [MacOS M1 App](https://readarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=arm64&installer=true) depending on your system architecture.
 1. Open the archive and drag the Readarr icon to your Application folder.
