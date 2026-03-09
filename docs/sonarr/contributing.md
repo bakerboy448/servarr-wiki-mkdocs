@@ -14,7 +14,7 @@ We're always looking for people to help make Sonarr even better, there are a num
 
 # Documentation
 
-Setup guides, [FAQ](/sonarr/faq), the more information we have on the [wiki](https://wiki.servarr.com/sonarr) the better.
+Setup guides, [FAQ](../sonarr/faq.md), the more information we have on the [wiki](https://wiki.servarr.com/sonarr) the better.
 
 # Development
 

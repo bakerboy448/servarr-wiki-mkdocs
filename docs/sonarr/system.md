@@ -193,7 +193,7 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
   - Sonarr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/tv and since you used /data in Sonarr when the download client tells Sonarr it's done Sonarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/tv all is right in the world."
-- There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hard links and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
+- There are many great write ups: our wiki [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hard links and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
 - See [TRaSH's Remote Path Guide](https://trash-guides.info/Sonarr/sonarr-remote-path-mapping/) for more information.
 
@@ -204,10 +204,10 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder.
 - This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder.
 - Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/sonarr/settings/#root-folders)
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](../sonarr/settings/.md#root-folders)
 - One example is if your downloads are going into `/data/downloads` then you have a root folder set as `/data/downloads`.
 - It is suggested to use paths like `/data/media/` for your root folder/library and `/data/downloads/` for your downloads.
-- Review our [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
+- Review our [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
 
 !!! warning
     Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
@@ -239,10 +239,10 @@ If you no longer use this download client, disable it in Sonarr to prevent the e
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder.
 - This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder.
 - Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/sonarr/settings/#root-folders)
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](../sonarr/settings/.md#root-folders)
 - One example is if your downloads are going into `/data/downloads` then you have a root folder set as `/data/downloads`.
 - It is suggested to use paths like `/data/media/` for your root folder/library and `/data/downloads/` for your downloads.
-- Review our [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
+- Review our [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
 
 !!! warning
     Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
@@ -284,7 +284,7 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 {#no-indexers-available-with-rss-sync-enabled,-sonarr-will-not-grab-new-releases-automatically}
 {#all-rss-capable-indexers-are-temporarily-unavailable-due-to-recent-indexer-errors}
 
-- Sonarr uses the RSS feed to pick up new releases as they come along. [See the FAQ for more information](/sonarr/faq#how-does-sonarr-find-episodes)
+- Sonarr uses the RSS feed to pick up new releases as they come along. [See the FAQ for more information](../sonarr/faq.md#how-does-sonarr-find-episodes)
 - To correct this issue go to Settings > Indexers, select an indexer you have and enable RSS Sync.
 
 #### No indexers are enabled
@@ -325,14 +325,14 @@ Go into Settings > Indexers, select an indexer you'd like to allow Automatic Sea
 ##### Solutions
 
 - Add each tracker in Jackett manually as an indexer in \*Arr
-- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [Prowlarr](../prowlarr.md) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
 ### Media & Lists
 
 #### Series Removed from TheTVDB
 
-- The affected series was/were removed from [The TVDb](https://thetvdb.com). This usually happens because the series is a duplicate or considered part of a different series. Alternatively, TVDb may treat it as a Series; hopefully TMDb does as well so [Radarr](/radarr) can be used instead. To correct this you will need to remove the affected series and add the correct series if applicable.
+- The affected series was/were removed from [The TVDb](https://thetvdb.com). This usually happens because the series is a duplicate or considered part of a different series. Alternatively, TVDb may treat it as a Series; hopefully TMDb does as well so [Radarr](../radarr.md) can be used instead. To correct this you will need to remove the affected series and add the correct series if applicable.
 
 #### Lists are unavailable due to failures
 
@@ -405,7 +405,7 @@ A mount containing a series path is read only and is not writable by the user So
 - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Sonarr
 - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
 - Refresh Series - This goes through and refreshes all the metadata for all monitored and unmonitored series
-- RSS Sync - This will run the RSS Sync. This can be changed in Settings => Indexers => Options. More information on the RSS function can be found on our [FAQ](/sonarr/faq)
+- RSS Sync - This will run the RSS Sync. This can be changed in Settings => Indexers => Options. More information on the RSS function can be found on our [FAQ](../sonarr/faq.md)
 
 !!! info
     All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
@@ -417,7 +417,7 @@ The queue will show you running and upcoming tasks as well as a history of recen
 # Backup
 
 !!! info
-    If you're looking for how to back/restore your Sonarr instance click [the Sonarr backup FAQ](/sonarr/faq).
+    If you're looking for how to back/restore your Sonarr instance click [the Sonarr backup FAQ](../sonarr/faq.md).
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
 

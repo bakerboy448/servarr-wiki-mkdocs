@@ -58,22 +58,22 @@ A proper XEM mapping for a particular show should *at the very least* have an en
 
 TheXEM has three different automatic options for connecting different entities with one another: SxxExx mapping, absolute mapping and the combination of both, full mapping. Additionally you can also directly map episodes onto one another using direct mapping. Each of these has its own use and is useful in particular situations.
 
-## ![SxxExx mapping](/assets/sonarr/xem-guide/mapping-sxxexx.svg) SxxExx mapping
+## ![SxxExx mapping](../assets/sonarr/xem-guide/mapping-sxxexx.svg) SxxExx mapping
 
 This type of mapping determines that between the two entities it connects, the season and episode numbers are equal, meaning that S01E01 is the same episode in both entity types. The absolute numbering however is not necessarily the same.
 
-## ![Absolute mapping](/assets/sonarr/xem-guide/mapping-abs.svg) Absolute mapping
+## ![Absolute mapping](../assets/sonarr/xem-guide/mapping-abs.svg) Absolute mapping
 
 Apart from a few very specific use cases absolute mapping is almost exclusively useful for anime series. The anime naming scheme employed by most release groups just uses an incrementing episode number rather than SxxExx numbering, which we call absolute numbering. Marking the mapping between two entities as "absolute" tells services using this data that the SxxExx numbering may or may not differ but the absolute numbering at the very least is the same.
 
-## ![Full mapping](/assets/sonarr/xem-guide/mapping-full.svg) Full mapping
+## ![Full mapping](../assets/sonarr/xem-guide/mapping-full.svg) Full mapping
 
 Full mapping tells any service using TheXEM that between the two entities it connects both the absolute numbering and the SxxExx mapping are the same, meaning that the numbering is the same between both entities.
 
 !!! info
     This means that if all you want to add to your mapping is a scene column and a TVDB column with full mapping between them, your series entry is obsolete as this works by default without an entry on TheXEM.
 
-## ![Direct mapping](/assets/sonarr/xem-guide/mapping-direct.svg) Direct mapping
+## ![Direct mapping](../assets/sonarr/xem-guide/mapping-direct.svg) Direct mapping
 
 Direct mapping is only possible between the Master entity type and the entities to either side of it. You'll want to use it as sparingly as possible because once you start using direct connections you'll need to keep using them for at least the remainder of the season and in some cases for the remainder of the entire show.
 
