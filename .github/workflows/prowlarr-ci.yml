@@ -48,27 +48,27 @@ jobs:
           APP_VERSION=$(curl -sL "http://localhost:9696/api?apikey=${{ env.API_KEY }}" -I | awk 'BEGIN {RS="\r\n"; FS=": "}/^X-Application-Version/{print $2}')
           echo "PROWLARR_VERSION=$APP_VERSION" >> $GITHUB_ENV
           echo "PROWLARR_VERSION=$APP_VERSION" >> $GITHUB_STEP_SUMMARY
-          python scripts/convert_prowlarr_supported_indexers_to_markdown.py -k "${{ env.API_KEY }}" -u "http://localhost:9696" -o "prowlarr/supported-indexers.md" -s "prowlarr/supported-indexers.md.hash"
+          python scripts/convert_prowlarr_supported_indexers_to_markdown.py -k "${{ env.API_KEY }}" -u "http://localhost:9696" -o "docs/docs/prowlarr/supported-indexers.md" -s "docs/docs/docs/prowlarr/supported-indexers.md.hash"
           docker stop prowlarr
 
       - name: Run pre-commit on updated files
         run: |
           echo "Running pre-commit hooks on generated files..."
           pre-commit install
-          pre-commit run --files prowlarr/supported-indexers.md || echo "Pre-commit applied formatting fixes"
+          pre-commit run --files docs/prowlarr/supported-indexers.md || echo "Pre-commit applied formatting fixes"
 
           # Check if pre-commit made any changes
-          if ! git diff --quiet prowlarr/supported-indexers.md; then
+          if ! git diff --quiet docs/prowlarr/supported-indexers.md; then
             echo "Pre-commit made formatting changes to supported-indexers.md"
-            git add prowlarr/supported-indexers.md
+            git add docs/prowlarr/supported-indexers.md
           fi
 
       - name: Commit changes
         run: |
           git config --global user.name "Servarr"
           git config --global user.email "development@lidarr.audio"
-          git add prowlarr/supported-indexers.md
-          git add prowlarr/supported-indexers.md.hash
+          git add docs/prowlarr/supported-indexers.md
+          git add docs/docs/prowlarr/supported-indexers.md.hash
           if git diff --staged --quiet
           then
             echo "No changes since last run"
