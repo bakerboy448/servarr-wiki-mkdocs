@@ -45,13 +45,13 @@ tags:
 
 > This page is still in progress and not complete. Contributions are welcome
 
-> For a more detailed breakdown of all the settings, check [Lidarr =>Settings](/lidarr/settings)
-{.is-info}
+!!! info
+    For a more detailed breakdown of all the settings, check [Lidarr =>Settings](/lidarr/settings)
 
 In this guide we will try to explain the basic setup you need to do to get started with Lidarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
-> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
-{.is-warning}
+!!! warning
+    Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
 
 # Caveats
 
@@ -136,15 +136,15 @@ There are two options shown on the startup screen but we will not be utilizing t
 
 We will be using the default configuration of settings to configure Lidarr. This will utilize the existing Profiles, Quality, Tags, etc.
 
-> For a more detailed breakdown of all the settings, check [Lidarr > Settings](/lidarr/settings)
-{.is-info}
+!!! info
+    For a more detailed breakdown of all the settings, check [Lidarr > Settings](/lidarr/settings)
 
 ## Media Management
 
 First we’re going to take a look at the `Media Management` where we will set the `Root Folder`. This will be the location that the media files will be stored in.
 
-> Do not store Lidarr media on a cloud storage provider! Because of the way Lidarr uses tags, this will kill any API limits and cause issues. Keep your library on your network.
-{.is-warning}
+!!! warning
+    Do not store Lidarr media on a cloud storage provider! Because of the way Lidarr uses tags, this will kill any API limits and cause issues. Keep your library on your network.
 
 Click on `Settings` > `Media Management` on the left menu.
 
@@ -161,20 +161,21 @@ You'll be presented with the following window:
 
 Leave the other options at their defaults.
 
-> If utilizing a `Root Folder` with existing files. Review the Quick Start - Advanced section for considerations.
-{.is-warning}
+!!! warning
+    If utilizing a `Root Folder` with existing files. Review the Quick Start - Advanced section for considerations.
 
-> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
-> \* If you're using an SMB mount ensure `nobrl` is enabled.
-{.is-warning}
+!!! warning
+    \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
+    \* If you're using an SMB mount ensure `nobrl` is enabled.
 
-> **The user and group you configured Lidarr to run as must have read & write access to this location.** {.is-info}
+!!! info
+    **The user and group you configured Lidarr to run as must have read & write access to this location.** 
 
-> Your download client downloads to a download folder and Lidarr imports it to your media folder (final destination) that your media server uses.
-{.is-info}
+!!! info
+    Your download client downloads to a download folder and Lidarr imports it to your media folder (final destination) that your media server uses.
 
-> **Your download folder and media folder can’t be the same location**
-{.is-danger}
+!!! danger
+    **Your download folder and media folder can’t be the same location**
 
 ## Profiles
 
@@ -208,8 +209,8 @@ Understanding the configuration/concepts behind `Indexers` are beyond the scope 
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/lidarr/settings#download-clients), at the [More Info (Supported)](/lidarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
-{.is-info}
+!!! info
+    See the [settings page](/lidarr/settings#download-clients), at the [More Info (Supported)](/lidarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 ### {.tabset}
 
@@ -264,8 +265,8 @@ Click the newly added `Artist`. (Bob Dylan in this example)
 
 ![lidarr_qs_dylan.png](/assets/lidarr/quick-start-guide/lidarr_qs_dylan.png)
 
-> Don't like the metadata downloaded? - Contribute to make it better!
-{.is-info}
+!!! info
+    Don't like the metadata downloaded? - Contribute to make it better!
 
 # First Download/Import
 
@@ -305,8 +306,8 @@ You can find your downloaded files in your `Root Folder` and are able to consume
 
 This advanced section is intended for setups that may have special considerations. Review if any apply to your configuration and potentially save some headache.
 
->The following sections will assist with common pitfalls and problems.
-{.is-warning}
+!!! warning
+    The following sections will assist with common pitfalls and problems.
 
 ## Lidarr Use Case
 
@@ -370,8 +371,8 @@ The recommended methods for tagging your files include:
 
 Use of these applications is beyond the scope of this guide but it is preferable to associate MusicBrainz Release ID's as part of the tagging process.
 
-> Most tagging software is capable of Folder Structure & Renaming while properly tagging files.
-{.is-info}
+!!! info
+    Most tagging software is capable of Folder Structure & Renaming while properly tagging files.
 
 ### Pre-Import Considerations
 

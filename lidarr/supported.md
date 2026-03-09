@@ -10,7 +10,8 @@ tags:
   - compatibility
   - lidarr
 ---
-> This page is a work in progress and requires additional effort.{.is-warning}
+!!! warning
+    This page is a work in progress and requires additional effort.
 
 This page is the disambiguation page for all "supported" wiki links (i.e. typically `More Info` in the UI).
 

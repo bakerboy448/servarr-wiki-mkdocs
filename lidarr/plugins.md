@@ -15,8 +15,8 @@ Lidarr plugins allow users to extend the capability of Lidarr to include new ind
 
 Plug-in capabilities are now part of the main branch of Lidarr, but only in the `nightly` branch. Both Hotio and Linuxserver are updated.
 
-> You cannot go back to a mainline Lidarr branch (master/develop) without restoring a database prior to the `plugins` or `nightly` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
-{.is-danger}
+!!! danger
+    You cannot go back to a mainline Lidarr branch (master/develop) without restoring a database prior to the `plugins` or `nightly` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
 
 ### How To Install Plugins
 
@@ -58,13 +58,13 @@ image: lscr.io/linuxserver/lidarr:nightly
 - Install the plugin to Lidarr using the new Plugin Lidarr Page and the plugin's documentation.
 - Restart Lidarr to complete plugin installation
 
-> Plugin updates do not occur automatically
-{.is-info}
+!!! info
+    Plugin updates do not occur automatically
 
 # Plugins
 
-> Both plugins and this documentation are community-driven. There are no official recommendations at this time, and each plugin is supported by its developer.
-{.is-info}
+!!! info
+    Both plugins and this documentation are community-driven. There are no official recommendations at this time, and each plugin is supported by its developer.
 
 ## ta264/deemix
 
@@ -189,5 +189,5 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
 - *Example:* The development version can be found at:
   `https://github.com/TypNull/Tubifarry/tree/develop`
 
-> See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.
-{.is-info}
+!!! info
+    See the [Tubifarry README](https://github.com/TypNull/Tubifarry) for advanced configuration, troubleshooting, and feature deep-dives.

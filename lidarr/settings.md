@@ -43,8 +43,8 @@ This page is a work in progress and contributions - based on the other \*Arr pag
 
 # Download Clients
 
-> Information on supported download clients can be found at the [More Info (Supported)](/lidarr/supported#download-clients) page for this section
-{.is-info}
+!!! info
+    Information on supported download clients can be found at the [More Info (Supported)](/lidarr/supported#download-clients) page for this section
 
 ## Overview
 
@@ -132,7 +132,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 |     uTorrent      | :white_check_mark: |                            :white_check_mark:                            |
 |       Vuze        | :white_check_mark: |                            :white_check_mark:                            |
 
-> ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Lidarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
+!!! info
+    ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Lidarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.
 
 ## Completed Download Handling
 
@@ -184,13 +185,13 @@ If you download using a BitTorrent client, the process is slightly different:
 - If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect.  The typical solution is to add and remove the mapping.
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
-> If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
-{.is-info}
+!!! info
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 # Import Lists
 
-> Information on supported list types can be found at the [More Info (Supported)](/lidarr/supported#lists) page for this section
-{.is-info}
+!!! info
+    Information on supported list types can be found at the [More Info (Supported)](/lidarr/supported#lists) page for this section
 
 Import lists allow you to add items to Lidarr from Spotify or Last .fm. This has the potential to add a lot of unexpected items to your Lidarr database, so please use it with care.
 
@@ -232,8 +233,8 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Sy
 
 # Connections
 
-> Information on supported connection types can be found at the [More Info (Supported)](/lidarr/supported#notifications) page for this section
-{.is-info}
+!!! info
+    Information on supported connection types can be found at the [More Info (Supported)](/lidarr/supported#notifications) page for this section
 
 # Tags
 
@@ -249,8 +250,8 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Sy
   - You want a specific Artist/Album to only use a specific indexer. You would create a tag and assign the Artist/Album and indexer that tag.
   - You want a specific Release Profile to only use a specific Delay Profile. You would create a tag and assign the Release Profile and Delay Profile that tag.
 
-> Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.
-{.is-info}
+!!! info
+    Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.
 
 # General
 
