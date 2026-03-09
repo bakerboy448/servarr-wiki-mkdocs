@@ -37,7 +37,7 @@ tags:
 > This page is still in progress and not complete. Contributions are welcome
 
 !!! info
-    For a more detailed breakdown of all the settings, check [Whisparr =>Settings](/whisparr/settings)
+    For a more detailed breakdown of all the settings, check [Whisparr =>Settings](../whisparr/settings.md)
 
 In this guide we will try to explain the basic setup you need to do to get started with Whisparr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
@@ -48,7 +48,7 @@ In this guide we will try to explain the basic setup you need to do to get start
 
 After installation and starting up, you open a browser and go to `http://{your_ip_here}:6969`
 
-![Whisparr-start.png](/assets/whisparr/Whisparr-start.png)
+![Whisparr-start.png](../assets/whisparr/Whisparr-start.png)
 
 # Media Management
 
@@ -56,11 +56,11 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 `Settings` => `Media Management`
 
-![Whisparr-settings-mm.png](/assets/whisparr/Whisparr-settings-mm.png)
+![Whisparr-settings-mm.png](../assets/whisparr/Whisparr-settings-mm.png)
 
 ## Movie Naming
 
-![Whisparr-settings-mm-movie-naming.png](/assets/whisparr/Whisparr-settings-mm-movie-naming.png)
+![Whisparr-settings-mm-movie-naming.png](../assets/whisparr/Whisparr-settings-mm-movie-naming.png)
 
 1. Enable/Disable Renaming of your movies (as opposed to leaving the names that are currently there or as they were when you downloaded them).
 2. If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ # % & + { }`).
@@ -73,14 +73,14 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ## Importing
 
-![Whisparr-settings-mm-importing.png](/assets/whisparr/Whisparr-settings-mm-importing.png)
+![Whisparr-settings-mm-importing.png](../assets/whisparr/Whisparr-settings-mm-importing.png)
 
 1. *(Advanced Option) Enable `Use Hard links instead of Copy` more info how and why with examples [TRaSH's Hard links Guide](https://trash-guides.info/hardlinks).*
 1. *(Advanced Option) Import matching extra files (subtitles, nfo, etc) after importing a file.*
 
 ## File Management
 
-![Whisparr-settings-mm-fm.png](/assets/whisparr/Whisparr-settings-mm-fm.png)
+![Whisparr-settings-mm-fm.png](../assets/whisparr/Whisparr-settings-mm-fm.png)
 
 1. Movies deleted from disk are automatically unmonitored in Whisparr.
     - You may want to delete a movie but do not want Whisparr to re-download the movie. You would use this option.
@@ -89,7 +89,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 ## Root Folders
 
-![Whisparr-settings-mm-root-folder.png](/assets/whisparr/Whisparr-settings-mm-root-folder.png)
+![Whisparr-settings-mm-root-folder.png](../assets/whisparr/Whisparr-settings-mm-root-folder.png)
 
 Here we will add the root folder that Whisparr will be using to import your existing organized media library and where Whisparr will be importing (copy/hardlink/move) your media after your download client has downloaded it.
 
@@ -112,23 +112,23 @@ Don’t forget to save your changes
 
 `Settings` => `Profiles`
 
-![Whisparr-settings-profiles.png](/assets/whisparr/Whisparr-settings-profiles.png)
+![Whisparr-settings-profiles.png](../assets/whisparr/Whisparr-settings-profiles.png)
 
 Here you’ll be allowed to configure profiles for which you can have for the quality, preferred language, and custom format scoring of a movie you’re looking to download.
 
 We recommend you to create your own profiles and only select the Quality Sources and Languages you actually want.
 
-For more information on foreign titles and languages see [this FAQ entry](/whisparr/faq#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
+For more information on foreign titles and languages see [this FAQ entry](../whisparr/faq.md#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
 
 !!! info
-    More info at [Settings => Profiles](/whisparr/settings#profiles).
-    To see what the difference is between the Quality Sources look [at our Quality Definitions](/whisparr/settings#qualities-defined).
+    More info at [Settings => Profiles](../whisparr/settings.md#profiles).
+    To see what the difference is between the Quality Sources look [at our Quality Definitions](../whisparr/settings.md#qualities-defined).
 
 # Quality
 
 `Settings` => `Quality`
 
-![Whisparr-settings-quality.png](/assets/whisparr/Whisparr-settings-quality.png)
+![Whisparr-settings-quality.png](../assets/whisparr/Whisparr-settings-quality.png)
 
 Here you’re able to change/fine tune the min and max size of your wanted media files (when using Usenet keep in mind the RAR/PAR2 files)
 
@@ -139,7 +139,7 @@ Here you’re able to change/fine tune the min and max size of your wanted media
 
 `Settings` => `Indexers`
 
-![Whisparr-settings-indexers.png](/assets/whisparr/Whisparr-settings-indexers.png)
+![Whisparr-settings-indexers.png](../assets/whisparr/Whisparr-settings-indexers.png)
 
 Here you’ll be adding the indexer/tracker that you’ll be using to actually download any of your files.
 
@@ -151,12 +151,12 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 `Settings` => `Download Clients`
 
-![Whisparr-settings-download-clients.png](/assets/whisparr/Whisparr-settings-download-clients.png)
+![Whisparr-settings-download-clients.png](../assets/whisparr/Whisparr-settings-download-clients.png)
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and to have read & write access to the location the download client reports files the client downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
 !!! info
-    See the [settings page](/whisparr/settings#download-clients), at the [More Info (Supported)](/whisparr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+    See the [settings page](../whisparr/settings.md#download-clients), at the [More Info (Supported)](../whisparr/supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 
 === "Usenet"
@@ -188,26 +188,26 @@ Downloading and importing is where most people experience issues. From a high le
 
 > Note that Whisparr does not regularly search for Movies.  See these two FAQ Entries for details to understand how Whisparr works.
 !!! info
-    [How does Whisparr find movies?](/whisparr/faq#how-does-whisparr-find-movies) and [How does Whisparr work?](/whisparr/faq#how-does-whisparr-work)
+    [How does Whisparr find movies?](../whisparr/faq.md#how-does-whisparr-find-movies) and [How does Whisparr work?](../whisparr/faq.md#how-does-whisparr-work)
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 `Movies`
 
-![Whisparr-movies.png](/assets/whisparr/Whisparr-movies.png)
+![Whisparr-movies.png](../assets/whisparr/Whisparr-movies.png)
 
 Select `Import Existing Movies` or select `Import` from the sidebar.
 
 ## Import movies
 
-![Whisparr-movies-import.png](/assets/whisparr/Whisparr-movies-import.png)
+![Whisparr-movies-import.png](../assets/whisparr/Whisparr-movies-import.png)
 
 Select the root path you added earlier [in the root folders section.](#root-folders)
 
 ## Importing Existing Media
 
-![Whisparr-importing-existing.png](/assets/whisparr/Whisparr-importing-existing.png)
+![Whisparr-importing-existing.png](../assets/whisparr/Whisparr-importing-existing.png)
 
-Depending how well you got your existing movie folders named Whisparr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directory follow this [guide](/whisparr/tips-and-tricks#creating-a-folder-for-each-movie)
+Depending how well you got your existing movie folders named Whisparr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directory follow this [guide](../whisparr/tips-and-tricks.md#creating-a-folder-for-each-movie)
 
 1. Your movie folder name.
 1. How you want the movie to be added to Whisparr.
@@ -232,7 +232,7 @@ Depending how well you got your existing movie folders named Whisparr will try t
 
 If you’re getting a error like this
 
-![Whisparr-importing-existing-no-match.png](/assets/whisparr/Whisparr-importing-existing-no-match.png)
+![Whisparr-importing-existing-no-match.png](../assets/whisparr/Whisparr-importing-existing-no-match.png)
 
 Then you probably made a mistake with your movie folder naming.
 
@@ -240,21 +240,21 @@ To fix this issue you can try the following
 
 Expand the error message
 
-![Whisparr-importing-existing-no-match-expand.png](/assets/whisparr/Whisparr-importing-existing-no-match-expand.png)
+![Whisparr-importing-existing-no-match-expand.png](../assets/whisparr/Whisparr-importing-existing-no-match-expand.png)
 
 and check on the [themoviedb](https://www.themoviedb.org/) if the year or title matches. in this example you will notice that the year is wrong and you can fix it by changing the year and click on the refresh icon.
 
-![whisparr-importing-existing-no-match-expand-refresh.png](/assets/whisparr/whisparr-importing-existing-no-match-expand-refresh.png)
+![whisparr-importing-existing-no-match-expand-refresh.png](../assets/whisparr/whisparr-importing-existing-no-match-expand-refresh.png)
 
 Or you can just use the tmdb:id or imdb:id and then select the found movie if matched.
 
-![Whisparr-importing-existing-no-match-expand-tmdb.png](/assets/whisparr/Whisparr-importing-existing-no-match-expand-tmdb.png)
+![Whisparr-importing-existing-no-match-expand-tmdb.png](../assets/whisparr/Whisparr-importing-existing-no-match-expand-tmdb.png)
 
-![Whisparr-importing-existing-no-match-expand-imdb.png](/assets/whisparr/Whisparr-importing-existing-no-match-expand-imdb.png)
+![Whisparr-importing-existing-no-match-expand-imdb.png](../assets/whisparr/Whisparr-importing-existing-no-match-expand-imdb.png)
 
 ### Fix faulty folder name after import
 
-![Whisparr-wrong-folder-name.png](/assets/whisparr/Whisparr-wrong-folder-name.png)
+![Whisparr-wrong-folder-name.png](../assets/whisparr/Whisparr-wrong-folder-name.png)
 
 You will notice after the fix we did during the import that the folder name still has the wrong year in it. To fix this we’re going to do a little magic trick.
 
@@ -264,11 +264,11 @@ Go to you movie overview
 
 On the top click on `Movie Editor`
 
-![Whisparr-movie-editor.png](/assets/whisparr/Whisparr-movie-editor.png)
+![Whisparr-movie-editor.png](../assets/whisparr/Whisparr-movie-editor.png)
 
 After activating it you select the movie(s) from where you want to have the folder(s) to be renamed.
 
-![Whisparr-movie-editor-select.png](/assets/whisparr/Whisparr-movie-editor-select.png)
+![Whisparr-movie-editor-select.png](../assets/whisparr/Whisparr-movie-editor-select.png)
 
 1. If you want all your movie folders renamed to your folder naming scheme you set earlier [movie naming section](#movie-naming).
 2. Select the movie(s) from where you want to have the folder(s) to be renamed.
@@ -276,13 +276,13 @@ After activating it you select the movie(s) from where you want to have the fold
 
 A new popup will be shown
 
-![Whisparr-movie-editor-move-files-yes.png](/assets/whisparr/Whisparr-movie-editor-move-files-yes.png)
+![Whisparr-movie-editor-move-files-yes.png](../assets/whisparr/Whisparr-movie-editor-move-files-yes.png)
 
 Select `Yes, Move the files`
 
 Then Magic
 
-![Whisparr-correct-folder-name.png](/assets/whisparr/Whisparr-correct-folder-name.png)
+![Whisparr-correct-folder-name.png](../assets/whisparr/Whisparr-correct-folder-name.png)
 
 As you can see the folder has been renamed to the correct year following your naming scheme.
 
@@ -292,17 +292,17 @@ After you imported your existing well organized media library it’s time to add
 
 `Movies` => `Add New`
 
-![Whisparr-add-new.png](/assets/whisparr/Whisparr-add-new.png)
+![Whisparr-add-new.png](../assets/whisparr/Whisparr-add-new.png)
 
 Type in the box the movie you want or use the tmdb:id or imdb:id.
 
 When typing out the movie name you will see it will start showing you results.
 
-![Whisparr-movie-search.png](/assets/whisparr/Whisparr-movie-search.png)
+![Whisparr-movie-search.png](../assets/whisparr/Whisparr-movie-search.png)
 
 When you see the movie you want click on it.
 
-![Whisparr-movie-add.png](/assets/whisparr/Whisparr-movie-add.png)
+![Whisparr-movie-add.png](../assets/whisparr/Whisparr-movie-add.png)
 
 1. Whisparr will add the Root Folder you’ve setup [in the root folders section](#root-folders)
 2. How you want the movie to be added to Whisparr.
@@ -319,7 +319,7 @@ When you see the movie you want click on it.
 
 4. Select your preferred profile to use.
 5. Here you can add certain tags for advanced usage.
-6. Make sure you enable this if you want Whisparr search for the missing movie when added to Whisparr [more info](/whisparr/faq#how-does-whisparr-find-movies)
+6. Make sure you enable this if you want Whisparr search for the missing movie when added to Whisparr [more info](../whisparr/faq.md#how-does-whisparr-find-movies)
 7. Click on `Add Movie` to add the movie to Whisparr.
 
-- If you get an error of "path is already configured" [see this FAQ entry](/whisparr/faq#path-is-already-configured-for-an-existing-mqovie)
+- If you get an error of "path is already configured" [see this FAQ entry](../whisparr/faq.md#path-is-already-configured-for-an-existing-mqovie)

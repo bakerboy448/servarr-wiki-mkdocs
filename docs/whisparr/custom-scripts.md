@@ -10,7 +10,7 @@ tags:
   - api
   - whisparr
 ---
-If you're looking to trigger a custom script, you can find more details here. Scripts are added to Whisparr via the [Connect Settings](/whisparr/settings#connections).
+If you're looking to trigger a custom script, you can find more details here. Scripts are added to Whisparr via the [Connect Settings](../whisparr/settings.md#connections).
 
 # Overview
 

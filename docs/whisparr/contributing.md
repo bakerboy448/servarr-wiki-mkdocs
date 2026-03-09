@@ -14,7 +14,7 @@ We're always looking for people to help make Whisparr even better, there are a n
 
 # Documentation
 
-Setup guides, [FAQ](/whisparr/faq), the more information we have on the [wiki](https://wiki.servarr.com/whisparr) the better.
+Setup guides, [FAQ](../whisparr/faq.md), the more information we have on the [wiki](https://wiki.servarr.com/whisparr) the better.
 
 # Development
 

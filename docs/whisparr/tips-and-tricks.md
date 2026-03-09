@@ -11,7 +11,7 @@ tags:
 ---
 # TRaSH's Custom Formats
 
-- [TRasH has a guide](https://trash-guides.info/Whisparr/) on how to use [Whisparr => Settings => Custom Formats](/whisparr/settings#custom-formats) as well as a shared repository of Custom Formats.
+- [TRasH has a guide](https://trash-guides.info/Whisparr/) on how to use [Whisparr => Settings => Custom Formats](../whisparr/settings.md#custom-formats) as well as a shared repository of Custom Formats.
 
 # Syncing Two Whisparr Instances
 
@@ -19,7 +19,7 @@ tags:
 
 # Renaming Movie Folders
 
-- [See this FAQ Entry](/whisparr/faq#how-can-i-rename-my-movie-folders)
+- [See this FAQ Entry](../whisparr/faq.md#how-can-i-rename-my-movie-folders)
 
 # Creating a Folder for Each Movie
 
@@ -36,7 +36,7 @@ tags:
 
 - To keep this pattern for future movies, you should set:
 
-- [Settings => Media Management (Advanced Settings Shown) => Movie Naming](/whisparr/settings#media-management)
+- [Settings => Media Management (Advanced Settings Shown) => Movie Naming](../whisparr/settings.md#media-management)
 
   - File: `{Movie CleanTitle} {(Release Year)} {Edition Tags} {\[Quality Title]}`
   - Folder: `{Movie CleanTitle} {(Release Year)}`
