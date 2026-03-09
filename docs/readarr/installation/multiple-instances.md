@@ -114,7 +114,7 @@ This is crucial, as it keeps all the data files from both instances in
 
 - Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 - Start Readarr-audiobooks (Service or Tray App)
-- Open up Readarr-audiobooks and Navigate within the app to [Settings => General => Host](/readarr/settings/#host)
+- Open up Readarr-audiobooks and Navigate within the app to [Settings => General => Host](../../readarr/settings/.md#host)
 - Change `Port Number` from `8787` to a different port e.g. `8879` so Readarr and Readarr-audiobooks do not conflict
 - You should now be able to start both apps
 - Continue to [Dealing with Updates](#dealing-with-updates)
