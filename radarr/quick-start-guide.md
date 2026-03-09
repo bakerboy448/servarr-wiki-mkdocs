@@ -38,13 +38,13 @@ tags:
 
 > This page is still in progress and not complete. Contributions are welcome
 
-> For a more detailed breakdown of all the settings, check [Radarr =>Settings](/radarr/settings)
-{.is-info}
+!!! info
+    For a more detailed breakdown of all the settings, check [Radarr =>Settings](/radarr/settings)
 
 In this guide we will try to explain the basic setup you need to do to get started with Radarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
-> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
-{.is-warning}
+!!! warning
+    Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
 
 # Startup
 
@@ -70,8 +70,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 4. Here you will select the naming convention for the actual movie files.
 5. *(Advanced Option) This is where you will set the naming convention for the folder that contains the video file.*
 
-> If you want a recommended naming scheme and examples take a look [TRaSH's Recommended Naming Schemes](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/).
-{.is-info}
+!!! info
+    If you want a recommended naming scheme and examples take a look [TRaSH's Recommended Naming Schemes](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/).
 
 ## Importing
 
@@ -95,17 +95,18 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 Here we will add the root folder that Radarr will be using to import your existing organized media library and where Radarr will be importing (copy/hardlink/move) your media after your download client has downloaded it.
 
-> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
-> \* If you're using an SMB mount ensure `nobrl` is enabled.
-{.is-warning}
+!!! warning
+    \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
+    \* If you're using an SMB mount ensure `nobrl` is enabled.
 
-> **The user and group you configured Radarr to run as must have read & write access to this location.** {.is-info}
+!!! info
+    **The user and group you configured Radarr to run as must have read & write access to this location.** 
 
-> Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
-{.is-info}
+!!! info
+    Your download client downloads to a download folder and Radarr imports it to your media folder (final destination) that your media server uses.
 
-> **Your download folder and media (library / root) folder can’t be the same location**
-{.is-danger}
+!!! danger
+    **Your download folder and media (library / root) folder can’t be the same location**
 
 Don’t forget to save your changes
 
@@ -128,9 +129,9 @@ Profiles is also where Custom Format Scores are configured.  It's strongly recom
 - [DV (WEB-DL)](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
 - [BR-DISK](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
 
-> More info at [Settings => Profiles](/radarr/settings#profiles).
-> To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
-{.is-info}
+!!! info
+    More info at [Settings => Profiles](/radarr/settings#profiles).
+    To see what the difference is between the Quality Sources look [at our Quality Definitions](/radarr/settings#qualities-defined).
 
 # Quality
 
@@ -140,8 +141,8 @@ Profiles is also where Custom Format Scores are configured.  It's strongly recom
 
 Here you’re able to change/fine tune the min and max size of your wanted media files (when using Usenet keep in mind the RAR/PAR2 files)
 
-> If you need some help with what to use for a Quality Settings check [TRaSH's size recommendations](https://trash-guides.info/Radarr/Radarr-Quality-Settings-File-Size/) for a tested example.
-{.is-info}
+!!! info
+    If you need some help with what to use for a Quality Settings check [TRaSH's size recommendations](https://trash-guides.info/Radarr/Radarr-Quality-Settings-File-Size/) for a tested example.
 
 # Indexers
 
@@ -165,8 +166,8 @@ For torrent trackers - almost all require the use of [Prowlarr](/prowlarr) or [J
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and to have read & write access to the location the download client reports files the client downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/radarr/settings#download-clients), at the [More Info (Supported)](/radarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
-{.is-info}
+!!! info
+    See the [settings page](/radarr/settings#download-clients), at the [More Info (Supported)](/radarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 ## Download Protocols {.tabset}
 
@@ -195,8 +196,8 @@ Downloading and importing is where most people experience issues. From a high le
 
 # How to import your existing organized media library
 
-> Note that Radarr does not regularly search for Movies.  See the [How does Radarr work?](/radarr/faq#how-does-radarr-work) FAQ Entry for details to understand how Radarr works.
-{.is-info}
+!!! info
+    Note that Radarr does not regularly search for Movies.  See the [How does Radarr work?](/radarr/faq#how-does-radarr-work) FAQ Entry for details to understand how Radarr works.
 
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 

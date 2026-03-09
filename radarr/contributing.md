@@ -24,8 +24,8 @@ Radarr is written in C# (backend) and JS (frontend). The backend is built on the
 
 - Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>). The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
-> VS 2022 V17.0 or higher is recommended as it includes the .NET6 SDK
-{.is-info}
+!!! info
+    VS 2022 V17.0 or higher is recommended as it includes the .NET6 SDK
 
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
 - [Git](https://git-scm.com/downloads)
@@ -33,8 +33,8 @@ Radarr is written in C# (backend) and JS (frontend). The backend is built on the
   - **20** (any minor or patch version within this)
 {.grid-list}
 
-> The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other versions.
-{.is-warning}
+!!! warning
+    The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other versions.
 
 - [Yarn](https://yarnpkg.com/getting-started/install) is required to build the frontend
   - Yarn is included with **Node 20**+ by default. Enable it with `corepack enable`
@@ -69,8 +69,8 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 
 #### Visual Studio
 
-> Ensure startup project is set to `Radarr.Console` and framework to `net6.0`
-{.is-info}
+!!! info
+    Ensure startup project is set to `Radarr.Console` and framework to `net6.0`
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
 1. Next `Debug/Run` the project in Visual Studio to start Radarr
@@ -138,8 +138,8 @@ test.sh <PLATFORM> <TYPE> <COVERAGE>
 
 While not always fun, we encourage writing unit tests for any backend code changes. This will ensure the change is functioning as you intended and that future changes dont break the expected behavior.
 
-> We currently require 80% coverage on new code when submitting a PR
-{.is-info}
+!!! info
+    We currently require 80% coverage on new code when submitting a PR
 
 If you have any questions about any of this, please let us know.
 
@@ -164,8 +164,8 @@ Adding translations to Radarr requires two steps
 
 The English translation, `src/NzbDrone.Core/Localization/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
 
-> PRs for translation of log messages will not be accepted
-{.is-warning}
+!!! warning
+    PRs for translation of log messages will not be accepted
 
 ### Backend Strings
 

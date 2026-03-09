@@ -90,13 +90,13 @@ tags:
 - If you've already added the movie, but now you want to search for it, you have a few choices. You can go to the movie's page and use the search button, which will do a search and then automatically pick one. You can use the Search tab and see *all* the results, hand picking the one you want. Or you can use the filters of `Missing`, `Wanted`, or `Cut-off Unmet`.
 - If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Radarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed movies.
 
-> Upgradinatorr can do periodic bulk searches which is useful to safely and sanely look for upgrades after major changes to one's quality profile. Use [Drazzlib's Python Script](/useful-tools#drazzilbs-userscripts) or [Cuban's Powershell Script](/useful-tools#just-a-bunch-of-starr-scripts)
-{.is-info}
+!!! info
+    Upgradinatorr can do periodic bulk searches which is useful to safely and sanely look for upgrades after major changes to one's quality profile. Use [Drazzlib's Python Script](/useful-tools#drazzilbs-userscripts) or [Cuban's Powershell Script](/useful-tools#just-a-bunch-of-starr-scripts)
 
 ## How does Radarr find movies
 
-> This FAQ item is a legacy FAQ Entry. Refer to [How does Radarr work?](#how-does-radarr-work)
-{.is-info}
+!!! info
+    This FAQ item is a legacy FAQ Entry. Refer to [How does Radarr work?](#how-does-radarr-work)
 
 ## How do I access Radarr from another computer
 
@@ -126,8 +126,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 ## What is Minimum Availability
 
-> For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
-{.is-info}
+!!! info
+    For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
 
 - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This option is not recommended.
 - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical Date on TMDb) This option is not recommended.
@@ -136,8 +136,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 ## How are possible downloads compared
 
-> Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
-{.is-info}
+!!! info
+    Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
 
 - The current logic [can always be found here](https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
@@ -152,10 +152,11 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 1. Age (If Usenet)
 1. Size
 
-> This ranking applies to both releases that would be Quality and/or Custom  Format upgrades.
-{.is-info}
+!!! info
+    This ranking applies to both releases that would be Quality and/or Custom  Format upgrades.
 
-> \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/radarr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).{.is-warning}
+!!! warning
+    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/radarr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).
 
 ## What are Lists and what can they do for me
 
@@ -164,8 +165,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Radarr and realize that you do not have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
 - Lists can also be used to sync Radarr to another Radarr instance or to import your users' Plex watchlist(s)
 
-> **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
-{.is-warning}
+!!! warning
+    **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
 
 - It's suggested that you physically look at the list before you even go to Radarr.
 
@@ -200,13 +201,13 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Develop&query=%24%5B0%5D.version&url=https://radarr.servarr.com/v1/update/develop/changes) - (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first after nightly. It can be considered semi-stable, but is still `beta`. This version will receive updates either weekly or biweekly depending on development and will be tagged as `pre-release`.
 
-> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time and is tagged as pre-release.
-{.is-warning}
+!!! warning
+    **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time and is tagged as pre-release.
 
 - ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly&query=%24%5B0%5D.version&url=https://radarr.servarr.com/v1/update/nightly/changes) - (Alpha/Unstable) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.  ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
 
-> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
-{.is-danger}
+!!! danger
+    **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds.
 
@@ -262,8 +263,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database or use [Toolbarr](https://github.com/Notifiarr/toolbarr).
-{.is-warning}
+!!! warning
+    Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database or use [Toolbarr](https://github.com/Notifiarr/toolbarr).
 
 #### Using zip backup
 
@@ -289,8 +290,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 #### File System Restore on Synology NAS
 
-> CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
-{.is-warning}
+!!! warning
+    CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 
 - Re-install Radarr (if applicable / not already installed)
 - Find the location of the AppData directory for Radarr
@@ -299,7 +300,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - Stop Radarr
 - Connect to the Synology NAS through SSH and log in as root
 
-> On some installations, the user is different than the below commands: `chown -R sc-Radarr:Radarr *` {.is-info}
+!!! info
+    On some installations, the user is different than the below commands: `chown -R sc-Radarr:Radarr *` 
 
 - Execute the following commands:
 
@@ -351,8 +353,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 {#rename-folders}
 
-> The same process applies for moving/changing Movie paths as well. If you're just updating paths in Radarr and do not need to move the files, then do not select "Yes Move files" in Step 5.
-{.is-info}
+!!! info
+    The same process applies for moving/changing Movie paths as well. If you're just updating paths in Radarr and do not need to move the files, then do not select "Yes Move files" in Step 5.
 
 1. Movies
 1. Click on "Edit Movies"
@@ -361,8 +363,8 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 1. Change Root Folder to the same Root Folder that the movies currently exist in
 1. Select "Yes, move the files"
 
-> If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
-{.is-warning}
+!!! warning
+    If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
 
 ## Movie File and Folder Naming
 
@@ -443,8 +445,8 @@ This could be because your indexer poorly matched it, or the uploader didn't nam
 
 ## Radarr won't start on Debian 11 or older systems due to SQLite version
 
-> This workaround is only for older end-of-standard-support systems with outdated GLIBC/SQLite versions. This is not applicable to systems with SQLite corruption issues.
-{.is-warning}
+!!! warning
+    This workaround is only for older end-of-standard-support systems with outdated GLIBC/SQLite versions. This is not applicable to systems with SQLite corruption issues.
 
 Radarr v6+ uses SQLite from SourceGear.sqlite3, which requires newer GLIBC versions and may cause compatibility issues on older end-of-standard-support systems including Debian 10, Debian 11, Synology DSM, Ubuntu 18, and Ubuntu 20. If you encounter SQLite-related errors (not corruption) on these platforms, you can force Radarr to use your system's native SQLite library instead, which is compatible with your GLIBC version.
 
@@ -484,8 +486,8 @@ ls -la libe_sqlite3.so
 
 After creating the symlink, restart Radarr. It will now use the system's SQLite library which is compatible with your GLIBC version.
 
-> **Note:** You will need to recreate this symlink after each Radarr update, as updates replace the application directory contents.
-{.is-info}
+!!! info
+    **Note:** You will need to recreate this symlink after each Radarr update, as updates replace the application directory contents.
 
 ### When to use this workaround
 
@@ -585,14 +587,14 @@ Depending on your OS, there are multiple possible ways.
 
 ## VPNs, Jackett, and the \*ARRs
 
-> For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
-{.is-info}
+!!! info
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
 
 - Unless you're in a repressive country like China, Australia or the UK, your BitTorrent client is typically the only thing that needs to be behind a VPN. Usenet does not require VPN protection as it uses encrypted SSL connections. If you're in a repressive country noted above it is likely your connection to your trackers needs to be VPN'd as well - in other words Jackett behind a VPN or Prowlarr using an Indexer Proxy. Other *Arr apps not connecting to trackers should not be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 - In other words, putting the  \*Arrs (Lidarr, Prowlarr, Radarr, Readarr, and Sonarr) behind a VPN can and will make the applications unusable in some cases due to the services not being accessible.
 
-> **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
-{.is-warning}
+!!! warning
+    **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
 
 - **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
@@ -647,10 +649,11 @@ When doing an interactive search a second download button has been added titled 
 
 ## How does Radarr handle foreign movies or foreign titles
 
-> [TRaSH's Custom Format Language Guide](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/#how-to-setup-language-custom-formats) may be useful for helping get movies in the language(s) you want.{.is-info}
+!!! info
+    [TRaSH's Custom Format Language Guide](https://trash-guides.info/Radarr/Tips/How-to-setup-language-custom-formats/#how-to-setup-language-custom-formats) may be useful for helping get movies in the language(s) you want.
 
-> Radarr's metadata cache considers a Movie's Original Language to be the TMDb Spoken Language if and only if only one (1) spoken language exists for the movie on TMDb; otherwise the movie's original TMDb language will be used.*
-{.is-warning}
+!!! warning
+    Radarr's metadata cache considers a Movie's Original Language to be the TMDb Spoken Language if and only if only one (1) spoken language exists for the movie on TMDb; otherwise the movie's original TMDb language will be used.*
 
 - *\*the [original language field should contain the main language spoken by the production companies.](https://www.themoviedb.org/talk/646c7179a5046e00e5b7cd4c#647239a9dd731b00ddf07fd1)*
 
@@ -722,8 +725,8 @@ This is expected. With a setup that supports [hardlinks](https://trash-guides.in
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Radarr's settings, Radarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped (i.e. paused). See [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for how to configure your download client optimally.
 
-> Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file.
-{.is-info}
+!!! info
+    Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file.
 
 ## Why doesn't Radarr work behind a reverse proxy
 

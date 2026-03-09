@@ -27,7 +27,8 @@ tags:
 
 ## Filebot
 
-> Filebot is supported on Windows, Linux, and MacOS {.is-info}
+!!! info
+    Filebot is supported on Windows, Linux, and MacOS 
 
 - [Filebot](https://www.filebot.net/) is a fantastic utility for getting your movies organized in a way that Radarr can successfully parse. Version 4.7.9 can still be downloaded for free from a SourceForge mirror, but there are also paid versions in the Windows and Apple stores. On Linux, your distribution of choice may have a package for it, like in Arch’s AUR package or `.deb` files for Debian/Ubuntu from their download page. It has both a GUI and a CLI, so it should satisfy almost everyone.
 
@@ -44,7 +45,8 @@ tags:
 
 ## Files 2 Folder
 
-> Files 2 Folder is a Windows Application {.is-info}
+!!! info
+    Files 2 Folder is a Windows Application 
 
 [Files 2 Folder](http://www.dcmembers.com/skwire/download/files-2-folder/) can movie library orgainzed for import into Radarr. Simply extract the zip to your computer and run the .exe as administrator, then click yes to add it to your right click menu.
 
