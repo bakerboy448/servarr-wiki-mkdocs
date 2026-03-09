@@ -44,7 +44,7 @@ This page is a work in progress and contributions - based on the other \*Arr pag
 # Download Clients
 
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](/lidarr/supported#download-clients) page for this section
+    Information on supported download clients can be found at the [More Info (Supported)](../lidarr/supported.md#download-clients) page for this section
 
 ## Overview
 
@@ -77,7 +77,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info (Supported)](/lidarr/supported#downloadclient) page for this section
+- A list of supported download clients is located at the [More Info (Supported)](../lidarr/supported.md#downloadclient) page for this section
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -186,16 +186,16 @@ If you download using a BitTorrent client, the process is slightly different:
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
 !!! info
-    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](../docker-guide.md) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 # Import Lists
 
 !!! info
-    Information on supported list types can be found at the [More Info (Supported)](/lidarr/supported#lists) page for this section
+    Information on supported list types can be found at the [More Info (Supported)](../lidarr/supported.md#lists) page for this section
 
 Import lists allow you to add items to Lidarr from Spotify or Last .fm. This has the potential to add a lot of unexpected items to your Lidarr database, so please use it with care.
 
-<!-- ![importlists.png](/assets/readarr/importlists.png) -->
+<!-- ![importlists.png](../assets/readarr/importlists.png) -->
 
 ## Import Lists
 
@@ -209,11 +209,11 @@ Anything on here has been excluded from being added by lists, and will never be 
 
 After clicking the <kb>+</kb>, choose what kind of list you'd like to add:
 
-<!-- ![addlist.png](/assets/readarr/addlist.png) -->
+<!-- ![addlist.png](../assets/readarr/addlist.png) -->
 
 In this instance, we're going to add a Spotify Saved Albums list.
 
-<!-- ![bookshelflist.png](/assets/readarr/bookshelflist.png) -->
+<!-- ![bookshelflist.png](../assets/readarr/bookshelflist.png) -->
 
 - Name - Enter a name for this list.
 - Enable Automatic Add - If enabled have anything on the list automatically add to Lidarr.
@@ -234,7 +234,7 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Sy
 # Connections
 
 !!! info
-    Information on supported connection types can be found at the [More Info (Supported)](/lidarr/supported#notifications) page for this section
+    Information on supported connection types can be found at the [More Info (Supported)](../lidarr/supported.md#notifications) page for this section
 
 # Tags
 
@@ -258,7 +258,7 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Sy
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Lidarr that you are running on.
-  - [Please see this FAQ entry for more information](/lidarr/faq#how-do-i-update-lidarr)
+  - [Please see this FAQ entry for more information](../lidarr/faq.md#how-do-i-update-lidarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Lidarr built-in updater or a script
   - Built-in - Use Lidarr's own updater

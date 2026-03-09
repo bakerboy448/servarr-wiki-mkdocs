@@ -14,7 +14,7 @@ Lidarr offers options to customize folder and track naming conventions for stand
 
 ## Davo's Naming Convention
 
-This format is from Davo's [community-guide](/lidarr/community-guide).
+This format is from Davo's [community-guide](../lidarr/community-guide.md).
 
 ### Standard Track Format
 

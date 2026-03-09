@@ -110,7 +110,7 @@ As of Lidarr v2, Authentication is Mandatory.
 - `Basic` (Browser pop-up) - This option when accessing your Lidarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and will be removed in the next major version.
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Lidarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](/lidarr/appdata-directory), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](../lidarr/appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
 
 ### Authentication Required
 
@@ -174,9 +174,9 @@ As of Lidarr v2, Authentication is Mandatory.
 
 1. [Search for your desired artist or album](https://musicbrainz.org/search) (use `Release Group` type for albums)
 2. The MusicBrainz ID can be found under the "Details" tab: 
-![musicbrainz_id_detail_tab.png](/images/musicbrainz_id_detail_tab.png)
+![musicbrainz_id_detail_tab.png](../images/musicbrainz_id_detail_tab.png)
 3. Or at the end of the URL:
-![musicbrainz_id_url.png](/images/musicbrainz_id_url.png)
+![musicbrainz_id_url.png](../images/musicbrainz_id_url.png)
 
 
 ## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release
@@ -315,8 +315,8 @@ mv <foldername...> <foldername>
 - This means your SQLite database that stores most of the information for Lidarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-lidarr)
-- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
-  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
+- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](../useful-tools.md#recovering-a-corrupt-db)
+  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
@@ -334,7 +334,7 @@ mv <foldername...> <foldername>
 
 - Find the location of the AppData directory for Lidarr
   - Via the Lidarr UI go to System => About
-  - [Lidarr Appdata Directory](/lidarr/appdata-directory)
+  - [Lidarr Appdata Directory](../lidarr/appdata-directory.md)
 - Stop Lidarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -358,7 +358,7 @@ mv <foldername...> <foldername>
 - Re-install Lidarr (if applicable / not already installed)
 - Find the location of the AppData directory for Lidarr
   - Running Lidarr once and via the UI go to System => About
-  - [Lidarr Appdata Directory](/lidarr/appdata-directory)
+  - [Lidarr Appdata Directory](../lidarr/appdata-directory.md)
 - Stop Lidarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -373,7 +373,7 @@ mv <foldername...> <foldername>
 - Re-install Lidarr (if applicable / not already installed)
 - Find the location of the AppData directory for Lidarr
   - Running Lidarr once and via the UI go to System => About
-  - [Lidarr Appdata Directory](/lidarr/appdata-directory)
+  - [Lidarr Appdata Directory](../lidarr/appdata-directory.md)
 - Stop Lidarr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -534,7 +534,7 @@ A common complaint is the Refresh task causes heavy I/O usage. One setting that 
 
 {#help-i-have-forgotten-my-password}
 
-To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Lidarr Appdata Directory](/lidarr/appdata-directory)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Lidarr Appdata Directory](../lidarr/appdata-directory.md)
 
 1. Stop Lidarr
 1. Open config.xml in a text editor
@@ -555,12 +555,12 @@ Depending on your OS, there are multiple possible ways.
 
 ## Weird UI Issues
 
-- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](../useful-tools.md#clearing-cookies-and-local-storage) wiki article.
 
 ## VPNs, Jackett, and the \*ARRs
 
 !!! info
-    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](../vpn.md) page.
 
 - Unless you're in a repressive country like China, Australia, your BitTorrent client is typically the only thing that needs to be behind a VPN. Usenet does not require VPN protection as it uses encrypted SSL connections. For most countries including the UK, using secure DNS (like Cloudflare's 1.1.1.1 or Google's 8.8.8.8) is sufficient to resolve access issues without requiring a VPN. Other *Arr apps not connecting to trackers should not be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
@@ -574,7 +574,7 @@ Depending on your OS, there are multiple possible ways.
 {#jackett-all-endpoint}
 
 - **April 2022 Update: \*Arr support has been removed out for the jackett `/all` due to the fact it only causes issues.**
-- The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](../prowlarr.md)
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the /all endpoint has no advantages, only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)
@@ -587,7 +587,7 @@ Depending on your OS, there are multiple possible ways.
 ### Jackett /All Solutions
 
 - Add each tracker in Jackett manually as an indexer in \*Arr
-- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [Prowlarr](../prowlarr.md) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
 ## Why are there two files? | Why is there a file left in downloads

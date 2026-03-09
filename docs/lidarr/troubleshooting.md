@@ -15,7 +15,7 @@ Need help? That's okay; everyone needs assistance sometimes. You can get real-ti
 
 - [:fontawesome-brands-discord:&emsp;Discord *Official Lidarr Discord*](https://lidarr.audio/discord)
 
-Before posting, ensure your request for help is clear. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Lidarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](/docker-guide) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](/docker-guide#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
+Before posting, ensure your request for help is clear. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Lidarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](../docker-guide.md) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](../docker-guide.md#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
 The more we know, the easier it is to help you.
 
@@ -62,7 +62,7 @@ To provide good and useful logs for sharing:
 - When using [0bin](https://0bin.net/), be sure to disable colorization and do not burn after reading.
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
-- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](/lidarr/appdata-directory) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](../lidarr/appdata-directory.md) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
 ```none
 
@@ -77,14 +77,14 @@ To provide good and useful logs for sharing:
 
 ## Standard Logs Location
 
-The log files are located in Lidarr's [Appdata Directory](/lidarr/appdata-directory), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
+The log files are located in Lidarr's [Appdata Directory](../lidarr/appdata-directory.md), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
 !!! info
     Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
 ## Update Logs Location
 
-The update log files are located in Lidarr's [Appdata Directory](/lidarr/appdata-directory), inside the UpdateLogs/ folder.
+The update log files are located in Lidarr's [Appdata Directory](../lidarr/appdata-directory.md), inside the UpdateLogs/ folder.
 
 ## Sharing Logs
 
@@ -122,7 +122,7 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 
 ## Determine the issue
 
-- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](/lidarr/settings#logging) and [Log Files](/lidarr/system#log-files) to find them and increase the log level.
+- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](../lidarr/settings.md#logging) and [Log Files](../lidarr/system.md#log-files) to find them and increase the log level.
 - The most frequently seen issue is that the system the app is installed on messed with the `/tmp` directory and deleted critical \*Arr files during the upgrade thus causing both the upgrade and rollback to fail. In this case, simply reinstall in-place over the existing borked installation.
 
 ### Migration Issue
@@ -198,11 +198,11 @@ Lidarr talks to you download client via it's API and accesses it via the client'
 
 ### SSL in use and incorrectly configured
 
-Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](/lidarr/faq#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
+Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](../lidarr/faq.md#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
 
 ### Can’t see share on Windows
 
-The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](/lidarr/faq#why-cant-see-my-files-on-a-remote-server) for details.
+The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](../lidarr/faq.md#why-cant-see-my-files-on-a-remote-server) for details.
 
 ### Mapped network drives are not reliable
 
@@ -210,7 +210,7 @@ While mapped network drives like `X:\` are convenient, they aren’t as reliable
 
 ### Docker and user, group, ownership, permissions and paths
 
-Docker adds another layer of complexity that is easy to get wrong, but still end up with a setup that functions, but has various problems. Instead of going over them here, read this wiki article [for these automation software and Docker](/docker-guide) which is all about user, group, ownership, permissions and paths. It isn’t specific to any Docker system, instead it goes over things at a high level so that you can implement them in your own environment.
+Docker adds another layer of complexity that is easy to get wrong, but still end up with a setup that functions, but has various problems. Instead of going over them here, read this wiki article [for these automation software and Docker](../docker-guide.md) which is all about user, group, ownership, permissions and paths. It isn’t specific to any Docker system, instead it goes over things at a high level so that you can implement them in your own environment.
 
 ### Remote Path Mapping
 
@@ -224,7 +224,7 @@ Logs will look like
 
 Thus `/volume3/data` does not exist within Lidarr's container or is not accessible.
 
-- [Settings => Download Clients => Remote Path Mappings](/lidarr/settings#remote-path-mappings)
+- [Settings => Download Clients => Remote Path Mappings](../lidarr/settings.md#remote-path-mappings)
 - A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
 - Generally, a remote path map is only required if your download client is on Linux when \*Arr is on Windows or vice versa. A remote path map is also possibly needed if mixing Docker and Native clients or if using a remote server.
 - A remote path map is a DUMB search/replace (where it finds the REMOTE value, replace it with LOCAL value for the specified Host).
@@ -232,7 +232,7 @@ Thus `/volume3/data` does not exist within Lidarr's container or is not accessib
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
 
 !!! info
-    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](../docker-guide.md) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 #### Remote Mount or Remote Sync (Syncthing)
 
@@ -289,9 +289,9 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 
 - The download client should download into a folder accessible by \*Arr and that is not your root/library folder; should import from that separate download folder into your Library folder.
 - You should never download directly into your root folder. You also should not use your root folder as the download client's completed folder or incomplete folder.
-- [**This will also cause a healthcheck in System as well**](/lidarr/system#downloading-into-root-folder)
+- [**This will also cause a healthcheck in System as well**](../lidarr/system.md#downloading-into-root-folder)
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the \*Arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/lidarr/settings/#root-folders)
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](../lidarr/settings/.md#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
@@ -338,7 +338,7 @@ This can also occur if you have a release in your download client but that media
 
 ### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Radarr => System => Status](/radarr/system#status).
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Radarr => System => Status](../radarr/system.md#status).
 
 ### The request timed out
 
@@ -364,11 +364,11 @@ This can also be caused by:
 
 ## Problem Not Listed
 
-You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](../permissions-and-networking.md). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 # Searches Indexers and Trackers
 
-- If you use [Prowlarr](/prowlarr), then you can view the [History](/prowlarr/history) of all queries Prowlarr received and how they were sent to the sites. Ensure that `Parameters` is enabled in Prowlarr History => Options. The (i) icon provides additional details.
+- If you use [Prowlarr](../prowlarr.md), then you can view the [History](../prowlarr/history.md) of all queries Prowlarr received and how they were sent to the sites. Ensure that `Parameters` is enabled in Prowlarr History => Options. The (i) icon provides additional details.
 
 ## Turn logging up to trace
 
@@ -393,8 +393,8 @@ INDEXER SEARCH RESPONSE EXAMPLE NEEDED
 
 ***Images needed***
 
-![searches-indexers-and-trackers1.png](/assets/lidarr/searches-indexers-and-trackers1.png)
-![searches-indexers-and-trackers2.png](/assets/lidarr/searches-indexers-and-trackers2.png)
+![searches-indexers-and-trackers1.png](../assets/lidarr/searches-indexers-and-trackers1.png)
+![searches-indexers-and-trackers2.png](../assets/lidarr/searches-indexers-and-trackers2.png)
 
 - Trace Log Snippet
 
@@ -464,7 +464,7 @@ Similarly to rate limits, certain indexers - such as Nyaa - may outright ban an 
 
 ### Using the Jackett /all endpoint
 
-The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](../prowlarr.md)
 
 [Even Jackett says /all should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 
@@ -484,7 +484,7 @@ Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Lidarr for 
 
 ### Problem Not Listed
 
-You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](../permissions-and-networking.md). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
 
 ## Errors
 
@@ -492,7 +492,7 @@ These are some of the common errors you may see when adding an indexer
 
 ### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Lidarr => System => Status](/lidarr/system#status).
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Lidarr => System => Status](../lidarr/system.md#status).
 
 ### The request timed out
 
@@ -518,4 +518,4 @@ This can also be caused by:
 
 ### Problem Not Listed
 
-You can also review some common permissions and networking troubleshooting commands [in our guide](/permissions-and-networking). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.
+You can also review some common permissions and networking troubleshooting commands [in our guide](../permissions-and-networking.md). Otherwise please discuss with the support team on discord. If this is something that may be a common problem, please suggest adding it to the wiki.

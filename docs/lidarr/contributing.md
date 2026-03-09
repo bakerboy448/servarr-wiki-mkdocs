@@ -15,7 +15,7 @@ We're always looking for people to help make Lidarr even better, there are a num
 
 # Documentation
 
-Setup guides, [FAQ](/lidarr/faq), the more information we have on the [wiki](https://wiki.servarr.com/lidarr) the better.
+Setup guides, [FAQ](../lidarr/faq.md), the more information we have on the [wiki](https://wiki.servarr.com/lidarr) the better.
 
 # Development
 
