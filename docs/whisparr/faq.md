@@ -119,7 +119,7 @@ tags:
 1. Size
 
 !!! warning
-    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/whisparr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/#repack-proper).
+    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](../whisparr/settings.md#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/#repack-proper).
 
 ## What are Lists and what can they do for me
 
@@ -140,11 +140,11 @@ tags:
 
 - This restriction is to not have our server get killed by people updating lists every 10 minutes.
 
-- This interval can be configured in [Settings => Lists](/whisparr/settings#lists) for between 6-24 hours. The default is 24 hours.
+- This interval can be configured in [Settings => Lists](../whisparr/settings.md#lists) for between 6-24 hours. The default is 24 hours.
 
 ## Can all my movie files be stored in one folder
 
-- No and the reason is that Whisparr is a fork of [Sonarr](/sonarr), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version. Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
+- No and the reason is that Whisparr is a fork of [Sonarr](../sonarr.md), where every show has a folder. This limitation is a known pain point for many users and will maybe come in a future version. Please note that it is not a simple change and effectively requires an entire rewrite of the backend.
 - The [Custom Folder GitHub Issue](https://github.com/Whisparr/Whisparr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
 - A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Whisparr or it will show as missing and regardless the movie will never be upgraded.
 
@@ -152,7 +152,7 @@ tags:
     - the script should be triggered on import
     - it should be designed to move the file whenever you want it
     - it then needs to call the Whisparr API and change the movie to unmonitored.
-- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](/whisparr/tips-and-tricks#creating-a-folder-for-each-movie) article
+- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](../whisparr/tips-and-tricks.md#creating-a-folder-for-each-movie) article
 
 ## Can I put all my movies in my library into one folder
 
@@ -223,7 +223,7 @@ tags:
 
 - Find the location of the AppData directory for Whisparr
   - Via the Whisparr UI go to System => About
-  - [Whisparr Appdata Directory](/whisparr/appdata-directory)
+  - [Whisparr Appdata Directory](../whisparr/appdata-directory.md)
 - Stop Whisparr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -247,7 +247,7 @@ tags:
 - Re-install Whisparr (if applicable / not already installed)
 - Find the location of the AppData directory for Whisparr
   - Running Whisparr once and via the UI go to System => About
-  - [Whisparr Appdata Directory](/whisparr/appdata-directory)
+  - [Whisparr Appdata Directory](../whisparr/appdata-directory.md)
 - Stop Whisparr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -262,7 +262,7 @@ tags:
 - Re-install Whisparr (if applicable / not already installed)
 - Find the location of the AppData directory for Whisparr
   - Running Whisparr once and via the UI go to System => About
-  - [Whisparr Appdata Directory](/whisparr/appdata-directory)
+  - [Whisparr Appdata Directory](../whisparr/appdata-directory.md)
 - Stop Whisparr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -290,7 +290,7 @@ tags:
 
 ## Path is Already Configured for an Existing Movie
 
-![existing-movie.png](/assets/whisparr/existing-movie.png)
+![existing-movie.png](../assets/whisparr/existing-movie.png)
 
 - This occurs when trying to add a movie or edit an existing movie's path that already is assigned to a different movie.
 - Likely this was caused by not correcting a mismatched movie when the user imported their library.
@@ -322,7 +322,7 @@ tags:
 
   - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
 
-- See [Tips and Tricks Section => Create a Folder for Each Movie](/whisparr/faq)whisparr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
+- See [Tips and Tricks Section => Create a Folder for Each Movie](../whisparr/faq.md)whisparr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
 
 ## Movie Folders Named Incorrectly
 
@@ -342,7 +342,7 @@ tags:
     - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
       - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
       - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
-  - The [Tips and Tricks Section => Create a Folder for Each Movie](/whisparr/tips-and-tricks#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
+  - The [Tips and Tricks Section => Create a Folder for Each Movie](../whisparr/tips-and-tricks.md#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
 
 ## Can I disable the refresh movies task
 
@@ -372,8 +372,8 @@ tags:
 - This means your SQLite database that stores most of the information for Whisparr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-whisparr). However, for users receiving this after upgrading to v4 it is highly unlikely the backup itself will work and you'll need to try the other recovery methods mentioned.
-- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](/useful-tools#recovering-a-corrupt-db)
-  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](/useful-tools#recovering-a-corrupt-db-ui)
+- You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](../useful-tools.md#recovering-a-corrupt-db)
+  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
@@ -418,7 +418,7 @@ tags:
 
 {#help-i-have-forgotten-my-password}
 
-To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Whisparr Appdata Directory](/whisparr/appdata-directory)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Whisparr Appdata Directory](../whisparr/appdata-directory.md)
 
 1. Stop Whisparr
 1. Open config.xml in a text editor
@@ -439,7 +439,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Weird UI Issues
 
-- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](/useful-tools#clearing-cookies-and-local-storage) wiki article.
+- If you experience any weird UI issues like the Library page not listing anything or a certain view or sort not working, try viewing in a Chrome Incognito Window or Firefox Private Window. If it works fine there, clear your browser cache and cookies for your specific ip/domain. For more information, see the [Clear Cache Cookies and Local Storage](../useful-tools.md#clearing-cookies-and-local-storage) wiki article.
 
 ## Web Interface Only Loads at localhost on Windows
 
@@ -457,7 +457,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Finding Cookies
 
-- Some sites cannot be logged into automatically and require you to login manually then give the cookies to Whisparr to work. [Please see this article for details.](/useful-tools#finding-cookies)
+- Some sites cannot be logged into automatically and require you to login manually then give the cookies to Whisparr to work. [Please see this article for details.](../useful-tools.md#finding-cookies)
 
 ## Unpack Torrents
 
@@ -473,7 +473,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## I got a pop-up that said config.xml was corrupt, what now
 
-- Whisparr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](/whisparr/appdata-directory), once deleted start and it will start on the default port (6969), you should now re-configure any settings you configured on the General Settings page.
+- Whisparr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](../whisparr/appdata-directory.md), once deleted start and it will start on the default port (6969), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
@@ -486,7 +486,7 @@ Depending on your OS, there are multiple possible ways.
 ## VPNs, Jackett, and the \*ARRs
 
 !!! info
-    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](../vpn.md) page.
 
 - Unless you're in a repressive country like China or Australia, your BitTorrent client is typically the only thing that needs to be behind a VPN. Usenet does not require VPN protection as it uses encrypted SSL connections. For most countries including the UK, using secure DNS (like Cloudflare's 1.1.1.1 or Google's 8.8.8.8) is sufficient to resolve access issues without requiring a VPN. If a VPN is required, we recommend using Hotio or Binhex download clients with built-in VPN capabilities.
 
@@ -510,7 +510,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Jackett shows more results than when manually searching
 
-- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](/whisparr/troubleshooting) for more information.
+- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](../whisparr/troubleshooting.md) for more information.
 
 ## How does Whisparr handle foreign movies or foreign titles
 
@@ -533,15 +533,15 @@ Depending on your OS, there are multiple possible ways.
 - If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
 
   - Add and Search for Movie when adding a movie
-![addmovie-add-and-search.png](/assets/whisparr/addmovie-add-and-search.png)
+![addmovie-add-and-search.png](../assets/whisparr/addmovie-add-and-search.png)
   - Search an existing Movie
-![searchmovie-movie-page.png](/assets/whisparr/searchmovie-movie-page.png)
+![searchmovie-movie-page.png](../assets/whisparr/searchmovie-movie-page.png)
 
 ## Jackett's /all Endpoint
 
 {#jackett-all-endpoint}
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](/prowlarr)
+- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is required. Alternatively, you may wish to check out the Jackett & NZBHydra2 alternative [Prowlarr](../prowlarr.md)
 
 - **April 1 2022 Update: Jackett `/all` endpoint is no longer supported (e.g. warnings will occur) as of 4.0.0.5730 due to the fact it only causes issues.**
 
@@ -558,7 +558,7 @@ Depending on your OS, there are multiple possible ways.
 ### Jackett /All Solutions
 
 - Add each tracker in Jackett manually as an indexer in \*Arr
-- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [Prowlarr](../prowlarr.md) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
 ## Why are there two files? | Why is there a file left in downloads

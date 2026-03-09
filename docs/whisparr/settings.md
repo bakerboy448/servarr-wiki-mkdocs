@@ -101,17 +101,17 @@ tags:
   - [Dates](#dates)
   - [Style](#style)
   - [Language](#language)
-This page will go through all the settings available in Whisparr and how they work. This is not meant to be a comprehensive "how to set up Whisparr." If you want that, please use the [Quick Start](/whisparr/quick-start-guide) page instead.
+This page will go through all the settings available in Whisparr and how they work. This is not meant to be a comprehensive "how to set up Whisparr." If you want that, please use the [Quick Start](../whisparr/quick-start-guide.md) page instead.
 
 # Menu options
 
 To get to the Settings page, choose Settings from the sidebar. The following sub-menu options will be available:
 
-![settings_1_menu.png](/assets/whisparr/settings_1_menu.png)
+![settings_1_menu.png](../assets/whisparr/settings_1_menu.png)
 
 Also, note that for each individual settings page, there are some options at the top of the menu:
 
-![settings_2_topmenu.png](/assets/whisparr/settings_2_topmenu.png)
+![settings_2_topmenu.png](../assets/whisparr/settings_2_topmenu.png)
 
 - Hide/Show advanced is important for any items that are marked below as `(Advanced Option)`, otherwise they will not show up. These menu items are shown in orange in the screenshots.
 
@@ -510,7 +510,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Release Title - This is a regular expression matched against the release title and, after download, the filename on disk. (Note: Whisparr only considers text after the movie title and year which means anything preceding the title is ignored.)
 - Edition - This tag is matched against any Editions Whisparr may parse. You can put any value Whisparr will try to match that against what it parsed (case-insensitive).
 - Language - This language is matched against any language(s) Whisparr parses. All languages previously selectable in profiles work here.
-- [Indexer Flag](/whisparr/settings#indexer-flags) - This tag is matched against any Indexer Flags that Whisparr may parse.
+- [Indexer Flag](../whisparr/settings.md#indexer-flags) - This tag is matched against any Indexer Flags that Whisparr may parse.
 - Source - The source where a release was ripped from (e.g. BLURAY).
 - Resolution - The resolution parsed from either the release name or mediainfo (if available).
 - Quality Modifier - Quality Modifier sets things like Telescene, Telesync, Remux, Regional. It disambiguates a given source and resolution pair when there are multiple quality (source) types that can apply.
@@ -538,11 +538,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Indexers
 
 !!! info
-    Information on supported indexers can be found at the [More Info (Supported)](/whisparr/supported#indexers) page for this section
+    Information on supported indexers can be found at the [More Info (Supported)](../whisparr/supported.md#indexers) page for this section
 
 ## Supported Indexers
 
-- A list of supported indexers is located in the [Whisparr supported indexers documentation](/whisparr/supported#indexers)
+- A list of supported indexers is located in the [Whisparr supported indexers documentation](../whisparr/supported.md#indexers)
 
 ### Indexer Settings
 
@@ -553,7 +553,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Usenet Indexer Configuration
 
 - Newznab - Here you will find presets of popular usenet indexers (that are prefilled out, all you will need is your API key which is provided by the usenet indexer of your choice) along with the ability to create a custom Indexer
-- Software that works with usenet and integrates quite well with Whisparr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](/prowlarr) which integrate with both Usenet and Torrents
+- Software that works with usenet and integrates quite well with Whisparr are [NZBHydra2](https://github.com/theotherp/nzbhydra2/) or [Prowlarr](../prowlarr.md) which integrate with both Usenet and Torrents
 - Regardless if you select a pre-filled out indexer or a custom indexer setup you will be presented with a new window to input all your settings
 - Choose from the presets or add a custom indexer (such as NZBHydra2 or Prowlarr)
 - Name - The name of the indexer in Whisparr
@@ -574,7 +574,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ### Torrent Tracker Configuration
 
 - As with Usenet there are an assortment of prefilled out Torrent tracker information. If you are not a member of any of these these specific trackers they will not do you any good.
-- One of the best and simplest ways to utilize Torrent trackers that are not natively supported with Whisparr is to utilize a second program such as [Prowlarr](/prowlarr) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Whisparr as a search indexer that houses all your information and sends it to Whisparr.
+- One of the best and simplest ways to utilize Torrent trackers that are not natively supported with Whisparr is to utilize a second program such as [Prowlarr](../prowlarr.md) or [Jackett](https://github.com/Jackett/Jackett). These software pair well with Whisparr as a search indexer that houses all your information and sends it to Whisparr.
 - Torznab - This option will set you up with a Jackett preset, if you utilize multiple trackers you will need to have each entry have a unique name
 - Torznab Indexer
 - Choose from the presets or add a custom indexer (such as Jackett)
@@ -622,7 +622,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
   - This is helpful to delay searching for a release to give the community time to perform the best encodes.
   - Typically, a Movie Availability of `Released` with a delay of `-21` or `-14` is suggested.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Whisparr find movies?](/whisparr/faq#how-does-whisparr-find-movies) for a better understanding of how RSS Sync will help you
+  - Please see [How does Whisparr find movies?](../whisparr/faq.md#how-does-whisparr-find-movies) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Whisparr has been offline for an extended period of time, Whisparr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -633,7 +633,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Download Clients
 
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](/whisparr/supported#download-clients) page for this section
+    Information on supported download clients can be found at the [More Info (Supported)](../whisparr/supported.md#download-clients) page for this section
 
 ## Overview
 
@@ -663,7 +663,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located in the [Whisparr supported download clients documentation](/whisparr/supported#downloadclient)
+- A list of supported download clients is located in the [Whisparr supported download clients documentation](../whisparr/supported.md#downloadclient)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -778,12 +778,12 @@ If you download using a BitTorrent client, the process is slightly different:
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Whisparr/Whisparr-remote-path-mapping/)
 
 !!! info
-    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](../docker-guide.md) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 # Import Lists
 
 !!! info
-    Information on supported list types can be found at the [More Info (Supported)](/whisparr/supported#lists) page for this section
+    Information on supported list types can be found at the [More Info (Supported)](../whisparr/supported.md#lists) page for this section
 
 ## Lists
 
@@ -798,7 +798,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 ## List Options
 
-- (Advanced Option) List Update Interval - How often should Whisparr poll the list for updates?  [This is a minimum of 6 hours.](/whisparr/faq#why-are-lists-sync-times-so-long-and-can-i-change-it)
+- (Advanced Option) List Update Interval - How often should Whisparr poll the list for updates?  [This is a minimum of 6 hours.](../whisparr/faq.md#why-are-lists-sync-times-so-long-and-can-i-change-it)
 - (Advanced Option) Clean Library Level - Movies in library will be removed or unmonitored if not in your list(s)
   - Disabled - Do not clean the library (Recommended)
   - Log Only - Only log the movies are not on the list(s) and take no other actions
@@ -813,7 +813,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 # Connect
 
 !!! info
-    Information on supported connection types can be found at the [More Info (Supported)](/whisparr/supported#notifications) page for this section
+    Information on supported connection types can be found at the [More Info (Supported)](../whisparr/supported.md#notifications) page for this section
 
 ## Connections
 
@@ -845,7 +845,7 @@ Connections are how you want Whisparr to communicate with the outside world.
 ## Metadata Consumers
 
 !!! info
-    Information on supported metadata consumers can be found at the [More Info (Supported)](/whisparr/supported#metadata) page for this section
+    Information on supported metadata consumers can be found at the [More Info (Supported)](../whisparr/supported.md#metadata) page for this section
 
 Here you can select the type of metadata that will be consumed by your media player
 
@@ -931,7 +931,7 @@ Proxy - This option allows you to run the information your Whisparr pulls and se
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Whisparr that you are running on.
-  - [Please see this FAQ entry for more information](/whisparr/faq#how-do-i-update-whisparr)
+  - [Please see this FAQ entry for more information](../whisparr/faq.md#how-do-i-update-whisparr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Whisparr built-in updater or a script
   - Built-in - Use Whisparr's own updater
