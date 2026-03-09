@@ -1,5 +1,5 @@
 # MkDocs and plugins
-mkdocs-material==9.6.7
+mkdocs-material==9.7.4
 mkdocs-awesome-pages-plugin==2.10.1
 mkdocs-git-revision-date-localized-plugin==1.5.1
 mkdocs-glightbox==0.5.2
@@ -8,8 +8,8 @@ mkdocs-redirects==1.2.2
 
 # Prowlarr indexer update script
 requests==2.32.5
-pycountry==23.12.11
-python_iso639==2024.2.7
+pycountry==26.2.16
+python_iso639==2026.1.31
 
 # Development
 pre-commit
