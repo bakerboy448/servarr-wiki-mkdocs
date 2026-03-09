@@ -278,7 +278,8 @@ Write-Log 'END ====================='
   - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop radarr`
   - Disable automatic updates on one of your Radarr Instances`
 
-> Below is an example script to create a Radarr4K instance. The below systemd creation script will use a data directory of `/var/lib/radarr4k/`. Ensure the directory exists or modify it as needed.{.is-danger}
+!!! danger
+    Below is an example script to create a Radarr4K instance. The below systemd creation script will use a data directory of `/var/lib/radarr4k/`. Ensure the directory exists or modify it as needed.
 
 ```shell
 cat << EOF | sudo tee /etc/systemd/system/radarr4k.service > /dev/null
