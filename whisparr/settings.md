@@ -119,13 +119,16 @@ Also, note that for each individual settings page, there are some options at the
 
 # Media Management
 
-> Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar{.is-info}
+!!! info
+    Some of these settings are only visible through `Show Advanced Settings` which is on the top bar under the search bar
 
 ## Community Naming Suggestions
 
-> Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Whisparr/Whisparr-recommended-naming-scheme/) {.is-info}
+!!! info
+    Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Whisparr/Whisparr-recommended-naming-scheme/) 
 
-> Starting from v4.0.0.5720, Whisparr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}` {.is-warning}
+!!! warning
+    Starting from v4.0.0.5720, Whisparr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}` 
 
 - Movie Files: `{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}][{Mediainfo VideoCodec}]{-Release Group}`
 
@@ -197,11 +200,11 @@ Also, note that for each individual settings page, there are some options at the
 - `{MediaInfo VideoDynamicRange}` = HDR
 - `{MediaInfo VideoDynamicRangeType}` = DV HDR10
 
-> `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.
-{.is-info}
+!!! info
+    `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.
 
-> `MediaInfo VideoDynamicRangeType` will give possible values of: DV, DV HDR10, DV HLG, DV SDR, HDR10, HDR10Plus, HLG, and PQ.
-{.is-info}
+!!! info
+    `MediaInfo VideoDynamicRangeType` will give possible values of: DV, DV HDR10, DV HLG, DV SDR, HDR10, HDR10Plus, HLG, and PQ.
 
 ### Release Group
 
@@ -215,17 +218,19 @@ Also, note that for each individual settings page, there are some options at the
 
 - `{Custom Formats}` = Surround Sound x264
 
-> Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming {.is-info}
+!!! info
+    Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming 
 
 ### Original
 
 - `{Original Title}` = Movie.Title.HDTV.x264-EVOLVE
 - `{Original Filename}` = Movie.title.hdtv.x264-EVOLVE
 
-> `Original Title` is the release name and it is what is suggested to be used.
-{.is-info}
+!!! info
+    `Original Title` is the release name and it is what is suggested to be used.
 
->`Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yuti`.{.is-warning}
+!!! warning
+    `Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yuti`.
 
 ## Movie Folder Format
 
@@ -276,7 +281,8 @@ Here you will set the naming convention for the folder that contains the season 
 - > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
 - > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
 
-> [Use custom formats for automatic upgrades to propers/repacks](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/) {.is-info}
+!!! info
+    [Use custom formats for automatic upgrades to propers/repacks](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/) 
 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Whisparr to read parts of the file which may cause high disk or network activity during scans.
 - Rescan Movie Folder after Refresh - Rescan the series folder after refreshing the series
@@ -291,21 +297,24 @@ Here you will set the naming convention for the folder that contains the season 
 - Recycling Bin - Movie files will go here when deleted instead of being permanently deleted
 - Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
-> Files in the recycle bin older than the selected number of days will be cleaned up automatically {.is-warning}
+!!! warning
+    Files in the recycle bin older than the selected number of days will be cleaned up automatically 
 
 ## Permissions
 
 - Set Permissions - Should `chmod` be run when files are imported/renamed?
   - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
 
-> The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
-{.is-info}
+!!! info
+    The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
 
-> This only works if the user running `Whisparr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
+!!! warning
+    This only works if the user running `Whisparr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
 
 - chown Group - Group name or GID. Use GID for remote file systems
 
-> This only works if the user running `Whisparr` is the owner of the file. It's better to ensure the download client sets the permissions properly.{.is-warning}
+!!! warning
+    This only works if the user running `Whisparr` is the owner of the file. It's better to ensure the download client sets the permissions properly.
 
 ## Root Folders
 
@@ -313,13 +322,14 @@ Path - This shows the path to your media library
 Free Space - This is the free space being reported to Whisparr from the system
 Unmapped Folders - These are folders that do not have a Movie associated to it
 
->The `X` at the end will remove this root path{.is-warning}
+!!! warning
+    The `X` at the end will remove this root path
 
 Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Whisparr to scan existing media.
 
-> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
-> \* If you're using an SMB mount ensure `nobrl` is enabled.
-{.is-warning}
+!!! warning
+    \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
+    \* If you're using an SMB mount ensure `nobrl` is enabled.
 
 # Profiles
 
@@ -327,10 +337,11 @@ Add Root Folder - This allows you to select a root path for a place to either pl
 
 - Set profiles for the quality of movies you're looking to download.
 
-> When selecting an existing profile or adding an additional profile a new window will appear{.is-info}
+!!! info
+    When selecting an existing profile or adding an additional profile a new window will appear
 
-> Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
-{.is-info}
+!!! info
+    Note: The quality which has a blue box is the quality at which any media with this profile will continue to be upgraded to.
 
 - Plus icon (<kb>+</kb>) - Create a new quality profile
 
@@ -338,16 +349,16 @@ Add Root Folder - This allows you to select a root path for a place to either pl
 - Upgrades Allowed - When this option is checked and you tell Whisparr to download a `WEB 1080p` as it is the first release of a specific movie then later somebody is able to upload a `Bluray-1080p` Whisparr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
 - Upgrade Until - Once this quality is reached Whisparr will no longer download movies
 
-> Note: This is only applicable if you have `Bluray-1080p` higher than `WEB 1080p` within the `Qualities` section
-{.is-warning}
+!!! warning
+    Note: This is only applicable if you have `Bluray-1080p` higher than `WEB 1080p` within the `Qualities` section
 
 - Qualities - Qualities higher in the list are more preferred even if not checked. Qualities within the same group are equal. Only checked qualities are wanted.
   - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups. [See TRaSh's Guide for how to Merge Qualities](https://trash-guides.info/merge-quality)
 
   - [See Qualities](#qualities-defined)
 
-> By default the qualities are set from lowest (bottom) to highest (top)
-{.is-info}
+!!! info
+    By default the qualities are set from lowest (bottom) to highest (top)
 
 - Language - Select your preferred language
 
@@ -375,14 +386,15 @@ Delay profiles are also helpful if you want to emphasize one protocol (Usenet or
 
 The timer begins as soon as Whisparr detects a movie has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
-> The clock starts from the releases uploaded time and not from the time Whisparr sees it. {.is-info}
+!!! info
+    The clock starts from the releases uploaded time and not from the time Whisparr sees it. 
 
 During the delay period, any new releases that become available will be noted by Whisparr. When the delay timer expires, Whisparr will download the single release which best matches your quality preferences.
 
 The timer period can be different for Usenet and Torrents. Each profile can be associated with one or more tags to allow you to customize which shows have which profiles. A delay profile with no tag is considered the default and applies to all shows that do not have a specific tag.
 
-> Delay profiles start from the timestamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
-{.is-warning}
+!!! warning
+    Delay profiles start from the timestamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
 
 ### Uses
 
@@ -394,14 +406,15 @@ Delay profiles are also helpful if you want to emphasize one protocol (Usenet or
 
 The timer begins as soon as Whisparr detects a books has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
-> The clock starts from the releases uploaded time and not from the time Whisparr sees it. {.is-info}
+!!! info
+    The clock starts from the releases uploaded time and not from the time Whisparr sees it. 
 
 During the delay period, any new releases that become available will be noted by Whisparr. When the delay timer expires, Whisparr will download the single release which best matches your quality preferences.
 
 The timer period can be different for Usenet and Torrents. Each profile can be associated with one or more tags to allow you to customize which shows have which profiles. A delay profile with no tag is considered the default and applies to all shows that do not have a specific tag.
 
-> Delay profiles start from the time stamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
-{.is-warning}
+!!! warning
+    Delay profiles start from the time stamp that the indexer reports the release was uploaded. This means that any content older than the number of minutes you have set are not impacted in any way by your delay profile, and will be downloaded immediately. In addition, **any manual searches** for content (non-RSS feed searches) will ignore delay profile settings.
 
 #### Examples
 
@@ -480,7 +493,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Name - The Name of the Custom Format
 - Include Custom Format when Renaming - Include the Name of the Custom Format in Renaming?
 
-> Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Whisparr uses. {.is-info}
+!!! info
+    Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Whisparr uses. 
 
 ## Custom Format Conditions
 
@@ -521,8 +535,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 
 # Indexers
 
-> Information on supported indexers can be found at the [More Info (Supported)](/whisparr/supported#indexers) page for this section
-{.is-info}
+!!! info
+    Information on supported indexers can be found at the [More Info (Supported)](/whisparr/supported#indexers) page for this section
 
 ## Supported Indexers
 
@@ -608,15 +622,16 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
   - Please see [How does Whisparr find movies?](/whisparr/faq#how-does-whisparr-find-movies) for a better understanding of how RSS Sync will help you
 
-> If Whisparr has been offline for an extended period of time, Whisparr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.{.is-info}
+!!! info
+    If Whisparr has been offline for an extended period of time, Whisparr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
 
 - Whitelisted Subtitle Tags - Tags entered here will not be considered hardcoded subtitles.
 - Allow Hardcoded Subs - If enabled, allow releases with hardcoded subtitles to be downloaded automatically
 
 # Download Clients
 
-> Information on supported download clients can be found at the [More Info (Supported)](/whisparr/supported#download-clients) page for this section
-{.is-info}
+!!! info
+    Information on supported download clients can be found at the [More Info (Supported)](/whisparr/supported#download-clients) page for this section
 
 ## Overview
 
@@ -706,7 +721,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 |     uTorrent      | :white_check_mark: |                             :white_check_mark:                             |
 |       Vuze        | :white_check_mark: |                             :white_check_mark:                             |
 
-> ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Whisparr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.{.is-info}
+!!! info
+    ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Whisparr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.
 
 ## Completed Download Handling
 
@@ -759,13 +775,13 @@ If you download using a BitTorrent client, the process is slightly different:
 - If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect.  The typical solution is to add and remove the mapping.
 - [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Whisparr/Whisparr-remote-path-mapping/)
 
-> If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
-{.is-info}
+!!! info
+    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](/docker-guide) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
 
 # Import Lists
 
-> Information on supported list types can be found at the [More Info (Supported)](/whisparr/supported#lists) page for this section
-{.is-info}
+!!! info
+    Information on supported list types can be found at the [More Info (Supported)](/whisparr/supported#lists) page for this section
 
 ## Lists
 
@@ -794,8 +810,8 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 # Connect
 
-> Information on supported connection types can be found at the [More Info (Supported)](/whisparr/supported#notifications) page for this section
-{.is-info}
+!!! info
+    Information on supported connection types can be found at the [More Info (Supported)](/whisparr/supported#notifications) page for this section
 
 ## Connections
 
@@ -826,8 +842,8 @@ Connections are how you want Whisparr to communicate with the outside world.
 
 ## Metadata Consumers
 
-> Information on supported metadata consumers can be found at the [More Info (Supported)](/whisparr/supported#metadata) page for this section
-{.is-info}
+!!! info
+    Information on supported metadata consumers can be found at the [More Info (Supported)](/whisparr/supported#metadata) page for this section
 
 Here you can select the type of metadata that will be consumed by your media player
 
@@ -848,8 +864,8 @@ Kodi will be one of the most commonly used options here if that is the software 
   - You want a specific Release Profile to only apply to a specific movie. You would create a tag and assign the Release Profile and Site that tag.
   - This process is the same for Delay Profiles.
 
-> Note: Tags do not influence any "Custom Formats", "Quality Profiles" or any other aspect not mentioned above.
-{.is-info}
+!!! info
+    Note: Tags do not influence any "Custom Formats", "Quality Profiles" or any other aspect not mentioned above.
 
 # General
 
@@ -861,18 +877,18 @@ Kodi will be one of the most commonly used options here if that is the software 
   - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
 - Port Number - The port number that you are wanting to use to access the webUI for Whisparr
 
-> Note: If using Docker do not touch this setting.
-{.is-warning}
+!!! warning
+    Note: If using Docker do not touch this setting.
 
 - URL Base - For reverse proxy support, default is empty
 
-> Note: If using a reverse proxy (example: mydomain.com/whisparr) you would enter '/whisparr' for URL Base.
-{.is-info}
+!!! info
+    Note: If using a reverse proxy (example: mydomain.com/whisparr) you would enter '/whisparr' for URL Base.
 
 - Enable SSL - If you have SSL credentials and would like to secure communication to and from your Whisparr enable this option.
 
-> Note: Do not use this unless you know what you're doing.
-{.is-warning}
+!!! warning
+    Note: Do not use this unless you know what you're doing.
 
 ## Security
 
@@ -932,8 +948,8 @@ Proxy - This option allows you to run the information your Whisparr pulls and se
 - (Advanced Option) Interval - How often would you like Whisparr to make a backup
 - (Advanced Option) Retention - How long would you like Whisparr to hold on to each backup. After a new backup is made the oldest backup will be removed
 
-> Manual backups are retained forever, stored in the same folder, and are named differently.
-{.is-info}
+!!! info
+    Manual backups are retained forever, stored in the same folder, and are named differently.
 
 # UI
 

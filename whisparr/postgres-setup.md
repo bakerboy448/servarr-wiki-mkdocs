@@ -15,8 +15,8 @@ This document will go over the key points of migrating and setting up Postgres s
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
 
-> Postgres databases are NOT backed up by Whisparr, any backups must be implemented and maintained by the user
-{.is-danger}
+!!! danger
+    Postgres databases are NOT backed up by Whisparr, any backups must be implemented and maintained by the user
 
 ## Setting up Postgres
 
@@ -41,7 +41,8 @@ Whisparr needs two databases, the default names of these are:
 - `whisparr-main`   This is used to store all configuration and history
 - `whisparr-log`    This is used to store events that produce a logentry
 
-> Whisparr will not create the databases for you. Make sure you create them ahead of time{.is-warning}
+!!! warning
+    Whisparr will not create the databases for you. Make sure you create them ahead of time
 
 Create the databases mentioned above using your favorite method - for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
 
@@ -69,7 +70,8 @@ Only **after creating** both databases you can start the Whisparr migration from
 
 ## Migrating data
 
-> If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide! {.is-info}
+!!! info
+    If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide! 
 
 To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
 
@@ -77,7 +79,8 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
 
-> Do not drop any tables in the Postgres instance {.is-danger}
+!!! danger
+    Do not drop any tables in the Postgres instance 
 
 Before starting a migration please ensure that you have run Whisparr against the created Postgres databases **at least once** successfully. Begin the migration by doing the following:
 
@@ -101,8 +104,8 @@ DELETE FROM "DelayProfiles"
       docker run --rm -v /absolute/path/to/whisparr.db:/whisparr.db:ro --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /whisparr.db "postgresql://qstick:qstick@localhost/whisparr-main"
       ```
 
-> With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
-{.is-info}
+!!! info
+    With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
 
 2. For those having the issues POST-MIGRATION from SQLite run the following:
 

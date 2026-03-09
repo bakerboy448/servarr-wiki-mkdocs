@@ -5,9 +5,11 @@ tags:
   - whisparr
   - appdata
 ---
-> Below are the default paths for the application data directory {.is-info}
+!!! info
+    Below are the default paths for the application data directory 
 
-> All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
+!!! warning
+    All instances of `$USER` are placeholders for the user the application is running under. 
 
 # Windows
 
