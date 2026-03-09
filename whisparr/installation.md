@@ -10,7 +10,7 @@ tags:
 ---
 # By Platform
 
-[<i class="fab fa-windows" style="font-size: 3em;"></i>](/whisparr/installation/windows)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-linux" style="font-size: 3em;"></i>](/whisparr/installation/linux)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-apple" style="font-size: 3em;"></i>](/whisparr/installation/macos)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-freebsd" style="font-size: 3em;"></i>](/whisparr/installation/freebsd)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="fab fa-docker" style="font-size: 3em;"></i>](/whisparr/installation/docker)
+[:fontawesome-brands-windows:](/whisparr/installation/windows)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-linux:](/whisparr/installation/linux)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-apple:](/whisparr/installation/macos)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-freebsd:](/whisparr/installation/freebsd)&nbsp;&nbsp;&nbsp;&nbsp;[:fontawesome-brands-docker:](/whisparr/installation/docker)
 
 # Recommended Guides
 
