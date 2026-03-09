@@ -21,7 +21,7 @@ If you want an easy life, follow this community provided and maintained `Easy In
 
 **For the official installation instructions that are 'Hands on' follow the [Debian / Ubuntu Hands on Install](#debian-ubuntu-hands-on-install) steps further below.**
 
-- [\*Arr Community Installation Script](/install-script)
+- [\*Arr Community Installation Script](../../install-script.md)
 
 ### Debian / Ubuntu Hands on Install
 
@@ -134,7 +134,7 @@ sudo journalctl --since today -u prowlarr
 ```
 
 !!! info
-    If Prowlarr v2.1.5.5216+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](/prowlarr/faq#prowlarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
+    If Prowlarr v2.1.5.5216+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](../../prowlarr/faq.md#prowlarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
 
 ---
 

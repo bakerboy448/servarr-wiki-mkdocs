@@ -11,7 +11,7 @@ tags:
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
 !!! info
-    For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
+    For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](../../docker-guide.md) wiki article.
 
 Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info/Hardlinks/How-to-setup-for/Synology/)
 
@@ -31,7 +31,7 @@ Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info
   - Pulls every tag on update when you don't set a specific tag
   - Capabilities are hidden and some don't work at all on ARM platforms
 
-See this [Docker Guide](/docker-guide) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
+See this [Docker Guide](../../docker-guide.md) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
 
 ## Install Prowlarr
 
