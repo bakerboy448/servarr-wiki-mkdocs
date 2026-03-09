@@ -1,13 +1,15 @@
 ---
 title: Radarr Appdata Directory
 description: Guide to Radarr application data directory structure, configuration files, and data management
-published: true
-date: 2025-11-18T10:35:55.246Z
-tags: radarr, appdata, configuration, directory, files, data, structure
-editor: markdown
-dateCreated: 2021-05-25T02:34:50.549Z
+tags:
+  - radarr
+  - appdata
+  - configuration
+  - directory
+  - files
+  - data
+  - structure
 ---
-
 > Below are the default paths for the application data directory {.is-info}
 
 > All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}

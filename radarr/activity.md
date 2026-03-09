@@ -1,13 +1,14 @@
 ---
 title: Radarr Activity
 description: Monitor download progress, search history, and queue management in Radarr
-published: true
-date: 2022-02-06T09:07:15.520Z
-tags: radarr, activity, queue, downloads, history, monitoring
-editor: markdown
-dateCreated: 2021-05-25T01:28:36.350Z
+tags:
+  - radarr
+  - activity
+  - queue
+  - downloads
+  - history
+  - monitoring
 ---
-
 # Activity
 
 The activity tab is where you can see past and present activities that \*Arr  has done. Including imports, deletes, upgrades, grabs, renames, and failures.
