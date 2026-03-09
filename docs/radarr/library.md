@@ -76,12 +76,12 @@ tags:
 
 # Add New
 
-![radarr-add-new-empty.png](/assets/radarr/radarr-add-new-empty.png)
+![radarr-add-new-empty.png](../assets/radarr/radarr-add-new-empty.png)
 
 - If you're looking to add a new movie, this is the page that you will be wanting to do that from.
-  - You'll find the how-to in our [Quick Start Guide](/radarr/quick-start-guide).
-- Below the search field, you can also find the Import Existing Movies button. If that is the case for you, you can find great information on that also in our [Quick Start Guide](/radarr/quick-start-guide).
-- If you get an error of "path is already configured", [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie).
+  - You'll find the how-to in our [Quick Start Guide](../radarr/quick-start-guide.md).
+- Below the search field, you can also find the Import Existing Movies button. If that is the case for you, you can find great information on that also in our [Quick Start Guide](../radarr/quick-start-guide.md).
+- If you get an error of "path is already configured", [see this FAQ entry](../radarr/faq.md#path-is-already-configured-for-an-existing-movie).
 
 # Library Import
 
@@ -92,7 +92,7 @@ Library Import allows you to import existing organized movies and each movie's f
   - Importing files from a download folder
   - Adding or Importing one or more files that are not properly named and organized in their own Movie Folder within your root folder or a folder you wish to add as a root folder
   - Any other uses that are not adding a movie to Radarr and importing the movie and its file from the root (library) folder that was input to Library Import
-- If you get an error of "path is already configured", [see this FAQ entry](/radarr/faq#path-is-already-configured-for-an-existing-movie).
+- If you get an error of "path is already configured", [see this FAQ entry](../radarr/faq.md#path-is-already-configured-for-an-existing-movie).
 
 !!! warning
     It is required that movie folders and files have the year in their name to be imported and parsed.
@@ -129,22 +129,22 @@ Discover shows recommended Movies
 !!! info
     Tip: Change the `Filter` to `New Non-Excluded` to only show movies that are not in your library.
 
-![radarr-discover-empty.png](/assets/radarr/radarr-discover-empty.png)
+![radarr-discover-empty.png](../assets/radarr/radarr-discover-empty.png)
 
 - Chances are that your Discover recommendations will be sparse if you have a new installation with few or no movies. You will need to add library content to fuel recommendation direction. You have several options:
-  1. Click on the [Add New Movie](/radarr/library#add-new) button to add movies by hand.
-  1. Click on the [Import Existing Library](/radarr/library#library-import) button to import an existing library.
-  1. Click on the [Add Lists](/radarr/settings#lists) button to add a list to Radarr. Additional information about lists can be found at the [More Info (Supported)](/radarr/faq#what-are-lists-and-what-can-they-do-for-me) page for this section.
+  1. Click on the [Add New Movie](../radarr/library.md#add-new) button to add movies by hand.
+  1. Click on the [Import Existing Library](../radarr/library.md#library-import) button to import an existing library.
+  1. Click on the [Add Lists](../radarr/settings.md#lists) button to add a list to Radarr. Additional information about lists can be found at the [More Info (Supported)](../radarr/faq.md#what-are-lists-and-what-can-they-do-for-me) page for this section.
 
-![radarr-discover-add-new-movies.png](/assets/radarr/radarr-discover-add-new-movies.png)
+![radarr-discover-add-new-movies.png](../assets/radarr/radarr-discover-add-new-movies.png)
 
 - Once you've added a movie by one of the three options listed above, you will be presented with different movies to discover.
     1. Here you can select what movies you want to add to your library
     1. Here you can select all the movies that are on this list if you're feeling extra crazy
     1. Select what root path you'd like for these movies to go to once they are imported
     1. Select what availability you'd like the movie to have before it is grabbed
-    1. Select any quality profiles you have already built ([More info](/radarr/settings#quality-profiles))
+    1. Select any quality profiles you have already built ([More info](../radarr/settings.md#quality-profiles))
     1. Do you want Radarr to monitor this movie for any upgrades in quality?
     1. Would you like Radarr to automatically search for this movie after you add it?
-    1. Do you want Radarr to exclude these movies from any lists that would be imported? ([More info](/radarr/settings#list-exclusion))
+    1. Do you want Radarr to exclude these movies from any lists that would be imported? ([More info](../radarr/settings.md#list-exclusion))
     1. Finally, Add the movie to your library.

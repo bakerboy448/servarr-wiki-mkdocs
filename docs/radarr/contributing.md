@@ -14,7 +14,7 @@ We're always looking for people to help make Radarr even better, there are a num
 
 # Documentation
 
-Setup guides, [FAQ](/radarr/faq), the more information we have on the [wiki](https://wiki.servarr.com/radarr) the better.
+Setup guides, [FAQ](../radarr/faq.md), the more information we have on the [wiki](https://wiki.servarr.com/radarr) the better.
 
 # Development
 
