@@ -1,6 +1,6 @@
 ---
 title: Prowlarr Search
-description: 
+description: How to perform searches from within Prowlarr
 tags:
   - prowlarr
 ---

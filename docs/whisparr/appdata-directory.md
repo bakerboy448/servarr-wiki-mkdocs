@@ -1,6 +1,6 @@
 ---
 title: Whisparr Appdata Directory
-description: 
+description: Whisparr application data directory locations
 tags:
   - whisparr
   - appdata
