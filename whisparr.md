@@ -10,8 +10,8 @@ tags:
 ---
 ![128.png](/assets/whisparr/logos/128.png)
 
-> Whisparr is an adult video collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new sites and scenes and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
-{.is-info}
+!!! info
+    Whisparr is an adult video collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new sites and scenes and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
 # Getting Started
 

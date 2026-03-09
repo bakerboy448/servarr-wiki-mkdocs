@@ -40,8 +40,8 @@ VPNs can cause significant problems with Servarr applications when used incorrec
 - Only your **torrent client** should be behind a VPN - not the \*Arr applications
 - VPNs are often unnecessary and cause more problems than they solve
 
-> **To be clear it is not a matter if VPNs will cause issues with the \*Arr Apps, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
-{.is-warning}
+!!! warning
+    **To be clear it is not a matter if VPNs will cause issues with the \*Arr Apps, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
 
 ## When VPNs are Needed
 
@@ -71,8 +71,8 @@ For enhanced privacy and encrypted DNS queries:
 
 For Docker containers, see the [Docker DNS documentation](https://docs.docker.com/config/containers/container-networking/#dns-services) for configuration instructions.
 
-> **Note**: These providers offer comprehensive setup instructions for browsers, operating systems, routers, and mobile devices.
-{.is-info}
+!!! info
+    **Note**: These providers offer comprehensive setup instructions for browsers, operating systems, routers, and mobile devices.
 
 ## Why Gluetun is Usually NOT Needed
 
@@ -93,15 +93,15 @@ Use download clients with built-in VPN support:
 - **[Hotio qBittorrent](https://hotio.dev/containers/qbittorrent/)** - Built-in WireGuard VPN support
 - **[Binhex VPN containers](https://github.com/binhex/)** - OpenVPN support (e.g., `binhex/arch-qbittorrentvpn`)
 
-> **Important**: When using VPN containers, configure other containers to connect using the `.internal` domain suffix (e.g., `qbittorrent.internal` instead of just `qbittorrent`). This ensures reliable DNS resolution through Docker's built-in DNS, especially important with VPN routing. See the [Docker Guide](/docker-guide#using-internal-domain-for-container-communication) for more details.
-{.is-warning}
+!!! warning
+    **Important**: When using VPN containers, configure other containers to connect using the `.internal` domain suffix (e.g., `qbittorrent.internal` instead of just `qbittorrent`). This ensures reliable DNS resolution through Docker's built-in DNS, especially important with VPN routing. See the [Docker Guide](/docker-guide#using-internal-domain-for-container-communication) for more details.
 
 ### Multiple Download Clients
 
 Use **[Hotio's base image](https://hotio.dev/containers/base/)** and route all download clients through it. This is the only acceptable use case for sharing a VPN container.
 
-> **Important**: When routing multiple download clients through a VPN container, always use the `.internal` domain suffix for container communication (e.g., `sabnzbd.internal`, `qbittorrent.internal`). This provides reliable DNS resolution regardless of VPN routing complexity.
-{.is-warning}
+!!! warning
+    **Important**: When routing multiple download clients through a VPN container, always use the `.internal` domain suffix for container communication (e.g., `sabnzbd.internal`, `qbittorrent.internal`). This provides reliable DNS resolution regardless of VPN routing complexity.
 
 ### Selective VPN (Prowlarr Indexers Only)
 
@@ -172,5 +172,5 @@ If containers cannot communicate when using VPN:
 
 ---
 
-> **Remember**: The best VPN setup is often no VPN at all. Only use VPNs when you have specific requirements, and always prefer simple, tested solutions over complex setups.
-{.is-success}
+!!! success
+    **Remember**: The best VPN setup is often no VPN at all. Only use VPNs when you have specific requirements, and always prefer simple, tested solutions over complex setups.
