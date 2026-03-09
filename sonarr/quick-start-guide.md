@@ -150,9 +150,8 @@ Downloading and importing is where most people experience issues. From a high le
 # How to import your existing organized media library
 
 > Note that Sonarr does not regularly search for Episodes.  See the FAQ Entry for details to understand how Sonarr works.
-[How does Sonarr find episodes?](/sonarr/faq#how-does-sonarr-find-episodes)
-{.is-info}
-
+!!! info
+    [How does Sonarr find episodes?](/sonarr/faq#how-does-sonarr-find-episodes)
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 Coming soon - Contributions Welcome
