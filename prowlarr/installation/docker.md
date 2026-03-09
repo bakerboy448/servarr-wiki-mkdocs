@@ -10,14 +10,15 @@ tags:
 
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
 
-> For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
-{.is-info}
+!!! info
+    For a more detailed explanation of docker and suggested practices, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
 
 Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info/Hardlinks/How-to-setup-for/Synology/)
 
 ## Portainer
 
-> **Portainer should be avoided for setting up docker containers** {.is-danger}
+!!! danger
+    **Portainer should be avoided for setting up docker containers** 
 
 - Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
 - Portainer should only for viewing docker container logs / container status.
