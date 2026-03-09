@@ -30,7 +30,7 @@ Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info
   - Pulls every tag on update when you don't set a specific tag
   - Capabilities are hidden and some don't work at all on ARM platforms
 
-See this [Docker Guide](/docker-guide) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
+See this [Docker Guide](../../docker-guide.md) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
 
 ## Avoid Common Pitfalls
 
@@ -52,7 +52,7 @@ Permissions and ownership of files is one of the most common problems for Radarr
 Keep in mind that Radarr will need read and write to the download folders as well as the final folders.
 
 !!! info
-    For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](/docker-guide) wiki article.
+    For a more detailed explanation of these issues, see [The Best Docker Setup and Docker Guide](../../docker-guide.md) wiki article.
 
 ## Install Radarr
 
