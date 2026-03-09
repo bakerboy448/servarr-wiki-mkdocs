@@ -115,7 +115,7 @@ This is crucial, as it keeps all the data files from both instances in
 
 1. Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 2. Start Radarr-4k (Service or Tray App)
-3. Open up Radarr-4k and Navigate within the app to [Settings => General => Host](/radarr/settings/#host)
+3. Open up Radarr-4k and Navigate within the app to [Settings => General => Host](../../radarr/settings/.md#host)
 4. Change `Port Number` from `7878` to a different port e.g. `7879` so Radarr and Radarr4k do not conflict
 5. You should now be able to start both apps
 6. Continue to [Dealing with Updates](#dealing-with-updates)
