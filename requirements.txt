@@ -1,5 +1,15 @@
-# Python dependencies for Prowlarr indexer script
+# MkDocs and plugins
+mkdocs-material==9.6.7
+mkdocs-awesome-pages-plugin==2.10.1
+mkdocs-git-revision-date-localized-plugin==1.5.1
+mkdocs-glightbox==0.5.2
+mkdocs-minify-plugin==0.8.0
+mkdocs-redirects==1.2.2
+
+# Prowlarr indexer update script
 requests==2.31.0
 pycountry==23.12.11
 python_iso639==2024.2.7
+
+# Development
 pre-commit
