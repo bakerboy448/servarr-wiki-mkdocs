@@ -22,7 +22,8 @@ This guide was been created by the amazing [Roxedus](https://github.com/Roxedus)
 
  First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
 
- > Do not even think about using the `latest` tag! {.is-danger}
+!!! danger
+    Do not even think about using the `latest` tag! 
 
 ```bash
 docker create --name=postgres14 \
