@@ -14,8 +14,8 @@ Synology only offer a Docker package on their `x64` based NAS. Using this method
 
 > Again, this method to install Docker on an `aarch64` NAS is **totally
 unsupported/untested** and totally at your own risk. It is entirely
-possible it will destroy your NAS. {.is-danger}
-
+!!! danger
+    possible it will destroy your NAS.
 # Summary
 
 The instructions below will:
