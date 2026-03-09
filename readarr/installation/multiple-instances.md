@@ -89,8 +89,8 @@ may have to change your paths here.
 
 > Note that **Arguments** points to the *new* folder created in step 1.
 This is crucial, as it keeps all the data files from both instances in
-separate locations. {.is-warning}
-
+!!! warning
+    separate locations.
 1. Click *Install service*. The window should close and the service
     will now be available to run.
 1. Continue to [Configuring Readarr-audiobooks](#windows-multi-config-second)
