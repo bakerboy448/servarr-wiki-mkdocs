@@ -1,13 +1,12 @@
 ---
 title: Lidarr Plugins
 description: Basic Setup and Details for Plugins beta Testing Branch
-published: true
-date: 2026-01-18T20:59:54.633Z
-tags: lidarr, installation, plugins, configuration
-editor: markdown
-dateCreated: 2025-01-18T16:05:16.687Z
+tags:
+  - lidarr
+  - installation
+  - plugins
+  - configuration
 ---
-
 # Lidarr Plugins Branch
 
 ## What are plugins

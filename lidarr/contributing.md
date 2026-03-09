@@ -1,13 +1,14 @@
 ---
 title: Lidarr Contributing
 description: Guidelines for contributing to the Lidarr project including bug reports, feature requests, and development
-published: true
-date: 2022-09-26T15:56:35.364Z
-tags: contributing, development, bug-reports, features, community, lidarr
-editor: markdown
-dateCreated: 2021-05-26T02:28:31.770Z
+tags:
+  - contributing
+  - development
+  - bug-reports
+  - features
+  - community
+  - lidarr
 ---
-
 # How to Contribute
 
 We're always looking for people to help make Lidarr even better, there are a number of ways to contribute.

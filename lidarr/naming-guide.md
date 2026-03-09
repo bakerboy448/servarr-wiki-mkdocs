@@ -1,13 +1,11 @@
 ---
 title: Lidarr File Naming Guide
 description: Common file and folder naming schemes for Lidarr music organization including custom formats and multi-disc album handling
-published: true
-date: 2026-02-06T13:23:38.191Z
-tags: lidarr, naming, configuration
-editor: markdown
-dateCreated: 2024-03-30T13:23:53.095Z
+tags:
+  - lidarr
+  - naming
+  - configuration
 ---
-
 # Lidarr File Naming Guide
 
 Lidarr users often ask about file naming formats. This guide outlines popular options and their justifications.

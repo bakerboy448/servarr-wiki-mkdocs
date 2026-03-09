@@ -1,13 +1,14 @@
 ---
 title: Lidarr Activity
 description: Monitor download progress, search history, and queue management in Lidarr
-published: true
-date: 2022-02-06T09:06:39.366Z
-tags: lidarr, activity, queue, downloads, history, monitoring
-editor: markdown
-dateCreated: 2021-06-14T21:35:25.390Z
+tags:
+  - lidarr
+  - activity
+  - queue
+  - downloads
+  - history
+  - monitoring
 ---
-
 # Activity
 
 The activity tab is where you can see past and present activities that \*Arr  has done. Including imports, deletes, upgrades, grabs, renames, and failures.
