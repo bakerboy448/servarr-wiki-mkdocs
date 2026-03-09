@@ -27,16 +27,16 @@ The Servarr Team
 
 This document will go over the key points of migrating and setting up Postgres support in Readarr.
 
-> Readarr v0.1.1.1408 or newer required
-{.is-info}
+!!! info
+    Readarr v0.1.1.1408 or newer required
 
 This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
 
-> Postgres databases are NOT backed up by Readarr, any backups must be implemented and maintained by the user
-{.is-danger}
+!!! danger
+    Postgres databases are NOT backed up by Readarr, any backups must be implemented and maintained by the user
 
-> Note that while the community migration guide is only written for **Postgres 14**. Users have **reported no issues with Postgres 15-17 inclusive**. Please note that the migration details below may not work with Postgres 15+.  **If one wishes to use a newer Postgres version than 14 they should start the application's database from scratch OR upgrade after the unsupported community migration is executed**.
-{.is-info}
+!!! info
+    Note that while the community migration guide is only written for **Postgres 14**. Users have **reported no issues with Postgres 15-17 inclusive**. Please note that the migration details below may not work with Postgres 15+.  **If one wishes to use a newer Postgres version than 14 they should start the application's database from scratch OR upgrade after the unsupported community migration is executed**.
 
 ## Setting up Postgres
 
@@ -62,7 +62,8 @@ Readarr needs three databases, the default names of these are:
 - `readarr-log`    This is used to store events that produce a logentry
 - `readarr-cache`    This is used to store GoodReads cache
 
-> Readarr will not create the databases for you. Make sure you create them ahead of time{.is-warning}
+!!! warning
+    Readarr will not create the databases for you. Make sure you create them ahead of time
 
 Create the databases mentioned above using your favorite method - for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
 
@@ -91,9 +92,11 @@ Only **after creating** all three databases you can start the Readarr migration 
 
 ## Migrating data
 
-> If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide! {.is-info}
+!!! info
+    If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide! 
 
-> Migrating an existing sqlite3 database is unsupported, and this script may not work without modifications which we cannot assist you with. We support only new installs using postgres. {.is-warning}
+!!! warning
+    Migrating an existing sqlite3 database is unsupported, and this script may not work without modifications which we cannot assist you with. We support only new installs using postgres. 
 
 To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
 
@@ -101,7 +104,8 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
 - The version packaged in Debian and Ubuntu's apt repo are too old for newer versions of Postgres (Roxedus has not tested packages in other distros).
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
 
-> Do not drop any tables in the Postgres instance {.is-danger}
+!!! danger
+    Do not drop any tables in the Postgres instance 
 
 Before starting a migration please ensure that you have run Readarr against the created Postgres databases **at least once** successfully. Begin the migration by doing the following:
 

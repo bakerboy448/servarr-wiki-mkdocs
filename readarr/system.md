@@ -107,15 +107,15 @@ The Servarr Team
 
 - Readarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Readarr requires at least version 3.9.0. Note that Readarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
-> Note that Readarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
-{.is-info}
+!!! info
+    Note that Readarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
 
 #### New update is available
 
 Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
 
-> This warning will not appear if your current version is less than 14 days old
-{.is-info}
+!!! info
+    This warning will not appear if your current version is less than 14 days old
 
 #### Cannot install update because startup folder is not writable by the user
 
@@ -150,9 +150,9 @@ Rejoice, the developers have released a new update. This generally means awesome
  proxy_set_header Connection $http_connection;
 ```
 
-> Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK
-> See <https://github.com/aspnet/AspNetCore/issues/17081>
-{.is-warning}
+!!! warning
+    Make sure you do not include proxy_set_header Connection "Upgrade"; as suggested by the nginx documentation. THIS WILL NOT WORK
+    See <https://github.com/aspnet/AspNetCore/issues/17081>
 
 For Apache2 reverse proxy, you need to enable the following modules: proxy, proxy_http, and proxy_wstunnel. Then, add this websocket tunnel directive to your vhost configuration:
 
@@ -246,8 +246,8 @@ Note: you will also need to add the websocket directive to your readarr configur
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 - Review our [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
 
-> Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
-{.is-warning}
+!!! warning
+    Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
 
 #### Bad Download Client Settings
 
@@ -390,8 +390,8 @@ Note: you will also need to add the websocket directive to your readarr configur
 
 - Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Readarr is on the most current version then triggering the update script to update Readarr. Settings=> Update
 
-> Note: If on Docker this will not update your container as a new image will need to be downloaded.
-{.is-warning}
+!!! warning
+    Note: If on Docker this will not update your container as a new image will need to be downloaded.
 
 - Backup - This will run a backup of your Readarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
 - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Readarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
@@ -403,8 +403,8 @@ Note: you will also need to add the websocket directive to your readarr configur
 - Rescan folders - This scans all book folders to see if a book exists or not, and updates the status of it appropriately.
 - RSS Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
 
-> All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
-{.is-info}
+!!! info
+    All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 
 ## Queue
 
@@ -412,8 +412,8 @@ The queue will show you running and upcoming tasks as well as a history of recen
 
 # Backup
 
-> If you're looking for how to back/restore your Readarr instance click the [Readarr FAQ backup section](/readarr/faq).
-{.is-info}
+!!! info
+    If you're looking for how to back/restore your Readarr instance click the [Readarr FAQ backup section](/readarr/faq).
 
 - Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
 
@@ -431,14 +431,15 @@ The queue will show you running and upcoming tasks as well as a history of recen
 - The update screen will show the past 5 updates that have been made as well as the current version you are on.
 - This page will also display the update notes from the Developers telling you what has been fixed or added to Readarr (Rejoice!)
 
-> A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
-{.is-info}
+!!! info
+    A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 
 # Events
 
 - The events tab will show you what has been happening within your Readarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging.
 
-> Events are the equivalent of INFO Logs. {.is-info}
+!!! info
+    Events are the equivalent of INFO Logs. 
 
 - Components - This column will tell you what component within Readarr has been triggered
 - Message - This column will tell you what message as been sent from the component from the previous column.
@@ -457,8 +458,8 @@ The queue will show you running and upcoming tasks as well as a history of recen
   - Log Files - The bread and butter of any support issue more on log files can be found here.
   - Updater Log Files - This will show the log files associated with Readarr's updater script
 
-> If you're on docker this will be empty as you should be updating by downloading a new docker image
-{.is-info}
+!!! info
+    If you're on docker this will be empty as you should be updating by downloading a new docker image
 
 - Refresh - This will refresh the current page and display any newly created logs
 - Delete - This will clear all logs allowing you to start from fresh

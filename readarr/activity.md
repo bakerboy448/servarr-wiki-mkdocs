@@ -33,8 +33,9 @@ When something is actively downloading and not yet imported into \*Arr, it will 
 
 The queue shows all items the application can recognize that is in the specified download client's category (Settings => Download Client => Category). To view all releases Options => Show Unknown. The queue is not stored anywhere within the application, but is updated via your Download Client's API responses.
 
-> For Usenet Clients, \*Arr will only look 60 items deep in the queue for potential imports! It is important not to exceed this, or you will need to clean up with manual imports when your system gets overloaded and starts missing items!.
-> Remove Completed Downloads should be enabled for your Download Client as well. {.is-warning}
+!!! warning
+    For Usenet Clients, \*Arr will only look 60 items deep in the queue for potential imports! It is important not to exceed this, or you will need to clean up with manual imports when your system gets overloaded and starts missing items!.
+    Remove Completed Downloads should be enabled for your Download Client as well. 
 
 ## Queue Action Icons
 
@@ -46,7 +47,8 @@ The queue shows all items the application can recognize that is in the specified
 
 ## Queue Statuses
 
-> Note the below is incomplete {.is-warning}
+!!! warning
+    Note the below is incomplete 
 
 | Icon       | Status                   | Description                                                                                     | Resolution Steps                                          |
 | ---------- | ------------------------ | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
@@ -70,7 +72,8 @@ On `Grabbed` statuses, you can click on the `i` icon on the right to see more de
 
 # Blocklist
 
-> Blocklist is formerly known as 'Blacklist' {.is-info}
+!!! info
+    Blocklist is formerly known as 'Blacklist' 
 
 The blocklist page shows you items that are blocklisted so they won't be downloaded again. These are failures from the automatic process or manually marked failed items. Items remain in the blocklist forever unless you manually remove them.
 

@@ -28,8 +28,8 @@ Thank you for being part of the Readarr journey. For any inquiries or assistance
 Sincerely,
 The Servarr Team
 
-> [Read More on Metadata Issues](/readarr/metadata-issues)
-{.is-info}
+!!! info
+    [Read More on Metadata Issues](/readarr/metadata-issues)
 
 # Table of Contents
 
@@ -115,13 +115,13 @@ As of Readarr v1, Authentication is Mandatory.
 
 ## How does Readarr find books
 
-> This FAQ item is a legacy FAQ Entry. Refer to [How does Readarr work?](#how-does-readarr-work)
-{.is-info}
+!!! info
+    This FAQ item is a legacy FAQ Entry. Refer to [How does Readarr work?](#how-does-readarr-work)
 
 ## How are possible downloads compared
 
-> Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)***
-{.is-info}
+!!! info
+    Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)***
 
 - The current logic [can be found here](https://github.com/Readarr/Readarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
@@ -152,8 +152,8 @@ As of Readarr v1, Authentication is Mandatory.
 - Lists are a part of Readarr that allow you to follow a given list creator.
 - Let's say that you follow a given list creator on GoodReads and really like their collection of Great Books and want to add every book on their list. You look in your Readarr and realize that you do not have those books. Well instead of searching one by one and adding those lists and then searching your indexers for those books. You can do this all at once with a List. The Lists can be set to import all the books on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that book.
 
->`CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of reading. So make sure of what you're importing before you click save.
-{.is-warning}
+!!! warning
+    `CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of reading. So make sure of what you're importing before you click save.
 
 - It is suggested that you read through the list before you import it into Readarr.
 
@@ -189,7 +189,8 @@ This change was due to not have our server get killed by people updating lists e
 
 {#rename-folders}
 
-> The same process applies for moving/changing Author paths as well{.is-info}
+!!! info
+    The same process applies for moving/changing Author paths as well
 
 1. Authors
 1. Click on "Author Editor"
@@ -214,18 +215,18 @@ This change was due to not have our server get killed by people updating lists e
 
 - `master` - ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Master&query=%24%5B0%5D.version&url=https://readarr.servarr.com/v1/update/master/changes) -    (Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. On GitHub, this is the `master` branch.
 
-> **Readarr does not yet have a stable release.**
-{.is-danger}
+!!! danger
+    **Readarr does not yet have a stable release.**
 
 - `develop` - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Develop&query=%24%5B0%5D.version&url=https://readarr.servarr.com/v1/update/develop/changes) -  (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first after nightly. It can be considered semi-stable, but is still `beta`.
 
-> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time and is tagged as pre-release.
-{.is-warning}
+!!! warning
+    **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time and is tagged as pre-release.
 
 - `nightly` - ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly&query=%24%5B0%5D.version&url=https://readarr.servarr.com/v1/update/nightly/changes) -  (Alpha/Unstable): This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.  ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
 
-> **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
-{.is-warning}
+!!! warning
+    **Warning: You may not be able to go back to `develop` after switching to this branch.** On GitHub, this is the `develop` branch.
 
 - Note: If your install is through Docker append `:testing`, `:develop`, or `:nightly` to the end of your container tag depending on who makes your builds.
 
@@ -291,8 +292,8 @@ This change was due to not have our server get killed by people updating lists e
 
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
-{.is-warning}
+!!! warning
+    Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
 
 #### Using zip backup
 
@@ -318,8 +319,8 @@ This change was due to not have our server get killed by people updating lists e
 
 #### File System Restore on Synology NAS
 
-> CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
-{.is-warning}
+!!! warning
+    CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 
 - Re-install Readarr (if applicable / not already installed)
 - Find the location of the AppData directory for Readarr
@@ -328,8 +329,8 @@ This change was due to not have our server get killed by people updating lists e
 - Stop Readarr
 - Connect to the Synology NAS through SSH and log in as root
 
-> On some installations, the user is different than the below commands: `chown -R sc-Readarr:Readarr *`
-{.is-info}
+!!! info
+    On some installations, the user is different than the below commands: `chown -R sc-Readarr:Readarr *`
 
 - Execute the following commands:
 
@@ -428,13 +429,13 @@ Depending on your OS, there are multiple possible ways.
 
 ## VPNs, Jackett, and the \*ARRs
 
-> For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
-{.is-info}
+!!! info
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
 
 - Unless you're in a repressive country like China or Australia, your BitTorrent client is typically the only thing that needs to be behind a VPN. Usenet does not require VPN protection as it uses encrypted SSL connections. For most countries including the UK, using secure DNS (like Cloudflare's 1.1.1.1 or Google's 8.8.8.8) is sufficient to resolve access issues without requiring a VPN. Other *Arr apps not connecting to trackers should not be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-> **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
-{.is-warning}
+!!! warning
+    **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
 
 - **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
@@ -469,8 +470,8 @@ This is expected. With a setup that supports [hardlinks](https://trash-guides.in
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Readarr's settings, Readarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped.
 
-> Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file.
-{.is-info}
+!!! info
+    Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file.
 
 ## Calibre is saying "Calibre rejected duplicate book" but it's not
 

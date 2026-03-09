@@ -50,13 +50,13 @@ The Servarr Team
 
 > This page is still in progress and not complete. Contributions are welcome
 
-> For a more detailed breakdown of all the settings, check [Readarr =>Settings](/readarr/settings)
-{.is-info}
+!!! info
+    For a more detailed breakdown of all the settings, check [Readarr =>Settings](/readarr/settings)
 
 In this guide we will try to explain the basic setup you need to do to get started with Readarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
-> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
-{.is-warning}
+!!! warning
+    Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
 
 # Startup
 
@@ -81,8 +81,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 - Here you will select the naming convention for the actual book files. Note that the Book folder name is defined here as well.
 - `(Advanced Option) This is where you will set the naming convention for the Author folder.`
 
-> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
-{.is-info}
+!!! info
+    This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
 
 # Folders
 
@@ -91,11 +91,11 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Create Empty Author Folders - Enable to create empty author folders when a new author is added to Readarr.
 - (Advanced Option) Delete Empty Folders - Enable to delete empty author folders when there are no remaining books for that author.
 
-> One of those boxes can be checked, but they should not BOTH be checked.
-{.is-warning}
+!!! warning
+    One of those boxes can be checked, but they should not BOTH be checked.
 
-> This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
-{.is-info}
+!!! info
+    This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
 
 # Importing
 
@@ -105,14 +105,14 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Minimum Free Space - Enter the minimum free space for the drive to have before importing stops.
 - (Advanced Option) Use Hard links instead of Copy - Check this box to use Hard links instead of Copies (for Torrents). Note that this is enabled by default.
 
-> You should ideally use this wherever possible. In order for hard links to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
-{.is-info}
+!!! info
+    You should ideally use this wherever possible. In order for hard links to be used, you must have your source/destination on the same file system (drive, partition) and mount points. [See TRaSH's Hardlink Guide for more information](https://trash-guides.info/hardlinks/)
 
 - Import Extra Files - If enabled import specified extra files located within the folder of the book when its imported
 - (Advanced Option) Import Extra Files - If Import Extra Files is enabled enter a comma separated list of extensions to import.
 
-> If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
-{.is-info}
+!!! info
+    If you are using Readarr for audiobooks, you should add .cue to this list, as it holds your chapter information!
 
 # File Management
 
@@ -126,9 +126,9 @@ First we’re going to take a look at the `Media Management` settings where we c
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
 
-> \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
-> \* `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
-{.is-info}
+!!! info
+    \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
+    \* `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
 
 - (Advanced Option) Watch Root Folders for file changes - Check this box to trigger a rescan when it is detected that the root folder had changes.
 - (Advanced Option) Rescan Author Folder after Refresh -  Choose when to rescan an author folder after refreshing the author.
@@ -145,8 +145,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 - (Advanced Option) Recycling Bin - Book files will go here when deleted instead of being permanently deleted
 - (Advanced Option) Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
-> It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
-{.is-warning}
+!!! warning
+    It is highly recommended that you use a Recycling Bin. It's easy to delete files, and recovering them is easy if you use the bin.
 
 # Root Folders and Calibre Integration
 
@@ -154,21 +154,22 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 Here we will add the root folder that Readarr will be using to import your existing organized media library and where Readarr will be importing (copy/hardlink/move) your media after your download client has downloaded it.
 
-> **The user and group you configured Readarr to run as must have read & write access to this location.** {.is-info}
+!!! info
+    **The user and group you configured Readarr to run as must have read & write access to this location.** 
 
 You may also elect to use Calibre to manage your library on this screen. Doing so will require you to run the Calibre Content Server. This is NOT Calibre-Web.
 
-> Non-Windows Users:
-> \* If you're using an NFS mount ensure `nolock` is enabled.
-> \* If you're using an SMB mount ensure `nobrl` is enabled.
-{.is-warning}
+!!! warning
+    Non-Windows Users:
+    \* If you're using an NFS mount ensure `nolock` is enabled.
+    \* If you're using an SMB mount ensure `nobrl` is enabled.
 
-> If you are going to use Calibre, the books you want to have Readarr recognize on initial library import **must already be in Calibre**. Books within the folder and not in Calibre will be ignored. Hard links are not used when adding Calibre integration.
-> **Note that you cannot add Calibre integration to a root folder after it's created.**
-{.is-danger}
+!!! danger
+    If you are going to use Calibre, the books you want to have Readarr recognize on initial library import **must already be in Calibre**. Books within the folder and not in Calibre will be ignored. Hard links are not used when adding Calibre integration.
+    **Note that you cannot add Calibre integration to a root folder after it's created.**
 
-> Your download client downloads to a download folder, and Readarr imports it to your media folder (final destination) that your media server uses. Your download folder and media folder can’t be the same location!
-{.is-warning}
+!!! warning
+    Your download client downloads to a download folder, and Readarr imports it to your media folder (final destination) that your media server uses. Your download folder and media folder can’t be the same location!
 
 Don’t forget to save your changes.
 
@@ -176,13 +177,13 @@ Don’t forget to save your changes.
 
 If you are going to use Calibre to manage your books, you need to set up the Calibre Content Server. Again, this is not Calibre-Web, but a piece of Calibre itself. You must be running Calibre, and you must set up the Content Server.
 
-> If you choose to use Calibre - you cannot change anything in Calibre's database. Failure to heed this warning will result in you needing to deleting your Readarr database and starting over
-{.is-danger}
+!!! danger
+    If you choose to use Calibre - you cannot change anything in Calibre's database. Failure to heed this warning will result in you needing to deleting your Readarr database and starting over
 
 If you're using docker, your Calibre mounted book directory and your Readarr mounted book directory must be the same.
 
-> Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through.
-{.is-info}
+!!! info
+    Please note that while Readarr is in beta; if you use Calibre it is recommended to disable Renaming in Readarr just in case an unintended bug slips through.
 
 To do this, open Calibre, and click `Preferences / Sharing over the net`
 
@@ -194,8 +195,8 @@ First, add a user account. The account DOES need "make changes" access.
 
 Then you will need to restart Calibre. Once back in, configure and start up the content server. It should show you that it's running. Set it to run automatically on startup. After saving, you will again need to restart Calibre. Make sure the sever is started when it comes back up, then you can move to the next section.
 
-> You must select "Require username and password to access the content server" in order for Readarr to properly work. If you do not, you will get an error that says "Anonymous users are not allowed to make changes" when Readarr import a book!
-{.is-info}
+!!! info
+    You must select "Require username and password to access the content server" in order for Readarr to properly work. If you do not, you will get an error that says "Anonymous users are not allowed to make changes" when Readarr import a book!
 
 ![calibreserver.png](/assets/readarr/calibreserver.png)
 
@@ -207,20 +208,20 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 
 - Use Calibre - Enable / Disable the use of Calibre Content Server to manage your Root Folder.
 
-> \* **Only for use with ebooks, cannot be used for audiobooks!**
-> \* Note that this **cannot be enabled on an existing root folder**.
-> \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
-> \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
-> \* Note that hard links do not work with Calibre integration.
-> \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
-> \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
-{.is-warning}
+!!! warning
+    \* **Only for use with ebooks, cannot be used for audiobooks!**
+    \* Note that this **cannot be enabled on an existing root folder**.
+    \* Note that this **cannot be disabled on an existing Calibre enabled root folder**.
+    \* Note that this requires **Calibre Content Server** and will not work with Calibre Web nor Calibre.
+    \* Note that hard links do not work with Calibre integration.
+    \* Note that this requires that Calibre to have `Require username and password to access the content server` to be enabled.
+    \* Failure to have `Require username and password to access the content server` enabled in Calibre will result in an error of `Anonymous users are not allowed to make changes`
 
-> There was a change in Calibre 7.2.0 which starts listening on ipv6, and it can cause a problem with readarr connections. To fix it, change the Calibre setting "The interface to listen for connections" to 0.0.0.0 in Preferences->Sharing over the net->Advanced, in calibre, and restart calibre. This should resolve the issue.
-{.is-info}
+!!! info
+    There was a change in Calibre 7.2.0 which starts listening on ipv6, and it can cause a problem with readarr connections. To fix it, change the Calibre setting "The interface to listen for connections" to 0.0.0.0 in Preferences->Sharing over the net->Advanced, in calibre, and restart calibre. This should resolve the issue.
 
-> If you choose to use Calibre - you cannot change anything in Calibre's database. Failure to heed this warning will result in you needing to deleting your Readarr database and starting over. You cannot add books, delete books, re-tag books, or convert books inside Calibre. This includes updating the metadata.
-{.is-danger}
+!!! danger
+    If you choose to use Calibre - you cannot change anything in Calibre's database. Failure to heed this warning will result in you needing to deleting your Readarr database and starting over. You cannot add books, delete books, re-tag books, or convert books inside Calibre. This includes updating the metadata.
 
 - Calibre Host - The IP/domain of the host of the Calibre Content Server
 - Calibre Port - The Port that Calibre Content Server is listening on
@@ -235,9 +236,9 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
   - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
 - Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
 
-> If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
-> \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](/readarr/faq#metadata-profile-none-allowing-foreign-releases)**
-{.is-warning}
+!!! warning
+    If you add an individual book, and select `None`\* for the [metadata profile](/readarr/settings#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
+    \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](/readarr/faq#metadata-profile-none-allowing-foreign-releases)**
 
 # Download Clients
 
@@ -245,8 +246,8 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/readarr/settings#download-clients), at the [More Info (Supported)](/readarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
-{.is-info}
+!!! info
+    See the [settings page](/readarr/settings#download-clients), at the [More Info (Supported)](/readarr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 ## {.tabset}
 

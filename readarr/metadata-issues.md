@@ -25,11 +25,11 @@ The Servarr Team
 
 # Readarr Metadata Server Updates
 
-> The Servarr dev team would like another dev/team to take over the readarr project. Otherwise it's probably just going to atrophy until it's unusable.
-{.is-danger}
+!!! danger
+    The Servarr dev team would like another dev/team to take over the readarr project. Otherwise it's probably just going to atrophy until it's unusable.
 
-> Help is wanted in pulling the ~1200 Sonarr cherry-picks from upstream and other development work. The priority would be 1) What you want to fix, 2) [Oldest sonarr-pulls first](https://github.com/Readarr/Readarr/issues?q=is%3Aopen+is%3Aissue+label%3Asonarr-pull), 3) Other fixes related to what's been pulled, 4) Everything else
-{.is-warning}
+!!! warning
+    Help is wanted in pulling the ~1200 Sonarr cherry-picks from upstream and other development work. The priority would be 1) What you want to fix, 2) [Oldest sonarr-pulls first](https://github.com/Readarr/Readarr/issues?q=is%3Aopen+is%3Aissue+label%3Asonarr-pull), 3) Other fixes related to what's been pulled, 4) Everything else
 
 Below are the summarized issues of the Readarr Metadata Server.
 For the latest updates please refer to the pinned messages in the [Readarr Discord](https://readarr.com/discord)
@@ -38,21 +38,21 @@ For the latest updates please refer to the pinned messages in the [Readarr Disco
 
 ### The Future and Open Library
 
-> **It is only anticipated that Open Library will resolve the 'Large Author Issue' and similar GoodRead's Specific Issues** It is likely it will resolve the 522 / similar metadata issues as well.
-{.is-warning}
+!!! warning
+    **It is only anticipated that Open Library will resolve the 'Large Author Issue' and similar GoodRead's Specific Issues** It is likely it will resolve the 522 / similar metadata issues as well.
 
 Due to continuous GoodReads issues - work has begun by a [community member](https://github.com/Saghen/open-library-proxy) and is also being poked at by one of the Servarr Development Team members to migrate to [OpenLibrary](https://openlibrary.org/).  Note that Readarr effectively has no active developers at this time and given the berth of the project it will be slow moving.  If you wish to assist with this - please visit us on Discord, acquire the Tester role and meet us in the appropriate channel.  Please do not ask for updates as that is not productive and updates will be shared as progress progresses.
 
-> Our priority is definitely trying to do this in a way that we do not lose any of the existing libraries - there is a mapping exercise we need to do in the back end to map between goodreads ID and the openlibrary IDs which I believe ISBN is the only solution to at the moment. However this will take a lot of work not just at the metadata server end, but also on the client app end as a migration will be required there for all users to make use of it. This is not a small piece of work due to this.
-{.is-info}
+!!! info
+    Our priority is definitely trying to do this in a way that we do not lose any of the existing libraries - there is a mapping exercise we need to do in the back end to map between goodreads ID and the openlibrary IDs which I believe ISBN is the only solution to at the moment. However this will take a lot of work not just at the metadata server end, but also on the client app end as a migration will be required there for all users to make use of it. This is not a small piece of work due to this.
 
-> We are expecting the new meta to be able to take GR IDs and translate, so the readarr code changes should be minimal at first (I would rather confirm it's working before looking at the client migration), but yes pretty much spot on. The expectation is that it doesn't break anyones existing Readarr in the process and it will fully function.
-{.is-info}
+!!! info
+    We are expecting the new meta to be able to take GR IDs and translate, so the readarr code changes should be minimal at first (I would rather confirm it's working before looking at the client migration), but yes pretty much spot on. The expectation is that it doesn't break anyones existing Readarr in the process and it will fully function.
 
 #### Community Container
 
-> These are unofficial repositories and not official nor endorsed by the Servarr Team use at your own risk
-{.is-danger}
+!!! danger
+    These are unofficial repositories and not official nor endorsed by the Servarr Team use at your own risk
 
 1. https://github.com/santarrsgrotto/readarr-docker - a Docker compose setup for running Readarr with the custom metadata server, which if you just want to help test on the client side then feel free to {Instructions Removed - Please visit discord for details}
 
@@ -98,8 +98,8 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 
 ## 2024-12 522 Issues
 
-> Resolved: As of 2024-12-28
-{.is-success}
+!!! success
+    Resolved: As of 2024-12-28
 
 - As Of: 2024-12-13
 - Updated: 2024-12-28
@@ -108,13 +108,13 @@ BookInfo is the Servarr Readarr GoodReads Metadata Proxy. Similar to Skyhook for
 
 ## Other Updates
 
-> The metadata issue was fixed on 9/17. We are still seeing a couple of 429 rate limits and a couple of failed searches, presumably while things get re-cached again and they will continue to improve as time goes on. I have not seen any issues with imports, only with searches to add authors or books. This does not fix the large author issue below, or the 3 month metadata delay. Both of those issues are being worked on with a change to OpenLibrary as the source of data, but that work is long and ongoing (you can self-apply a `!tester` role to yourself and follow along in the [#readarr-ol](https://discord.com/channels/264387956343570434/1278408662188036156) channel to see how that project is coming along, if you're curious). These are 2 separate, concurrent issues that are being solved that do not interconnect. As always, the metadata server is not open source, and there is nothing you can do to help with that part of the issue except to be patient. Dev help is not being solicited/accepted on the metadata server side of things. There are 900+ open issues on the readarr github if you're anxious to help us out. Please start there. This pin will be updated with current information. If you're reading this pin, this is the most current, accurate information about the metadata server, and there is no need to ask in the channel if things have changed.
-{.is-info}
+!!! info
+    The metadata issue was fixed on 9/17. We are still seeing a couple of 429 rate limits and a couple of failed searches, presumably while things get re-cached again and they will continue to improve as time goes on. I have not seen any issues with imports, only with searches to add authors or books. This does not fix the large author issue below, or the 3 month metadata delay. Both of those issues are being worked on with a change to OpenLibrary as the source of data, but that work is long and ongoing (you can self-apply a `!tester` role to yourself and follow along in the [#readarr-ol](https://discord.com/channels/264387956343570434/1278408662188036156) channel to see how that project is coming along, if you're curious). These are 2 separate, concurrent issues that are being solved that do not interconnect. As always, the metadata server is not open source, and there is nothing you can do to help with that part of the issue except to be patient. Dev help is not being solicited/accepted on the metadata server side of things. There are 900+ open issues on the readarr github if you're anxious to help us out. Please start there. This pin will be updated with current information. If you're reading this pin, this is the most current, accurate information about the metadata server, and there is no need to ask in the channel if things have changed.
 
 ## BookInfo Server Error HTTP 500
 
-> Resolved: As of 2024-09-17
-{.is-success}
+!!! success
+    Resolved: As of 2024-09-17
 
 - As Of: 2024-09-14
 - Updated: 2024-09-14
@@ -123,8 +123,8 @@ Text searches seem to be having a bit of a flaky issue, because it does that sea
 
 ## Rate Limiting
 
-> Resolved: As of 2024-09-17
-{.is-success}
+!!! success
+    Resolved: As of 2024-09-17
 
 - As Of: ~~2024-05-22~~ 2024-09-14
 - Updated: 2024-09-17
@@ -139,8 +139,8 @@ Text searches seem to be having a bit of a flaky issue, because it does that sea
 
 ## Data Delays
 
-> Readarr's metadata server appears to be functioning normally with no 429 or cache issues. As always, I will update this pin if things change. All pins are the current state of readarr and if anything changes, the pins will be updated accordingly.
-{.is-success}
+!!! success
+    Readarr's metadata server appears to be functioning normally with no 429 or cache issues. As always, I will update this pin if things change. All pins are the current state of readarr and if anything changes, the pins will be updated accordingly.
 
 - As Of: 2024-04-17
 - Updated: 2024-09-09
