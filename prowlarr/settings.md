@@ -61,8 +61,8 @@ Also, note that for each individual settings page, there are some options at the
 
 # Indexer Proxies
 
-> Information on supported proxy types can be found at the [More Info (Supported)](/prowlarr/supported#indexer-proxies) page for this section
-{.is-info}
+!!! info
+    Information on supported proxy types can be found at the [More Info (Supported)](/prowlarr/supported#indexer-proxies) page for this section
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
 
@@ -80,10 +80,10 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+</kb> to
 - Host - the full host path (include http and the port) to your FlareSolverr instance
 - (Advanced Setting) Request Timeout (seconds) - the [FlareSolver Request `maxTimeout` value](https://github.com/FlareSolverr/FlareSolverr#-requestget) Prowlarr should use for FlareSolverr requests. Must be between `1` second and `180` seconds (Default: `60` seconds)
 
-> \* A FlareSolverr Proxy will only be used for requests if and only if Cloudflare is detected by Prowlarr
-> \* A FlareSolverr Proxy will only be used for requests if and only if the Proxy and the Indexer have matching tags
-> \* **A Flaresolverr Proxy configured without any tags or has no indexers with matching tags it will be disabled.**
-{.is-info}
+!!! info
+    \* A FlareSolverr Proxy will only be used for requests if and only if Cloudflare is detected by Prowlarr
+    \* A FlareSolverr Proxy will only be used for requests if and only if the Proxy and the Indexer have matching tags
+    \* **A Flaresolverr Proxy configured without any tags or has no indexers with matching tags it will be disabled.**
 
 ## HTTP Proxy Settings
 
@@ -108,8 +108,8 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+</kb> to
 
 # Applications
 
-> Information on supported applications can be found at the [More Info (Supported)](/prowlarr/supported#applications) page for this section
-{.is-info}
+!!! info
+    Information on supported applications can be found at the [More Info (Supported)](/prowlarr/supported#applications) page for this section
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
 
@@ -123,8 +123,8 @@ All programs you can add are listed. You should only add programs you currently 
 
 ![addlidarr.png](/assets/prowlarr/addlidarr.png)
 
-> Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. **Also note that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories.**
-{.is-info}
+!!! info
+    Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. **Also note that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories.**
 
 ## Application Settings
 
@@ -134,13 +134,14 @@ All programs you can add are listed. You should only add programs you currently 
   - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - `Disabled` - will keep indexers from syncing with the program entirely.
 
-> `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
-{.is-warning}
+!!! warning
+    `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
 
 - Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
 - Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
 
-> Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!{.is-info}
+!!! info
+    Note that if you're using a reverse proxy, you need to add the URL Base to this! If you do not, then when the indexers sync they will be broken, and if you've selected Add and Remove Only, it will not get fixed when you edit it!
 
 - Application Server -  Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
 - API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
@@ -155,8 +156,8 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 Configure the sync profiles for to use for (an) application(s)
 
-> You can have different settings per app by creating multiple instances of the indexer
-{.is-info}
+!!! info
+    You can have different settings per app by creating multiple instances of the indexer
 
 - Name - Unique name of the Sync Profile
 - Enable RSS - For Indexers with this profile, Enable RSS Searches/Queries for the \*Arr App
@@ -168,13 +169,13 @@ Configure the sync profiles for to use for (an) application(s)
 
 {#download-clients}
 
-> Information on supported download clients can be found at the [More Info (Supported)](/prowlarr/supported#download-clients) page for this section
-{.is-info}
+!!! info
+    Information on supported download clients can be found at the [More Info (Supported)](/prowlarr/supported#download-clients) page for this section
 
 If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
 
-> Prowlarr does not sync Download Clients to the Applications.
-{.is-info}
+!!! info
+    Prowlarr does not sync Download Clients to the Applications.
 
 Click on `Settings` => `Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured to follow this guide.
 
@@ -182,8 +183,8 @@ Click on `Settings` => `Download Clients`, and then click the <kb>+</kb> to add 
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
-> Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
-{.is-info}
+!!! info
+    Client priority only matters when 2 of the same type (usenet or torrent) are added. 1 is the highest priority, and if multiple clients of the same type exist and have the same priority, Prowlarr will alternate between then.
 
 ## Usenet Client Settings
 
@@ -221,8 +222,8 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 
 # Notifications
 
-> Information on supported notification providers can be found at the [More Info (Supported)](/prowlarr/supported#notifications) page for this section
-{.is-info}
+!!! info
+    Information on supported notification providers can be found at the [More Info (Supported)](/prowlarr/supported#notifications) page for this section
 
 ## Connections
 
@@ -254,8 +255,8 @@ Here is where you will change generalized application settings such as port and 
 
 Click on `Settings` => `General`.
 
-> A lot of the options here can only be seen by clicking "Show Advanced" at the top of the screen. Any menu items in orange are only shown when show advanced is enabled.
-{.is-info}
+!!! info
+    A lot of the options here can only be seen by clicking "Show Advanced" at the top of the screen. Any menu items in orange are only shown when show advanced is enabled.
 
 ## Host
 
@@ -339,8 +340,8 @@ The default log level is `Info`. This is very basic logging. You can change it h
 - (Advanced Option) Interval - How often would you like Prowlarr to make a backup
 - (Advanced Option) Retention - How long would you like Prowlarr to hold on to each backup. After a new backup is made the oldest backup will be removed
 
-> Manual backups are retained forever, stored in the same folder, and are named differently.
-{.is-info}
+!!! info
+    Manual backups are retained forever, stored in the same folder, and are named differently.
 
 # UI
 

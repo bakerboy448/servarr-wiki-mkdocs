@@ -76,10 +76,10 @@ tags:
   - [Proposed changes](#proposed-changes)
   - [Credit](#credit)
 
-> Documentation is synced from the Jackett Team's [Wiki](https://github.com/Jackett/Jackett/wiki/Definition-format). Last sync: August 16, 2025
->
-> Cardigann YML definitions are maintained in the [Prowlarr/Indexers repository](https://github.com/Prowlarr/Indexers)
-{.is-info}
+!!! info
+    Documentation is synced from the Jackett Team's [Wiki](https://github.com/Jackett/Jackett/wiki/Definition-format). Last sync: August 16, 2025
+
+    Cardigann YML definitions are maintained in the [Prowlarr/Indexers repository](https://github.com/Prowlarr/Indexers)
 
 # Cardigann Versions
 
@@ -530,7 +530,8 @@ login:
 
 ### Complex POST Login
 
-> Real world form logins won't need most of the options {.is-info}
+!!! info
+    Real world form logins won't need most of the options 
 
 ```yaml
 login:

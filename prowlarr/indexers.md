@@ -20,14 +20,14 @@ To add an indexer, first click on `Indexers` on the left, then <kb>+</kb> `Add I
 
 Choose your indexer from the list, or type a partial name in the box to find your indexer. If your indexer is not listed, you may be able to use "Generic Newznab" (for Usenet) or "Generic Torznab" (for torrents). Otherwise visit our [Indexer Request site](https://requests.prowlarr.com/).
 
-> Using `Generic Newznab` or `Generic Torznab` assumes your indexer supports standardized *znab formats. If it doesn't, then this will not work
-{.is-info}
+!!! info
+    Using `Generic Newznab` or `Generic Torznab` assumes your indexer supports standardized *znab formats. If it doesn't, then this will not work
 
-> Note: almost every Usenet site is compatible with Generic Newznab.
-{.is-warning}
+!!! warning
+    Note: almost every Usenet site is compatible with Generic Newznab.
 
-> If your tracker or indexer is not listed and not on our [supported indexers](/prowlarr/supported-indexers) page, you can request it be added via our [Indexer Requests Site](https://requests.prowlarr.com)
-{.is-info}
+!!! info
+    If your tracker or indexer is not listed and not on our [supported indexers](/prowlarr/supported-indexers) page, you can request it be added via our [Indexer Requests Site](https://requests.prowlarr.com)
 
 # Editing an Indexer
 
@@ -57,13 +57,13 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 - Enable - Check the box to enable this indexer.
 - Redirect - Check the box if a redirect is necessary. There are only a couple of indexers where this is required to avoid being banned. If enabled, this will pass the grab link directly to the application rather than proxying it via Prowlarr.
 
-> Redirect is typically only needed for a handful of very specific indexers
-{.is-info}
+!!! info
+    Redirect is typically only needed for a handful of very specific indexers
 
 - Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](/prowlarr/settings#applications). The Standard default, profile already exists, and looks like this:
 
-> You can have different settings per app by creating multiple instances of the indexer
-{.is-info}
+!!! info
+    You can have different settings per app by creating multiple instances of the indexer
 
 ![ind_3_settingsapps.png](/assets/prowlarr/ind_3_settingsapps.png)
 
@@ -101,8 +101,8 @@ Once you've selected your indexer, there will be a pop-up containing further inf
   - Create your custom definition '.yml'
   - Save your [Cardigann compatible YML file](/prowlarr/cardigann-yml-definition) within the custom definition folder and ensure Prowlarr has permissions to access it.
 
-> The file name and id in the definition must be unique and cannot conflict with any other existing definitions.  It's strongly advised to have the name in the definition to be unique as well.
-{.is-info}
+!!! info
+    The file name and id in the definition must be unique and cannot conflict with any other existing definitions.  It's strongly advised to have the name in the definition to be unique as well.
 
 # Supported Indexers
 
