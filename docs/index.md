@@ -24,15 +24,15 @@ At times, one may be able to edit on the Wiki directly, just authenticate with G
 
 ## Media Automation
 
-- [![16.png](assets/lidarr/logos/16.png)&emsp;Lidarr *Music*](/lidarr)
-- [![16.png](assets/radarr/logos/16.png)&emsp;Radarr *Movies*](/radarr)
-- [![16.png](assets/readarr/logos/16.png)&emsp;Readarr *Books*](/readarr)
-- [![16.png](assets/sonarr/logos/16.png)&emsp;Sonarr *TV*](/sonarr)
-- [![16.png](assets/whisparr/logos/16.png)&emsp;Whisparr *Adult Videos*](/whisparr)
+- [![16.png](assets/lidarr/logos/16.png)&emsp;Lidarr *Music*](lidarr.md)
+- [![16.png](assets/radarr/logos/16.png)&emsp;Radarr *Movies*](radarr.md)
+- [![16.png](assets/readarr/logos/16.png)&emsp;Readarr *Books*](readarr.md)
+- [![16.png](assets/sonarr/logos/16.png)&emsp;Sonarr *TV*](sonarr.md)
+- [![16.png](assets/whisparr/logos/16.png)&emsp;Whisparr *Adult Videos*](whisparr.md)
 
 ## Indexer Management
 
-- [![16.png](assets/prowlarr/logos/16.png)&emsp;Prowlarr *Indexers*](/prowlarr)
+- [![16.png](assets/prowlarr/logos/16.png)&emsp;Prowlarr *Indexers*](prowlarr.md)
 
 # Other
 
@@ -55,4 +55,4 @@ At times, one may be able to edit on the Wiki directly, just authenticate with G
 - [:fontawesome-solid-tools:&emsp;Useful Tools *Servarr list of related apps and tools*](useful-tools.md)
 - [:fontawesome-solid-trash-alt:&emsp;TRaSH's Guides *Tutorials and Guides for Radarr, Sonarr, Docker, and Download Clients*](https://trash-guides.info/)
 - [:fontawesome-solid-swatchbook:&emsp;Lidarr Community Guide *Davo's TRaSH Guide for Lidarr*](lidarr/community-guide.md)
-- [![16.png](assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script for Servarr Apps*](/install-script)
+- [![16.png](assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script for Servarr Apps*](install-script.md)
