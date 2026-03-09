@@ -10,7 +10,7 @@ tags:
   - api
   - prowlarr
 ---
-If you're looking to trigger a custom script, you can find more details here. Scripts are added to Prowlarr via the [Connect Settings](/prowlarr/settings#connections).
+If you're looking to trigger a custom script, you can find more details here. Scripts are added to Prowlarr via the [Connect Settings](../prowlarr/settings.md#connections).
 
 # Overview
 

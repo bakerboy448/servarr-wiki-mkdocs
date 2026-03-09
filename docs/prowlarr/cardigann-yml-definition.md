@@ -85,7 +85,7 @@ tags:
 
 - Below are the Prowlarr Cardigann Versions
 
-- For testing custom yml definitions please see [the custom yml section in the Indexer page](/prowlarr/indexers#adding-a-custom-yml-definition)
+- For testing custom yml definitions please see [the custom yml section in the Indexer page](../prowlarr/indexers.md#adding-a-custom-yml-definition)
 
 ## Schemas
 
@@ -212,7 +212,7 @@ where `{INDEXER FILE NAME}` supports masking with an asterisk, for example `hd*`
 
 - In order to add support for a new Cardigann (YML) tracker or indexer submit a pull request on our [Indexer Repository](https://github.com/Prowlarr/indexers)
 
-- You may test out your definition locally or create one for your own needs by using the [Custom Definition Folder](/prowlarr/indexers#adding-a-custom-yml-definition)
+- You may test out your definition locally or create one for your own needs by using the [Custom Definition Folder](../prowlarr/indexers.md#adding-a-custom-yml-definition)
 
 - The best way to get started is to look at existing definitions files. If you know a tracker which is similar to the one you want to add and is already supported just use it's definition as a base for your new definition file.
 

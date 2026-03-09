@@ -10,7 +10,7 @@ This page will show you how to perform a search from within Prowlarr. In general
 
 To initiate a search, click on `Search` on the left menu. There will be a mostly blank page with some options at the bottom of the screen.
 
-![search_1_searchscreen.png](/assets/prowlarr/search_1_searchscreen.png)
+![search_1_searchscreen.png](../assets/prowlarr/search_1_searchscreen.png)
 
 - Query - Enter your search terms in the Query field.
   - Click the magnifying glass to change the search type, available options are:

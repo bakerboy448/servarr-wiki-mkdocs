@@ -51,7 +51,7 @@ Create the databases mentioned above using your favorite method - for example [p
 !!! info
     In order for the `Housekeeping` task to run, this user has to be a superuser, as it performs the vacuum task
 
-You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](/prowlarr/postgres-setup#schema-creation).
+You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](../prowlarr/postgres-setup.md#schema-creation).
 
 ### Schema creation
 

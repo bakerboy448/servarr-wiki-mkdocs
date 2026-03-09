@@ -14,7 +14,7 @@ We're always looking for people to help make Prowlarr even better, there are a n
 
 # Documentation
 
-Setup guides, [FAQ](/prowlarr/faq), the more information we have on the [wiki](https://wiki.servarr.com/prowlarr) the better.
+Setup guides, [FAQ](../prowlarr/faq.md), the more information we have on the [wiki](https://wiki.servarr.com/prowlarr) the better.
 
 # Development
 
@@ -114,8 +114,8 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 ### Cardigann (YML) Indexers
 
 - Cardigann and YML Indexers are to be pull requested to the [Prowlarr Indexer Repository](https://github.com/prowlarr/indexers) against the `master` branch
-- For Cardigann/YML Indexers details please see [the definition and description of the Prowlarr Cardigann yml format](/prowlarr/cardigann-yml-definition)
-- For testing custom yml definitions please see [the custom yml section in the Indexer page](/prowlarr/indexers#adding-a-custom-yml-definition)
+- For Cardigann/YML Indexers details please see [the definition and description of the Prowlarr Cardigann yml format](../prowlarr/cardigann-yml-definition.md)
+- For testing custom yml definitions please see [the custom yml section in the Indexer page](../prowlarr/indexers.md#adding-a-custom-yml-definition)
 
 ## Pull Requesting
 

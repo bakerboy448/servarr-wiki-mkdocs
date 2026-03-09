@@ -16,7 +16,7 @@ This page will show you how to review and search your history, and the various s
 
 To get into the History screen, click on `History` on the left menu.
 
-![hist_1_history.png](/assets/prowlarr/hist_1_history.png)
+![hist_1_history.png](../assets/prowlarr/hist_1_history.png)
 
 # Menu Items
 
@@ -35,18 +35,18 @@ At the top of the screen there are various menu items:
 
 Automated search queries from your Apps look like this:
 
-![hist_2_search.png](/assets/prowlarr/hist_2_search.png)
+![hist_2_search.png](../assets/prowlarr/hist_2_search.png)
 
 If you have the columns selected, you can see the indexer searched, the category used, what App made the request, and how long that query took to complete. You can also click on the `i` icon on the right to get more specific information. For RSS feeds, there is no actual query, so that will be empty.
 
-![hist_3_rssquery.png](/assets/prowlarr/hist_3_rssquery.png)
+![hist_3_rssquery.png](../assets/prowlarr/hist_3_rssquery.png)
 
 # Query Searches
 
 Specific query searches will show exactly what was searched, based on the capabilities of each indexer. As you can see below, the same series/episode was searched on 3 different indexers, and each has different capabilities:
 
-![hist_4_search.png](/assets/prowlarr/hist_4_search.png)
+![hist_4_search.png](../assets/prowlarr/hist_4_search.png)
 
 If you click on the `i` on any of these searches, you can see the number of results that were returned.
 
-![hist_5_results.png](/assets/prowlarr/hist_5_results.png)
+![hist_5_results.png](../assets/prowlarr/hist_5_results.png)

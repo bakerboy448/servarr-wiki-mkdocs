@@ -43,17 +43,17 @@ tags:
   - [Style](#style)
   - [Language](#language)
 
-This page will go through all the settings available in Prowlarr and how they work. This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](/prowlarr/quick-start-guide) page instead.
+This page will go through all the settings available in Prowlarr and how they work. This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](../prowlarr/quick-start-guide.md) page instead.
 
 # Menu options
 
 To get to the Settings page, please choose Settings from the left menu. The following sub-menu options will be available:
 
-![settings_1_menu.png](/assets/prowlarr/settings_1_menu.png)
+![settings_1_menu.png](../assets/prowlarr/settings_1_menu.png)
 
 Also, note that for each individual settings page, there are some options at the top of the menu:
 
-![settings_2_topmenu.png](/assets/prowlarr/settings_2_topmenu.png)
+![settings_2_topmenu.png](../assets/prowlarr/settings_2_topmenu.png)
 
 - Hide/Show advanced is important for any items that are marked below as `(Advanced Option)`, otherwise they will not show up. These menu items are shown in orange in the screenshots.
 
@@ -62,13 +62,13 @@ Also, note that for each individual settings page, there are some options at the
 # Indexer Proxies
 
 !!! info
-    Information on supported proxy types can be found at the [More Info (Supported)](/prowlarr/supported#indexer-proxies) page for this section
+    Information on supported proxy types can be found at the [More Info (Supported)](../prowlarr/supported.md#indexer-proxies) page for this section
 
 Here is where you can add proxies or Flaresolverr configurations for those indexers that require them.
 
 Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+</kb> to add a proxy.
 
-![proxies.png](/assets/prowlarr/proxies.png)
+![proxies.png](../assets/prowlarr/proxies.png)
 
 ## Proxy Settings
 
@@ -109,7 +109,7 @@ Navigate to on `Settings` => `Indexer Proxies`, and then click the <kb>+</kb> to
 # Applications
 
 !!! info
-    Information on supported applications can be found at the [More Info (Supported)](/prowlarr/supported#applications) page for this section
+    Information on supported applications can be found at the [More Info (Supported)](../prowlarr/supported.md#applications) page for this section
 
 Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, Lidarr, Readarr, etc.) and how they stay in sync with Prowlarr.
 
@@ -117,11 +117,11 @@ Here is where you will add the applications that use Prowlarr (Radarr, Sonarr, L
 - Sync App Indexers - Trigger a sync of all indexers to all applications
 - Test All Apps - Trigger a test of all applications
 
-![addapps.png](/assets/prowlarr/addapps.png)
+![addapps.png](../assets/prowlarr/addapps.png)
 
 All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you should add each of them separately.
 
-![addlidarr.png](/assets/prowlarr/addlidarr.png)
+![addlidarr.png](../assets/prowlarr/addlidarr.png)
 
 !!! info
     Note: Indexers are synced based on the capabilities/categories they claim to support. If an indexer supports only `tv` categories it will not be synced to Lidarr, Radarr, and Readarr. It will only be synced to Sonarr "Supported" Categories can be selected as an advanced setting on a per app basis. **Also note that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories.**
@@ -131,11 +131,11 @@ All programs you can add are listed. You should only add programs you currently 
 - Name - Enter a name for this App.
 - Sync Level - Select the sync level to use
   - `Add and Remove Only` - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.
-  - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync)
+  - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](../prowlarr/faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - `Disabled` - will keep indexers from syncing with the program entirely.
 
 !!! warning
-    `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](/prowlarr/faq#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
+    `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](../prowlarr/faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
 
 - Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
 - Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
@@ -170,7 +170,7 @@ Configure the sync profiles for to use for (an) application(s)
 {#download-clients}
 
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](/prowlarr/supported#download-clients) page for this section
+    Information on supported download clients can be found at the [More Info (Supported)](../prowlarr/supported.md#download-clients) page for this section
 
 If you intend to do searches directly within Prowlarr, you need to add Download Clients. Otherwise, you do not need to add them here. For searches from your Apps, the download clients configured there are used instead.
 
@@ -179,7 +179,7 @@ If you intend to do searches directly within Prowlarr, you need to add Download 
 
 Click on `Settings` => `Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured to follow this guide.
 
-![downloadclients.png](/assets/prowlarr/downloadclients.png)
+![downloadclients.png](../assets/prowlarr/downloadclients.png)
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -223,7 +223,7 @@ Test your entry. If a green check-mark appears, you can save your entry, and rep
 # Notifications
 
 !!! info
-    Information on supported notification providers can be found at the [More Info (Supported)](/prowlarr/supported#notifications) page for this section
+    Information on supported notification providers can be found at the [More Info (Supported)](../prowlarr/supported.md#notifications) page for this section
 
 ## Connections
 
@@ -231,7 +231,7 @@ Connections are how you want Prowlarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications and connections is located at the [More Info (Supported)](/prowlarr/supported#notifications)
+- A list of supported notifications and connections is located at the [More Info (Supported)](../prowlarr/supported.md#notifications)
 
 ## Notification Triggers
 
@@ -260,7 +260,7 @@ Click on `Settings` => `General`.
 
 ## Host
 
-![general_host.png](/assets/prowlarr/general_host.png)
+![general_host.png](../assets/prowlarr/general_host.png)
 
 - (Advanced Option) Bind Address - Leave this as `*` unless you need to change it. The IPv4 address/host on the system Prowlarr will listen on. (default: `*`)
   - Note that `*` is any/all addresses
@@ -272,7 +272,7 @@ Click on `Settings` => `General`.
 
 ## Security
 
-![general_security.png](/assets/prowlarr/general_security.png)
+![general_security.png](../assets/prowlarr/general_security.png)
 
 - Authentication - How would you like to authenticate to access your Prowlarr instance
   - None - You have no authentication to access your Prowlarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web
@@ -286,7 +286,7 @@ Click on `Settings` => `General`.
 
 ## Proxy
 
-![general_proxy.png](/assets/prowlarr/general_proxy.png)
+![general_proxy.png](../assets/prowlarr/general_proxy.png)
 
 Proxy - This option allows you to run the information your Prowlarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
@@ -301,7 +301,7 @@ Proxy - This option allows you to run the information your Prowlarr pulls and se
 
 ## Logging
 
-![general_logging.png](/assets/prowlarr/general_logging.png)
+![general_logging.png](../assets/prowlarr/general_logging.png)
 
 The default log level is `Info`. This is very basic logging. You can change it here for more detailed logging. Log files will rotate, so there is no danger of taking up too much space.
 
@@ -312,16 +312,16 @@ The default log level is `Info`. This is very basic logging. You can change it h
 
 ## Analytics
 
-![general_analytics.png](/assets/prowlarr/general_analytics.png)
+![general_analytics.png](../assets/prowlarr/general_analytics.png)
 
 - Analytics - Send anonymous usage and error information to Prowlarr's servers (Servarr). This includes information on your browser, which Prowlarr WebUI pages you use, error reporting as well as OS, runtime version, and related information. We will use this information to prioritize features and bug fixes.
 
 ## Updates
 
-![general_updates.png](/assets/prowlarr/general_updates.png)
+![general_updates.png](../assets/prowlarr/general_updates.png)
 
 - (Advanced Option) Branch - This is the branch of Prowlarr that you are running on.
-  - [Please see this FAQ entry for more information](/prowlarr/faq#how-do-i-update-prowlarr)
+  - [Please see this FAQ entry for more information](../prowlarr/faq.md#how-do-i-update-prowlarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Prowlarr built-in updater or a script
   - Built-in - Use Prowlarr's own updater
@@ -334,7 +334,7 @@ The default log level is `Info`. This is very basic logging. You can change it h
 
 ## Backups
 
-![general_backups.png](/assets/prowlarr/general_backups.png)
+![general_backups.png](../assets/prowlarr/general_backups.png)
 
 - (Advanced Option) Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
 - (Advanced Option) Interval - How often would you like Prowlarr to make a backup
