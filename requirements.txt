@@ -7,7 +7,7 @@ mkdocs-minify-plugin==0.8.0
 mkdocs-redirects==1.2.2
 
 # Prowlarr indexer update script
-requests==2.31.0
+requests==2.32.5
 pycountry==23.12.11
 python_iso639==2024.2.7
 
