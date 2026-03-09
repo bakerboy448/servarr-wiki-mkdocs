@@ -23,4 +23,4 @@ Thank you for being part of the Readarr journey. For any inquiries or assistance
 Sincerely,
 The Servarr Team
 
-Please see [Readarr Metadata Issues](/readarr/metadata-issues)
+Please see [Readarr Metadata Issues](../readarr/metadata-issues.md)

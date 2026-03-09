@@ -35,7 +35,7 @@ The Wanted pages will show you all books that are either Missing or have not yet
 
 The Missing page shows you all books that are monitored (i.e. Wanted), and missing from your collection completely.
 
-![missing1.png](/assets/readarr/missing1.png)
+![missing1.png](../assets/readarr/missing1.png)
 
 You can search for items automatically by clicking on the magnifying glass on the right, or selecting 1 or more items in the checkboxes on the left and clicking "Search Selected" at the top, or by clicking "Search All" at the top.
 
@@ -45,7 +45,7 @@ If you want to do an interactive search where you get to select your download fr
 
 If you want to unmonitor books from this page, select them in the checkbox and clicl "Unmonitor Selected" at the top.
 
-![missing2.png](/assets/readarr/missing2.png)
+![missing2.png](../assets/readarr/missing2.png)
 
 You can also do a Manual Import from here by clicking the icon at the top. This will allow you to import from somewhere other than your Root Folder, and manually match up the author and the book. It will move, rename, and organize your files to where they belong.
 
@@ -53,6 +53,6 @@ You can also do a Manual Import from here by clicking the icon at the top. This 
 
 The Cutoff Unmet screen is like the Missing screen. The difference is that there are book files already in your library, but they are not in the quality or format you prefer, so Readarr is still looking for a "better" copy for you.
 
-![cutoffunmet.png](/assets/readarr/cutoffunmet.png)
+![cutoffunmet.png](../assets/readarr/cutoffunmet.png)
 
 Like the Missing page, you can unmonitor or initiate searches from this page.

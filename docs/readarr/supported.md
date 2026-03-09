@@ -33,40 +33,40 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 {#downloadclient}
 
 - Aria2 {#aria2}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - Deluge {#deluge}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - Download Station {#torrentdownloadstation}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - Download Station {#usenetdownloadstation}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - Flood {#flood}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - Hadouken {#hadouken}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - NZBGet {#nzbget}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - NZBVortex {#nzbvortex}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - Pneumatic {#pneumatic}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - qBittorrent {#qbittorrent}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - rTorrent {#rtorrent}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - SABnzbd {#sabnzbd}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - Torrent Blackhole {#torrentblackhole}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - Transmission {#transmission}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - Usenet Blackhole {#usenetblackhole}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 - uTorrent {#utorrent}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
   - Due to uTorrent being adware and formerly spyware, it is not reconmended. Most users use qBittorrent
 - Vuze {#vuze}
-  - [Refer to the Settings Page](/readarr/settings#download-clients)
+  - [Refer to the Settings Page](../readarr/settings.md#download-clients)
 
 # Indexers
 
@@ -75,41 +75,41 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 ## Usenet
 
 - Newznab {#newznab}
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
+  - [Refer to the Settings Page](../readarr/settings.md#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
-  - Indexer Applications like [Prowlarr](/prowlarr) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
+  - Indexer Applications like [Prowlarr](../prowlarr.md) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
 - omgwtfnzbs {#omgwtfnzbs}
   - A Private usenet indexer
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
+  - [Refer to the Settings Page](../readarr/settings.md#indexer-settings)
 
 ## Torrents
 
 - FileList {#filelist}
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
+  - [Refer to the Settings Page](../readarr/settings.md#indexer-settings)
 - Gazelle API {#gazelle}
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
+  - [Refer to the Settings Page](../readarr/settings.md#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
 !!! info
     IP Torrents' native implementation does not support Search 
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
+  - [Refer to the Settings Page](../readarr/settings.md#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
 !!! info
     Nyaa frowns upon automation and frequently will ban your IP. 
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
+  - [Refer to the Settings Page](../readarr/settings.md#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
 !!! info
     The RSS feed must contain a `pubdate`. The release size is recommended as well.
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
+  - [Refer to the Settings Page](../readarr/settings.md#indexer-settings)
 - TorrentLeech {#torrentleech}
   - Private Indexer
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
+  - [Refer to the Settings Page](../readarr/settings.md#indexer-settings)
 - Torznab {#torznab}
   - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
-  - This is primarily only supported by [Prowlarr](/prowlarr) and [Jackett](https://github.com/Jackett/Jackett)
-  - [Refer to the Settings Page](/readarr/settings#indexer-settings)
+  - This is primarily only supported by [Prowlarr](../prowlarr.md) and [Jackett](https://github.com/Jackett/Jackett)
+  - [Refer to the Settings Page](../readarr/settings.md#indexer-settings)
 
 # Notifications
 
@@ -117,7 +117,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
-  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](/readarr/custom-scripts) for more details.
+  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](../readarr/custom-scripts.md) for more details.
 - Discord {#discord}
   - By far one of the most common ways to push notifications of actions happening on your Readarr
 - Email {#email}
@@ -132,7 +132,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Join {#join}
 - Mailgun {#mailgun}
 - Notifiarr {#notifiarr}
-  - See the entry on [Useful Tools - Notifiarr](/useful-tools#notifiarr-fka-discord-notifier)
+  - See the entry on [Useful Tools - Notifiarr](../useful-tools.md#notifiarr-fka-discord-notifier)
 - Prowl {#prowl}
 - Pushbullet {#pushbullet}
 - Pushover {#pushover}
@@ -142,7 +142,7 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 - Synology Indexer {#synologyindexer}
 - Telegram {#telegram}
 - Twitter {#twitter}
-  - See this [Tips and Tricks entry](/useful-tools#twitter)
+  - See this [Tips and Tricks entry](../useful-tools.md#twitter)
 - Webhook {#webhook}
 
 # Lists
@@ -183,6 +183,6 @@ This page is the disambiguation page for all "supported" wiki links (i.e. typica
 {#metadata}
 
 - Calibre {#calibre}
-  - [Refer to the Settings page](/readarr/settings#write-metadata-to-book-files)
+  - [Refer to the Settings page](../readarr/settings.md#write-metadata-to-book-files)
 - Audio Tagging  #audiotagging}
-  - [Refer to the Settings page](/readarr/settings#write-metadata-to-book-files)
+  - [Refer to the Settings page](../readarr/settings.md#write-metadata-to-book-files)

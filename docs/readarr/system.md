@@ -97,11 +97,11 @@ The Servarr Team
 
 {#we-are-currently-experiencing-issues-with-our-metadata-provider-this-will-prevent-user-searches-and-author-refreshes-from-working-we-are-working-to-solve-the-issue}
 
-- Please see [Readarr Metadata Issue](/readarr/metadata-issues)
+- Please see [Readarr Metadata Issue](../readarr/metadata-issues.md)
 
 #### Branch is not a valid release branch
 
-- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](/readarr/faq#how-do-i-update-readarr)
+- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](../readarr/faq.md#how-do-i-update-readarr)
 
 #### Currently installed SQLite version is not supported
 
@@ -228,7 +228,7 @@ Note: you will also need to add the websocket directive to your readarr configur
   - Readarr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/books and since you used /data in Readarr when the download client tells Readarr it's done Readarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/books all is right in the world."
-- There are many great write ups: our wiki [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hard links and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
+- There are many great write ups: our wiki [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hard links and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
 
 - If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr but the concept is the same for all \*Arrs](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
 
@@ -241,10 +241,10 @@ Note: you will also need to add the websocket directive to your readarr configur
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder.
 - This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder.
 - Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](/readarr/settings/#root-folders)
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](../readarr/settings/.md#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
-- Review our [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
+- Review our [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
 
 !!! warning
     Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
@@ -337,7 +337,7 @@ Note: you will also need to add the websocket directive to your readarr configur
 ##### Solutions
 
 - Add each tracker in Jackett manually as an indexer in \*Arr
-- Check out [Prowlarr](/prowlarr) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
+- Check out [Prowlarr](../prowlarr.md) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
 - Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
 
 ### Book Folders
@@ -413,7 +413,7 @@ The queue will show you running and upcoming tasks as well as a history of recen
 # Backup
 
 !!! info
-    If you're looking for how to back/restore your Readarr instance click the [Readarr FAQ backup section](/readarr/faq).
+    If you're looking for how to back/restore your Readarr instance click the [Readarr FAQ backup section](../readarr/faq.md).
 
 - Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
 
