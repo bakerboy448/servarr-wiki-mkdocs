@@ -187,9 +187,8 @@ Downloading and importing is where most people experience issues. From a high le
 # How to import your existing organized media library
 
 > Note that Whisparr does not regularly search for Movies.  See these two FAQ Entries for details to understand how Whisparr works.
-[How does Whisparr find movies?](/whisparr/faq#how-does-whisparr-find-movies) and [How does Whisparr work?](/whisparr/faq#how-does-whisparr-work)
-{.is-info}
-
+!!! info
+    [How does Whisparr find movies?](/whisparr/faq#how-does-whisparr-find-movies) and [How does Whisparr work?](/whisparr/faq#how-does-whisparr-work)
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 `Movies`
@@ -308,8 +307,9 @@ When you see the movie you want click on it.
 1. Whisparr will add the Root Folder you’ve setup [in the root folders section](#root-folders)
 2. How you want the movie to be added to Whisparr.
 
-    > - Yes = Whisparr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
-    > - No = Whisparr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.{.is-info}
+!!! info
+    - Yes = Whisparr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
+    - No = Whisparr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.
     >
 3. When Whisparr shall consider a movie is available.
 

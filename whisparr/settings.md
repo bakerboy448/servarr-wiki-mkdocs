@@ -266,7 +266,8 @@ Here you will set the naming convention for the folder that contains the season 
 
   - For more information on this click [TRaSH Guides hardlinks documentation](https://trash-guides.info/hardlinks)
 
- > Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Whisparr's rename function as a work around.{.is-warning}
+!!! warning
+    Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Whisparr's rename function as a work around.
 
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file
 
@@ -278,9 +279,10 @@ Here you will set the naming convention for the folder that contains the season 
   - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
   - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
   - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Custom Formats](#custom-formats).
-- > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original. {.is-info}
-- > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.{.is-info}
-
+!!! info
+    `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
+!!! info
+    `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
 !!! info
     [Use custom formats for automatic upgrades to propers/repacks](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/) 
 

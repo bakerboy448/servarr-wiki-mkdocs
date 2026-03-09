@@ -73,19 +73,21 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - [Refer to the Settings Page](/whisparr/settings#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-  > IP Torrents' native implementation does not support Search {.is-info}
+!!! info
+    IP Torrents' native implementation does not support Search 
   - [Refer to the Settings Page](/whisparr/settings#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
-  > Nyaa frowns upon automation and frequently will ban your IP. {.is-info}
+!!! info
+    Nyaa frowns upon automation and frequently will ban your IP. 
   - [Refer to the Settings Page](/whisparr/settings#indexer-settings)
 - Pass The Popcorn (PTP) {#passthepopcorn}
   - Private Tracker
   - [Refer to the Settings Page](/whisparr/settings#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
-  > The RSS feed must contain a `pubdate`. The release size is recommended as well.
-  {.is-info}
+!!! info
+    The RSS feed must contain a `pubdate`. The release size is recommended as well.
   - [Refer to the Settings Page](/whisparr/settings#indexer-settings)
 - TorrentPotato {#torrentpotato}
   - A legacy Couchpotato pre-Torznab format.
