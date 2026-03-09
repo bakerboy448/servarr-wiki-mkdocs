@@ -15,8 +15,8 @@ The Whisparr team only provides builds for FreeBSD. Plugins and Ports are mainta
 
 Instructions for FreeBSD installations are also maintained by the FreeBSD community and anyone with a GitHub account may update the wiki as needed.
 
-> Currently the BSD Community does not have any package or port available
-{.is-danger}
+!!! danger
+    Currently the BSD Community does not have any package or port available
 
 [Freshports Whisparr Link](https://www.freshports.org/net-p2p/whisparr/)
 
@@ -42,7 +42,8 @@ Instructions for FreeBSD installations are also maintained by the FreeBSD commun
 
 - [x] allow_raw_sockets
 
-> `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement. {.is-info}
+!!! info
+    `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement. 
 
 1. Configure Network Properties to your liking
 
@@ -64,13 +65,13 @@ Back on the jails list find your newly created jail for `whisparr` and click `Sh
 
 To install Whisparr
 
-> \* Ensure your pkg repo is configured to get packages from `/latest` and not `/quarterly`
-> \* Check `/usr/local/etc/pkg/repos/FreeBSD.conf`
-> \* If that does not exist, copy over `/etc/pkg/FreeBSD.conf` to that location, open it, and replace `quarterly` with `latest`
-{.is-warning}
+!!! warning
+    \* Ensure your pkg repo is configured to get packages from `/latest` and not `/quarterly`
+    \* Check `/usr/local/etc/pkg/repos/FreeBSD.conf`
+    \* If that does not exist, copy over `/etc/pkg/FreeBSD.conf` to that location, open it, and replace `quarterly` with `latest`
 
-> Currently the BSD Community does not have any package or port available
-{.is-danger}
+!!! danger
+    Currently the BSD Community does not have any package or port available
 
 ```shell
 pkg install whisparr
@@ -130,5 +131,5 @@ You can now safely close the shell
 - `System.NET.Sockets.SocketException (43): Protocol not supported`
   - Make sure you have `VNET` turned on for your jail, ip6=inherit, or ip6=new
 
-> The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
-{.is-info}
+!!! info
+    The service script should now work around the lack of VNET and/or IP6 thus removing the requirement for VNET or ip6=inherit
