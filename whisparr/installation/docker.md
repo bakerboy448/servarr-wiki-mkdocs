@@ -1,13 +1,14 @@
 ---
 title: Whisparr Docker Installation
 description: Docker installation guide for Whisparr
-published: true
-date: 2023-08-12T16:04:03.075Z
-tags: installation, docker, container, setup, guide, whisparr
-editor: markdown
-dateCreated: 2023-07-03T20:14:02.618Z
+tags:
+  - installation
+  - docker
+  - container
+  - setup
+  - guide
+  - whisparr
 ---
-
 # Docker
 
 The Whisparr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.
