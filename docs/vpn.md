@@ -94,7 +94,7 @@ Use download clients with built-in VPN support:
 - **[Binhex VPN containers](https://github.com/binhex/)** - OpenVPN support (e.g., `binhex/arch-qbittorrentvpn`)
 
 !!! warning
-    **Important**: When using VPN containers, configure other containers to connect using the `.internal` domain suffix (e.g., `qbittorrent.internal` instead of just `qbittorrent`). This ensures reliable DNS resolution through Docker's built-in DNS, especially important with VPN routing. See the [Docker Guide](/docker-guide#using-internal-domain-for-container-communication) for more details.
+    **Important**: When using VPN containers, configure other containers to connect using the `.internal` domain suffix (e.g., `qbittorrent.internal` instead of just `qbittorrent`). This ensures reliable DNS resolution through Docker's built-in DNS, especially important with VPN routing. See the [Docker Guide](docker-guide.md#using-internal-domain-for-container-communication) for more details.
 
 ### Multiple Download Clients
 

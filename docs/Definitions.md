@@ -16,4 +16,4 @@ This is a disambiguation redirect page
 
 {#Indexer_Flags}
 
-- [Indexer Flags have moved to Radarr/Settings#indexer-flags](/radarr/settings#indexer-flags)
+- [Indexer Flags have moved to Radarr/Settings#indexer-flags](radarr/settings.md#indexer-flags)

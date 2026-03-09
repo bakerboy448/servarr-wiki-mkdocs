@@ -92,4 +92,4 @@ Visit [`http://ip:9000`](http://ip:9000) to complete setup (where `ip` is the IP
 
 # Setting up Sonarr/Radarr/Lidarr/Readarr
 
-For guidance setting up Sonarr/Radarr/Lidarr/Readarr, see the [Docker Guide](/docker-guide), and **remember caveat 2 above.**
+For guidance setting up Sonarr/Radarr/Lidarr/Readarr, see the [Docker Guide](docker-guide.md), and **remember caveat 2 above.**
