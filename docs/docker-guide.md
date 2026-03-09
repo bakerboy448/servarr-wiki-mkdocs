@@ -90,7 +90,7 @@ tags:
   - Pulls every tag on update when you don't set a specific tag
   - Capabilities are hidden and some don't work at all on ARM platforms
 
-See this [Docker Guide](/docker-guide) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
+See this [Docker Guide](docker-guide.md) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
 
 # Introduction
 

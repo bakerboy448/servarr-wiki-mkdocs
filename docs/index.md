@@ -24,35 +24,35 @@ At times, one may be able to edit on the Wiki directly, just authenticate with G
 
 ## Media Automation
 
-- [![16.png](/assets/lidarr/logos/16.png)&emsp;Lidarr *Music*](/lidarr)
-- [![16.png](/assets/radarr/logos/16.png)&emsp;Radarr *Movies*](/radarr)
-- [![16.png](/assets/readarr/logos/16.png)&emsp;Readarr *Books*](/readarr)
-- [![16.png](/assets/sonarr/logos/16.png)&emsp;Sonarr *TV*](/sonarr)
-- [![16.png](/assets/whisparr/logos/16.png)&emsp;Whisparr *Adult Videos*](/whisparr)
+- [![16.png](assets/lidarr/logos/16.png)&emsp;Lidarr *Music*](/lidarr)
+- [![16.png](assets/radarr/logos/16.png)&emsp;Radarr *Movies*](/radarr)
+- [![16.png](assets/readarr/logos/16.png)&emsp;Readarr *Books*](/readarr)
+- [![16.png](assets/sonarr/logos/16.png)&emsp;Sonarr *TV*](/sonarr)
+- [![16.png](assets/whisparr/logos/16.png)&emsp;Whisparr *Adult Videos*](/whisparr)
 
 ## Indexer Management
 
-- [![16.png](/assets/prowlarr/logos/16.png)&emsp;Prowlarr *Indexers*](/prowlarr)
+- [![16.png](assets/prowlarr/logos/16.png)&emsp;Prowlarr *Indexers*](/prowlarr)
 
 # Other
 
 ## General Troubleshooting
 
-- [:fontawesome-regular-life-ring:&emsp;General Permissions & Network Troubleshooting](/permissions-and-networking)
-- [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](/vpn)
+- [:fontawesome-regular-life-ring:&emsp;General Permissions & Network Troubleshooting](permissions-and-networking.md)
+- [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](vpn.md)
 
 ## Docker
 
-- [:fontawesome-brands-docker:&emsp;Docker Guide](/docker-guide)
-- [:fontawesome-solid-box-open:&emsp;Installing Docker on an ARM-based Synology NAS](/docker-arm-synology)
+- [:fontawesome-brands-docker:&emsp;Docker Guide](docker-guide.md)
+- [:fontawesome-solid-box-open:&emsp;Installing Docker on an ARM-based Synology NAS](docker-arm-synology.md)
 
 ## XEM
 
-- [:fontawesome-brands-xing:&emsp;XEM Moderation Guide *Guide for how to map various scenarios in XEM*](/sonarr/xem-guide)
+- [:fontawesome-brands-xing:&emsp;XEM Moderation Guide *Guide for how to map various scenarios in XEM*](sonarr/xem-guide.md)
 
 ## Guides & Tools
 
-- [:fontawesome-solid-tools:&emsp;Useful Tools *Servarr list of related apps and tools*](/useful-tools)
+- [:fontawesome-solid-tools:&emsp;Useful Tools *Servarr list of related apps and tools*](useful-tools.md)
 - [:fontawesome-solid-trash-alt:&emsp;TRaSH's Guides *Tutorials and Guides for Radarr, Sonarr, Docker, and Download Clients*](https://trash-guides.info/)
-- [:fontawesome-solid-swatchbook:&emsp;Lidarr Community Guide *Davo's TRaSH Guide for Lidarr*](/lidarr/community-guide)
-- [![16.png](/assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script for Servarr Apps*](/install-script)
+- [:fontawesome-solid-swatchbook:&emsp;Lidarr Community Guide *Davo's TRaSH Guide for Lidarr*](lidarr/community-guide.md)
+- [![16.png](assets/servarr/servarr_dark_fav_16.png)&emsp;Community \*Arr Install Script *Unofficial Community Script for Servarr Apps*](/install-script)

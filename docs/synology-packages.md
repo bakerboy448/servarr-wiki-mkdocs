@@ -27,7 +27,7 @@ tags:
 - Installation instructions are noted below for the specific DSM versions
 
 !!! warning
-    Generally the existing SynoCommunity versions are not compatible with the Servarr versions without some hoop jumping. This means it would be required to delete the old package after doing a [backup of your database *the link is for a Radarr example, but the instructions/concepts are the same*](/radarr/faq#how-do-i-backuprestore-radarr). Which can be done through the web interface of the \*Arr app.
+    Generally the existing SynoCommunity versions are not compatible with the Servarr versions without some hoop jumping. This means it would be required to delete the old package after doing a [backup of your database *the link is for a Radarr example, but the instructions/concepts are the same*](radarr/faq.md#how-do-i-backuprestore-radarr). Which can be done through the web interface of the \*Arr app.
 
 !!! info
     SynoCommunity has a list of [NAS by Architecture](https://github.com/SynoCommunity/spksrc/wiki/Architecture-per-Synology-model) which will assist you in identifying the correct package.
@@ -75,13 +75,13 @@ chmod u+s /volume1/@appstore/bubblewrap/bin/bwrap
 
 1. Save triggered task, and run it once.
 
-![triggered_task.png](/assets/synology/triggered_task.png)
+![triggered_task.png](assets/synology/triggered_task.png)
 
-![create_task1.png](/assets/synology/create_task1.png)
+![create_task1.png](assets/synology/create_task1.png)
 
-![create_task2.png](/assets/synology/create_task2.png)
+![create_task2.png](assets/synology/create_task2.png)
 
-![run_task.png](/assets/synology/run_task.png)
+![run_task.png](assets/synology/run_task.png)
 
 ### Manual Bubblewrap Installation
 

@@ -69,11 +69,11 @@ The following apps are companions to the \*Arr Suite of Applications or media ho
 
 Note that the application's database can be found in the Application Data Directory which are linked below. The directory may also be passed as a datadir argument.
 
-- [Lidarr Appdata Directory](/lidarr/appdata-directory)
-- [Prowlarr Appdata Directory](/prowlarr/appdata-directory)
-- [Radarr Appdata Directory](/radarr/appdata-directory)
-- [Readarr Appdata Directory](/readarr/appdata-directory)
-- [Sonarr Appdata Directory](/sonarr/appdata-directory)
+- [Lidarr Appdata Directory](lidarr/appdata-directory.md)
+- [Prowlarr Appdata Directory](prowlarr/appdata-directory.md)
+- [Radarr Appdata Directory](radarr/appdata-directory.md)
+- [Readarr Appdata Directory](readarr/appdata-directory.md)
+- [Sonarr Appdata Directory](sonarr/appdata-directory.md)
 
 !!! info
     There are two options to recover the database which are listed below.
@@ -115,7 +115,7 @@ Note that the application's database can be found in the Application Data Direct
 
 Please note that the gif does not cover the `VACUUM;` command
 
-![dbrecover.gif](/dbrecover.gif)
+![dbrecover.gif](dbrecover.gif)
 
 ## Command Line DB Recovery
 
@@ -177,7 +177,7 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 
   - If the string looks similar to `cid=cid-that-you-got-from-the-browser; sid=sid-that-you-got-from-the-browser` then the entire entry should be used.
 
-![cookie_chrome.png](/assets/prowlarr/cookie_chrome.png)
+![cookie_chrome.png](assets/prowlarr/cookie_chrome.png)
 
 - You may also reference Chrome's documents [Chrome cookies](https://developer.chrome.com/docs/devtools/storage/cookies/)
 
@@ -185,7 +185,7 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 
 - [Please see Mozilla's documentation](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector/Cookies)
 
-![faq_3_cookies.png](/assets/general/faq_3_cookies.png)
+![faq_3_cookies.png](assets/general/faq_3_cookies.png)
 
 # Clearing Cookies and Local Storage
 
@@ -214,12 +214,12 @@ All of the *arrs now have the ability to use environment variables to override e
 
 For detailed environment variable documentation for each app, see:
 
-- [Sonarr Environment Variables](/sonarr/environment-variables)
-- [Radarr Environment Variables](/radarr/environment-variables)
-- [Lidarr Environment Variables](/lidarr/environment-variables)
-- [Readarr Environment Variables](/readarr/environment-variables)
-- [Prowlarr Environment Variables](/prowlarr/environment-variables)
-- [Whisparr Environment Variables](/whisparr/environment-variables)
+- [Sonarr Environment Variables](sonarr/environment-variables.md)
+- [Radarr Environment Variables](radarr/environment-variables.md)
+- [Lidarr Environment Variables](lidarr/environment-variables.md)
+- [Readarr Environment Variables](readarr/environment-variables.md)
+- [Prowlarr Environment Variables](prowlarr/environment-variables.md)
+- [Whisparr Environment Variables](whisparr/environment-variables.md)
 
 The app name that should be used is simply the app name that the environment variable is passed to: `RADARR`, `SONARR`, `PROWLARR`, etc.
 
@@ -379,7 +379,7 @@ Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give
 
 ## Tdarr
 
-[Tdarr](https://tdarr.io) is a closed-source self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc. Designed to work alongside [Sonarr](/sonarr)/[Radarr](/radarr) and built with the aim of modularization, parallelization and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.
+[Tdarr](https://tdarr.io) is a closed-source self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc. Designed to work alongside [Sonarr](sonarr.md)/[Radarr](radarr.md) and built with the aim of modularization, parallelization and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.
 
 ## tdarr_inform
 
