@@ -37,13 +37,13 @@ tags:
 
 > This page is still in progress and not complete. Contributions are welcome
 
-> For a more detailed breakdown of all the settings, check [Whisparr =>Settings](/whisparr/settings)
-{.is-info}
+!!! info
+    For a more detailed breakdown of all the settings, check [Whisparr =>Settings](/whisparr/settings)
 
 In this guide we will try to explain the basic setup you need to do to get started with Whisparr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
-> Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
-{.is-warning}
+!!! warning
+    Please note that within the screenshots and GUI settings in `orange` are advanced options, so you will need to click `Show Advanced` at the top of the page to make them visible.
 
 # Startup
 
@@ -69,8 +69,8 @@ First we’re going to take a look at the `Media Management` settings where we c
 4. Here you will select the naming convention for the actual movie files.
 5. *(Advanced Option) This is where you will set the naming convention for the folder that contains the video file.*
 
-> If you want a recommended naming scheme and examples take a look [TRaSH's Recommended Naming Schemes](https://trash-guides.info/Whisparr/Whisparr-recommended-naming-scheme/).
-{.is-info}
+!!! info
+    If you want a recommended naming scheme and examples take a look [TRaSH's Recommended Naming Schemes](https://trash-guides.info/Whisparr/Whisparr-recommended-naming-scheme/).
 
 ## Importing
 
@@ -94,17 +94,18 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 Here we will add the root folder that Whisparr will be using to import your existing organized media library and where Whisparr will be importing (copy/hardlink/move) your media after your download client has downloaded it.
 
-> \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
-> \* If you're using an SMB mount ensure `nobrl` is enabled.
-{.is-warning}
+!!! warning
+    \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.
+    \* If you're using an SMB mount ensure `nobrl` is enabled.
 
-> **The user and group you configured Whisparr to run as must have read & write access to this location.** {.is-info}
+!!! info
+    **The user and group you configured Whisparr to run as must have read & write access to this location.** 
 
-> Your download client downloads to a download folder and Whisparr imports it to your media folder (final destination) that your media server uses.
-{.is-info}
+!!! info
+    Your download client downloads to a download folder and Whisparr imports it to your media folder (final destination) that your media server uses.
 
-> **Your download folder and media (library / root) folder can’t be the same location**
-{.is-danger}
+!!! danger
+    **Your download folder and media (library / root) folder can’t be the same location**
 
 Don’t forget to save your changes
 
@@ -120,9 +121,9 @@ We recommend you to create your own profiles and only select the Quality Sources
 
 For more information on foreign titles and languages see [this FAQ entry](/whisparr/faq#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
 
-> More info at [Settings => Profiles](/whisparr/settings#profiles).
-> To see what the difference is between the Quality Sources look [at our Quality Definitions](/whisparr/settings#qualities-defined).
-{.is-info}
+!!! info
+    More info at [Settings => Profiles](/whisparr/settings#profiles).
+    To see what the difference is between the Quality Sources look [at our Quality Definitions](/whisparr/settings#qualities-defined).
 
 # Quality
 
@@ -132,8 +133,8 @@ For more information on foreign titles and languages see [this FAQ entry](/whisp
 
 Here you’re able to change/fine tune the min and max size of your wanted media files (when using Usenet keep in mind the RAR/PAR2 files)
 
-> If you need some help with what to use for a Quality Settings check [TRaSH's size recommendations](https://trash-guides.info/Whisparr/Whisparr-Quality-Settings-File-Size/) for a tested example.
-{.is-info}
+!!! info
+    If you need some help with what to use for a Quality Settings check [TRaSH's size recommendations](https://trash-guides.info/Whisparr/Whisparr-Quality-Settings-File-Size/) for a tested example.
 
 # Indexers
 
@@ -155,8 +156,8 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and to have read & write access to the location the download client reports files the client downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
-> See the [settings page](/whisparr/settings#download-clients), at the [More Info (Supported)](/whisparr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
-{.is-info}
+!!! info
+    See the [settings page](/whisparr/settings#download-clients), at the [More Info (Supported)](/whisparr/supported#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 ## {.tabset}
 

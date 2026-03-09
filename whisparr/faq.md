@@ -102,8 +102,8 @@ tags:
 
 ## How are possible downloads compared
 
-> Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
-{.is-info}
+!!! info
+    Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
 
 - The current logic [can always be found here](https://github.com/Whisparr/Whisparr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
@@ -118,7 +118,8 @@ tags:
 1. Age (If Usenet)
 1. Size
 
-> \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/whisparr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/#repack-proper).{.is-warning}
+!!! warning
+    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](/whisparr/settings#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/#repack-proper).
 
 ## What are Lists and what can they do for me
 
@@ -126,8 +127,8 @@ tags:
 
 - Let's say that you follow a given list creator on Trakt/TMDb and really like their Marvel Cinematic Universe film section and want to watch every movie on their list. You look in your Whisparr and realize that you do not have those movies. Well instead of searching one by one and adding those lists and then searching your indexers for those movies. You can do this all at once with a List. The Lists can be set to import all the movies on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that movie.
 
-> **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
-{.is-warning}
+!!! warning
+    **CAUTION:** If done improperly lists can wreak havoc on your library by adding many movies you have no intention of watching. Make certain you are familiar with the list before you click save.
 
 - It's suggested that physically look at the list before you even go to Whisparr.
 
@@ -170,13 +171,13 @@ tags:
 
 - `develop` - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Develop&query=%24%5B0%5D.version&url=https://whisparr.servarr.com/v1/update/develop/changes) -  (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first after nightly. It can be considered semi-stable, but is still `beta`.
 
-> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time and is tagged as pre-release.
-{.is-warning}
+!!! warning
+    **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time and is tagged as pre-release.
 
 - `nightly` - ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly&query=%24%5B0%5D.version&url=https://whisparr.servarr.com/v1/update/nightly/changes) - (Alpha/Unstable) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.  ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
 
-> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
-{.is-danger}
+!!! danger
+    **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds. Please note that `nightly` branches are intentionally not listed below.
 
@@ -228,8 +229,8 @@ tags:
 
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
-{.is-warning}
+!!! warning
+    Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
 
 #### Using zip backup
 
@@ -255,8 +256,8 @@ tags:
 
 #### File System Restore on Synology NAS
 
-> CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
-{.is-warning}
+!!! warning
+    CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 
 - Re-install Whisparr (if applicable / not already installed)
 - Find the location of the AppData directory for Whisparr
@@ -265,7 +266,8 @@ tags:
 - Stop Whisparr
 - Connect to the Synology NAS through SSH and log in as root
 
-> On some installations, the user is different than the below commands: `chown -R sc-Whisparr:Whisparr *` {.is-info}
+!!! info
+    On some installations, the user is different than the below commands: `chown -R sc-Whisparr:Whisparr *` 
 
 - Execute the following commands:
 
@@ -302,7 +304,8 @@ tags:
 
 {#rename-folders}
 
-> The same process applies for moving/changing Movie paths as well{.is-info}
+!!! info
+    The same process applies for moving/changing Movie paths as well
 
 1. Movies
 1. Movie Editor
@@ -310,8 +313,8 @@ tags:
 1. Change Root Folder to the same Root Folder that the movies currently exist in
 1. Select "Yes, move the files"
 
-> If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
-{.is-warning}
+!!! warning
+    If you are using Plex, this will trigger re-detection of intros, thumbnails, chapters, and preview metadata.
 
 ## Movie File and Folder Naming
 
@@ -362,9 +365,9 @@ tags:
 
 ## I am getting an error: Database disk image is malformed
 
-> \* For Whisparr users experiencing this after upgrading to v4. v4 does several far reaching migrations because of that if your database had previous corruption at any place (which may not have been detectable previously running Whisparr) the migration will bomb out and fail. This will cause Whisparr to fail to start. It is likely all your backups are corrupt as well, so simply restoring those will likely not resolve the issue.
-> \* If the post-migrated database will not open or cannot be recovered then make a copy of the database from a recent backup and apply the database recovery process to that file then try starting Whisparr with the recovered backup file. It should then migrate without issues.
-{.is-warning}
+!!! warning
+    \* For Whisparr users experiencing this after upgrading to v4. v4 does several far reaching migrations because of that if your database had previous corruption at any place (which may not have been detectable previously running Whisparr) the migration will bomb out and fail. This will cause Whisparr to fail to start. It is likely all your backups are corrupt as well, so simply restoring those will likely not resolve the issue.
+    \* If the post-migrated database will not open or cannot be recovered then make a copy of the database from a recent backup and apply the database recovery process to that file then try starting Whisparr with the recovered backup file. It should then migrate without issues.
 
 - This means your SQLite database that stores most of the information for Whisparr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
@@ -482,13 +485,13 @@ Depending on your OS, there are multiple possible ways.
 
 ## VPNs, Jackett, and the \*ARRs
 
-> For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
-{.is-info}
+!!! info
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
 
 - Unless you're in a repressive country like China or Australia, your BitTorrent client is typically the only thing that needs to be behind a VPN. Usenet does not require VPN protection as it uses encrypted SSL connections. For most countries including the UK, using secure DNS (like Cloudflare's 1.1.1.1 or Google's 8.8.8.8) is sufficient to resolve access issues without requiring a VPN. If a VPN is required, we recommend using Hotio or Binhex download clients with built-in VPN capabilities.
 
-> **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
-{.is-warning}
+!!! warning
+    **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
 
 - **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
@@ -516,8 +519,8 @@ Depending on your OS, there are multiple possible ways.
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
   - Note that `multi` by default is assumed English and French
 
-> Note that for indexers that support ID based searches - such as many Usenet indexers and many private Torrent trackers - text queries are not used if results are returned for an ID based search. Therefore the above about searching does not apply. Whisparr will search the ID and if results are returned will not fall back to a name search. If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
-{.is-warning}
+!!! warning
+    Note that for indexers that support ID based searches - such as many Usenet indexers and many private Torrent trackers - text queries are not used if results are returned for an ID based search. Therefore the above about searching does not apply. Whisparr will search the ID and if results are returned will not fall back to a name search. If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
 
 ## How does Whisparr handle "multi" in names
 
@@ -567,7 +570,8 @@ This is expected. With a setup that supports [hardlinks](https://trash-guides.in
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Whisparr's settings, Whisparr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped (i.e. paused). See [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for how to configure your download client optimally.
 
-> Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file. {.is-info}
+!!! info
+    Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file. 
 
 ## Why doesn't Whisparr work behind a reverse proxy
 
