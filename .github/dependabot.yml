@@ -7,7 +7,7 @@ updates:
       interval: "weekly"
       day: "friday"
       time: "12:00"
-    target-branch: "master"
+    target-branch: "main"
     groups:
       github:
         patterns:
