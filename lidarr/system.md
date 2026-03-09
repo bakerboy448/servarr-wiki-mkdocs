@@ -73,8 +73,8 @@ tags:
 - [Events](#events)
 - [Log Files](#log-files)
 
-> Warning: This page is a work in progress and is currently a rough draft based on Readarr
-{.is-danger}
+!!! danger
+    Warning: This page is a work in progress and is currently a rough draft based on Readarr
 
 # Status
 
@@ -105,9 +105,9 @@ The branch you have set is not a valid release branch. You will not receive upda
 - To remedy, download the correct build for your architecture and replace your existing binaries (application)
 - In short you will need to delete your existing binaries (contents or folder of /opt/Lidarr) and replace with the contents of the .tar.gz you just downloaded.
 
-> DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-> YOU MUST DELETE THE OLD ONES FIRST.
-{.is-warning}
+!!! warning
+    DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
+    YOU MUST DELETE THE OLD ONES FIRST.
 
 - The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
 - This assumes you are on the `master` Lidarr branch update the variable if needed
@@ -168,8 +168,8 @@ sudo systemctl start $app
 
 - Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the `System => Updates` page is probably a good starting point.
 
-> This warning will not appear if your current version is less than 14 days old
-{.is-info}
+!!! info
+    This warning will not appear if your current version is less than 14 days old
 
 #### Cannot install update because startup folder is not writable by the user
 
@@ -204,9 +204,9 @@ sudo systemctl start $app
  proxy_set_header Connection $http_connection;
 ```
 
-> Make sure you do not include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. THIS WILL NOT WORK
-> See <https://github.com/aspnet/AspNetCore/issues/17081>
-{.is-warning}
+!!! warning
+    Make sure you do not include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. THIS WILL NOT WORK
+    See <https://github.com/aspnet/AspNetCore/issues/17081>
 
 ##### Apache
 
@@ -264,8 +264,8 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 chmod +x /opt/Lidarr/fpcalc
 ```
 
-> The below information is for legacy v0.8.0 builds only.
-{.is-info}
+!!! info
+    The below information is for legacy v0.8.0 builds only.
 
 - To fix this on a native Linux instance, install the appropriate package using your package manager and make sure that fpcalc is on your PATH (this can be checked using which fpcalc and verifying that the correct location of fpcalc is returned):
 
@@ -332,8 +332,8 @@ chmod +x /opt/Lidarr/fpcalc
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 - Review our [Docker Guide](/docker-guide) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
 
-> Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
-{.is-warning}
+!!! warning
+    Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
 
 #### Bad Download Client Settings
 
@@ -483,8 +483,8 @@ chmod +x /opt/Lidarr/fpcalc
   - Refresh Artist - This goes through and refreshes all the metadata for all monitored and unmonitored artists
   - Rss Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
 
-> All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
-{.is-info}
+!!! info
+    All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 
 ## Queue
 
@@ -492,9 +492,9 @@ chmod +x /opt/Lidarr/fpcalc
 
 # Backup
 
-> This section will be more tailored to the buttons and overall point of the page.
-> However, if you're looking for how to back/restore your Lidarr instance click [the Lidarr backup FAQ](/lidarr/faq).
-{.is-info}
+!!! info
+    This section will be more tailored to the buttons and overall point of the page.
+    However, if you're looking for how to back/restore your Lidarr instance click [the Lidarr backup FAQ](/lidarr/faq).
 
 Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
 
@@ -515,8 +515,8 @@ Off to the right of each of the previous download you have two options.
 The update screen will show the past 5 updates that have been made as well as the current version you are on.
 This page will also display the update notes from the Developers telling you what has been fixed or added to Lidarr (Rejoice!)
 
-> A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
-{.is-info}
+!!! info
+    A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 
 # Events
 
@@ -539,8 +539,8 @@ On the top row there are several options to allow you to control your log files.
   - Log Files - The bread and butter of any support issue more on log files can be found here.
   - Updater Log Files - This will show the log files associated with Lidarr's updater script
 
-> If you're on docker this will be empty as you should be updating by downloading a new docker image
-{.is-info}
+!!! info
+    If you're on docker this will be empty as you should be updating by downloading a new docker image
 
 - Refresh - This will refresh the current page and display any newly created logs
 - Delete - This will clear all logs allowing you to start from fresh

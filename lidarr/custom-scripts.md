@@ -30,8 +30,8 @@ Note that the following will only be logged for custom scripts:
 
 Environment Variables vary based on the event type. The sections below indicate the variables available for each.
 
-> [The sections below need cleanup, organizing, and details enhanced. View the source code here](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs)
-{.is-info}
+!!! info
+    [The sections below need cleanup, organizing, and details enhanced. View the source code here](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs)
 
 ## Grab
 

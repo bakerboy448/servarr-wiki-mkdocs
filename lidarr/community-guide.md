@@ -40,8 +40,8 @@ Ensure Advanced Settings are enabled and Rename Tracks & Replace Illegal Charact
 
 - Result: `The Smashing Pumpkins/Mellon Collie and the Infinite Sadness/The Smashing Pumpkins_Mellon Collie and the Infinite Sadness_01-01_Mellon Collie and the Infinite Sadness.flac`
 
-> Note: Without {(Album Disambiguation)} you run the risk of tracks for albums that have the same title (such as Weezer (Blue Album and Weezer (Red Album)) all being dumped into the same album folder (Weezer). If there is no disambiguation associated with an album then Lidarr will use the standard folder name.
-{.is-info}
+!!! info
+    Note: Without {(Album Disambiguation)} you run the risk of tracks for albums that have the same title (such as Weezer (Blue Album and Weezer (Red Album)) all being dumped into the same album folder (Weezer). If there is no disambiguation associated with an album then Lidarr will use the standard folder name.
 
 ### Artist Folder Format
 
@@ -51,8 +51,8 @@ Ensure Advanced Settings are enabled and Rename Tracks & Replace Illegal Charact
 
 ![track naming](./images/track-naming.png)
 
-> Unless your file system supports reflinks and/or you are not using Lidarr to write metadata info then you should not enable hardlinks. Changing the metadata for your media files will corrupt the original seeding files.
-{.is-warning}
+!!! warning
+    Unless your file system supports reflinks and/or you are not using Lidarr to write metadata info then you should not enable hardlinks. Changing the metadata for your media files will corrupt the original seeding files.
 
 ## Custom Formats
 
@@ -211,11 +211,11 @@ This is another setting that is more personal preference. If you want to ensure 
 
 This minimizes the number of releases that are added for an artist but I can switch to the `Any` profile if needed to add specific releases that are not included in the above release types.
 
-> Release types are determined by Musicbrainz so if you can’t find a specific release in Lidarr check the release type in Musicbrainz and ensure that release type is enabled in your metadata profile for that specific artist.
-{.is-info}
+!!! info
+    Release types are determined by Musicbrainz so if you can’t find a specific release in Lidarr check the release type in Musicbrainz and ensure that release type is enabled in your metadata profile for that specific artist.
 
-> Nine times out of ten when a release can’t be found in Lidarr it’s because the release type is set to `unknown` in Musicbrainz. Lidarr cannot add releases that are listed as `unknown`
-{.is-info}
+!!! info
+    Nine times out of ten when a release can’t be found in Lidarr it’s because the release type is set to `unknown` in Musicbrainz. Lidarr cannot add releases that are listed as `unknown`
 
 ### Metadata
 

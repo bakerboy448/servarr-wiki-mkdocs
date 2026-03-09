@@ -120,8 +120,8 @@ As of Lidarr v2, Authentication is Mandatory.
 
 ## How are possible downloads compared
 
-> Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)***
-{.is-info}
+!!! info
+    Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)***
 
 - The current logic [can be found here](https://github.com/Lidarr/Lidarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
@@ -214,8 +214,8 @@ As of Lidarr v2, Authentication is Mandatory.
 
 {#rename-folders}
 
-> The same process applies for moving/changing Artist paths as well.
-{.is-info}
+!!! info
+    The same process applies for moving/changing Artist paths as well.
 
 1. Library
 1. Click on "Select Artists"
@@ -268,13 +268,13 @@ mv <foldername...> <foldername>
 
 - `develop` - ![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Develop&query=%24%5B0%5D.version&url=https://lidarr.servarr.com/v1/update/develop/changes) - (Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first after nightly. It can be considered semi-stable, but is still `beta`. This version will receive updates either weekly or biweekly depending on development and will be tagged as `pre-release`.
 
-> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time and is tagged as pre-release.
-{.is-warning}
+!!! warning
+    **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time and is tagged as pre-release.
 
 - `nightly` - ![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=Nightly&query=%24%5B0%5D.version&url=https://lidarr.servarr.com/v1/update/nightly/changes) - (Alpha/Unstable): This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.  ***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.*** This version is updated immediately.
 
-> **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
-{.is-danger}
+!!! danger
+    **Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch.
 
 - Note: If your install is through Docker append `:release`, `:latest`, `:testing`, or `:develop` to the end of your container tag depending on who makes your builds. Please note that `nightly` branches are intentionally not listed below.
 
@@ -340,8 +340,8 @@ mv <foldername...> <foldername>
 
 ### Restoring from Backup
 
-> Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
-{.is-warning}
+!!! warning
+    Restoring to an OS that uses different paths will not work (Windows to Linux, Linux to Windows, Windows to OS X or OS X to Windows), moving between OS X and Linux may work, since both use paths containing `/` instead of `\` that Windows uses, but is not supported. You'll need to manually edit all paths in the database.
 
 #### Using zip backup
 
@@ -367,8 +367,8 @@ mv <foldername...> <foldername>
 
 #### File System Restore on Synology NAS
 
-> CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
-{.is-warning}
+!!! warning
+    CAUTION: Restoring on a Synology requires knowledge of Linux and Root SSH access to the Synology Device.
 
 - Re-install Lidarr (if applicable / not already installed)
 - Find the location of the AppData directory for Lidarr
@@ -377,7 +377,8 @@ mv <foldername...> <foldername>
 - Stop Lidarr
 - Connect to the Synology NAS through SSH and log in as root
 
-> On some installations, the user is different than the below commands: `chown -R sc-Lidarr:Lidarr *` {.is-info}
+!!! info
+    On some installations, the user is different than the below commands: `chown -R sc-Lidarr:Lidarr *` 
 
 - Execute the following commands:
 
@@ -406,8 +407,8 @@ chmod -R 0644 *
 
 ## Lidarr won't start on Debian 11 or older systems due to SQLite version
 
-> This workaround is only for older end-of-standard-support systems with outdated GLIBC/SQLite versions. This is not applicable to systems with SQLite corruption issues.
-{.is-warning}
+!!! warning
+    This workaround is only for older end-of-standard-support systems with outdated GLIBC/SQLite versions. This is not applicable to systems with SQLite corruption issues.
 
 Lidarr v3+ uses SQLite from SourceGear.sqlite3, which requires newer GLIBC versions and may cause compatibility issues on older end-of-standard-support systems including Debian 10, Debian 11, Synology DSM, Ubuntu 18, and Ubuntu 20. If you encounter SQLite-related errors (not corruption) on these platforms, you can force Lidarr to use your system's native SQLite library instead, which is compatible with your GLIBC version.
 
@@ -447,8 +448,8 @@ ls -la libe_sqlite3.so
 
 After creating the symlink, restart Lidarr. It will now use the system's SQLite library which is compatible with your GLIBC version.
 
-> **Note:** You will need to recreate this symlink after each Lidarr update, as updates replace the application directory contents.
-{.is-info}
+!!! info
+    **Note:** You will need to recreate this symlink after each Lidarr update, as updates replace the application directory contents.
 
 ### When to use this workaround
 
@@ -558,13 +559,13 @@ Depending on your OS, there are multiple possible ways.
 
 ## VPNs, Jackett, and the \*ARRs
 
-> For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
-{.is-info}
+!!! info
+    For comprehensive VPN guidance, see the dedicated [VPN Guide](/vpn) page.
 
 - Unless you're in a repressive country like China, Australia, your BitTorrent client is typically the only thing that needs to be behind a VPN. Usenet does not require VPN protection as it uses encrypted SSL connections. For most countries including the UK, using secure DNS (like Cloudflare's 1.1.1.1 or Google's 8.8.8.8) is sufficient to resolve access issues without requiring a VPN. Other *Arr apps not connecting to trackers should not be behind a VPN. Because the VPN endpoint is shared by many users, you can and will experience rate limiting, DDOS protection, and ip bans from various services each software uses.
 
-> **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
-{.is-warning}
+!!! warning
+    **To be clear it is not a matter if VPNs will cause issues with the \*Arrs, but when: image providers will block you and cloudflare is in front of most of \*Arr servers (updates, metadata, etc.) and liable to block you too**
 
 - **Many private trackers will ban you for using or accessing them (i.e. using Jackett or Prowlarr) via a VPN.**
 
@@ -598,8 +599,8 @@ This is expected. With a setup that supports [hardlinks](https://trash-guides.in
 1. Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within under the specific download client). When files are imported to your media folder will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Lidarr's settings, Lidarr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped (i.e. paused). See [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for how to configure your download client optimally.
 
-> Hard links are enabled by default. [A hard link will not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file.
-{.is-info}
+!!! info
+    Hard links are enabled by default. [A hard link will not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file.
 
 ## I keep getting warnings from my cloud storage about API limits
 
