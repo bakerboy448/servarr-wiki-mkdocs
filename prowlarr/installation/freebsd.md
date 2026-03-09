@@ -1,13 +1,11 @@
 ---
 title: Prowlarr FreeBSD Installation
 description: FreeBSD installation guide for Prowlarr
-published: true
-date: 2023-07-03T20:30:47.519Z
-tags: freebsd, installation, prowlarr
-editor: markdown
-dateCreated: 2023-07-03T20:11:02.991Z
+tags:
+  - freebsd
+  - installation
+  - prowlarr
 ---
-
 # FreeBSD
 
 The Prowlarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.

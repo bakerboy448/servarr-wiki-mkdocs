@@ -1,13 +1,11 @@
 ---
 title: Prowlarr Linux Installation
 description: Linux installation guide for Prowlarr
-published: true
-date: 2024-04-05T19:16:07.117Z
-tags: installation, linux, prowlarr
-editor: markdown
-dateCreated: 2023-07-03T20:11:24.804Z
+tags:
+  - installation
+  - linux
+  - prowlarr
 ---
-
 # Linux
 
 ## Debian / Ubuntu

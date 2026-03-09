@@ -1,13 +1,11 @@
 ---
 title: Prowlarr Docker Installation
 description: Docker installation guide for Prowlarr
-published: true
-date: 2023-08-12T16:03:43.190Z
-tags: docker, installation, prowlarr
-editor: markdown
-dateCreated: 2023-07-03T20:11:13.937Z
+tags:
+  - docker
+  - installation
+  - prowlarr
 ---
-
 # Docker
 
 The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.

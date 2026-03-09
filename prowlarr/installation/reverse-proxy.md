@@ -1,13 +1,14 @@
 ---
 title: Prowlarr Reverse Proxy
 description: Configuring reverse proxy setup for Prowlarr with nginx, Apache, and other web servers
-published: true
-date: 2024-01-19T23:44:51.382Z
-tags: reverse-proxy, nginx, apache, web-server, configuration, prowlarr
-editor: markdown
-dateCreated: 2023-07-03T20:11:34.526Z
+tags:
+  - reverse-proxy
+  - nginx
+  - apache
+  - web-server
+  - configuration
+  - prowlarr
 ---
-
 # Reverse Proxy Configuration
 
 Sample config examples for configuring Prowlarr to be accessible through a reverse proxy.
