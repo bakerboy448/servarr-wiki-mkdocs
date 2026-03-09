@@ -1,13 +1,12 @@
 ---
 title: Prowlarr Environment Variables
 description: Complete guide to Prowlarr environment variables for configuration management including Docker, database, authentication, and server settings
-published: true
-date: 2025-12-16T17:02:47.867Z
-tags: prowlarr, docker, installation, postgres
-editor: markdown
-dateCreated: 2025-09-06T22:30:15.859Z
+tags:
+  - prowlarr
+  - docker
+  - installation
+  - postgres
 ---
-
 # Prowlarr Environment Variables
 
 Prowlarr has the ability to use environment variables to override entries in config.xml. The pattern for variable naming is predictable and can be used to set any config entry. Environment variables are comprised of 3 parts, delimited by two underscores:

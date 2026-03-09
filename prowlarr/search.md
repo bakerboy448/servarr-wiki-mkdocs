@@ -1,13 +1,9 @@
 ---
 title: Prowlarr Search
-description:
-published: true
-date: 2025-07-15T20:42:03.748Z
-tags: prowlarr
-editor: markdown
-dateCreated: 2021-06-08T23:31:53.221Z
+description: 
+tags:
+  - prowlarr
 ---
-
 This page will show you how to perform a search from within Prowlarr. In general, your searches would be via app, but it's possible to do them directly in Prowlarr as well.
 
 # Performing a Search

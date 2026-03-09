@@ -1,13 +1,14 @@
 ---
 title: Prowlarr Supported
 description: List of supported indexers, trackers, and download clients compatible with Prowlarr
-published: true
-date: 2022-10-18T19:43:50.037Z
-tags: supported, indexers, trackers, download-clients, compatibility, prowlarr
-editor: markdown
-dateCreated: 2021-06-23T03:06:57.769Z
+tags:
+  - supported
+  - indexers
+  - trackers
+  - download-clients
+  - compatibility
+  - prowlarr
 ---
-
 > This page is a work in progress and requires additional effort.{.is-warning}
 
 This page is the disambiguation page for all `supported` wiki links (i.e. typically "more info" in the UI).

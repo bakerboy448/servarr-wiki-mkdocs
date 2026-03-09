@@ -1,13 +1,11 @@
 ---
 title: Prowlarr FAQ
 description: Prowlarr FAQ
-published: true
-date: 2025-09-12T22:51:38.317Z
-tags: prowlarr, troubleshooting, faq
-editor: markdown
-dateCreated: 2021-11-03T03:01:18.079Z
+tags:
+  - prowlarr
+  - troubleshooting
+  - faq
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

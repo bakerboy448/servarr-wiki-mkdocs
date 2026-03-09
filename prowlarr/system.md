@@ -1,13 +1,14 @@
 ---
 title: Prowlarr System
 description: System information, logs, scheduled tasks, and status monitoring for Prowlarr administration and troubleshooting
-published: true
-date: 2025-08-24T14:57:37.363Z
-tags: system, administration, logs, tasks, status, prowlarr
-editor: markdown
-dateCreated: 2021-08-03T21:21:08.969Z
+tags:
+  - system
+  - administration
+  - logs
+  - tasks
+  - status
+  - prowlarr
 ---
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)

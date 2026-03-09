@@ -1,13 +1,14 @@
 ---
 title: Prowlarr Appdata Directory
 description: Guide to Prowlarr's application data directory structure, configuration files, and backup recommendations
-published: true
-date: 2025-09-23T11:32:51.638Z
-tags: prowlarr, appdata, configuration, directory, files, backup
-editor: markdown
-dateCreated: 2021-06-08T01:06:44.136Z
+tags:
+  - prowlarr
+  - appdata
+  - configuration
+  - directory
+  - files
+  - backup
 ---
-
 > Below are the default paths for the application data directory {.is-info}
 
 > All instances of `$USER` are placeholders for the user the application is running under. {.is-warning}
