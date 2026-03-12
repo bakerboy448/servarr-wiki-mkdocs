@@ -1,0 +1,29 @@
+name: Feature Request
+description: Suggest an improvement or new feature
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - New feature
+        - Enhancement
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What would you like to see added or changed?
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case / motivation
+      description: Why is this needed?
+    validations:
+      required: true
