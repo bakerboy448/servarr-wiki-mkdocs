@@ -1,26 +1,15 @@
 version: 2
-
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "12:00"
-    target-branch: "main"
-    groups:
-      github-actions:
-        patterns:
-          - "*"
+      interval: weekly
+    commit-message:
+      prefix: "ci"
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "chore"
 
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "12:00"
-    target-branch: "main"
-    groups:
-      pip:
-        patterns:
-          - "*"
