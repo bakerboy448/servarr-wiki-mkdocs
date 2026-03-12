@@ -1,47 +1,50 @@
 name: Bug Report
-description: Report a bug
+description: Report incorrect or outdated wiki content
 labels: [bug]
 body:
   - type: dropdown
+    id: app
+    attributes:
+      label: Application
+      options:
+        - Lidarr
+        - Prowlarr
+        - Radarr
+        - Readarr
+        - Sonarr
+        - Whisparr
+        - General / Multiple
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or path
+      description: Link to the affected wiki page or file path.
+      placeholder: "e.g. https://wiki.servarr.com/radarr/settings or docs/radarr/settings.md"
+    validations:
+      required: true
+  - type: dropdown
     id: type
     attributes:
-      label: Type
+      label: Issue type
       options:
-        - Bug
-        - Regression
-        - Crash
+        - Incorrect information
+        - Outdated content
+        - Broken link
+        - Missing information
+        - Formatting / rendering
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: What happened?
-    validations:
-      required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to reproduce
-      value: |
-        1.
-        2.
-        3.
+      description: What is wrong with the current content?
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
-    validations:
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual behavior
-    validations:
-      required: true
-  - type: textarea
-    id: logs
-    attributes:
-      label: Logs / screenshots
+      label: What should it say?
+      description: Provide the correct information if known.

@@ -1,15 +1,30 @@
-name: Feature Request
-description: Suggest an improvement or new feature
+name: Content Request
+description: Request new or expanded wiki content
 labels: [enhancement]
 body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: Application
+      options:
+        - Lidarr
+        - Prowlarr
+        - Radarr
+        - Readarr
+        - Sonarr
+        - Whisparr
+        - General / Multiple
+    validations:
+      required: true
   - type: dropdown
     id: category
     attributes:
       label: Category
       options:
-        - New feature
-        - Enhancement
-        - Documentation
+        - New page
+        - Expand existing page
+        - Add examples / screenshots
+        - FAQ entry
         - Other
     validations:
       required: true
@@ -17,13 +32,11 @@ body:
     id: description
     attributes:
       label: Description
-      description: What would you like to see added or changed?
+      description: What content would you like to see added or expanded?
     validations:
       required: true
   - type: textarea
-    id: use-case
+    id: context
     attributes:
-      label: Use case / motivation
-      description: Why is this needed?
-    validations:
-      required: true
+      label: Context / use case
+      description: Why is this content needed? What question does it answer?
