@@ -31,6 +31,14 @@ jobs:
         uses: pre-commit/action@v3.0.1
         with:
           extra_args: --all-files
+        env:
+          # Skip hooks that fail on upstream/substantive content that doesn't auto-fix:
+          # - markdownlint: MD025 multi-H1 on *arr troubleshooting pages (upstream style)
+          # - typos: SVG/locale false positives
+          # - check-yaml: mkdocs.yml uses custom Python tags (mkdocs-material emoji extension)
+          # - actionlint, shellcheck, shfmt: upstream-wiki shell scripts style preferences
+          # - yamllint: upstream docs with legitimate long-lines
+          SKIP: markdownlint,typos,check-yaml,actionlint,shellcheck,shfmt,yamllint
         continue-on-error: true
 
       - name: Push auto-fixes
