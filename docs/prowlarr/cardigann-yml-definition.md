@@ -531,7 +531,7 @@ login:
 ### Complex POST Login
 
 !!! info
-    Real world form logins won't need most of the options 
+    Real world form logins won't need most of the options
 
 ```yaml
 login:

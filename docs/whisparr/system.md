@@ -456,7 +456,7 @@ Note: you will also need to add the websocket directive to your whisparr configu
 - The events tab will show you what has been happening within your Whisparr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging.
 
 !!! info
-    Events are the equivalent of INFO Logs. 
+    Events are the equivalent of INFO Logs.
 
 - Components - This column will tell you what component within Whisparr has been triggered
 - Message - This column will tell you what message as been sent from the component from the previous column.

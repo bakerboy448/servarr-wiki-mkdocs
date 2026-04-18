@@ -122,10 +122,10 @@ Also, note that for each individual settings page, there are some options at the
 ## Community Naming Suggestions
 
 !!! info
-    Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-recommended-naming-scheme/) 
+    Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-recommended-naming-scheme/)
 
 !!! warning
-    Warning: Starting from v3.0.6.1431, Sonarr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}` 
+    Warning: Starting from v3.0.6.1431, Sonarr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}`
 
 - Standard Series: `{Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Custom Formats}{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}`
 
@@ -238,6 +238,7 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 > \* Custom Formats will the name of the Custom Format
 !!! info
     \* `{Custom Formats:<Release Profile Name>}` is an additional option to use matches from specific release profiles only
+
 ### Original
 
 - `{Original Title}` = Series.Title.S01E01.WEBDL.NF.1080P.x264-EVOLVE
@@ -372,7 +373,7 @@ Name for the `Specials` (Season) folder
 - Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
 !!! warning
-    Files in the recycle bin older than the selected number of days will be cleaned up automatically 
+    Files in the recycle bin older than the selected number of days will be cleaned up automatically
 
 ## Permissions
 
@@ -953,7 +954,7 @@ If you download using a BitTorrent client, the process is slightly different:
 - Instance Name - Instance name in tab and for Syslog app name
 
 !!! info
-    If you are running multiple instances, this will add the instance name to the web browser tab name. 
+    If you are running multiple instances, this will add the instance name to the web browser tab name.
 
 - Enable SSL - If you have SSL credentials and would like to secure communication to and from your Sonarr enable this option.
 

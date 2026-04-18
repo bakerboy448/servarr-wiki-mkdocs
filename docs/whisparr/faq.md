@@ -267,7 +267,7 @@ tags:
 - Connect to the Synology NAS through SSH and log in as root
 
 !!! info
-    On some installations, the user is different than the below commands: `chown -R sc-Whisparr:Whisparr *` 
+    On some installations, the user is different than the below commands: `chown -R sc-Whisparr:Whisparr *`
 
 - Execute the following commands:
 
@@ -571,7 +571,7 @@ This is expected. With a setup that supports [hardlinks](https://trash-guides.in
 1. If the "Completed Download Handling - Remove Completed" option is enabled in Whisparr's settings, Whisparr will delete the original file and torrent from your download client, but only if the download client reports that seeding is complete and torrent is stopped (i.e. paused). See [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for how to configure your download client optimally.
 
 !!! info
-    Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file. 
+    Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then will fall back and copy the file.
 
 ## Why doesn't Whisparr work behind a reverse proxy
 

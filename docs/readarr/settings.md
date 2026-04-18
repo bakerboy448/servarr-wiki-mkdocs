@@ -322,7 +322,7 @@ Commonly used naming schema are:
 - (Advanced Option) Delete empty author folders -  Select the box to delete empty author folders if there are no books in it.
 
 !!! warning
-    One of those boxes can be checked, but they should not BOTH be checked. 
+    One of those boxes can be checked, but they should not BOTH be checked.
 
 !!! info
     This does not apply if Calibre is used as Calibre handles file/folder naming using its own internal schema.
@@ -494,7 +494,7 @@ Delay profiles are also helpful if you want to emphasize one protocol (Usenet or
 The timer begins as soon as Readarr detects a books has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
 !!! info
-    The clock starts from the releases uploaded time and not from the time Readarr sees it. 
+    The clock starts from the releases uploaded time and not from the time Readarr sees it.
 
 During the delay period, any new releases that become available will be noted by Readarr. When the delay timer expires, Readarr will download the single release which best matches your quality preferences.
 

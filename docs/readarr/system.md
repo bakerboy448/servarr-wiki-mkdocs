@@ -439,7 +439,7 @@ The queue will show you running and upcoming tasks as well as a history of recen
 - The events tab will show you what has been happening within your Readarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging.
 
 !!! info
-    Events are the equivalent of INFO Logs. 
+    Events are the equivalent of INFO Logs.
 
 - Components - This column will tell you what component within Readarr has been triggered
 - Message - This column will tell you what message as been sent from the component from the previous column.

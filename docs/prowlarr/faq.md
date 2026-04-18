@@ -434,7 +434,7 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 - Connect to the Synology NAS through SSH and log in as root
 
 !!! info
-    On some installations, the user is different than the below commands: `chown -R sc-Prowlarr:Prowlarr *` 
+    On some installations, the user is different than the below commands: `chown -R sc-Prowlarr:Prowlarr *`
 
 - Execute the following commands:
 

@@ -10,7 +10,7 @@ Sample config examples for configuring Whisparr to be accessible from the outsid
 Add the following configuration to `nginx.conf` located in the root of your Nginx configuration. The code block should be added inside the `server context`. [Full example of a typical Nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
 !!! warning
-    If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` 
+    If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host`
 
 ```nginx
 location /whisparr {
@@ -51,15 +51,15 @@ Adding this line will include all files that end with `.conf` to the Nginx confi
 
 Alternatively you can use a subdomain for whisparr. In this case you would visit `whisparr.yourdomain.tld`. For this you would need to configure a `A record` or `CNAME record` in your DNS.
 !!! warning
-    Many free DNS providers do not support this 
+    Many free DNS providers do not support this
 
 By default Nginx includes the `sites-enabled` folder. You can check this in `nginx.conf`, if not you can add it using the [include directive](http://nginx.org/en/docs/ngx_core_module.html#include). And really important, it has to be inside the `http context`. Now create a config file inside the sites-enabled folder and enter the following configuration.
 
 !!! info
-    For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `6969` and Whisparr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `whisparr` is chosen (line 5). 
+    For this configuration it is recommended to set baseurl to '' (empty). This configuration assumes you are using the default `6969` and Whisparr is accessible on the localhost (127.0.0.1). For this configuration the subdomain `whisparr` is chosen (line 5).
 
 !!! warning
-    If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host` 
+    If you're using a non-standard http/https server port, make sure your Host header also includes it, i.e.: `proxy_set_header Host $host:$server_port` or `proxy_set_header Host $http_host`
 
 ```nginx
 server {

@@ -24,7 +24,7 @@ To initiate a search, click on `Search` on the left menu. There will be a mostly
     These are generally formatted as `{VariableName:SearchValue}` e.g. For a TV Search of The Simpsons Season 32 the search input would be `{TvdbId:71663} {Season:32}`
 
 !!! info
-    Note that not all Indexers support all query types 
+    Note that not all Indexers support all query types
 
 - Indexers - Choose your indexers in the Indexers drop-down. You can check "Usenet" or "Torrents" to select all of the indexers in those categories automatically, or you can select specific indexers for your search from either group.
 - Category - Choose the categories you want to search on your indexers from the drop-down. You can select top-level categories (TV, Movies, etc.) to select all of the sub-categories automatically, or you can select specific categories from any of the groups.
@@ -36,7 +36,7 @@ You can download the result by clicking on the download icon on the right of the
 You can bulk grab results at once by checking the select boxes on the left side and hitting the `Grab Releases` button.
 
 !!! info
-    Anything downloaded will have the category assignment you've set in Prowlarr. This may require a manual import in your app program from a non-standard directory! 
+    Anything downloaded will have the category assignment you've set in Prowlarr. This may require a manual import in your app program from a non-standard directory!
 
 # API Endpoints
 
@@ -45,7 +45,7 @@ You can bulk grab results at once by checking the select boxes on the left side 
 - Standard Newznab/Torznab compatible endpoint/parameters. You can adjust the queries accordingly for your needs per the defined standards.
 
 !!! info
-    An aggregate multi-indexer endpoint will not be added due to the significant drawbacks of said functionality 
+    An aggregate multi-indexer endpoint will not be added due to the significant drawbacks of said functionality
 
 ### API Key in Query
 
@@ -55,7 +55,7 @@ You can bulk grab results at once by checking the select boxes on the left side 
 ### API Key in Header
 
 !!! info
-    Be sure to pass `X-Api-Key` with the API Key as a header 
+    Be sure to pass `X-Api-Key` with the API Key as a header
 
 - `http://{prowlarrhost}:{prowlarrport}/{baseurl}/{indexerid}/api?t=search&q={term}&apikey={yourkey}&cat={comma separated list}`
   - e.g. `http://192.168.1.100:9696/{indexerid}/api?t=search&q=mike&cat=5000,2000`

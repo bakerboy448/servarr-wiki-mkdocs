@@ -30,7 +30,7 @@ repos:
     rev: v5.0.0
     hooks:
       - id: no-commit-to-branch
-        args: ['--branch', 'master']
+        args: ["--branch", "master"]
 
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8
@@ -47,7 +47,7 @@ repos:
     rev: v1.5.0
     hooks:
       - id: detect-secrets
-        args: ['--baseline', '.secrets.baseline']
+        args: ["--baseline", ".secrets.baseline"]
 
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
@@ -60,7 +60,7 @@ repos:
       - id: shfmt
         name: shfmt
         entry: shfmt
-        args: [--write, --indent, '2', --case-indent, --binary-next-line]
+        args: [--write, --indent, "2", --case-indent, --binary-next-line]
         language: system
         types: [shell]
 

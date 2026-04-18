@@ -122,9 +122,7 @@ Downloading and importing is where most people experience issues. From a high le
 !!! info
     See the [settings page](../sonarr/settings.md#download-clients), at the [More Info (Supported)](../sonarr/supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
-
 === "Usenet"
-
 
     {#usenet}
 
@@ -137,7 +135,6 @@ Downloading and importing is where most people experience issues. From a high le
     - If the "Completed Download Handling - Remove" option is enabled in Sonarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
 === "BitTorrent"
-
 
     {#bittorrent}
 

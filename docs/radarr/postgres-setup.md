@@ -27,7 +27,7 @@ This guide was been created by the amazing [Roxedus](https://github.com/Roxedus)
  First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
 
 !!! danger
-    Do not even think about using the `latest` tag! 
+    Do not even think about using the `latest` tag!
 
 ```bash
 docker create --name=postgres14 \
@@ -76,10 +76,10 @@ Only **after creating** both databases you can start the Radarr migration from S
 ## Migrating data
 
 !!! info
-    If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide! 
+    If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide!
 
 !!! warning
-    Migrating an existing sqlite3 database is unsupported, and this script may not work without modifications which we cannot assist you with. We support only new installs using postgres. 
+    Migrating an existing sqlite3 database is unsupported, and this script may not work without modifications which we cannot assist you with. We support only new installs using postgres.
 
 To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
 
@@ -88,7 +88,7 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
 
 !!! danger
-    Do not drop any tables in the Postgres instance 
+    Do not drop any tables in the Postgres instance
 
 Before starting a migration please ensure that you have run Radarr against the created Postgres databases **at least once** successfully. Begin the migration by doing the following:
 
@@ -96,12 +96,12 @@ Before starting a migration please ensure that you have run Radarr against the c
 1. Open your preferred database management tool and connect to the Postgres database instance
 1. Run the following commands:
 
-	```SQL
-	DELETE FROM "QualityProfiles";
-	DELETE FROM "QualityDefinitions";
-	DELETE FROM "DelayProfiles";
-	DELETE FROM "Metadata";
-	```
+ ```SQL
+ DELETE FROM "QualityProfiles";
+ DELETE FROM "QualityDefinitions";
+ DELETE FROM "DelayProfiles";
+ DELETE FROM "Metadata";
+ ```
 
 1. Start the migration by using either of these options:
 

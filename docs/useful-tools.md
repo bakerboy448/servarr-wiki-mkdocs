@@ -87,7 +87,7 @@ Note that the application's database can be found in the Application Data Direct
 {#recovering-a-corrupt-db-ui}
 
 !!! info
-    Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database). The steps to do so are linked below 
+    Note this effectively does the same as `.recover` which requires Sqlite v3.29 | [Please refer to the Sqlite docs for more details on the `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database). The steps to do so are linked below
 
 !!! info
     [DB Browser for SQLite (DB4S)](https://SQLitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. DB4S is for users and developers who want to create, search, and edit databases. DB4S uses a familiar spreadsheet-like interface, and complicated SQL commands do not have to be learned.
@@ -127,7 +127,7 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
     This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
 
 !!! info
-    Given sqlite3 is required by \*Arrs it is assumed you have sqlite3 installed on your system 
+    Given sqlite3 is required by \*Arrs it is assumed you have sqlite3 installed on your system
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
@@ -346,7 +346,7 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 [Jdupes](https://codeberg.org/jbruchon/jdupes) is a program for identifying and taking actions upon duplicate files.
 
 !!! info
-    TRaSH [has a guide](https://trash-guides.info/jdupes) as well 
+    TRaSH [has a guide](https://trash-guides.info/jdupes) as well
 
 - `jdupes -M -r "/data/tv/" "/data/tv/.torrents/"` <= this would check for double files and print a summary of the results
 

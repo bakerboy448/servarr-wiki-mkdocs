@@ -53,7 +53,7 @@ Library Import allows you to import existing, organized series and episode files
     \* If you're using an SMB mount ensure `nobrl` is enabled.
 
 !!! info
-    **The user and group you configured Sonarr to run as must have read & write access to this location.** 
+    **The user and group you configured Sonarr to run as must have read & write access to this location.**
 
 !!! info
     Your download client downloads to a download folder and Sonarr imports it to your media folder (final destination) that your media server uses.

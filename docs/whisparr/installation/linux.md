@@ -15,7 +15,7 @@ tags:
 ## Debian / Ubuntu
 
 !!! info
-    Note: Raspberry Pi OS and Raspbian are both flavors of Debian 
+    Note: Raspberry Pi OS and Raspbian are both flavors of Debian
 
 ### Easy Install
 
@@ -43,7 +43,7 @@ sudo apt install curl sqlite3
 ```
 
 !!! warning
-    Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application. 
+    Warning: Ignoring the below prerequisites will result in a failed installation and non-functional application.
 
 !!! danger
     **Installation Prerequisites**
@@ -55,7 +55,7 @@ sudo apt install curl sqlite3
     \* You created the directory `/var/lib/whisparr` and ensured the user `whisparr` has read/write permissions for it for it
 
 !!! warning
-    By continuing below, you acknowledge that you have read and met the above requirements. 
+    By continuing below, you acknowledge that you have read and met the above requirements.
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
@@ -144,7 +144,7 @@ sudo journalctl --since today -u whisparr
 
 To uninstall and purge:
 !!! danger
-    Warning: This will destroy your application data. 
+    Warning: This will destroy your application data.
 
 ```bash
 sudo systemctl stop whisparr

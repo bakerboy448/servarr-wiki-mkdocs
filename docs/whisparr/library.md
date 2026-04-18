@@ -98,7 +98,7 @@ Library Import allows you to import existing organized movies and each movie's f
     \* If you're using an SMB mount ensure `nobrl` is enabled.
 
 !!! info
-    **The user and group you configured Whisparr to run as must have read & write access to this location.** 
+    **The user and group you configured Whisparr to run as must have read & write access to this location.**
 
 !!! info
     Your download client downloads to a download folder and Whisparr imports it to your media folder (final destination) that your media server uses.

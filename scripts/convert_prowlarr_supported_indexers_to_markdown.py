@@ -1,10 +1,10 @@
 """
-conver_prowlarr_supported_indexers_to_markdown.py
+convert_prowlarr_supported_indexers_to_markdown.py
 
 The purpose of this script is to export a markdown table for the wiki of the available indexers.
 We get the most recent commits from two repositories and from the existing specified output page.
 The current and existing commits are compared and if needed a new wiki page is generated.
-Specifcally the indexer tables are compared.
+Specifically the indexer tables are compared.
 """
 
 import json

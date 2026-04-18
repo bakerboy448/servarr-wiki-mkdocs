@@ -11,10 +11,10 @@ tags:
   - structure
 ---
 !!! info
-    Below are the default paths for the application data directory 
+    Below are the default paths for the application data directory
 
 !!! warning
-    All instances of `$USER` are placeholders for the user the application is running under. 
+    All instances of `$USER` are placeholders for the user the application is running under.
 
 # Windows
 
@@ -46,7 +46,7 @@ If you are using the SynoCommunity package for Sonarr, this is where you should 
 `/volume1/@appstore/nzbdrone/.config/Sonarr`
 
 !!! info
-    The SynoCommunity still uses the original package name `nzbdrone` for the underlying package name 
+    The SynoCommunity still uses the original package name `nzbdrone` for the underlying package name
 
 # QNAP
 
