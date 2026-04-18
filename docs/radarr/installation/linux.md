@@ -11,7 +11,7 @@ tags:
 ## Debian / Ubuntu
 
 !!! info
-    Note: Raspberry Pi OS and Raspbian are both flavors of Debian 
+    Note: Raspberry Pi OS and Raspbian are both flavors of Debian
 
 ### Easy Install
 
@@ -54,7 +54,7 @@ sudo apt install curl sqlite3
     \* Previous/existing installations were using the `master` release branch noted on the [FAQ](../../radarr/faq.md) or you update `master` in the download URL
 
 !!! success
-    By continuing below, you acknowledge that you have read and met the above requirements. 
+    By continuing below, you acknowledge that you have read and met the above requirements.
 
 - Download the correct binaries for your architecture.
   - You can determine your architecture with `dpkg --print-architecture`
@@ -149,7 +149,7 @@ sudo journalctl --since today -u radarr
 
 To uninstall and purge:
 !!! danger
-    Warning: This will destroy your application data. 
+    Warning: This will destroy your application data.
 
 ```bash
 sudo systemctl stop radarr

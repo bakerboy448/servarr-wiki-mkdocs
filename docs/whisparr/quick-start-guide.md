@@ -98,7 +98,7 @@ Here we will add the root folder that Whisparr will be using to import your exis
     \* If you're using an SMB mount ensure `nobrl` is enabled.
 
 !!! info
-    **The user and group you configured Whisparr to run as must have read & write access to this location.** 
+    **The user and group you configured Whisparr to run as must have read & write access to this location.**
 
 !!! info
     Your download client downloads to a download folder and Whisparr imports it to your media folder (final destination) that your media server uses.
@@ -158,9 +158,7 @@ Downloading and importing is where most people experience issues. From a high le
 !!! info
     See the [settings page](../whisparr/settings.md#download-clients), at the [More Info (Supported)](../whisparr/supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
-
 === "Usenet"
-
 
     {#usenet}
 
@@ -173,7 +171,6 @@ Downloading and importing is where most people experience issues. From a high le
     - If the "Completed Download Handling - Remove" option is enabled in Whisparr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
 
 === "BitTorrent"
-
 
     {#bittorrent}
 

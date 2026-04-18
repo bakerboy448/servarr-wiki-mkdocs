@@ -28,7 +28,7 @@ tags:
 ## Filebot
 
 !!! info
-    Filebot is supported on Windows, Linux, and MacOS 
+    Filebot is supported on Windows, Linux, and MacOS
 
 - [Filebot](https://www.filebot.net/) is a fantastic utility for getting your movies organized in a way that Radarr can successfully parse. Version 4.7.9 can still be downloaded for free from a SourceForge mirror, but there are also paid versions in the Windows and Apple stores. On Linux, your distribution of choice may have a package for it, like in Arch’s AUR package or `.deb` files for Debian/Ubuntu from their download page. It has both a GUI and a CLI, so it should satisfy almost everyone.
 
@@ -46,7 +46,7 @@ tags:
 ## Files 2 Folder
 
 !!! info
-    Files 2 Folder is a Windows Application 
+    Files 2 Folder is a Windows Application
 
 [Files 2 Folder](http://www.dcmembers.com/skwire/download/files-2-folder/) can movie library orgainzed for import into Radarr. Simply extract the zip to your computer and run the .exe as administrator, then click yes to add it to your right click menu.
 
@@ -113,12 +113,12 @@ If you use Prowlarr on full sync, then you should be setting these values in Pro
 
 1. In Radarr, go to Settings -> Indexers. Click on each indexer. In that indexer, click Show Advanced. Set the Seed Ratio value to at least "1", and the Seed Time value to at least 300. You may leave one of those values blank, if you only want either time or ratio. If you set both, the first value that is met triggers the removal (i.e. if it hits 1.0 ratio in 120 minutes, it would be removed even though it hasn't met the time value).
 
-	![radarr-seed-time.png](../images/radarr-seed-time.png)
+ ![radarr-seed-time.png](../images/radarr-seed-time.png)
 
 1. Repeat this for all of your torrent indexers. You can set different goals for each indexer. Note that you should add 10-20% over what your private indexers require, because the way that your download client calculates time/ratio is slightly different than what your indexers do, and setting it too close to requirements can result in hit & runs.
 
 1. In Qbittorrent, go to Tools / Options / BitTorrent. You will have to check one of the seed goal items in order to be able to select from the drop-down. Change the drop-down to "Stop Torrent" (on older versions of Qbittorrent, this is Pause Torrent). Then you can un-check the box again, if you don't want Qbittorrent to have any default values set.
 
-	![qbit-remove-settings.png](../images/qbit-remove-settings.png)
+ ![qbit-remove-settings.png](../images/qbit-remove-settings.png)
 
 Now you're done. New grabs should have the values you've set, and when they're done they should Stop in Qbittorrent, and be removed shortly thereafter by Radarr.

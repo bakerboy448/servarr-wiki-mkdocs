@@ -50,7 +50,7 @@ But before you go there and post, be sure your request for help is the best it c
 The more we know, the easier it is to help you.
 
 !!! info
-    Please note we only support builds created by the servarr build platform 
+    Please note we only support builds created by the servarr build platform
 
 # Logging and Log Files
 

@@ -18,7 +18,7 @@ These instructions provide generic guidance that should apply to any Whisparr Do
 ## Portainer
 
 !!! danger
-    **Portainer should be avoided for setting up docker containers** 
+    **Portainer should be avoided for setting up docker containers**
 
 - Portainer gives a pretty GUI for managing containers, but that is all it is useful for.
 - Portainer should only for viewing docker container logs / container status.

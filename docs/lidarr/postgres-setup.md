@@ -27,7 +27,7 @@ This guide was been created by the amazing [Roxedus](https://github.com/Roxedus)
  First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
 
 !!! danger
-    Do not even think about using the `latest` tag! 
+    Do not even think about using the `latest` tag!
 
 ```bash
 docker create --name=postgres14 \
@@ -76,10 +76,10 @@ Only **after creating** both databases you can start the Lidarr migration from S
 ## Migrating data
 
 !!! info
-    If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide! 
+    If you do not want to migrate a existing SQLite database to Postgres then you are already finished with this guide!
 
 !!! warning
-    Migrating an existing sqlite3 database is unsupported, and this script may not work without modifications which we cannot assist you with. We support only new installs using postgres. 
+    Migrating an existing sqlite3 database is unsupported, and this script may not work without modifications which we cannot assist you with. We support only new installs using postgres.
 
 To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It does, however, have some gotchas:
 
@@ -88,7 +88,7 @@ To migrate data we can use [PGLoader](https://github.com/dimitri/pgloader). It d
   Roxedus [built a binary](https://github.com/Roxedus/Pgloader-bin) to enable this support (no code modification was needed, simply had to be built with updated dependencies).
 
 !!! danger
-    Do not drop any tables in the Postgres instance 
+    Do not drop any tables in the Postgres instance
 
 Before starting a migration please ensure that you have run Lidarr against the created Postgres databases **at least once** successfully. Begin the migration by doing the following:
 
@@ -96,13 +96,13 @@ Before starting a migration please ensure that you have run Lidarr against the c
 1. Open your preferred database management tool and connect to the Postgres database instance
 1. Run the following commands:
 
-	```SQL
-	DELETE FROM "QualityProfiles";
-	DELETE FROM "QualityDefinitions";
-	DELETE FROM "DelayProfiles";
-	DELETE FROM "Metadata";
-	DELETE FROM "MetadataProfiles";
-	```
+ ```SQL
+ DELETE FROM "QualityProfiles";
+ DELETE FROM "QualityDefinitions";
+ DELETE FROM "DelayProfiles";
+ DELETE FROM "Metadata";
+ DELETE FROM "MetadataProfiles";
+ ```
 
 1. Start the migration by using either of these options:
 
@@ -122,43 +122,43 @@ Before starting a migration please ensure that you have run Lidarr against the c
 
 1. For those having the issues POST-MIGRATION from SQLite run the following:
 
-	  ```sql
-  	select setval('public."AlbumReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "AlbumReleases"));
-  	select setval('public."Albums_Id_seq"', (SELECT MAX("Id")+1 FROM "Albums"));
-  	select setval('public."ArtistMetadata_Id_seq"', (SELECT MAX("Id")+1 FROM "ArtistMetadata"));
-  	select setval('public."Artists_Id_seq"', (SELECT MAX("Id")+1 FROM "Artists"));
-  	select setval('public."Blacklist_Id_seq"', (SELECT MAX("Id")+1 FROM "Blocklist"));
-  	select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
-  	select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
-  	select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
-  	select setval('public."CustomFormats_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFormats"));
-  	select setval('public."DelayProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "DelayProfiles"));
-  	select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
-  	select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
-  	select setval('public."DownloadHistory_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadHistory"));
-  	select setval('public."ExtraFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "ExtraFiles"));
-  	select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
-  	select setval('public."ImportListExclusions_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListExclusions"));
-  	select setval('public."ImportLists_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportLists"));
-  	select setval('public."ImportListStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListStatus"));
-  	select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
-  	select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
-  	select setval('public."LyricFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "LyricFiles"));
-  	select setval('public."Metadata_Id_seq"', (SELECT MAX("Id")+1 FROM "Metadata"));
-  	select setval('public."MetadataFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataFiles"));
-  	select setval('public."MetadataProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataProfiles"));
-  	select setval('public."NamingConfig_Id_seq"', (SELECT MAX("Id")+1 FROM "NamingConfig"));
-  	select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
-  	select setval('public."PendingReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "PendingReleases"));
-  	select setval('public."Profiles_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityProfiles"));
-  	select setval('public."QualityDefinitions_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityDefinitions"));
-  	select setval('public."RemotePathMappings_Id_seq"', (SELECT MAX("Id")+1 FROM "RemotePathMappings"));
-  	select setval('public."Restrictions_Id_seq"', (SELECT MAX("Id")+1 FROM "ReleaseProfiles"));
-  	select setval('public."RootFolders_Id_seq"', (SELECT MAX("Id")+1 FROM "RootFolders"));
-  	select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
-  	select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
-  	select setval('public."TrackFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "TrackFiles"));
-  	select setval('public."Tracks_Id_seq"', (SELECT MAX("Id")+1 FROM "Tracks"));
-  	select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
+   ```sql
+   select setval('public."AlbumReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "AlbumReleases"));
+   select setval('public."Albums_Id_seq"', (SELECT MAX("Id")+1 FROM "Albums"));
+   select setval('public."ArtistMetadata_Id_seq"', (SELECT MAX("Id")+1 FROM "ArtistMetadata"));
+   select setval('public."Artists_Id_seq"', (SELECT MAX("Id")+1 FROM "Artists"));
+   select setval('public."Blacklist_Id_seq"', (SELECT MAX("Id")+1 FROM "Blocklist"));
+   select setval('public."Commands_Id_seq"', (SELECT MAX("Id")+1 FROM "Commands"));
+   select setval('public."Config_Id_seq"', (SELECT MAX("Id")+1 FROM "Config"));
+   select setval('public."CustomFilters_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFilters"));
+   select setval('public."CustomFormats_Id_seq"', (SELECT MAX("Id")+1 FROM "CustomFormats"));
+   select setval('public."DelayProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "DelayProfiles"));
+   select setval('public."DownloadClients_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClients"));
+   select setval('public."DownloadClientStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadClientStatus"));
+   select setval('public."DownloadHistory_Id_seq"', (SELECT MAX("Id")+1 FROM "DownloadHistory"));
+   select setval('public."ExtraFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "ExtraFiles"));
+   select setval('public."History_Id_seq"', (SELECT MAX("Id")+1 FROM "History"));
+   select setval('public."ImportListExclusions_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListExclusions"));
+   select setval('public."ImportLists_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportLists"));
+   select setval('public."ImportListStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "ImportListStatus"));
+   select setval('public."Indexers_Id_seq"', (SELECT MAX("Id")+1 FROM "Indexers"));
+   select setval('public."IndexerStatus_Id_seq"', (SELECT MAX("Id")+1 FROM "IndexerStatus"));
+   select setval('public."LyricFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "LyricFiles"));
+   select setval('public."Metadata_Id_seq"', (SELECT MAX("Id")+1 FROM "Metadata"));
+   select setval('public."MetadataFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataFiles"));
+   select setval('public."MetadataProfiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MetadataProfiles"));
+   select setval('public."NamingConfig_Id_seq"', (SELECT MAX("Id")+1 FROM "NamingConfig"));
+   select setval('public."Notifications_Id_seq"', (SELECT MAX("Id")+1 FROM "Notifications"));
+   select setval('public."PendingReleases_Id_seq"', (SELECT MAX("Id")+1 FROM "PendingReleases"));
+   select setval('public."Profiles_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityProfiles"));
+   select setval('public."QualityDefinitions_Id_seq"', (SELECT MAX("Id")+1 FROM "QualityDefinitions"));
+   select setval('public."RemotePathMappings_Id_seq"', (SELECT MAX("Id")+1 FROM "RemotePathMappings"));
+   select setval('public."Restrictions_Id_seq"', (SELECT MAX("Id")+1 FROM "ReleaseProfiles"));
+   select setval('public."RootFolders_Id_seq"', (SELECT MAX("Id")+1 FROM "RootFolders"));
+   select setval('public."ScheduledTasks_Id_seq"', (SELECT MAX("Id")+1 FROM "ScheduledTasks"));
+   select setval('public."Tags_Id_seq"', (SELECT MAX("Id")+1 FROM "Tags"));
+   select setval('public."TrackFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "TrackFiles"));
+   select setval('public."Tracks_Id_seq"', (SELECT MAX("Id")+1 FROM "Tracks"));
+   select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
 
 1. Start Lidarr

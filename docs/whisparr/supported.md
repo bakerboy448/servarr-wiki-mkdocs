@@ -74,12 +74,12 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - IP Torrents {#iptorrents}
   - Private Tracker
 !!! info
-    IP Torrents' native implementation does not support Search 
+    IP Torrents' native implementation does not support Search
   - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
 !!! info
-    Nyaa frowns upon automation and frequently will ban your IP. 
+    Nyaa frowns upon automation and frequently will ban your IP.
   - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
 - Pass The Popcorn (PTP) {#passthepopcorn}
   - Private Tracker
@@ -115,7 +115,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
 
 !!! info
-    You can use a "pretty address" like `SomePrettyName <email@example.org>` 
+    You can use a "pretty address" like `SomePrettyName <email@example.org>`
 
 - Emby {#mediabrowser}
 - Gotify {#gotify}

@@ -444,7 +444,7 @@ This page will also display the update notes from the Developers telling you wha
 The events tab will show you what has been happening within your Sonarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging.
 
 !!! info
-    Events are the equivalent of INFO Logs. 
+    Events are the equivalent of INFO Logs.
 
 - Components - This column will tell you what component within Sonarr has been triggered
 - Message - This column will tell you what message as been sent from the component from the previous column.

@@ -47,6 +47,7 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 > Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
 !!! info
     For css changes `yarn stylelint-windows --fix`
+
 ### Building the frontend
 
 - Navigate to the cloned directory

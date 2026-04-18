@@ -125,10 +125,10 @@ Also, note that for each individual settings page, there are some options at the
 ## Community Naming Suggestions
 
 !!! info
-    Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Whisparr/Whisparr-recommended-naming-scheme/) 
+    Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Whisparr/Whisparr-recommended-naming-scheme/)
 
 !!! warning
-    Starting from v4.0.0.5720, Whisparr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}` 
+    Starting from v4.0.0.5720, Whisparr now supports recognizing Dolby Vision (DV) and High Dynamic Range (HDR) types. If you're using a lower version replace: `{[MediaInfo VideoDynamicRangeType]}` with `{[MediaInfoVideoDynamicRange]}`
 
 - Movie Files: `{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}]{[Custom Formats]}{[Quality Full]}{[MediaInfo 3D]}{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels}][{Mediainfo VideoCodec}]{-Release Group}`
 
@@ -219,7 +219,7 @@ Also, note that for each individual settings page, there are some options at the
 - `{Custom Formats}` = Surround Sound x264
 
 !!! info
-    Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming 
+    Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming
 
 ### Original
 
@@ -284,7 +284,7 @@ Here you will set the naming convention for the folder that contains the season 
 !!! info
     `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
 !!! info
-    [Use custom formats for automatic upgrades to propers/repacks](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/) 
+    [Use custom formats for automatic upgrades to propers/repacks](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/)
 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Whisparr to read parts of the file which may cause high disk or network activity during scans.
 - Rescan Movie Folder after Refresh - Rescan the series folder after refreshing the series
@@ -300,7 +300,7 @@ Here you will set the naming convention for the folder that contains the season 
 - Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
 !!! warning
-    Files in the recycle bin older than the selected number of days will be cleaned up automatically 
+    Files in the recycle bin older than the selected number of days will be cleaned up automatically
 
 ## Permissions
 
@@ -389,7 +389,7 @@ Delay profiles are also helpful if you want to emphasize one protocol (Usenet or
 The timer begins as soon as Whisparr detects a movie has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
 !!! info
-    The clock starts from the releases uploaded time and not from the time Whisparr sees it. 
+    The clock starts from the releases uploaded time and not from the time Whisparr sees it.
 
 During the delay period, any new releases that become available will be noted by Whisparr. When the delay timer expires, Whisparr will download the single release which best matches your quality preferences.
 
@@ -409,7 +409,7 @@ Delay profiles are also helpful if you want to emphasize one protocol (Usenet or
 The timer begins as soon as Whisparr detects a books has a release available. This release will show up in your Queue with a clock icon to indicate that it is under a delay.
 
 !!! info
-    The clock starts from the releases uploaded time and not from the time Whisparr sees it. 
+    The clock starts from the releases uploaded time and not from the time Whisparr sees it.
 
 During the delay period, any new releases that become available will be noted by Whisparr. When the delay timer expires, Whisparr will download the single release which best matches your quality preferences.
 
@@ -496,7 +496,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Include Custom Format when Renaming - Include the Name of the Custom Format in Renaming?
 
 !!! info
-    Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Whisparr uses. 
+    Custom Formats have no influence on what is searched - only how the results are evaluated. It is also not possible to modify in any form the search Whisparr uses.
 
 ## Custom Format Conditions
 

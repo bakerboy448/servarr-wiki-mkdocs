@@ -21,7 +21,7 @@ The queue shows all items the application can recognize that is in the specified
 
 !!! warning
     For Usenet Clients, \*Arr will only look 60 items deep in the queue for potential imports! It is important not to exceed this, or you will need to clean up with manual imports when your system gets overloaded and starts missing items!.
-    Remove Completed Downloads should be enabled for your Download Client as well. 
+    Remove Completed Downloads should be enabled for your Download Client as well.
 
 ## Queue Action Icons
 
@@ -34,7 +34,7 @@ The queue shows all items the application can recognize that is in the specified
 ## Queue Statuses
 
 !!! warning
-    Note the below is incomplete 
+    Note the below is incomplete
 
 | Icon       | Status                   | Description                                                                                     | Resolution Steps                                         |
 | ---------- | ------------------------ | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
@@ -59,7 +59,7 @@ On `Grabbed` statuses, you can click on the `i` icon on the right to see more de
 # Blocklist
 
 !!! info
-    Blocklist is formerly known as 'Blacklist' 
+    Blocklist is formerly known as 'Blacklist'
 
 The blocklist page shows you items that are blocklisted so they won't be downloaded again. These are failures from the automatic process or manually marked failed items. Items remain in the blocklist forever unless you manually remove them.
 

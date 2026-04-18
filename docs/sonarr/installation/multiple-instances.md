@@ -74,6 +74,7 @@ may have to change your paths here.
 This is crucial, as it keeps all the data files from both instances in
 !!! warning
     separate locations.
+
 1. Click *Install service*. The window should close and the service
     will now be available to run.
 1. Continue to [Configuring Sonarr-4k](#windows-multi-config-second)

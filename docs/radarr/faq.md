@@ -301,7 +301,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - Connect to the Synology NAS through SSH and log in as root
 
 !!! info
-    On some installations, the user is different than the below commands: `chown -R sc-Radarr:Radarr *` 
+    On some installations, the user is different than the below commands: `chown -R sc-Radarr:Radarr *`
 
 - Execute the following commands:
 

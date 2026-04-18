@@ -127,7 +127,7 @@ Also, note that for each individual settings page, there are some options at the
 ## Community Naming Suggestions
 
 !!! info
-    Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/) 
+    Below are some Community Naming Suggestions from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/)
 
 ### Movie Files
 
@@ -203,7 +203,7 @@ Also, note that for each individual settings page, there are some options at the
 - `{Tmdbid}` = 123456
 
 !!! info
-    Imdb Tags used in Plex naming format will conditionally hide when value is blank `{imdb-{ImdbId}}` 
+    Imdb Tags used in Plex naming format will conditionally hide when value is blank `{imdb-{ImdbId}}`
 
 ### Quality
 
@@ -245,7 +245,7 @@ Also, note that for each individual settings page, there are some options at the
 - `{Custom Formats}` = Surround Sound x264
 
 !!! info
-    Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming 
+    Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming
 
 ### Original
 
@@ -326,7 +326,7 @@ Here you will set the naming convention for the folder that contains the season 
 - Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
 !!! warning
-    Files in the recycle bin older than the selected number of days will be cleaned up automatically 
+    Files in the recycle bin older than the selected number of days will be cleaned up automatically
 
 ## Permissions
 

@@ -31,7 +31,7 @@ At the top of the page is `Manual Import` which allows you to arbitrarily import
 - Interactive Import will allow you to review the matches and adjust various specifications as needed. It provides the option (bottom left corner) to `Move` or `Copy/Hardlink` your files. Be sure to choose the correct option for your needs.
 
 !!! info
-    If a directory has more than 100 files in it then Sonarr will not recursively search the directory nor attempt to parse and match the files. 
+    If a directory has more than 100 files in it then Sonarr will not recursively search the directory nor attempt to parse and match the files.
 
 # Cutoff Unmet
 

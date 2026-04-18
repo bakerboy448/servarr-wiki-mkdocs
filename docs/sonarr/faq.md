@@ -117,7 +117,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 - Connect to the Synology NAS through SSH and log in as root
 
 !!! info
-    On some installations, the user is different than the below commands: `chown -R sc-Sonarr:Sonarr *` 
+    On some installations, the user is different than the below commands: `chown -R sc-Sonarr:Sonarr *`
 
 - Execute the following commands:
 
@@ -141,7 +141,7 @@ chmod -R 0644 *
 {#help-i-have-forgotten-my-password}
 
 !!! info
-    Authentication is now mandatory in v4 of Sonarr and the `AuthenticationMethod` type `None` is no longer valid - please see this [v4 FAQ - Forced Authentication](../sonarr/faq-v4.md#forced-authentication) 
+    Authentication is now mandatory in v4 of Sonarr and the `AuthenticationMethod` type `None` is no longer valid - please see this [v4 FAQ - Forced Authentication](../sonarr/faq-v4.md#forced-authentication)
 
 To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](../sonarr/appdata-directory.md)
 

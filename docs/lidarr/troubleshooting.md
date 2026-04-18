@@ -20,7 +20,7 @@ Before posting, ensure your request for help is clear. Clearly describe the prob
 The more we know, the easier it is to help you.
 
 !!! info
-    Please note we only support builds created by the Servarr build platform 
+    Please note we only support builds created by the Servarr build platform
 
 # Logging and Log Files
 

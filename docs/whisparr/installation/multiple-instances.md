@@ -67,6 +67,7 @@ may have to change your paths here.
 This is crucial, as it keeps all the data files from both instances in
 !!! warning
     separate locations.
+
 1. Click *Install service*. The window should close and the service
     will now be available to run.
 1. Continue to [Configuring Whisparr-4k](#windows-multi-config-second)
@@ -106,6 +107,7 @@ This is crucial, as it keeps all the data files from both instances in
 If the restart delay is not configured by default it will restart the instance immediately.
 !!! info
     This can prevent updates from being applied and can result in the following error `Whisparr was restarted prematurely by external process.`
+
 #### Windows Port Checker and Restarter PowerShell Script
 
 - When you use two Whisparr instances and one of it is updating, it will kill all instances. Only the one which is updating will come back online.

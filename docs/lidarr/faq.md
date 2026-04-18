@@ -173,11 +173,10 @@ As of Lidarr v2, Authentication is Mandatory.
 ## How can I find a MusicBrainz ID?
 
 1. [Search for your desired artist or album](https://musicbrainz.org/search) (use `Release Group` type for albums)
-2. The MusicBrainz ID can be found under the "Details" tab: 
+2. The MusicBrainz ID can be found under the "Details" tab:
 ![musicbrainz_id_detail_tab.png](../images/musicbrainz_id_detail_tab.png)
 3. Or at the end of the URL:
 ![musicbrainz_id_url.png](../images/musicbrainz_id_url.png)
-
 
 ## Lidarr matched an album with too many tracks. How can I change the Album to the correct Release
 
@@ -378,7 +377,7 @@ mv <foldername...> <foldername>
 - Connect to the Synology NAS through SSH and log in as root
 
 !!! info
-    On some installations, the user is different than the below commands: `chown -R sc-Lidarr:Lidarr *` 
+    On some installations, the user is different than the below commands: `chown -R sc-Lidarr:Lidarr *`
 
 - Execute the following commands:
 

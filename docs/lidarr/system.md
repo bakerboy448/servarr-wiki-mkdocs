@@ -473,15 +473,15 @@ chmod +x /opt/Lidarr/fpcalc
 !!! warning
     Note: If on Docker this will not update your container as a new image will need to be downloaded.
 
-  - Backup - This will run a backup of your Lidarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
-  - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Lidarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
-  - Clean Up Recycle Bin - The recycling bin will be cleared out on the displayed schedule in the UI. This will only be used if the recycling bin is set in File Management
-  - Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
-  - Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new artists. More info about lists can be found Settings => Lists.
-  - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Lidarr
-  - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
-  - Refresh Artist - This goes through and refreshes all the metadata for all monitored and unmonitored artists
-  - Rss Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
+- Backup - This will run a backup of your Lidarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
+- Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Lidarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
+- Clean Up Recycle Bin - The recycling bin will be cleared out on the displayed schedule in the UI. This will only be used if the recycling bin is set in File Management
+- Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
+- Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new artists. More info about lists can be found Settings => Lists.
+- Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Lidarr
+- Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
+- Refresh Artist - This goes through and refreshes all the metadata for all monitored and unmonitored artists
+- Rss Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
 
 !!! info
     All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.

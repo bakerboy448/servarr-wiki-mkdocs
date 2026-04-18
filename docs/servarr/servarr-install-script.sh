@@ -18,7 +18,7 @@
 ### Version v3.0.9a 2023-07-14 - DoctorArr - updated scriptversion and scriptdate and to see how this is going! It was still at v3.0.8.
 ### Version v3.0.10 2024-01-04 - Bakerboy448 - Misc updates and refactoring. Move to own script file.
 ### Version v3.0.11 2024-01-06 - StevieTV - Exit script when ran from installdir
-### Version v3.0.12 2024-04-09 - nostrus-dominion - moved root check, added title splash, added colors, attempted to improve readability, check for installed prerequisites before bothering apt, supressed tarball extraction, added some sleep timers.
+### Version v3.0.12 2024-04-09 - nostrus-dominion - moved root check, added title splash, added colors, attempted to improve readability, check for installed prerequisites before bothering apt, suppressed tarball extraction, added some sleep timers.
 ### Version v3.0.13+ 2024+ - Additional Updates by: The Servarr Community
 
 ### Boilerplate Warning
@@ -45,9 +45,9 @@ set -euo pipefail
 ### Am I root?, need root! GROOT!
 
 if [ "$EUID" -ne 0 ]; then
-    echo -e ${red}"Please run as root!"
-    echo -e "Exiting script!"
-    exit
+  echo -e ${red}"Please run as root!"
+  echo -e "Exiting script!"
+  exit
 fi
 
 ### Title Splash
@@ -70,50 +70,50 @@ echo "Select the application to install: "
 echo ""
 select app in lidarr prowlarr radarr whisparr whisparr-v3 quit; do
 
-    case $app in
+  case $app in
     lidarr)
-        app_port="8686"                                                     # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0 libchromaprint-tools mediainfo" # Required packages
-        app_umask="0002"                                                    # UMask the Service will run as
-        branch="master"                                                     # {Update me if needed} branch to install
-        break
-        ;;
+      app_port="8686"                                                       # Default App Port; Modify config.xml after install if needed
+      app_prereq="curl sqlite3 libsqlite3-0 libchromaprint-tools mediainfo" # Required packages
+      app_umask="0002"                                                      # UMask the Service will run as
+      branch="master"                                                       # {Update me if needed} branch to install
+      break
+      ;;
     prowlarr)
-        app_port="9696"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
-        app_umask="0002"                     # UMask the Service will run as
-        branch="master"                      # {Update me if needed} branch to install
-        break
-        ;;
+      app_port="9696"                        # Default App Port; Modify config.xml after install if needed
+      app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+      app_umask="0002"                       # UMask the Service will run as
+      branch="master"                        # {Update me if needed} branch to install
+      break
+      ;;
     radarr)
-        app_port="7878"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
-        app_umask="0002"                     # UMask the Service will run as
-        branch="master"                      # {Update me if needed} branch to install
-        break
-        ;;
+      app_port="7878"                        # Default App Port; Modify config.xml after install if needed
+      app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+      app_umask="0002"                       # UMask the Service will run as
+      branch="master"                        # {Update me if needed} branch to install
+      break
+      ;;
     whisparr)
-        app_port="6969"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
-        app_umask="0002"                     # UMask the Service will run as
-        branch="nightly"                     # {Update me if needed} branch to install
-        break
-        ;;
+      app_port="6969"                        # Default App Port; Modify config.xml after install if needed
+      app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+      app_umask="0002"                       # UMask the Service will run as
+      branch="nightly"                       # {Update me if needed} branch to install
+      break
+      ;;
     whisparr-v3)
-        app=whisparr
-        app_port="6969"                      # Default App Port; Modify config.xml after install if needed
-        app_prereq="curl sqlite3 libsqlite3-0" # Required packages
-        app_umask="0002"                     # UMask the Service will run as
-        branch="eros"                        # {Update me if needed} branch to install
-        break
-        ;;
+      app=whisparr
+      app_port="6969"                        # Default App Port; Modify config.xml after install if needed
+      app_prereq="curl sqlite3 libsqlite3-0" # Required packages
+      app_umask="0002"                       # UMask the Service will run as
+      branch="eros"                          # {Update me if needed} branch to install
+      break
+      ;;
     quit)
-        exit 0
-        ;;
+      exit 0
+      ;;
     *)
-        echo "Invalid option $REPLY"
-        ;;
-    esac
+      echo "Invalid option $REPLY"
+      ;;
+  esac
 done
 echo ""
 
@@ -125,21 +125,21 @@ datadir="/var/lib/$app/"       # {Update me if needed} AppData directory to use
 app_bin=${app^}                # Binary Name of the app
 
 if [[ $app != 'prowlarr' ]]; then
-    echo -e ${red}"   WARNING! WARNING! WARNING!"${reset}
-    echo ""
-    echo -e "   It is ${red}CRITICAL${reset} that the ${brown}User${reset} and ${brown}Group${reset} you select"
-    echo -e "   to run ${brown}[${app^}]${reset} will have both ${red}READ${reset} and ${red}WRITE${reset} access"
-    echo -e "   to your Media Library and Download Client directories!"${reset}
-    sleep 5
+  echo -e ${red}"   WARNING! WARNING! WARNING!"${reset}
+  echo ""
+  echo -e "   It is ${red}CRITICAL${reset} that the ${brown}User${reset} and ${brown}Group${reset} you select"
+  echo -e "   to run ${brown}[${app^}]${reset} will have both ${red}READ${reset} and ${red}WRITE${reset} access"
+  echo -e "   to your Media Library and Download Client directories!"${reset}
+  sleep 5
 fi
 
 # This script should not be ran from installdir, otherwise later in the script the extracted files will be removed before they can be moved to installdir.
-if [ "$installdir" == "$(dirname -- "$( readlink -f -- "$0"; )")" ] || [ "$bindir" == "$(dirname -- "$( readlink -f -- "$0"; )")" ]; then
-    echo ""
-    echo -e "${red}Error!${reset} You should not run this script from the intended install directory."
-    echo "Please re-run it from another directory."
-    echo "Exiting Script!"
-    exit
+if [ "$installdir" == "$(dirname -- "$(readlink -f -- "$0")")" ] || [ "$bindir" == "$(dirname -- "$(readlink -f -- "$0")")" ]; then
+  echo ""
+  echo -e "${red}Error!${reset} You should not run this script from the intended install directory."
+  echo "Please re-run it from another directory."
+  echo "Exiting Script!"
+  exit
 fi
 
 # Prompt User
@@ -158,54 +158,54 @@ echo -e "${brown}[${app^}]${reset} selected for installation."
 echo ""
 echo -e "${brown}[${app^}]${reset} will then be installed to ${brown}[$bindir]${reset} and use ${brown}[$datadir]${reset} for the AppData Directory."
 if [[ $app == 'prowlarr' ]]; then
-    echo ""
-    echo -e "${brown}[${app^}]${reset} will run as the user ${brown}[$app_uid]${reset} and group ${brown}[$app_guid]${reset}."
+  echo ""
+  echo -e "${brown}[${app^}]${reset} will run as the user ${brown}[$app_uid]${reset} and group ${brown}[$app_guid]${reset}."
 else
-    echo ""
-    echo -e "${brown}[${app^}]${reset} will run as the user ${brown}[$app_uid]${reset} and group ${brown}[$app_guid]${reset}."
-    echo ""
-    echo -e "   By continuing, you've ${red}CONFIRMED${reset} that that ${brown}[$app_uid]${reset} and ${brown}[$app_guid]${reset}"
-    echo -e "   will have both ${red}READ${reset} and ${red}WRITE${reset} access to all required directories."
-    echo ""
+  echo ""
+  echo -e "${brown}[${app^}]${reset} will run as the user ${brown}[$app_uid]${reset} and group ${brown}[$app_guid]${reset}."
+  echo ""
+  echo -e "   By continuing, you've ${red}CONFIRMED${reset} that that ${brown}[$app_uid]${reset} and ${brown}[$app_guid]${reset}"
+  echo -e "   will have both ${red}READ${reset} and ${red}WRITE${reset} access to all required directories."
+  echo ""
 fi
 
 # User confirmation that installation will continue
 echo ""
 read -r -p "Please type 'yes' to continue with the installation: " response
 if [[ $response != "yes" && $response != "YES" ]]; then
-    echo "Invalid response. Operation is canceled!"
-    echo "Exiting script!"
-    exit 0
+  echo "Invalid response. Operation is canceled!"
+  echo "Exiting script!"
+  exit 0
 fi
 
 # Create User / Group as needed
 if [ "$app_guid" != "$app_uid" ]; then
-    if ! getent group "$app_guid" >/dev/null; then
-        groupadd "$app_guid"
-    fi
+  if ! getent group "$app_guid" >/dev/null; then
+    groupadd "$app_guid"
+  fi
 fi
 if ! getent passwd "$app_uid" >/dev/null; then
-    adduser --system --no-create-home --ingroup "$app_guid" "$app_uid"
-    echo ""
-    echo -e "Created User ${yellow}$app_uid${reset}"
-    echo ""
-    echo -e "Created Group ${yellow}$app_guid${reset}."
-    sleep 3
+  adduser --system --no-create-home --ingroup "$app_guid" "$app_uid"
+  echo ""
+  echo -e "Created User ${yellow}$app_uid${reset}"
+  echo ""
+  echo -e "Created Group ${yellow}$app_guid${reset}."
+  sleep 3
 fi
 if ! getent group "$app_guid" | grep -qw "$app_uid"; then
-    echo ""
-    echo -e "User ${yellow}$app_uid${reset} did not exist in Group ${yellow}$app_guid${reset}."
-    usermod -a -G "$app_guid" "$app_uid"
-    echo ""
-    echo -e "Added User ${yellow}$app_uid${reset} to Group ${yellow}$app_guid${reset}."
-    sleep 3
+  echo ""
+  echo -e "User ${yellow}$app_uid${reset} did not exist in Group ${yellow}$app_guid${reset}."
+  usermod -a -G "$app_guid" "$app_uid"
+  echo ""
+  echo -e "Added User ${yellow}$app_uid${reset} to Group ${yellow}$app_guid${reset}."
+  sleep 3
 fi
 
 # Stop the App if running
 if service --status-all | grep -Fq "$app"; then
-    systemctl stop "$app"
-    systemctl disable "$app".service
-    echo "Stopped existing $app."
+  systemctl stop "$app"
+  systemctl disable "$app".service
+  echo "Stopped existing $app."
 fi
 
 # Create Appdata Directories
@@ -224,19 +224,19 @@ sleep 3
 
 missing_packages=()
 for pkg in $app_prereq; do
-    if ! dpkg -s "$pkg" >/dev/null 2>&1; then
-        missing_packages+=("$pkg")
-    fi
+  if ! dpkg -s "$pkg" >/dev/null 2>&1; then
+    missing_packages+=("$pkg")
+  fi
 done
 
 if [ ${#missing_packages[@]} -eq 0 ]; then
-    echo ""
-    echo -e ${green}"All prerequisite packages are already installed!"${reset}
+  echo ""
+  echo -e ${green}"All prerequisite packages are already installed!"${reset}
 else
-    echo ""
-    echo -e "Installing missing prerequisite packages: ${brown}${missing_packages[*]}${reset}"
-    # Install missing prerequisite packages
-    apt update && apt install "${missing_packages[@]}"
+  echo ""
+  echo -e "Installing missing prerequisite packages: ${brown}${missing_packages[*]}${reset}"
+  # Install missing prerequisite packages
+  apt update && apt install "${missing_packages[@]}"
 fi
 
 # check if architecture is correct
@@ -245,10 +245,10 @@ ARCH=$(dpkg --print-architecture)
 # get arch
 dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
 case "$ARCH" in
-"amd64") DLURL="${dlbase}&arch=x64" ;;
-"armhf") DLURL="${dlbase}&arch=arm" ;;
-"arm64") DLURL="${dlbase}&arch=arm64" ;;
-*)
+  "amd64") DLURL="${dlbase}&arch=x64" ;;
+  "armhf") DLURL="${dlbase}&arch=arm" ;;
+  "arm64") DLURL="${dlbase}&arch=arm64" ;;
+  *)
     echo -e ${red}"Your arch is not supported!"
     echo -e "Exiting installer script!"${reset}
     exit 1
@@ -299,30 +299,30 @@ GLIBC_MINOR=$(echo "$GLIBC_VERSION" | cut -d. -f2)
 
 # Check if GLIBC is older than 2.38
 if [ "$GLIBC_MAJOR" -lt 2 ] || { [ "$GLIBC_MAJOR" -eq 2 ] && [ "$GLIBC_MINOR" -lt 38 ]; }; then
-    echo ""
-    echo -e ${yellow}"Detected GLIBC ${GLIBC_VERSION} (older than 2.38)."${reset}
-    echo -e "Creating symlink to system SQLite library..."
+  echo ""
+  echo -e ${yellow}"Detected GLIBC ${GLIBC_VERSION} (older than 2.38)."${reset}
+  echo -e "Creating symlink to system SQLite library..."
 
-    # Backup original and create symlink based on architecture
-    mv "$bindir/libe_sqlite3.so" "$bindir/libe_sqlite3.so.backup" 2>/dev/null || true
+  # Backup original and create symlink based on architecture
+  mv "$bindir/libe_sqlite3.so" "$bindir/libe_sqlite3.so.backup" 2>/dev/null || true
 
-    case "$ARCH" in
-        "amd64") SYSTEM_SQLITE="/usr/lib/x86_64-linux-gnu/libsqlite3.so.0" ;;
-        "arm64") SYSTEM_SQLITE="/usr/lib/aarch64-linux-gnu/libsqlite3.so.0" ;;
-        "armhf") SYSTEM_SQLITE="/usr/lib/arm-linux-gnueabihf/libsqlite3.so.0" ;;
-        *) SYSTEM_SQLITE="/usr/lib/x86_64-linux-gnu/libsqlite3.so.0" ;;
-    esac
+  case "$ARCH" in
+    "amd64") SYSTEM_SQLITE="/usr/lib/x86_64-linux-gnu/libsqlite3.so.0" ;;
+    "arm64") SYSTEM_SQLITE="/usr/lib/aarch64-linux-gnu/libsqlite3.so.0" ;;
+    "armhf") SYSTEM_SQLITE="/usr/lib/arm-linux-gnueabihf/libsqlite3.so.0" ;;
+    *) SYSTEM_SQLITE="/usr/lib/x86_64-linux-gnu/libsqlite3.so.0" ;;
+  esac
 
-    if [ -f "$SYSTEM_SQLITE" ]; then
-        ln -s "$SYSTEM_SQLITE" "$bindir/libe_sqlite3.so"
-        echo -e ${green}"Symlink created. ${app^} will use system SQLite at $SYSTEM_SQLITE"${reset}
-    else
-        echo -e ${red}"System SQLite library not found at $SYSTEM_SQLITE"${reset}
-        echo -e ${red}"This should not happen as libsqlite3-0 is a prerequisite."${reset}
-    fi
-    sleep 2
+  if [ -f "$SYSTEM_SQLITE" ]; then
+    ln -s "$SYSTEM_SQLITE" "$bindir/libe_sqlite3.so"
+    echo -e ${green}"Symlink created. ${app^} will use system SQLite at $SYSTEM_SQLITE"${reset}
+  else
+    echo -e ${red}"System SQLite library not found at $SYSTEM_SQLITE"${reset}
+    echo -e ${red}"This should not happen as libsqlite3-0 is a prerequisite."${reset}
+  fi
+  sleep 2
 else
-    echo -e ${green}"GLIBC ${GLIBC_VERSION} is compatible with bundled SQLite."${reset}
+  echo -e ${green}"GLIBC ${GLIBC_VERSION} is compatible with bundled SQLite."${reset}
 fi
 
 # Configure Autostart
@@ -369,7 +369,7 @@ echo "Checking if the service is up and running..."
 
 # Loop to wait until the service is active
 while ! systemctl is-active --quiet "$app"; do
-    sleep 1
+  sleep 1
 done
 
 echo ""
@@ -383,19 +383,19 @@ echo -e "Attempting to check for a connection at http://$ip_local:$app_port..."
 sleep 3
 STATUS="$(systemctl is-active "$app")"
 if [ "${STATUS}" = "active" ]; then
-    echo ""
-    echo "Successful connection!"
-    echo ""
-    echo -e "Browse to ${green}http://$ip_local:$app_port${reset} for the GUI."
-    echo ""
-    echo "Script complete! Exiting now!"
-    echo ""
+  echo ""
+  echo "Successful connection!"
+  echo ""
+  echo -e "Browse to ${green}http://$ip_local:$app_port${reset} for the GUI."
+  echo ""
+  echo "Script complete! Exiting now!"
+  echo ""
 else
-    echo ""
-    echo -e ${red}"${app^} failed to start."${reset}
-    echo ""
-    echo "Please try again. Exiting script."
-    echo
+  echo ""
+  echo -e ${red}"${app^} failed to start."${reset}
+  echo ""
+  echo "Please try again. Exiting script."
+  echo
 fi
 
 # Exit

@@ -35,7 +35,7 @@ Instructions for FreeBSD installations are also maintained by the FreeBSD commun
 - [x] allow_raw_sockets
 
 !!! info
-    `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement. 
+    `allow_raw_sockets` is helpful for troubleshooting (e.g. ping, traceroute) but is not a requirement.
 
 1. Configure Network Properties to your liking
 

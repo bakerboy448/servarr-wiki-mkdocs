@@ -576,7 +576,7 @@ A mount containing a movie path is read only and is not writable by the user Rad
 - The events tab will show you what has been happening within your Radarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging.
 
 !!! info
-    Events are the equivalent of INFO Logs. 
+    Events are the equivalent of INFO Logs.
 
 - Components - This column will tell you what component within Radarr has been triggered
 - Message - This column will tell you what message as been sent from the component from the previous column.
