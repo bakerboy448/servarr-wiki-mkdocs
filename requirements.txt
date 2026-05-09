@@ -8,7 +8,7 @@ mkdocs-minify-plugin==0.8.0
 # Prowlarr indexer update script
 requests==2.33.1
 pycountry==26.2.16
-python_iso639==2026.1.31
+python_iso639==2026.4.20
 
 # Development
 pre-commit
