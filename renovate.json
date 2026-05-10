@@ -1,6 +1,46 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits"
+  ],
+  "schedule": ["before 6am on monday"],
+  "timezone": "America/Chicago",
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 4,
+  "labels": ["dependencies", "renovate"],
+  "rangeStrategy": "bump",
+  "separateMajorMinor": true,
+  "separateMinorPatch": false,
+  "automerge": false,
+  "rebaseWhen": "behind-base-branch",
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "schedule": ["at any time"]
+  },
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^mkdocs"],
+      "groupName": "mkdocs family",
+      "groupSlug": "mkdocs",
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "matchPackageNames": ["python-iso639"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "python-iso639"
+    },
+    {
+      "matchManagers": ["pip_requirements"],
+      "matchUpdateTypes": ["pin"],
+      "automerge": true
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions",
+      "groupSlug": "github-actions",
+      "matchUpdateTypes": ["minor", "patch", "digest"]
+    }
   ]
 }
