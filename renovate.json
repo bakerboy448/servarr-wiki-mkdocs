@@ -14,17 +14,26 @@
   "separateMajorMinor": true,
   "separateMinorPatch": false,
   "automerge": false,
+  "platformAutomerge": true,
   "rebaseWhen": "behind-base-branch",
   "vulnerabilityAlerts": {
     "labels": ["security"],
-    "schedule": ["at any time"]
+    "schedule": ["at any time"],
+    "automerge": true
   },
   "packageRules": [
     {
       "matchPackagePatterns": ["^mkdocs"],
       "groupName": "mkdocs family",
       "groupSlug": "mkdocs",
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["^mkdocs"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "addLabels": ["review-required"]
     },
     {
       "matchPackageNames": ["python-iso639"],
@@ -38,9 +47,21 @@
     },
     {
       "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch", "digest"],
       "groupName": "github-actions",
       "groupSlug": "github-actions",
-      "matchUpdateTypes": ["minor", "patch", "digest"]
+      "automerge": true
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "addLabels": ["review-required"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "addLabels": ["review-required"]
     }
   ]
 }
