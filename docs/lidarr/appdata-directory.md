@@ -18,7 +18,7 @@ tags:
 
 # Windows
 
-`C:\ProgramData\Lidarr`
+`%ProgramData%\Lidarr`
 
 # Linux
 

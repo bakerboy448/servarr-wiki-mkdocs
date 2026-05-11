@@ -2,13 +2,347 @@
 title: Lidarr Tips and Tricks
 description: Advanced tips, optimization techniques, and workflow improvements for experienced Lidarr users
 tags:
+  - lidarr
   - tips
   - tricks
   - optimization
   - workflow
   - advanced
-  - lidarr
+  - advanced tips
 ---
-# Coming Soon
+# Lidarr Tips and Tricks
 
-- Contributions are welcome.
+Recipes and workarounds for things that come up often enough to be worth documenting, but don't fit the install / troubleshoot / FAQ shape. Most of this is library-management content: filling in gaps in metadata, bulk-editing the library, and backup/restore hygiene.
+
+For setup recipes (reverse proxy, VPN, Docker compose, hardlinks) see the [TRaSH Guides](https://trash-guides.info/) — they cover those topics in more depth than this wiki does.
+
+## Folder structure
+
+### Separating download folders from your library
+
+Your download folder and music library root folder can't be the same location. Mixing them causes imports to fail or loop — Lidarr can't tell a finished download from something already in the library.
+
+Keep two locations separate:
+
+```
+/data/
+  downloads/          ← download client writes here
+  music/              ← Lidarr root folder (your library)
+```
+
+On import, Lidarr moves (or hardlinks) files from `downloads/` into `music/`. The copy in `downloads/` stays owned by the download client. The copy in `music/` is what Lidarr manages.
+
+!!! info
+    For hardlinks to work — which avoids any extra disk space during import — both paths must be on the same physical filesystem. If `downloads/` and `music/` are on different drives or volumes, Lidarr will copy instead of hardlink. See [Concepts → Hardlinks and completed downloads](../lidarr/concepts.md#hardlinks-and-completed-downloads).
+
+### Multiple download clients
+
+If you're running more than one download client — say, a Usenet client alongside a torrent client — give each its own subfolder under `downloads/` and set a matching category in Lidarr:
+
+```
+/data/
+  downloads/
+    usenet/           ← SABnzbd / NZBGet category: "lidarr"
+    torrents/         ← qBittorrent / Deluge category: "lidarr"
+  music/
+```
+
+In **Settings → Download Clients**, set each client's **Category** to a unique value (for example, `lidarr`) and make sure the download client itself uses the same category name. Lidarr only watches items in the configured category — anything outside it's invisible. This keeps clients from stepping on each other and prevents apps that share a client from grabbing each other's downloads.
+
+!!! info
+    Radarr, Sonarr, and Lidarr can share the same download client as long as each application uses a different category. Never point two applications at the same category — they will fight over each other's downloads.
+
+!!! info
+    **Why `downloads/` instead of TRaSH's flat layout?** TRaSH Guides places `torrents/` and `usenet/` as peer directories next to `media/` at the top level. This layout groups them under a single `downloads/` parent instead. The reason is that Lidarr's ecosystem tends to involve more download sources than just torrents and Usenet — slskd, deemix, manual imports, and others are all common additions. Grouping them keeps the top level clean as that list grows. The TRaSH principle that actually matters — keeping everything under one filesystem root so hardlinks work — hasn't changed. See [this r/Lidarr post](https://www.reddit.com/r/Lidarr/comments/1sm8jb8/path_structure_for_multiple_download_clients_in/) for a fuller breakdown.
+
+### Remote path mapping
+
+When Lidarr and your download client run in separate containers or machines, the path the client reports may not match what Lidarr sees. Use **Settings → Download Clients → Remote Path Mappings** to translate between the two. See [Troubleshooting → Remote Path Mapping](../lidarr/troubleshooting.md#remote-path-mapping) for the full explanation.
+
+## Library maintenance
+
+### Missing artist images
+
+Lidarr pulls artist images from whatever the Servarr metadata server aggregates from its upstream sources. Lidarr itself doesn't reach out to any specific image service — it renders whatever URLs the metadata server returns.
+
+If an artist is showing no image or a wrong image:
+
+1. Check the artist on [MusicBrainz](https://musicbrainz.org/). If the MB entity has no image linked, there's no image for Lidarr to render. MB accepts community contributions for artist and album artwork; see MB's [How to Contribute](https://musicbrainz.org/doc/How_to_Contribute) page.
+2. Wait for the metadata refresh to propagate. Lidarr's copy of metadata refreshes hourly from the Servarr metadata server; the metadata server's own cache has its own propagation window measured in hours, sometimes longer.
+3. Trigger an artist refresh in Lidarr once you believe upstream has updated (Artist page → Refresh button, or Library → Artist Editor → Update).
+
+!!! info
+    Lidarr has no "upload an image locally" option. Everything it displays has to exist upstream. This is the same model as the Release / Release Artist data itself — see [Concepts](../lidarr/concepts.md).
+
+### Missing album images
+
+{#missing-album-images}
+
+Lidarr pulls album cover art from MusicBrainz's [Cover Art Archive](https://coverartarchive.org/) via the Servarr metadata server.
+
+1. Open the release group on MusicBrainz and check whether cover art is present in the Cover Art Archive.
+2. If not, you can upload a cover yourself — MusicBrainz has a [Cover Art guideline](https://musicbrainz.org/doc/Cover_Art) covering acceptable sources and quality.
+3. After upload, allow an hour for the metadata server cache to pick it up, then refresh the album in Lidarr.
+
+Lidarr picks up covers uploaded directly to the Cover Art Archive faster than other metadata corrections. CAA has a more direct path into the metadata server than MusicBrainz entity data does.
+
+### Mass delete artists
+
+Use **Library → Artist Editor** (formerly "Mass Editor"):
+
+1. Select the artists to remove (Shift-click for ranges; Ctrl/Cmd-click for individual additions).
+2. Click **Delete** at the bottom of the screen.
+3. Choose whether to also delete files on disk.
+   - *Remove from Lidarr only* keeps your files; use this when you added the artist by mistake but want to keep the music.
+   - *Remove from Lidarr and delete files* is destructive and irreversible. Make sure you have a backup first if in doubt.
+
+The same flow works for bulk changes that aren't deletion — root folder moves, quality profile swaps, monitoring toggles — via the other bulk-action buttons at the bottom of Artist Editor.
+
+## Custom Formats
+
+Custom formats let you score releases by source, release group, and other title characteristics so Lidarr can prefer or avoid them automatically. The examples below are a useful starting point for a FLAC-focused library. Import each block via **Settings → Custom Formats → Import**.
+
+### Quality definitions for FLAC
+
+Before setting up custom format scoring, consider tightening the FLAC quality definition to filter out single-file CUE+FLAC rips. These present as one large file rather than individually split tracks.
+
+In **Settings → Quality**, set the FLAC row to:
+
+| | Min | Preferred | Max |
+|---|---|---|---|
+| FLAC | 0 | 895 | 1400 |
+| FLAC 24bit | 0 | 895 | 1495 |
+
+The Max value rejects releases whose computed bitrate exceeds a realistic ceiling for split-track FLAC, which catches most CUE+single-file rips without affecting normal releases.
+
+### Example custom formats
+
+#### Preferred Groups
+
+Boosts releases from groups known for consistent quality and accurate tagging.
+
+```json
+{
+  "name": "Preferred Groups",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "DeVOiD",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": { "value": "\\bDeVOiD\\b" }
+    },
+    {
+      "name": "PERFECT",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": { "value": "\\bPERFECT\\b" }
+    },
+    {
+      "name": "ENRiCH",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": { "value": "\\bENRiCH\\b" }
+    }
+  ]
+}
+```
+
+#### CD
+
+Tags releases identified as a CD source.
+
+```json
+{
+  "name": "CD",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "CD",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": { "value": "\\bCD\\b" }
+    }
+  ]
+}
+```
+
+#### WEB
+
+Tags releases identified as a web (streaming) source.
+
+```json
+{
+  "name": "WEB",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "WEB",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": { "value": "\\bWEB\\b" }
+    }
+  ]
+}
+```
+
+#### Lossless
+
+Tags releases that identify themselves as lossless. Useful on Usenet where filenames are less predictable.
+
+```json
+{
+  "name": "Lossless",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "Lossless",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": { "value": "\\blossless\\b" }
+    }
+  ]
+}
+```
+
+#### Vinyl
+
+Tags releases from a vinyl source, for libraries that want to avoid or specifically seek out vinyl rips.
+
+```json
+{
+  "name": "Vinyl",
+  "includeCustomFormatWhenRenaming": false,
+  "specifications": [
+    {
+      "name": "Vinyl",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": { "value": "\\bVinyl\\b" }
+    }
+  ]
+}
+```
+
+### Suggested scoring
+
+After creating the formats, assign scores in **Settings → Profiles → [your profile] → Custom Formats**. The table below implements a setup that requires releases to match at least one positive format before Lidarr will grab them, prefers CD over WEB, and actively avoids vinyl.
+
+| Custom Format | Score |
+|---|---|
+| Preferred Groups | 100 |
+| CD | 10 |
+| Lossless | 10 |
+| WEB | 5 |
+| Vinyl | -10000 |
+
+Set **Minimum Custom Format Score** to `1` in the profile. This means a release must match at least one of CD, Lossless, WEB, or Preferred Groups before Lidarr will grab it — Lidarr skips releases with no recognised source tag entirely.
+
+!!! info
+    Scoring is subjective and depends on your indexers and sources. Treat these values as a starting point, not a prescription.
+
+## Testing release title parsing
+
+{#testing-release-title-parsing}
+
+Two ways to check how Lidarr will parse a release name before building profiles around it:
+
+**In Lidarr:** Go to **Settings → Custom Formats** and use the **Test Parsing** button. Enter a release title and Lidarr shows the parsed fields (source, quality, release group, etc.) alongside which custom formats match and their combined score.
+
+**Via the Servarr Discord bot:** In the `#bot-spam` channel on the [Servarr Discord](https://lidarr.audio/discord), run `/parser lidarr <release title>` — for example, `/parser lidarr Artist.Album.2022.FLAC-GROUP`. The bot replies with the same parsed breakdown. Any user who donates to Servarr becomes a Donatarr and can use the parser bot.
+
+Both tools give the same parser output. Use either when writing a custom format specification, debugging a release that isn't scoring as expected, or confirming a release group pattern matches before adding it to a profile.
+
+## Backup and restore
+
+{#backup-restore}
+
+Lidarr's entire state lives in its [AppData directory](../lidarr/appdata-directory.md). Backing up means capturing that directory at rest. Restoring means putting it back in place with matching permissions and paths. There's nothing in the database that's meaningful without the matching `config.xml` and vice-versa — back up the whole folder, not individual files.
+
+### Backing up
+
+Two ways to do it. Use whichever fits your workflow.
+
+**Built-in backup (zip):**
+
+1. System → Backup in the Lidarr UI.
+2. Click **Backup**.
+3. Download the zip that appears in the backup list.
+
+This captures the database, config, and everything needed to restore. The backup excludes the logs folder and the MediaCover cache, both of which are regenerable.
+
+**Filesystem copy:**
+
+1. Stop Lidarr. This is the only way to guarantee the database is in a consistent state — SQLite's WAL can leave a running database in a state that's safe for the running process but not safe to copy.
+2. Copy the entire AppData directory to a safe location. Include `.db-wal` and `.db-journal` siblings of `lidarr.db` if they exist.
+3. Start Lidarr.
+
+Filesystem backup is the right choice if you want to use existing backup tooling (Borg, restic, Duplicati, ZFS snapshots, etc.) — don't try to snapshot a live SQLite file.
+
+### Restoring
+
+!!! warning
+    **Cross-OS restores aren't supported.** Windows ↔ Linux and Windows ↔ macOS won't work because the path separators differ. Linux ↔ macOS may work since both use `/`, but isn't officially supported. If you need to move between OSes, expect to edit every path in the database by hand.
+
+**From a built-in zip backup:**
+
+1. Install Lidarr if it isn't installed yet.
+2. Start Lidarr.
+3. System → Backup → **Restore Backup**.
+4. Choose the zip file.
+5. Click **Restore**.
+
+**From a filesystem copy:**
+
+1. Install Lidarr if needed and start it once so the AppData directory gets created in the expected place.
+2. Stop Lidarr.
+3. Delete the contents of the AppData directory, including any `.db-wal` / `.db-journal` files.
+4. Copy your backup into place.
+5. Start Lidarr.
+
+As long as the root folder paths in the backup are still valid on the destination machine, Lidarr will pick up where it left off.
+
+### Restore on Synology NAS
+
+!!! warning
+    CAUTION: this procedure requires root SSH access and is unnecessary on most systems. Use it only if the standard filesystem restore fails due to Synology's package-user permissions model.
+
+1. Install Lidarr via the SPK package if it isn't installed.
+2. Find the AppData directory — `/usr/local/Lidarr/var/.config/Lidarr/` by default.
+3. Stop Lidarr.
+4. SSH to the NAS as root.
+5. Replace the database and restore:
+
+   ```shell
+   rm -r /usr/local/Lidarr/var/.config/Lidarr/Lidarr.db
+   cp -f /tmp/Lidarr_backup/* /usr/local/Lidarr/var/.config/Lidarr/
+   ```
+
+6. Fix ownership and permissions:
+
+   ```shell
+   cd /usr/local/Lidarr/var/.config/Lidarr/
+   chown -R Lidarr:users *
+   chmod -R 0644 *
+   ```
+
+   !!! info
+       On some SynoCommunity versions the user is `sc-Lidarr` rather than `Lidarr` — `chown -R sc-Lidarr:Lidarr *`. Check who owns the existing files before the restore if you aren't sure.
+
+7. Start Lidarr.
+
+## See also
+
+- [FAQ](../lidarr/faq.md) — the questions that come up most often
+- [Concepts](../lidarr/concepts.md) — the model Lidarr uses to manage music
+- [Metadata Troubleshooting](../lidarr/metadata-troubleshooting.md) — when MusicBrainz data is missing or stale
+- [Import Troubleshooting](../lidarr/import-troubleshooting.md) — when downloads finish but don't import
+- [Troubleshooting](../lidarr/troubleshooting.md) — general runtime issues
+- [TRaSH Guides](https://trash-guides.info/) — community recipes for media server setups
