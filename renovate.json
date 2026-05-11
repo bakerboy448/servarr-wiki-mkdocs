@@ -1,67 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    ":dependencyDashboard",
-    ":semanticCommits"
-  ],
-  "schedule": ["before 6am on monday"],
-  "timezone": "America/Chicago",
-  "prHourlyLimit": 2,
-  "prConcurrentLimit": 4,
-  "labels": ["dependencies", "renovate"],
-  "rangeStrategy": "bump",
-  "separateMajorMinor": true,
-  "separateMinorPatch": false,
-  "automerge": false,
-  "platformAutomerge": true,
-  "rebaseWhen": "behind-base-branch",
-  "vulnerabilityAlerts": {
-    "labels": ["security"],
-    "schedule": ["at any time"],
-    "automerge": true
-  },
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["^mkdocs"],
-      "groupName": "mkdocs family",
-      "groupSlug": "mkdocs",
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true
-    },
-    {
-      "matchPackagePatterns": ["^mkdocs"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "addLabels": ["review-required"]
-    },
-    {
-      "matchPackageNames": ["python-iso639"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "python-iso639"
-    },
-    {
-      "matchManagers": ["pip_requirements"],
-      "matchUpdateTypes": ["pin"],
-      "automerge": true
-    },
-    {
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch", "digest"],
-      "groupName": "github-actions",
-      "groupSlug": "github-actions",
-      "automerge": true
-    },
-    {
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "addLabels": ["review-required"]
-    },
-    {
-      "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "addLabels": ["review-required"]
-    }
+    "github>bakerboy448/bakerflix-infra-docs:.github/renovate-config.json"
   ]
 }
