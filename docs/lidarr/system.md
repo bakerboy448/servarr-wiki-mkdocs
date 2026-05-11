@@ -2,12 +2,12 @@
 title: Lidarr System
 description: System information, logs, scheduled tasks, and status monitoring for Lidarr administration and troubleshooting
 tags:
+  - lidarr
   - system
-  - administration
   - logs
+  - administration
   - tasks
   - status
-  - lidarr
 ---
 # Table of Contents
 
@@ -15,17 +15,17 @@ tags:
 - [Status](#status)
   - [Health](#health)
     - [System Warnings](#system-warnings)
-      - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
+      - [Branch isn't a valid release branch](#branch-is-not-a-valid-release-branch)
       - [Update to .NET version](#update-to-net-version)
         - [Fixing Docker installs](#fixing-docker-installs)
         - [Fixing Standalone installs](#fixing-standalone-installs)
       - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
-      - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
+      - [Currently installed SQLite version isn't supported](#currently-installed-sqlite-version-is-not-supported)
       - [New update is available](#new-update-is-available)
-      - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
-      - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
+      - [Can't install update because startup folder isn't writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+      - [Updating won't be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
       - [Branch is for a previous version](#branch-is-for-a-previous-version)
-      - [Could not connect to signalR](#could-not-connect-to-signalr)
+      - [Couldn't connect to signalR](#could-not-connect-to-signalr)
         - [NGINX](#nginx)
         - [Apache](#apache)
         - [Caddy](#caddy)
@@ -51,10 +51,10 @@ tags:
       - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
       - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
     - [Indexers](#indexers)
-      - [No indexers available with automatic search enabled, Lidarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-lidarr-will-not-provide-any-automatic-search-results)
-      - [No indexers available with RSS sync enabled, Lidarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-lidarr-will-not-grab-new-releases-automatically)
+      - [No indexers available with automatic search enabled, Lidarr won't provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-lidarr-will-not-provide-any-automatic-search-results)
+      - [No indexers available with RSS sync enabled, Lidarr won't grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-lidarr-will-not-grab-new-releases-automatically)
       - [No indexers are enabled](#no-indexers-are-enabled)
-    - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
+    - [Enabled indexers don't support searching](#enabled-indexers-do-not-support-searching)
       - [No indexers Available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
       - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
       - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
@@ -73,26 +73,23 @@ tags:
 - [Events](#events)
 - [Log Files](#log-files)
 
-!!! danger
-    Warning: This page is a work in progress and is currently a rough draft based on Readarr
-
 # Status
 
 ## Health
 
-This page contains a list of health checks errors. These health checks are periodically performed performed by Lidarr and on certain events. The resulting warnings and errors are listed here to give advice on how to resolve them.
+This page lists health check results. Lidarr runs these checks periodically and on certain events, and lists any warnings or errors here with advice on how to resolve them.
 
 ### System Warnings
 
-#### Branch is not a valid release branch
+#### Branch isn't a valid release branch
 
-The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](../lidarr/faq.md#how-do-i-update-lidarr)
+The branch you have set isn't a valid release branch. You won't receive updates. Please change to one of the [current release branches](../lidarr/faq.md#how-do-i-update-lidarr).
 
 #### Update to .NET version
 
 {#update-to-net-core-version}
 
-- Newer versions of Lidarr are targeted for .NET6 or newer. We will no longer be providing legacy mono builds after 1.0 is released. You are running one of these legacy builds but your platform supports .NET.
+- Newer versions of Lidarr target .NET6 or newer. Legacy mono builds end after the 1.0 release. You are running one of these legacy builds but your platform supports .NET.
 
 ##### Fixing Docker installs
 
@@ -101,18 +98,18 @@ The branch you have set is not a valid release branch. You will not receive upda
 ##### Fixing Standalone installs
 
 - Back-Up your existing configuration before the next step.
-- This should only happen on Linux hosts. Do not install .NET runtime or SDK from Microsoft.
+- This should only happen on Linux hosts. Don't install .NET runtime or SDK from Microsoft.
 - To remedy, download the correct build for your architecture and replace your existing binaries (application)
 - In short you will need to delete your existing binaries (contents or folder of /opt/Lidarr) and replace with the contents of the .tar.gz you just downloaded.
 
 !!! warning
-    DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
+    DON'T JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
     YOU MUST DELETE THE OLD ONES FIRST.
 
 - The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
 - This assumes you are on the `master` Lidarr branch update the variable if needed
 - This assumes that Lidarr runs as the user `lidarr` update the variables if needed
-- This assumes Lidarr is installed at `/opt/Lidarr` update the variables if needed
+- This assumes you installed Lidarr at `/opt/Lidarr`; update the variables if needed
 
 ```bash
 #!/bin/bash
@@ -156,42 +153,42 @@ sudo systemctl start $app
 
 #### Currently installed mono version is old and unsupported
 
-- Lidarr is written in .NET and requires Mono to run on very old ARM processors. Please note that Mono builds are no longer supported after v1.0
+- Lidarr uses .NET and requires Mono to run on very old ARM processors. Please note that Mono builds are no longer supported after v1.0
 - Mono 5.20 is the absolute minimum for Lidarr.
 - The upgrade procedure for Mono varies per platform.
 
-#### Currently installed SQLite version is not supported
+#### Currently installed SQLite version isn't supported
 
-- Lidarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Lidarr requires at least version 3.9.0. Note that Lidarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
+- Lidarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Lidarr requires at least version 3.9.0. Note that Lidarr uses `libSQLite3.so`, which may not come with a SQLite3 upgrade package.
 
 #### New update is available
 
-- Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the `System => Updates` page is probably a good starting point.
+- A new version of Lidarr is available. If auto-updating is enabled, Lidarr will install it automatically. Otherwise, go to `System => Updates` and press Install.
 
 !!! info
-    This warning will not appear if your current version is less than 14 days old
+    This warning won't appear if your current version is less than 14 days old.
 
-#### Cannot install update because startup folder is not writable by the user
+#### Can't install update because startup folder isn't writable by the user
 
 - This means Lidarr will be unable to update itself. You’ll have to update Lidarr manually or set the permissions on Lidarr’s Startup directory (the installation directory) to allow Lidarr to update itself.
 
-#### Updating will not be possible to prevent deleting AppData on Update
+#### Updating won't be possible to prevent deleting AppData on Update
 
-- Lidarr detected that AppData folder for your Operating System is located inside the directory that contains the Lidarr binaries. Normally it would be `C:\ProgramData` for Windows and, `~/.config` for linux.
+- Lidarr detected that the AppData folder sits inside the directory that contains the Lidarr binaries. Normally it would be `C:\ProgramData` for Windows and `~/.config` for Linux.
 
 - Please look at `System => Info` to see the current AppData & Startup directories.
 - This means Lidarr will be unable to update itself without risking data loss.
-- If you’re on linux, you’ll probably have to change the home directory for the user that is running Lidarr and copy the current contents of the `~/.config/Lidarr` directory to preserve your database.
+- If you’re on linux, you’ll probably have to change the home directory for the user that's running Lidarr and copy the current contents of the `~/.config/Lidarr` directory to preserve your database.
 
 #### Branch is for a previous version
 
-- The update branch setup in `Settings => General` is for a previous version of Lidarr, therefore the instance will not see correct update information in the `System => Updates` feed and may not receive new updates when released.
+- The update branch setup in `Settings => General` is for a previous version of Lidarr, therefore the instance won't see correct update information in the `System => Updates` feed and may not receive new updates when released.
 
-#### Could not connect to signalR
+#### Couldn't connect to signalR
 
-- signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
+- signalR drives the dynamic UI updates, so if your browser can't connect to signalR on your server you won’t see any real time updates in the UI.
 
-- The most common occurrence of this is use of a reverse proxy or cloudflare
+- The most common occurrence of this is use of a reverse proxy or Cloudflare.
 - Cloudflare needs websockets enabled.
 
 ##### NGINX
@@ -205,7 +202,7 @@ sudo systemctl start $app
 ```
 
 !!! warning
-    Make sure you do not include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. THIS WILL NOT WORK
+    Make sure you don't include `proxy_set_header Connection "Upgrade";` as suggested by the nginx documentation. THIS WON'T WORK
     See <https://github.com/aspnet/AspNetCore/issues/17081>
 
 ##### Apache
@@ -232,7 +229,7 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 #### Failed to resolve the IP Address for the Configured Proxy Host
 
-- Review your proxy settings and ensure they are accurate
+- Review your proxy settings and ensure they're accurate
 - Ensure your proxy is up, running, and accessible
 
 #### Proxy Failed Test
@@ -241,8 +238,8 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 #### System Time is off by more than 1 day
 
-- System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
-- Review your system time and ensure it is synced to an authoritative time server and accurate
+- System time is off by more than 1 day. Scheduled tasks may not run correctly until you correct the time
+- Review your system time and ensure it's synced to an authoritative time server and accurate
 
 #### Mono Legacy TLS enabled
 
@@ -250,15 +247,15 @@ RewriteRule /(.*) ws://127.0.0.1:8686/$1 [P,L]
 
 #### Mono and x86 builds are ending
 
-- Mono and x86 builds will no longer be supported in the next build of the application. If you are receiving this error then you are running the mono version of the application or the x86 version. Unfortunately, due to increasing difficulting in development support for these legacy versions we will be discontinuing their support and thus releases for them going forward. Thus it is advised you upgrade to a supported Operating System that does not require neither x86 nor mono. You may also be able to explore using Docker for your needs.
+- The next build of the application won't support Mono or x86. If you are receiving this error then you are running the mono version of the application or the x86 version. Unfortunately, due to increasing difficulty in supporting these legacy versions, support and releases for them are discontinued. Upgrade to a supported operating system that doesn't require x86 or Mono. You may also be able to explore using Docker for your needs.
 
 #### FPcalc needs updating
 
 {#fpcalc-upgrade}
 
-- Lidarr useschromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`, which is distributed with Lidarr v1 for Windows, Linux and macOS, but must be provided independently on freeBSD.
-- Ensure the fpcalc binary bundled with Lidarr is executable (755 permissions). This would be found in Lidarr's installation directory (e.g.`/opt/Lidarr/fpcalc`) If it is not executable, then correct it's permissions with the below command and then restart Lidarr.
-  - Note that for the fix `sudo` may be required or your path to Lidarr's binary folder may be different depending on your environment and setup.
+- Lidarr uses chromaprint audio fingerprinting to identify tracks. This depends on an external binary `fpcalc`. Lidarr v1 ships `fpcalc` for Windows, Linux, and macOS, but freeBSD requires you to provide it separately.
+- Ensure the fpcalc binary bundled with Lidarr is executable (755 permissions). Look for it in Lidarr's installation directory (e.g. `/opt/Lidarr/fpcalc`). If it isn't executable, correct its permissions with the command below and restart Lidarr.
+  - Note that the fix may need `sudo`, and your path to Lidarr's binary folder may differ depending on your environment.
 
 ```bash
 chmod +x /opt/Lidarr/fpcalc
@@ -267,7 +264,7 @@ chmod +x /opt/Lidarr/fpcalc
 !!! info
     The below information is for legacy v0.8.0 builds only.
 
-- To fix this on a native Linux instance, install the appropriate package using your package manager and make sure that fpcalc is on your PATH (this can be checked using which fpcalc and verifying that the correct location of fpcalc is returned):
+- To fix this on a native Linux instance, install the appropriate package using your package manager and confirm that fpcalc is on your PATH by running `which fpcalc` and checking that it returns the correct location:
 
 | Distribution  |       Package        |
 | :-----------: | :------------------: |
@@ -281,25 +278,25 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### No download client is available
 
-- A properly configured and enabled download client is required for Lidarr to be able to download media. Since Lidarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Lidarr to use it and create a category. See `Settings=>Download Client`.
+- Lidarr needs a properly configured and enabled download client to download media. Since Lidarr supports different download clients, you should determine which best matches your requirements. If you already have a download client installed, you should configure Lidarr to use it and create a category. See `Settings=>Download Client`.
 
 #### Unable to communicate with download client
 
 - Lidarr was unable to communicate with the configured download client. Please verify the download client is operational and double-check the URL. This could also indicate an authentication error.
 - This is typically due to improperly configured download client. Things you can typically check:
   - Your download client's IP Address - if it's all on the same bare metal machine, this is typically `127.0.0.1`
-  - The Port number that your download client is using - these are filled out with the default port number but if you've changed it you will need to have the same one entered into Lidarr.
-  - Ensure that SSL encryption is not turned on if you're using both your Lidarr instance and your download client on a local network (i.e., over plain HTTP). See the SSL FAQ entry for more information.
+  - The Port number that your download client is using - these default to the standard port number, but if you've changed it you will need to enter the same one in Lidarr.
+  - Ensure that SSL encryption isn't turned on if you're using both your Lidarr instance and your download client on a local network (that is, over plain HTTP). See the SSL FAQ entry for more information.
 
 #### Download clients are unavailable due to failure
 
-- One or more of your download clients is not responding to requests made by Lidarr. Therefore Lidarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Lidarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
+- One or more of your download clients isn't responding to requests made by Lidarr. Therefore Lidarr has decided to temporarily stop querying the download client on its normal 1-minute cycle, which is normally used to track active downloads and import finished ones. However, Lidarr will continue to attempt to send downloads to the client, but will likely fail.
 - You should inspect `System=>Logs` to see what the reason is for the failures.
 - If you no longer use this download client, disable it in Lidarr to prevent the errors.
 
 #### Enable Completed Download Handling
 
-- Lidarr requires Completed Download Handling to be able to import files that were downloaded by the download client. It is recommended to enable Completed Download Handling. (Completed Download Handling is enabled by default for new users.)
+- Lidarr requires Completed Download Handling to import files that your download client fetched. Enable it. (Completed Download Handling is on by default for new users.)
 
 #### Docker bad remote path mapping
 
@@ -308,32 +305,32 @@ chmod +x /opt/Lidarr/fpcalc
 - An example of bad (inconsistent) paths would be:
   - Download client:  `/mnt/user/downloads:/downloads`
   - Lidarr:   `/mnt/user/downloads:/data`
-- In this example the download client places its downloads into `/downloads` and tells Lidarr when its complete that the finished book is in `/downloads`. Lidarr then comes along and says "Okay, cool, let me check in `/downloads`." Well, inside Lidarr you did not allocate a `/downloads` path you allocated a `/data` path so it throws this error.
+- In this example the download client places its downloads into `/downloads` and tells Lidarr when its complete that the finished music is in `/downloads`. Lidarr then comes along and says "Okay, cool, let me check in `/downloads`." Well, inside Lidarr you didn't allocate a `/downloads` path you allocated a `/data` path so it throws this error.
 - The easiest fix for this is CONSISTENCY - if you use one scheme in your download client, use it across the board.
 
-- Team Lidarr is a big fan of simply using /data.
+- The Lidarr team recommends using `/data` as the base path.
 
   - Download client: `/mnt/user/data/downloads:/data/downloads`
   - Lidarr: `/mnt/user/data:/data`
 
-- Now within the download client you can specify where in `/data` you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah, download client, place my files into `/data/downloads/movies`" and since you used `/data` in Lidarr when the download client tells Lidarr it's done Lidarr will come along and say "Sweet, I have a `/data` and I also can see `/data/downloads/movies`, all is right in the world."
-- There are many great write ups: our wiki [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hard links and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
+- Within the download client, specify where in `/data` to place downloads. This varies by client, but you should be able to tell it "Yeah, download client, place my files into `/data/downloads/movies`" and since you used `/data` in Lidarr when the download client tells Lidarr it's done Lidarr will come along and say "Sweet, I have a `/data` and I also can see `/data/downloads/movies`, all is right in the world."
+- For more detail, see the [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/) guide.
 - If you're crossing operating systems or native and docker then you need a remote path map. See [TRaSH's Remote Path Guide for Radarr](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) and [Sonarr](https://trash-guides.info/Sonarr/sonarr-remote-path-mapping/) for more information.
 
 #### Downloading into Root Folder
 
 {#downloads-in-root-folder}
 
-- Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder.
-- This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder.
-- Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](../lidarr/settings.md#root-folders)
+- Within the application, the configured media library folder is the root folder. This isn't the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder.
+- This frequently causes issues - including data loss - and you shouldn't do it. To fix this, change your download client so it isn't placing downloads within your root folder. Note that 'placing' also includes if your download client category points to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder.
+- Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, shouldn't be the same folder you have configured as your root/library/final media destination folder in Lidarr.
+- Find configured root folders (aka library folders) in [Settings => Media Management => Root Folders](../lidarr/settings.md#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
-- It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
+- It's suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 - Review our [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
 
 !!! warning
-    Your download folder where your download client places the downloads and your root/library folder MUST be separate. \*Arr will import the file(s) from your download client's folder into your library. The download client should not move anything or download anything to your library.
+    Your download folder where your download client places the downloads and your root/library folder MUST be separate. Lidarr will import files from your download client's folder into your library. The download client shouldn't move anything or download anything to your library.
 
 #### Bad Download Client Settings
 
@@ -345,11 +342,11 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### Permissions Error
 
-- Lidarr (or the user lidarr is running as) cannot access the location your download client is downloading files to. This is typically a permission issue.
+- Lidarr (or the user lidarr is running as) can't access the location your download client is downloading files to. This is typically a permission issue.
 
 #### Remote File was removed part way through processing
 
-- A file accessible via a remote path map appears to have been removed prior to processing completing.
+- A file accessible via a remote path map appears to have disappeared before processing completed.
 
 #### Remote Path is Used and Import Failed
 
@@ -359,35 +356,35 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### Completed Download Handling is disabled
 
-- Lidarr requires `Completed Download Handling` to be able to import files that were downloaded by the download client. It is recommended to enable `Completed Download Handling`. (It is enabled by default for new users.)
+- Lidarr requires `Completed Download Handling` to import files that your download client fetched. Enable it. (It's on by default for new users.)
 
 #### Download Client Removes Completed Downloads
 
 {#download-client-removes-completed-downloads}
 
-- It's required that your download client retain its history of completed downloads until Lidarr has imported them. If history retention is disabled then \*Arr may not see the completed download before it is removed from the download client. Your download client should be set to keep (usenet) and pause not remove (torrents) downloads after completion: **either indefinitely or for at least 14 days**.
-  - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
-- Removing completed downloads from your client can be managed by Lidarr and enabled via the download client settings in \*Arr. Thus \*Arr can ensure that your download client history is cleaned up.
+- Your download client must retain its history of completed downloads until Lidarr imports them. If you disable history retention, Lidarr may not see the completed download before the client removes it. Configure your download client to keep (usenet) and pause, not remove, torrents after completion: **either indefinitely or for at least 14 days**.
+  - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be 14 days or greater OR Keep All History
+- Lidarr can manage removing completed downloads from your client via the download client settings in Lidarr. This lets Lidarr clean up your download client history.
 
 ### Indexers
 
-#### No indexers available with automatic search enabled, Lidarr will not provide any automatic search results
+#### No indexers available with automatic search enabled, Lidarr won't provide any automatic search results
 
-- Simply put you do not have any of your indexers set to allow automatic searches
+- None of your indexers are set to allow automatic searches.
 - Go into `Settings => Indexers`, select an indexer you'd like to allow Automatic Searches and then click save.
 
-#### No indexers available with RSS sync enabled, Lidarr will not grab new releases automatically
+#### No indexers available with RSS sync enabled, Lidarr won't grab new releases automatically
 
-- Lidarr uses the RSS feed to pick up new releases as they come along. More info on that here
-- To correct this issue go to `Settings => Indexers`, select an indexer you have and enable RSS Sync
+- Lidarr uses the RSS feed to pick up new releases as they come along.
+- To correct this issue, go to `Settings => Indexers`, select an indexer, and enable RSS Sync.
 
 #### No indexers are enabled
 
-- Lidarr requires indexers to be able to discover new releases. Please read the wiki on instructions how to add indexers.
+- Lidarr requires indexers to discover new releases. See [Settings => Indexers](../lidarr/settings.md#indexers) for instructions on adding them.
 
-### Enabled indexers do not support searching
+### Enabled indexers don't support searching
 
-- None of the indexers you have enabled support searching. This means Lidarr will only be able to find new releases via the RSS feeds. But searching for movies (either Automatic Search or Manual Search) will never return any results. Obviously, the only way to remedy it is to add another indexer.
+- None of the indexers you have enabled support searching. This means Lidarr will only be able to find new releases via the RSS feeds. But searching for releases (either Automatic Search or Manual Search) will never return any results. Obviously, the only way to remedy it's to add another indexer.
 
 #### No indexers Available with Interactive Search Enabled
 
@@ -395,44 +392,44 @@ chmod +x /opt/Lidarr/fpcalc
 
 #### Indexers are unavailable due to failures
 
-- Errors occurs while Lidarr tried to use one of your indexers. To limit retries, Lidarr will not use the indexer for an increasing amount of time (up to 24h).
-- This mechanism is triggered if Lidarr was unable to get a response from the indexer (could be caused DNS, proxy/VPN connection, authentication, or an indexer issue), or unable to fetch the nzb/torrent file from the indexer.
+- Errors occurred while Lidarr tried to use one of your indexers. To limit retries, Lidarr won't use the indexer for an increasing amount of time (up to 24h).
+- Lidarr triggers this mechanism when it can't get a response from the indexer (DNS, proxy/VPN, authentication, or an indexer issue) or can't fetch the nzb/torrent file.
 - Please inspect the logs to determine what kind of error causes the problem.
 - You can prevent the warning by disabling the affected indexer.
-- Run the Test on the indexer to force Lidarr to recheck the indexer, please note that the Health Check warning will not always disappear immediately.
+- Run the Test on the indexer to force Lidarr to recheck the indexer, please note that the Health Check warning won't always disappear immediately.
 
 #### Jackett All Endpoint Used
 
-- The Jackett `/all` endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
-- [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
+- The Jackett `/all` endpoint is convenient, but that's its only benefit. Everything else is potential problems, so add each tracker individually.
+- [Even Jackett's devs say it should be avoided and shouldn't be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the `/all` endpoint has no advantages, only disadvantages:
   - you lose control over indexer specific settings (categories, search modes, etc.)
   - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (>= 100000) cannot be used.
+  - you can't use indexer-specific categories (>= 100000).
   - slow indexers will slow down the overall result
-  - total results are limited to 1000
-  - if one of the trackers returns an error, \*Arr will disable it and now you will not get any results.
+  - total results cap at 1000
+  - if one of the trackers returns an error, Lidarr will disable it and you won't get any results.
 
 ##### Solutions
 
-- Add each tracker in Jackett manually as an indexer in \*Arr
-- Check out [Prowlarr](../prowlarr.md) which can sync indexers to \*Arr and from the Lidarr/Radarr/Readarr development team.
-- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to \*Arr. But do not use their single aggregate endpoint and use `multi` if sync will be used.
+- Add each tracker in Jackett manually as an indexer in Lidarr
+- Check out [Prowlarr](../prowlarr.md) which can sync indexers to Lidarr and is from the Servarr development team.
+- Check out [NZBHydra2](https://github.com/theotherp/nzbhydra2) which can sync indexers to Lidarr. Don't use their single aggregate endpoint; use `multi` if you plan to use sync.
 
 ### Artist Folders
 
 #### Missing Root Folder
 
-- This error is typically identified if a Artist is looking for a root folder but that root folder is no longer available.
+- This error is typically identified if an artist is looking for a root folder but that root folder is no longer available.
 - This error may also be if a list is still pointed at a root folder but that root folder is no longer available.
-- If you would like to remove this warning simply find the album that is still using the old root folder and edit it to the correct root folder.
+- If you would like to remove this warning simply find the artist that's still using the old root folder and edit it to the correct root folder.
 
 - Easiest way to find the problem artist is to:
 
   - Go to the Artist (Library) Tab
   - Create a custom filter with the old root folder path
-  - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these artist to be moved to.
-  - Next you will receive a pop-up that states Would you like to move the Artist folders to 'root path' ? This will also state This will also rename the Artist folder per the Artist folder format in settings. Simply select No if the you do not want Lidarr to move your files
+  - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want to move these artists to.
+  - Next you will receive a pop-up that states Would you like to move the Artist folders to 'root path' ? This will also state This will also rename the Artist folder per the Artist folder format in settings. Simply select No if you don't want Lidarr to move your files
   - Run the Check Health Task in System => Tasks
 
 #### Lists are unavailable due to failures
@@ -445,7 +442,7 @@ chmod +x /opt/Lidarr/fpcalc
 ## Disk Space
 
 - This section will show you available disk space
-- In docker this can be tricky as it will typically show you the available space within your Docker image
+- In Docker this can be tricky as it will typically show you the available space within your Docker image
 
 ## About
 
@@ -453,14 +450,11 @@ chmod +x /opt/Lidarr/fpcalc
 
 ## More Info
 
-- Home Page: Lidarr's home page
-- Wiki: You're here already
-- Reddit: r/lidarr
-- Discord: Join our discord
-- Donations: If you're feeling generous and would like to donate click here
-- Donations to Sonarr: If you're feeling generous and would like to donate to the project that started it all click here
-- Source: GitHub
-- Feature Requests: Got a great idea drop it here
+- [Home Page](https://lidarr.audio)
+- [Reddit](https://www.reddit.com/r/lidarr)
+- [Discord](https://lidarr.audio/discord)
+- [Source](https://github.com/Lidarr/Lidarr)
+- [Feature Requests](https://github.com/Lidarr/Lidarr/issues)
 
 # Tasks
 
@@ -468,63 +462,60 @@ chmod +x /opt/Lidarr/fpcalc
 
 - This page lists all scheduled tasks that Lidarr runs
 
-  - Application Check Update - This will run every on the displayed schedule in the UI, checking to see if Lidarr is on the most current version then triggering the update script to update Lidarr. Settings=> Update
+  - Application Check Update - This runs on the displayed schedule in the UI, checking whether Lidarr is on the most current version and triggering the update script if needed. Settings=> Update
 
-!!! warning
-    Note: If on Docker this will not update your container as a new image will need to be downloaded.
+  !!! warning
+      Note: If on Docker this won't update your container as you'll need to pull a new image.
 
-- Backup - This will run a backup of your Lidarr's database on a set schedule more details on this can be found here. More information about backups can be found System => Backups.
-- Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Lidarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
-- Clean Up Recycle Bin - The recycling bin will be cleared out on the displayed schedule in the UI. This will only be used if the recycling bin is set in File Management
-- Housekeeping - On the displayed schedule in the UI this will dust out all the cobwebs, sweeps and vacuums the floors, mops, shines, and even makes nice neat little folded notes just for you. But does not take out the trash. That it just was not paid enough for.
-- Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new artists. More info about lists can be found Settings => Lists.
-- Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Lidarr
-- Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
-- Refresh Artist - This goes through and refreshes all the metadata for all monitored and unmonitored artists
-- Rss Sync - This will run the RSS Sync. This can be changed in settings => options. More information on the RSS function can be found on our FAQ
+  - Backup - This will run a backup of your Lidarr's database on a set schedule; find more details here. More information about backups is at System => Backups.
+  - Check Health - Check Health will run on the displayed schedule in the UI checking the overall health of your Lidarr. To see a list of possible health related issues see the Wiki Entry on Health Checks.
+  - Clean Up Recycle Bin - Lidarr clears the recycling bin on the displayed schedule. This only runs if you set a recycling bin in File Management.
+  - Housekeeping - On the displayed schedule, Lidarr optimizes the database, removes orphaned records, and performs other routine maintenance tasks.
+  - Import List Sync - On the displayed schedule in the UI this will run your Lists and import any possible new artists. Find more info about lists at Settings => Lists.
+  - Messaging Cleanup - On the displayed schedule in the UI this cleans up those messages that appear in the bottom left corner of Lidarr
+  - Refresh Monitored Downloads - This goes through and refreshes the downloads queue located under Activity. Essentially pinging your download client to check for finished downloads.
+  - Refresh Artist - This goes through and refreshes all the metadata for all monitored and unmonitored artists
+  - Rss Sync - This will run the RSS Sync. Change this in Settings => Options. Find more information on the RSS function in our FAQ.
 
 !!! info
-    All these tasks can be ran manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
+    All these tasks can be run manually outside their scheduled times by hitting the icon to the far right of each of the tasks.
 
 ## Queue
 
-- The queue will show you upcoming tasks as well as a history of recently ran tasks as well as how long those tasks took.
+- The queue will show you upcoming tasks as well as a history of recently run tasks and how long those tasks took.
 
 # Backup
 
 !!! info
-    This section will be more tailored to the buttons and overall point of the page.
-    However, if you're looking for how to back/restore your Lidarr instance click [the Lidarr backup FAQ](../lidarr/faq.md).
+    If you're looking for how to back up or restore your Lidarr instance, see the [Lidarr backup FAQ](../lidarr/faq.md).
 
-Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
+The Backup section shows your previous backups (unless you have a fresh install with no backups yet).
 
-Here you will have two options at the top of the screen
+Two options are available at the top of the screen:
 
-- Backup Now - This option will trigger a manual backup of your Lidarr's database
-- Restore Backup - This will open a new screen to restore from a previous backup
-By selecting Choose File this will prompt your browser to open a dialog box to restore from a Lidarr Zip backup
+- **Backup Now** - Triggers a manual backup of your Lidarr database.
+- **Restore Backup** - Opens a screen to restore from a previous backup. Select **Choose File** to open a file dialog and choose a Lidarr zip backup.
 
-Finally if you have any previous backups and would like to download them from Lidarr to be placed in a non standard location you simply can select one of these files to download them
-Off to the right of each of the previous download you have two options.
+If you have previous backups and want to download them, select a backup file to download it. To the right of each backup you have two options:
 
-- One - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
-- Two - To delete a previous backup
+- **Restore** - Opens a confirmation window to restore from this backup.
+- **Delete** - Deletes this backup.
 
 # Updates
 
-The update screen will show the past 5 updates that have been made as well as the current version you are on.
-This page will also display the update notes from the Developers telling you what has been fixed or added to Lidarr (Rejoice!)
+The update screen shows the five most recent updates and the version you're running.
+It also displays the developer release notes for each version.
 
 !!! info
     A Maintenance Release contains bug fixes and other various improvements. Take a look at the commit history for specifics.
 
 # Events
 
-The events tab will show you what has been happening within your Lidarr. This can be used to diagnose some light issues. However, this does not replace Trace Logs discussed in Logging. Events are the equivalent of INFO Logs.
+The events tab shows what has been happening within your Lidarr. Use it to diagnose minor issues. However, this doesn't replace Trace Logs discussed in Logging. Events are the equivalent of INFO Logs.
 
-- Components - This column will tell you what component within Lidarr has been triggered
-- Message - This column will tell you what message as been sent from the component from the previous column.
-- Gear Icon - This option will allow you to change how many Components/Messages are displayed per page (Default is 50)
+- Components - This column tells you which Lidarr component triggered the event
+- Message - This column shows the message the component sent.
+- Gear Icon - This option lets you change how many Components/Messages appear per page (Default is 50)
 - Options at the top of the page
   - Refresh - This option will refresh the current page, pulling a new events log
   - Clear - This will clear the current events log allowing you to start from fresh
@@ -535,8 +526,8 @@ This page will allow you to download and see what current log files are availabl
 
 On the top row there are several options to allow you to control your log files.
 
-- The top row on the far left there is a dropdown that will allow you to switch from Log files and Updater Log Files
-  - Log Files - The bread and butter of any support issue more on log files can be found here.
+- The top row on the far left there's a dropdown that will allow you to switch from Log files and Updater Log Files
+  - Log Files - The bread and butter of any support issue; find more on log files here.
   - Updater Log Files - This will show the log files associated with Lidarr's updater script
 
 !!! info
@@ -545,7 +536,7 @@ On the top row there are several options to allow you to control your log files.
 - Refresh - This will refresh the current page and display any newly created logs
 - Delete - This will clear all logs allowing you to start from fresh
 - File Name - This will display the file name associated with the log
-- Last Written - This is the local time that this particular log file was written to.
-  - Lidarr uses rolling log files limited to 1MB each. The current log file is always lidarr.txt, for the the other files lidarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
-  - When Debug log level is enabled, additional lidarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
-  - When Trace log level is enabled, additional lidarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+- Last Written - The local time Lidarr last wrote to this log file.
+  - Lidarr uses rolling log files limited to 1MB each. The current log file is always lidarr.txt, for the other files lidarr.0.txt is the next newest (higher numbers are older) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
+  - With Debug log level enabled, additional lidarr.debug.txt rolling log files will be present, up to 51 files. This log file contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
+  - With Trace log level enabled, additional lidarr.trace.txt rolling log files will be present, up to 51 files. This log file contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.

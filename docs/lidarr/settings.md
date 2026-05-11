@@ -2,269 +2,377 @@
 title: Lidarr Settings
 description: Complete configuration guide for Lidarr settings including media management, profiles, quality definitions, and metadata preferences
 tags:
+  - lidarr
   - settings
   - configuration
-  - lidarr
-  - profiles
   - quality
+  - profiles
   - metadata
   - media
 ---
-# Table of Contents
+# Lidarr Settings
 
-- [Table of Contents](#table-of-contents)
-- [Settings](#settings)
-- [Download Clients](#download-clients)
-  - [Overview](#overview)
-  - [Download Client Processes](#download-client-processes)
-  - [Usenet](#usenet)
-  - [BitTorrent](#bittorrent)
-  - [Download Clients](#download-clients-1)
-    - [Supported Download Clients](#supported-download-clients)
-    - [Usenet Client Settings](#usenet-client-settings)
-    - [Torrent Client Settings](#torrent-client-settings)
-    - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
-  - [Completed Download Handling](#completed-download-handling)
-    - [Remove Completed Downloads](#remove-completed-downloads)
-    - [Failed Download Handling](#failed-download-handling)
-  - [Remote Path Mappings](#remote-path-mappings)
-- [Import Lists](#import-lists)
-  - [Import Lists](#import-lists-1)
-  - [Import List Exclusions](#import-list-exclusions)
-  - [Adding an Import List](#adding-an-import-list)
-- [Connections](#connections)
-- [Tags](#tags)
-- [General](#general)
-  - [Updates](#updates)
+This page covers all settings available in Lidarr. For field-level detail on a specific area, jump directly to the relevant section below.
 
-# Settings
+# Media Management
 
-This page is a work in progress and contributions - based on the other \*Arr pages are both welcome and strongly encouraged.
+{#media-management}
+
+## Track Naming
+
+### Rename Tracks
+
+When enabled, Lidarr renames imported track files according to the format strings below. When disabled, Lidarr imports files using their original filenames. It still manages the folder structure but leaves individual filenames as-is.
+
+!!! warning
+    Renaming files that a torrent client is currently seeding will break seeding unless you are using hardlinks. See [Concepts — Hardlinks](../lidarr/concepts.md#hardlinks-and-completed-downloads) before enabling this.
+
+### Replace Illegal Characters
+
+Replaces characters in filenames that aren't valid on the target filesystem (for example, `: / \ * ? " < > |` on Windows). When disabled, Lidarr won't sanitize filenames and imports may fail on restricted filesystems.
+
+## Naming Format
+
+The format strings below use tokens to build file and folder names. For a full token reference, see the [Naming Guide](../lidarr/naming-guide.md).
+
+!!! info
+    Enable **Settings → Show Advanced** to reveal the format fields.
+
+### Standard Track Format
+
+The filename template for regular single-disc track files. Lidarr appends the file extension automatically.
+
+Example: `{Album Title}/{track:00} {Track Title}` → `Blood on the Tracks/01 Tangled Up in Blue.flac`
+
+### Multi Disc Track Format
+
+The filename template for tracks on releases with more than one disc. Use `{medium:00}` to include the disc number.
+
+Example: `{Album Title}/{medium:00}-{track:00} {Track Title}` → `Mellon Collie/01-01 Mellon Collie and the Infinite Sadness.flac`
+
+### Artist Folder Format
+
+The folder name template for each artist at the root folder level. Only artist-level tokens work here.
+
+Example: `{Artist Name}` → `/music/The Beatles/`
+
+## Folders
+
+| Setting | Default | Description |
+|---|---|---|
+| **Create Empty Artist Folders** | Off | Lidarr creates an artist folder immediately when you add an artist, even before importing any tracks. |
+| **Delete Empty Folders** | Off | Lidarr automatically removes empty artist and album folders after deleting or moving files. |
+
+## Importing
+
+| Setting | Default | Description |
+|---|---|---|
+| **Skip Free Space Check** | Off | Skip the available disk space check before importing. Only enable this if Lidarr can't correctly detect free space (some network shares and unusual storage setups). |
+| **Minimum Free Space** | 100 MB | Lidarr will refuse to import if available space in the root folder falls below this value. |
+| **Use Hardlinks Instead of Copy** | On | Use hardlinks when the source and destination are on the same filesystem. Hardlinks avoid copying data and allow seeding to continue. Falls back to copy if hardlinks aren't supported. |
+| **Import Extra Files** | Off | Import sidecar files with the same base name alongside audio files at import time (for example, lyric files, NFO files, cover images). See below. |
+| **Extra File Extensions** | (empty) | Comma-separated list of file extensions to import when you enable **Import Extra Files**. Example: `lrc,nfo,jpg,png`. Don't use `*`; the code treats it as a literal character, not a wildcard, and it matches nothing. |
+
+### How Import Extra Files works
+
+When enabled, Lidarr scans the **same directory as each downloaded track file** immediately after that track imports. It looks for sidecar files: files whose name (without extension) starts with the track's name (without extension). For example, when importing `01 Song.flac`, Lidarr will consider `01 Song.lrc`, `01 Song.nfo`, and `01 Song.jpg` as candidates. Lidarr ignores files like `cover.jpg` or `album.nfo` whose name doesn't start with the track's filename.
+
+Matching files are then filtered against the configured extension list. Files that pass are:
+
+1. Moved into the **library folder** alongside the imported track (or hardlinked/copied if the download is seeding and is read-only).
+2. Renamed to match the track filename, preserving the extension.
+3. Recorded in Lidarr's database and associated with the track file.
+
+**NFO files:** Lidarr imports only the first NFO file found in the source folder per run. Lidarr skips later NFO files from the same folder to prevent duplicates.
+
+**Lyric files** (`.lrc`, `.txt`, `.utf`, `.utf8`, `.utf-8`): a separate lyric manager handles these with priority over the general extra-file handler. Lidarr imports them with the same base name as the track and renames them alongside it.
+
+**When you move an artist to a new root folder**, all files in the artist directory move together at the filesystem level, including extra files Lidarr isn't tracking. Extra files that Lidarr is tracking resolve correctly at the new location because their stored paths are relative to the artist folder, and Lidarr updates that path as part of the move.
+
+!!! warning
+    The `*` wildcard isn't supported in the extension list. The code matches by `filename.EndsWith(extension)`; a file never literally ends in `*`. List explicit extensions only.
+
+## File Management
+
+| Setting | Default | Description |
+|---|---|---|
+| **Unmonitor Deleted Tracks** | Off | When something outside Lidarr deletes a track file from disk, automatically unmonitor that track. |
+| **Download Propers and Repacks** | Prefer and Upgrade | How to handle proper/repack releases. **Prefer and Upgrade** grabs and upgrades to propers when found. **Don't Upgrade Automatically** includes them in scores but won't autograb. **Don't Prefer** treats them as equal to the original release. |
+| **Analyse Audio Files** | On | Read audio file metadata (bitrate, sample rate, bit depth) to improve quality detection. Disabling this makes quality detection rely solely on filename parsing. |
+| **Rescan Artist Folder after Refresh** | Always | When to rescan an artist folder after a metadata refresh. **Always** rescans every time. **After Manual Refresh** only rescans when triggered manually. **Never** disables rescanning. |
+| **Watch Library for File Changes** | On | Monitor the library folder for external file changes (additions, deletions, renames). Disabling this means Lidarr only discovers changes during scheduled rescans. |
+
+## Permissions
+
+These settings apply to Linux and macOS only. Leave disabled on Windows.
+
+| Setting | Default | Description |
+|---|---|---|
+| **Set Permissions** | Off | Set file and folder permissions on imported files. |
+| **chmod Folder** | 755 | Octal permission mode applied to folders on import (for example, `755` = rwxr-xr-x). |
+| **chown Group** | (empty) | Group to assign to imported files and folders. The Lidarr process user must be a member of this group. |
+
+## Recycling Bin
+
+| Setting | Default | Description |
+|---|---|---|
+| **Recycle Bin** | (empty) | Path to a recycling bin folder. When Lidarr deletes files, they're moved here rather than permanently deleted. Leave empty to skip the recycle bin. |
+| **Recycle Bin Cleanup** | 7 days | Number of days before files in the recycle bin are permanently deleted. Set to `0` to disable automatic cleanup. |
+
+## Root Folders
+
+Root folders are the top-level directories where Lidarr stores your library. Each imported artist gets a subfolder inside a root folder.
+
+Click **Add (+)** to add a root folder. The path must exist and Lidarr must have read and write access to it. A root folder must not overlap with your download client's output directory.
+
+!!! warning
+    Don't point a root folder at a cloud storage mount (Dropbox, OneDrive, Google Drive). Lidarr writes audio tags and metadata frequently; cloud storage APIs have rate limits that will cause failures.
+
+## Metadata Profiles
+
+{#metadata-profiles}
+
+Metadata profiles control which release types are visible per artist. Lidarr hides releases whose type isn't in the assigned profile and won't monitor or search for them.
+
+### Fields
+
+| Field | Description |
+|---|---|
+| **Name** | Profile name. |
+| **Release Types** | Checkboxes for each MusicBrainz release type. Only releases matching a checked type appear for artists using this profile. |
+
+### Release Types
+
+| Type | Description |
+|---|---|
+| **Albums** | Standard studio albums. |
+| **Singles** | Single releases (one or a few tracks). |
+| **EPs** | Extended plays, longer than a single but shorter than an album. |
+| **Broadcasts** | Live broadcasts, radio sessions, and similar. |
+| **Others** | Release types not covered by the above categories. |
+
+You can include or exclude secondary types (Compilation, Soundtrack, Spokenword, Interview, Live, Remix, DJ-Mix, Mixtape, Demo, etc.) as extra filters on top of the primary type selection.
+
+!!! info
+    MusicBrainz determines release types. If a release you expect to see is missing, check its entry on MusicBrainz: the type may be `Unknown`, which Lidarr can't filter on, or the primary type may be one you have unchecked in your profile.
+
+## Release Profiles
+
+{#release-profiles}
+
+Release profiles filter and score releases based on their titles. Use them to require certain terms, reject others, or shift scoring without creating a full custom format.
+
+### Fields
+
+| Field | Description |
+|---|---|
+| **Must Contain** | Comma-separated list of terms (or regex patterns) that a release title must include. Lidarr rejects releases that don't match. |
+| **Must Not Contain** | Comma-separated list of terms a release title must not include. Lidarr rejects releases that match any term. |
+| **Preferred** | Terms with associated scores. Positive scores boost a release; negative scores penalise it. Separate terms with commas to share a score across more than one term. |
+| **Include Preferred when Renaming** | If enabled, Lidarr appends the matched preferred term to the filename during rename. Useful for tagging releases from specific groups in the filename. |
+| **Indexers** | Restrict this profile to specific indexers. Leave empty to apply to all indexers. |
+| **Tags** | Restrict this profile to artists with matching tags. Leave empty to apply to all artists. |
+
+!!! info
+    Release profiles apply at **grab/download time**: they filter and score releases from indexers before Lidarr sends anything to a download client. They have no effect on which MusicBrainz release (pressing, edition, format) Lidarr matches your already-downloaded files to during import. See [FAQ → Can Lidarr prefer a specific pressing or format during import?](../lidarr/faq.md#can-lidarr-prefer-a-specific-pressing-or-format-during-import) for the import side of this.
+
+## Custom Formats
+
+{#custom-formats-2}
+
+Custom formats score releases based on patterns matched against the release title and indexer flags. Unlike release profiles, which require or reject terms absolutely, custom formats assign a numeric score that accumulates across all matched formats. A quality profile can then set a **Minimum Custom Format Score**; releases below that threshold aren't grabbed.
+
+Click **Add (+)** to create a format, or **Import** to paste a JSON definition.
+
+!!! info
+    Like release profiles, custom formats apply at **grab/download time**: Lidarr computes scores against indexer release titles before sending anything to a download client. They don't influence which MusicBrainz release Lidarr matches an already-downloaded file to during import.
+
+### Specifications
+
+Each custom format contains one or more specifications. A specification defines a single matching rule, for example "release title contains `\bFLAC\b`" or "release is from indexer X." Specifications within a format combine with AND logic (all must match for the format to fire) unless you tick **Negate** (inverts the match) or adjust the **Required** flag.
+
+Common specification types for music:
+
+| Specification | Matches against |
+|---|---|
+| **Release Title** | The full release title string from the indexer. Supports regex. |
+| **Release Group** | The release group part of the title, if parseable. |
+| **Indexer Flag** | Indexer-specific flags (Freeleech, Halfleech, etc.) where the indexer supports them. |
+| **Source** | Audio source tag (CD, WEB, Vinyl, etc.) if present in the title. |
+
+For worked examples and suggested scoring values for a FLAC-focused library, see [Tips and Tricks → Custom Formats](../lidarr/tips-and-tricks.md#custom-formats).
+
+### Testing release title parsing
+
+Two ways to test how Lidarr will parse a release name before committing to a profile:
+
+**In Lidarr:** Use the **Test Parsing** button on the Settings → Custom Formats page. Enter a release title and Lidarr shows the parsed fields (source, quality, release group, etc.) alongside which custom formats match and their combined score. This is the fastest way to confirm a specification fires as expected.
+
+**Via the Servarr Discord bot:** In the `#bot-spam` channel, run `/parser lidarr <release title>` (for example, `/parser lidarr Artist.Album.2022.FLAC-GROUP`). The bot replies with the same parsed breakdown. Useful for quick spot-checks without opening the UI.
+
+# Quality
+
+{#quality}
+
+The Quality page defines size thresholds for each quality level. Lidarr uses these to check that a release's reported size is consistent with the claimed quality, catching mislabelled releases.
+
+For audio, size limits use **kilobits per second (kbps)**; Lidarr computes a bitrate from the file size and duration and compares it to the configured range.
+
+| Column | Description |
+|---|---|
+| **Quality** | The quality name (for example, FLAC, MP3-320, MP3-256). |
+| **Min** | Minimum acceptable bitrate in kbps. Lidarr rejects releases below this. Set to `0` to disable the lower bound. |
+| **Preferred** | The bitrate Lidarr aims for when scoring releases. Releases at this level receive a higher score than those at the minimum. |
+| **Max** | Maximum acceptable bitrate in kbps. Lidarr rejects releases above this. Set to `0` for no upper limit. |
+
+!!! info
+    FLAC is lossless and doesn't have a consistent bitrate; its effective bitrate varies by content. The FLAC entry in quality definitions serves primarily as a file-size sanity check rather than strict bitrate enforcement.
 
 # Download Clients
 
+{#download-clients}
+
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](../lidarr/supported.md#download-clients) page for this section
+    Find information on supported download clients at the [Supported](../lidarr/supported.md#download-clients) page.
 
 ## Overview
 
-- Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn't one right setup and everyone's setup can be a little different. But there are many wrong setups.
+Lidarr sends download requests to a configured client, monitors the client's queue via its API, and imports finished files into the library. The download client and Lidarr must both be able to read and write to the same filesystem path; mismatched paths are the most common cause of import failures.
 
-## Download Client Processes
+## How Downloading Works
 
-## Usenet
+### Usenet
 
-- Lidarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
-  - Examples: movies, tv, series, music, etc.
-- Lidarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
-- When the download is completed, Lidarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Lidarr
-- Lidarr will scan that completed file location for files that Lidarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
-- Atomic Moves (instant moves) are enabled by default. The file system and mounts must be the same for your completed download directory and your media library. If the the atomic move fails or your setup does not support hard links and atomic moves then Lidarr will fall back and copy the file then delete from the source which is IO intensive.
-- If the "Completed Download Handling - Remove" option is enabled in Lidarr's settings leftover files from the download will be sent to your trash or recycling via a request to your client to delete/remove the release.
+1. Lidarr sends a download request to the Usenet client with a configured category label.
+2. Lidarr monitors the client's queue via its API for items in that category.
+3. When the download completes, Lidarr reads the reported file path, scans it for audio files, and imports them into the library.
+4. Lidarr uses atomic moves (instantaneous moves within the same filesystem) by default. If the download folder and library folder are on different filesystems, Lidarr falls back to copy + delete, which uses more I/O and temporary disk space.
 
-## BitTorrent
+### BitTorrent
 
-- Lidarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
-  - Examples: movies, tv, series, music, etc.
-- Lidarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
-- Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Lidarr under the specific download client). When files are imported to your media folder Lidarr will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
-- Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then Lidarr will fall back and copy the file.
-- If the "Completed Download Handling - Remove" option is enabled in Lidarr's settings, Lidarr will delete the torrent from your client and ask the client to remove the torrent data, but only if the client reports that seeding is complete and torrent is stopped (paused on completion).
-
-## Download Clients
-
-Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a new download client. Your download client should already be configured and running.
-
-### Supported Download Clients
-
-- A list of supported download clients is located at the [More Info (Supported)](../lidarr/supported.md#downloadclient) page for this section
-
-Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
-
-### Usenet Client Settings
-
-- Name - The name of the download client within Lidarr
-- Enable - Enable this Download Client
-- Host - The URL of your download client
-- Port - The port of your download client
-- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
-- (Advanced Option) URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
-- API Key - the API key to authenticate to your client
-- Username - the username to authenticate to your client (typically not needed)
-- Password- the password to authenticate to your client (typically not needed)
-- Category - the category within your download client that \*Arr will use. To avoid unrelated downloads showing in Activity it is strongly recommended to set a category.
-- Recent Priority - download client priority for recently released media
-- Older Priority - download client priority for media released not recently
-- (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
-
-### Torrent Client Settings
-
-- Name - The name of the download client within Lidarr
-- Enable - Enable this Download Client
-- Host - The URL of your download client
-- Port - The port of your download client; this is typically the webgui port
-- Use SSL - Use a secure connection with your download client. Please be aware of this common mistake.
-- (Advanced Option) URL Base - Add a prefix to the url; this is commonly needed for reverse proxies.
-- Username - the username to authenticate to your client
-- Password- the password to authenticate to your client
-- Category - the category within your download client that \*Arr will use. To avoid unrelated downloads showing in Activity it is strongly recommended to set a category.
-- Post-Import Category - the category to set after the release is downloaded and imported. Please note that this breaks completed download handling removal.
-- Recent Priority - download client priority for recently released media
-- Older Priority - download client priority for media released not recently
-- Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
-- (Advanced Option) - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
-
-### Torrent Client Remove Download Compatibility
-
-- Lidarr is only able to set the seed ratio/time on clients that support setting this value via their API when the torrent is added. Seed goals can be set globally in the client itself or per tracker in \*Arr settings for each indexer. See the table below for client compatibility.
-
-|      Client       |       Ratio        |                                   Time                                   |
-| :---------------: | :----------------: | :----------------------------------------------------------------------: |
-|       Aria2       | :white_check_mark: |                                   :x:                                    |
-|      Deluge       | :white_check_mark: |                                   :x:                                    |
-| Download Station  |        :x:         |                                   :x:                                    |
-|       Flood       | :white_check_mark: |                            :white_check_mark:                            |
-|     Hadouken      |        :x:         |                                   :x:                                    |
-|    qBittorrent    | :white_check_mark: |                            :white_check_mark:                            |
-|     rTorrent      | :white_check_mark: |                            :white_check_mark:                            |
-| Torrent Blackhole |        :x:         |                                   :x:                                    |
-|   Transmission    | :white_check_mark: | ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) |
-|     uTorrent      | :white_check_mark: |                            :white_check_mark:                            |
-|       Vuze        | :white_check_mark: |                            :white_check_mark:                            |
+1. Lidarr sends a download request to the torrent client with a category label.
+2. Lidarr monitors the client's queue for items in that category.
+3. When the download completes, Lidarr imports the files. If the download folder and library folder are on the same filesystem, Lidarr creates a **hardlink**: the file appears in both locations without using extra disk space, and seeding continues uninterrupted.
+4. The torrent client retains the original files so seeding can continue. Lidarr requests removal only after seeding finishes (when you enable **Remove** and the client reaches its seed goal).
 
 !!! info
-    ![Idle Limit](https://img.shields.io/badge/Supported-Idle%20Limit*-blue) - Transmission internally has an Idle Time check, but Lidarr compares it with the seeding time if the idle limit is set on a per-torrent basis. This is done as workaround to Transmission’s api limitations.
+    The download folder and library root folder must be on the **same filesystem** for hardlinks to work. In Docker, both must be mounted through the same volume or bind mount. See [Concepts — Hardlinks](../lidarr/concepts.md#hardlinks-and-completed-downloads) and [TRaSH's Hardlink Guide](https://trash-guides.info/hardlinks) for setup details.
+
+## Download Client Settings
+
+Click **Add (+)**, choose a client type, and fill in the connection details.
+
+### Common Fields (all clients)
+
+| Field | Description |
+|---|---|
+| **Name** | Label for this client, shown in activity and logs. |
+| **Enable** | Whether Lidarr actively monitors this client. |
+| **Host** | Hostname or IP of the download client. |
+| **Port** | Port the client's web UI or API listens on. |
+| **Use SSL** | Connect to the client over HTTPS. |
+| **(Advanced) URL Base** | Path prefix for the client, needed when behind a reverse proxy (for example, `/sabnzbd`). |
+| **Username / Password** | Credentials if the client requires authentication. |
+| **Category** | Category or label to apply to Lidarr's downloads. Lidarr only monitors items in this category; setting one is strongly recommended to avoid conflicts with other applications sharing the same client. |
+| **Recent Priority** | Priority level for recently released music. |
+| **Older Priority** | Priority level for back-catalogue music. |
+| **(Advanced) Client Priority** | Order among clients of the same type. `1` = highest priority; `50` = lowest. Lidarr uses round-robin among equal-priority clients. |
+
+### Usenet-Only Fields
+
+| Field | Description |
+|---|---|
+| **API Key** | API key to authenticate with the Usenet client. |
+
+### Torrent-Only Fields
+
+| Field | Description |
+|---|---|
+| **Post-Import Category** | Category to assign after import. Note: setting this disables completed-download removal, since Lidarr can no longer identify the torrent as one it manages. |
+| **Initial State** | Whether new torrents start paused or downloading immediately. |
+
+### Torrent Client Seed Goal Compatibility
+
+Lidarr can set seed ratio and time goals via the torrent client's API when you add a torrent, but not all clients support this.
+
+| Client | Seed Ratio | Seed Time |
+| :---: | :---: | :---: |
+| Deluge | ✓ | ✗ |
+| Download Station | ✗ | ✗ |
+| Flood | ✓ | ✓ |
+| Hadouken | ✗ | ✗ |
+| qBittorrent | ✓ | ✓ |
+| rTorrent | ✓ | ✓ |
+| Torrent Blackhole | ✗ | ✗ |
+| Transmission | ✓ | Idle Limit only |
+| uTorrent | ✓ | ✓ |
+| Vuze | ✓ | ✓ |
 
 ## Completed Download Handling
 
-- Completed Download Handling is how Lidarr imports media from your download client to your series folders.
-
-- Enable (Advanced Global Setting) - Automatically import completed downloads from the download client
-- Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
-  - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Lidarr per the above table. Torrents must also stay in the same category.
-
-### Remove Completed Downloads
-
-- Lidarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
-- Lidarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
-- When the download is completed, Lidarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder.
-- Lidarr will scan that completed file location for video files. It will parse the video file name to match it to an episode. If it can do that, it will rename the file according to your specifications, and move it to the assigned library folder.
-- Leftover files from the download will be sent to your trash or recycling.
-
-If you download using a BitTorrent client, the process is slightly different:
-
-- Completed files are left in their original location to allow you to seed. When files are imported to your assigned library folder Lidarr will attempt to hardlinkthe file or fall back to copy (use double space) if hard links are not supported.
-- If the "Completed Download Handling - Remove" option is enabled in settings, Lidarr will ask the torrent client to delete the original file and torrent, but this will only occur if the client reports that seeding is complete, the torrent is in the same category (i.e. not using a post-import category), the seed goal reached is supported by Lidarr, and torrent is paused (stopped).
+| Setting | Description |
+|---|---|
+| **Enable** (Advanced, global) | Automatically import completed downloads from the download client. Disabling this means Lidarr will never import anything, so leave it enabled unless you have a specific reason to disable it. |
+| **Remove** (per-client) | After import, ask the download client to remove the completed item. For torrents, removal only occurs when the client reports seeding is complete and the torrent is paused/stopped. |
 
 ### Failed Download Handling
 
-- Failed Download Handling is only compatible with SABnzbd and NZBGet.
-- Failed Downloading Handling does not apply to Torrents nor are there plans to add such functionality.
+Failed download handling is available for SABnzbd and NZBGet only. It isn't supported for torrent clients.
 
-- There are several components that make up the failed download handling process:
+| Setting | Description |
+|---|---|
+| **Redownload** | When a download fails, automatically search for a replacement. |
+| **(Advanced) Remove** | Remove the failed download from the client when Lidarr detects the failure. |
 
-- Check Downloader:
-  - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
-  - History - Check your downloader's history for failure (e.g. not enough blocks to repair, or extraction failed)
-- When Lidarr finds a failed download it starts processing them and does a few things:
-  - Adds a failed event to Lidarr's history
-  - Removes the failed download from Download Client to free space and clear downloaded files (optional)
-  - Starts searching for a replacement file (optional)
-  - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Lidarr ever again (You can still force the download via a manual search).
-  - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Lidarr, at this time, they are all on by default.
-
-- Redownload - Controls whether or not Lidarr will search for the same file after a failure
-- (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
+When Lidarr detects a failure, it logs it, optionally removes the failed item, searches for a replacement, and blocklists the failed release so it isn't grabbed again automatically.
 
 ## Remote Path Mappings
 
-- Remote Path Mapping acts as a dumb find Remote Path and replace with Local Path This is primarily used for either merged local/remote setups using mergerfs or similar or is used for when the application and download client are not on the same server.
-- A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
-- Generally, a remote path map is only required if your download client is on Linux when \*Arr is on Windows or vice versa. A remote path map is also possibly needed if mixing Docker and Native clients or if using a remote server.
-- A remote path map is a DUMB search/replace (where it finds the REMOTE value, replace it with LOCAL value for the specified Host).
-- If the error message about a bad path does not contain the REPLACED value, then the path mapping is not working as you expect.  The typical solution is to add and remove the mapping.
-- [See TRaSH's Tutorial for additional information regarding remote path mapping](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/)
+You need remote path mappings when Lidarr and the download client see the same files at different paths, for example when they run on separate machines or in separate Docker containers with different volume mount paths.
+
+A mapping translates a remote path (as reported by the download client) to a local path (as Lidarr accesses it). Add a mapping per client under **Settings → Download Clients → Remote Path Mappings**.
 
 !!! info
-    If both \*Arr and your Download Client are Docker Containers it is rare a remote path map is needed. It is suggested you [review the Docker Guide](../docker-guide.md) and/or [follow TRaSH's Tutorial](https://trash-guides.info/hardlinks)
+    If both Lidarr and the download client are in Docker containers on the same host with matching volume mounts, a remote path mapping isn't needed. See [TRaSH's Remote Path Mapping guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for diagnosis and setup.
 
-# Import Lists
+# Connect
 
-!!! info
-    Information on supported list types can be found at the [More Info (Supported)](../lidarr/supported.md#lists) page for this section
-
-Import lists allow you to add items to Lidarr from Spotify or Last .fm. This has the potential to add a lot of unexpected items to your Lidarr database, so please use it with care.
-
-<!-- ![importlists.png](../assets/readarr/importlists.png) -->
-
-## Import Lists
-
-This shows you the lists you currently have, and allows you to add new lists. Adding lists is covered below in more detail.
-
-## Import List Exclusions
-
-Anything on here has been excluded from being added by lists, and will never be added from any list. You can remove items from this by clicking on it.
-
-## Adding an Import List
-
-After clicking the <kb>+</kb>, choose what kind of list you'd like to add:
-
-<!-- ![addlist.png](../assets/readarr/addlist.png) -->
-
-In this instance, we're going to add a Spotify Saved Albums list.
-
-<!-- ![bookshelflist.png](../assets/readarr/bookshelflist.png) -->
-
-- Name - Enter a name for this list.
-- Enable Automatic Add - If enabled have anything on the list automatically add to Lidarr.
-
-> This is going to add ALL ALBUMS from that artist to Lidarr!
-
-- Monitor - Select your monitoring level for things added. Valid options are `None`, `Specific Album`, and `All Artist Albums`. All albums are added to Lidarr, but will be monitored or unmonitored based on this selection.
-- Root Folder - Choose the root folder for artists added from this list
-- Monitor New Albums - Choose what Lidarr should do with future albums of the added artist. Valid options are `All Albums`, `None`, `New`.
-- Quality Profile - Choose your quality profile for artists added from this list
-- Metadata Profile - Choose your metadata profile for artists added from this list
-- Lidarr Tags - Choose what tags apply for artists added from this list
-
-> It is highly recommended that you add a descriptive tag here. Otherwise, you will not know what list added these items to Lidarr, and once they're added you can never get this information again! This info is not logged!
-
-Lists sync by default every 24 hours, but can be triggered manually from the `System` => `Tasks` page. You cannot automate this process any quicker than that.
-
-# Connections
+{#connections}
 
 !!! info
-    Information on supported connection types can be found at the [More Info (Supported)](../lidarr/supported.md#notifications) page for this section
+    Find information on supported connection types at the [Supported](../lidarr/supported.md#notifications) page.
+
+Connections send notifications or trigger actions when events occur in Lidarr. Common uses include Discord or Slack notifications on import, Plex library updates, and custom scripts.
+
+Click **Add (+)** and select a connection type. Most connections share these fields:
+
+| Field | Description |
+|---|---|
+| **Name** | Label for this connection. |
+| **On Grab** | Trigger when Lidarr sends a release to a download client. |
+| **On Release Import** | Trigger when a downloaded release is successfully imported. |
+| **On Upgrade** | Trigger when Lidarr upgrades a file to better quality. |
+| **On Rename** | Trigger when Lidarr renames files. |
+| **On Artist Added** | Trigger when you add an artist to Lidarr. |
+| **On Artist Deleted** | Trigger when you remove an artist. |
+| **On Album Delete** | Trigger when Lidarr deletes an album. |
+| **On Track Retag** | Trigger when audio tags are rewritten. |
+| **On Health Issue** | Trigger when a health check fails. |
+| **On Health Restored** | Trigger when a health check recovers. |
+| **On Application Update** | Trigger when Lidarr updates to a new version. |
+| **Include Health Warnings** | Include `Warning`-level health issues in health notifications (not just `Error`). |
+
+For **Custom Script** connections, see the [Custom Scripts](../lidarr/custom-scripts.md) page for the full list of environment variables available per event.
 
 # Tags
 
-- The tag section in Lidarr is used to link different aspects of Lidarr.
-- Tags are particularly useful for:
+{#tags}
 
-  - Delay Profiles
-  - Release Profiles
-  - Indexers
+Tags link artists, indexers, delay profiles, and release profiles together. A tag on an artist and a matching tag on a delay profile means that delay profile applies to that artist. Without a matching tag, the default (untagged) delay profile applies.
 
-- Tags can be used to link Delay Profiles, Release Profiles, Indexers and Artists/Albums together.
-- For Example:
-  - You want a specific Artist/Album to only use a specific indexer. You would create a tag and assign the Artist/Album and indexer that tag.
-  - You want a specific Release Profile to only use a specific Delay Profile. You would create a tag and assign the Release Profile and Delay Profile that tag.
+Tags are particularly useful for:
 
-!!! info
-    Note: Tags do not influence any "Quality Profiles", "Metadata Profiles" or any other aspect not mentioned above.
-
-# General
-
-## Updates
-
-- (Advanced Option) Branch - This is the branch of Lidarr that you are running on.
-  - [Please see this FAQ entry for more information](../lidarr/faq.md#how-do-i-update-lidarr)
-- Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
-- Mechanism - Use Lidarr built-in updater or a script
-  - Built-in - Use Lidarr's own updater
-  - Script - Have Lidarr run the update script
-  - Docker - Do not update Lidarr from inside the Docker, instead pull a brand new image with the new update
-- Script - Visible only when Mechanism is set to Script - Path to update script
-- Update Process - Lidarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Lidarr is run under, it will need permissions to update the Lidarr files as well as stop/start Lidarr.
-- Built-in - The built-in method will backup Lidarr files and settings, stop Lidarr, update the installation and Start Lidarr, if your system will not handle the stopping of Lidarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Lidarr will be restarted.
-- Script - The script should handle the the same as the built-in updater, if you need to handle stopping and starting services (upstart/launchd/etc) you will need to do that here.
+- Assigning a specific indexer to specific artists (for example, a private tracker that only carries jazz: tag it `jazz` and tag the relevant artists `jazz`).
+- Assigning a non-default delay profile to a subset of artists.
+- Restricting a release profile to certain artists.
+- Tracking which import list added an artist.

@@ -13,10 +13,10 @@ tags:
 
 Lidarr plugins allow users to extend the capability of Lidarr to include new indexers and download clients, including peer-to-peer networks and common streaming services.
 
-Plug-in capabilities are now part of the main branch of Lidarr, but only in the `nightly` branch. Both Hotio and Linuxserver are updated.
+Plug-in capabilities are now part of the main branch of Lidarr, but only in the `nightly` branch. Hotio and Linuxserver both update their images.
 
 !!! danger
-    You cannot go back to a mainline Lidarr branch (master/develop) without restoring a database prior to the `plugins` or `nightly` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
+    You can't go back to a mainline Lidarr branch (master/develop) without restoring a database prior to the `plugins` or `nightly` branch. Errors will be relating to the protocol such as `Error parsing column 10 (Protocol=TorrentDownloadProtocol - String)` or being unable to enable torrent/usenet in a Delay Profile
 
 ### How To Install Plugins
 
@@ -46,12 +46,12 @@ image: lscr.io/linuxserver/lidarr:nightly
 
 ### Manually Installing
 
-- See the [Installation Docs](../lidarr/installation/) and simply change the branch in the url noted in the install docs from `master` to `nightly`, otherwise following the docs as-is.
+- See the [Installation Docs](../lidarr/installation.md) and simply change the branch in the url noted in the install docs from `master` to `nightly`, otherwise following the docs as-is.
 
 ### Post Install
 
 - Once you have changed branches, navigate to `/system/plugins`. You will have the option to enter the URL of the GitHub repository containing the plugin. Enter the URL and select Install. You can observe the progress in the lower left corner. The installation will take several seconds depending your installation.
-- If `/system/plugins` does not appear in the menu, ensure that `/system/updates` shows that plugins has a status of `Currently Installed`.
+- If `/system/plugins` doesn't appear in the menu, ensure that `/system/updates` shows that plugins has a status of `Currently Installed`.
 
 ## Next Steps
 
@@ -59,12 +59,12 @@ image: lscr.io/linuxserver/lidarr:nightly
 - Restart Lidarr to complete plugin installation
 
 !!! info
-    Plugin updates do not occur automatically
+    Plugin updates don't occur automatically
 
 # Plugins
 
 !!! info
-    Both plugins and this documentation are community-driven. There are no official recommendations at this time, and each plugin is supported by its developer.
+    Both plugins and this documentation are community-driven. No official recommendations exist at this time, and each developer supports their own plugin.
 
 ## ta264/deemix
 
@@ -88,7 +88,7 @@ To generate the Api Key necessary for the communication to the Slskd app follow 
 
 #### Download Client
 
-Once the plugin is installed, Slskd can be added as a download client.
+Once you install the plugin, you can add Slskd as a download client.
 
 - Navigate to `/settings/downloadclients`, and select the <kb>+</kb> button under Download clients. Slskd will appear at the bottom under the Other section.
 - Enter the correct hostname.
@@ -98,14 +98,14 @@ Once the plugin is installed, Slskd can be added as a download client.
 
 ### Indexer
 
-To search, Slskd must also be added as an Indexer.
+To search, you must also add Slskd as an Indexer.
 
 - Navigate to `/settings/indexers`, and select the <kb>+</kb> button under Indexers. Slskd will appear at the bottom under the Other section.
 - Enter the correct URL.
 - Enter the API key.
 - Enter a '0' (Key) and your Soulseek username (Value) for 'Ignored Users'.
 - Select the Test button.
-  - The Indexer test will send a test search to slskd for "Silent Partner Chances".
+  - The Indexer test will send a test search to slskd for "Silent Partner Chances."
 - If the Test returns a green checkmark, select Save.
 
 ### Delay Profile
@@ -157,7 +157,7 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
      - Lidarr's Media Management → "Import Extra Files" (add `lrc`)
 3. **Docker Requirements**:
    - FFmpeg required for Tidal conversions
-   - Custom app IDs may be needed for Qobuz authentication
+   - Qobuz authentication may require custom app IDs
 
 ## TypNull/Tubifarry
 
@@ -174,8 +174,8 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
 ### Toolbox Additions
 
 - **Soundtrack Importer**: Fetches soundtracks from Sonarr/Radarr via *Arr-Soundtracks* import list
-- **Queue Cleaner**: Auto-manages failed imports (blocklist/rename/retry)
-- **Codec Tinker**: Converts audio formats using FFmpeg rules (e.g., `wav→flac`, `AAC→MP3`)
+- **Queue Cleaner**: Automatically manages failed imports (blocklist/rename/retry)
+- **Codec Tinker**: Converts audio formats using FFmpeg rules (for example, `wav→flac`, `AAC→MP3`)
 - **Lyrics Fetcher**: Adds time-synced lyrics (.lrc files or embedded metadata)
 - **Search Sniper**: Automates batch searching of large wanted lists
 - **MetaMix**: Aggregates metadata from different sources (experimental)
@@ -186,7 +186,7 @@ TrevTV develops specialized Lidarr plugins for direct music platform integration
 - To install these:
   1. First ensure you have the stable version installed.
   2. Then switch to your desired branch using its URL.
-- *Example:* The development version can be found at:
+- *Example:* Find the development version at:
   `https://github.com/TypNull/Tubifarry/tree/develop`
 
 !!! info

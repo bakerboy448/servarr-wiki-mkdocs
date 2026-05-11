@@ -11,68 +11,85 @@ tags:
 ---
 # Activity
 
-The activity tab is where you can see past and present activities that \*Arr  has done. Including imports, deletes, upgrades, grabs, renames, and failures.
+The Activity section is where you can see everything Lidarr has done or is currently doing — imports, deletes, upgrades, grabs, renames, and failures.
 
 # Queue
 
-When something is actively downloading and not yet imported into \*Arr, it will show in the Queue page.
+The Queue shows all items that are actively downloading or waiting to be imported. Lidarr populates the queue by polling your download client's API, so the queue isn't stored internally — it reflects your download client's current state.
 
-The queue shows all items the application can recognize that is in the specified download client's category (Settings => Download Client => Category). To view all releases Options => Show Unknown. The queue is not stored anywhere within the application, but is updated via your Download Client's API responses.
-
-!!! warning
-    For Usenet Clients, \*Arr will only look 60 items deep in the queue for potential imports! It is important not to exceed this, or you will need to clean up with manual imports when your system gets overloaded and starts missing items!.
-    Remove Completed Downloads should be enabled for your Download Client as well.
-
-## Queue Action Icons
-
-- X - Remove Item from Queue
-  - Remove Release From Download Client - Remove Release from Download Client. Mandatory for unmatched release items
-  - Blocklist Release - Add Release to Blocklist
-- Human Icon - Manual Import Release
-- Grab Icon - Send Release to Download Client
-
-## Queue Statuses
+Lidarr only shows items that are in the download client category configured under **Settings → Download Clients → Category**. Items in other categories are invisible to Lidarr.
 
 !!! warning
-    Note the below is incomplete
+    For Usenet clients, Lidarr only looks 60 items deep in the queue for potential imports. If your queue regularly exceeds this depth, items will be missed and require manual imports to resolve.
 
-| Icon       | Status                   | Description                                                                                     | Resolution Steps                                         |
-| ---------- | ------------------------ | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| grey clock | Release Pending          | Download is awaiting Download Client to be available or for release to meet Delay Profile Rules | N/A                                                      |
-| yellow     | Warning Unable to Import | \*Arr was unable to import the release. Review the tool tip for more details                    | [See the Troubleshooting Guide](../lidarr/troubleshooting.md) |
-| purple     | Download Importing       | Download is Importing                                                                           | N/A                                                      |
-|            |                          |                                                                                                 |                                                          |
-|            |                          |                                                                                                 |                                                          |
+!!! info
+    **Remove Completed Downloads** should be enabled in your download client so that finished items are cleared from the queue automatically.
+
+## Queue columns
+
+The queue table shows the following columns by default: Status, Artist, Album Title, Quality, Formats, Protocol, Download Client, Output Path, Time Left, Added, and Progress. Use **Options** to show or hide additional columns or change their order.
+
+## Queue statuses
+
+| Icon | Status | Description | Resolution |
+|---|---|---|---|
+| Grey cloud | Queued | The item is waiting in the download client and hasn't started downloading yet. | N/A — wait for the download client to start it. |
+| Grey clock | Release Pending | The download is waiting for a Delay Profile timer to expire before being sent to the download client. | N/A — wait for the delay to pass, or adjust your Delay Profile in Settings. |
+| Yellow arrow | Downloading | The item is actively downloading in the download client. | N/A. |
+| Purple arrow | Importing | The download has finished and Lidarr is importing it. | N/A. |
+| Yellow warning | Unable to Import | Lidarr couldn't import the release. Hover over the icon for details. | See [Import Troubleshooting](../lidarr/import-troubleshooting.md). |
+
+## Queue action icons
+
+Each row has action icons on the right:
+
+- **Manual Import** (person icon) — opens the manual import dialog for this item, letting you match and import it yourself.
+- **Grab** (download icon) — re-sends the release to the download client. Useful if an item was removed from the client but is still in the Lidarr queue.
+- **Remove** (✕) — removes the item from the Lidarr queue. When removing, you can also choose to:
+  - **Remove from Download Client** — deletes the item from the download client as well. Required for unmatched items that shouldn't be downloaded.
+  - **Add to Blocklist** — prevents Lidarr from grabbing this release again.
+
+## Queue options
+
+Click **Options** in the queue toolbar to open Table Options:
+
+| Option | Default | Description |
+|---|---|---|
+| Page Size | 250 | Number of queue items shown per page. |
+| Show Unknown Artist Items | On | Shows items in Lidarr's download client category that can't be matched to any artist in your library — for example, removed artists or items added to the category manually. |
+| Columns | (see below) | Choose which columns are visible and their display order. |
+
+Available columns: Status, Artist, Album Title, Album Release Date, Quality, Formats, Custom Format Score, Protocol, Indexer, Download Client, Release Title, Size, and Output Path.
 
 # History
 
-The history tab shows all things that have left the queue by way of the task being finished/ended. This includes imports, failures, grabs, deletes, and upgrades.
+The History tab shows everything that has left the queue — completed imports, failures, grabs, deletes, renames, and upgrades.
 
-The left icon is the action that was taken (the list of possible actions is shown below). You can filter these by clicking on the Filter icon on the right side. You can also show more columns by clicking on Options.
+The icon on the left of each row shows the action that was taken. Use the **Filter** button to narrow the view by event type, and **Options** to show or hide additional columns.
 
 ![history2.png](../assets/lidarr/history2.png)
 
-On `Grabbed` statuses, you can click on the `i` icon on the right to see more details about the download (what indexer it came from, the URL of the grab, the age of the upload, etc.). You can also mark this item as failed, to initiate a removal, blocklist, and re-search of the item.
+On `Grabbed` entries, click the `i` icon on the right to see details about the download: which indexer it came from, the grab URL, the upload age, and more. You can also mark a grabbed item as failed from here, which removes it, adds it to the blocklist, and triggers a re-search.
 
 ![history4.png](../assets/lidarr/history4.png)
 
 # Blocklist
 
 !!! info
-    Blocklist is formerly known as 'Blacklist'
+    The Blocklist was formerly called the Blacklist.
 
-The blocklist page shows you items that are blocklisted so they won't be downloaded again. These are failures from the automatic process or manually marked failed items. Items remain in the blocklist forever unless you manually remove them.
+The Blocklist shows releases that Lidarr won't download again. Entries are added either automatically when a download fails, or manually when you select **Add to Blocklist** while removing an item from the queue. Items stay on the blocklist permanently until you remove them.
 
 ![blocklist1.png](../assets/lidarr/blocklist1.png)
 
-Clicking on the `i` icon on the far right shows you more details about the blocklisted entry, and whether it was manually marked as failed or automatically failed during download.
+Click the `i` icon on the right of any entry to see whether it was marked failed manually or automatically, and what the failure reason was.
 
 ![blocklist2.png](../assets/lidarr/blocklist2.png)
 
-Clicking on the `x` on the far right removes the item from the blocklist, so that you can potentially grab it again, if it was added in error.
+Click the `✕` on the right to remove an entry from the blocklist, allowing Lidarr to grab that release again if it comes up in a future search.
 
-## Common Blocklist Reasons
+## Common blocklist reasons
 
-- User Marked Download as Failed Manually
-- User Selected "Add to Blocklist" when removing from queue
-- Usenet Download Client reported release download failure
+- User manually marked a download as failed
+- User selected **Add to Blocklist** when removing an item from the queue
+- Usenet download client reported a download failure

@@ -2,23 +2,54 @@
 title: Lidarr Wanted
 description: Managing wanted albums, manual searches, and download monitoring in Lidarr's Wanted section
 tags:
+  - lidarr
   - wanted
+  - monitoring
   - albums
   - search
-  - monitoring
   - missing
-  - lidarr
 ---
 # Wanted
 
-## Missing
+The Wanted section has two tabs, **Missing** and **Cutoff Unmet**, covering albums Lidarr is actively trying to obtain or upgrade.
 
-The wanted page displays missing albums with options to filter between monitored and unmonitored. Users can search for individual albums or query the entire list.
+# Missing
 
-### Manual Import
+The Missing tab lists every monitored album that has no files on disk. Albums appear here once their release date has passed and Lidarr hasn't been able to find or import them.
 
-The manual import button at the top of the Missing page is the best option for importing individual albums interactively from folders outside of Lidarr's root directory.
+## Toolbar actions
 
-## Cutoff Unmet
+- **Search Selected**: triggers an automatic search for the albums you have checked.
+- **Unmonitor Selected**: sets the checked albums to unmonitored, removing them from the Missing list without deleting anything.
+- **Search All**: triggers an automatic search for every album currently shown in the list. If a filter is active, only filtered results are searched.
+- **Manual Import**: opens the manual import dialog, letting you match files in any accessible folder to albums in your library. Use this when you have files on disk that Lidarr hasn't picked up automatically. See [Import Troubleshooting](../lidarr/import-troubleshooting.md) for guidance.
+- **Options**: opens Table Options to configure page size and visible columns.
+- **Filter**: narrows the list, including toggling between monitored and unmonitored albums.
 
-The Cutoff Unmet page shows all releases that haven't been upgraded according to each release's Quality Profile settings. In simpler terms, these albums are generally lower quality files that Lidarr will try to upgrade.
+## Per-row actions
+
+Each row has two action icons on the right:
+
+- **Search** (magnifying glass): triggers an automatic search for that album only.
+- **Manual Import** (person icon): opens manual import scoped to that album.
+
+## Options
+
+| Option | Default | Description |
+|---|---|---|
+| Page Size | 20 | Number of albums shown per page. |
+| Columns | (see below) | Choose which columns are visible and their display order. |
+
+Available columns: Artist Name, Album Title, Album Type, Release Date, Last Searched, Actions.
+
+# Cutoff Unmet
+
+The Cutoff Unmet tab lists albums that have files on disk but haven't yet reached the quality target defined in their Quality Profile. Lidarr will continue searching for an upgrade for these albums until the cutoff is met.
+
+An album appears here when the file Lidarr has is below the **Cutoff** quality set in the artist's Quality Profile. For example, if you have an MP3 but your profile's cutoff is FLAC. Once a file at or above the cutoff quality is imported, the album drops off this list.
+
+## Toolbar actions
+
+- **Search Selected**: triggers an upgrade search for the checked albums.
+- **Unmonitor Selected**: disables monitoring for the checked albums, stopping Lidarr from searching for upgrades.
+- **Search All**: triggers an upgrade search for every album currently shown in the list.

@@ -8,13 +8,107 @@ tags:
 ---
 # Lidarr File Naming Guide
 
-Lidarr users often ask about file naming formats. This guide outlines popular options and their justifications.
+Lidarr renames and organises files on import according to four configurable templates: **Standard Track Format**, **Multi-Disc Track Format**, **Artist Folder Format**, and **Album Folder Format**. Getting these right before you populate your library is important — changing them later forces a full rename of every file the next time Lidarr refreshes each artist.
 
-Lidarr offers options to customize folder and track naming conventions for standard and multi-disc albums.
+!!! warning
+    Changing any naming template after you have populated your library will rename every existing file the next time Lidarr refreshes that artist. Test on a small artist first, and make sure your backup is current before changing naming on a large library.
 
-## Davo's Naming Convention
+# Before you choose a format
 
-This format is from Davo's [community-guide](../lidarr/community-guide.md).
+## OS path limits and illegal characters
+
+**Windows** enforces a 260-character limit on full file paths by default (you can raise this via a Group Policy setting, but most users will hit it eventually on deeply-nested libraries). Long album titles and artist names compound quickly: `Root\Artist\Album\Track.flac` can easily push 200 characters before the filename. The `:N` truncation syntax (see below) is the standard workaround — most Windows-friendly naming conventions cap tokens at 100–150 characters.
+
+**Windows also prohibits** these characters in file and folder names: `\ / : * ? " < > |`. Lidarr's **Replace Illegal Characters** setting handles these automatically, but be aware that Lidarr substitutes or removes characters that are valid on Linux/macOS (colons in particular) on Windows.
+
+**Linux and macOS** have a 255-byte limit per path component (individual folder or filename) and prohibit only `/` and null bytes, so very long names are rarely a practical problem unless you are also sharing the library with a Windows machine.
+
+## Media server compatibility
+
+Different media servers have different expectations about music library folder structure:
+
+- **Plex** expects `Artist/Album/Track` folder nesting. It reads tags for metadata and uses the folder structure as a secondary hint. Plex doesn't require the release year in the album folder but many users include it to disambiguate re-issues.
+- **Navidrome** reads tags exclusively and is indifferent to folder structure, so almost any sane layout works.
+- **Jellyfin** follows MusicBrainz conventions and works best with `Artist/Album/Track` nesting, a release year in the album folder, and accurate MusicBrainz tags in the files themselves.
+
+If you run multiple media servers against the same library, choose a format that the pickiest server accepts — that's usually Plex or Jellyfin.
+
+## Cost of changing naming later
+
+Every naming change triggers a rename of all files the next time Lidarr refreshes the artist. On a large library this means thousands of file moves, all of which must be on the same filesystem as hardlinks (or full copies if they're not). Media servers will also need to re-scan after a mass rename. It's worth spending time upfront to pick a format you can live with permanently.
+
+# Naming token reference
+
+Wrap tokens in `{}`; Lidarr substitutes them at import time. Any token that resolves to an empty string Lidarr omits silently, including any surrounding literal text that's inside the same `{}` — this is how conditional formatting works (for example, `{ (Album Disambiguation)}` produces nothing if there's no disambiguation string).
+
+**Truncation:** append `:N` inside any token to cap the rendered value at N characters: `{Album Title:150}` truncates to 150 characters. Use this on Windows to stay within path limits.
+
+## Artist tokens
+
+| Token | Description |
+|---|---|
+| `{Artist Name}` | Full artist name as stored in MusicBrainz. |
+| `{Artist NameThe}` | Artist name with a leading "The" moved to the end, for example, `Beatles, The`. Useful for consistent alphabetical sorting. |
+| `{Artist CleanName}` | Artist name with illegal filesystem characters removed. |
+| `{Artist CleanNameThe}` | Clean artist name with "The" moved to the end. |
+| `{Artist Disambiguation}` | Disambiguation string from MusicBrainz, for example, `UK band`. Empty for most artists. |
+| `{Artist Genre}` | First genre tag associated with the artist. |
+
+## Album tokens
+
+| Token | Description |
+|---|---|
+| `{Album Title}` | Album title. |
+| `{Album TitleThe}` | Album title with a leading "The" moved to the end. |
+| `{Album CleanTitle}` | Album title with illegal filesystem characters removed. |
+| `{Album CleanTitleThe}` | Clean album title with "The" moved to the end. |
+| `{Album Disambiguation}` | Disambiguation string from MusicBrainz. Useful when an artist has two albums with the same name. |
+| `{Album Type}` | Release group type: Album, Single, EP, Compilation, Live, Remix, Soundtrack, etc. |
+| `{Album Genre}` | First genre tag for the album. |
+| `{Release Year}` | Four-digit release year. |
+
+## Track tokens
+
+| Token | Description |
+|---|---|
+| `{Track Title}` | Track title. |
+| `{Track ArtistName}` | Track-level artist name. Useful for Various Artists compilations where each track has a different credited artist. |
+| `{Track ArtistNameThe}` | Track artist name with "The" moved to the end. |
+| `{track:00}` | Track number zero-padded to 2 digits (01, 02 … 99). Use `{track:000}` for 3-digit padding on large releases. |
+
+## Medium (disc) tokens
+
+| Token | Description |
+|---|---|
+| `{medium:0}` | Disc number, single digit. |
+| `{medium:00}` | Disc number zero-padded to 2 digits. |
+| `{Medium Format}` | Physical format of the disc: CD, Vinyl, Digital Media, etc. |
+
+## Quality and technical tokens
+
+| Token | Description |
+|---|---|
+| `{Quality Title}` | Quality profile name as defined in Lidarr (for example, FLAC, MP3-320). |
+| `{Quality Full}` | Full quality string including proper/repack designation. |
+| `{MediaInfo AudioBitRate}` | Audio bitrate (for example, 320kbps). Only available after import; blank on pre-import rename previews. |
+| `{MediaInfo AudioChannels}` | Number of audio channels. |
+| `{MediaInfo AudioCodec}` | Audio codec (for example, FLAC, MP3). |
+| `{MediaInfo AudioSampleRate}` | Audio sample rate (for example, 44100Hz). |
+
+## Miscellaneous tokens
+
+| Token | Description |
+|---|---|
+| `{Release Group}` | Ripping or encoding group tag from the file. |
+| `{Preferred Words}` | Matched preferred words from Release Profiles, joined by spaces. |
+
+# Community naming conventions
+
+Community members contributed the following formats as tested starting points, not official recommendations. Each covers Standard Track Format, Multi-Disc Track Format, and Artist Folder Format. Read the trade-offs before adopting one wholesale.
+
+## Davo's convention
+
+From Davo's [community guide](../lidarr/community-guide.md). Puts the album folder inside the artist folder, uses underscores as separators, and includes a disambiguation token so identically-named albums don't collide.
 
 ### Standard Track Format
 
@@ -22,7 +116,7 @@ This format is from Davo's [community-guide](../lidarr/community-guide.md).
 {Album Title} {(Album Disambiguation)}/{Artist Name}_{Album Title}_{track:00}_{Track Title}
 ```
 
-### Multi Disc Track Format
+### Multi-Disc Track Format
 
 ```jinja
 {Album Title} {(Album Disambiguation)}/{Artist Name}_{Album Title}_{medium:00}-{track:00}_{Track Title}
@@ -34,11 +128,9 @@ This format is from Davo's [community-guide](../lidarr/community-guide.md).
 {Artist Name}
 ```
 
-## B's Naming Convention
+## B's convention
 
-This naming convention limits folder and file length to the specified number of characters. This is especially important for fans of [Fiona Apple](https://musicbrainz.org/release-group/b7493310-d408-44e2-a2d6-bbbd485d7abc), [Flume](https://musicbrainz.org/recording/93d0086c-27e7-4206-8722-e4c3c0b6d786) or [Bring Me the Horizon](https://musicbrainz.org/release-group/b7493310-d408-44e2-a2d6-bbbd485d7abc).
-
-Windows users should not use this naming convention, as some folders could [become inaccessible](https://wiki.servarr.com/lidarr/faq#why-cant-i-access-a-folder-in-windows-after-lidarr-rename).
+Limits folder and file lengths to avoid Windows path-limit issues. **Not recommended for Windows** — the truncated paths can become inaccessible after a Lidarr rename on that OS. See the [FAQ entry on Windows folder access after rename](../lidarr/faq.md#why-cant-i-access-a-folder-in-windows-after-lidarr-rename). Useful for libraries containing artists with notoriously long album titles.
 
 ### Standard Track Format
 
@@ -46,11 +138,10 @@ Windows users should not use this naming convention, as some folders could [beco
 {Album CleanTitle:100} {(Release Year)}/{Artist CleanName:100} - {Album CleanTitle:100} - {track:00} - {Track Title:100}
 ```
 
-### Multi Disc Track Format
+### Multi-Disc Track Format
 
 ```jinja
 {Album CleanTitle:100} ({Release Year})/{Medium Format} {medium:00}/{Artist CleanName:100} - {Album CleanTitle:100} - {track:00} - {Track Title:100}
-artist: {Artist CleanName}
 ```
 
 ### Artist Folder Format
@@ -59,11 +150,9 @@ artist: {Artist CleanName}
 {Artist Name}
 ```
 
-## PearsonFlyer's Naming Convention
+## PearsonFlyer's convention
 
-<!---
-TODO: Add explainer
---->
+Embeds quality and bitrate in the filename, which makes file provenance visible at a glance in any file browser. The `{-Release Group}` token at the end renders as nothing when no group tag is present.
 
 ### Standard Track Format
 
@@ -71,23 +160,21 @@ TODO: Add explainer
 {Album Title} ({Release Year})/{Artist Name} - {Album Title} - {track:00} - {Track Title} ({Quality Full} {MediaInfo AudioBitRate}) {-Release Group}
 ```
 
-### Multi Disc Track Format
+### Multi-Disc Track Format
 
 ```jinja
-
+{Album Title} ({Release Year})/{Medium Format} {medium:00}/{Artist Name} - {Album Title} - {medium:00}-{track:00} - {Track Title} ({Quality Full} {MediaInfo AudioBitRate}) {-Release Group}
 ```
 
 ### Artist Folder Format
-
-Artist disambiguation is needed when MusicBrainz has two similar artist entries, such as Alice Cooper [the person](https://musicbrainz.org/artist/ee58c59f-8e7f-4430-b8ca-236c4d3745ae) and Alice Cooper [the band](https://musicbrainz.org/artist/4d7928cd-7ed2-4282-8c29-c0c9f966f1bd).
 
 ```jinja
 {Artist NameThe} {(Artist Disambiguation)}
 ```
 
-## JasonVelocity's Naming Convention
+## JasonVelocity's convention
 
-This naming convention is effective with Plex and serves as a workaround for artists with multiple release groups sharing the same name and year. Artist disambiguation is also used to avoid conflicts with artists with duplicate names.
+Groups albums by type at the top level, then by year and title. Works well with Plex and avoids collisions when an artist has multiple release groups sharing the same name and year. The 150-character cap on most tokens keeps paths safe on Windows. `CleanNameThe` moves "The" to the end for cleaner folder sorting.
 
 ### Standard Track Format
 
@@ -95,7 +182,7 @@ This naming convention is effective with Plex and serves as a workaround for art
 {Album Type}/({Release Year}) {Album Title:150}{ (Album Disambiguation:150)}/{track:00} - {Track ArtistNameThe:150} - {Album Title:150} - {Track Title:150}
 ```
 
-### Multi Disc Track Format
+### Multi-Disc Track Format
 
 ```jinja
 {Album Type}/({Release Year}) {Album Title:150}{ (Album Disambiguation:150)}/{medium:0}{track:00} - {Track ArtistNameThe:150} - {Album Title:150} - {Track Title:150}
@@ -103,15 +190,13 @@ This naming convention is effective with Plex and serves as a workaround for art
 
 ### Artist Folder Format
 
-Using `CleanNameThe` moves `The` to the end of the folder name for easier folder navigation.
-
 ```jinja
 {Artist CleanNameThe:150} {(Artist Disambiguation:150)}
 ```
 
-## Fra's Naming Convention
+## Fra's convention
 
-Fra recommends this naming scheme as it aligns with [Plex's music folder naming recommendations](https://support.plex.tv/articles/200265296-adding-music-media-from-folders/#toc-0).
+Minimal format aligned with [Plex's music folder naming recommendations](https://support.plex.tv/articles/200265296-adding-music-media-from-folders/#toc-0). Relies entirely on tags for metadata — only track number and title are in the filename itself, which keeps names short and readable.
 
 ### Standard Track Format
 
@@ -119,7 +204,7 @@ Fra recommends this naming scheme as it aligns with [Plex's music folder naming 
 {Album Title}/{track:00} - {Track Title}
 ```
 
-### Multi Disc Track Format
+### Multi-Disc Track Format
 
 ```jinja
 {Album Title}/{medium:0}{track:00} - {Track Title}
