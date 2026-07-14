@@ -1,0 +1,18 @@
+name: Build MkDocs site
+description: Install Python deps and run mkdocs build. Shared by pr-preview, gh-pages, and cloudflare-pages workflows. Caller must checkout first (local composite actions resolve from the already-checked-out workspace).
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v6
+      with:
+        python-version: "3.14"
+        cache: "pip"
+
+    - name: Install dependencies
+      shell: bash
+      run: pip install -r requirements.txt
+
+    - name: Build
+      shell: bash
+      run: mkdocs build
