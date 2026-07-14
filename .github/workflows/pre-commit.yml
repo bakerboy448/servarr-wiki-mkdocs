@@ -38,7 +38,10 @@ jobs:
           # - check-yaml: mkdocs.yml uses custom Python tags (mkdocs-material emoji extension)
           # - actionlint, shellcheck, shfmt: upstream-wiki shell scripts style preferences
           # - yamllint: upstream docs with legitimate long-lines
-          SKIP: markdownlint,typos,check-yaml,actionlint,shellcheck,shfmt,yamllint
+          # - no-commit-to-branch: guards local/interactive commits onto main (PR workflow);
+          #   CI always runs on the post-merge tip of main, so it would always (correctly)
+          #   fire here for the wrong reason — skip it in CI, keep it for local pre-commit runs
+          SKIP: markdownlint,typos,check-yaml,actionlint,shellcheck,shfmt,yamllint,no-commit-to-branch
         continue-on-error: true
 
       - name: Push auto-fixes
