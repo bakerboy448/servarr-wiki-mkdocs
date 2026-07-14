@@ -122,3 +122,21 @@ npx --yes wrangler@4 pages deploy site --project-name=servarr-wiki-mkdocs
 - Build output directory is always `site/` (`mkdocs build`).
 - GitHub Pages (`.github/workflows/gh-pages.yml`) is the primary production deploy and needs no secrets; Cloudflare is an optional second target, left disabled until you set `CF_PAGES_DEPLOY=true`.
 - Do not commit API tokens. Rotate any token that was pasted into a shell history or chat log.
+
+## Self-hosting a fork
+
+No secrets required for the default path:
+
+1. Fork the repo, keep `gh-pages.yml` enabled (Settings → Actions).
+2. Settings → Pages → source = `gh-pages` branch.
+3. Push to `main` — the workflow builds and publishes automatically.
+
+For fully offline hosting instead of GitHub Pages: `make install && make build`, then serve `site/` with any static file server (nginx, Caddy, `python -m http.server`). Cloudflare Pages is available too (see above) but isn't required for self-hosting.
+
+## Making the repo public
+
+See [README.md § Making this repository public](README.md#making-this-repository-public) for the pre-public checklist (secrets, LICENSE/SECURITY.md, detect-secrets baseline). A repo admin flips visibility manually — no API/token can do it.
+
+## History audit
+
+Before this repo went public, a full email-PII and secrets audit ran across every branch, tag, and release (`git log --all`, blob-content grep, `gitleaks detect --log-opts="--all"`) — commit metadata, file content, and history all came back clean. See [issue #1](https://github.com/bakerboy448/servarr-wiki-mkdocs/issues/1) for the follow-up content/tooling backlog the audit also surfaced.
