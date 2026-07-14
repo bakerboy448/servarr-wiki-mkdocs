@@ -13,6 +13,8 @@ jobs:
   update-wiki:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # Intentionally disabled on this fork: only the upstream wiki auto-syncs
+    # supported indexers. Flip to this repo's name if we ever want it here.
     if: github.repository == 'Servarr/Wiki'
     permissions:
       contents: write
