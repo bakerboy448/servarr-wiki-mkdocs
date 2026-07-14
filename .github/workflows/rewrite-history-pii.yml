@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
     inputs:
       confirm:
-        description: 'Type REWRITE to confirm a history rewrite + force-push'
+        description: "Type REWRITE to confirm a history rewrite + force-push"
         required: true
         type: string
       dry_run:
-        description: 'If true, rewrite locally in the runner but do not push'
+        description: "If true, rewrite locally in the runner but do not push"
         required: false
         type: boolean
         default: true
