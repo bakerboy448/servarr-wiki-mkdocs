@@ -1,9 +1,9 @@
 name: Rewrite history (PII scrub)
 
-# Force-rewrites commit author/committer identities on GitHub-hosted runners,
-# then force-pushes all heads + tags and retargets releases.
+# Force-rewrites commit author/committer emails + known email literals in blobs
+# on GitHub-hosted runners, then force-pushes heads/tags and retargets releases.
 #
-# WARNING: This rewrites SHAs. Coordinate with all fork/clone owners first.
+# WARNING: This rewrites SHAs. Coordinate with all clone owners first.
 on:
   workflow_dispatch:
     inputs:
@@ -27,7 +27,7 @@ concurrency:
 jobs:
   rewrite:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     if: ${{ inputs.confirm == 'REWRITE' }}
     steps:
       - name: Checkout full history and tags
@@ -37,9 +37,9 @@ jobs:
           fetch-tags: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch all remotes refs
+      - name: Fetch all remote heads
         run: |
-          git fetch origin --prune --prune-tags --force '+refs/heads/*:refs/remotes/origin/*'
+          git fetch origin --prune --force '+refs/heads/*:refs/remotes/origin/*'
           git fetch origin --tags --force
 
       - name: Set up Python
@@ -50,61 +50,119 @@ jobs:
       - name: Install git-filter-repo
         run: pip install git-filter-repo
 
-      - name: Build mailmap
-        run: |
-          cat > /tmp/pii-mailmap <<'EOF'
-          bakerboy448 <55419169+bakerboy448@users.noreply.github.com> bakerboy44801 <redacted-94464fe7d5@users.noreply.github.com>
-          bakerboy448 <55419169+bakerboy448@users.noreply.github.com> bakerboy448 <redacted-94464fe7d5@users.noreply.github.com>
-          bakerboy448 <55419169+bakerboy448@users.noreply.github.com> Bakerboy448 <55419169+bakerboy448@users.noreply.github.com>
-          bakerboy448 <55419169+bakerboy448@users.noreply.github.com> bakerboy448 <mailto:55419169+bakerboy448@users.noreply.github.com>
-          bakerboy448 <55419169+bakerboy448@users.noreply.github.com> bakerboy44801 <55419169+bakerboy448@users.noreply.github.com>
-          EOF
-          # Strip leading indentation from heredoc lines
-          sed -i 's/^[[:space:]]*//' /tmp/pii-mailmap
-          cp /tmp/pii-mailmap .mailmap
-          cat /tmp/pii-mailmap
-
-      - name: Snapshot refs before rewrite
-        id: before
-        run: |
-          git for-each-ref --format='%(refname) %(objectname)' refs/heads refs/tags > /tmp/refs-before.txt
-          git for-each-ref --format='%(refname) %(objectname)' refs/remotes/origin | sed 's#refs/remotes/origin/#refs/heads/#' >> /tmp/refs-before.txt || true
-          sort -u /tmp/refs-before.txt -o /tmp/refs-before.txt
-          wc -l /tmp/refs-before.txt
-
       - name: Create local branches for every remote head
         run: |
           for ref in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin | grep -v 'origin/HEAD'); do
             branch="${ref#origin/}"
             git branch -f "$branch" "$ref" 2>/dev/null || git branch "$branch" "$ref"
           done
-          git branch -a
+
+      - name: Build rewrite maps (no personal addresses hardcoded)
+        run: |
+          python3 <<'PY'
+          import hashlib, re, subprocess
+          from pathlib import Path
+
+          SAFE = re.compile(
+              r"(@users\.noreply\.github\.com$|^noreply@github\.com$|"
+              r"^noreply@anthropic\.com$|^support@github\.com$|"
+              r"^development@lidarr\.audio$|^wiki@lidarr\.audio$|"
+              r"^cursoragent@cursor\.com$|"
+              r"^email@example\.(com|org)$|^info@nzbgeek\.info$|"
+              r"\[bot\]@)",
+              re.I,
+          )
+
+          def redact(email: str) -> str:
+              e = email.strip().lower()
+              if not e or e == "redacted@users.noreply.github.com":
+                  return "redacted@users.noreply.github.com"
+              if SAFE.search(e):
+                  return email.strip()
+              digest = hashlib.sha256(e.encode()).hexdigest()[:10]
+              return f"redacted-{digest}@users.noreply.github.com"
+
+          meta = subprocess.check_output(
+              ["git", "log", "--all", "--format=%ae%n%ce"], text=True
+          )
+          emails = sorted({e.strip() for e in meta.splitlines() if e.strip()})
+
+          mailmap_lines = []
+          replace_lines = []
+          for old in emails:
+              new = redact(old)
+              if new.lower() == old.lower():
+                  continue
+              # Keep display name mapping-less; email-only mailmap entries
+              mailmap_lines.append(f"<{new}> <{old}>")
+              # Never substring-replace bare tokens like "undefined"
+              if "@" in old:
+                  replace_lines.append(f"{old}==>{new}")
+                  if old != old.lower():
+                      replace_lines.append(f"{old.lower()}==>{new}")
+
+          # Discover emails in blob contents across history (text files)
+          blob = subprocess.check_output(
+              ["bash", "-lc", r"""
+              git rev-list --all | while read -r c; do
+                git grep -I -ohE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "$c" 2>/dev/null || true
+              done | sed 's/^[^:]*://' | sort -u
+              """],
+              text=True,
+          )
+          for old in {e.strip() for e in blob.splitlines() if e.strip()}:
+              new = redact(old)
+              if new.lower() == old.lower():
+                  continue
+              replace_lines.append(f"{old}==>{new}")
+
+          Path("/tmp/pii-mailmap").write_text("\n".join(mailmap_lines) + "\n")
+          Path("/tmp/replace-text.txt").write_text("\n".join(sorted(set(replace_lines))) + "\n")
+          print(f"mailmap entries: {len(mailmap_lines)}")
+          print(f"replace-text entries: {len(set(replace_lines))}")
+          PY
 
       - name: Rewrite history with filter-repo
         run: |
           git filter-repo --force \
             --mailmap /tmp/pii-mailmap \
-            --replace-message <(printf 'redacted-94464fe7d5@users.noreply.github.com==>REDACTED\n')
+            --replace-text /tmp/replace-text.txt \
+            --replace-message /tmp/replace-text.txt
 
-      - name: Ensure .mailmap present on default branch tip
+      - name: Ensure sanitized .mailmap on default branch
         run: |
           DEFAULT_BRANCH="${{ github.event.repository.default_branch }}"
           git checkout "$DEFAULT_BRANCH"
-          if [[ ! -f .mailmap ]]; then
-            cp /tmp/pii-mailmap .mailmap
-            git add .mailmap
-            git -c user.name='bakerboy448' \
-                -c user.email='55419169+bakerboy448@users.noreply.github.com' \
-                commit -m 'chore: add mailmap to keep author identity on GitHub noreply' || true
-          fi
+          cat > .mailmap <<'EOF'
+          # Prefer GitHub noreply. Do not store personal addresses here.
+          bakerboy448 <55419169+bakerboy448@users.noreply.github.com>
+          EOF
+          sed -i 's/^[[:space:]]*//' .mailmap
+          git add .mailmap
+          git -c user.name='bakerboy448' \
+              -c user.email='55419169+bakerboy448@users.noreply.github.com' \
+              commit -m 'chore: keep mailmap free of personal email addresses' || true
 
-      - name: Verify personal email removed
+      - name: Verify non-safe emails removed from metadata
         run: |
-          if git log --all --format='%ae%n%ce' | grep -F 'redacted-94464fe7d5@users.noreply.github.com'; then
-            echo 'ERROR: personal email still present after rewrite' >&2
-            exit 1
-          fi
-          echo 'OK: no redacted-94464fe7d5@users.noreply.github.com in author/committer metadata'
+          python3 <<'PY'
+          import re, subprocess, sys
+          SAFE = re.compile(
+              r"(@users\.noreply\.github\.com$|^noreply@github\.com$|"
+              r"^noreply@anthropic\.com$|^support@github\.com$|"
+              r"^development@lidarr\.audio$|^wiki@lidarr\.audio$|"
+              r"^cursoragent@cursor\.com$|"
+              r"^redacted(-[0-9a-f]+)?@users\.noreply\.github\.com$|"
+              r"\[bot\]@)",
+              re.I,
+          )
+          meta = subprocess.check_output(["git", "log", "--all", "--format=%ae%n%ce"], text=True)
+          bad = sorted({e for e in meta.splitlines() if e and not SAFE.search(e)})
+          if bad:
+              print("ERROR: non-safe emails remain:", *bad, sep="\n", file=sys.stderr)
+              sys.exit(1)
+          print("OK: commit metadata emails are sanitized")
+          PY
 
       - name: Re-add origin remote
         run: |
@@ -114,9 +172,7 @@ jobs:
       - name: Force-push all heads and tags
         if: ${{ inputs.dry_run == false }}
         run: |
-          # Push every local branch
           git push --force origin --all
-          # Push every tag (annotated + lightweight)
           git push --force origin --tags
 
       - name: Retarget GitHub Releases to rewritten tags
@@ -124,7 +180,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # For each release, delete + recreate against the (rewritten) tag tip
           mapfile -t releases < <(gh release list --limit 100 --json tagName,name,isLatest,isPrerelease,isDraft -q '.[] | @base64')
           for row in "${releases[@]:-}"; do
             [[ -z "$row" ]] && continue
@@ -148,5 +203,4 @@ jobs:
         if: ${{ inputs.dry_run == true }}
         run: |
           echo "Dry run complete — no refs were pushed."
-          echo "Re-run with dry_run=false to force-push heads/tags and retarget releases."
-          git for-each-ref --format='%(refname) %(objectname)' refs/heads refs/tags | head -50
+          git log --all --format='%ae' | sort | uniq -c | sort -rn | head -40
