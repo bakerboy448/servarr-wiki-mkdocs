@@ -4,6 +4,7 @@ description: FreeBSD installation guide for Sonarr
 tags:
   - sonarr
 ---
+
 # FreeBSD
 
 The Sonarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.

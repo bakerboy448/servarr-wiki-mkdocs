@@ -1,9 +1,10 @@
 ---
 title: Prowlarr Search
-description: How to perform searches from within Prowlarr
+description:
 tags:
   - prowlarr
 ---
+
 This page will show you how to perform a search from within Prowlarr. In general, your searches would be via app, but it's possible to do them directly in Prowlarr as well.
 
 # Performing a Search
@@ -79,6 +80,6 @@ Parameters
 - `type` - the search type to perform
   - `search` - Basic Text Query
   - `tvsearch` - TV Query - Supports TV parameters
-  - `moviesearch` - Movie Query - Supports Movie parameters
-  - `audiosearch` - Audio/Music Query - Supports Music parameters
-  - `booksearch` - Book Query - Supports Book parameters
+  - `movie` - Movie Query - Supports Movie parameters
+  - `music` - Audio/Music Query - Supports Music parameters
+  - `book` - Book Query - Supports Book parameters

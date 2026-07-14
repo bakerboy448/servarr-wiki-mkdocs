@@ -11,6 +11,7 @@ tags:
   - support
   - sponsor
 ---
+
 # Donate
 
 We welcome any and all forms of contribution, but monetary contributions are especially helpful in allowing us to provide the best programs and services at no charge to our users. Should you find yourself with a few dollars to spare we promise to put it to good use!
@@ -25,4 +26,4 @@ We currently use OpenCollective, GitHub Sponsors, or Bitcoin to accept donations
 
 ## Donate Buttons
 
-[![Lidarr.png](assets/lidarr/logos/48.png)](https://lidarr.audio/donate)&emsp;[![Prowlarr.png](assets/prowlarr/logos/48.png)](https://prowlarr.com/donate)&emsp;[![Radarr.png](assets/radarr/logos/48.png)](https://radarr.video/donate)&emsp;[![Readarr.png](assets/readarr/logos/48.png)](https://readarr.com/donate)&emsp;[![Sonarr.png](assets/sonarr/logos/48.png)](https://sonarr.tv/donate)&emsp;[![Whisparr.png](assets/whisparr/logos/48.png)](https://whisparr.com/donate)&emsp;
+[![Lidarr.png](assets/lidarr/logos/48.png)](https://lidarr.audio/donate)&emsp;[![Prowlarr.png](assets/prowlarr/logos/48.png)](https://prowlarr.com/donate)&emsp;[![Radarr.png](assets/radarr/logos/48.png)](https://radarr.video/donate)&emsp;[![Readarr.png](assets/readarr/logos/48.png)](https://readarr.com/donate)&emsp;[![Sonarr.png](assets/sonarr/logos/48.png)](https://sonarr.tv/donate)&emsp;[![Whisparr.png](assets/whisparr/logos/48.png)](https://whisparr.com/donate)&emsp;{.links-list}

@@ -8,16 +8,17 @@ tags:
   - import
   - matching
 ---
+
 # Import Troubleshooting
 
 !!! info
     The download finished, but Lidarr won't import it. This page covers the match-quality rules Lidarr applies to imports, why Lidarr can still reject an otherwise-valid file, when you need to intervene manually, and how to use manual import to force an outcome when the matcher can't.
 
-If you haven't imported anything yet and are setting up a fresh library, start with [Importing an Existing Library](../lidarr/importing-existing-library.md) instead — this page is for diagnosing imports that don't autocomplete, not for the first-time setup.
+If you haven't imported anything yet and are setting up a fresh library, start with [Importing an Existing Library](importing-existing-library.md) instead. This page is for diagnosing imports that don't autocomplete, not for first-time setup.
 
 ## Supported file types
 
-Lidarr only processes files with these extensions: `.mp2`, `.mp3`, `.m4a`, `.m4b`, `.m4p`, `.ogg`, `.oga`, `.opus`, `.wma`, `.wav`, `.wv`, `.flac`, `.ape`, `.aif`, `.aiff`. Lidarr ignores any other extension entirely — it won't attempt to import, rename, or track it. If Lidarr isn't picking up your files at all, confirm they have a supported extension before troubleshooting further.
+Lidarr only processes files with these extensions: `.mp2`, `.mp3`, `.m4a`, `.m4b`, `.m4p`, `.ogg`, `.oga`, `.opus`, `.wma`, `.wav`, `.wv`, `.flac`, `.ape`, `.aif`, `.aiff`, `.aifc`. Lidarr ignores any other extension entirely — it won't attempt to import, rename, or track it. If Lidarr isn't picking up your files at all, confirm they have a supported extension before troubleshooting further.
 
 ## Why Lidarr rejects an import
 
@@ -80,13 +81,13 @@ Fingerprinting kicks in when any of the following is true:
 
 Whether Lidarr allows fingerprinting depends on the **Allow Fingerprinting** setting under Settings → Media Management:
 
-- `Never` — fingerprinting is disabled.
-- `New Files` — fingerprint new downloads only (default on most installs).
+- `Never` — Lidarr never fingerprints.
+- `For new imports only` — fingerprint new downloads only (default on most installs).
 - `Always` — fingerprint even on library imports.
 
-Fingerprinting is slower than tag-based matching and hits an external service. If downloads consistently land in a state where fingerprinting runs but doesn't rescue them, the root cause is that the files don't exist in MusicBrainz at all — no fingerprint match is possible for a release that isn't in the database.
+Fingerprinting is slower than tag-based matching and hits an external service. If downloads consistently land in a state where fingerprinting runs but doesn't rescue them, the files likely don't exist in MusicBrainz at all. No fingerprint match is possible for a release that isn't in the database.
 
-## When human intervention is required
+## When to intervene manually
 
 The automatic matcher can't handle some situations, no matter how you tune the settings. For these cases, manual import is the expected path, not a workaround.
 
@@ -95,7 +96,7 @@ The automatic matcher can't handle some situations, no matter how you tune the s
 Lidarr only imports against releases that exist at MusicBrainz (via the metadata server). If the specific pressing or edition you have isn't in MusicBrainz, the matcher has nothing to match *to*. Two options:
 
 - Use **manual import** and point Lidarr at an existing release in the same release group (a different pressing). Lidarr attaches the files to that release — the metadata shown in Lidarr will match the attached release, not what's on disk.
-- Add the missing release to MusicBrainz (see [Metadata Troubleshooting → Updating MusicBrainz](../lidarr/metadata-troubleshooting.md#updating-musicbrainz)) and re-import once it propagates.
+- Add the missing release to MusicBrainz (see [Metadata Troubleshooting → Updating MusicBrainz](metadata-troubleshooting.md#updating-musicbrainz)) and re-import once it propagates.
 
 ### The release exists but is missing tracks
 
@@ -107,9 +108,9 @@ Without tags, Lidarr matches on the filename and duration only. This works for w
 
 ### Plugin-added content types
 
-The nightly branch supports third-party plugins for indexers and download clients — streaming services, peer-to-peer networks, and other sources. See [Plugins](../lidarr/plugins.md) for the install path and current compatibility notes.
+The nightly branch supports third-party plugins for indexers and download clients — streaming services, peer-to-peer networks, and other sources. See [Plugins](plugins.md) for the install path and current compatibility notes.
 
-Content pulled through plugins sometimes doesn't fit Lidarr's core import model cleanly: single tracks, partial releases, streaming-service rips, and per-track purchases are all common plugin outputs that the core matcher wasn't originally designed to handle. The tag data may be correct for the source but incomplete against a MusicBrainz release group, and the automatic matcher won't resolve it. Manual import is the expected path for these cases until the plugin-specific import flows mature — it isn't a workaround, it's the intended workflow.
+Content pulled through plugins sometimes doesn't fit Lidarr's core import model cleanly. Single tracks, partial releases, streaming-service rips, and per-track purchases are common plugin outputs that the core matcher wasn't designed to handle. The tag data may be correct for the source but incomplete against a MusicBrainz release group, and the automatic matcher won't resolve it. Manual import is the expected path for these cases until the plugin-specific import flows mature — it isn't a workaround, it's the intended workflow.
 
 ## Import list items: How a list entry becomes an album
 
@@ -118,7 +119,7 @@ Import lists (Spotify, Last.fm, Trakt, etc.) feed entries into Lidarr that Lidar
 - **If the list item has a MusicBrainz album (release group) ID**, Lidarr does a direct lookup by that ID. No ambiguity — the ID selects exactly one release group.
 - **If the list item is only a title string** (common with Spotify and Last.fm, which don't expose MBIDs), Lidarr asks the Servarr metadata server to search for an album matching that title and artist, and takes **whichever result the server returns first**. The client does no re-ranking. The metadata server decides the ordering.
 
-This matters because MusicBrainz distinguishes singles from albums at the release-group level — a track called *Blinding Lights* exists on both the "Blinding Lights" single release group and the *After Hours* album release group. If the metadata server's search happens to rank the single higher than the album (track-count match, exact title match, locale, or any other factor the server uses), the list entry resolves to the single, not the album.
+This matters because MusicBrainz distinguishes singles from albums at the release-group level. A track called *Blinding Lights* exists on both the "Blinding Lights" single release group and the *After Hours* album release group. When the server ranks the single above the album, the list entry resolves to the single. Ranking factors include track-count match, exact title match, locale, and other server criteria.
 
 Practical consequences:
 
@@ -142,9 +143,9 @@ The manual-import dialog lets you pick:
 - The specific release within the release group (pressing, format, region).
 - Per-track mappings when the dialog can't automatically align tracks.
 
-Manual import **bypasses the specification pipeline entirely**. When you click Import, Lidarr doesn't re-run match-quality, free-space, not-currently-unpacking, upgrade-or-not, or any other specification — Lidarr treats the decisions as approved by your choices. The rejections shown inside the manual-import dialog are informational, to help you decide what to import; they aren't blockers once you commit.
+Manual import **bypasses the specification pipeline entirely**. When you click Import, Lidarr doesn't re-run match-quality, free-space, not currently unpacking, upgrade-or-not, or any other specification. Lidarr treats the decisions as approved by your choices. The rejections shown inside the manual-import dialog are informational, to help you decide what to import. They aren't blockers once you commit.
 
-The only checks still enforced at manual-import time are filesystem- and DB-level:
+The only checks still enforced at manual-import time are at the filesystem and database level:
 
 - The target artist's folder must sit under a configured root folder. If Lidarr can't find the destination path inside any root folder, Lidarr rejects the file with *Destination artist folder X isn't in a Root Folder*.
 - The track must not already exist in the import batch (per-run dedup).
@@ -158,18 +159,18 @@ If manual import fails, the reason will be one of the above — a filesystem or 
 
 {#controlling-which-pressing-gets-matched}
 
-Lidarr's automatic import matcher picks the MusicBrainz release (pressing) that scores closest to the files on disk. It doesn't prefer one pressing over another based on format (CD / Digital Media / Vinyl) — `media_format` has a low weight in the distance model and only penalises releases whose format is `Unknown` in MusicBrainz. If you want Lidarr to match a specific pressing rather than whichever one scored closest, you have three options.
+Lidarr's automatic import matcher picks the MusicBrainz release (pressing) that scores closest to the files on disk. It doesn't prefer one pressing over another based on format (CD / Digital Media / Vinyl). The `media_format` signal has a low weight in the distance model and only penalises releases whose format is `Unknown` in MusicBrainz. If you want Lidarr to match a specific pressing rather than whichever one scored closest, you have three options.
 
-**Option 1 — Tag with the correct MusicBrainz Release MBID.** The `album_id` distance signal (weight 5.0) is the second-strongest signal in the model after Recording IDs. If your files carry the `MusicBrainz Album Id` tag set to the Release MBID for the pressing you want, the automatic matcher will nearly always select it. Use [MusicBrainz Picard](https://picard.musicbrainz.org/), [beets](https://beets.io/), or [Harmony](https://harmony.pulsewidth.org.uk/) to write the tag before the import runs. Make sure you use the **Release MBID**, not the Release Group MBID — those are different IDs.
+**Option 1 — Tag with the correct MusicBrainz Release MBID.** The `album_id` distance signal (weight 5.0) is the second-strongest signal in the model after Recording IDs. If your files carry the `MusicBrainz Album Id` tag set to the Release MBID for the pressing you want, the automatic matcher will select it. Use [MusicBrainz Picard](https://picard.musicbrainz.org/), [beets](https://beets.io/), or [Harmony](https://harmony.pulsewidth.org.uk/) to write the tag before the import runs. Make sure you use the **Release MBID**, not the Release Group MBID — those are different IDs.
 
 **Option 2 — Use manual import and pick the pressing.** The manual-import dialog lets you select the specific release within a release group. Once you choose a pressing and click Import, that pressing becomes the attached release for those files. No tags need changing. See [Using manual import](#using-manual-import) above for the two entry points.
 
-**Option 3 — Switch the active release on the album page.** Each album in Lidarr has a currently-active release. You can change it by going to the album page, clicking **Edit**, and selecting a different release from the dropdown. After saving, a new import triggered from Activity → Queue or a manual import will match against that release.
+**Option 3 — Switch the active release on the album page.** Each album in Lidarr has a currently active release. You can change it by going to the album page, clicking **Edit**, and selecting a different release from the dropdown. After saving, a new import triggered from Activity → Queue or a manual import will match against that release.
 
 !!! info
     None of these options work retroactively on files Lidarr has already imported and is tracking. For already-imported files, use manual import to re-import with a different pressing selection, which overwrites the attached release in the database.
 
-For background on why format preference isn't automatic and the open feature request on this, see [FAQ → Can Lidarr prefer a specific pressing or format during import?](../lidarr/faq.md#can-lidarr-prefer-a-specific-pressing-or-format-during-import).
+For background on why format preference isn't automatic and the open feature request on this, see [FAQ → Can Lidarr prefer a specific pressing or format during import?](faq.md#can-lidarr-prefer-a-specific-pressing-or-format-during-import).
 
 ## Where this lives in the source
 
@@ -193,7 +194,7 @@ For advanced readers who want to verify the rules or trace a specific rejection,
 
 ## See also
 
-- [Importing an Existing Library](../lidarr/importing-existing-library.md) — the fresh-install import walkthrough
-- [Metadata Troubleshooting](../lidarr/metadata-troubleshooting.md) — for problems where the release is missing or wrong at MusicBrainz
-- [FAQ](../lidarr/faq.md) — shorter answers that didn't fit this page
-- [MusicBrainz Picard](https://picard.musicbrainz.org/) — tag files with MBIDs before importing for a dramatically higher succes
+- [Importing an Existing Library](importing-existing-library.md) — the fresh-install import walkthrough
+- [Metadata Troubleshooting](metadata-troubleshooting.md) — for problems where the release is missing or wrong at MusicBrainz
+- [FAQ](faq.md) — shorter answers that didn't fit this page
+- [MusicBrainz Picard](https://picard.musicbrainz.org/) — tag files with MBIDs before importing for a dramatically higher success rate

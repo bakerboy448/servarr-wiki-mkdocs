@@ -6,6 +6,7 @@ tags:
   - troubleshooting
   - faq
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -108,21 +109,21 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 **As of Radarr v5, Authentication is Mandatory.**
 
-- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
+- `AuthenticationRequired` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
 
 - `Basic` (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and removed in Radarr v6.
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](../radarr/appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
   - [OIDC Support](https://github.com/Radarr/Radarr/issues/7047#issuecomment-1696156068) is being explored for future versions (Ref [GHI #7047](https://github.com/Radarr/Radarr/issues/7047)) and is NOT currently supported.
 
 ### Authentication Required
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN (i.e. Link Local, [Class A, Class C, or Class B](https://en.wikipedia.org/wiki/Classful_network#Classful_addressing_definition) addresses)) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
-  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
-- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
+  - The config file equivalent of this is `<AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired>`
+- `<AuthenticationRequired>Enabled</AuthenticationRequired>` is also a valid value
 
 ## What is Minimum Availability
 
@@ -156,7 +157,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
     This ranking applies to both releases that would be Quality and/or Custom  Format upgrades.
 
 !!! warning
-    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](../radarr/settings.md#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).
+    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](settings.md#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#repack-proper).
 
 ## What are Lists and what can they do for me
 
@@ -175,14 +176,14 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - Lists never were nor are intended to be `add it now` they are `hey i want this, add it eventually` tools
 - You can trigger a list refresh manually by testing it, add the movies to Radarr, use Ombi, Petio, Overseer, or any similar app that adds them right away
 - This restriction is to not have our server and list providers get killed by people updating lists every 10 minutes.
-- In Radarr pre-v4.7 interval can be configured in [Settings => Lists](../radarr/settings.md#lists) for between 6-24 hours. The default is 24 hours.
+- In Radarr pre-v4.7 interval can be configured in [Settings => Lists](settings.md#lists) for between 6-24 hours. The default is 24 hours.
 - In Radarr v4.7 these values are now hardcoded and not configurable. Times are based on the list type to minimize impact to third party services and allow Radarr's functionality with them to continue.
 
 ## Can all my movie files be stored in one folder
 
 - No. Radarr is a fork of [Sonarr](../sonarr.md) and thus requires that each movie be stored in individual folders. It is **highly unlikely** a flat file structure would ever be supported due to substantial backend modifications required.
 - The [Custom Folder GitHub Issue](https://github.com/Radarr/Radarr/issues/153) addresses this request, but it is **unlikely** that it would allow all movie files to be housed in a single folder.
-- For information on how to move your movies from a single folder to separate folders, refer to the [Tips and Tricks Section => Create a Folder for Each Movie](../radarr/tips-and-tricks.md#creating-a-folder-for-each-movie).
+- For information on how to move your movies from a single folder to separate folders, refer to the [Tips and Tricks Section => Create a Folder for Each Movie](tips-and-tricks.md#creating-a-folder-for-each-movie).
 
 ## Can I put all my movies in my library into one folder
 
@@ -257,7 +258,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
 - Find the location of the AppData directory for Radarr
   - Via the Radarr UI go to System => About
-  - [Radarr Appdata Directory](../radarr/appdata-directory.md)
+  - [Radarr Appdata Directory](appdata-directory.md)
 - Stop Radarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -281,7 +282,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - Re-install Radarr (if applicable / not already installed)
 - Find the location of the AppData directory for Radarr
   - Running Radarr once and via the UI go to System => About
-  - [Radarr Appdata Directory](../radarr/appdata-directory.md)
+  - [Radarr Appdata Directory](appdata-directory.md)
 - Stop Radarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -296,7 +297,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 - Re-install Radarr (if applicable / not already installed)
 - Find the location of the AppData directory for Radarr
   - Running Radarr once and via the UI go to System => About
-  - [Radarr Appdata Directory](../radarr/appdata-directory.md)
+  - [Radarr Appdata Directory](appdata-directory.md)
 - Stop Radarr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -372,7 +373,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
 
   - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
 
-- See [Tips and Tricks Section => Create a Folder for Each Movie](../radarr/faq.md)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
+- See [Tips and Tricks Section => Create a Folder for Each Movie](faq.md)radarr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
 
 ## Movie Folders Named Incorrectly
 
@@ -393,7 +394,7 @@ If Radarr is exposed so that the UI can be accessed from outside your local netw
     - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
       - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
       - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
-  - The [Tips and Tricks Section => Create a Folder for Each Movie](../radarr/tips-and-tricks.md#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
+  - The [Tips and Tricks Section => Create a Folder for Each Movie](tips-and-tricks.md#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
 
 ## Can I disable the refresh movies task
 
@@ -535,7 +536,7 @@ After creating the symlink, restart Radarr. It will now use the system's SQLite 
 
 {#help-i-have-forgotten-my-password}
 
-To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](../radarr/appdata-directory.md)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Radarr Appdata Directory](appdata-directory.md)
 
 1. Stop Radarr
 1. Open config.xml in a text editor
@@ -577,7 +578,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## I got a pop-up that said config.xml was corrupt, what now
 
-- Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](../radarr/appdata-directory.md), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
+- Radarr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](appdata-directory.md), once deleted start and it will start on the default port (7878), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
@@ -632,7 +633,7 @@ When doing an interactive search a second download button has been added titled 
 
 ## Jackett shows more results than when manually searching
 
-- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](../radarr/troubleshooting.md) for more information.
+- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](troubleshooting.md) for more information.
 
 ## How does Radarr determine the year of a movie
 

@@ -5,6 +5,7 @@ tags:
   - readarr
   - settings
 ---
+
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.
@@ -110,7 +111,7 @@ The Servarr Team
   - [Style](#style)
   - [Language](#language)
 
-This page will go through all the settings available in Readarr and how they work. This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](../readarr/quick-start-guide.md) page instead.
+This page will go through all the settings available in Readarr and how they work. This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](quick-start-guide.md) page instead.
 
 # Menu options
 
@@ -561,11 +562,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Indexers
 
 !!! info
-    Information on supported indexers can be found at the [More Info (Supported)](../readarr/supported.md#indexers) page for this section
+    Information on supported indexers can be found at the [More Info (Supported)](supported.md#indexers) page for this section
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info (Supported)](../readarr/supported.md#indexers) page
+- A list of supported indexers is located at the [More Info (Supported)](supported.md#indexers) page
 
 ### Indexer Settings
 
@@ -623,7 +624,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Retention - Usenet only: Set to zero to set for unlimited retention
 - Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Readarr find books?](../readarr/faq.md#how-does-readarr-find-books) for a better understanding of how RSS Sync will help you
+  - Please see [How does Readarr find books?](faq.md#how-does-readarr-find-books) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -631,7 +632,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Download Clients
 
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](../readarr/supported.md#download-clients) page for this section
+    Information on supported download clients can be found at the [More Info (Supported)](supported.md#download-clients) page for this section
 
 ## Overview
 
@@ -661,7 +662,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info (Supported)](../readarr/supported.md#download-clients) page
+- A list of supported download clients is located at the [More Info (Supported)](supported.md#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -774,7 +775,7 @@ If you download using a BitTorrent client, the process is slightly different:
 # Import Lists
 
 !!! info
-    Information on supported list types can be found at the [More Info (Supported)](../readarr/supported.md#lists) page for this section
+    Information on supported list types can be found at the [More Info (Supported)](supported.md#lists) page for this section
 
 Import lists allow you to add items to Readarr automatically from your GoodReads shelves or from other users. This has the potential to add a lot of unexpected items to your Readarr database, so please use it with care.
 
@@ -817,7 +818,7 @@ Lists sync by default every 24 hours, but can be triggered manually from the `Se
 # Connect
 
 !!! info
-    Information on supported connection types can be found at the [More Info (Supported)](../readarr/supported.md#notifications) page for this section
+    Information on supported connection types can be found at the [More Info (Supported)](supported.md#notifications) page for this section
 
 ## Connections
 
@@ -825,7 +826,7 @@ Connections are how you want Readarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info (Supported)](../readarr/supported.md#notifications) page
+- A list of supported notifications & connections is located at the [More Info (Supported)](supported.md#notifications) page
 
 ## Connection Triggers
 
@@ -848,7 +849,7 @@ Connections are how you want Readarr to communicate with the outside world.
 {#write-metadata-to-book-files}
 
 !!! info
-    Information on supported metadata consumers can be found at the [More Info (Supported)](../readarr/supported.md#metadata) page for this section
+    Information on supported metadata consumers can be found at the [More Info (Supported)](supported.md#metadata) page for this section
 
 This page allows you to create/update metadata tags/covers.
 
@@ -972,7 +973,7 @@ This page is for general Readarr settings that are not covered in other sections
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Readarr that you are running on.
-  - [Please see this FAQ entry for more information](../readarr/faq.md#how-do-i-update-readarr)
+  - [Please see this FAQ entry for more information](faq.md#how-do-i-update-readarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Readarr built-in updater or a script
   - Built-in - Use Readarr's own updater

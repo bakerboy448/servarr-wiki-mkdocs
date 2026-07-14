@@ -10,6 +10,7 @@ tags:
   - advanced
   - advanced tips
 ---
+
 # Lidarr Tips and Tricks
 
 Recipes and workarounds for things that come up often enough to be worth documenting, but don't fit the install / troubleshoot / FAQ shape. Most of this is library-management content: filling in gaps in metadata, bulk-editing the library, and backup/restore hygiene.
@@ -33,7 +34,7 @@ Keep two locations separate:
 On import, Lidarr moves (or hardlinks) files from `downloads/` into `music/`. The copy in `downloads/` stays owned by the download client. The copy in `music/` is what Lidarr manages.
 
 !!! info
-    For hardlinks to work — which avoids any extra disk space during import — both paths must be on the same physical filesystem. If `downloads/` and `music/` are on different drives or volumes, Lidarr will copy instead of hardlink. See [Concepts → Hardlinks and completed downloads](../lidarr/concepts.md#hardlinks-and-completed-downloads).
+    For hardlinks to work — which avoids any extra disk space during import — both paths must be on the same physical filesystem. If `downloads/` and `music/` are on different drives or volumes, Lidarr will copy instead of hardlink. See [Concepts → Hardlinks and completed downloads](concepts.md#hardlinks-and-completed-downloads).
 
 ### Multiple download clients
 
@@ -57,22 +58,27 @@ In **Settings → Download Clients**, set each client's **Category** to a unique
 
 ### Remote path mapping
 
-When Lidarr and your download client run in separate containers or machines, the path the client reports may not match what Lidarr sees. Use **Settings → Download Clients → Remote Path Mappings** to translate between the two. See [Troubleshooting → Remote Path Mapping](../lidarr/troubleshooting.md#remote-path-mapping) for the full explanation.
+When Lidarr and your download client run in separate containers or machines, the path the client reports may not match what Lidarr sees. Use **Settings → Download Clients → Remote Path Mappings** to translate between the two. See [Troubleshooting → Remote Path Mapping](troubleshooting.md#remote-path-mapping) for the full explanation.
 
 ## Library maintenance
 
 ### Missing artist images
 
-Lidarr pulls artist images from whatever the Servarr metadata server aggregates from its upstream sources. Lidarr itself doesn't reach out to any specific image service — it renders whatever URLs the metadata server returns.
+Lidarr doesn't reach out to any image service directly. Artist images come through the Servarr metadata server, which looks each artist up by MusicBrainz ID against two providers, in order:
+
+1. **fanart.tv** — queried first, for all of banner, fanart (background), logo, and poster art.
+2. **TheAudioDB** — used only to fill in whichever of those four image types fanart.tv didn't have. It never overrides a fanart.tv result.
+
+MusicBrainz itself isn't in this path. An artist can have a complete MusicBrainz entry and still show no image in Lidarr if neither fanart.tv nor TheAudioDB has artwork for that MBID.
 
 If an artist is showing no image or a wrong image:
 
-1. Check the artist on [MusicBrainz](https://musicbrainz.org/). If the MB entity has no image linked, there's no image for Lidarr to render. MB accepts community contributions for artist and album artwork; see MB's [How to Contribute](https://musicbrainz.org/doc/How_to_Contribute) page.
-2. Wait for the metadata refresh to propagate. Lidarr's copy of metadata refreshes hourly from the Servarr metadata server; the metadata server's own cache has its own propagation window measured in hours, sometimes longer.
+1. Check the artist's page on [fanart.tv](https://fanart.tv/) and [TheAudioDB](https://www.theaudiodb.com/) directly. If neither has artwork for that artist, there's nothing for the metadata server to serve, and nothing for Lidarr to render. Both sites accept community-submitted artwork if you want to fix it at the source.
+2. Wait for the metadata refresh to propagate. Lidarr's copy of metadata refreshes hourly from the Servarr metadata server; the metadata server's own cache of fanart.tv / TheAudioDB results has its own propagation window measured in hours, sometimes longer.
 3. Trigger an artist refresh in Lidarr once you believe upstream has updated (Artist page → Refresh button, or Library → Artist Editor → Update).
 
 !!! info
-    Lidarr has no "upload an image locally" option. Everything it displays has to exist upstream. This is the same model as the Release / Release Artist data itself — see [Concepts](../lidarr/concepts.md).
+    Lidarr has no "upload an image locally" option. Everything it displays has to exist upstream at fanart.tv or TheAudioDB — uploading art to MusicBrainz's Cover Art Archive won't fix a missing artist image, since that only feeds album cover art (see [Missing album images](#missing-album-images) below).
 
 ### Missing album images
 
@@ -97,6 +103,79 @@ Use **Library → Artist Editor** (formerly "Mass Editor"):
    - *Remove from Lidarr and delete files* is destructive and irreversible. Make sure you have a backup first if in doubt.
 
 The same flow works for bulk changes that aren't deletion — root folder moves, quality profile swaps, monitoring toggles — via the other bulk-action buttons at the bottom of Artist Editor.
+
+### Renaming or moving files outside Lidarr
+
+{#renaming-moving-outside-lidarr}
+
+Lidarr tracks every managed file by its absolute path. That path is stored in the `TrackFile` table in `lidarr.db`. There is no content hash, inode, or fingerprint involved in ongoing tracking after import -- the path is the only handle Lidarr has on a file.
+
+When you rename or move a file or folder at the OS level, Lidarr does not learn about it. The database still points to the old path. The next time Lidarr scans that folder -- whether triggered manually, by a refresh, or by the scheduled daily rescan -- `DiskScanService` walks the directory tree and passes the list of files on disk to `MediaFileTableCleanupService.Clean()`. That method compares the database records against the files it found:
+
+```csharp
+// src/NzbDrone.Core/MediaFiles/MediaFileTableCleanupService.cs
+var missingFiles = dbFiles.ExceptBy(x => x.Path, filesOnDisk, x => x, PathEqualityComparer.Instance).ToList();
+
+_mediaFileService.DeleteMany(missingFiles, DeleteMediaFileReason.MissingFromDisk);
+
+var orphanedTracks = _trackService.GetTracksByFileId(missingFiles.Select(x => x.Id));
+orphanedTracks.ForEach(x => x.TrackFileId = 0);
+_trackService.SetFileIds(orphanedTracks);
+```
+
+Anything at the old path is gone from the database. The tracks that referenced those files have their `TrackFileId` reset to zero, which means they are now unmatched. From Lidarr's perspective, those tracks are missing and unimported.
+
+If the album is monitored and Lidarr finds a release for it during an RSS sync, `DeletedTrackFileSpecification` checks whether track files that exist in the database are present on disk. If **Unmonitor Deleted Tracks** is enabled in **Settings → Media Management**, Lidarr treats the absence as a deletion and skips the release until the next disk scan clears the stale records. After that scan, the tracks appear missing and Lidarr may queue a search for them:
+
+```csharp
+// src/NzbDrone.Core/DecisionEngine/Specifications/RssSync/DeletedTrackFileSpecification.cs
+_logger.Debug("Files for this album exist in the database but not on disk, will be unmonitored on next diskscan. skipping.");
+return Decision.Reject("Artist is not monitored");
+```
+
+The result is that an external rename can cause Lidarr to re-download content you already have.
+
+#### What Lidarr does internally
+
+When you rename through the Lidarr UI, `RenameTrackFileService` calls `TrackFileMovingService.MoveTrackFile()`, which moves the file on disk and immediately updates the database path:
+
+```csharp
+// src/NzbDrone.Core/MediaFiles/TrackFileMovingService.cs
+trackFile.Path = destinationFilePath;
+```
+
+`_mediaFileService.Update(trackFile)` then writes the new path to the database. The move and the database update happen in the same operation.
+
+For artist folder moves, `MoveArtistService` transfers the folder on disk and publishes an `ArtistMovedEvent`. `MediaFileService` handles that event by rewriting the path prefix for every track file under the old folder:
+
+```csharp
+// src/NzbDrone.Core/MediaFiles/MediaFileService.cs
+var newPath = $"{message.DestinationPath}{file.Path.AsSpan(message.SourcePath.Length)}";
+file.Path = newPath;
+```
+
+None of this happens when the move is done outside Lidarr.
+
+#### How to rename and move safely
+
+To rename files: go to **Settings → Media Management**, enable **Rename Tracks**, and set your naming format. Then open the artist page, click the rename button (or use **Library → Artist Editor** for bulk operations). Lidarr renames the files and updates the database in one step.
+
+To move an artist folder to a different root folder: go to **Library → Artist Editor**, select the artists, and use the **Root Folder** bulk action. Choose **Yes, move the files** when prompted.
+
+To move a file to a different location on the same volume without a UI option: use the recycle bin and re-import. Delete the track file record in Lidarr (from the album page, track file menu) so the track is marked missing, move the file where you want it, then use **Manual Import** to re-import it from the new location.
+
+#### Recovery if you already renamed outside Lidarr
+
+If the rename has already happened and the next disk scan has not yet run, you can sometimes recover by renaming back before the scan fires. If the scan has already run and the records are gone:
+
+1. Make sure the files are in a location Lidarr can see (inside a configured root folder or accessible via the file browser).
+2. Go to **Activity → Manual Import** and point it at the folder containing the renamed files.
+3. Lidarr will attempt to match the files to albums and re-import them. If automatic matching fails, use the manual match controls to assign the correct album and release.
+
+After a successful manual import, Lidarr creates new track file records at the current path and the tracks are no longer considered missing.
+
+!!! info
+    **If you have a large library and renamed many folders outside Lidarr**, running a full disk scan before manual import may be faster than importing folder by folder. Go to **System → Tasks** and trigger **Rescan Artist Folders**, or use **Library → Artist Editor → Update** to run a rescan across all artists. Lidarr will discard the stale records and then re-match any files it finds at the new paths that still conform to the expected folder structure.
 
 ## Custom Formats
 
@@ -264,7 +343,7 @@ Both tools give the same parser output. Use either when writing a custom format 
 
 {#backup-restore}
 
-Lidarr's entire state lives in its [AppData directory](../lidarr/appdata-directory.md). Backing up means capturing that directory at rest. Restoring means putting it back in place with matching permissions and paths. There's nothing in the database that's meaningful without the matching `config.xml` and vice-versa — back up the whole folder, not individual files.
+Lidarr's entire state lives in its [AppData directory](appdata-directory.md). Backing up means capturing that directory at rest. Restoring means putting it back in place with matching permissions and paths. There's nothing in the database that's meaningful without the matching `config.xml` and vice-versa — back up the whole folder, not individual files.
 
 ### Backing up
 
@@ -340,9 +419,9 @@ As long as the root folder paths in the backup are still valid on the destinatio
 
 ## See also
 
-- [FAQ](../lidarr/faq.md) — the questions that come up most often
-- [Concepts](../lidarr/concepts.md) — the model Lidarr uses to manage music
-- [Metadata Troubleshooting](../lidarr/metadata-troubleshooting.md) — when MusicBrainz data is missing or stale
-- [Import Troubleshooting](../lidarr/import-troubleshooting.md) — when downloads finish but don't import
-- [Troubleshooting](../lidarr/troubleshooting.md) — general runtime issues
+- [FAQ](faq.md) — the questions that come up most often
+- [Concepts](concepts.md) — the model Lidarr uses to manage music
+- [Metadata Troubleshooting](metadata-troubleshooting.md) — when MusicBrainz data is missing or stale
+- [Import Troubleshooting](import-troubleshooting.md) — when downloads finish but don't import
+- [Troubleshooting](troubleshooting.md) — general runtime issues
 - [TRaSH Guides](https://trash-guides.info/) — community recipes for media server setups

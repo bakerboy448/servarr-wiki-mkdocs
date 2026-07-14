@@ -4,6 +4,7 @@ description: Smart PVR for newsgroup and bittorrent users to manage and automati
 tags:
   - sonarr
 ---
+
 ![128.png](assets/sonarr/logos/128.png)
 
 !!! info
@@ -16,6 +17,7 @@ tags:
 - [:fontawesome-solid-cog:&emsp;Environment Variables](sonarr/environment-variables.md)
 - [:fontawesome-regular-question-circle:&emsp;FAQ](sonarr/faq.md)
 - [:fontawesome-regular-question-circle:&emsp;v4 FAQ *FAQ entries specific to v4 changes*](sonarr/faq-v4.md)
+{.links-list}
 
 # User Guide
 
@@ -30,16 +32,19 @@ tags:
 - [:fontawesome-solid-database:&emsp;Application Data (AppData) Directory](sonarr/appdata-directory.md)
 - [:fontawesome-solid-server:&emsp; Configure Sonarr with a PostgreSQL Database](sonarr/postgres-setup.md)
 - [:fontawesome-solid-cogs:&emsp;Supported *More Info Disambiguation Page*](sonarr/supported.md)
+{.links-list}
 
 # Troubleshooting
 
 - [:fontawesome-regular-life-ring:&emsp;General Troubleshooting](sonarr/troubleshooting.md)
 - [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](vpn.md)
+{.links-list}
 
 # Development
 
 - [:fontawesome-solid-laptop-code:&emsp;Contributing](sonarr/contributing.md)
 - [:fontawesome-solid-book:&emsp; v4 Beta API Docs](https://sonarr.tv/docs/api)
+{.links-list}
 
 # Support
 
@@ -48,6 +53,7 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 - [:fontawesome-brands-discord:&emsp;Discord *Official Sonarr Discord*](https://discord.sonarr.tv/)
 - [:fontawesome-brands-reddit:&emsp;Reddit *Official Sonarr Subreddit*](https://reddit.com/r/sonarr)
 - [:fontawesome-brands-wpforms:&emsp;Forums *Official Sonarr Forums*](https://forums.sonarr.tv/)
+{.links-list}
 
 # Links
 
@@ -55,3 +61,4 @@ Still having issues? feel free to stop by one of our support sites for extra hel
 - [sonarr.tv *Donations*](https://sonarr.tv/donate)
 - [GitHub *Source Code*](https://github.com/sonarr/sonarr)
 - [XEM Moderation Guide *:fontawesome-brands-xing:*](sonarr/xem-guide.md)
+{.links-list}

@@ -9,6 +9,7 @@ tags:
   - services
   - compatibility
 ---
+
 # Table of Contents
 
 !!! warning
@@ -21,40 +22,42 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 {#downloadclient}
 
 - Aria2 {#aria2}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Deluge {#deluge}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Download Station {#torrentdownloadstation}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Download Station {#usenetdownloadstation}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Flood {#flood}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
+- Freebox Download {#torrentfreeboxdownload}
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Hadouken {#hadouken}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - NZBGet {#nzbget}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - NZBVortex {#nzbvortex}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Pneumatic {#pneumatic}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - qBittorrent {#qbittorrent}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - rTorrent {#rtorrent}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - SABnzbd {#sabnzbd}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Torrent Blackhole {#torrentblackhole}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Transmission {#transmission}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Usenet Blackhole {#usenetblackhole}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - uTorrent {#utorrent}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
   - Due to utorrent being adware and formerly spyware, it is not recommended. Most users use Qbittorrent.
 - Vuze {#vuze}
-  - [Refer to the Settings Page](../radarr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 
 # Indexers
 
@@ -63,46 +66,43 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 ## Usenet
 
 - Newznab {#newznab}
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
   - Indexer Applications like [Prowlarr](../prowlarr.md) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
-- omgwtfnzbs {#omgwtfnzbs}
-  - A defunct legacy implementation of a private usenet indexer. Use Newznab instead.
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
 
 ## Torrents
 
 - FileList {#filelist}
   - Private Tracker
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - HDBits {#hdbits}
   - Private Tracker
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-!!! info
-    IP Torrents' native implementation does not support Search. Use it via Prowlarr or Jackett as torznab instead
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
+  !!! info
+      IP Torrents' native implementation does not support Search. Use it via Prowlarr or Jackett as torznab instead
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
-!!! info
-    Nyaa frowns upon automation and frequently will ban your IP.
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
+  !!! info
+      Nyaa frowns upon automation and frequently will ban your IP.
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - Pass The Popcorn (PTP) {#passthepopcorn}
   - Private Tracker
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
-!!! info
-    The RSS feed must contain a `pubdate`. The release size is recommended as well.
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
+  !!! info
+      The RSS feed must contain a `pubdate`. The release size is recommended as well.
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - TorrentPotato {#torrentpotato}
   - A legacy Couchpotato pre-Torznab format.
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - Torznab {#torznab}
   - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
   - This is primarily only supported by [Prowlarr](../prowlarr.md) and [Jackett](https://github.com/Jackett/Jackett)
-  - [Refer to the Settings Page](../radarr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 
 !!! warning
     Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
@@ -113,9 +113,9 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 
 {#notification}
 
-- Boxcar {#boxcar}
+- Apprise {#apprise}
 - Custom Script {#customscript}
-  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](../radarr/custom-scripts.md) for more details.
+  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](custom-scripts.md) for more details.
 - Discord {#discord}
   - By far one of the most common ways to push notifications of actions happening on your Radarr
 - Email {#email}
@@ -124,7 +124,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 !!! info
     You can use a "pretty address" like `SomePrettyName <email@example.org>`
 
-- Emby {#mediabrowser}
+- Emby / Jellyfin {#mediabrowser}
 - Gotify {#gotify}
 - Join {#join}
 - Kodi {#xbmc}
@@ -132,6 +132,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Mailgun {#mailgun}
 - Notifiarr {#notifiarr}
   - See the entry on [Useful Tools - Notifiarr](../useful-tools.md#notifiarr-fka-discord-notifier)
+- ntfy.sh {#ntfy}
 - Plex Media Server {#plexserver}
   - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded movie is available.
   - This is rarely needed and is only required if Plex is unable to watch the file system for changes.
@@ -142,7 +143,10 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Pushbullet {#pushbullet}
 - Pushcut {#pushcut}
 - Pushover {#pushover}
+- Pushsafer {#pushsafer}
 - SendGrid {#sendgrid}
+- Signal {#signal}
+- Simplepush {#simplepush}
 - Slack {#slack}
 - Synology Indexer {#synologyindexer}
 - Telegram {#telegram}
@@ -169,6 +173,8 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - Requires: v4.1.0.6176+
   - Simply add a Plex watchlist for the authenticated Plex user to Radarr. Note that it's required that your list contain movies on it.
   - To have multiple user's watchlists you'll need to add each user's lists and authenticate with their Plex user.
+- Plex Watchlist RSS {#plexrss}
+  - Add a Plex watchlist via an RSS feed URL.
 - Radarr {#radarrimport}
   - TRaSH has [a guide](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/) for syncing two instances
 - RSS List {#rssimport}
@@ -196,6 +202,8 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
       </rss>
       ```
 
+- Simkl User Watchlist {#simkl}
+  - Add movies from your Simkl watchlist.
 - StevenLu Custom {#stevenluimport}
   - Allows you to create custom movies lists in json format.
    Your feed requires for each movie either a `title` or an `imdb_id`, both can be provided.
@@ -221,7 +229,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
   - For an empty list just return an empty json array `[]`
 - StevenLu List {#stevenlu2import}
 - TMDb Collection {#tmdbcollectionimport}
-  - Collection Lists are no longer supported in Radarr v4.2 and have been migrated to collections within Radarr. See the [Collections](../radarr/library.md#collections) section for more details.
+  - Collection Lists are no longer supported in Radarr v4.2 and have been migrated to collections within Radarr. See the [Collections](library.md#collections) section for more details.
 - TMDb Company {#tmdbcompanyimport}
 - TMDb Keyword {#tmdbkeywordimport}
 - TMDb List {#tmdblistimport}
@@ -250,6 +258,8 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Emby (Legacy) {#mediabrowsermetadata}
   - Enable - Enable metadata file creation for this metadata type
   - Movie Metadata - Enable metadata file creation for this metadata type
+- Kometa {#kometametadata}
+  - Deprecated - This metadata consumer has been deprecated
 - Kodi (XBMC) / Emby {#xbmcmetadata}
   - Enable - Enable metadata file creation for this metadata type
   - Movie Metadata - Create a `<filename>.nfo` with the movie metadata

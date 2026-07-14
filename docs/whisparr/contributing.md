@@ -8,13 +8,14 @@ tags:
   - setup
   - compilation
 ---
+
 # How to Contribute
 
 We're always looking for people to help make Whisparr even better, there are a number of ways to contribute.
 
 # Documentation
 
-Setup guides, [FAQ](../whisparr/faq.md), the more information we have on the [wiki](https://wiki.servarr.com/whisparr) the better.
+Setup guides, [FAQ](faq.md), the more information we have on the [wiki](https://wiki.servarr.com/whisparr) the better.
 
 # Development
 
@@ -31,6 +32,7 @@ Whisparr is written in C# (backend) and JS (frontend). The backend is built on t
 - [Git](https://git-scm.com/downloads)
 - The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
   - **20** (any minor or patch version within this)
+{.grid-list}
 
 !!! warning
     The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other versions.
@@ -44,8 +46,8 @@ Whisparr is written in C# (backend) and JS (frontend). The backend is built on t
 1. Fork Whisparr
 1. Clone the repository into your development machine. [_info_](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
-> Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
 !!! info
+    Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
     For css changes `yarn stylelint-windows --fix`
 
 ### Building the frontend

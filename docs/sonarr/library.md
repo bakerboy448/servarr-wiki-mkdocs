@@ -9,6 +9,7 @@ tags:
   - collection
   - organization
 ---
+
 # Series
 
 The series page shows your entire library and allows you to select individual series (however, searching can be more efficient in large libraries) and make searches for specific series, as well as being able to edit them. It also allows you to filter your series.
@@ -21,17 +22,21 @@ The filters options allows you to narrow your series down and is incredibly help
 
 The add new feature allows you to add a new series for Sonarr to monitor and download.
 
-- Root Folder - The selected [root/library folder](../sonarr/settings.md#root-folders) in Sonarr for this series to use
+- Root Folder - The selected [root/library folder](settings.md#root-folders) in Sonarr for this series to use
 - Monitor - How do you want the series monitored initially?
   - All Episodes - Monitor all episodes except specials
   - Future Episodes - Monitor episodes that have not aired yet
   - Missing Episodes - Monitor episodes that do not have files or have not aired yet
-  - Existing Episodes - Monitor episodes that have files
+  - Existing Episodes - Monitor episodes that have files or have not aired yet
+  - Recent Episodes - Monitor episodes aired within the last 90 days and future episodes
+  - Pilot Episode - Only monitor the first episode of the first season
   - First Season - Monitor all episodes of the first season; all other seasons will be ignored
-  - Latest Season - Monitor all episodes of the latest season and future seasons
+  - Last Season - Monitor all episodes of the last season
+  - Monitor Specials - Monitor all special episodes without changing the monitored status of other episodes
+  - Unmonitor Specials - Unmonitor all special episodes without changing the monitored status of other episodes
   - None - No episodes will be monitored
-- Quality Profile - The [quality profile](../sonarr/settings.md#quality-profiles) to use for this series
-- Series Type - Which Series Type to use for this series; this changes how searches occur [See the FAQ entry for more info](../sonarr/faq.md#whats-the-different-series-types)
+- Quality Profile - The [quality profile](settings.md#quality-profiles) to use for this series
+- Series Type - Which Series Type to use for this series; this changes how searches occur [See the FAQ entry for more info](faq.md#whats-the-different-series-types)
 - Season Folder - Enable or disable creation and usage of Season folders for this series
 - Tags - Used to assign series to release profiles, delay profiles, indexers, or just to organize your series
 - [ ] Start search for missing episodes - based on your selected monitor settings, search for all missing and monitored episodes in this series

@@ -4,6 +4,7 @@ description: Ebook and audiobook collection manager - retired application no lon
 tags:
   - readarr
 ---
+
 ![128.png](assets/readarr/logos/128.png)
 
 !!! info
@@ -35,6 +36,7 @@ The Servarr Team
 - [:fontawesome-solid-plus-square:&emsp;Installation Guide](readarr/installation.md)
 - [:fontawesome-solid-book-open:&emsp;Quick Start Guide](readarr/quick-start-guide.md)
 - [:fontawesome-regular-question-circle:&emsp;FAQ](readarr/faq.md)
+{.links-list}
 
 # User Guide
 
@@ -49,26 +51,31 @@ The Servarr Team
 - [:fontawesome-solid-database:&emsp;Application Data (AppData) Directory](readarr/appdata-directory.md)
 - [:fontawesome-solid-server:&emsp; Configure Readarr with a PostgreSQL Database](readarr/postgres-setup.md)
 - [:fontawesome-solid-cogs:&emsp;Supported *More Info Disambiguation Page*](readarr/supported.md)
+{.links-list}
 
 # Troubleshooting
 
 - [:fontawesome-regular-life-ring:&emsp;General Troubleshooting](readarr/troubleshooting.md)
 - [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](vpn.md)
+{.links-list}
 - [:fontawesome-solid-signal:&emsp;Readarr Metadata Issues *Status of Metadata and Known Issues*](readarr/metadata-issues.md)
 
 # Development
 
 - [:fontawesome-solid-laptop-code:&emsp;Contributing](readarr/contributing.md)
 - [:fontawesome-solid-book:&emsp;API Docs](https://readarr.com/docs/api/)
+{.links-list}
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [:fontawesome-brands-discord:&emsp;Discord *Official Readarr Discord*](https://readarr.com/discord)
+{.links-list}
 
 # Links
 
 - [readarr.com *Website*](https://readarr.com)
 - [Donate *Donations*](https://readarr.com/donate)
 - [GitHub *Source Code*](https://github.com/readarr/readarr)
+{.links-list}

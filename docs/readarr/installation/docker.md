@@ -83,7 +83,8 @@ Keep in mind that Readarr will need read and write to the download folders as we
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
 !!! warning
-    Temporarily, you will need to use the :nightly or :develop tags with docker images, as there is no master branch. [See this FAQ entry for the meaning of the branches](../../readarr/faq.md#how-do-i-update-readarr)
+    Temporarily, you will need to use the :nightly or :develop tags with docker images, as there is no master branch. [See this FAQ entry for the meaning of the branches](../faq.md#how-do-i-update-readarr)
 
 - [hotio/readarr](https://hotio.dev/containers/readarr/)
 - [lscr.io/linuxserver/readarr](https://docs.linuxserver.io/images/docker-readarr)
+{.links-list}

@@ -10,6 +10,7 @@ tags:
   - data
   - structure
 ---
+
 !!! info
     Below are the default paths for the application data directory
 
@@ -30,7 +31,7 @@ The installation instructions specify `/var/lib/lidarr`
 
 {#os-x}
 
-`/Users/$USER/.config/Lidarr` or `~/.config/Lidarr`
+`/Users/$USER/Library/Application Support/Lidarr` or `~/Library/Application Support/Lidarr`
 
 # Synology
 
@@ -52,6 +53,6 @@ The installation instructions specify `/var/lib/lidarr`
 
 # Arguments
 
-The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when trying to run multiple instances. On Windows this would be `/data=`
+The `-data=` argument forces the location of the AppData folder, so your startup command may be forcing a specific location. This is required when running more than one instance. On Windows this would be `/data=`
 
 The `-nobrowser` argument refrains from launching/opening the browser on startup. On Windows this would be `/nobrowser`

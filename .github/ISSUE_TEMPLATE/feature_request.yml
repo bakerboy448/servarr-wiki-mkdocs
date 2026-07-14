@@ -1,11 +1,29 @@
-name: Content Request
-description: Request new or expanded wiki content
-labels: [enhancement]
+name: Feature / content request
+description: Request new wiki content, MkDocs features, or tooling improvements
+title: "[request] "
+labels: ["enhancement"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Content additions that belong in the canonical wiki should usually be proposed in [Servarr/Wiki](https://github.com/Servarr/Wiki). Use this repo for MkDocs presentation, conversion, sync, and deploy improvements — or to track content that should be mirrored here after upstream lands.
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - Wiki content (page / section)
+        - MkDocs site UX (nav, theme, search)
+        - Conversion / sync tooling
+        - CI / deployment (GitHub Pages, Cloudflare)
+        - Contributor experience (templates, docs)
+        - Other
+    validations:
+      required: true
   - type: dropdown
     id: app
     attributes:
-      label: Application
+      label: Application (if content-related)
       options:
         - Lidarr
         - Prowlarr
@@ -14,6 +32,7 @@ body:
         - Sonarr
         - Whisparr
         - General / Multiple
+        - Not applicable
     validations:
       required: true
   - type: dropdown
@@ -23,20 +42,28 @@ body:
       options:
         - New page
         - Expand existing page
-        - Add examples / screenshots
+        - Examples / screenshots
         - FAQ entry
+        - Site feature
+        - Automation / CI
         - Other
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: What content would you like to see added or expanded?
+      label: Request
+      description: What should be added or changed?
     validations:
       required: true
   - type: textarea
     id: context
     attributes:
       label: Context / use case
-      description: Why is this content needed? What question does it answer?
+      description: Who benefits, and what question or workflow does this unblock?
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach (optional)
+      description: Sketch implementation, file paths, or links to upstream PRs.
+      render: markdown

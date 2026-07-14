@@ -4,6 +4,7 @@ description: MacOS installation guide for Sonarr
 tags:
   - sonarr
 ---
+
 # MacOS (OSX)
 
 {#OSX}

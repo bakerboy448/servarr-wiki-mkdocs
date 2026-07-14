@@ -12,6 +12,7 @@ tags:
   - scripts
   - postgres
 ---
+
 ![128.png](assets/prowlarr/logos/128.png)
 
 !!! info
@@ -23,6 +24,7 @@ tags:
 - [:fontawesome-solid-book-open:&emsp;Quick Start Guide](prowlarr/quick-start-guide.md)
 - [:fontawesome-solid-cog:&emsp;Environment Variables](prowlarr/environment-variables.md)
 - [:fontawesome-regular-question-circle:&emsp;FAQ](prowlarr/faq.md)
+{.links-list}
 
 # User Guide
 
@@ -37,26 +39,31 @@ tags:
 - [:fontawesome-solid-database:&emsp;Application Data (AppData) Directory](prowlarr/appdata-directory.md)
 - [:fontawesome-solid-server:&emsp; Configure Prowlarr with a PostgreSQL Database](prowlarr/postgres-setup.md)
 - [:fontawesome-solid-cogs:&emsp;Supported *More Info Disambiguation Page*](prowlarr/supported.md)
+{.links-list}
 
 # Troubleshooting
 
 - [:fontawesome-regular-life-ring:&emsp;General Troubleshooting](prowlarr/troubleshooting.md)
 - [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](vpn.md)
+{.links-list}
 
 # Development
 
 - [:fontawesome-solid-laptop-code:&emsp;Contributing](prowlarr/contributing.md)
 - [:fontawesome-solid-book-reader:&emsp;Prowlarr (Cardigann) YAML Indexer Definition](prowlarr/cardigann-yml-definition.md)
 - [:fontawesome-solid-book:&emsp;API Docs](https://prowlarr.com/docs/api/#/)
+{.links-list}
 
 # Support
 
 Still having issues? feel free to stop by one of our support sites for extra help
 
 - [:fontawesome-brands-discord:&emsp;Discord *Official Prowlarr Discord*](https://prowlarr.com/discord)
+{.links-list}
 
 # Links
 
 - [prowlarr.com *Website*](https://prowlarr.com)
 - [Donate *Donations*](https://prowlarr.com/donate)
 - [GitHub *Source Code*](https://github.com/prowlarr/prowlarr)
+{.links-list}

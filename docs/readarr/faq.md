@@ -7,6 +7,7 @@ tags:
   - troubleshooting
   - faq
 ---
+
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.
@@ -29,7 +30,7 @@ Sincerely,
 The Servarr Team
 
 !!! info
-    [Read More on Metadata Issues](../readarr/metadata-issues.md)
+    [Read More on Metadata Issues](metadata-issues.md)
 
 # Table of Contents
 
@@ -105,7 +106,7 @@ As of Readarr v1, Authentication is Mandatory.
 - `Basic` (Browser pop-up) - This option when accessing your Readarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and will be removed in the next major version.
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Readarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](../readarr/appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
 
 ### Authentication Required
 
@@ -152,8 +153,7 @@ As of Readarr v1, Authentication is Mandatory.
 - Lists are a part of Readarr that allow you to follow a given list creator.
 - Let's say that you follow a given list creator on GoodReads and really like their collection of Great Books and want to add every book on their list. You look in your Readarr and realize that you do not have those books. Well instead of searching one by one and adding those lists and then searching your indexers for those books. You can do this all at once with a List. The Lists can be set to import all the books on that curators list as well as be set to automatically assign a quality profile, automatically add, and automatically monitor that book.
 
-!!! warning
-    `CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of reading. So make sure of what you're importing before you click save.
+>`CAUTION:` If lists are done improperly they will absolutely wreck your library with a bunch of trash you have no intention of reading. So make sure of what you're importing before you click save.
 
 - It is suggested that you read through the list before you import it into Readarr.
 
@@ -176,7 +176,7 @@ This change was due to not have our server get killed by people updating lists e
 ## Metadata Profile "None" allowing Foreign Releases
 
 - Using a metadata profile of `None` is useful to only have books explicitly added by the user in Readarr. However, the downside of this is that it opens you up to every edition - including foreign editions - of a book to be available.
-- To work around this issue  create a new Metadata Profile with [the popularity threshold described on the settings page](../readarr/settings.md#metadata-profiles)
+- To work around this issue  create a new Metadata Profile with [the popularity threshold described on the settings page](settings.md#metadata-profiles)
 
 ## Book Match is not Close Enough: XX% vs YY% \[book\]
 
@@ -286,7 +286,7 @@ This change was due to not have our server get killed by people updating lists e
 
 - Find the location of the AppData directory for Readarr
   - Via the Readarr UI go to System => About
-  - [Readarr Appdata Directory](../readarr/appdata-directory.md)
+  - [Readarr Appdata Directory](appdata-directory.md)
 - Stop Readarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -310,7 +310,7 @@ This change was due to not have our server get killed by people updating lists e
 - Re-install Readarr (if applicable / not already installed)
 - Find the location of the AppData directory for Readarr
   - Running Readarr once and via the UI go to System => About
-  - [Readarr Appdata Directory](../readarr/appdata-directory.md)
+  - [Readarr Appdata Directory](appdata-directory.md)
 - Stop Readarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -325,7 +325,7 @@ This change was due to not have our server get killed by people updating lists e
 - Re-install Readarr (if applicable / not already installed)
 - Find the location of the AppData directory for Readarr
   - Running Readarr once and via the UI go to System => About
-  - [Readarr Appdata Directory](../readarr/appdata-directory.md)
+  - [Readarr Appdata Directory](appdata-directory.md)
 - Stop Readarr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -404,7 +404,7 @@ chmod -R 0644 *
 
 {#help-i-have-forgotten-my-password}
 
-To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Readarr Appdata Directory](../readarr/appdata-directory.md)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Readarr Appdata Directory](appdata-directory.md)
 
 1. Stop Readarr
 1. Open config.xml in a text editor

@@ -6,6 +6,7 @@ tags:
   - needs-love
   - custom scripts
 ---
+
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.
@@ -27,7 +28,7 @@ Thank you for being part of the Readarr journey. For any inquiries or assistance
 Sincerely,
 The Servarr Team
 
-If you're looking to trigger a custom script, you can find more details here. Scripts are added to Readarr via the [Connect Settings](../readarr/settings.md#connections).
+If you're looking to trigger a custom script, you can find more details here. Scripts are added to Readarr via the [Connect Settings](settings.md#connections).
 
 # Overview
 

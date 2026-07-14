@@ -9,16 +9,17 @@ tags:
   - features
   - community
 ---
-# How to Contribute
 
-We're always looking for people to help make Lidarr even better, there are a number of ways to contribute.
+## How to Contribute
 
-# Documentation
+Lidarr welcomes contributions in many forms.
 
-Setup guides, [FAQ](../lidarr/faq.md), the more information we've got on the [wiki](https://wiki.servarr.com/lidarr) the better.
+## Documentation
 
-# Development
+Setup guides, [FAQ](faq.md), and any other documentation on the [wiki](https://wiki.servarr.com/lidarr) are all welcome.
 
-Lidarr is written in C# (back end) and JS (frontend). The back end is built on the .NET6 (and _soon_ .NET8) framework, while the frontend utilizes Reactjs.
+## Development
+
+Lidarr uses C# (back end) and JS (frontend). The back end runs on .NET8, while the frontend uses Reactjs.
 
 Please see [CONTRIBUTING.md](https://github.com/Lidarr/Lidarr/blob/develop/CONTRIBUTING.md) for details.

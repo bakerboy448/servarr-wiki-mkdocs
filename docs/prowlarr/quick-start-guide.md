@@ -9,6 +9,7 @@ tags:
   - configuration
   - prowlarr
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -23,7 +24,7 @@ tags:
 
 > This page is still in progress and not complete.
 
-> For a more detailed breakdown of all the settings, check [Prowlarr =>Settings](../prowlarr/settings.md)
+> For a more detailed breakdown of all the settings, check [Prowlarr =>Settings](settings.md)
 
 In this guide we will try to explain the basic setup you need to do to get started with Prowlarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
@@ -51,7 +52,7 @@ Some indexers have special settings, but most are standard as shown.
 
 > Redirect is typically only needed for a handful of very specific indexers
 
-- Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](../prowlarr/settings.md#applications). The Standard default, profile already exists, and looks like this:
+- Sync Profile - Select your Sync Profile here. These can be created in [`Settings` => `Apps`](settings.md#applications). The Standard default, profile already exists, and looks like this:
 
 > You can have different settings per app by creating multiple instances of the indexer
 
@@ -88,7 +89,7 @@ Click on `Settings` => `Apps`, and then click the + to add a supported app.
 
 All programs you can add are listed. You should only add programs you currently have installed, and if you have multiple instances of them, you must add each of them separately.
 
-> Currently supported Apps can be found at the [More Info (Supported)](../prowlarr/supported.md#applications) page for this section
+> Currently supported Apps can be found at the [More Info (Supported)](supported.md#applications) page for this section
 
 When you add an app, you will need to enter values in the pop-up screen:
 
@@ -101,11 +102,11 @@ When you add an app, you will need to enter values in the pop-up screen:
 - Name - Enter a name for this App.
 - Sync Level - Select the sync level to use
   - `Add and Remove Only` - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.
-  - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](../prowlarr/faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync)
+  - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync)
   - `Disabled` - will keep indexers from syncing with the program entirely.
 
 !!! warning
-    `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](../prowlarr/faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
+    `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
 
 - Tags - If you have added a tag to your indexer during setup, only indexers with this tag will be used for this program entry.
 - Prowlarr Server - Enter the Prowlarr server URL (including http, port, and baseurl if needed) as the app would access it here.
@@ -147,7 +148,7 @@ Click on `Settings` => `Download Clients`, and then click the + to add a new dow
 
 ![downloadclients.png](../assets/prowlarr/downloadclients.png)
 
-> Currently supported Download Clients can be found at the [More Info (Supported)](../prowlarr/supported.md#downloadclient) page for this section
+> Currently supported Download Clients can be found at the [More Info (Supported)](supported.md#downloadclient) page for this section
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 ![nzbget.png](../assets/prowlarr/nzbget.png)

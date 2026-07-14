@@ -9,6 +9,7 @@ tags:
   - issues
   - debugging
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -44,6 +45,7 @@ Do you need help? That's okay, everyone needs help sometimes. You can get real t
 
 - [:fontawesome-brands-discord:&emsp;Discord *Official Prowlarr Discord*](https://prowlarr.com/discord)
 - [:fontawesome-brands-reddit:&emsp;Reddit *Official Prowlarr Subreddit*](https://reddit.com/r/prowlarr)
+{.links-list}
 
 But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Prowlarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](../docker-guide.md) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](../docker-guide.md#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
@@ -73,7 +75,7 @@ To provide good and useful logs for sharing:
 1. [Turn Logging up to Trace (Settings => General => Log Level or Edit The Config File)](#tracedebug-logs)
 2. [Clear Logs (System => Logs => Clear Logs or Delete all the Logs in the Log Folder)](#clearing-logs)
 3. Reproduce the Issue (Redo what is breaking things)
-4. [Open the trace log file (Lidarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
+4. [Open the trace log file (prowlarr.trace.txt) via the UI or the log file](#standard-logs-location) on the filesystem and find the relevant context
 5. Copy a big chunk before the issue, the issue itself, and a big chunk after the issue.
 6. Use [Gist](https://gist.github.com/), [0bin (**Be sure to disable colorization**)](https://0bin.net/), [PrivateBin](https://privatebin.net/), [Notifiarr PrivateBin](http://logs.notifiarr.com/), [Hastebin](https://hastebin.com/), [Ubuntu's Pastebin](https://pastebin.ubuntu.com/), or similar sites - excluding those noted to avoid below - to share the copied logs from above
 
@@ -92,7 +94,7 @@ To provide good and useful logs for sharing:
 - When using [0bin](https://0bin.net/), be sure to disable colorization and do not burn after reading.
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
-- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](../prowlarr/appdata-directory.md) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](appdata-directory.md) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
 ```none
 
@@ -107,14 +109,14 @@ To provide good and useful logs for sharing:
 
 ## Standard Logs Location
 
-The log files are located in Prowlarr's [Appdata Directory](../prowlarr/appdata-directory.md), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
+The log files are located in Prowlarr's [Appdata Directory](appdata-directory.md), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
 !!! info
     Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
 ## Update Logs Location
 
-The update log files are located in Prowlarr's [Appdata Directory](../prowlarr/appdata-directory.md), inside the UpdateLogs/ folder.
+The update log files are located in Prowlarr's [Appdata Directory](appdata-directory.md), inside the UpdateLogs/ folder.
 
 ## Sharing Logs
 
@@ -152,7 +154,7 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 
 ## Determine the issue
 
-- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](../prowlarr/settings.md#logging) and [Log Files](../prowlarr/system.md#log-files) to find them and increase the log level.
+- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](settings.md#logging) and [Log Files](system.md#log-files) to find them and increase the log level.
 - The most frequently seen issue is that the system the app is installed on messed with the `/tmp` directory and deleted critical \*Arr files during the upgrade thus causing both the upgrade and rollback to fail. In this case, simply reinstall in-place over the existing borked installation.
 
 ### Migration Issue
@@ -271,7 +273,7 @@ The indexer or application server terminated the connection unexpectedly during 
 5. **VPN/Proxy solutions** – For persistent connection issues
    - SOCKS5 proxy: Configure per problematic indexer
    - VPN: Route Prowlarr traffic through VPN (last resort)
-   - See [VPNs, Jackett, and the Arrs](../prowlarr/faq.md#vpns-jackett-and-the-arrs) for important considerations
+   - See [VPNs, Jackett, and the Arrs](faq.md#vpns-jackett-and-the-arrs) for important considerations
 
 ### Troubleshooting Steps
 
@@ -319,7 +321,7 @@ This is typically caused by:
 
 ## \*Arr HTTP 400 Errors
 
-- See this FAQ Entry: [Prowlarr will not sync X Indexer to App](../prowlarr/faq.md#prowlarr-will-not-sync-x-indexer-to-app)
+- See this FAQ Entry: [Prowlarr will not sync X Indexer to App](faq.md#prowlarr-will-not-sync-x-indexer-to-app)
 
 ## 503 HTTP Service Unavailable
 
@@ -341,3 +343,4 @@ This is typically caused by:
 - [Radarr Searching & Indexers](../radarr/troubleshooting.md#searches-indexers-and-trackers)
 - [Readarr Searching & Indexers](../readarr/troubleshooting.md#searches-indexers-and-trackers)
 - [Sonarr Searching & Indexers](../sonarr/troubleshooting.md#searches-indexers-and-trackers)
+{.links-list}

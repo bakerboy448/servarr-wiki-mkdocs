@@ -9,6 +9,7 @@ tags:
   - missing
   - sonarr
 ---
+
 # Wanted
 
 The Wanted => Missing section contains a list of the episodes you have marked to monitor that are missing from your disk (haven't been downloaded yet).
@@ -16,11 +17,11 @@ The Wanted => Missing section contains a list of the episodes you have marked to
 !!! info
     This will only include episodes completely missing from your disk, not episodes which exist on disk, but have their cutoff profile unmet.
 
-- "Search Selected" - Here you can select certain episodes if you wish to search for them with your indexers
+- "Search Selected" / "Search All" - When episodes are selected, this button searches only the selected episodes with your indexers. When no episodes are selected, it searches all current missing episodes. Once "Search All" is confirmed, a dialog box will pop up with a warning letting you know how many episodes will be searched for; this is particularly helpful to know if your indexers limit your API calls.
 
-- "Unmonitor Selected" - Here you can select certain episodes and unmonitor them if you're no longer interested in them.
+- "Unmonitor Selected" / "Monitor Selected" - When viewing monitored episodes, selecting certain episodes and clicking this button will unmonitor them. When viewing unmonitored episodes, this button will monitor the selected episodes.
 
-- "Search All" - Selecting here will send a search to all of your indexers for all current missing episodes. Once pressed, a dialog box will pop up with a warning to you, letting you know how many episodes will be searched for; this is particularly helpful to know if your indexers limit your api calls.
+- Filter - The filter button (top right) lets you toggle between viewing Monitored and Unmonitored missing episodes.
 
 !!! info
     This search process cannot be canceled once started without restarting Sonarr.
@@ -30,8 +31,8 @@ At the top of the page is `Manual Import` which allows you to arbitrarily import
 - Move Automatically will attempt to automatically match the files to series/episodes in Sonarr and will move - not copy nor hard link - them to your library folder
 - Interactive Import will allow you to review the matches and adjust various specifications as needed. It provides the option (bottom left corner) to `Move` or `Copy/Hardlink` your files. Be sure to choose the correct option for your needs.
 
-!!! info
-    If a directory has more than 100 files in it then Sonarr will not recursively search the directory nor attempt to parse and match the files.
+  !!! info
+      If a directory has more than 100 files in it then Sonarr will not recursively search the directory nor attempt to parse and match the files.
 
 # Cutoff Unmet
 
@@ -42,7 +43,6 @@ The cut off is where you essentially tell Sonarr that the quality of the video f
 There are a couple of options available to you on this page
 ![wanted-cut-off-unmet.png](../assets/sonarr/wanted-cut-off-unmet.png)
 
-1. Search Selected - By selecting episodes on your list you can perform an Automatic search to try to see if there are any upgrades to your existing files.
-1. Unmonitor Selected - By selecting certain episodes on your list you can tell Sonarr to no longer look for any upgrades by Unmonitoring that episode.
-1. Search All - This can be dangerous (depending on how big your list is) as you're telling Sonarr to search every file that hasn't met the cut off. This can be useful if you do not have a massive list.
-1. Filter - This will allow you to filter out your results. This is useful if you're wanting to search a specific set of episodes or series
+1. Search Selected / Search All - When episodes are selected, this button performs an automatic search for upgrades to only the selected files. When no episodes are selected, it searches all cutoff unmet episodes. This can be resource-intensive depending on the size of your list.
+1. Unmonitor Selected / Monitor Selected - When viewing monitored episodes, selecting certain episodes and clicking this button will unmonitor them so Sonarr no longer looks for upgrades. When viewing unmonitored episodes, this button will re-monitor the selected episodes.
+1. Filter - The filter button (top right) lets you toggle between viewing Monitored and Unmonitored cutoff unmet episodes.

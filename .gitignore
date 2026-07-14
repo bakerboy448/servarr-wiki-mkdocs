@@ -61,3 +61,8 @@ mailmap.txt
 
 # Claude Code settings
 .claude/
+
+# MkDocs / plugin caches
+.cache/
+__pycache__/
+*.py[cod]

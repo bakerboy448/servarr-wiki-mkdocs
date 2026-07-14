@@ -4,6 +4,7 @@ description: Synology installation guide for Sonarr
 tags:
   - sonarr
 ---
+
 # Synology
 
 - [The SynoCommunity creates, supports,and maintains a Synology NAS Package](https://synocommunity.com/package/sonarr)

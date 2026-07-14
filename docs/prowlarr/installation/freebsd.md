@@ -6,6 +6,7 @@ tags:
   - installation
   - prowlarr
 ---
+
 # FreeBSD
 
 The Prowlarr team only provides builds for FreeBSD. Plugins and Ports are maintained and created by the FreeBSD community.

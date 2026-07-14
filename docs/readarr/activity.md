@@ -2,6 +2,7 @@
 title: Readarr Activity (Retired)
 description: Activity monitoring for the retired Readarr application
 ---
+
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.
@@ -53,7 +54,7 @@ The queue shows all items the application can recognize that is in the specified
 | Icon       | Status                   | Description                                                                                     | Resolution Steps                                          |
 | ---------- | ------------------------ | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
 | grey clock | Release Pending          | Download is awaiting Download Client to be available or for release to meet Delay Profile Rules | N/A                                                       |
-| yellow     | Warning Unable to Import | \*Arr was unable to import the release. Review the tool tip for more details                    | [See the Troubleshooting Guide](../readarr/troubleshooting.md) |
+| yellow     | Warning Unable to Import | \*Arr was unable to import the release. Review the tool tip for more details                    | [See the Troubleshooting Guide](troubleshooting.md) |
 | purple     | Download Importing       | Download is Importing                                                                           | N/A                                                       |
 |            |                          |                                                                                                 |                                                           |
 |            |                          |                                                                                                 |                                                           |

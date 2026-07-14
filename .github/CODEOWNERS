@@ -1,0 +1,7 @@
+# Default reviewers for non-upstream content. Adjust GitHub usernames as needed.
+* @bakerboy448
+
+# Deploy and CI
+/.github/workflows/ @bakerboy448
+/wrangler.toml @bakerboy448
+/cloudflare/ @bakerboy448

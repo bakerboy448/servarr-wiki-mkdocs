@@ -1,0 +1,13 @@
+# Cloudflare Pages project skeleton for the MkDocs static site.
+# See CONTRIBUTING.md → "Cloudflare Pages deployment" for setup.
+#
+# This file is intentionally minimal. Build happens in CI (or `mkdocs build`);
+# Wrangler only needs the project name + output directory for `pages deploy`.
+
+name = "servarr-wiki-mkdocs"
+compatibility_date = "2026-07-01"
+
+pages_build_output_dir = "site"
+
+# Optional: pin account here instead of CLOUDFLARE_ACCOUNT_ID env/secret.
+# account_id = "YOUR_CLOUDFLARE_ACCOUNT_ID"

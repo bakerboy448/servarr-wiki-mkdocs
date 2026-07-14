@@ -8,6 +8,7 @@ tags:
   - troubleshooting
   - whisparr
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -119,7 +120,7 @@ tags:
 1. Size
 
 !!! warning
-    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](../whisparr/settings.md#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/#repack-proper).
+    \*REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` "Do Not Prefer"](settings.md#file-management) and use the [Repack/Proper Custom Format](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/#repack-proper).
 
 ## What are Lists and what can they do for me
 
@@ -140,7 +141,7 @@ tags:
 
 - This restriction is to not have our server get killed by people updating lists every 10 minutes.
 
-- This interval can be configured in [Settings => Lists](../whisparr/settings.md#lists) for between 6-24 hours. The default is 24 hours.
+- This interval can be configured in [Settings => Lists](settings.md#lists) for between 6-24 hours. The default is 24 hours.
 
 ## Can all my movie files be stored in one folder
 
@@ -152,7 +153,7 @@ tags:
     - the script should be triggered on import
     - it should be designed to move the file whenever you want it
     - it then needs to call the Whisparr API and change the movie to unmonitored.
-- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](../whisparr/tips-and-tricks.md#creating-a-folder-for-each-movie) article
+- If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](tips-and-tricks.md#creating-a-folder-for-each-movie) article
 
 ## Can I put all my movies in my library into one folder
 
@@ -223,7 +224,7 @@ tags:
 
 - Find the location of the AppData directory for Whisparr
   - Via the Whisparr UI go to System => About
-  - [Whisparr Appdata Directory](../whisparr/appdata-directory.md)
+  - [Whisparr Appdata Directory](appdata-directory.md)
 - Stop Whisparr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -247,7 +248,7 @@ tags:
 - Re-install Whisparr (if applicable / not already installed)
 - Find the location of the AppData directory for Whisparr
   - Running Whisparr once and via the UI go to System => About
-  - [Whisparr Appdata Directory](../whisparr/appdata-directory.md)
+  - [Whisparr Appdata Directory](appdata-directory.md)
 - Stop Whisparr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -262,7 +263,7 @@ tags:
 - Re-install Whisparr (if applicable / not already installed)
 - Find the location of the AppData directory for Whisparr
   - Running Whisparr once and via the UI go to System => About
-  - [Whisparr Appdata Directory](../whisparr/appdata-directory.md)
+  - [Whisparr Appdata Directory](appdata-directory.md)
 - Stop Whisparr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -322,7 +323,7 @@ tags:
 
   - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
 
-- See [Tips and Tricks Section => Create a Folder for Each Movie](../whisparr/faq.md)whisparr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
+- See [Tips and Tricks Section => Create a Folder for Each Movie](faq.md)whisparr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
 
 ## Movie Folders Named Incorrectly
 
@@ -342,7 +343,7 @@ tags:
     - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
       - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
       - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
-  - The [Tips and Tricks Section => Create a Folder for Each Movie](../whisparr/tips-and-tricks.md#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
+  - The [Tips and Tricks Section => Create a Folder for Each Movie](tips-and-tricks.md#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
 
 ## Can I disable the refresh movies task
 
@@ -418,7 +419,7 @@ tags:
 
 {#help-i-have-forgotten-my-password}
 
-To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Whisparr Appdata Directory](../whisparr/appdata-directory.md)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Whisparr Appdata Directory](appdata-directory.md)
 
 1. Stop Whisparr
 1. Open config.xml in a text editor
@@ -473,7 +474,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## I got a pop-up that said config.xml was corrupt, what now
 
-- Whisparr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](../whisparr/appdata-directory.md), once deleted start and it will start on the default port (6969), you should now re-configure any settings you configured on the General Settings page.
+- Whisparr was unable to read your config file on start-up as it became corrupted somehow. In order to get back online, you will need to delete `.xml` in your [appdata-directory](appdata-directory.md), once deleted start and it will start on the default port (6969), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
@@ -510,7 +511,7 @@ Depending on your OS, there are multiple possible ways.
 
 ## Jackett shows more results than when manually searching
 
-- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](../whisparr/troubleshooting.md) for more information.
+- This is usually due to searching Jackett differently than you do. See our [troubleshooting article](troubleshooting.md) for more information.
 
 ## How does Whisparr handle foreign movies or foreign titles
 

@@ -9,12 +9,14 @@ tags:
   - debugging
   - errors
 ---
+
 # Asking for Help
 
 Do you need help? That's okay, everyone needs help sometimes. You can get help on
 
 - [:fontawesome-brands-discord:&emsp;Discord *Official Sonarr Discord*](https://discord.sonarr.tv/)
 - [:fontawesome-brands-reddit:&emsp;Reddit *Official Sonarr Forums*](https://forums.sonarr.tv/)
+{.links-list}
 
 But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Sonarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](../docker-guide.md) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](../docker-guide.md#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
@@ -29,6 +31,7 @@ It is likely beneficial to also review the Common Troubleshooting problems:
 
 - [Downloads and Importing Common Problems](#common-problems)
 - [Searching Indexers and Trackers Common Problems](#common-problems-1)
+{.links-list}
 
 If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
@@ -63,7 +66,7 @@ To provide good and useful logs for sharing:
 - When using [0bin](https://0bin.net/), be sure to disable colorization and do not burn after reading.
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
-- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](../sonarr/appdata-directory.md) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](appdata-directory.md) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
 ```none
 
@@ -78,14 +81,14 @@ To provide good and useful logs for sharing:
 
 ## Standard Logs Location
 
-The log files are located in Sonarr's [Appdata Directory](../sonarr/appdata-directory.md), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
+The log files are located in Sonarr's [Appdata Directory](appdata-directory.md), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
 !!! info
     Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
 ## Update Logs Location
 
-The update log files are located in Sonarr's [Appdata Directory](../sonarr/appdata-directory.md), inside the UpdateLogs/ folder.
+The update log files are located in Sonarr's [Appdata Directory](appdata-directory.md), inside the UpdateLogs/ folder.
 
 ## Sharing Logs
 
@@ -95,7 +98,7 @@ The logs can be long and hard to read as part of a forum or Reddit post and they
 
 You can change the log level at Settings => General => Logging. Sonarr does not need to restarted for the change to take effect. This change only affects the log files, not the logging database. The latest debug/trace log files are named `sonarr.debug.txt` and `sonarr.trace.txt` respectively.
 
-If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of Info.
+If you're unable to access the UI to set the logging level you can do so by editing config.xml in the AppData directory by setting the LogLevel value to Debug or Trace instead of the current value.
 
 ```xml
  <Config>
@@ -123,7 +126,7 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 
 ## Determine the issue
 
-The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](../sonarr/settings.md#logging) and [Log Files](../sonarr/system.md#log-files) to find them and increase the log level.
+The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](settings.md#logging) and [Log Files](system.md#log-files) to find them and increase the log level.
 
 ### Migration Issue
 
@@ -213,11 +216,11 @@ Sonarr talks to you download client via it's API and accesses it via the client'
 
 ### SSL in use and incorrectly configured
 
-Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](../sonarr/faq.md#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
+Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](faq.md#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
 
 ### Can’t see share on Windows
 
-The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t Sonarr see my files on a remote server](../sonarr/faq.md#why-can-sonarr-not-see-my-files-on-a-remote-server) for details.
+The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t Sonarr see my files on a remote server](faq.md#why-can-sonarr-not-see-my-files-on-a-remote-server) for details.
 
 ### Mapped network drives are not reliable
 
@@ -239,7 +242,7 @@ Logs will look like
 
 Thus `/volume3/data` does not exist within Sonarr's container or is not accessible.
 
-- [Settings => Download Clients => Remote Path Mappings](../sonarr/settings.md#remote-path-mappings)
+- [Settings => Download Clients => Remote Path Mappings](settings.md#remote-path-mappings)
 - A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
 - Generally, a remote path map is only required if your download client is on Linux when \*Arr is on Windows or vice versa. A remote path map is also possibly needed if mixing Docker and Native clients or if using a remote server.
 - A remote path map is a DUMB search/replace (where it finds the REMOTE value, replace it with LOCAL value for the specified Host).
@@ -312,9 +315,9 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 
 - The download client should download into a folder accessible by \*Arr and that is not your root/library folder; should import from that separate download folder into your Library folder.
 - You should never download directly into your root folder. You also should not use your root folder as the download client's completed folder or incomplete folder.
-- [**This will also cause a healthcheck in System as well**](../sonarr/system.md#downloading-into-root-folder)
+- [**This will also cause a healthcheck in System as well**](system.md#downloading-into-root-folder)
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the \*Arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](../sonarr/settings.md#root-folders)
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](settings.md#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
@@ -364,7 +367,7 @@ This can also occur if you have a release in your download client but that media
 - This import error is similar to the above can't be matched error.
 - Sonarr grabbed the release due to your indexer or tracker reporting that the release had the TVDb Id (or IMDb Id) for a series you wanted.
 - The series of the downloaded file does not match the id reported, so Sonarr will not import the file.
-- Depending on the series title and release name - assuming the release is correct for the series id it is associated with - Sonarr will probably need an alias added, [this FAQ entry has some more info](../sonarr/faq.md#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) on requesting one to be added.
+- Depending on the series title and release name - assuming the release is correct for the series id it is associated with - Sonarr will probably need an alias added, [this FAQ entry has some more info](faq.md#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) on requesting one to be added.
 - Alternatively, the release is mislabeled and not for the series id that was reported. This should be reported to your indexer so they can take corrective action.
 - To handle this error:
   1. Verify the series of the file
@@ -375,11 +378,11 @@ This can also occur if you have a release in your download client but that media
 
 On TVDB, when episode names are unknown they'll be titled TBA and there is a 24 hour cache on the API. Typically, changes to the TVDB website take 24-48 hours to reach Sonarr due to TVDB cache, Skyhook cache and the series refresh interval.
 
-The [Episode Title Required](../sonarr/settings.md#importing) setting in Sonarr controls import behavior when the title is TBA, but after 24 hours from the episode's air date  the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files.
+The [Episode Title Required](settings.md#importing) setting in Sonarr controls import behavior when the title is TBA, but after 24 hours from the episode's air date  the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files.
 
 ### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Sonarr => System => Status](../sonarr/system.md#status).
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Sonarr => System => Status](system.md#status).
 
 ### The request timed out
 
@@ -413,7 +416,7 @@ You can also review some common permissions and networking troubleshooting comma
 
 # Searches Indexers and Trackers
 
-- The [Why didn't Sonarr grab an episode I was expecting?](../sonarr/faq.md#why-didnt-sonarr-grab-an-episode-i-was-expecting) FAQ entry is likely helpful as well.
+- The [Why didn't Sonarr grab an episode I was expecting?](faq.md#why-didnt-sonarr-grab-an-episode-i-was-expecting) FAQ entry is likely helpful as well.
 - If you use [Prowlarr](../prowlarr.md), then you can view the [History](../prowlarr/history.md) of all queries Prowlarr received and how they were sent to the sites. Ensure that `Parameters` is enabled in Prowlarr History => Options. The (i) icon provides additional details.
 - The troubleshooting steps are otherwise below
 
@@ -620,13 +623,13 @@ Most likely you're using a reverse proxy and you reverse proxy timeout is set to
 ```
 
 - Note that in the above case there are 0 indexers being searched. This number may very based on your specific setup. If the number is not the same as the number of indexers configured then the following are likely causes:
-  - [Health Checks (System => Status)](../sonarr/system.md#health)
-    - [No indexers available with automatic search enabled, Sonarr will not provide any automatic search results](../sonarr/system.md#no-indexers-available-with-automatic-search-enabled-sonarr-will-not-provide-any-automatic-search-results)
-    - [No indexers are enabled](../sonarr/system.md#no-indexers-are-enabled)
-    - [Enabled indexers do not support searching](../sonarr/system.md#enabled-indexers-do-not-support-searching)
-    - [No indexers available with Interactive Search Enabled](../sonarr/system.md#no-indexers-available-with-interactive-search-enabled)
-    - [Indexers are unavailable due to failures](../sonarr/system.md#indexers-are-unavailable-due-to-failures)
-  - Searching a Series Type of Anime and no anime categories are configured for your tracker(s). Indexers have [two different configurable category types](../sonarr/settings.md#indexers).
+  - [Health Checks (System => Status)](system.md#health)
+    - [No indexers available with automatic search enabled, Sonarr will not provide any automatic search results](system.md#no-indexers-available-with-automatic-search-enabled-sonarr-will-not-provide-any-automatic-search-results)
+    - [No indexers are enabled](system.md#no-indexers-are-enabled)
+    - [Enabled indexers do not support searching](system.md#enabled-indexers-do-not-support-searching)
+    - [No indexers available with Interactive Search Enabled](system.md#no-indexers-available-with-interactive-search-enabled)
+    - [Indexers are unavailable due to failures](system.md#indexers-are-unavailable-due-to-failures)
+  - Searching a Series Type of Anime and no anime categories are configured for your tracker(s). Indexers have [two different configurable category types](settings.md#indexers).
   - Searching a Series Type of Daily or Standard are no standard (non-anime) categories are configured for your tracker(s)
     - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
   - Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
@@ -662,19 +665,19 @@ Most likely you're using a reverse proxy and you reverse proxy timeout is set to
 
 ### Series needs an alias
 
-Releases may be uploaded as `The Series Name`, but TVDB has the series as `Series Name` or similar naming differences. This also includes Foreign Titles. Please see [this FAQ entry](../sonarr/faq.md#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x)
+Releases may be uploaded as `The Series Name`, but TVDB has the series as `Series Name` or similar naming differences. This also includes Foreign Titles. Please see [this FAQ entry](faq.md#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x)
 
 ### Series needs an XEM Mapping
 
-Releases may be uploaded as `Series Title S02E45` or `Other Series Title S2022E42`, but TVDB has this episode as `Series Title S03E01` or `Other Series Title S03E42`  Please see [this FAQ entry](../sonarr/faq.md#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
+Releases may be uploaded as `Series Title S02E45` or `Other Series Title S2022E42`, but TVDB has this episode as `Series Title S03E01` or `Other Series Title S03E42`  Please see [this FAQ entry](faq.md#how-does-sonarr-handle-scene-numbering-issues-american-dad-etc)
 
 ### Wrong Series Type
 
 The series type affects how Sonarr searches. The series type should be selected based on how the series is being released on the indexers.
-[See this FAQ entry for more details](../sonarr/faq.md#whats-the-different-series-types)
+[See this FAQ entry for more details](faq.md#whats-the-different-series-types)
 
 !!! info
-    If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](../sonarr/settings.md#indexers)
+    If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](settings.md#indexers)
 
 #### Daily
 
@@ -788,7 +791,7 @@ Using NZBHydra2 as a single indexer entry (i.e. 1 NZBHydra2 Entry in Sonarr for 
 
 ### Jackett manual search finding more results
 
-- [See this FAQ entry](../sonarr/faq.md#jackett-shows-more-results-than-sonarr-when-manually-searching)
+- [See this FAQ entry](faq.md#jackett-shows-more-results-than-sonarr-when-manually-searching)
 
 ### Problem Not Listed
 
@@ -800,7 +803,7 @@ These are some of the common errors you may see when adding an indexer
 
 ### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Sonarr => System => Status](../sonarr/system.md#status).
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Sonarr => System => Status](system.md#status).
 
 ### The request timed out
 

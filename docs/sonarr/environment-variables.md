@@ -9,6 +9,7 @@ tags:
   - postgres
   - environment-variables
 ---
+
 # Sonarr Environment Variables
 
 Sonarr has the ability to use environment variables to override entries in config.xml. The pattern for variable naming is predictable and can be used to set any config entry. Environment variables are comprised of 3 parts, delimited by two underscores:
@@ -37,6 +38,7 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `AuthenticationEnabled`  | `AUTH`     | `ENABLED`            | `SONARR__AUTH__ENABLED`           |
 | `AuthenticationMethod`   | `AUTH`     | `METHOD`             | `SONARR__AUTH__METHOD`            |
 | `AuthenticationRequired` | `AUTH`     | `REQUIRED`           | `SONARR__AUTH__REQUIRED`          |
+| `TrustCgnatIpAddresses`  | `AUTH`     | `TRUSTCGNATIPADDRESSES` | `SONARR__AUTH__TRUSTCGNATIPADDRESSES` |
 | `LogLevel`               | `LOG`      | `LEVEL`              | `SONARR__LOG__LEVEL`              |
 | `FilterSentryEvents`     | `LOG`      | `FILTERSENTRYEVENTS` | `SONARR__LOG__FILTERSENTRYEVENTS` |
 | `LogRotate`              | `LOG`      | `ROTATE`             | `SONARR__LOG__ROTATE`             |
@@ -48,7 +50,7 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `SyslogServer`           | `LOG`      | `SYSLOGSERVER`       | `SONARR__LOG__SYSLOGSERVER`       |
 | `SyslogPort`             | `LOG`      | `SYSLOGPORT`         | `SONARR__LOG__SYSLOGPORT`         |
 | `SyslogLevel`            | `LOG`      | `SYSLOGLEVEL`        | `SONARR__LOG__SYSLOGLEVEL`        |
-| `DbEnabled`              | `LOG`      | `DBENABLED`          | `SONARR__LOG__DBENABLED`          |
+| `LogDbEnabled`           | `LOG`      | `DBENABLED`          | `SONARR__LOG__DBENABLED`          |
 | `PostgresHost`           | `POSTGRES` | `HOST`               | `SONARR__POSTGRES__HOST`          |
 | `PostgresPort`           | `POSTGRES` | `PORT`               | `SONARR__POSTGRES__PORT`          |
 | `PostgresUser`           | `POSTGRES` | `USER`               | `SONARR__POSTGRES__USER`          |

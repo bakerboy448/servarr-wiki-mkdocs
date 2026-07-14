@@ -9,6 +9,7 @@ tags:
   - history
   - monitoring
 ---
+
 # Activity
 
 The activity tab is where you can see past and present activities that \*Arr  has done. Including imports, deletes, upgrades, grabs, renames, and failures.
@@ -39,7 +40,7 @@ The queue shows all items the application can recognize that is in the specified
 | Icon       | Status                   | Description                                                                                     | Resolution Steps                                         |
 | ---------- | ------------------------ | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | grey clock | Release Pending          | Download is awaiting Download Client to be available or for release to meet Delay Profile Rules | N/A                                                      |
-| yellow     | Warning Unable to Import | \*Arr was unable to import the release. Review the tool tip for more details                    | [See the Troubleshooting Guide](../radarr/troubleshooting.md) |
+| yellow     | Warning Unable to Import | \*Arr was unable to import the release. Review the tool tip for more details                    | [See the Troubleshooting Guide](troubleshooting.md) |
 | purple     | Download Importing       | Download is Importing                                                                           | N/A                                                      |
 |            |                          |                                                                                                 |                                                          |
 |            |                          |                                                                                                 |                                                          |

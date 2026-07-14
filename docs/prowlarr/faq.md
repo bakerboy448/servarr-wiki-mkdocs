@@ -6,6 +6,7 @@ tags:
   - troubleshooting
   - faq
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -59,20 +60,20 @@ If Prowlarr is exposed so that the UI can be accessed from outside your local ne
 
 As of Prowlarr v1, Authentication is Mandatory.
 
-- `AuthenticationType` and `AuthenticationMethod` are mandatory required attributes in the configuration file.
+- `AuthenticationMethod` and `AuthenticationRequired` are mandatory required attributes in the configuration file.
 
 ### Authentication Method
 
 - `Basic` (Browser pop-up) - Basic Auth is not supported as of Prowlarr v1
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](../prowlarr/appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
 
 ### Authentication Required
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
-  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
-- `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
+  - The config file equivalent of this is `<AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired>`
+- `<AuthenticationRequired>Enabled</AuthenticationRequired>` is also a valid value
 
 ## How do I reset Stats
 
@@ -115,9 +116,9 @@ The following attributes are optional, but recommended:
 
 - Yes.
 
-1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](../prowlarr/settings.md#indexer-proxies)
+1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](settings.md#indexer-proxies)
 1. Add a tag to the created flaresolverr proxy
-1. Add the same tag to your [Indexer](../prowlarr/indexers.md)
+1. Add the same tag to your [Indexer](indexers.md)
 
 !!! warning
     The tags must match & Cloudflare must be detected for Flaresolverr to be used. A Flaresolverr proxy is disabled if no tags are used.
@@ -390,7 +391,7 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 
 - Find the location of the AppData directory for Prowlarr
   - Via the Prowlarr UI go to System => About
-  - [Prowlarr Appdata Directory](../prowlarr/appdata-directory.md)
+  - [Prowlarr Appdata Directory](appdata-directory.md)
 - Stop Prowlarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -414,7 +415,7 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 - Re-install Prowlarr (if applicable / not already installed)
 - Find the location of the AppData directory for Prowlarr
   - Running Prowlarr once and via the UI go to System => About
-  - [Prowlarr Appdata Directory](../prowlarr/appdata-directory.md)
+  - [Prowlarr Appdata Directory](appdata-directory.md)
 - Stop Prowlarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -429,7 +430,7 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 - Re-install Prowlarr (if applicable / not already installed)
 - Find the location of the AppData directory for Prowlarr
   - Running Prowlarr once and via the UI go to System => About
-  - [Prowlarr Appdata Directory](../prowlarr/appdata-directory.md)
+  - [Prowlarr Appdata Directory](appdata-directory.md)
 - Stop Prowlarr
 - Connect to the Synology NAS through SSH and log in as root
 

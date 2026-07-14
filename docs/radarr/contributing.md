@@ -8,29 +8,31 @@ tags:
   - guide
   - setup
 ---
+
 # How to Contribute
 
 We're always looking for people to help make Radarr even better, there are a number of ways to contribute.
 
 # Documentation
 
-Setup guides, [FAQ](../radarr/faq.md), the more information we have on the [wiki](https://wiki.servarr.com/radarr) the better.
+Setup guides, [FAQ](faq.md), the more information we have on the [wiki](https://wiki.servarr.com/radarr) the better.
 
 # Development
 
-Radarr is written in C# (backend) and JS (frontend). The backend is built on the .NET6 (and _soon_ .NET8) framework, while the frontend utilizes Reactjs.
+Radarr is written in C# (backend) and JS (frontend). The backend is built on the .NET8 framework, while the frontend utilizes Reactjs.
 
 ## Tools required
 
 - Visual Studio 2022 or higher is recommended (<https://www.visualstudio.com/vs/>). The community version is free and works (<https://www.visualstudio.com/downloads/>).
 
 !!! info
-    VS 2022 V17.0 or higher is recommended as it includes the .NET6 SDK
+    VS 2022 V17.0 or higher is recommended as it includes the .NET8 SDK
 
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
 - [Git](https://git-scm.com/downloads)
 - The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
   - **20** (any minor or patch version within this)
+{.grid-list}
 
 !!! warning
     The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other versions.
@@ -44,8 +46,8 @@ Radarr is written in C# (backend) and JS (frontend). The backend is built on the
 1. Fork Radarr
 1. Clone the repository into your development machine. [_info_](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
-> Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
 !!! info
+    Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
     For css changes `yarn stylelint-windows --fix`
 
 ### Building the frontend
@@ -70,7 +72,7 @@ The backend solution is most easily built and ran in Visual Studio or Rider, how
 #### Visual Studio
 
 !!! info
-    Ensure startup project is set to `Radarr.Console` and framework to `net6.0`
+    Ensure startup project is set to `Radarr.Console` and framework to `net8.0`
 
 1. First `Build` the solution in Visual Studio, this will ensure all projects are correctly built and dependencies restored
 1. Next `Debug/Run` the project in Visual Studio to start Radarr

@@ -6,6 +6,7 @@ tags:
   - installation
   - linux
 ---
+
 # Linux
 
 ## Debian / Ubuntu
@@ -51,7 +52,7 @@ sudo apt install curl sqlite3
     \* Your download clients and media server run as and are a part of the group `media`
     \* Your paths used by your download clients and media server are accessible (read/write) to the group `media`
     \* You created the directory `/var/lib/radarr` and ensured the user `radarr` has read/write permissions for it for it
-    \* Previous/existing installations were using the `master` release branch noted on the [FAQ](../../radarr/faq.md) or you update `master` in the download URL
+    \* Previous/existing installations were using the `master` release branch noted on the [FAQ](../faq.md) or you update `master` in the download URL
 
 !!! success
     By continuing below, you acknowledge that you have read and met the above requirements.
@@ -141,7 +142,7 @@ sudo journalctl --since today -u radarr
 ```
 
 !!! info
-    If Radarr v6+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](../../radarr/faq.md#radarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
+    If Radarr v6+ fails to start on older end-of-life systems (Debian 10, Debian 11, Synology DSM, Ubuntu 18, Ubuntu 20) due to SQLite/GLIBC compatibility issues, see the [FAQ entry for the workaround](../faq.md#radarr-wont-start-on-debian-11-or-older-systems-due-to-sqlite-version).
 
 ---
 

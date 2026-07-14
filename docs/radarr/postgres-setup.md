@@ -7,6 +7,7 @@ tags:
   - database
   - installation
 ---
+
 # Radarr and Postgres
 
 This document will go over the key points of migrating and setting up Postgres support in Radarr.
@@ -14,29 +15,29 @@ This document will go over the key points of migrating and setting up Postgres s
 !!! info
     Radarr v4.1.0.6133 or newer required
 
-This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
+This guide was created by the amazing [Roxedus](https://github.com/Roxedus).
 
 !!! danger
     Postgres databases are NOT backed up by Radarr, any backups must be implemented and maintained by the user
 
 !!! info
-    Note that while the community migration guide is only written for **Postgres 14**. Users have **reported no issues with Postgres 15-17 inclusive**. Please note that the migration details below may not work with Postgres 15+.  **If one wishes to use a newer Postgres version than 14 they should start the application's database from scratch OR upgrade after the unsupported community migration is executed**.
+    Radarr connects to Postgres via [Npgsql](https://www.npgsql.org/) and supports all currently supported PostgreSQL versions (PostgreSQL 14 through 18). PostgreSQL 13 reached end-of-life in November 2025 and isn't recommended. This guide uses `postgres:17`. The SQLite-to-Postgres migration steps below were written against Postgres 14 and may need adjustment on newer majors; for Postgres 18 or later, start with a fresh database.
 
 ## Setting up Postgres
 
- First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
+ First, we need a Postgres instance. This guide is written for usage of the `postgres:17` Docker image.
 
-!!! danger
-    Do not even think about using the `latest` tag!
+ !!! danger
+     Do not even think about using the `latest` tag!
 
 ```bash
-docker create --name=postgres14 \
+docker create --name=postgres17 \
     -e POSTGRES_PASSWORD=qstick \
     -e POSTGRES_USER=qstick \
     -e POSTGRES_DB=radarr-main \
     -p 5432:5432/tcp \
-    -v /path/to/appdata/postgres14:/var/lib/postgresql/data \
-    postgres:14
+    -v /path/to/appdata/postgres17:/var/lib/postgresql/data \
+    postgres:17
 ```
 
 ## Creation of database
@@ -51,7 +52,7 @@ Radarr needs two databases, the default names of these are:
 
 Create the databases mentioned above using your favorite method - for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
 
-You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](../radarr/postgres-setup.md#schema-creation).
+You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](postgres-setup.md#schema-creation).
 
 ### Schema creation
 
@@ -61,7 +62,7 @@ You can give the databases any name you want but make sure `config.xml` file has
 <PostgresUser>qstick</PostgresUser>
 <PostgresPassword>qstick</PostgresPassword>
 <PostgresPort>5432</PostgresPort>
-<PostgresHost>postgres14</PostgresHost>
+<PostgresHost>postgres17</PostgresHost>
 ```
 
 If you want to specify a database name then should also include the following configuration:
@@ -70,6 +71,16 @@ If you want to specify a database name then should also include the following co
 <PostgresMainDb>MainDbName</PostgresMainDb>
 <PostgresLogDb>LogDbName</PostgresLogDb>
 ```
+
+Alternatively, if you need to pass a full Postgres connection string (e.g. to include additional parameters like `sslmode`), you can use the connection string options **instead of** the host/user/password/port settings above. Both must be provided if either is set:
+
+```xml
+<PostgresMainDbConnectionString>Host=postgres17;Database=radarr-main;Username=qstick;Password=qstick;Port=5432</PostgresMainDbConnectionString>
+<PostgresLogDbConnectionString>Host=postgres17;Database=radarr-log;Username=qstick;Password=qstick;Port=5432</PostgresLogDbConnectionString>
+```
+
+!!! warning
+    You cannot mix connection string settings and host/user/password/port settings — use one approach or the other, not both.
 
 Only **after creating** both databases you can start the Radarr migration from SQLite to Postgres.
 
@@ -96,12 +107,12 @@ Before starting a migration please ensure that you have run Radarr against the c
 1. Open your preferred database management tool and connect to the Postgres database instance
 1. Run the following commands:
 
- ```SQL
- DELETE FROM "QualityProfiles";
- DELETE FROM "QualityDefinitions";
- DELETE FROM "DelayProfiles";
- DELETE FROM "Metadata";
- ```
+	```SQL
+	DELETE FROM "QualityProfiles";
+	DELETE FROM "QualityDefinitions";
+	DELETE FROM "DelayProfiles";
+	DELETE FROM "Metadata";
+	```
 
 1. Start the migration by using either of these options:
 
@@ -113,16 +124,15 @@ Before starting a migration please ensure that you have run Radarr against the c
       docker run --rm -v /absolute/path/to/radarr.db:/radarr.db:ro --network=host ghcr.io/roxedus/pgloader --with "quote identifiers" --with "data only" /radarr.db "postgresql://qstick:qstick@localhost/radarr-main"
       ```
 
-!!! warning
-    If you experience an error using pgloader it could be due to your DB being too large, to resolve this try adding `--with "prefetch rows = 100" --with "batch size = 1MB"` to the above command
+    !!! warning
+        If you experience an error using pgloader it could be due to your DB being too large, to resolve this try adding `--with "prefetch rows = 100" --with "batch size = 1MB"` to the above command
 
-!!! info
-    With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
+    !!! info
+        With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
 
 1. For those having the issues POST-MIGRATION from SQLite run the following:
 
     ```postgres
-    select setval('public."MovieFiles_Id_seq"', (SELECT MAX("Id")+1 FROM "MovieFiles"));
     select setval('public."AlternativeTitles_Id_seq"', (SELECT MAX("Id")+1 FROM "AlternativeTitles"));
     select setval('public."Blacklist_Id_seq"', (SELECT MAX("Id")+1 FROM "Blocklist"));
     select setval('public."Collections_Id_seq"', (SELECT MAX("Id")+1 FROM "Collections"));

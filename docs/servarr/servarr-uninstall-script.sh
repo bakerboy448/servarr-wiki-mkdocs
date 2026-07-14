@@ -26,9 +26,9 @@ set -euo pipefail
 # Am I root?, need root!
 
 if [ "$EUID" -ne 0 ]; then
-  echo -e ${red}"Please run as root!"
-  echo -e "Exiting script!"
-  exit
+    echo -e ${red}"Please run as root!"
+    echo -e "Exiting script!"
+    exit
 fi
 
 ### Title Splash
@@ -52,7 +52,7 @@ echo ""
 
 # Function to check if a service is running
 service_is_running() {
-  systemctl is-active --quiet "$1"
+    systemctl is-active --quiet "$1"
 }
 
 # Array of services
@@ -62,30 +62,30 @@ services=("lidarr" "prowlarr" "radarr" "readarr" "whisparr")
 
 # Function to display the ellipsis
 display_ellipsis() {
-  local count=0
-  local direction=1
-  local max_count=3
+    local count=0
+    local direction=1
+    local max_count=3
 
-  # Loop for 7 seconds
-  for ((i = 0; i < 7; i++)); do
-    # Print the ellipsis
-    echo -ne "Scanning for running services"
-    for ((j = 0; j < count; j++)); do
-      echo -n "."
+    # Loop for 7 seconds
+    for ((i = 0; i < 7; i++)); do
+        # Print the ellipsis
+        echo -ne "Scanning for running services"
+        for ((j = 0; j < count; j++)); do
+            echo -n "."
+        done
+        echo -ne "\r"
+
+        # Increment or decrement the count based on direction
+        count=$((count + direction))
+
+        # Change direction if count reaches max or min
+        if [ "$count" -eq "$max_count" ] || [ "$count" -eq 0 ]; then
+            direction=$((direction * -1))
+        fi
+
+        sleep 1  # Wait for 1 second
     done
-    echo -ne "\r"
-
-    # Increment or decrement the count based on direction
-    count=$((count + direction))
-
-    # Change direction if count reaches max or min
-    if [ "$count" -eq "$max_count" ] || [ "$count" -eq 0 ]; then
-      direction=$((direction * -1))
-    fi
-
-    sleep 1 # Wait for 1 second
-  done
-  echo "" # Print a newline after the loop
+    echo ""  # Print a newline after the loop
 }
 
 display_ellipsis
@@ -93,9 +93,9 @@ display_ellipsis
 # List of running services
 running_services=()
 for service in "${services[@]}"; do
-  if service_is_running "$service"; then
-    running_services+=("$service")
-  fi
+    if service_is_running "$service"; then
+        running_services+=("$service")
+    fi
 done
 
 # Add "manual" and "quit" options
@@ -105,31 +105,32 @@ running_services+=("manual" "quit")
 echo ""
 echo "Select an application:"
 select app in "${running_services[@]}"; do
-  case $app in
-    manual)
-      read -p "Enter the service to remove: " manual_app
-      app="$manual_app"
-      break
-      ;;
-    quit)
-      exit 0
-      ;;
-    *)
-      echo ""
-      echo -e "You selected: ${brown}${app}${reset}"
-      break
-      ;;
-  esac
+    case $app in
+        manual)
+            read -p "Enter the service to remove: " manual_app
+            app="$manual_app"
+            break
+            ;;
+        quit)
+            exit 0
+            ;;
+        *)
+            echo ""
+            echo -e "You selected: ${brown}${app}${reset}"
+            break
+            ;;
+    esac
 done
+
 
 # Extract paths and user/group from systemd service file
 ExecStart=$(systemctl show -p ExecStart --value "$app.service")
 
 if [ -z "$ExecStart" ]; then
-  echo ""
-  echo -e "${red}Error${reset}: Failed to find matching service name. Aborting."
-  echo ""
-  exit 1
+    echo ""
+    echo -e "${red}Error${reset}: Failed to find matching service name. Aborting."
+    echo ""
+    exit 1
 fi
 
 User=$(systemctl show -p User --value "$app.service")
@@ -151,9 +152,9 @@ echo -e "Service is running in Group: ${brown}$Group${reset}"
 echo ""
 read -r -p "Please type 'yes' to continue with uninstallation: " response
 if [[ $response != "yes" && $response != "YES" ]]; then
-  echo "Invalid response. Uninstallation canceled."
-  echo "Exiting script!"
-  exit 0
+    echo "Invalid response. Uninstallation canceled."
+    echo "Exiting script!"
+    exit 0
 fi
 
 # Proceed with uninstallation
@@ -165,8 +166,8 @@ sleep 1
 echo ""
 echo -e "Attempting to stop and disable services..."
 sleep 2
-systemctl stop "$app" >/dev/null 2>&1
-systemctl disable "$app.service" >/dev/null 2>&1
+systemctl stop "$app"  >/dev/null 2>&1
+systemctl disable "$app.service"  >/dev/null 2>&1
 echo ""
 echo -e "${brown}[${app^}]${reset} service has been stopped and disabled."
 sleep 2
@@ -184,10 +185,10 @@ read -p "Do you want to delete the data directory at '$appdatadir'? (y/N): " del
 deluser=${deluser:-N}
 
 if [[ $deldata =~ ^[Yy]$ ]]; then
-  rm -rf "$appdatadir"
-  echo ""
-  echo -e ${yellow}"Data directory deleted."${reset}
-  sleep 2
+    rm -rf "$appdatadir"
+    echo ""
+    echo -e ${yellow}"Data directory deleted."${reset}
+    sleep 2
 fi
 
 # User confirmation remove $User
@@ -196,40 +197,40 @@ read -p "Do you want to delete USER '$User'? (y/N): " deluser
 deluser=${deluser:-N}
 
 if [[ $deluser =~ ^[Yy]$ ]]; then
-  sudo userdel $User
-  echo ""
-  echo "User '$User' has been removed from your system."
-  sleep 2
+    sudo userdel $User
+    echo ""
+    echo "User '$User' has been removed from your system."
+    sleep 2
 else
-  echo ""
-  echo -e ${yellow}"User '$User' has not to be removed from your system."${reset}
-  sleep 2
+    echo ""
+    echo -e ${yellow}"User '$User' has not to be removed from your system."${reset}
+    sleep 2
 fi
 
 # Check if there are users in the group
 users_in_group=$(getent group "$Group" | cut -d: -f4)
 if [ -n "$users_in_group" ]; then
-  echo ""
-  echo -e "There are still users in the group '$Group':" ${yellow}$users_in_group${reset}
-  sleep 1
-  echo ""
-  echo -e "Group '$Group' ${red}CANNOT${reset} be removed until all users are removed from it."
-  echo ""
-  echo "If this user is no longer in use, then as root use 'userdel $users_in_group' to delete the user from your system."
-  sleep 1
+    echo ""
+    echo -e "There are still users in the group '$Group':" ${yellow}$users_in_group${reset}
+    sleep 1
+    echo ""
+    echo -e "Group '$Group' ${red}CANNOT${reset} be removed until all users are removed from it."
+    echo ""
+    echo "If this user is no longer in use, then as root use 'userdel $users_in_group' to delete the user from your system."
+    sleep 1
 else
-  echo ""
-  read -p "Do you want to delete GROUP '$Group'? (y/N): " delgroup
-  delgroup=${delgroup:-N}
+    echo ""
+    read -p "Do you want to delete GROUP '$Group'? (y/N): " delgroup
+    delgroup=${delgroup:-N}
 
-  if [[ $delgroup =~ ^[Yy]$ ]]; then
-    sudo groupdel "$Group"
-    echo ""
-    echo "Group '$Group' has been removed from your system."
-  else
-    echo ""
-    echo "Group '$Group' will not be removed from your system."
-  fi
+    if [[ $delgroup =~ ^[Yy]$ ]]; then
+        sudo groupdel "$Group"
+        echo ""
+        echo "Group '$Group' has been removed from your system."
+    else
+        echo ""
+        echo "Group '$Group' will not be removed from your system."
+    fi
 fi
 
 # Remove the application directory

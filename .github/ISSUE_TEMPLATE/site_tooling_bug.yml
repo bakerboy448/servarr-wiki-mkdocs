@@ -1,0 +1,63 @@
+name: Site / tooling bug
+description: MkDocs build, theme, conversion, sync scripts, or CI/deploy issues
+title: "[tooling] "
+labels: ["bug", "tooling"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for problems with **this repository's tooling** (MkDocs, conversion, workflows, Cloudflare/GitHub Pages), not factual wiki text.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - MkDocs build / serve
+        - Theme / CSS / navigation
+        - WikiJS → MkDocs conversion (`scripts/wikijs_to_mkdocs.py`)
+        - Upstream sync (`scripts/sync_upstream_wiki.sh`)
+        - Pre-commit / lint
+        - GitHub Actions / PR preview
+        - Cloudflare Pages deploy
+        - Other tooling
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, and how you ran the command.
+      placeholder: "Ubuntu 24.04, Python 3.12, `mkdocs build`"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      render: markdown
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: Include command output or CI run URL.
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: extras
+    attributes:
+      label: Logs / links
+      description: Paste relevant logs (trim secrets). Link PRs or Actions runs if applicable.
+      render: markdown

@@ -5,6 +5,7 @@ It is possible to run multiple instances of Whisparr. This is typically done whe
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)
 - [Docker Multiple Instances](#docker-multi)
+{.links-list}
 
 The following requirements should be noted:
 
@@ -63,9 +64,9 @@ may have to change your paths here.
         - Delay: 120000 ms
         (2 minutes, can be longer if update fails to complete in time)
 
-> Note that **Arguments** points to the *new* folder created in step 1.
-This is crucial, as it keeps all the data files from both instances in
 !!! warning
+    Note that **Arguments** points to the *new* folder created in step 1.
+    This is crucial, as it keeps all the data files from both instances in
     separate locations.
 
 1. Click *Install service*. The window should close and the service
@@ -92,7 +93,7 @@ This is crucial, as it keeps all the data files from both instances in
 
 - Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 - Start Whisparr-4k (Service or Tray App)
-- Open up Whisparr-4k and Navigate within the app to [Settings => General => Host](../../whisparr/settings.md#host)
+- Open up Whisparr-4k and Navigate within the app to [Settings => General => Host](../settings.md#host)
 - Change `Port Number` from `6969` to a different port e.g. `6970` so Whisparr and Whisparr4k do not conflict
 - You should now be able to start both apps
 - Continue to [Dealing with Updates](#dealing-with-updates)
@@ -103,9 +104,9 @@ This is crucial, as it keeps all the data files from both instances in
   - In config.xml change update branch to `<Branch>nonexistent</Branch>`
 - If one Whisparr instance is updated, both instances will shutdown and only the updated one will start again. To fix this, you will have to manually start the other instance, or you may want to look into using the below powershell script to address the problem.
 
-> Configuring the [NSSM Exit Action](#creating-whisparr-4k-service) correctly should allow Whisparr to update and restart multiple instances with no additional scripts.
-If the restart delay is not configured by default it will restart the instance immediately.
 !!! info
+    Configuring the [NSSM Exit Action](#creating-whisparr-4k-service) correctly should allow Whisparr to update and restart multiple instances with no additional scripts.
+    If the restart delay is not configured by default it will restart the instance immediately.
     This can prevent updates from being applied and can result in the following error `Whisparr was restarted prematurely by external process.`
 
 #### Windows Port Checker and Restarter PowerShell Script

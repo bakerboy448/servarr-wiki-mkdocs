@@ -8,6 +8,7 @@ tags:
   - guide
   - whisparr
 ---
+
 # Windows
 
 Whisparr is supported natively on Windows. Whisparr can be installed on Windows as Windows Service or system tray application.
@@ -29,6 +30,7 @@ It's therefore advisable to install Whisparr as a system tray application if the
 
 - [Windows x64 Installer](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
 - [Windows x32 Installer](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
+{.links-list}
 
 !!! info
     It is possible to install Whisparr manually using the [x64 .zip download](https://whisparr.servarr.com/v1/update/nightly/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.

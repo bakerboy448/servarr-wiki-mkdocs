@@ -9,6 +9,7 @@ tags:
   - guide
   - installation
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -35,7 +36,7 @@ tags:
 > This page is still in progress and not complete. Contributions are welcome
 
 !!! info
-    For a more detailed breakdown of all the settings, check [Sonarr =>Settings](../sonarr/settings.md)
+    For a more detailed breakdown of all the settings, check [Sonarr =>Settings](settings.md)
 
 In this guide we will try to explain the basic setup you need to do to get started with Sonarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
@@ -92,7 +93,7 @@ Don’t forget to save your changes!
 
 `Settings` => `Profiles`
 
-We recommend you to create your own profiles and only select the Quality Sources you actually want. However, there are several prefilled quality profiles available to choose from as well, if one of those fits. If you need more information about Profiles, please see the [appropriate wiki page](../sonarr/settings.md#profiles) for that section.
+We recommend you to create your own profiles and only select the Quality Sources you actually want. However, there are several prefilled quality profiles available to choose from as well, if one of those fits. If you need more information about Profiles, please see the [appropriate wiki page](settings.md#profiles) for that section.
 
 # Indexers
 
@@ -111,7 +112,7 @@ Most torrent trackers require [Prowlarr](../prowlarr.md) or Jackett to be used i
 Add at least one indexer in order for Sonarr to work properly.
 
 !!! info
-    See the [settings page](../sonarr/settings.md#indexers) and at the [More Info (Supported)](../sonarr/supported.md#indexers) page for this section for more information.
+    See the [settings page](settings.md#indexers) and at the [More Info (Supported)](supported.md#indexers) page for this section for more information.
 
 # Download Clients
 
@@ -120,7 +121,7 @@ Add at least one indexer in order for Sonarr to work properly.
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
 !!! info
-    See the [settings page](../sonarr/settings.md#download-clients), at the [More Info (Supported)](../sonarr/supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+    See the [settings page](settings.md#download-clients), at the [More Info (Supported)](supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 === "Usenet"
 
@@ -147,9 +148,10 @@ Downloading and importing is where most people experience issues. From a high le
 
 # How to import your existing organized media library
 
-> Note that Sonarr does not regularly search for Episodes.  See the FAQ Entry for details to understand how Sonarr works.
 !!! info
-    [How does Sonarr find episodes?](../sonarr/faq.md#how-does-sonarr-find-episodes)
+    Note that Sonarr does not regularly search for Episodes.  See the FAQ Entry for details to understand how Sonarr works.
+    [How does Sonarr find episodes?](faq.md#how-does-sonarr-find-episodes)
+
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 Coming soon - Contributions Welcome
@@ -170,7 +172,7 @@ Library Import is only to be used on an existing organized library and shall not
 ### No match found
 
 1. Search the series name or TVDbId in the series selection box
-1. See [this FAQ entry](../sonarr/faq.md#why-can-i-not-add-a-series) if the series cannot be found
+1. See [this FAQ entry](faq.md#why-can-i-not-add-a-series) if the series cannot be found
 
 ### Fix faulty folder name after import
 
@@ -180,7 +182,7 @@ Library Import is only to be used on an existing organized library and shall not
 
 # Add New Series
 
-[Refer to the Library Page for additional information](../sonarr/library.md#add-new)
+[Refer to the Library Page for additional information](library.md#add-new)
 
 # Import Episodes
 

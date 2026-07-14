@@ -5,6 +5,7 @@ tags:
   - readarr
   - troubleshooting
 ---
+
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.
@@ -100,6 +101,7 @@ Do you need help? That's okay, everyone needs help sometimes. You can get real t
 
 - [:fontawesome-brands-discord:&emsp;Discord *Official Readarr Discord*](https://readarr.com/discord)
 - [:fontawesome-brands-reddit:&emsp;Reddit *Official Readarr Subreddit*](https://reddit.com/r/readarr)
+{.links-list}
 
 But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Readarr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](../docker-guide.md) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](../docker-guide.md#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
@@ -111,6 +113,7 @@ It is likely beneficial to also review the Common Troubleshooting problems:
 
 - [Downloads and Importing Common Problems](#common-problems)
 - [Searching Indexers and Trackers Common Problems](#common-problems-1)
+{.links-list}
 
 If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
@@ -144,7 +147,7 @@ To provide good and useful logs for sharing:
 
 - When using [0bin](https://0bin.net/), be sure to disable colorization and do not burn after reading.
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
-- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](../readarr/appdata-directory.md) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](appdata-directory.md) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
 ```none
 
@@ -159,14 +162,14 @@ To provide good and useful logs for sharing:
 
 ## Standard Logs Location
 
-The log files are located in Readarr's [Appdata Directory](../readarr/appdata-directory.md), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
+The log files are located in Readarr's [Appdata Directory](appdata-directory.md), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
 !!! info
     Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
 ## Update Logs Location
 
-The update log files are located in Readarr's [Appdata Directory](../readarr/appdata-directory.md), inside the UpdateLogs/ folder.
+The update log files are located in Readarr's [Appdata Directory](appdata-directory.md), inside the UpdateLogs/ folder.
 
 ## Sharing Logs
 
@@ -204,7 +207,7 @@ We do everything we can to prevent issues when upgrading, but if they do occur t
 
 ## Determine the issue
 
-- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](../readarr/settings.md#logging) and [Log Files](../readarr/system.md#log-files) to find them and increase the log level.
+- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](settings.md#logging) and [Log Files](system.md#log-files) to find them and increase the log level.
 - The most frequently seen issue is that the system the app is installed on messed with the `/tmp` directory and deleted critical \*Arr files during the upgrade thus causing both the upgrade and rollback to fail. In this case, simply reinstall in-place over the existing borked installation.
 
 ### Migration Issue
@@ -286,11 +289,11 @@ Readarr talks to you download client via it's API and accesses it via the client
 
 ### SSL in use and incorrectly configured
 
-Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](../readarr/faq.md#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
+Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](faq.md#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
 
 ### Can’t see share on Windows
 
-The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](../readarr/faq.md#why-cant-i-see-my-files-on-a-remote-server) for details.
+The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](faq.md#why-cant-i-see-my-files-on-a-remote-server) for details.
 
 ### Mapped network drives are not reliable
 
@@ -312,7 +315,7 @@ Logs will look like
 
 Thus `/volume3/data` does not exist within Readarr's container or is not accessible.
 
-- [Settings => Download Clients => Remote Path Mappings](../readarr/settings.md#remote-path-mappings)
+- [Settings => Download Clients => Remote Path Mappings](settings.md#remote-path-mappings)
 - A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
 - Generally, a remote path map is only required if your download client is on Linux when \*Arr is on Windows or vice versa. A remote path map is also possibly needed if mixing Docker and Native clients or if using a remote server.
 - A remote path map is a DUMB search/replace (where it finds the REMOTE value, replace it with LOCAL value for the specified Host).
@@ -377,9 +380,9 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 
 - The download client should download into a folder accessible by \*Arr and that is not your root/library folder; should import from that separate download folder into your Library folder.
 - You should never download directly into your root folder. You also should not use your root folder as the download client's completed folder or incomplete folder.
-- [**This will also cause a healthcheck in System as well**](../readarr/system.md#downloading-into-root-folder)
+- [**This will also cause a healthcheck in System as well**](system.md#downloading-into-root-folder)
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the \*Arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](../readarr/settings.md#root-folders)
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](settings.md#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
@@ -426,7 +429,7 @@ This can also occur if you have a release in your download client but that media
 
 ### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Readarr => System => Status](../readarr/system.md#status).
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Readarr => System => Status](system.md#status).
 
 ### The request timed out
 
@@ -576,7 +579,7 @@ These are some of the common errors you may see when adding an indexer
 
 ### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Readarr => System => Status](../readarr/system.md#status).
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Readarr => System => Status](system.md#status).
 
 ### The request timed out
 
@@ -612,4 +615,4 @@ This indicates that there is a problem with the metadata server. If the error is
 
 Sometimes you can still add an author by the `author:authorID` search method when you get this error.
 
-See [Readarr Status](../readarr/status.md) for more information.
+See [Readarr Status](status.md) for more information.

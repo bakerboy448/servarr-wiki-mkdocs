@@ -2,17 +2,18 @@
 title: Sonarr FAQ
 description: Sonarr Frequently Asked Questions
 ---
+
 !!! info
-    For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](../sonarr/faq-v4.md)
+    For Sonarr v4 specific FAQ entries - Please see the [Sonarr v4 FAQ](faq-v4.md)
 
 # Sonarr Basics
 
 ## How does Sonarr find episodes
 
-- Sonarr does *not* regularly search for episode files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted episodes/newly uploaded releases, then compares that with its list of episodes that are missing or need to be upgraded. Any matches are downloaded. This lets Sonarr cover a library of *any size* with just 24-100 queries per day (RSS interval of 15-60 minutes). If you understand this, you will realize that it only covers the *future* though.
+- Sonarr does *not* regularly search for episode files that are missing or have not met their quality goals. Instead, it fairly frequently queries your indexers and trackers for *all* the newly posted episodes/newly uploaded releases, then compares that with its list of episodes that are missing or need to be upgraded. Any matches are downloaded. This lets Sonarr cover a library of *any size* with just 10-144 queries per day (RSS interval of 10-120 minutes). If you understand this, you will realize that it only covers the *future* though.
 - So how do you deal with the present and past? When you're adding a show, you will need to set the correct path, profile and monitoring status then use the Start search for missing checkbox. If the show has had no episodes and hasn't been released yet, you do not need to initiate a search.
 - Put another way, Sonarr will only find releases that are newly uploaded to your indexers. It will not actively try to find releases uploaded in the past.
-- If you've already added the show, but now you want to search for it, you have a few choices. You can go to the show's page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](../sonarr/wanted.md) tab and search from there.
+- If you've already added the show, but now you want to search for it, you have a few choices. You can go to the show's page and use the search button, which will do a search and then automatically pick episode(s). You can search individual episodes or seasons automatically or manually. Or you can go to the [Wanted](wanted.md) tab and search from there.
 - If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn't been too long Sonarr will be able to process the releases it would have missed and avoid you needing to perform a search for the missed episodes.
 
 ### Instances When Auto Searching Does Occur
@@ -47,7 +48,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 1. Size
 
 !!! warning
-    REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](../sonarr/settings.md#file-management) and use [TRaSH's Repack/Proper Custom Format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#repackproper) with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/)
+    REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality. [Set Media Management => File Management `Download Proper & Repacks` to "Do Not Prefer"](settings.md#file-management) and use [TRaSH's Repack/Proper Custom Format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#repackproper) with a positive score as suggested by [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles/)
 
 !!! info
     \* Use Custom Formats and TRaSH Guide's [season pack custom format](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#season-pack) with a score greater than zero to prefer season packs.
@@ -73,7 +74,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 
 - Find the location of the AppData directory for Sonarr
   - Via the Sonarr UI go to System => About
-  - [Sonarr Appdata Directory](../sonarr/appdata-directory.md)
+  - [Sonarr Appdata Directory](appdata-directory.md)
 - Stop Sonarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -97,7 +98,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 - Re-install Sonarr (if applicable / not already installed)
 - Find the location of the AppData directory for Sonarr
   - Running Sonarr once and via the UI go to System => About
-  - [Sonarr Appdata Directory](../sonarr/appdata-directory.md)
+  - [Sonarr Appdata Directory](appdata-directory.md)
 - Stop Sonarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -112,7 +113,7 @@ Active searching (via the indexer's API) is only done in the below situations. N
 - Re-install Sonarr (if applicable / not already installed)
 - Find the location of the AppData directory for Sonarr
   - Running Sonarr once and via the UI go to System => About
-  - [Sonarr Appdata Directory](../sonarr/appdata-directory.md)
+  - [Sonarr Appdata Directory](appdata-directory.md)
 - Stop Sonarr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -141,9 +142,9 @@ chmod -R 0644 *
 {#help-i-have-forgotten-my-password}
 
 !!! info
-    Authentication is now mandatory in v4 of Sonarr and the `AuthenticationMethod` type `None` is no longer valid - please see this [v4 FAQ - Forced Authentication](../sonarr/faq-v4.md#forced-authentication)
+    Authentication is now mandatory in v4 of Sonarr and the `AuthenticationMethod` type `None` is no longer valid - please see this [v4 FAQ - Forced Authentication](faq-v4.md#forced-authentication)
 
-To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](../sonarr/appdata-directory.md)
+To disable authentication (to reset your forgotten username or password) you will need need to edit `config.xml` which will be inside the [Sonarr Appdata Directory](appdata-directory.md)
 
 1. Stop Sonarr
 1. Open config.xml in a text editor
@@ -215,7 +216,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - Please note that not all indexers support season/episode (standard) searches.
 - Series types can be modified from Mass Editor or from `Edit` when viewing a series. Note that the series type is selectable at import.
 
-- If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](../sonarr/settings.md#indexers)
+- If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](settings.md#indexers)
 
 ### Series Types
 
@@ -228,7 +229,7 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 Below are some example release names for each show type. The specific differentiating piece is noted in bold.
 
 !!! info
-    If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](../sonarr/settings.md#indexers)
+    If **Anime** Series Type is used - it is [possible to also have your indexer searched with the standard type as well.](settings.md#indexers)
 
 #### Daily
 
@@ -348,6 +349,7 @@ If you have adjusted your Series Name format after Sonarr has already created so
 
 - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
 - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+{.links-list}
 
 ### Problematic Shows
 
@@ -361,12 +363,14 @@ If you have adjusted your Series Name format after Sonarr has already created so
   - If you have an indexer / release groups with Season 19 episodes, please submit them via the scene mapping form and ensure they are not already requested
     - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
     - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+   {.links-list}
 - Paw Patrol {#problemshow-pawpatrol}
   - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
 - Pokémon {#problemshow-pokemon}
   - On TheXem, [Pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDb and not XEM mapping, please submit them via the scene mapping form and ensure they are not already requested
     - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
     - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+   {.links-list}
 - La Casa de Papel / Money Heist  {#problemshow-moneyheist}
   - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information can be found on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
 - Kamen Rider {#problemshow-kamenrider}
@@ -488,11 +492,11 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## I got a pop-up that said config.xml was corrupt, what now
 
-- Sonarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Sonarr back online, you will need to delete `.xml` in your [AppData Folder](../sonarr/appdata-directory.md) once deleted start Sonarr and it will start on the default port (8989), you should now re-configure any settings you configured on the General Settings page.
+- Sonarr was unable to read your config file on start-up as it became corrupted somehow. In order to get Sonarr back online, you will need to delete `.xml` in your [AppData Folder](appdata-directory.md) once deleted start Sonarr and it will start on the default port (8989), you should now re-configure any settings you configured on the General Settings page.
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
-- If you're on non-Windows, most likely your mono's certificates are out of date and need to be synced. [See the section about mono ssl in the installation article for details](../sonarr/installation.md#mono-ssl-issues)
+- If you're on non-Windows, most likely your mono's certificates are out of date and need to be synced. [See the section about mono ssl in the installation article for details](installation.md#mono-ssl-issues)
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
   - Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
   - If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
@@ -616,7 +620,7 @@ chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
 
 ## Query Successful - No Results Returned
 
-- [See this troubleshooting entry](../sonarr/troubleshooting.md#query-successful-no-results-returned)
+- [See this troubleshooting entry](troubleshooting.md#query-successful-no-results-returned)
 
 ## Why didn't Sonarr grab an episode I was expecting
 
@@ -625,20 +629,20 @@ First, make sure you read and understand the section above called ["How does Son
 1. Click the 'Manual Search' icon next to the episode listing in Sonarr. Are there any results? If no, then either Sonarr is having trouble communicating with your indexers, or your indexers do not have the episode, or the episode is improperly named/categorized on the indexer.
 1. **If there are results from step 1**, check next to them for red exclamation point icon. Hover over the icon to see why that release is not a candidate for automatic downloads. If every result has the icon, then no automatic download will occur.
 1. **If there is at least one valid manual search result from step 2**, then an automatic download should have happened. If it didn't, the most likely reason is a temporary communication problem preventing an RSS Sync from your indexer. It is recommended to have several indexers set up for best results.
-1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This can be caused by a number of reasons, for example the release is not properly tagged on your indexer causing it to not be returned to sonarr in an automatic search. This [troubleshooting entry](../sonarr/troubleshooting.md#searches-indexers-and-trackers) provides some tips on how to determine the cause. Having several indexers active can help solve this by providing more sources to the same content.
+1. **If there is no manual result from a show, but you can find it when you browse your indexer's website** - This can be caused by a number of reasons, for example the release is not properly tagged on your indexer causing it to not be returned to sonarr in an automatic search. This [troubleshooting entry](troubleshooting.md#searches-indexers-and-trackers) provides some tips on how to determine the cause. Having several indexers active can help solve this by providing more sources to the same content.
 
 ## Found matching series via grab history, but release was matched to series by ID. Automatic import is not possible
 
-- See [this troubleshooting entry](../sonarr/troubleshooting.md#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
+- See [this troubleshooting entry](troubleshooting.md#found-matching-series-via-grab-history-but-series-was-matched-by-series-id-automatic-import-is-not-possible)
 
 ## TBA Episode Naming
 
-- On TVDb, when episode names are unknown they'll be titled TBA and there is a cache on the TVDb API. The [Episode Title Required setting](../sonarr/settings.md#importing) in Sonarr controls import behavior when the title is TBA, but after 48 hours from series airing the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
+- On TVDb, when episode names are unknown they'll be titled TBA and there is a cache on the TVDb API. The [Episode Title Required setting](settings.md#importing) in Sonarr controls import behavior when the title is TBA, but after 48 hours from series airing the release will be imported even if the title is still TBA. There is also no automatic follow up renaming of TBA titled files. Note that the TBA timer is calculated from the episode airdate and time, not from when you've grabbed it or the upload time.
 - Details on TVDb and Skyhook's cache can be found in the FAQ [TVDb is updated why isn't Sonarr?](#tvdb-is-updated-why-isnt-sonarr)
 
 ## Sonarr says Unknown Series on Searches or Imports
 
-- See the [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](../sonarr/faq.md#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) entry
+- See the [Why can't Sonarr import episode files for series X? / Why can't Sonarr find releases for series X?](faq.md#why-cant-sonarr-import-episode-files-for-series-x-why-cant-sonarr-find-releases-for-series-x) entry
 
 ## Jackett's /all Endpoint
 
@@ -667,7 +671,7 @@ First, make sure you read and understand the section above called ["How does Son
 ## Jackett shows more results than Sonarr when manually searching
 
 - Check your configured categories for your tracker in Sonarr
-- This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](../sonarr/troubleshooting.md#searches-indexers-and-trackers).
+- This is usually due to Sonarr searching Jackett differently than you do. [See this troubleshooting article for further information](troubleshooting.md#searches-indexers-and-trackers).
 
 ## Finding Cookies
 
@@ -684,7 +688,7 @@ First, make sure you read and understand the section above called ["How does Son
 
 ## Forced Authentication
 
-- In Sonarr v4 (beta) authentication is mandatory. Please see the [Sonarr v4 FAQ - Forced Authentication](../sonarr/faq-v4.md#forced-authentication) for details
+- In Sonarr v4 authentication is mandatory. Please see the [Sonarr v4 FAQ - Forced Authentication](faq-v4.md#forced-authentication) for details
 
 ## Removing Completed Torrents
 
@@ -696,6 +700,6 @@ First, make sure you read and understand the section above called ["How does Son
 
 - Note that time or ratio settings here are set On Grab. They do not impact torrents you already have in your download client. They also do not work with a post-import category setting.
 
-- Some torrent clients do not have this ability. See [this page](../sonarr/settings.md#torrent-client-remove-download-compatibility) for details for your client.
+- Some torrent clients do not have this ability. See [this page](settings.md#torrent-client-remove-download-compatibility) for details for your client.
 
 - Setting extremely low seed times or ratios will not work, and is also poor torrent etiquette. You should **always** seed to at least a 1.0x ratio, or a couple of hours, for public trackers and whatever the requirements are for private trackers (plus a little buffer, because the way your download client calculates time and ratio is slightly different than your private tracker, and you don't want a hit and run for being a few minutes short of your requirement). Seeding for less than 1.0x ratio will mean that we will not provide you support in discord.

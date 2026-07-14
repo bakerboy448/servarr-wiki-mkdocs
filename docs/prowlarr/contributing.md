@@ -8,13 +8,14 @@ tags:
   - guide
   - setup
 ---
+
 # How to Contribute
 
 We're always looking for people to help make Prowlarr even better, there are a number of ways to contribute.
 
 # Documentation
 
-Setup guides, [FAQ](../prowlarr/faq.md), the more information we have on the [wiki](https://wiki.servarr.com/prowlarr) the better.
+Setup guides, [FAQ](faq.md), the more information we have on the [wiki](https://wiki.servarr.com/prowlarr) the better.
 
 # Development
 
@@ -31,6 +32,7 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 - [Git](https://git-scm.com/downloads)
 - The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
   - **20** (any minor or patch version within this)
+{.grid-list}
 
 !!! warning
     The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other versions.
@@ -44,8 +46,8 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 1. Fork Prowlarr
 1. Clone the repository into your development machine. [_info_](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
-> Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
 !!! info
+    Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
     For css changes `yarn stylelint-windows --fix`
 
 ### Building the frontend
@@ -115,8 +117,8 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 ### Cardigann (YML) Indexers
 
 - Cardigann and YML Indexers are to be pull requested to the [Prowlarr Indexer Repository](https://github.com/prowlarr/indexers) against the `master` branch
-- For Cardigann/YML Indexers details please see [the definition and description of the Prowlarr Cardigann yml format](../prowlarr/cardigann-yml-definition.md)
-- For testing custom yml definitions please see [the custom yml section in the Indexer page](../prowlarr/indexers.md#adding-a-custom-yml-definition)
+- For Cardigann/YML Indexers details please see [the definition and description of the Prowlarr Cardigann yml format](cardigann-yml-definition.md)
+- For testing custom yml definitions please see [the custom yml section in the Indexer page](indexers.md#adding-a-custom-yml-definition)
 
 ## Pull Requesting
 
@@ -176,7 +178,7 @@ Adding translations to Prowlarr requires two steps
 
 ## Adding Translation Strings in Code
 
-The English translation, `src/NzbDrone.Core/Localization/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
+The English translation, `src/NzbDrone.Core/Localization/Core/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
 
 !!! warning
     PRs for translation of log messages will not be accepted

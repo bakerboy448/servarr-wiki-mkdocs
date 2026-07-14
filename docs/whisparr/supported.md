@@ -1,7 +1,8 @@
 ---
 title: Whisparr Supported
-description: Whisparr supported download clients, indexers, and notifications
+description:
 ---
+
 # Table of Contents
 
 !!! warning
@@ -14,40 +15,40 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 {#downloadclient}
 
 - Aria2 {#aria2}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Deluge {#deluge}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Download Station {#torrentdownloadstation}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Download Station {#usenetdownloadstation}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Flood {#flood}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Hadouken {#hadouken}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - NZBGet {#nzbget}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - NZBVortex {#nzbvortex}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Pneumatic {#pneumatic}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - qBittorrent {#qbittorrent}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - rTorrent {#rtorrent}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - SABnzbd {#sabnzbd}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Torrent Blackhole {#torrentblackhole}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Transmission {#transmission}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - Usenet Blackhole {#usenetblackhole}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 - uTorrent {#utorrent}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
   - Due to utorrent being adware and formerly spyware, it is not recommended. Most users use Qbittorrent.
 - Vuze {#vuze}
-  - [Refer to the Settings Page](../whisparr/settings.md#download-clients)
+  - [Refer to the Settings Page](settings.md#download-clients)
 
 # Indexers
 
@@ -56,46 +57,46 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 ## Usenet
 
 - Newznab {#newznab}
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
   - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
   - Indexer Applications like [Prowlarr](../prowlarr.md) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
 - omgwtfnzbs {#omgwtfnzbs}
   - A private usenet indexer.
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 
 ## Torrents
 
 - FileList {#filelist}
   - Private Tracker
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - HDBits {#hdbits}
   - Private Tracker
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - IP Torrents {#iptorrents}
   - Private Tracker
-!!! info
-    IP Torrents' native implementation does not support Search
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  !!! info
+      IP Torrents' native implementation does not support Search
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - Nyaa {#nyaa}
   - Torrent Tracker for Japanese Media (Anime) exclusively.
-!!! info
-    Nyaa frowns upon automation and frequently will ban your IP.
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  !!! info
+      Nyaa frowns upon automation and frequently will ban your IP.
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - Pass The Popcorn (PTP) {#passthepopcorn}
   - Private Tracker
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
   - Generic torrent RSS feed parser.
-!!! info
-    The RSS feed must contain a `pubdate`. The release size is recommended as well.
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  !!! info
+      The RSS feed must contain a `pubdate`. The release size is recommended as well.
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - TorrentPotato {#torrentpotato}
   - A legacy Couchpotato pre-Torznab format.
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 - Torznab {#torznab}
   - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
   - This is primarily only supported by [Prowlarr](../prowlarr.md) and [Jackett](https://github.com/Jackett/Jackett)
-  - [Refer to the Settings Page](../whisparr/settings.md#indexer-settings)
+  - [Refer to the Settings Page](settings.md#indexer-settings)
 
 !!! warning
     Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
@@ -108,7 +109,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
-  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](../whisparr/custom-scripts.md) for more details.
+  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](custom-scripts.md) for more details.
 - Discord {#discord}
   - By far one of the most common ways to push notifications of actions happening on your Whisparr
 - Email {#email}

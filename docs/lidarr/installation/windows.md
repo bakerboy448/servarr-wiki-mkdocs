@@ -6,6 +6,7 @@ tags:
   - lidarr
   - windows
 ---
+
 # Windows
 
 Lidarr is supported natively on Windows. Lidarr can be installed on Windows as Windows Service or system tray application.
@@ -27,6 +28,7 @@ It's therefore advisable to install Lidarr as a system tray application if the u
 
 - [Windows x64 Installer](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true)
 - [Windows x32 Installer](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true)
+{.links-list}
 
 !!! info
     It is possible to install Lidarr manually using the [x64 .zip download](https://lidarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64). However in that case you must manually deal with dependencies, installation and permissions.

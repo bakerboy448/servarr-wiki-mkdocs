@@ -8,6 +8,7 @@ tags:
   - setup
   - sonarr
 ---
+
 # Multiple Instances
 
 It is possible to run multiple instances of Sonarr. This is typically done when one wants a 4K and 1080p copy of a series.
@@ -16,6 +17,7 @@ It is possible to run multiple instances of Sonarr. This is typically done when 
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)
 - [Docker Multiple Instances](#docker-multi)
+{.links-list}
 
 The following requirements should be noted:
 
@@ -70,9 +72,9 @@ may have to change your paths here.
       - Startup directory: `C:\ProgramData\Sonarr\bin`
       - Arguments: `-data=C:\ProgramData\Sonarr-4K`
 
-> Note that **Arguments** points to the *new* folder created in step 1.
-This is crucial, as it keeps all the data files from both instances in
 !!! warning
+    Note that **Arguments** points to the *new* folder created in step 1.
+    This is crucial, as it keeps all the data files from both instances in
     separate locations.
 
 1. Click *Install service*. The window should close and the service
@@ -99,7 +101,7 @@ This is crucial, as it keeps all the data files from both instances in
 
 - Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 - Start Sonarr-4k (Service or Tray App)
-- Open up Sonarr-4k and Navigate within the app to [Settings => General => Host](../../sonarr/settings.md#host)
+- Open up Sonarr-4k and Navigate within the app to [Settings => General => Host](../settings.md#host)
 - Change `Port Number` from `8989` to a different port e.g. `7879` so Sonarr and Sonarr4k do not conflict
 - You should now be able to start both apps
 - Continue to [Dealing with Updates](#dealing-with-updates)

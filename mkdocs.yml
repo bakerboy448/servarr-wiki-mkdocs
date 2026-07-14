@@ -1,9 +1,9 @@
 site_name: Servarr Wiki
 site_description: Official wiki for Lidarr, Radarr, Readarr, Sonarr, Whisparr, and Prowlarr
 site_author: Servarr
-site_url: https://wiki.servarr.com/
-repo_url: https://github.com/Servarr/Wiki
-repo_name: Servarr/Wiki
+site_url: https://bakerboy448.github.io/servarr-wiki-mkdocs/
+repo_url: https://github.com/bakerboy448/servarr-wiki-mkdocs
+repo_name: bakerboy448/servarr-wiki-mkdocs
 edit_uri: edit/main/docs/
 
 # TODO: Re-enable strict mode after fixing broken anchors in these high-priority files:

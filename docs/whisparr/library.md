@@ -9,6 +9,7 @@ tags:
   - organization
   - content
 ---
+
 # Movies
 
 ## Library View
@@ -75,9 +76,9 @@ tags:
 ![whisparr-add-new-empty.png](../assets/whisparr/whisparr-add-new-empty.png)
 
 - If you're looking to add a new movie, this is the page that you will be wanting to do that from.
-  - You'll find the how-to in our [Quick Start Guide](../whisparr/quick-start-guide.md).
-- Below the search field, you can also find the Import Existing Movies button. If that is the case for you, you can find great information on that also in our [Quick Start Guide](../whisparr/quick-start-guide.md).
-- If you get an error of "path is already configured", [see this FAQ entry](../whisparr/faq.md#path-is-already-configured-for-an-existing-movie).
+  - You'll find the how-to in our [Quick Start Guide](quick-start-guide.md).
+- Below the search field, you can also find the Import Existing Movies button. If that is the case for you, you can find great information on that also in our [Quick Start Guide](quick-start-guide.md).
+- If you get an error of "path is already configured", [see this FAQ entry](faq.md#path-is-already-configured-for-an-existing-movie).
 
 # Library Import
 
@@ -88,7 +89,7 @@ Library Import allows you to import existing organized movies and each movie's f
   - Importing files from a download folder
   - Adding or Importing one or more files that are not properly named and organized in their own Movie Folder within your root folder or a folder you wish to add as a root folder
   - Any other uses that are not adding a movie to Whisparr and importing the movie and its file from the root (library) folder that was input to Library Import
-- If you get an error of "path is already configured", [see this FAQ entry](../whisparr/faq.md#path-is-already-configured-for-an-existing-movie).
+- If you get an error of "path is already configured", [see this FAQ entry](faq.md#path-is-already-configured-for-an-existing-movie).
 
 !!! warning
     It is required that movie folders and files have the year in their name to be imported and parsed.
@@ -123,9 +124,9 @@ Discover shows recommended Movies
 ![whisparr-discover-empty.png](../assets/whisparr/whisparr-discover-empty.png)
 
 - Chances are that your Discover recommendations will be sparse if you have a new installation with few or no movies. You will need to add library content to fuel recommendation direction. You have several options:
-  1. Click on the [Add New Movie](../whisparr/library.md#add-new) button to add movies by hand.
-  1. Click on the [Import Existing Library](../whisparr/library.md#library-import) button to import an existing library.
-  1. Click on the [Add Lists](../whisparr/settings.md#lists) button to add a list to Whisparr. Additional information about lists can be found at the [More Info (Supported)](../whisparr/faq.md#what-are-lists-and-what-can-they-do-for-me) page for this section.
+  1. Click on the [Add New Movie](library.md#add-new) button to add movies by hand.
+  1. Click on the [Import Existing Library](library.md#library-import) button to import an existing library.
+  1. Click on the [Add Lists](settings.md#lists) button to add a list to Whisparr. Additional information about lists can be found at the [More Info (Supported)](faq.md#what-are-lists-and-what-can-they-do-for-me) page for this section.
 
 ![whisparr-discover-add-new-movies.png](../assets/whisparr/whisparr-discover-add-new-movies.png)
 
@@ -134,8 +135,8 @@ Discover shows recommended Movies
     1. Here you can select all the movies that are on this list if you're feeling extra crazy
     1. Select what root path you'd like for these movies to go to once they are imported
     1. Select what availability you'd like the movie to have before it is grabbed
-    1. Select any quality profiles you have already built ([More info](../whisparr/settings.md#quality-profiles))
+    1. Select any quality profiles you have already built ([More info](settings.md#quality-profiles))
     1. Do you want Whisparr to monitor this movie for any upgrades in quality?
     1. Would you like Whisparr to automatically search for this movie after you add it?
-    1. Do you want Whisparr to exclude these movies from any lists that would be imported? ([More info](../whisparr/settings.md#list-exclusion))
+    1. Do you want Whisparr to exclude these movies from any lists that would be imported? ([More info](settings.md#list-exclusion))
     1. Finally, Add the movie to your library.

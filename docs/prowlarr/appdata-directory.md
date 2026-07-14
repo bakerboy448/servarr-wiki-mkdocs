@@ -9,6 +9,7 @@ tags:
   - files
   - backup
 ---
+
 !!! info
     Below are the default paths for the application data directory
 

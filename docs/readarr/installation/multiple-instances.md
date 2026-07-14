@@ -32,6 +32,7 @@ Note that you can configure Readarr to use a second Readarr as a list. This is h
 - [Linux Multiple Instances](#linux-multi)
 - [MacOS Multiple Instances](#macos-multi)
 - [Docker Multiple Instances](#docker-multi)
+{.links-list}
 
 The following requirements should be noted:
 
@@ -86,9 +87,9 @@ may have to change your paths here.
       - Startup directory: `C:\ProgramData\Readarr\bin`
       - Arguments: `-data=C:\ProgramData\Readarr-audiobooks`
 
-> Note that **Arguments** points to the *new* folder created in step 1.
-This is crucial, as it keeps all the data files from both instances in
 !!! warning
+    Note that **Arguments** points to the *new* folder created in step 1.
+    This is crucial, as it keeps all the data files from both instances in
     separate locations.
 
 1. Click *Install service*. The window should close and the service
@@ -115,7 +116,7 @@ This is crucial, as it keeps all the data files from both instances in
 
 - Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 - Start Readarr-audiobooks (Service or Tray App)
-- Open up Readarr-audiobooks and Navigate within the app to [Settings => General => Host](../../readarr/settings.md#host)
+- Open up Readarr-audiobooks and Navigate within the app to [Settings => General => Host](../settings.md#host)
 - Change `Port Number` from `8787` to a different port e.g. `8879` so Readarr and Readarr-audiobooks do not conflict
 - You should now be able to start both apps
 - Continue to [Dealing with Updates](#dealing-with-updates)

@@ -8,17 +8,18 @@ tags:
   - guide
   - setup
 ---
+
 # How to Contribute
 
 We're always looking for people to help make Sonarr even better, there are a number of ways to contribute.
 
 # Documentation
 
-Setup guides, [FAQ](../sonarr/faq.md), the more information we have on the [wiki](https://wiki.servarr.com/sonarr) the better.
+Setup guides, [FAQ](faq.md), the more information we have on the [wiki](https://wiki.servarr.com/sonarr) the better.
 
 # Development
 
-Sonarr is written in C# (backend) and JS (frontend). The backend is built on the .NET8 framework, while the frontend utilizes Reactjs.
+Sonarr is written in C# (backend) and JS (frontend). The backend is built on the .NET6 framework, while the frontend utilizes Reactjs.
 
 ## Tools required
 
@@ -31,6 +32,7 @@ Sonarr is written in C# (backend) and JS (frontend). The backend is built on the
 - [Git](https://git-scm.com/downloads)
 - The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
   - **20** (any minor or patch version within this)
+{.grid-list}
 
 !!! warning
     The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other versions.
@@ -44,8 +46,8 @@ Sonarr is written in C# (backend) and JS (frontend). The backend is built on the
 1. Fork Sonarr
 1. Clone the repository into your development machine. [*info*](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
-> Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
 !!! info
+    Be sure to run lint `yarn lint --fix` on your code for any front end changes before committing.
     For css changes `yarn stylelint-windows --fix`
 
 ### Building the frontend
@@ -162,7 +164,7 @@ Adding translations to Sonarr requires two steps
 
 ## Adding Translation Strings in Code
 
-The English translation, `src/NzbDrone.Core/Localization/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
+The English translation, `src/NzbDrone.Core/Localization/Core/en.json`, serves as the source for all other translations and is managed on GitHub repo. When adding a new string to either the UI or backend a key must also be added to `en.json` along with the default value in English. This key may then be consumed as follows:
 
 !!! warning
     PRs for translation of log messages will not be accepted

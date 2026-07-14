@@ -5,6 +5,7 @@ tags:
   - installation
   - radarr
 ---
+
 # Multiple Instances
 
 It is possible to run multiple instances of Radarr. This is typically done when one wants a 4K and 1080p copy of a movie. Note that you can (and probably should) [review TRaSH's guide and configure Radarr to use a second Radarr as a list](https://trash-guides.info/Radarr/Tips/Sync-2-radarr-sonarr/). This is helpful if you wish to keep both in sync.
@@ -27,6 +28,7 @@ The following requirements should be noted:
 - [Windows Multiple Instances](#windows-multi)
 - [Linux Multiple Instances](#linux-multi)
 - [Docker Multiple Instances](#docker-multi)
+{.links-list}
 
 ## Windows Multiple Instances
 
@@ -77,9 +79,9 @@ may have to change your paths here.
         - Delay: 120000 ms
         (2 minutes, can be longer if update fails to complete in time)
 
-> Note that **Arguments** points to the *new* folder created in step 1.
-This is crucial, as it keeps all the data files from both instances in
 !!! warning
+    Note that **Arguments** points to the *new* folder created in step 1.
+    This is crucial, as it keeps all the data files from both instances in
     separate locations.
 
 3. Click *Install service*. The window should close and the service
@@ -116,10 +118,11 @@ This is crucial, as it keeps all the data files from both instances in
 
 1. Regardless of if you used the Service Method or the Tray App: Stop both services and both Apps
 2. Start Radarr-4k (Service or Tray App)
-3. Open up Radarr-4k and Navigate within the app to [Settings => General => Host](../../radarr/settings.md#host)
+3. Open up Radarr-4k and Navigate within the app to [Settings => General => Host](../settings.md#host)
 4. Change `Port Number` from `7878` to a different port e.g. `7879` so Radarr and Radarr4k do not conflict
-5. You should now be able to start both apps
-6. Continue to [Dealing with Updates](#dealing-with-updates)
+5. Change the `Instance Name` to something that identifies this instance, e.g. `Radarr-4K`. The instance name must contain `Radarr` (case-insensitive). This name is shown in the browser tab and used in notifications.
+6. You should now be able to start both apps
+7. Continue to [Dealing with Updates](#dealing-with-updates)
 
 ### Dealing with Updates
 
@@ -128,9 +131,9 @@ This is crucial, as it keeps all the data files from both instances in
 - In config.xml change update branch to `<Branch>nonexistent</Branch>`
 - If one Radarr instance is updated, both instances will shutdown and only the updated one will start again. To fix this, you will have to manually start the other instance, or you may want to look into using the below powershell script to address the problem.
 
-> Configuring the [NSSM Exit Action](#creating-radarr-4k-service) correctly should allow Radarr to update and restart multiple instances with no additional scripts.
-If the restart delay is not configured by default it will restart the instance immediately.
 !!! info
+    Configuring the [NSSM Exit Action](#creating-radarr-4k-service) correctly should allow Radarr to update and restart multiple instances with no additional scripts.
+    If the restart delay is not configured by default it will restart the instance immediately.
     This can prevent updates from being applied and can result in the following error `Radarr was restarted prematurely by external process.`
 
 #### Windows Port Checker and Restarter PowerShell Script

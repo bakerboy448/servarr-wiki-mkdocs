@@ -8,6 +8,7 @@ tags:
   - guide
   - sonarr
 ---
+
 # Windows
 
 Sonarr is supported natively on Windows. Sonarr can be installed on Windows as Windows Service or system tray application.
@@ -30,6 +31,7 @@ It's therefore advisable to install Sonarr as a system tray application if the u
 
 - [Windows x64 Installer](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x64&installer=true)
 - [Windows x32 Installer](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x86&installer=true)
+{.links-list}
 
 !!! info
     It is possible to install Sonarr manually using the [x64 .zip download](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x64) or [x32 .zip download](https://services.sonarr.tv/v1/download/main/latest?version=4&os=windows&arch=x86). However in that case you must manually deal with dependencies, installation and permissions.

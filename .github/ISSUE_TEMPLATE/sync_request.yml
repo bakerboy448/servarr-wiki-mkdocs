@@ -1,0 +1,37 @@
+name: Upstream sync request
+description: Request a pull of newer Servarr/Wiki content into this MkDocs fork
+title: "[sync] "
+labels: ["sync", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask maintainers to sync from [Servarr/Wiki](https://github.com/Servarr/Wiki) and re-run the WikiJS → MkDocs conversion.
+
+        ```bash
+        git fetch upstream master
+        bash scripts/sync_upstream_wiki.sh upstream/master
+        mkdocs build
+        ```
+  - type: input
+    id: upstream_ref
+    attributes:
+      label: Upstream ref (optional)
+      description: Commit SHA, tag, or leave blank for `upstream/master`.
+      placeholder: "e.g. 578505a7 or leave empty"
+  - type: textarea
+    id: why
+    attributes:
+      label: Why sync now?
+      description: Notable upstream changes you need here (links to commits/PRs welcome).
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Notes
+      options:
+        - label: I checked that the change exists upstream
+          required: false
+        - label: I am okay with conversion/formatting diffs in `docs/`
+          required: false

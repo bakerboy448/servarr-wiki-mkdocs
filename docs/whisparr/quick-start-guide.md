@@ -9,6 +9,7 @@ tags:
   - guide
   - installation
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -23,8 +24,8 @@ tags:
 - [Quality](#quality)
 - [Indexers](#indexers)
 - [Download Clients](#download-clients)
-  - [Usenet](#usenet)
-  - [BitTorrent](#bittorrent)
+    - [Usenet](#usenet)
+    - [BitTorrent](#bittorrent)
 - [How to import your existing organized media library](#how-to-import-your-existing-organized-media-library)
   - [Import movies](#import-movies)
   - [Importing Existing Media](#importing-existing-media)
@@ -37,7 +38,7 @@ tags:
 > This page is still in progress and not complete. Contributions are welcome
 
 !!! info
-    For a more detailed breakdown of all the settings, check [Whisparr =>Settings](../whisparr/settings.md)
+    For a more detailed breakdown of all the settings, check [Whisparr =>Settings](settings.md)
 
 In this guide we will try to explain the basic setup you need to do to get started with Whisparr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
@@ -118,11 +119,11 @@ Here you’ll be allowed to configure profiles for which you can have for the qu
 
 We recommend you to create your own profiles and only select the Quality Sources and Languages you actually want.
 
-For more information on foreign titles and languages see [this FAQ entry](../whisparr/faq.md#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
+For more information on foreign titles and languages see [this FAQ entry](faq.md#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
 
 !!! info
-    More info at [Settings => Profiles](../whisparr/settings.md#profiles).
-    To see what the difference is between the Quality Sources look [at our Quality Definitions](../whisparr/settings.md#qualities-defined).
+    More info at [Settings => Profiles](settings.md#profiles).
+    To see what the difference is between the Quality Sources look [at our Quality Definitions](settings.md#qualities-defined).
 
 # Quality
 
@@ -156,7 +157,7 @@ There are two sections here: Usenet and Torrents. Based upon what download clien
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and to have read & write access to the location the download client reports files the client downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
 !!! info
-    See the [settings page](../whisparr/settings.md#download-clients), at the [More Info (Supported)](../whisparr/supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+    See the [settings page](settings.md#download-clients), at the [More Info (Supported)](supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 === "Usenet"
 
@@ -183,9 +184,10 @@ Downloading and importing is where most people experience issues. From a high le
 
 # How to import your existing organized media library
 
-> Note that Whisparr does not regularly search for Movies.  See these two FAQ Entries for details to understand how Whisparr works.
 !!! info
-    [How does Whisparr find movies?](../whisparr/faq.md#how-does-whisparr-find-movies) and [How does Whisparr work?](../whisparr/faq.md#how-does-whisparr-work)
+    Note that Whisparr does not regularly search for Movies.  See these two FAQ Entries for details to understand how Whisparr works.
+    [How does Whisparr find movies?](faq.md#how-does-whisparr-find-movies) and [How does Whisparr work?](faq.md#how-does-whisparr-work)
+
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 `Movies`
@@ -204,7 +206,7 @@ Select the root path you added earlier [in the root folders section.](#root-fold
 
 ![Whisparr-importing-existing.png](../assets/whisparr/Whisparr-importing-existing.png)
 
-Depending how well you got your existing movie folders named Whisparr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directory follow this [guide](../whisparr/tips-and-tricks.md#creating-a-folder-for-each-movie)
+Depending how well you got your existing movie folders named Whisparr will try to match it with the correct movie as seen at Nr.5 If all your movies are in a single directory follow this [guide](tips-and-tricks.md#creating-a-folder-for-each-movie)
 
 1. Your movie folder name.
 1. How you want the movie to be added to Whisparr.
@@ -304,10 +306,9 @@ When you see the movie you want click on it.
 1. Whisparr will add the Root Folder you’ve setup [in the root folders section](#root-folders)
 2. How you want the movie to be added to Whisparr.
 
-!!! info
-    - Yes = Whisparr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
-    - No = Whisparr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.
-    >
+    !!! info
+        - Yes = Whisparr will monitor the RSS feed for the movie in your library that you do not have (yet) or upgrade the existing movie to a better quality.
+        - No = Whisparr will not monitor the RSS feed, any upgrades or new movies will be ignored and have to be manually done.
 3. When Whisparr shall consider a movie is available.
 
     > - **Announced**: Whisparr shall consider movies available as soon as they are added to Whisparr. This setting is *recommended* if you have good private trackers that do not have fakes.
@@ -316,7 +317,7 @@ When you see the movie you want click on it.
 
 4. Select your preferred profile to use.
 5. Here you can add certain tags for advanced usage.
-6. Make sure you enable this if you want Whisparr search for the missing movie when added to Whisparr [more info](../whisparr/faq.md#how-does-whisparr-find-movies)
+6. Make sure you enable this if you want Whisparr search for the missing movie when added to Whisparr [more info](faq.md#how-does-whisparr-find-movies)
 7. Click on `Add Movie` to add the movie to Whisparr.
 
-- If you get an error of "path is already configured" [see this FAQ entry](../whisparr/faq.md#path-is-already-configured-for-an-existing-mqovie)
+- If you get an error of "path is already configured" [see this FAQ entry](faq.md#path-is-already-configured-for-an-existing-mqovie)

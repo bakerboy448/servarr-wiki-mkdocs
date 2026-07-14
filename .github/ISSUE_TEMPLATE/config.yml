@@ -1,1 +1,11 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Servarr/Wiki (upstream content)
+    url: https://github.com/Servarr/Wiki
+    about: Factual wiki corrections usually belong upstream. Open issues there when the source Markdown is wrong.
+  - name: Official Servarr Wiki
+    url: https://wiki.servarr.com/
+    about: Published WikiJS site at wiki.servarr.com.
+  - name: Servarr Discord
+    url: https://wiki.servarr.com/discord
+    about: Community support and quick questions for the *Arr apps.

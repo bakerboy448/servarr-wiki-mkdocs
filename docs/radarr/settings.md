@@ -9,6 +9,7 @@ tags:
   - quality
   - indexers
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -103,7 +104,7 @@ tags:
   - [Style](#style)
   - [Language](#language)
 
-This page will go through all the settings available in Radarr and how they work. This is not meant to be a comprehensive "how to set up Radarr." If you want that, please use the [Quick Start](../radarr/quick-start-guide.md) page instead.
+This page will go through all the settings available in Radarr and how they work. This is not meant to be a comprehensive "how to set up Radarr." If you want that, please use the [Quick Start](quick-start-guide.md) page instead.
 
 # Menu options
 
@@ -150,12 +151,14 @@ Also, note that for each individual settings page, there are some options at the
 
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 - Colon (`:`) Replacement - This setting will dictate how Radarr handles colons within the movie file. This is only available when Replace Illegal Characters is enabled.
+  - Smart Replace - Uses a dash when a colon is followed by a space (`": "` → `" - "`), and a dash otherwise (`":"` → `"-"`). This is the default.
+    - Example: Movie,The.mkv => Movie - The.mkv
   - Delete - Self explanatory
     - Example: Movie,The.mkv => MovieThe.mkv
   - Replace with Dash - Removes the colon and adds a dash in its place
     - Example: Movie,The.mkv => Movie-The.mkv
-  - Replace with Space - Removes the colon and adds a space in its place
-    - Example: Movie,The.mkv => Movie The.mkv
+  - Replace with Space Dash - Removes the colon and adds a space dash in its place
+    - Example: Movie,The.mkv => Movie -The.mkv
   - Replace with Space Dash Space - self explanatory
     - Example: Movie,The.mkv => Movie - The.mkv
 
@@ -180,10 +183,13 @@ Also, note that for each individual settings page, there are some options at the
 - `{Movie Title:DE}` = Titel des Films
 - `{Movie CleanTitle}` = The Movies Title!
 - `{Movie TitleThe}` = Movie's Title!, The
+- `{Movie CleanTitleThe}` = Movies Title!, The
 - `{Movie OriginalTitle}` = Τίτλος ταινίας
 - `{Movie CleanOriginalTitle}` = Τίτλος ταινίας
 - `{Movie TitleFirstCharacter}` = S
 - `{Movie Collection}` = The Movie Collection
+- `{Movie CollectionThe}` = Movie Collection, The
+- `{Movie CleanCollectionThe}` = Movie Collection, The
 - `{Movie Certification}` = R
 - `{Release Year}` = 2009
 
@@ -200,7 +206,7 @@ Also, note that for each individual settings page, there are some options at the
 ### Movie IDs
 
 - `{ImdbId}` = tt12345
-- `{Tmdbid}` = 123456
+- `{TmdbId}` = 123456
 
 !!! info
     Imdb Tags used in Plex naming format will conditionally hide when value is blank `{imdb-{ImdbId}}`
@@ -209,6 +215,8 @@ Also, note that for each individual settings page, there are some options at the
 
 - `{Quality Full}` = HDTV 720p Proper
 - `{Quality Title}` = HDTV 720p
+- `{Quality Proper}` = Proper
+- `{Quality Real}` = REAL
 
 ### Media Info
 
@@ -217,15 +225,19 @@ Also, note that for each individual settings page, there are some options at the
 - `{MediaInfo AudioCodec}` = DTS
 - `{MediaInfo AudioChannels}` = 5.1
 - `{MediaInfo AudioLanguages}` = \[EN+DE\]
+- `{MediaInfo AudioLanguagesAll}` = \[EN+DE\]
 - `{MediaInfo SubtitleLanguages}` = \[EN\]
+- `{MediaInfo SubtitleLanguagesAll}` = \[EN\]
 - `{MediaInfo VideoCodec}` = x264
 - `{MediaInfo VideoBitDepth}` = 8
 - `{MediaInfo VideoDynamicRange}` = HDR
 - `{MediaInfo VideoDynamicRangeType}` = DV HDR10
+- `{MediaInfo 3D}` = 3D
 
-> `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` do not currently support a `:EN+DE` suffix allowed in Sonarr to filter the languages included in the filename. There is an open [issue](https://github.com/Radarr/Radarr/issues/4710) regarding this.
 !!! info
+    `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` do not currently support a `:EN+DE` suffix allowed in Sonarr to filter the languages included in the filename. There is an open [issue](https://github.com/Radarr/Radarr/issues/4710) regarding this.
     ~~`MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.~~
+
 !!! info
     `MediaInfo VideoDynamicRangeType` will give possible values of: DV, DV HDR10, DV HLG, DV SDR, HDR10, HDR10Plus, HLG, and PQ.
 
@@ -243,9 +255,13 @@ Also, note that for each individual settings page, there are some options at the
 ### Custom Formats (Naming)
 
 - `{Custom Formats}` = Surround Sound x264
+- `{Custom Format:FormatName}` = AMZN
 
 !!! info
-    Custom Formats will be the literal custom format name and require the Custom Format is enabled to be included in renaming
+    `{Custom Formats}` outputs every Custom Format that matched the release and has "Include Custom Format when Renaming" enabled, separated by spaces. Add an optional name filter to narrow it: `{Custom Formats:NameA,NameB}` includes only those formats, while `{Custom Formats:-NameA,NameB}` excludes them.
+
+!!! info
+    `{Custom Format:FormatName}` outputs a single Custom Format by name. `FormatName` is a placeholder — replace it with the exact name of the Custom Format you want, for example `{Custom Format:AMZN}`. It outputs nothing unless a Custom Format with that name exists, matched the release, and has "Include Custom Format when Renaming" enabled.
 
 ### Original
 
@@ -255,8 +271,7 @@ Also, note that for each individual settings page, there are some options at the
 !!! info
     `Original Title` is the release name and it is what is suggested to be used.
 
-!!! warning
-    `Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yuti`.
+>`Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yuti`.
 
 ## Movie Folder Format
 
@@ -268,16 +283,20 @@ Here you will set the naming convention for the folder that contains the season 
 - `{Movie Title:DE}` = FileTitle
 - `{Movie CleanTitle}` = Movie Title
 - `{Movie TitleThe}` = Movie Title, The
+- `{Movie CleanTitleThe}` = Movie Title, The
 - `{Movie OriginalTitle}` = Τίτλος ταινίας
+- `{Movie CleanOriginalTitle}` = Τίτλος ταινίας
 - `{Movie TitleFirstCharacter}` = S
 - `{Movie Collection}` = The Movie Collection
+- `{Movie CollectionThe}` = Movie Collection, The
+- `{Movie CleanCollectionThe}` = Movie Collection, The
 - `{Movie Certification}` = R
 - `{Release Year}` = 2009
 
 ### Movie ID
 
 - `{ImdbId}` = tt12345
-- `{Tmdbid}` = 123456
+- `{TmdbId}` = 123456
 
 ## Folders
 
@@ -540,7 +559,7 @@ Profiles is where Custom Format Scores are configured.
     - [Custom format Flag stays after transcoding into other Codec and don't ignore scene name original file title](https://github.com/Radarr/Radarr/issues/7896)
 - Edition - This tag is matched against any Editions Radarr may parse. You can put any value Radarr will try to match that against what it parsed (case-insensitive).
 - Language - This language is matched against any language(s) Radarr parses. All languages previously selectable in profiles work here.
-- [Indexer Flag](../radarr/settings.md#indexer-flags) - This tag is matched against any Indexer Flags that Radarr may parse.
+- [Indexer Flag](settings.md#indexer-flags) - This tag is matched against any Indexer Flags that Radarr may parse.
 - Source - The source where a release was ripped from (e.g. BLURAY).
 - Resolution - The resolution parsed from either the release name or mediainfo (if available).
 - Quality Modifier - Quality Modifier sets things like Telescene, Telesync, Remux, Regional. It disambiguates a given source and resolution pair when there are multiple quality (source) types that can apply.
@@ -571,11 +590,11 @@ Profiles is where Custom Format Scores are configured.
 # Indexers
 
 !!! info
-    Information on supported indexers can be found at the [More Info (Supported)](../radarr/supported.md#indexers) page for this section
+    Information on supported indexers can be found at the [More Info (Supported)](supported.md#indexers) page for this section
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info (Supported)](../radarr/supported.md#indexers) page
+- A list of supported indexers is located at the [More Info (Supported)](supported.md#indexers) page
 
 ### Indexer Settings
 
@@ -654,7 +673,7 @@ Profiles is where Custom Format Scores are configured.
   - This is helpful to delay searching for a release to give the community time to perform the best encodes.
   - Typically, a Movie Availability of `Released` with a delay of `-21` or `-14` is suggested.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Radarr find movies?](../radarr/faq.md#how-does-radarr-find-movies) for a better understanding of how RSS Sync will help you
+  - Please see [How does Radarr find movies?](faq.md#how-does-radarr-find-movies) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -665,7 +684,7 @@ Profiles is where Custom Format Scores are configured.
 # Download Clients
 
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](../radarr/supported.md#download-clients) page for this section
+    Information on supported download clients can be found at the [More Info (Supported)](supported.md#download-clients) page for this section
 
 ## Overview
 
@@ -695,7 +714,7 @@ Click on `Settings =>`Download Clients`, and then click the <kb>+</kb> to add a 
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info (Supported)](../radarr/supported.md#download-clients) page
+- A list of supported download clients is located at the [More Info (Supported)](supported.md#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -815,7 +834,7 @@ If you download using a BitTorrent client, the process is slightly different:
 # Import Lists
 
 !!! info
-    Information on supported list types can be found at the [More Info (Supported)](../radarr/supported.md#lists) page for this section
+    Information on supported list types can be found at the [More Info (Supported)](supported.md#lists) page for this section
 
 ## Lists
 
@@ -845,7 +864,7 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 # Connect
 
 !!! info
-    Information on supported connection types can be found at the [More Info (Supported)](../radarr/supported.md#notifications) page for this section
+    Information on supported connection types can be found at the [More Info (Supported)](supported.md#notifications) page for this section
 
 ## Connections
 
@@ -853,13 +872,13 @@ Connections are how you want Radarr to communicate with the outside world.
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info (Supported)](../radarr/supported.md#notifications) page
+- A list of supported notifications & connections is located at the [More Info (Supported)](supported.md#notifications) page
 
 ## Connection Triggers
 
 - On Grab - Be notified when movies are available for download and has been sent to a download client
-- On Import - Be notified when movies are successfully imported
-- On Upgrade - Be notified when movies are upgraded to a better quality
+- On File Import - Be notified when movies are successfully imported
+- On File Upgrade - Be notified when movies are upgraded to a better quality
 - On Rename - Be notified when movies are renamed
 - On Movie Added - Be notified when movies are added to Radarr's library to manage or monitor
 - On Movie Delete - Be notified when movies are deleted
@@ -867,7 +886,9 @@ Connections are how you want Radarr to communicate with the outside world.
 - On Movie File Delete For Upgrade - Be notified when movie files are deleted for upgrades
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
+- On Health Restored - Be notified when a previously reported health issue is resolved
 - On Application Update - Be notified when Radarr gets updated to a new version
+- On Manual Interaction Required - Be notified when manual interaction is required for a download
 
 # Metadata
 
@@ -878,7 +899,7 @@ Connections are how you want Radarr to communicate with the outside world.
 ## Metadata Consumers
 
 !!! info
-    Information on supported metadata consumers can be found at the [More Info (Supported)](../radarr/supported.md#metadata) page for this section
+    Information on supported metadata consumers can be found at the [More Info (Supported)](supported.md#metadata) page for this section
 
 Here you can select the type of metadata that will be consumed by your media player
 
@@ -931,7 +952,7 @@ Kodi will be one of the most commonly used options here if that is the software 
 ## Security
 
 - Authentication - How would you like to authenticate to access your Radarr instance
-  - As of Radarr v5, Authentication is now mandatory. [See the Mandatory Auth FAQ entry for details.](../radarr/faq.md#forced-authentication)
+  - As of Radarr v5, Authentication is now mandatory. [See the Mandatory Auth FAQ entry for details.](faq.md#forced-authentication)
   - ~~None - You have no authentication to access your Radarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web~~
   - Basic (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password
   - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
@@ -968,7 +989,7 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Radarr that you are running on.
-  - [Please see this FAQ entry for more information](../radarr/faq.md#how-do-i-update-radarr)
+  - [Please see this FAQ entry for more information](faq.md#how-do-i-update-radarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Radarr built-in updater or a script
   - Built-in - Use Radarr's own updater

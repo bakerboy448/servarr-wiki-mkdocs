@@ -9,6 +9,7 @@ tags:
   - status
   - whisparr
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -84,7 +85,7 @@ tags:
 
 #### Branch is not a valid release branch
 
-- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](../whisparr/faq.md#how-do-i-update-whisparr).
+- The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](faq.md#how-do-i-update-whisparr).
 
 #### Currently installed SQLite version is not supported
 
@@ -96,7 +97,7 @@ tags:
 #### Database Failed Integrity Check
 
 - Your database(s) failed a [SQLite Pragma Integrity Check](https://www.sqlite.org/pragma.html#pragma_integrity_check) and have some corruption.
-- If `Whisparr.db` is corrupt [please see this FAQ Entry](../whisparr/faq.md#i-am-getting-an-error-database-disk-image-is-malformed)
+- If `Whisparr.db` is corrupt [please see this FAQ Entry](faq.md#i-am-getting-an-error-database-disk-image-is-malformed)
 - If `logs.db` is corrupt: Stop Whisparr, delete `logs.db` and any `logs.wal` files.
 - If both are corrupt, review the respective processes above.
 
@@ -253,7 +254,7 @@ Note: you will also need to add the websocket directive to your whisparr configu
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder.
 - This frequently causes issues - including data loss - and should not be done. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder.
 - Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the *arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](../whisparr/settings.md#root-folders)
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](settings.md#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 - Review our [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves) Guide](https://trash-guides.info/hardlinks/) for more information on the correct and optimal path setup. Note that the concepts apply for docker and non-docker
@@ -430,7 +431,7 @@ Note: you will also need to add the websocket directive to your whisparr configu
 # Backup
 
 !!! info
-    If you're looking for how to back/restore your Whisparr instance click [the Whisparr backup FAQ](../whisparr/faq.md).
+    If you're looking for how to back/restore your Whisparr instance click [the Whisparr backup FAQ](faq.md).
 
 - Within the Backup section you will be presented with previous backups (unless you have a fresh install that hasn't made any backups).
 

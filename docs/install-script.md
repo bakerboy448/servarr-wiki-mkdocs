@@ -10,6 +10,7 @@ tags:
   - prowlarr
   - whisparr
 ---
+
 # Servarr Installation Script
 
 This is a community created and community supported **unofficial** [script to handle installation of Servarr Apps (Lidarr/Prowlarr/Radarr/Whisparr)](https://github.com/Servarr/Wiki/blob/master/servarr/servarr-install-script.sh) on a Linux operating system - commonly targeted towards Debian & Ubuntu or similar distributions.

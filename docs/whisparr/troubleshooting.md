@@ -9,6 +9,7 @@ tags:
   - debugging
   - errors
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -84,6 +85,7 @@ Do you need help? That's okay, everyone needs help sometimes. You can get real t
 
 - [:fontawesome-brands-discord:&emsp;Discord *Official Whisparr Discord*](https://whisparr.com/discord)
 - [:fontawesome-brands-reddit:&emsp;Reddit *Official Whisparr Subreddit*](https://reddit.com/r/whisparr)
+{.links-list}
 
 But before you go there and post, be sure your request for help is the best it can be. Clearly describe the problem and briefly describe your setup, including things like your OS/distribution, version of .NET, version of Whisparr, download client and its version. **If you are using [Docker](https://www.docker.com/) please run through [Docker Guide](../docker-guide.md) first as that will solve common and frequent path/permissions issues. Otherwise please have a [docker compose](../docker-guide.md#docker-compose) handy. [How to Generate a Docker Compose](https://trash-guides.info/compose)** Tell us about what you've tried already, what you've looked at. Use the [Logging and Log Files section](#logging-and-log-files) to turn your logging up to trace, recreate the issue, pastebin the relevant context and include a link to it in your post. Maybe even include some screen shots to highlight the issue.
 
@@ -98,6 +100,7 @@ It is likely beneficial to also review the Common Troubleshooting problems:
 
 - [Downloads and Importing Common Problems](#common-problems)
 - [Searching Indexers and Trackers Common Problems](#common-problems-1)
+{.links-list}
 
 If you're asked for debug logs your logs will contain `debug` and if you're asked for trace logs your logs will contain `trace`. If the logs you are providing do not contain either then they are not the logs requested.
 
@@ -132,7 +135,7 @@ To provide good and useful logs for sharing:
 - When using [0bin](https://0bin.net/), be sure to disable colorization and do not burn after reading.
 
 - Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use N++. You can use the Notepad++ "Find in Files" function to search old log files as needed.
-- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](../whisparr/appdata-directory.md) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- **Unix Only:** Alternatively If you're looking for a specific entry in an old log file but aren't sure which one you can use grep. For example if you want to find information about the movie/show/book/song/indexer "Shooter" you can run the following command `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt` If your [Appdata Directory](appdata-directory.md) is in your home folder then you'd run: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
 
 ```none
 
@@ -147,14 +150,14 @@ To provide good and useful logs for sharing:
 
 ## Standard Logs Location
 
-The log files are located in Whisparr's [Appdata Directory](../whisparr/appdata-directory.md), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
+The log files are located in Whisparr's [Appdata Directory](appdata-directory.md), inside the logs/ folder. You can also access the log files from the UI at System => Logs => Files.
 
 !!! info
     Note: The Logs ("Events") Table in the UI is not the same as the log files and isn't as useful. If you're asked for logs, please copy/paste from the log files and not the table.
 
 ## Update Logs Location
 
-The update log files are located in Whisparr's [Appdata Directory](../whisparr/appdata-directory.md), inside the UpdateLogs/ folder.
+The update log files are located in Whisparr's [Appdata Directory](appdata-directory.md), inside the UpdateLogs/ folder.
 
 ## Sharing Logs
 
@@ -193,11 +196,11 @@ When Trace log level is enabled, additional `whisparr.trace.txt` rolling log fil
 
 ## Determine the issue
 
-- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](../whisparr/settings.md#logging) and [Log Files](../whisparr/system.md#log-files) to find them and increase the log level.
+- The best place to look when the application will not start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those do not have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](settings.md#logging) and [Log Files](system.md#log-files) to find them and increase the log level.
 
 ### Database disk image is malformed
 
-- See our [FAQ Entry](../whisparr/faq.md#i-am-getting-an-error-database-disk-image-is-malformed)
+- See our [FAQ Entry](faq.md#i-am-getting-an-error-database-disk-image-is-malformed)
 
 ### Migration Issue
 
@@ -214,7 +217,7 @@ While Processing: "ALTER TABLE "QualityProfiles" ADD COLUMN "Items" TEXT"
 
 ### UI Migration Issues
 
-- If you switch between [unsupported versions/branches](../whisparr/faq.md#can-i-switch-between-branches) then you may experience a migration issue that looks like the below.  The solution is to [go back to the branch or higher version you were on previously](../whisparr/faq.md#how-do-i-update-whisparr), or [restore a back-up](../whisparr/faq.md#how-do-i-backuprestore-whisparr) for your current version.
+- If you switch between [unsupported versions/branches](faq.md#can-i-switch-between-branches) then you may experience a migration issue that looks like the below.  The solution is to [go back to the branch or higher version you were on previously](faq.md#how-do-i-update-whisparr), or [restore a back-up](faq.md#how-do-i-backuprestore-whisparr) for your current version.
 
 ![whisparr-migration-error-ui.png](../assets/whisparr/whisparr-migration-error-ui.png)
 
@@ -284,11 +287,11 @@ Whisparr talks to you download client via it's API and accesses it via the clien
 
 ### SSL in use and incorrectly configured
 
-Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](../whisparr/faq.md#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
+Ensure SSL encryption is not turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](faq.md#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
 
 ### Can’t see share on Windows
 
-The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](../whisparr/faq.md#why-cant-i-see-my-files-on-a-remote-server) for details.
+The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](faq.md#why-cant-i-see-my-files-on-a-remote-server) for details.
 
 ### Mapped network drives are not reliable
 
@@ -310,7 +313,7 @@ Logs will look like
 
 Thus `/volume3/data` does not exist within Whisparr's container or is not accessible.
 
-- [Settings => Download Clients => Remote Path Mappings](../whisparr/settings.md#remote-path-mappings)
+- [Settings => Download Clients => Remote Path Mappings](settings.md#remote-path-mappings)
 - A remote path mapping is used when your download client is reporting a path for completed data either on another server or in a way that \*Arr doesn't address that folder.
 - Generally, a remote path map is only required if your download client is on Linux when \*Arr is on Windows or vice versa. A remote path map is also possibly needed if mixing Docker and Native clients or if using a remote server.
 - A remote path map is a DUMB search/replace (where it finds the REMOTE value, replace it with LOCAL value for the specified Host).
@@ -375,9 +378,9 @@ Don’t forget to check permissions and ownership of the *source*. It is easy to
 
 - The download client should download into a folder accessible by \*Arr and that is not your root/library folder; should import from that separate download folder into your Library folder.
 - You should never download directly into your root folder. You also should not use your root folder as the download client's completed folder or incomplete folder.
-- [**This will also cause a healthcheck in System as well**](../whisparr/system.md#downloading-into-root-folder)
+- [**This will also cause a healthcheck in System as well**](system.md#downloading-into-root-folder)
 - Within the application, a root folder is defined as the configured media library folder. This is not the root folder of a mount. Your download client has an incomplete or complete (or is moving completed downloads) into your root (library) folder. This frequently causes issues and is not advised. To fix this change your download client so it is not placing downloads within your root folder. Note that 'placing' also includes if your download client category is set to your root folder or if NZBGet/SABnzbd have sort enabled and are sorting to your root folder. Please note that this check looks at all defined/configured root folders added not only root folders currently in use. In other words, the folder your download client downloads into or moves completed downloads to, should not be the same folder you have configured as your root/library/final media destination folder in the \*Arr application.
-- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](../whisparr/settings.md#root-folders)
+- Configured Root Folders (aka Library folders) can be found in [Settings => Media Management => Root Folders](settings.md#root-folders)
 - One example is if your downloads are going into `\data\downloads` then you have a root folder set as `\data\downloads`.
 - It is suggested to use paths like `\data\media\` for your root folder/library and `\data\downloads\` for your downloads.
 
@@ -582,7 +585,7 @@ If you have results on the site you can find that are not showing in Whisparr th
 - [Categories are incorrect - See Above](#wrong-categories)
 - An ID (IMDbId, TMDbId, etc.) based searched is being done and the Indexer does not have the releases correctly mapped to that ID. This is something only your indexer can solve. They need to ensure the release is mapped to the correct applicable ids.
 - Not searching how Whisparr is searching; It's highly likely the terms you are searching on the indexer is not how Whisparr is querying it. You can see how Whisparr is querying from the Trace Logs. Text based queries will generally be in the format of `q=words%20and%20things%20here`  this string is HTTP encoded and can be easily decoded using any HTML decoding/encoding tool online.
-- [See the FAQ for how Foreign Movie Titles are handled & when Whisparr would search them](../whisparr/faq.md#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
+- [See the FAQ for how Foreign Movie Titles are handled & when Whisparr would search them](faq.md#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
 
 ### Certificate validation
 
@@ -634,7 +637,7 @@ These are some of the common errors you may see when adding an indexer
 
 ### The underlying connection was closed: An unexpected error occurred on a send
 
-This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Whisparr => System => Status](../whisparr/system.md#status).
+This is caused by the indexer using a SSL protocol not supported by the current .NET Version found in [Whisparr => System => Status](system.md#status).
 
 ### The request timed out
 

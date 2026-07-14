@@ -9,30 +9,34 @@ tags:
   - configuration
   - whisparr
 ---
+
 # Whisparr and Postgres
 
 This document will go over the key points of migrating and setting up Postgres support in Whisparr.
 
-This guide was been created by the amazing [Roxedus](https://github.com/Roxedus).
+This guide was created by the amazing [Roxedus](https://github.com/Roxedus).
 
 !!! danger
     Postgres databases are NOT backed up by Whisparr, any backups must be implemented and maintained by the user
 
+!!! info
+    Whisparr connects to Postgres via [Npgsql](https://www.npgsql.org/) and supports all currently supported PostgreSQL versions (PostgreSQL 14 through 18). PostgreSQL 13 reached end-of-life in November 2025 and isn't recommended. This guide uses `postgres:17`. The SQLite-to-Postgres migration steps below were written against Postgres 14 and may need adjustment on newer majors; for Postgres 18 or later, start with a fresh database.
+
 ## Setting up Postgres
 
- First, we need a Postgres instance. This guide is written for usage of the `postgres:14` Docker image.
+ First, we need a Postgres instance. This guide is written for usage of the `postgres:17` Docker image.
 
-!!! danger
-    Do not even think about using the `latest` tag!
+ !!! danger
+     Do not even think about using the `latest` tag!
 
 ```bash
-docker create --name=postgres14 \
+docker create --name=postgres17 \
     -e POSTGRES_PASSWORD=qstick \
     -e POSTGRES_USER=qstick \
     -e POSTGRES_DB=whisparr-main \
     -p 5432:5432/tcp \
-    -v /path/to/appdata/postgres14:/var/lib/postgresql/data \
-    postgres:14
+    -v /path/to/appdata/postgres17:/var/lib/postgresql/data \
+    postgres:17
 ```
 
 ## Creation of database
@@ -47,7 +51,7 @@ Whisparr needs two databases, the default names of these are:
 
 Create the databases mentioned above using your favorite method - for example [pgAdmin](https://www.pgadmin.org/) or [Adminer](https://www.adminer.org/).
 
-You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](../whisparr/postgres-setup.md#schema-creation).
+You can give the databases any name you want but make sure `config.xml` file has the correct names. For further information see [schema creation](postgres-setup.md#schema-creation).
 
 ### Schema creation
 
@@ -57,7 +61,7 @@ You can give the databases any name you want but make sure `config.xml` file has
 <PostgresUser>qstick</PostgresUser>
 <PostgresPassword>qstick</PostgresPassword>
 <PostgresPort>5432</PostgresPort>
-<PostgresHost>postgres14</PostgresHost>
+<PostgresHost>postgres17</PostgresHost>
 ```
 
 If you want to specify a database name then should also include the following configuration:
@@ -90,9 +94,9 @@ Before starting a migration please ensure that you have run Whisparr against the
 1. Run the following commands:
 
 ```SQL
-DELETE FROM "Profiles"
-DELETE FROM "QualityDefinitions"
-DELETE FROM "DelayProfiles"
+DELETE FROM "Profiles";
+DELETE FROM "QualityDefinitions";
+DELETE FROM "DelayProfiles";
 ```
 
 1. Start the migration by using either of these options:

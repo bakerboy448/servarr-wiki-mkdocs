@@ -4,6 +4,7 @@ description: Quick start guide for the retired Readarr application
 tags:
   - readarr
 ---
+
 # Announcement: Retirement of Readarr
 
 We would like to announce that the [Readarr project](https://github.com/Readarr/Readarr) has been retired. This difficult decision was made due to a combination of factors: the project's metadata has become unusable, we no longer have the time to remake or repair it, and the community effort to transition to using Open Library as the source has stalled without much progress.
@@ -39,8 +40,8 @@ The Servarr Team
   - [Calibre Content Server (Optional)](#calibre-content-server-optional)
   - [Calibre Integration](#calibre-integration)
 - [Download Clients](#download-clients)
-  - [Usenet](#usenet)
-  - [BitTorrent](#bittorrent)
+    - [Usenet](#usenet)
+    - [BitTorrent](#bittorrent)
 - [How to import your existing organized media library](#how-to-import-your-existing-organized-media-library)
   - [Importing Existing Media](#importing-existing-media)
 - [Add New Books](#add-new-books)
@@ -50,7 +51,7 @@ The Servarr Team
 > This page is still in progress and not complete. Contributions are welcome
 
 !!! info
-    For a more detailed breakdown of all the settings, check [Readarr =>Settings](../readarr/settings.md)
+    For a more detailed breakdown of all the settings, check [Readarr =>Settings](settings.md)
 
 In this guide we will try to explain the basic setup you need to do to get started with Readarr. We're going to skip some options that you may see on the screen. If you want to dive deeper into those, please see the appropriate page in the FAQ and docs for a full explanation.
 
@@ -236,8 +237,8 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 - Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
 
 !!! warning
-    If you add an individual book, and select `None`\* for the [metadata profile](../readarr/settings.md#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
-    \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](../readarr/faq.md#metadata-profile-none-allowing-foreign-releases)**
+    If you add an individual book, and select `None`\* for the [metadata profile](settings.md#metadata-profiles), only that book will show up under the author when it's added. If you want other books for that author added, choose an appropriate metadata profile.
+    \* **Note that `None` does not apply any metadata filters and you may get unwanted foreign editions. To work around these [create a metadata profile as prescribed in the faq](faq.md#metadata-profile-none-allowing-foreign-releases)**
 
 # Download Clients
 
@@ -246,7 +247,7 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 Downloading and importing is where most people experience issues. From a high level perspective, the software needs to be able to communicate with your download client and have access to the files it downloads. There is a large variety of supported download clients and an even bigger variety of setups. This means that while there are some common setups there isn’t one right setup and everyone’s setup can be a little different. But there are many wrong setups.
 
 !!! info
-    See the [settings page](../readarr/settings.md#download-clients), at the [More Info (Supported)](../readarr/supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
+    See the [settings page](settings.md#download-clients), at the [More Info (Supported)](supported.md#download-clients) page for this section, and [TRaSH's Download Client Guides](https://trash-guides.info/Downloaders/) for more information.
 
 === "Usenet"
 
@@ -273,9 +274,10 @@ Downloading and importing is where most people experience issues. From a high le
 
 # How to import your existing organized media library
 
-> Note that Readarr does not regularly search for Books.  See these two FAQ Entries for details to understand how Readarr works.
 !!! info
-    [How does Readarr find books?](../readarr/faq.md#how-does-readarr-find-books) and [How does Readarr work?](../readarr/faq.md#how-does-readarr-work)
+    Note that Readarr does not regularly search for Books.  See these two FAQ Entries for details to understand how Readarr works.
+    [How does Readarr find books?](faq.md#how-does-readarr-find-books) and [How does Readarr work?](faq.md#how-does-readarr-work)
+
 After setting up your profiles/quality sizes and added your indexers and download client(s) it’s time to import your existing organized media library.
 
 Coming soon - Contributions Welcome
@@ -286,4 +288,4 @@ Coming soon - Contributions Welcome
 
 # Add New Books
 
-[Refer to the Library Page for additional information](../readarr/library.md#add-new)
+[Refer to the Library Page for additional information](library.md#add-new)

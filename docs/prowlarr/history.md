@@ -10,6 +10,7 @@ tags:
   - queries
   - monitoring
 ---
+
 This page will show you how to review and search your history, and the various settings available.
 
 # Opening History

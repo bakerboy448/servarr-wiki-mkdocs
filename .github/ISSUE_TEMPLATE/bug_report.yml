@@ -1,7 +1,14 @@
-name: Bug Report
-description: Report incorrect or outdated wiki content
-labels: [bug]
+name: Content bug
+description: Incorrect, outdated, broken, or missing wiki content in docs/
+title: "[content] "
+labels: ["bug", "content"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for problems with page **content**. Prefer fixing factual issues in [Servarr/Wiki](https://github.com/Servarr/Wiki) when the upstream Markdown is wrong.
+
+        For MkDocs build, theme, conversion, or CI problems, use **Site / tooling bug** instead.
   - type: dropdown
     id: app
     attributes:
@@ -14,14 +21,15 @@ body:
         - Sonarr
         - Whisparr
         - General / Multiple
+        - Site-wide (not app-specific)
     validations:
       required: true
   - type: input
     id: page
     attributes:
       label: Page URL or path
-      description: Link to the affected wiki page or file path.
-      placeholder: "e.g. https://wiki.servarr.com/radarr/settings or docs/radarr/settings.md"
+      description: Published URL and/or path under `docs/`.
+      placeholder: "e.g. docs/radarr/settings.md or https://wiki.servarr.com/radarr/settings"
     validations:
       required: true
   - type: dropdown
@@ -31,20 +39,39 @@ body:
       options:
         - Incorrect information
         - Outdated content
-        - Broken link
+        - Broken link / anchor
         - Missing information
-        - Formatting / rendering
+        - Screenshot / asset problem
+        - Formatting / rendering (MkDocs)
+    validations:
+      required: true
+  - type: dropdown
+    id: upstream
+    attributes:
+      label: Upstream status
+      description: Has this been checked against Servarr/Wiki?
+      options:
+        - Same issue exists upstream
+        - Only present in this MkDocs fork
+        - Not sure / not checked
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: What is wrong with the current content?
+      label: What's wrong?
+      description: Current wording/behavior and why it is incorrect.
+      placeholder: "On the Download Clients section, the docs say… but the app actually…"
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
       label: What should it say?
-      description: Provide the correct information if known.
+      description: Suggested correction, or a link to source-of-truth (app UI, GitHub source, Discord consensus).
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce / verify
+      description: Steps, app version, or screenshots that demonstrate the issue.
+      render: markdown

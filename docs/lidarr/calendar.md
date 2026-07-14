@@ -10,6 +10,7 @@ tags:
   - music
   - planning
 ---
+
 # Calendar
 
 The Calendar page shows album releases from artists in your library, laid out week by week. It's useful for seeing what's coming up and checking whether Lidarr already has files for a recent release.
@@ -20,9 +21,11 @@ Each release tile is color-coded to show its current status:
 
 | Color | Meaning |
 |---|---|
-| Green | Files on disk; Lidarr has this release. |
+| Green | All tracks downloaded; Lidarr has a complete copy of this release. |
 | Blue | Monitored and upcoming; the release date is in the future. |
-| Yellow/Orange | Monitored, released, and missing; past release date but no files yet. |
+| Purple | Currently downloading; the release is in the queue or was recently grabbed. |
+| Orange/Yellow | Partially downloaded; some but not all tracks are on disk. |
+| Red | Monitored, released, and missing; past release date but no files found. |
 | Grey | Unmonitored; Lidarr isn't looking for this release. |
 
 ## Navigation
@@ -57,8 +60,8 @@ The **Options** button opens the Calendar Options dialog, split into two section
 
 | Option | Default | Description |
 |---|---|---|
-| Collapse Multiple Albums | On | When multiple albums from the same artist release on the same day, collapse them into a single tile instead of showing each separately. |
-| Icon for Cutoff Unmet | On | Show a visual indicator on release tiles where files exist but the quality cutoff hasn't been met. |
+| Collapse Multiple Albums | Off | When more than one album from the same artist releases on the same day, collapse them into a single tile instead of showing each one. |
+| Icon for Cutoff Unmet | Off | Show a visual indicator on release tiles where files exist but the quality cutoff hasn't been met. |
 
 **Global** (apply across all browsers and users):
 

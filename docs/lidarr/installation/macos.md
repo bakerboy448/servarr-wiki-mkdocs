@@ -6,6 +6,7 @@ tags:
   - installation
   - macos
 ---
+
 # MacOS (OSX)
 
 {#OSX}

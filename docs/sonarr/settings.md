@@ -9,6 +9,7 @@ tags:
   - quality
   - indexers
 ---
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -98,7 +99,7 @@ tags:
   - [Dates](#dates)
   - [Style](#style)
 
-This page will go through all the settings available in Sonarr and how they work. This is not meant to be a comprehensive "How to set up Sonarr." Refer to the [Quick Start](../sonarr/quick-start-guide.md) page instead.
+This page will go through all the settings available in Sonarr and how they work. This is not meant to be a comprehensive "How to set up Sonarr." Refer to the [Quick Start](quick-start-guide.md) page instead.
 
 # Menu options
 
@@ -151,6 +152,14 @@ Also, note that for each individual settings page, there are some options at the
 - Replace Illegal Characters - If unchecked, Sonarr will remove them instead.
   - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 
+- Colon Replacement Format - Select how colons are handled in episode names
+  - Delete - Remove colons (e.g. `Series Title Part 1`)
+  - Dash - Replace with a dash (e.g. `Series Title - Part 1`)
+  - Space Dash - Replace with a space and a dash (e.g. `Series Title - Part 1`)
+  - Space Dash Space - Replace with a space, dash, and space (e.g. `Series Title - Part 1`)
+  - Smart - Replaces a colon followed by a space with ` - `, otherwise deletes the colon (Default)
+  - Custom - Use a custom replacement string
+
 ### Standard Episode Format
 
 Standard Episode Format - Set the naming convention for your Standard Series Type episodes. Click on the `?` icon to bring up the `File Name Tokens` dialog box.
@@ -169,18 +178,26 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 ### Series Naming
 
 - `{Series Title}` = The Series Name's Title!
-- `{Series CleanTitleYear}` = The Series Names Title! 2010
-- `{Series TitleFirstCharacter}` = S
 - `{Series CleanTitle}` = The Series Names Title!
 - `{Series TitleThe}` = Series Name's Title!, The
+- `{Series CleanTitleThe}` = Series Names Title!, The
 - `{Series TitleYear}` = The Series Name's Title (2010)
+- `{Series CleanTitleYear}` = The Series Names Title! 2010
+- `{Series TitleTheYear}` = Series Name's Title!, The (2010)
+- `{Series CleanTitleTheYear}` = Series Names Title!, The 2010
+- `{Series TitleWithoutYear}` = The Series Name's Title!
+- `{Series CleanTitleWithoutYear}` = The Series Names Title!
+- `{Series TitleTheWithoutYear}` = Series Name's Title!, The
+- `{Series CleanTitleTheWithoutYear}` = Series Names Title!, The
+- `{Series TitleFirstCharacter}` = S
 - `{Series Year}` = (2010)
 
 ### Series IDs
 
 - `{ImdbId}` = tt12345
-- `{Tmdbid}` = 123456
-- `{TvMazeId}`= 54321
+- `{TvdbId}` = 123456
+- `{TmdbId}` = 123456
+- `{TvMazeId}` = 54321
 
 ### Seasons
 
@@ -206,6 +223,8 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 
 - `{Quality Full}` = HDTV 720p Proper
 - `{Quality Title}` = HDTV 720p
+- `{Quality Proper}` = Proper
+- `{Quality Real}` = REAL
 
 ### Media Info
 
@@ -213,9 +232,10 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 - `{MediaInfo Full}` = x264 DTS \[EN+DE\]
 - `{MediaInfo AudioCodec}` = DTS
 - `{MediaInfo AudioChannels}` = 5.1
+- `{MediaInfo AudioLanguages}` = \[EN+DE\]
 - `{MediaInfo AudioLanguagesAll}` = \[DE\]
-- `{MediaInfo AudioLanguagesAll}` = \[EN+DE\]
 - `{MediaInfo SubtitleLanguages}` = \[EN\]
+- `{MediaInfo SubtitleLanguagesAll}` = \[EN+DE\]
 - `{MediaInfo VideoCodec}` = x264
 - `{MediaInfo VideoBitDepth}` = 8
 - `{MediaInfo VideoDynamicRange}` = HDR
@@ -234,10 +254,13 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 
 - `{Release Group}` = Rls Grp
 - `{Custom Formats}` = iNTERNAL or NF
+- `{Custom Format:FormatName}` = AMZN
 
-> \* Custom Formats will the name of the Custom Format
 !!! info
-    \* `{Custom Formats:<Release Profile Name>}` is an additional option to use matches from specific release profiles only
+    `{Custom Formats}` outputs every Custom Format that matched the release and has "Include Custom Format when Renaming" enabled, separated by spaces. Add an optional name filter to narrow it: `{Custom Formats:NameA,NameB}` includes only those formats, while `{Custom Formats:-NameA,NameB}` excludes them.
+
+!!! info
+    `{Custom Format:FormatName}` outputs a single Custom Format by name. `FormatName` is a placeholder — replace it with the exact name of the Custom Format you want, for example `{Custom Format:AMZN}`. It outputs nothing unless a Custom Format with that name exists, matched the release, and has "Include Custom Format when Renaming" enabled. Left as the literal `{Custom Format:FormatName}` it is not a usable token and produces no output.
 
 ### Original
 
@@ -247,20 +270,19 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 !!! info
     `Original Title` is the release name and it is what is suggested to be used.
 
-!!! warning
-    `Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yu7ti`.
+>`Original Filename` is not recommended. It is the literal original filename and may be obfuscated `t1i0p3s7i8yu7ti`.
 
 ## Daily Episode Format
 
 Daily Episode Format - Set the naming convention for your Daily Series Type episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
-See [Standard Episode Format](../sonarr/settings.md#standard-episode-format) for more info about this dialog box.
+See [Standard Episode Format](settings.md#standard-episode-format) for more info about this dialog box.
 
 ## Anime Episode Format
 
 Anime Episode Format - Set the naming convention for your Anime Series Type episodes. Click on the `?` to bring up the `File Name Tokens` dialog box.
 
-See [Standard Episode Format](../sonarr/settings.md#standard-episode-format) for more info about this dialog box.
+See [Standard Episode Format](settings.md#standard-episode-format) for more info about this dialog box.
 
 ### Absolute Episode Number
 
@@ -275,17 +297,25 @@ See [Standard Episode Format](../sonarr/settings.md#standard-episode-format) for
 ### Series Naming
 
 - `{Series Title}` = Series Name!
-- `{Series CleanTitleYear}` = Series Title 2010
-- `{Series TitleFirstCharacter}` = S
 - `{Series CleanTitle}` = Series Title
 - `{Series TitleThe}` = Series Title, The
+- `{Series CleanTitleThe}` = Series Title, The
 - `{Series TitleYear}` = Series Title (2010)
+- `{Series CleanTitleYear}` = Series Title 2010
+- `{Series TitleTheYear}` = Series Title, The (2010)
+- `{Series CleanTitleTheYear}` = Series Title, The 2010
+- `{Series TitleWithoutYear}` = Series Name!
+- `{Series CleanTitleWithoutYear}` = Series Title
+- `{Series TitleTheWithoutYear}` = Series Title, The
+- `{Series CleanTitleTheWithoutYear}` = Series Title, The
+- `{Series TitleFirstCharacter}` = S
 - `{Series Year}` = (2010)
 
 ### Series IDs
 
 - `{ImdbId}` = tt12345
-- `{Tmdbid}` = 123456
+- `{TvdbId}` = 123456
+- `{TmdbId}` = 123456
 - `{TvMazeId}` = 54321
 
 ## Season Folder Format
@@ -363,8 +393,9 @@ Name for the `Specials` (Season) folder
   - After Manual Refresh - You will have to manually rescan the disk
   - Never - Just as it says, never rescan the series folder.
     - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Sonarr.
-!!! warning
     - If you delete episode files manually or via Plex or another third party program, do not set this to `Never`.
+ !!! warning
+
 - Change File Date - Change file date on import/rescan
   - None - Sonarr will not change the date that shows in your given file browser
   - Local Release - The date the video was aired locally
@@ -397,8 +428,7 @@ Name for the `Specials` (Season) folder
 - Free Space - This is the free space being reported to Sonarr from the system
 - Unmapped Folders - These are folders that do not have a Series associated to it
 
-!!! info
-    The `X` at the end will remove this root path
+>The `X` at the end will remove this root path
 
 - Add Root Folder - This allows you to select a root path for a place to either place new imported downloads into this folder or to allow Sonarr to scan existing media.
 
@@ -515,7 +545,7 @@ Profiles is where Custom Format Scores are configured.
 
 Some media will receive half a dozen different releases of varying quality in the hours after a release, and without delay profiles Sonarr might try to download all of them. With delay profiles, Sonarr can be configured to ignore the first few hours of releases.
 
-Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See [Example 3](../sonarr/settings.md#example-3))
+Delay profiles are also helpful if you want to emphasize one protocol (Usenet or BitTorrent) over the other. (See [Example 3](settings.md#example-3))
 
 ### How Delay Profiles Work
 
@@ -613,11 +643,11 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Indexers
 
 !!! info
-    Information on supported indexers can be found at the [More Info (Supported)](../sonarr/supported.md#indexers) page for this section
+    Information on supported indexers can be found at the [More Info (Supported)](supported.md#indexers) page for this section
 
 ## Supported Indexers
 
-- A list of supported indexers is located at the [More Info (Supported)](../sonarr/supported.md#indexers) page
+- A list of supported indexers is located at the [More Info (Supported)](supported.md#indexers) page
 
 ### Indexer Settings
 
@@ -640,7 +670,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - Anime Categories - The categories that Sonarr will use for Anime searches No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Anime Standard Format Search - Also search for anime using the standard numbering (Only Applies for Anime Series Types) [More Information on Series Types here](../sonarr/faq.md#whats-the-different-series-types)
+- Anime Standard Format Search - Also search for anime using the standard numbering (Only Applies for Anime Series Types) [More Information on Series Types here](faq.md#whats-the-different-series-types)
 - (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
@@ -670,7 +700,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - Anime Categories - The categories that Sonarr will use for Anime searches. No categories will be used unless edited. Upon editing this setting, Sonarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
-- Anime Standard Format Search - Also search for anime using the standard numbering (Only Applies for Anime Series Types) [More Information on Series Types here](../sonarr/faq.md#whats-the-different-series-types)
+- Anime Standard Format Search - Also search for anime using the standard numbering (Only Applies for Anime Series Types) [More Information on Series Types here](faq.md#whats-the-different-series-types)
 - (Advanced Option) Additional Parameters - Additional Torznab parameters to add to the query link
 - (Advanced Option) Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
 - (Advanced Option) Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
@@ -693,7 +723,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Retention - Usenet only: Set to zero to set for unlimited retention
 - Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Sonarr find episodes?](../sonarr/faq.md#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
+  - Please see [How does Sonarr find episodes?](faq.md#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -701,7 +731,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 # Download Clients
 
 !!! info
-    Information on supported download clients can be found at the [More Info (Supported)](../sonarr/supported.md#download-clients) page for this section
+    Information on supported download clients can be found at the [More Info (Supported)](supported.md#download-clients) page for this section
 
 ## Overview
 
@@ -734,7 +764,7 @@ Click on `Settings` =>`Download Clients`, and then click the <kb>+</kb> to add a
 
 ### Supported Download Clients
 
-- A list of supported download clients is located at the [More Info Supported](../sonarr/supported.md#download-clients) page
+- A list of supported download clients is located at the [More Info Supported](supported.md#download-clients) page
 
 Select the download client you wish to add, and there will be a pop-up box to enter connection details. These details are similar for most clients. Some will ask for a username or password, some will ask for whether to add new downloads in a paused/start state, etc.
 
@@ -853,7 +883,7 @@ If you download using a BitTorrent client, the process is slightly different:
 # Import Lists
 
 !!! info
-    Information on supported list types can be found at the [More Info (Supported)](../sonarr/supported.md#lists) page for this section
+    Information on supported list types can be found at the [More Info (Supported)](supported.md#lists) page for this section
 
 ## Lists
 
@@ -869,10 +899,11 @@ If you download using a BitTorrent client, the process is slightly different:
 ### List Options
 
 - (Advanced Option) List Update Interval - How often should Radarr poll the list for updates?  This is provided dependent as per the UI.
-- (Advanced Option) Clean Library Level - Series in library will be removed or unmonitored if not in at leasf one of your list(s)
+- (Advanced Option) Clean Library Level - Series in library will be removed or unmonitored if not in at least one of your list(s)
   - Disabled - Do not clean the library (Recommended)
   - Log Only - Only log the series are not on the list(s) and take no other actions
   - Keep and Unmonitor Series - Keep series that are not on the list(s), but unmonitor them in Sonarr.
+  - Keep and Tag Series - Keep series that are not on the list(s) and tag them in Sonarr.
 
 ## List Exclusions
 
@@ -881,7 +912,7 @@ If you download using a BitTorrent client, the process is slightly different:
 # Connect
 
 !!! info
-    Information on supported connection types can be found at the [More Info (Supported)](../sonarr/supported.md#notifications) page for this section
+    Information on supported connection types can be found at the [More Info (Supported)](supported.md#notifications) page for this section
 
 ## Connections
 
@@ -889,27 +920,31 @@ If you download using a BitTorrent client, the process is slightly different:
 
 - By pressing the <kb>+</kb> button you will be presented with a new window which will allow you to configure many different endpoints
 
-- A list of supported notifications & connections is located at the [More Info (Supported)](../sonarr/supported.md#notifications)
+- A list of supported notifications & connections is located at the [More Info (Supported)](supported.md#notifications)
 
 ## Connection Triggers
 
 - On Grab - Be notified when episodes are available for download and has been sent to a download client
 - On Import - {Formerly Known as On Download} Be notified when episodes are successfully imported
 - On Upgrade - Be notified when episodes are upgraded to a better quality
+- On Import Complete - Be notified when a download has been fully processed (fired after On Import/On Upgrade)
 - On Rename - Be notified when episodes are renamed
+- On Series Add - Be notified when a new series is added to Sonarr
 - On Series Delete - Be notified when series are deleted
 - On Episode File Delete - Be notified when episodes files are deleted
 - On Episode File Delete For Upgrade - Be notified when episode files are deleted for upgrades
 - On Health Issue - Be notified on health check failures
   - Include Health Warnings - Be notified on health warnings in addition to errors.
+- On Health Restored - Be notified when a previously reported health issue is resolved
 - On Application Update - Be notified when Sonarr gets updated to a new version
+- On Manual Interaction Required - Be notified when manual interaction is required to resolve an import
 
 # Metadata
 
 ## Metadata
 
 !!! info
-    Information on supported metadata consumers can be found at the [More Info (Supported)](../sonarr/supported.md#metadata) page for this section
+    Information on supported metadata consumers can be found at the [More Info (Supported)](supported.md#metadata) page for this section
 
 - Here you can select the type of metadata that will be consumed by your media player
 
@@ -1000,7 +1035,7 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Sonarr that you are running on.
-  - [Please see this FAQ entry for more information](../sonarr/faq.md#how-do-i-update-sonarr)
+  - [Please see this FAQ entry for more information](faq.md#how-do-i-update-sonarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Sonarr built-in updater or a script
   - Built-in - Use Sonarr's own updater
@@ -1036,3 +1071,5 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Style
 
 - Enable Color-Impaired Mode - Altered style to allow color-impaired users to better distinguish color coded information
+- Theme - Select the light or dark theme for the UI (Light/Dark/Auto)
+- UI Language - Select the language for the Sonarr UI

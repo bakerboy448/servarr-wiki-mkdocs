@@ -6,6 +6,7 @@ tags:
   - installation
   - linux
 ---
+
 # Linux
 
 ## Debian / Ubuntu
@@ -37,7 +38,7 @@ You'll need to install the binaries using the below commands.
 - Ensure you have the required prerequisite packages:
 
 ```shell
-sudo apt install curl mediainfo sqlite3 libchromaprint-tools
+sudo apt install curl mediainfo sqlite3 libchromaprint-tools wget
 ```
 
 !!! warning
@@ -99,6 +100,7 @@ After=syslog.target network.target
 [Service]
 User=lidarr
 Group=media
+UMask=0002
 Type=simple
 
 ExecStart=/opt/Lidarr/Lidarr -nobrowser -data=/var/lib/lidarr/
@@ -171,7 +173,7 @@ sudo systemctl -q daemon-reload
 {#sqlite-version-workaround}
 
 !!! warning
-    This workaround is only for older end-of-standard-support systems with outdated GLIBC / SQLite. It is **not** a fix for SQLite corruption errors — those have a completely different recovery path; see [FAQ → Database disk image is malformed](../../lidarr/faq.md#i-am-getting-an-error-database-disk-image-is-malformed).
+    This workaround is only for older end-of-standard-support systems with outdated GLIBC / SQLite. It is **not** a fix for SQLite corruption errors — those have a completely different recovery path; see [FAQ → Database disk image is malformed](../faq.md#i-am-getting-an-error-database-disk-image-is-malformed).
 
 Lidarr v3 and later uses a bundled SQLite build that requires newer GLIBC than ships with end-of-standard-support distributions. Affected systems include Debian 10, Debian 11, Ubuntu 18.04, Ubuntu 20.04, and some Synology DSM versions. If Lidarr fails to start with SQLite initialisation errors (as opposed to corruption errors), you can force it to link against the distribution's own SQLite library instead.
 
@@ -216,6 +218,6 @@ Restart Lidarr after creating the symlink.
 
 ### When NOT to use this workaround
 
-- You have database corruption — see [FAQ → Database disk image is malformed](../../lidarr/faq.md#i-am-getting-an-error-database-disk-image-is-malformed).
+- You have database corruption — see [FAQ → Database disk image is malformed](../faq.md#i-am-getting-an-error-database-disk-image-is-malformed).
 - You are on a modern, supported distribution. Upgrade the distribution instead; older distributions accumulate other issues beyond SQLite and this workaround does not address them.
 - Lidarr starts normally. The workaround replaces a working library with another working library; there is no benefit.

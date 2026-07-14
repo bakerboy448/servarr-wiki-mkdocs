@@ -1,10 +1,11 @@
 ---
 title: Whisparr Appdata Directory
-description: Whisparr application data directory locations
+description:
 tags:
   - whisparr
   - appdata
 ---
+
 !!! info
     Below are the default paths for the application data directory
 
