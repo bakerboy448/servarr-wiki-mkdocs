@@ -1,6 +1,6 @@
 #!/bin/bash
 ### Description: Servarr .NET Debian install
-### Originally written for Radarr by: DoctorArr - doctorarr@the-rowlands.co.uk on 2021-10-01 v1.0
+### Originally written for Radarr by: DoctorArr (email redacted) on 2021-10-01 v1.0
 ### Version v1.1 2021-10-02 - Bakerboy448 (Made more generic and conformant)
 ### Version v1.1.1 2021-10-02 - DoctorArr (Spellcheck and boilerplate update)
 ### Version v2.0.0 2021-10-09 - Bakerboy448 (Refactored and ensured script is generic. Added more variables.)
