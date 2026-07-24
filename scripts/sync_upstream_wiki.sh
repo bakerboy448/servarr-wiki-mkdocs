@@ -105,7 +105,7 @@ echo "==> Converted ${converted} markdown files (skipped ${skipped})"
 echo "==> Checking for WikiJS leakage"
 set +e
 leaks="$(rg -n --glob '*.md' \
-  '\{\.is-(info|warning|danger|success)\}|<i class="fa|^(published|dateCreated|editor):' \
+  '\{\.is-[a-zA-Z0-9_-]+\}|<i class="fa|^(published|dateCreated|editor):' \
   "$ROOT/docs" 2>/dev/null)"
 set -e
 if [[ -n "${leaks}" ]]; then
