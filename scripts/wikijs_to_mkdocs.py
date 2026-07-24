@@ -14,6 +14,10 @@ CALLOUT_TYPES = {
     "danger": "danger",
     "success": "success",
 }
+# WikiJS authors occasionally hand-roll a one-off ".is-<word>" class outside the
+# four standard callout kinds (e.g. ".is-whisparr"). Fall back to a plain "note"
+# admonition rather than leaving the raw {.is-*} marker unconverted in the output.
+DEFAULT_CALLOUT_TYPE = "note"
 
 ICON_PREFIX = {
     "fas": "solid",
@@ -28,25 +32,25 @@ FRONTMATTER_DROP = {"published", "date", "editor", "dateCreated"}
 # including optional style/aria attributes.
 ICON_RE = re.compile(
     r'<i\s+class="'
-    r'(?:'
-    r'(?P<style>fa[srlbd]?)\s+fa-(?P<name>[a-z0-9-]+)'
-    r'|'
-    r'fa-(?P<style2>solid|regular|brands|light|duotone)\s+fa-(?P<name2>[a-z0-9-]+)'
-    r')'
+    r"(?:"
+    r"(?P<style>fa[srlbd]?)\s+fa-(?P<name>[a-z0-9-]+)"
+    r"|"
+    r"fa-(?P<style2>solid|regular|brands|light|duotone)\s+fa-(?P<name2>[a-z0-9-]+)"
+    r")"
     r'"'
-    r'[^>]*>\s*</i>',
+    r"[^>]*>\s*</i>",
     re.IGNORECASE,
 )
 # Absolute wiki/internal links or image targets: ](/path) or ](/path#frag)
 ABS_LINK_RE = re.compile(r"\]\((/(?!/)[^)]*)\)")
-CALLOUT_MARKER_RE = re.compile(
-    r"\{\.is-(info|warning|danger|success)\}"
-)
+# Any ".is-<word>" class is treated as a callout marker, not just the four
+# standard kinds — see DEFAULT_CALLOUT_TYPE above for the fallback rendering.
+CALLOUT_MARKER_RE = re.compile(r"\{\.is-([a-zA-Z0-9_-]+)\}")
 INLINE_CALLOUT_RE = re.compile(
-    r"^(?P<indent>\s*)(?P<body>>?\s*.+?)\s*\{\.is-(?P<kind>info|warning|danger|success)\}\s*$"
+    r"^(?P<indent>\s*)(?P<body>>?\s*.+?)\s*\{\.is-(?P<kind>[a-zA-Z0-9_-]+)\}\s*$"
 )
 STANDALONE_MARKER_RE = re.compile(
-    r"^(?P<indent>\s*)\{\.is-(?P<kind>info|warning|danger|success)\}\s*$"
+    r"^(?P<indent>\s*)\{\.is-(?P<kind>[a-zA-Z0-9_-]+)\}\s*$"
 )
 TABSET_HEADING_RE = re.compile(
     r"^(?P<indent>\s*)(?P<hashes>#{2,6})\s+(?P<title>.*?)\s*\{\.tabset\}\s*$"
@@ -136,10 +140,24 @@ def relative_target(source_rel: PurePosixPath, target: str) -> str:
     if not path:
         return fragment or "."
 
-    asset_exts = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico", ".webp", ".sh", ".hash"}
+    asset_exts = {
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".gif",
+        ".svg",
+        ".ico",
+        ".webp",
+        ".sh",
+        ".hash",
+    }
     if path in ("/home", "/"):
         dest = "index.md"
-    elif path.startswith("/assets/") or path.startswith("/images/") or Path(path).suffix.lower() in asset_exts:
+    elif (
+        path.startswith("/assets/")
+        or path.startswith("/images/")
+        or Path(path).suffix.lower() in asset_exts
+    ):
         dest = path.lstrip("/")
     elif path.startswith("/servarr/") and Path(path).suffix:
         dest = path.lstrip("/")
@@ -201,7 +219,11 @@ def _is_soft_wrap_continuation(line: str, indent: str) -> bool:
         return False
     if stripped.startswith("```") or stripped.startswith("~~~"):
         return False
-    if stripped.startswith("- ") or stripped.startswith("* ") or re.match(r"^\d+\.\s", stripped):
+    if (
+        stripped.startswith("- ")
+        or stripped.startswith("* ")
+        or re.match(r"^\d+\.\s", stripped)
+    ):
         return False
     if stripped.startswith("!!!") or stripped.startswith("==="):
         return False
@@ -223,7 +245,9 @@ def convert_callouts(text: str) -> str:
             kind = None
 
             # Explicit additional '>' lines
-            while j < len(lines) and re.match(rf"^{re.escape(indent)}>(?:\s|$).*", lines[j]):
+            while j < len(lines) and re.match(
+                rf"^{re.escape(indent)}>(?:\s|$).*", lines[j]
+            ):
                 block.append(lines[j])
                 j += 1
 
@@ -268,7 +292,9 @@ def convert_callouts(text: str) -> str:
                 while body_lines and body_lines[-1].strip() == "":
                     body_lines.pop()
                 body = "\n".join(body_lines).strip("\n")
-                out.append(f"{indent}!!! {CALLOUT_TYPES[kind]}")
+                out.append(
+                    f"{indent}!!! {CALLOUT_TYPES.get(kind, DEFAULT_CALLOUT_TYPE)}"
+                )
                 out.append(indent_block(body, indent))
                 i = j
                 continue
@@ -283,7 +309,7 @@ def convert_callouts(text: str) -> str:
             indent = im.group("indent")
             kind = im.group("kind")
             body = im.group("body").strip()
-            out.append(f"{indent}!!! {CALLOUT_TYPES[kind]}")
+            out.append(f"{indent}!!! {CALLOUT_TYPES.get(kind, DEFAULT_CALLOUT_TYPE)}")
             out.append(indent_block(body, indent))
             i += 1
             continue
@@ -315,7 +341,9 @@ def convert_tabsets(text: str) -> str:
         hashes = m.group("hashes")
         title = m.group("title").strip()
         tab_level = len(hashes) + 1  # ### under ## {.tabset}
-        child_re = re.compile(rf"^{re.escape(indent)}{'#' * tab_level}\s+(?P<tab>.+?)\s*$")
+        child_re = re.compile(
+            rf"^{re.escape(indent)}{'#' * tab_level}\s+(?P<tab>.+?)\s*$"
+        )
         end_re = re.compile(rf"^{re.escape(indent)}#{{1,{len(hashes)}}}\s+")
 
         # Optional: keep a plain heading if title present
@@ -403,7 +431,9 @@ def main() -> int:
         required=True,
         help="Path of the file relative to docs/ (e.g. lidarr/faq.md or index.md)",
     )
-    parser.add_argument("-o", "--output", type=Path, help="Write to file instead of stdout")
+    parser.add_argument(
+        "-o", "--output", type=Path, help="Write to file instead of stdout"
+    )
     args = parser.parse_args()
 
     if str(args.input) == "-":

@@ -60,7 +60,8 @@ Keep in mind that Whisparr will need read and write to the download folders as w
 
 To install and use these Docker images, you will need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation and maintenance of them will depend on the route you choose.
 
-> Temporarily, you will need to use the :nightly ~~or :develop~~ tags with docker images, as there is no master nor develop branch. [See this FAQ entry for the meaning of the branches](../faq.md#how-do-i-update-whisparr)
+!!! note
+    Temporarily, you will need to use the :nightly ~~or :develop~~ tags with docker images, as there is no master nor develop branch. [See this FAQ entry for the meaning of the branches](../faq.md#how-do-i-update-whisparr)
 
 - [hotio/whisparr](https://hotio.dev/containers/whisparr/)
 {.links-list}

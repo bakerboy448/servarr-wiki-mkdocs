@@ -8,8 +8,8 @@ tags:
 ---
 
 - Supported Trackers and Indexers as of
-  - Prowlarr Build `2.5.1.5464` / [Commit: 825620385ac50e5611794a2ab48cb262e005ffe5](https://github.com/Prowlarr/Prowlarr/commit/825620385ac50e5611794a2ab48cb262e005ffe5)
-  - [Prowlarr Indexers Commit: 0de12389b082e4fcdfd841069099e06309d5baa9](https://github.com/Prowlarr/Indexers/commit/0de12389b082e4fcdfd841069099e06309d5baa9)
+  - Prowlarr Build `2.6.0.5494` / [Commit: bc65f177e364ad0e9bad3046f691b2e29e8dcfb0](https://github.com/Prowlarr/Prowlarr/commit/bc65f177e364ad0e9bad3046f691b2e29e8dcfb0)
+  - [Prowlarr Indexers Commit: 1b08d3e08fafb7c39f6de944ee2ab23b91b86f78](https://github.com/Prowlarr/Indexers/commit/1b08d3e08fafb7c39f6de944ee2ab23b91b86f78)
 
 ---
 
@@ -29,6 +29,7 @@ tags:
 |[1337x](https://1337x.to/){#1337x}|1337x is a Public torrent site that offers verified torrent downloads|English (United States)|
 |[52BT](https://www.529075.xyz/){#52bt}|52BT is a CHINESE Public tracker for MOVIES / TV / MUSIC / GENERAL|Chinese (China)|
 |[ACG\.RIP](https://acg.rip/){#acgrip}|ACG\.RIP is a CHINESE Public torrent tracker for the latest anime and Japanese related torrents|Chinese (China)|
+|[Anibt](https://anibt.net/){#anibt}|Anibt is a CHINESE Public aggregate indexer for ANIME"|Chinese (China)|
 |[Anidex](https://anidex.info/){#anidex}|Anidex is a Public torrent tracker and indexer, primarily for English fansub groups of anime|English (United States)|
 |[AniSource](https://asnet.pw/){#anisource}|AniSource is a Public site for HD Anime raws|English (United States)|
 |[Bangumi Moe](https://bangumi.moe/){#bangumi-moe}|Bangumi Moe is a Public torrent site for ANIME|English (United States)|
@@ -98,8 +99,8 @@ tags:
 |[TorrentKitty](https://www.torrentkitty.cam/){#torrentkitty}|TorrentKitty is a Public torrent indexer|English (United States)|
 |[TorrentProject2](https://torrentproject2.net/){#torrentproject2}|TorrentProject2 is a Public torrent meta-search engine|English (United States)|
 |[TorrentsCSV](https://torrents-csv.com/){#torrentscsv}|Torrents\.csv is a self-hostable open source torrent search engine and database|English (United States)|
-|[Torrentsome](https://torrentsome253.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
-|[Torrenttip](https://torrenttip234.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
+|[Torrentsome](https://torrentsome255.com/){#torrentsome}|Torrentsome is a KOREAN Public tracker for Korean media|Korean (Korea)|
+|[Torrenttip](https://torrenttip236.top/){#torrenttip}|Torrenttip (토렌트팁) is a Public KOREAN tracker for Korean media|Korean (Korea)|
 |[U3C3](https://u3c3.com/){#u3c3}|U3C3 is a CHINESE Public tracker focused on 3X Eastern Asian media|Chinese (China)|
 |[Uindex](https://uindex.org/){#uindex}|Uindex is a Public Torrent Tracker for MOVIES / TV / MUSIC / GENERAL|English (United States)|
 |[VST Torrentz](https://vsttorrentz.net/){#vsttorrents}|VST Torrentz is a Public site for AUDIO apps, plugins and samples|English (United States)|
@@ -138,7 +139,6 @@ tags:
 |[HDGalaKtik](https://www.trackerpmr.com/){#hdgalaktik}|HDGalaKtik is a RUSSIAN Semi-Private tracker for MOVIES / TV / GENERAL|Russian (Russia)|
 |[HellTorrents](https://helltorrents.com/){#helltorrents}|HellTorrents is a POLISH Semi-Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[HunTorrent](https://huntorrent.org/){#huntorrent}|HunTorrent is a HUNGARIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
-|[Hydracker (API)](https://hydracker.com/){#hydracker-api}|Hydracker is a FRENCH Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[Il Corsaro Blu](https://ilcorsaroblu.org/){#ilcorsaroblu}|il CorSaRo Blu is an ITALIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Kinorun](http://kinorun.top/){#kinorun}|Kinorun is a RUSSIAN Semi-Private Torrent Tracker for 3X|Russian (Russia)|
 |[Kinozal](https://kinozal.tv/){#kinozal}|Kinozal is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / MUSIC\. This indexer uses torrents|Russian (Russia)|
@@ -287,7 +287,9 @@ tags:
 |[Das Unerwartete](https://dasunerwartete.biz/){#dasunerwartete}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL|German (Germany)|
 |[Das Unerwartete (API)](https://dasunerwartete.biz/){#dasunerwartete-api}|Das Unerwartete (D-U) is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL\. This is the API version|German (Germany)|
 |[DataScene (API)](https://datascene.xyz/){#datascene-api}|DataScene (DS) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
+|[DaXiangJiao (大香蕉)](https://pt.daxiangjiao.org/){#daxiangjiao}|DaXiangJiao (大香蕉) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[Depth Studio](https://dstudio.me/){#depthstudio}|Depth Studio is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
+|[DesiGaane](https://desigaane.rocks/){#desigaane}|DesiGaane is a Private Torrent Tracker for DESI MUSIC|English (United States)|
 |[DesiTorrents (API)](https://torrent.desi/){#desitorrents-api}|DesiTorrents is an INDIAN Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Diablo Torrent](https://diablotorrent.net/){#diablotorrent}|Diablo Torrent is a HUNGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Hungarian (Hungary)|
 |[DICMusic](https://dicmusic.com/){#dicmusic}|DICMusic is a CHINESE Private Torrent Tracker for MUSIC|Chinese (China)|
@@ -320,7 +322,6 @@ tags:
 |[Flood](https://flood.st/){#flood}|Flood (FLD) is a Private Torrent Tracker for MOVIES / TV|English (United States)|
 |[Free Farm (自由农场)](https://pt.0ff.cc/){#freefarm}|Free Farm (自由农场) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[FunFile](https://www.funfile.org/){#funfile}|FunFile is a general tracker|English (United States)|
-|[FunkyTorrents](https://funkytorrents.com/){#funkytorrents}|FunkyTorrents (FT) is a Private Torrent Tracker for MUSIC|English (United States)|
 |[funZone (API)](https://myfunzone.org/){#funzone-api}|funZone is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL|Romanian (Romania)|
 |[FutureTorrent](https://futuretorrent.org/){#futuretorrent}|FutureTorrent is an ITALIAN Private PAY2DL Torrent Tracker for MOVIES / TV / GENERAL|Italian (Italy)|
 |[Fuzer](https://www.fuzer.xyz/){#fuzer}|Fuzer (FZ) is an ISRAELI Private Torrent Tracker for MOVIES / TV / GENERAL|Hebrew (Israel)|
@@ -488,7 +489,6 @@ tags:
 |[Podzemlje](https://podzemlje.net/){#podzemlje}|Podzemlje is an EX-YU Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Polish Torrent (API)](https://polishtorrent.top/){#polishtorrent}|Polish Torrent (PTT) is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[PolishTracker (API)](https://pte.nu/){#polishtracker-api}|PolishTracker is a POLISH Private Torrent Tracker for 0DAY / MOVIES / GENERAL|Polish (Poland)|
-|[Pornbay](https://pornbay.org/){#pornbay}|Pornbay is a Private Torrent Tracker for 3X|English (United States)|
 |[Portugas (API)](https://portugas.org/){#portugas-api}|Portugas is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL|Portuguese (Portugal)|
 |[PreToMe](https://pretome.info/){#pretome}|PreToMe is a ratioless 0Day/General tracker|English (United States)|
 |[PrivateHD](https://privatehd.to/){#privatehd}|PrivateHD (PHD) is a Private Torrent Tracker for HD MOVIES / TV and the sister-site of AvistaZ, CinemaZ, ExoticaZ, and AnimeZ|English (United States)|
@@ -514,6 +514,7 @@ tags:
 |[PuntoTorrent](https://xbt.puntotorrent.com/){#puntotorrent}|PuntoTorrent is a SPANISH Private Torrent Tracker for 0DAY / GENERAL|Spanish (Spain)|
 |[PuTao (葡萄)](https://pt.sjtu.edu.cn/){#putao}|PuTao (葡萄) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[PWTorrents](https://pwtorrents.net/){#pwtorrents}|PWTorrents (PWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING|English (United States)|
+|[PWTorrents2FA](https://pwtorrents.net/){#pwtorrents2fa}|PWTorrents (PWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING\. This indexer uses cookie login for 2FA|English (United States)|
 |[Qingwa (青蛙)](https://www.qingwapt.com/){#qingwa}|Qingwa (青蛙) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL|Chinese (China)|
 |[R3V WTF!](https://r3vuk.wtf/){#r3vwtf}|R3V WTF! is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[Racing4Everyone (API)](https://racing4everyone.eu/){#racing4everyone-api}|Racing4Everyone (R4E) is a Private Torrent Tracker for RACING|English (United States)|
@@ -632,7 +633,9 @@ tags:
 |[xTorrenty](https://xtorrenty.org/){#xtorrenty}|xTorrenty is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL|Polish (Poland)|
 |[Xtreme Bytes](https://xtremebytes.net/){#xtremebytes}|Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL|English (United States)|
 |[XWT-Classics](https://xwt-classics.net/){#xwtclassics}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING|English (United States)|
+|[XWT-Classics2FA](https://xwt-classics.net/){#xwtclassics2fa}|XWT-Classics is a Private Torrent Tracker for CLASSIC PROFESSIONAL WRESTLING\. This indexer uses cookie login for 2FA|English (United States)|
 |[XWtorrents](https://xtremewrestlingtorrents.net/){#xwtorrents}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA|English (United States)|
+|[XWtorrents2FA](https://xtremewrestlingtorrents.net/){#xwtorrents2fa}|XtremeWrestlingTorrents (XWT) is a Private Torrent Tracker for PROFESSIONAL WRESTLING / MMA\. This indexer uses cookie login for 2FA|English (United States)|
 |[YggReborn (API)](https://www.yggreborn.org/){#yggreborn-api}|YggReborn is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL|French (France)|
 |[YUSCENE (API)](https://yu-scene.net/){#yuscene-api}|YUSCENE is a Private Tracker for MOVIES / TV|English (United States)|
 |[Zappateers](https://zappateers.com/){#zappateers}|Zappateers is a Private Torrent Tracker for Frank Zappa MUSIC|English (United States)|
