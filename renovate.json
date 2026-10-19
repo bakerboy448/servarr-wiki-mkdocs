@@ -20,13 +20,24 @@
   "packageRules": [
     {
       "description": "Group non-major updates per manager; automerge",
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "automerge": true
     },
     {
-      "description": "Major updates: separate, manual review",
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "description": "Major updates — automerge when CI is green",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": true
     }
-  ]
+  ],
+  "automerge": true,
+  "automergeType": "pr",
+  "ignoreTests": false,
+  "platformAutomerge": true
 }
