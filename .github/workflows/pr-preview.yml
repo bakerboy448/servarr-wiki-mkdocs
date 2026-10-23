@@ -24,7 +24,22 @@ jobs:
       # strict mode remains disabled in mkdocs.yml until upstream anchor debt is cleared (see issue #1)
       - uses: ./.github/actions/build-site
 
+      # Previews for different PRs push the same gh-pages ref; a concurrent push
+      # makes the ref lock fail. Retry once after a short wait.
       - name: Deploy preview
+        id: deploy
+        continue-on-error: true
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          destination_dir: pr-preview/pr-${{ github.event.pull_request.number }}
+
+      - name: Wait before retry
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 20
+      - name: Deploy preview (retry)
+        if: steps.deploy.outcome == 'failure'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
