@@ -1,0 +1,20 @@
+/* Servarr Wiki custom styles */
+
+/* Improve table readability */
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: hsla(var(--md-hue), 25%, 25%, 1);
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: #f8f8f8;
+}
+
+/* Logo sizing in link lists */
+.md-typeset img[src*="logos"] {
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
