@@ -1,0 +1,22 @@
+# Servarr Wiki
+
+> Documentation for Sonarr, Radarr, Lidarr, Readarr, Prowlarr, and Whisparr.
+
+This is the official wiki for the Servarr family of applications — PVR (Personal Video Recorder)
+and related media automation tools.
+
+## Main Sections
+
+- [Sonarr](/sonarr/) — TV Series management
+- [Radarr](/radarr/) — Movie management
+- [Lidarr](/lidarr/) — Music management
+- [Readarr](/readarr/) — Book management
+- [Prowlarr](/prowlarr/) — Indexer management
+- [Whisparr](/whisparr/) — Adult content management
+
+## Common Topics
+
+- [Docker Guide](/docker-guide/)
+- [Permissions and Networking](/permissions-and-networking/)
+- [Useful Tools](/useful-tools/)
+- [Definitions](/Definitions/)
