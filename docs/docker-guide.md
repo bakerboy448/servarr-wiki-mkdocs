@@ -505,7 +505,7 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
   - [NZBGet](https://hotio.dev/containers/nzbget/)
   - [SABnzbd](https://hotio.dev/containers/sabnzbd/)
   - [qflood](https://hotio.dev/containers/qflood/)
-  - [overseerr](https://hotio.dev/containers/overseerr/) for requesting media
+  - [seerr](https://hotio.dev/containers/seerr/) for requesting media
   - [jackett](https://hotio.dev/containers/jackett) for torrent tracker searching
   - [nzbhydra2](https://hotio.dev/containers/nzbhydra2) for usenet indexer searching
   - [bazarr](https://hotio.dev/containers/bazarr) for subtitles
