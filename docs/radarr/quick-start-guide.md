@@ -17,10 +17,10 @@ tags:
 - [Quick Start Setup Guide](#quick-start-setup-guide)
 - [Startup](#startup)
 - [Media Management](#media-management)
-  - [Movie Naming](#movie-naming)
-  - [Importing](#importing)
-  - [File Management](#file-management)
-  - [Root Folders](#root-folders)
+    - [Movie Naming](#movie-naming)
+    - [Importing](#importing)
+    - [File Management](#file-management)
+    - [Root Folders](#root-folders)
 - [Profiles](#profiles)
 - [Quality](#quality)
 - [Indexers](#indexers)
@@ -28,11 +28,11 @@ tags:
     - [Usenet](#usenet)
     - [BitTorrent](#bittorrent)
 - [How to import your existing organized media library](#how-to-import-your-existing-organized-media-library)
-  - [Import movies](#import-movies)
-  - [Importing Existing Media](#importing-existing-media)
-    - [No match found](#no-match-found)
-    - [Fix faulty folder name after import](#fix-faulty-folder-name-after-import)
-  - [How to add a movie](#how-to-add-a-movie)
+    - [Import movies](#import-movies)
+    - [Importing Existing Media](#importing-existing-media)
+        - [No match found](#no-match-found)
+        - [Fix faulty folder name after import](#fix-faulty-folder-name-after-import)
+    - [How to add a movie](#how-to-add-a-movie)
 
 # Quick Start Setup Guide
 
@@ -65,7 +65,7 @@ First we’re going to take a look at the `Media Management` settings where we c
 ![Radarr-settings-mm-movie-naming.png](../assets/radarr/Radarr-settings-mm-movie-naming.png)
 
 1. Enable/Disable Renaming of your movies (as opposed to leaving the names that are currently there or as they were when you downloaded them).
-2. If you want illegal characters replaced or removed (`\ / : * ? " < > | ~ # % & + { }`).
+2. If you want illegal characters replaced or removed (`\ / < > ? * | "`).
 3. This setting will dictate how Radarr handles colons within the movie file.
 4. Here you will select the naming convention for the actual movie files.
 5. *(Advanced Option) This is where you will set the naming convention for the folder that contains the video file.*
@@ -327,7 +327,7 @@ When you see the movie you want click on it.
 1. Availability - When Radarr shall consider a movie is available.
 
     !!! info
-        For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](#how-does-radarr-determine-the-year-of-a-movie)
+        For More Information on TMDB's Dates that impact the below Availabilities See [How Does Radarr Determine the Year of the Movie](faq.md#how-does-radarr-determine-the-year-of-a-movie)
 
     - **Announced**: Radarr shall consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers that do not have fakes.
     - **In Cinemas**: Radarr shall consider movies available as soon as movies hit cinemas (Theatrical Date on TMDb) This option is not recommended.

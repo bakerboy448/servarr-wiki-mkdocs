@@ -15,9 +15,9 @@ tags:
 - [Servarr Synology Packages](#servarr-synology-packages)
 - [DSM 6.x](#dsm-6x)
 - [DSM 7.x](#dsm-7x)
-  - [Bubblewrap Installation on DSM 7.X](#bubblewrap-installation-on-dsm-7x)
-    - [Simple Bubblewrap Installation](#simple-bubblewrap-installation)
-    - [Manual Bubblewrap Installation](#manual-bubblewrap-installation)
+    - [Bubblewrap Installation on DSM 7.X](#bubblewrap-installation-on-dsm-7x)
+        - [Simple Bubblewrap Installation](#simple-bubblewrap-installation)
+        - [Manual Bubblewrap Installation](#manual-bubblewrap-installation)
 
 # Servarr Synology Packages
 
@@ -42,7 +42,7 @@ tags:
 # DSM 7.x
 
 - The Lidarr-Official, Prowlarr-Official, Radarr-Official, and Readarr-Official packages should *just work* for most architectures.
-  - Note that a NAS with `comcerto2k` requires additional steps for Lidarr, Prowlarr, Radarr, and Readarr; [see the instructions](#bubblewrap-installation-on-dsm-7x).
+    - Note that a NAS with `comcerto2k` requires additional steps for Lidarr, Prowlarr, Radarr, and Readarr; [see the instructions](#bubblewrap-installation-on-dsm-7x).
 - Note that the Sonarr package requires additional steps for **all** architectures.
 - Note that the standalone Mono package from the SynoCommunity is not required anymore, it currently is bundled within our package.
 
@@ -65,7 +65,7 @@ Bubblewrap allows us to run programs in a basic container so that we can use new
 1. Create a triggered task within DSM:
 
 - User: `root`
-  - Event: `Boot-up`
+    - Event: `Boot-up`
 
 1. For the `Run Command` enter:
 

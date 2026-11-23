@@ -19,64 +19,64 @@ tags:
 - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
 - Search All / Search Filtered / Search Selected - Search all movies or selected movies in the current view
 - Manual Import (Movie Index) - Manually import a movie file for a movie you have added to Whisparr from any folder that Whisparr can access
-  - Move Automatically -  Automatically attempt to match a file to a Movie in Whisparr and import by moving it.
-  - Interactive Import -  Review all files within the path and attempt to match to a Movie in Whisparr allowing the user to review the results. Move or Copy/Hardlink is a selectable option in the bottom left corner.
+    - Move Automatically -  Automatically attempt to match a file to a Movie in Whisparr and import by moving it.
+    - Interactive Import -  Review all files within the path and attempt to match to a Movie in Whisparr allowing the user to review the results. Move or Copy/Hardlink is a selectable option in the bottom left corner.
 - Manual Import (Movie) - Manually import a movie file for a movie you have added to Whisparr from the assigned movie's folder
-  - Move Automatically -  Automatically attempt to match a file to a Movie in Whisparr and import by moving it.
-  - Interactive Import -  Review all files within the path and attempt to match to a Movie in Whisparr allowing the user to review the results. Move or Copy/Hardlink is a selectable option in the bottom left corner.
+    - Move Automatically -  Automatically attempt to match a file to a Movie in Whisparr and import by moving it.
+    - Interactive Import -  Review all files within the path and attempt to match to a Movie in Whisparr allowing the user to review the results. Move or Copy/Hardlink is a selectable option in the bottom left corner.
 - Movie Editor / Movie Index - Toggle between Mass Editor mode and Movie Index (Library) mode
 - Options - Change display options
 - View - Toggle View Type
-  - Table - Tabular View (list view)
-  - Posters - Display Posters (similar to Plex)
-  - Overview - Display overview information and the poster (detailed view)
+    - Table - Tabular View (list view)
+    - Posters - Display Posters (similar to Plex)
+    - Overview - Display overview information and the poster (detailed view)
 - Sort - Sort the current view
 
 ### Filters
 
 - Filter - Filter the current view
-  - Monitored Only - Titles being monitored for updates.
-  - Unmonitored - Titles NOT being monitored for updates.
-  - Missing - In the database, but missing from the filesystem.
-  - Wanted - In the database, monitored, missing, but should be available.
-  - Cut-off Unmet - Title on filesystem, but still monitoring for wanted quality.
-  - Custom Filters
-    - Monitored (boolean)
-    - Considered Available (boolean)
-    - Minimum Availability (Enum)
-      - Announced
-      - In Cinemas
-      - Released
-    - Title \[contains\] (String)
-    - Release Status (Enum)
-      - TBA
-      - Announced
-      - In Cinemas
-      - Released
-      - Deleted
-    - Studio (Enum Studios)
-    - Collection (Enum Collections)
-    - Quality Profile (Enum QualityProfiles)
-    - Added (static DateTime, relative TimeDelta)
-    - Year (Int)
-    - In Cinemas (static DateTime, relative TimeDelta)
-    - Physical Release (static DateTime, relative TimeDelta)
-    - Digital Release (static DateTime, relative TimeDelta)
-    - Runtime (Int)
-    - Path \[contains\] (String)
-    - Size on Disk (Int)
-    - Genres \[contains\] (Enum Genres)
-    - TMDB Rating (Float)
-    - TMDB Votes (Int)
-    - Certification (Enum Rating (PG-13, R, etc))
-    - Tags \[contain\] (Enum Tags)
+    - Monitored Only - Titles being monitored for updates.
+    - Unmonitored - Titles NOT being monitored for updates.
+    - Missing - In the database, but missing from the filesystem.
+    - Wanted - In the database, monitored, missing, but should be available.
+    - Cut-off Unmet - Title on filesystem, but still monitoring for wanted quality.
+    - Custom Filters
+        - Monitored (boolean)
+        - Considered Available (boolean)
+        - Minimum Availability (Enum)
+            - Announced
+            - In Cinemas
+            - Released
+        - Title \[contains\] (String)
+        - Release Status (Enum)
+            - TBA
+            - Announced
+            - In Cinemas
+            - Released
+            - Deleted
+        - Studio (Enum Studios)
+        - Collection (Enum Collections)
+        - Quality Profile (Enum QualityProfiles)
+        - Added (static DateTime, relative TimeDelta)
+        - Year (Int)
+        - In Cinemas (static DateTime, relative TimeDelta)
+        - Physical Release (static DateTime, relative TimeDelta)
+        - Digital Release (static DateTime, relative TimeDelta)
+        - Runtime (Int)
+        - Path \[contains\] (String)
+        - Size on Disk (Int)
+        - Genres \[contains\] (Enum Genres)
+        - TMDB Rating (Float)
+        - TMDB Votes (Int)
+        - Certification (Enum Rating (PG-13, R, etc))
+        - Tags \[contain\] (Enum Tags)
 
 # Add New
 
 ![whisparr-add-new-empty.png](../assets/whisparr/whisparr-add-new-empty.png)
 
 - If you're looking to add a new movie, this is the page that you will be wanting to do that from.
-  - You'll find the how-to in our [Quick Start Guide](quick-start-guide.md).
+    - You'll find the how-to in our [Quick Start Guide](quick-start-guide.md).
 - Below the search field, you can also find the Import Existing Movies button. If that is the case for you, you can find great information on that also in our [Quick Start Guide](quick-start-guide.md).
 - If you get an error of "path is already configured", [see this FAQ entry](faq.md#path-is-already-configured-for-an-existing-movie).
 
@@ -86,9 +86,9 @@ Library Import allows you to import existing organized movies and each movie's f
 
 - Library import is for adding and importing an existing organized library of movies into Whisparr.
 - Library Import cannot be used for:
-  - Importing files from a download folder
-  - Adding or Importing one or more files that are not properly named and organized in their own Movie Folder within your root folder or a folder you wish to add as a root folder
-  - Any other uses that are not adding a movie to Whisparr and importing the movie and its file from the root (library) folder that was input to Library Import
+    - Importing files from a download folder
+    - Adding or Importing one or more files that are not properly named and organized in their own Movie Folder within your root folder or a folder you wish to add as a root folder
+    - Any other uses that are not adding a movie to Whisparr and importing the movie and its file from the root (library) folder that was input to Library Import
 - If you get an error of "path is already configured", [see this FAQ entry](faq.md#path-is-already-configured-for-an-existing-movie).
 
 !!! warning

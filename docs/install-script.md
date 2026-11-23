@@ -45,7 +45,7 @@ Be aware of the following:
 !!! info
     SSH in using Putty, mRemoteNG, or any other SSH tool. Note that most tools support saving your connection.
 
-- Once SSHed in type the command below to download the installation script in your current directory
+- Once SSHead in type the command below to download the installation script in your current directory
 
 ```bash
 curl -o servarr-install-script.sh https://raw.githubusercontent.com/Servarr/Wiki/master/servarr/servarr-install-script.sh
@@ -67,7 +67,7 @@ SSH into your Debian (Raspbian / Raspberry Pi OS) / Ubuntu box and become or log
 !!! info
     SSH in using Putty, mRemoteNG, or any other SSH tool. Note that most tools support saving your connection.
 
-- Once SSHed in type the command below to download the installation script in your current directory
+- Once SSHead in type the command below to download the installation script in your current directory
 
 ```bash
 curl -o servarr-uninstall-script.sh https://raw.githubusercontent.com/Servarr/Wiki/master/servarr/servarr-uninstall-script.sh

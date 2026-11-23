@@ -112,7 +112,7 @@ DELETE FROM "DelayProfiles";
 !!! info
     With these handled, it is pretty straightforward after telling it to not mess with the scheme using `--with "data only"`
 
-2. For those having the issues POST-MIGRATION from SQLite run the following:
+1. For those having the issues POST-MIGRATION from SQLite run the following:
 
 ```postgres
 select setval('public."AutoTagging_Id_seq"',(SELECT MAX("Id")+1 FROM "AutoTagging"));

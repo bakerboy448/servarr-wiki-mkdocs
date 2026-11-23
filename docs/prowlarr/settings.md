@@ -15,34 +15,35 @@ tags:
 - [Table of Contents](#table-of-contents)
 - [Menu options](#menu-options)
 - [Indexer Proxies](#indexer-proxies)
-  - [Proxy Settings](#proxy-settings)
-  - [FlareSolverr Proxy Settings](#flaresolverr-proxy-settings)
-  - [HTTP Proxy Settings](#http-proxy-settings)
-  - [Socks4 Proxy Settings](#socks4-proxy-settings)
-  - [Socks5 Proxy Settings](#socks5-proxy-settings)
+    - [Proxy Settings](#proxy-settings)
+    - [FlareSolverr Proxy Settings](#flaresolverr-proxy-settings)
+    - [HTTP Proxy Settings](#http-proxy-settings)
+    - [Socks4 Proxy Settings](#socks4-proxy-settings)
+    - [Socks5 Proxy Settings](#socks5-proxy-settings)
 - [Applications](#applications)
-  - [Application Settings](#application-settings)
-  - [Testing the Application](#testing-the-application)
+    - [Application Settings](#application-settings)
+    - [Testing the Application](#testing-the-application)
+    - [Sync Profiles](#sync-profiles)
 - [Download Clients (Prowlarr Searches)](#download-clients-prowlarr-searches)
-  - [Usenet Client Settings](#usenet-client-settings)
-  - [Torrent Client Settings](#torrent-client-settings)
-  - [Testing the Download Client](#testing-the-download-client)
+    - [Usenet Client Settings](#usenet-client-settings)
+    - [Torrent Client Settings](#torrent-client-settings)
+    - [Testing the Download Client](#testing-the-download-client)
 - [Notifications](#notifications)
-  - [Connections](#connections)
-  - [Notification Triggers](#notification-triggers)
+    - [Connections](#connections)
+    - [Notification Triggers](#notification-triggers)
 - [Tags](#tags)
 - [General](#general)
-  - [Host](#host)
-  - [Security](#security)
-  - [Proxy](#proxy)
-  - [Logging](#logging)
-  - [Analytics](#analytics)
-  - [Updates](#updates)
-  - [Backups](#backups)
+    - [Host](#host)
+    - [Security](#security)
+    - [Proxy](#proxy)
+    - [Logging](#logging)
+    - [Analytics](#analytics)
+    - [Updates](#updates)
+    - [Backups](#backups)
 - [UI](#ui)
-  - [Dates](#dates)
-  - [Style](#style)
-  - [Language](#language)
+    - [Dates](#dates)
+    - [Style](#style)
+    - [Language](#language)
 
 This page will go through all the settings available in Prowlarr and how they work. This is not meant to be a comprehensive "how to set up Prowlarr." If you want that, please use the [Quick Start](quick-start-guide.md) page instead.
 
@@ -131,9 +132,9 @@ All programs you can add are listed. You should only add programs you currently 
 
 - Name - Enter a name for this App.
 - Sync Level - Select the sync level to use
-  - `Add and Remove Only` - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.
-  - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync)
-  - `Disabled` - will keep indexers from syncing with the program entirely.
+    - `Add and Remove Only` - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.
+    - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync)
+    - `Disabled` - will keep indexers from syncing with the program entirely.
 
 !!! warning
     `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
@@ -147,7 +148,7 @@ All programs you can add are listed. You should only add programs you currently 
 - Application Server -  Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
 - API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
 - (Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
-  - Indexer Custom Categories get mapped into the Standard Torznab/Newznab  categories, so searching for the Standardized Categories includes all underlying custom categories. Indexer Custom Categories are listed for fine tuning if you don't want them all at once.
+    - Indexer Custom Categories get mapped into the Standard Torznab/Newznab  categories, so searching for the Standardized Categories includes all underlying custom categories. Indexer Custom Categories are listed for fine tuning if you don't want them all at once.
 
 ## Testing the Application
 
@@ -237,19 +238,19 @@ Connections are how you want Prowlarr to communicate with the outside world.
 ## Notification Triggers
 
 - On Release Grab - Be notified on release grab from within Prowlarr or from the API
-  - Include Manual Grabs - Be notified on grabs triggered manually within Prowlarr UI
+    - Include Manual Grabs - Be notified on grabs triggered manually within Prowlarr UI
 - On Health Issue - Be notified on health check failures
 - On Health Restored - Be notified when a previously reported health issue is resolved
-  - Include Health Warnings - Be notified on health warnings in addition to errors. (Applies to both On Health Issue and On Health Restored)
+    - Include Health Warnings - Be notified on health warnings in addition to errors. (Applies to both On Health Issue and On Health Restored)
 - On Application Update - Be notified when Prowlarr gets updated to a new version
 
 # Tags
 
 - The tag section in Prowlarr is used to link different aspects of Prowlarr.
 - Tags are particularly useful for:
-  - Enabling Flaresolverr Proxy for use with an indexer; Note that Flaresolverr Proxies are disabled without a tag
-  - Enabling a HTTP or SOCKS Proxy for use with an indexer
-  - Specifying Indexers to certain apps
+    - Enabling Flaresolverr Proxy for use with an indexer; Note that Flaresolverr Proxies are disabled without a tag
+    - Enabling a HTTP or SOCKS Proxy for use with an indexer
+    - Specifying Indexers to certain apps
 
 # General
 
@@ -265,11 +266,12 @@ Click on `Settings` => `General`.
 ![general_host.png](../assets/prowlarr/general_host.png)
 
 - (Advanced Option) Bind Address - Leave this as `*` unless you need to change it. The IPv4 address/host on the system Prowlarr will listen on. (default: `*`)
-  - Note that `*` is any/all addresses
+    - Note that `*` is any/all addresses
 - Port Number - the port that Prowlarr runs on. It must be unique. (default: 9696)
 - BaseUrl - Enter a URL base here if you are using a reverse proxy. (restart required) (default: blank)
+- Allowed Hosts - Comma-separated list of the hostnames and IP addresses Prowlarr will accept requests for. Use `*.` as a wildcard for subdomains (for example `*.example.com`, or `*.internal` for Docker containers named with a `.internal` suffix such as `prowlarr.internal`). Required if Authentication Required is not set to `Enabled`, where a blank value is rejected on save; a blank value is accepted only when Authentication Required is `Enabled`. (default: blank)
 - (Advanced Option) Instance Name - Name to use for Browser Tab and SysLog (if enabled) (restart required) (default: Prowlarr)
-- (Advanced Option) Application URL - The external URL used to access Prowlarr, including http(s)://, port, and URL base. Leave blank if not needed.
+- (Advanced Option) Application URL - The external URL used to access Prowlarr, including `http(s)://`, port, and URL base. Leave blank if not needed.
 - (Advanced Option) Use SSL - Check this box if you use an https address to connect to Prowlarr. If you are using `localhost` or an IP address, this should almost NEVER be checked. (default: false)
 - Launch Browser (Windows Only) - Check this box if you want a browser window to be launched when Prowlarr starts. (default: yes)
 
@@ -278,17 +280,26 @@ Click on `Settings` => `General`.
 ![general_security.png](../assets/prowlarr/general_security.png)
 
 - Authentication - How would you like to authenticate to access your Prowlarr instance
-  - None - You have no authentication to access your Prowlarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Prowlarr or your Prowlarr is not exposed to the web
-  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr
-  - External - External authentication is handled by a reverse proxy. Prowlarr will trust authentication headers passed by the proxy.
+    - None - You have no authentication to access your Prowlarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Prowlarr or your Prowlarr is not exposed to the web
+    - Basic (Browser pop-up) - Removed in Prowlarr v2.0.0. From v2.0.1, an existing `Basic` value in the config is converted to `Forms` on load. Previously a browser username/password pop-up.
+    - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr
+    - External - External authentication is handled by a reverse proxy. Prowlarr will trust authentication headers passed by the proxy.
 - Authentication Required - Controls which requests require authentication
-  - Enabled - All requests require authentication
-  - Disabled for Local Addresses - Requests from local network addresses bypass authentication; all remote requests still require authentication
+    - Enabled - All requests require authentication
+    - Disabled for Local Addresses - Requests from local network addresses bypass authentication; all remote requests still require authentication
+
+!!! warning
+    With Authentication Required set to `Disabled for Local Addresses`, a request that spoofs the `X-Forwarded-For` header can appear local and skip authentication unless Prowlarr is behind a properly configured reverse proxy whose address is listed under Trusted Networks below. Prowlarr only trusts `X-Forwarded-For` from addresses in that list. If you do not run a trusted reverse proxy, set Authentication Required to `Enabled`, or put Prowlarr behind a VPN or Tailscale rather than exposing it directly.
+
 - API Key - API key is used by outside apps accessing Prowlarr. This is secret and should not be shared with anyone. If it gets shared, you should regenerate it and update your apps.
 - Certificate Validation - Change how strict HTTPS certification validation is
-  - Enabled - Validate all HTTPS certificates (recommended)
-  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
-  - Disabled - Do not validate any HTTPS certificates
+    - Enabled - Validate all HTTPS certificates (recommended)
+    - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+    - Disabled - Do not validate any HTTPS certificates
+- Trusted Networks - Comma-separated list of IP addresses or CIDR networks that trusted reverse proxies are on (for example `172.17.0.1`, `10.0.0.0/8`, or `fc00::/7`). Prowlarr only trusts the `X-Forwarded-For` header from these addresses. Only add proxies that are properly configured to send the correct headers.
+
+!!! info
+    Trust CGNAT IP Addresses - Not exposed in the UI. Set via `config.xml` or the `PROWLARR__AUTH__TRUSTCGNATIPADDRESSES` environment variable (default `false`). When enabled, Prowlarr treats CGNAT addresses (`100.64.0.0/10`, the range Tailscale uses) as local for the Authentication Required `Disabled for Local Addresses` check. It has no effect with any other Authentication Required or Authentication setting.
 
 ## Proxy
 
@@ -297,7 +308,7 @@ Click on `Settings` => `General`.
 Proxy - This option allows you to run the information your Prowlarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
 - Use Proxy - Enable to use a Proxy
-- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Proxy Type - Select your proxy type (HTTP(S), Socks4, or Socks5)
 - Hostname - Enter your proxy hostname (Do not include http/https or any other protocol)
 - Port - Enter your proxy port
 - Username - Enter your proxy username if applicable
@@ -312,9 +323,9 @@ Proxy - This option allows you to run the information your Prowlarr pulls and se
 The default log level is `Debug`. This is very basic logging. You can change it here for more detailed logging. Log files will rotate, so there is no danger of taking up too much space.
 
 - Log level - Probably one of the most useful troubleshooting tools
-  - Info - This is the most basic way that Prowlarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
-  - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
-  - Trace - The most advance and detailed logging on Prowlarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
+    - Info - This is the most basic way that Prowlarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
+    - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
+    - Trace - The most advance and detailed logging on Prowlarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
 - (Advanced Option) Log Size Limit - Maximum log file size in MB before archiving. Valid range is 1-10 MB. (default: `1`)
 
 ## Analytics
@@ -328,12 +339,12 @@ The default log level is `Debug`. This is very basic logging. You can change it 
 ![general_updates.png](../assets/prowlarr/general_updates.png)
 
 - (Advanced Option) Branch - This is the branch of Prowlarr that you are running on.
-  - [Please see this FAQ entry for more information](faq.md#how-do-i-update-prowlarr)
+    - [Please see this FAQ entry for more information](faq.md#how-do-i-update-prowlarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Prowlarr built-in updater or a script
-  - Built-in - Use Prowlarr's own updater
-  - Script - Have Prowlarr run the update script
-  - Docker - Do not update Prowlarr from inside the Docker, instead pull a brand new image with the new update
+    - Built-in - Use Prowlarr's own updater
+    - Script - Have Prowlarr run the update script
+    - Docker - Do not update Prowlarr from inside the Docker, instead pull a brand new image with the new update
 - Script - Visible only when Mechanism is set to Script - Path to update script
 - Update Process - Prowlarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Prowlarr is run under, it will need permissions to update the Prowlarr files as well as stop/start Prowlarr.
 - Built-in - The built-in method will backup Prowlarr files and settings, stop Prowlarr, update the installation and Start Prowlarr, if your system will not handle the stopping of Prowlarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Prowlarr will be restarted.
@@ -344,8 +355,8 @@ The default log level is `Debug`. This is very basic logging. You can change it 
 ![general_backups.png](../assets/prowlarr/general_backups.png)
 
 - (Advanced Option) Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
-- (Advanced Option) Interval - How often would you like Prowlarr to make a backup
-- (Advanced Option) Retention - How long would you like Prowlarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+- (Advanced Option) Interval - How often would you like Prowlarr to make a backup (default: every 7 days)
+- (Advanced Option) Retention - How long would you like Prowlarr to hold on to each backup. After a new backup is made the oldest backup will be removed (default: 28 days)
 
 !!! info
     Manual backups are retained forever, stored in the same folder, and are named differently.

@@ -12,22 +12,22 @@ Refer to the [v4 release announcement](https://forums.sonarr.tv/t/sonarr-v4-rele
 Below are some of the highlights and more prominent changes:
 
 - [Sonarr v4 FAQ](#sonarr-v4-faq)
-  - [What Changed?](#what-changed)
-  - [Forced Authentication](#forced-authentication)
-    - [Authentication Method](#authentication-method)
-    - [Authentication Required](#authentication-required)
-  - [Preferred Words to Custom Formats Migration](#preferred-words-to-custom-formats-migration)
-    - [Must (not) contain](#must-not-contain)
-    - [File Naming Tokens](#file-naming-tokens)
-  - [Where have language profiles gone?](#where-have-language-profiles-gone)
-    - [Only English](#only-english)
-    - [Only Original](#only-original)
-  - [My Reverse Proxy doesn't work anymore?](#my-reverse-proxy-doesnt-work-anymore)
-    - [Nginx](#nginx)
-    - [Apache](#apache)
-  - [What is this new "*Override and add to download queue*" button?](#what-is-this-new-override-and-add-to-download-queue-button)
-  - [Where has the Mass Editor gone?](#where-has-the-mass-editor-gone)
-  - [Episodes showing runtimes of 0](#episodes-showing-runtimes-of-0)
+    - [What Changed?](#what-changed)
+    - [Forced Authentication](#forced-authentication)
+        - [Authentication Method](#authentication-method)
+        - [Authentication Required](#authentication-required)
+    - [Preferred Words to Custom Formats Migration](#preferred-words-to-custom-formats-migration)
+        - [Must (not) contain](#must-not-contain)
+        - [File Naming Tokens](#file-naming-tokens)
+    - [Where have language profiles gone?](#where-have-language-profiles-gone)
+        - [Only English](#only-english)
+        - [Only Original](#only-original)
+    - [My Reverse Proxy doesn't work anymore?](#my-reverse-proxy-doesnt-work-anymore)
+        - [Nginx](#nginx)
+        - [Apache](#apache)
+    - [What is this new "*Override and add to download queue*" button?](#what-is-this-new-override-and-add-to-download-queue-button)
+    - [Where has the Mass Editor gone?](#where-has-the-mass-editor-gone)
+    - [Episodes showing runtimes of 0](#episodes-showing-runtimes-of-0)
 
 ## Forced Authentication
 
@@ -39,15 +39,15 @@ As of Sonarr v4, Authentication is Mandatory.
 
 ### Authentication Method
 
-- `Basic` (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and will be removed in the next major version.
+- `Basic` (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and will be removed in the next major version (v5 treats Basic as Forms).
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+    - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
 
 ### Authentication Required
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
-  - The config file equivalent of this is `<AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired>`
+    - The config file equivalent of this is `<AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired>`
 - `<AuthenticationRequired>Enabled</AuthenticationRequired>` is also a valid value
 
 ## Preferred Words to Custom Formats Migration
@@ -161,11 +161,11 @@ When doing an interactive search a second download button has been added titled 
 
 - Choose which download client the download is sent to. This is useful in the case that you have multiple download clients for the same protocol (e.g. multiple instances of a torrent client) instead of letting Sonarr decide which client to use.
 - Override Sonarrs parsing of the release title in case Sonarr has parsed it incorrectly or Sonarr was unable to parse it, but you still want to grab the release. The following parsed fields can be overruled:
-  - Series
-  - Season Number
-  - Episode(s)
-  - Quality
-  - Language
+    - Series
+    - Season Number
+    - Episode(s)
+    - Quality
+    - Language
 - *Note that this overruled information is not carried over to the import logic and manual imports may be required*
 
 ## Where has the Mass Editor gone

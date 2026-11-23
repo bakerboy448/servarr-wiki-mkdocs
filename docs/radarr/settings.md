@@ -15,94 +15,94 @@ tags:
 - [Table of Contents](#table-of-contents)
 - [Menu options](#menu-options)
 - [Media Management](#media-management)
-  - [Community Naming Suggestions](#community-naming-suggestions)
-    - [Movie Files](#movie-files)
-    - [Movie Folders](#movie-folders)
-  - [Movie Naming](#movie-naming)
-    - [Standard Movie Format](#standard-movie-format)
-    - [Movie Naming](#movie-naming-1)
-    - [Movie IDs](#movie-ids)
-    - [Quality](#quality)
-    - [Media Info](#media-info)
-    - [Release Group](#release-group)
-    - [Edition](#edition)
-    - [Custom Formats (Naming)](#custom-formats-naming)
-    - [Original](#original)
-  - [Movie Folder Format](#movie-folder-format)
-    - [Movie Naming](#movie-naming-2)
-    - [Movie ID](#movie-id)
-  - [Folders](#folders)
-  - [Importing](#importing)
-  - [File Management](#file-management)
-  - [Permissions](#permissions)
-  - [Root Folders](#root-folders)
+    - [Community Naming Suggestions](#community-naming-suggestions)
+        - [Movie Files](#movie-files)
+        - [Movie Folders](#movie-folders)
+    - [Movie Naming](#movie-naming)
+        - [Standard Movie Format](#standard-movie-format)
+        - [Movie Naming](#movie-naming-1)
+        - [Movie IDs](#movie-ids)
+        - [Quality](#quality)
+        - [Media Info](#media-info)
+        - [Release Group](#release-group)
+        - [Edition](#edition)
+        - [Custom Formats (Naming)](#custom-formats-naming)
+        - [Original](#original)
+    - [Movie Folder Format](#movie-folder-format)
+        - [Movie Naming](#movie-naming-2)
+        - [Movie ID](#movie-id)
+    - [Folders](#folders)
+    - [Importing](#importing)
+    - [File Management](#file-management)
+    - [Permissions](#permissions)
+    - [Root Folders](#root-folders)
 - [Profiles](#profiles)
-  - [Quality Profiles](#quality-profiles)
-  - [Delay Profiles](#delay-profiles)
-    - [Uses](#uses)
-    - [How Delay Profiles Work](#how-delay-profiles-work)
-      - [Examples](#examples)
-        - [Example 1](#example-1)
-        - [Example 2](#example-2)
-        - [Example 3](#example-3)
-  - [Release Profiles](#release-profiles)
+    - [Quality Profiles](#quality-profiles)
+    - [Delay Profiles](#delay-profiles)
+        - [Uses](#uses)
+        - [How Delay Profiles Work](#how-delay-profiles-work)
+            - [Examples](#examples)
+                - [Example 1](#example-1)
+                - [Example 2](#example-2)
+                - [Example 3](#example-3)
+    - [Release Profiles](#release-profiles)
 - [Quality](#quality-1)
-  - [Quality Table Meanings](#quality-table-meanings)
-  - [Qualities Defined](#qualities-defined)
+    - [Quality Table Meanings](#quality-table-meanings)
+    - [Qualities Defined](#qualities-defined)
 - [Custom Formats](#custom-formats)
-  - [Custom Format Conditions](#custom-format-conditions)
-    - [Modifiers](#modifiers)
-    - [Conditions](#conditions)
-    - [Profiling Settings and Ranking](#profiling-settings-and-ranking)
-      - [Importing / Exporting Custom Formats](#importing--exporting-custom-formats)
-      - [Importing / Updating Existing Custom Formats](#importing--updating-existing-custom-formats)
-    - [Collection of Custom Formats](#collection-of-custom-formats)
+    - [Custom Format Conditions](#custom-format-conditions)
+        - [Modifiers](#modifiers)
+        - [Conditions](#conditions)
+        - [Profiling Settings and Ranking](#profiling-settings-and-ranking)
+            - [Importing / Exporting Custom Formats](#importing--exporting-custom-formats)
+            - [Importing / Updating Existing Custom Formats](#importing--updating-existing-custom-formats)
+        - [Collection of Custom Formats](#collection-of-custom-formats)
 - [Indexers](#indexers)
-  - [Supported Indexers](#supported-indexers)
-    - [Indexer Settings](#indexer-settings)
-    - [Usenet Indexer Configuration](#usenet-indexer-configuration)
-    - [Torrent Tracker Configuration](#torrent-tracker-configuration)
-      - [Indexer Flags](#indexer-flags)
-  - [Options](#options)
+    - [Supported Indexers](#supported-indexers)
+        - [Indexer Settings](#indexer-settings)
+        - [Usenet Indexer Configuration](#usenet-indexer-configuration)
+        - [Torrent Tracker Configuration](#torrent-tracker-configuration)
+            - [Indexer Flags](#indexer-flags)
+    - [Options](#options)
 - [Download Clients](#download-clients)
-  - [Overview](#overview)
-  - [Download Client Processes](#download-client-processes)
-    - [Usenet Process](#usenet-process)
-    - [Torrent Process](#torrent-process)
-  - [Download Clients](#download-clients-1)
-    - [Supported Download Clients](#supported-download-clients)
-    - [Usenet Client Settings](#usenet-client-settings)
-    - [Torrent Client Settings](#torrent-client-settings)
-    - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
-  - [Completed Download Handling](#completed-download-handling)
-    - [Remove Completed Downloads](#remove-completed-downloads)
-    - [Failed Download Handling](#failed-download-handling)
-  - [Remote Path Mappings](#remote-path-mappings)
+    - [Overview](#overview)
+    - [Download Client Processes](#download-client-processes)
+        - [Usenet Process](#usenet-process)
+        - [Torrent Process](#torrent-process)
+    - [Download Clients](#download-clients-1)
+        - [Supported Download Clients](#supported-download-clients)
+        - [Usenet Client Settings](#usenet-client-settings)
+        - [Torrent Client Settings](#torrent-client-settings)
+        - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
+    - [Completed Download Handling](#completed-download-handling)
+        - [Remove Completed Downloads](#remove-completed-downloads)
+        - [Failed Download Handling](#failed-download-handling)
+    - [Remote Path Mappings](#remote-path-mappings)
 - [Import Lists](#import-lists)
-  - [Lists](#lists)
-  - [List Options](#list-options)
-  - [List Exclusions](#list-exclusions)
+    - [Lists](#lists)
+    - [List Options](#list-options)
+    - [List Exclusions](#list-exclusions)
 - [Connect](#connect)
-  - [Connections](#connections)
-  - [Connection Triggers](#connection-triggers)
+    - [Connections](#connections)
+    - [Connection Triggers](#connection-triggers)
 - [Metadata](#metadata)
-  - [Options](#options-1)
-  - [Metadata Consumers](#metadata-consumers)
+    - [Options](#options-1)
+    - [Metadata Consumers](#metadata-consumers)
 - [Tags](#tags)
 - [General](#general)
-  - [Host](#host)
-  - [Security](#security)
-  - [Proxy](#proxy)
-  - [Logging](#logging)
-  - [Analytics](#analytics)
-  - [Updates](#updates)
-  - [Backups](#backups)
+    - [Host](#host)
+    - [Security](#security)
+    - [Proxy](#proxy)
+    - [Logging](#logging)
+    - [Analytics](#analytics)
+    - [Updates](#updates)
+    - [Backups](#backups)
 - [UI](#ui)
-  - [Calendar](#calendar)
-  - [Movies](#movies)
-  - [Dates](#dates)
-  - [Style](#style)
-  - [Language](#language)
+    - [Calendar](#calendar)
+    - [Movies](#movies)
+    - [Dates](#dates)
+    - [Style](#style)
+    - [Language](#language)
 
 This page will go through all the settings available in Radarr and how they work. This is not meant to be a comprehensive "how to set up Radarr." If you want that, please use the [Quick Start](quick-start-guide.md) page instead.
 
@@ -143,36 +143,36 @@ Also, note that for each individual settings page, there are some options at the
 ## Movie Naming
 
 - Rename Movies - If unchecked, Radarr will use the existing name if renaming is disabled
-  - If unchecked:
-    - Download Client Import
-      - Download Client's Release Title is used
-    - Manual (Ad-Hoc) Import: Original File Name
+    - If unchecked:
+        - Download Client Import
+            - Download Client's Release Title is used
+        - Manual (Ad-Hoc) Import: Original File Name
 - Replace Illegal Characters - If unchecked, Radarr will remove them instead.
 
-  - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
+    - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 - Colon (`:`) Replacement - This setting will dictate how Radarr handles colons within the movie file. This is only available when Replace Illegal Characters is enabled.
-  - Smart Replace - Uses a dash when a colon is followed by a space (`": "` → `" - "`), and a dash otherwise (`":"` → `"-"`). This is the default.
-    - Example: Movie,The.mkv => Movie - The.mkv
-  - Delete - Self explanatory
-    - Example: Movie,The.mkv => MovieThe.mkv
-  - Replace with Dash - Removes the colon and adds a dash in its place
-    - Example: Movie,The.mkv => Movie-The.mkv
-  - Replace with Space Dash - Removes the colon and adds a space dash in its place
-    - Example: Movie,The.mkv => Movie -The.mkv
-  - Replace with Space Dash Space - self explanatory
-    - Example: Movie,The.mkv => Movie - The.mkv
+    - Smart Replace - Uses a space-dash-space when a colon is followed by a space (`": "` → `" - "`), and a dash otherwise (`":"` → `"-"`). This is the default.
+        - Example: Movie,The.mkv => Movie - The.mkv
+    - Delete - Self explanatory
+        - Example: Movie,The.mkv => MovieThe.mkv
+    - Replace with Dash - Removes the colon and adds a dash in its place
+        - Example: Movie,The.mkv => Movie-The.mkv
+    - Replace with Space Dash - Removes the colon and adds a space dash in its place
+        - Example: Movie,The.mkv => Movie -The.mkv
+    - Replace with Space Dash Space - self explanatory
+        - Example: Movie,The.mkv => Movie - The.mkv
 
 ### Standard Movie Format
 
 - Here you will select the naming convention for your movies
 
 - Dropdown Box (upper right corner)
-  - Left Box - Space Handling
+    - Left Box - Space Handling
     Space ( ) - Use spaces in naming (Default)
     Period (.) - Use periods in lieu of spaces in naming
     Underscore (_) - Use underscores in lieu of spaces in naming
     Dash (-) - Use dashes in lieu of spaces in naming
-  - Right Box - Case Handling
+    - Right Box - Case Handling
     Default Case - Make title uppercase and lowercase (~camel-case) (Default)
     Uppercase - Make title all uppercase
     Lowercase - Make title all lowercase
@@ -222,12 +222,14 @@ Also, note that for each individual settings page, there are some options at the
 
 - `{MediaInfo Simple}` = x264 DTS
 - `{MediaInfo Full}` = x264 DTS \[EN+DE\]
+- `{MediaInfo Audio}` = DTS
 - `{MediaInfo AudioCodec}` = DTS
 - `{MediaInfo AudioChannels}` = 5.1
 - `{MediaInfo AudioLanguages}` = \[EN+DE\]
 - `{MediaInfo AudioLanguagesAll}` = \[EN+DE\]
 - `{MediaInfo SubtitleLanguages}` = \[EN\]
 - `{MediaInfo SubtitleLanguagesAll}` = \[EN\]
+- `{MediaInfo Video}` = x264
 - `{MediaInfo VideoCodec}` = x264
 - `{MediaInfo VideoBitDepth}` = 8
 - `{MediaInfo VideoDynamicRange}` = HDR
@@ -235,11 +237,13 @@ Also, note that for each individual settings page, there are some options at the
 - `{MediaInfo 3D}` = 3D
 
 !!! info
-    `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` do not currently support a `:EN+DE` suffix allowed in Sonarr to filter the languages included in the filename. There is an open [issue](https://github.com/Radarr/Radarr/issues/4710) regarding this.
-    ~~`MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.~~
+    `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example - `{MediaInfo Full:EN+DE}`.
 
 !!! info
     `MediaInfo VideoDynamicRangeType` will give possible values of: DV, DV HDR10, DV HLG, DV SDR, HDR10, HDR10Plus, HLG, and PQ.
+
+!!! info
+    `MediaInfo Video` and `MediaInfo Audio` are aliases of `MediaInfo VideoCodec` and `MediaInfo AudioCodec` respectively.
 
 ### Release Group
 
@@ -309,7 +313,7 @@ Here you will set the naming convention for the folder that contains the season 
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
 
-  - For more information on this click [TRaSH Guides hardlinks documentation](https://trash-guides.info/hardlinks)
+    - For more information on this click [TRaSH Guides hardlinks documentation](https://trash-guides.info/hardlinks)
 
 !!! warning
     Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Radarr's rename function as a work around.
@@ -321,9 +325,9 @@ Here you will set the naming convention for the folder that contains the season 
 - Unmonitor Deleted Movies - Movies deleted from disk are automatically unmonitored in Radarr
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
 
-  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
-  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Custom Formats](#custom-formats).
+    - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+    - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+    - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Custom Formats](#custom-formats).
 
 !!! info
     \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
@@ -334,13 +338,13 @@ Here you will set the naming convention for the folder that contains the season 
 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Radarr to read parts of the file which may cause high disk or network activity during scans.
 - Rescan Movie Folder after Refresh
-  - Always - This will rescan movie folders based upon Tasks Schedule. This is recommended for most cases including if one uses Bazarr.
-  - After Manual Refresh - You will have to manually rescan the disk. This is recommended for users of cloud storage.
-  - Never - Just as it says, never rescan the movie folders. This is not recommended.
+    - Always - This will rescan movie folders based upon Tasks Schedule. This is recommended for most cases including if one uses Bazarr.
+    - After Manual Refresh - You will have to manually rescan the disk. This is recommended for users of cloud storage.
+    - Never - Just as it says, never rescan the movie folders. This is not recommended.
 - Change File Date - Change file date on import/rescan
-  - None - Radarr will not change the date that shows in your given file browser
-  - In Cinemas Date - The date the movie was released in theaters.
-  - Physical Release Date - The date the movie was released either on disk (physical) or on the web.
+    - None - Radarr will not change the date that shows in your given file browser
+    - In Cinemas Date - The date the movie was released in theaters.
+    - Physical Release Date - The date the movie was released either on disk (physical) or on the web.
 - Recycling Bin - Movie files will go here when deleted instead of being permanently deleted
 - Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
@@ -350,7 +354,7 @@ Here you will set the naming convention for the folder that contains the season 
 ## Permissions
 
 - Set Permissions - Should `chmod` be run when files are imported/renamed?
-  - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
+    - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
 
 !!! info
     The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
@@ -401,9 +405,9 @@ Here you will set the naming convention for the folder that contains the season 
     Note: This is only applicable if you have `Bluray-1080p` higher than `WEB 1080p` within the `Qualities` section
 
 - Qualities - Qualities higher in the list are more preferred even if not checked. Qualities within the same group are equal. Only checked qualities are wanted.
-  - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups. [See TRaSH's Guide for how to Merge Qualities](https://trash-guides.info/merge-quality)
+    - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups. [See TRaSH's Guide for how to Merge Qualities](https://trash-guides.info/merge-quality)
 
-  - [See Qualities](#qualities-defined)
+    - [See Qualities](#qualities-defined)
 
 !!! info
     By default the qualities are set from lowest (bottom) to highest (top)
@@ -497,13 +501,22 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ## Qualities Defined
 
 - Unknown - Self Explanatory
+- WORKPRINT - A copy of a film before final color correction and visual effects are completed, sometimes missing shots or containing scene numbers/timecodes burned into the frame. The lowest quality pre-release source.
+- CAM - Captured in a movie theater with a camcorder, often at an angle, with audio picked up by the camera's built-in microphone. Both picture and sound quality are poor.
+- TELESYNC - Similar to a CAM but recorded with a direct external audio feed (e.g. from the theater's audio system), giving cleaner sound despite similar video quality to a CAM.
+- TELECINE - Copied from a film print using a telecine machine that transfers film to video. Better video quality than a CAM or TELESYNC, though colors can appear washed out.
+- REGIONAL - A retail disc release intended for a specific geographic region that differs from the version released elsewhere, such as an alternate cut or an earlier regional release date.
+- DVDSCR - A promotional screener DVD sent to reviewers and industry insiders ahead of retail release, often watermarked or containing an on-screen timer/counter to discourage piracy.
 - SDTV - Post air rips from an analog source (usually cable television or OTA standard definition). The image quality is generally good (for the resolution) and they are usually encoded in DivX/XviD or MP4.
 - WEBDL-480p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 480p (SD) quality.
 - WEBRip-480p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 480p (SD) quality.
 - DVD - A re-encode of the final released DVD9. If possible this is released PRE retail. It should be excellent quality (for the resolution). DVDrips are usually released in DivX/XviD or MP4.
+- DVD-R - A remux of a retail DVD, keeping the original DVD video and audio streams intact without re-encoding.
 - Bluray-480p - A re-encode of the final released Blu-ray, downscaled to 480p resolution (720x480 @ 16:9, any other Aspect Ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to DivX, XviD, or AVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4, but some DivX/XviD are around as well which use AVI.
+- Bluray-576p - A re-encode of the final released Blu-ray, downscaled to 576p resolution (1024x576 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4 container.
 - HDTV-720p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1280x720 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4.
 - HDTV-1080p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4 container.
+- WEBDL-720p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 720p quality.
 - WEBRip-720p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 720p quality.
 - Bluray-720p - A re-encode of the final released Blu-ray, downscaled to 720p resolution (1280x720 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4 container.
 - WEBDL-1080p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 1080p quality.
@@ -515,6 +528,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - WEBRip-2160p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 2160p (4k) quality.
 - Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
 - Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
+- BR-DISK - The complete, unmodified Blu-ray disc structure, including the full menu system and extras, rather than an extracted or re-encoded video file.
+- Raw-HD - A raw feed of an HD stream.
 
 # Custom Formats
 
@@ -524,8 +539,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Custom formats are calculated on-the-fly instead of being stored in the database, so they update as soon as you change the definitions.
 - Custom formats are used within your Quality Profiles to determine the scoring of each custom format. Within each quality profile, you can set a minimum custom format score for a release to be grabbed and an upgrade until score as well.
 - It's strongly recommended to add the below Custom Formats from [TRaSH's Guides](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/) to avoid unwanted downloads. Refer to the linked TRaSH Guide Custom Format article and additional referenced 3 TRaSH Custom Format Guides on the top of the Collection of Custom Formats page for more information.
-  - [DV (WEB-DL)](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
-  - [BR-DISK](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
+    - [DV (WEB-DL)](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
+    - [BR-DISK](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
 
 ---
 
@@ -551,12 +566,12 @@ Profiles is where Custom Format Scores are configured.
 
 - **Any conditions that use RegEx are case insensitive**
 - Release Title - This is a regular expression matched against the release title and, after download, the filename on disk.
-  - Note: Radarr only considers text after the movie title and year which means anything preceding the title is ignored.
-  - **Known Custom Format Title Parsing Bugs**
-    - [Custom Formats do not apply before the Year in release titles for Grabs and ignore movie title](https://github.com/Radarr/Radarr/issues/4859)
-    - [Custom Format doesn't match for term "xvid" at end of release name as the video extension](https://github.com/Radarr/Radarr/issues/6824)
-    - [CF applied to the name of the film. Movie Title not ignored for Files](https://github.com/Radarr/Radarr/issues/7004)
-    - [Custom format Flag stays after transcoding into other Codec and don't ignore scene name original file title](https://github.com/Radarr/Radarr/issues/7896)
+    - Note: Radarr only considers text after the movie title and year which means anything preceding the title is ignored.
+    - **Known Custom Format Title Parsing Bugs**
+        - [Custom Formats do not apply before the Year in release titles for Grabs and ignore movie title](https://github.com/Radarr/Radarr/issues/4859)
+        - [Custom Format doesn't match for term "xvid" at end of release name as the video extension](https://github.com/Radarr/Radarr/issues/6824)
+        - [CF applied to the name of the film. Movie Title not ignored for Files](https://github.com/Radarr/Radarr/issues/7004)
+        - [Custom format Flag stays after transcoding into other Codec and don't ignore scene name original file title](https://github.com/Radarr/Radarr/issues/7896)
 - Edition - This tag is matched against any Editions Radarr may parse. You can put any value Radarr will try to match that against what it parsed (case-insensitive).
 - Language - This language is matched against any language(s) Radarr parses. All languages previously selectable in profiles work here.
 - [Indexer Flag](settings.md#indexer-flags) - This tag is matched against any Indexer Flags that Radarr may parse.
@@ -565,14 +580,15 @@ Profiles is where Custom Format Scores are configured.
 - Quality Modifier - Quality Modifier sets things like Telescene, Telesync, Remux, Regional. It disambiguates a given source and resolution pair when there are multiple quality (source) types that can apply.
 - Size - This is matched against the release size. The release size is converted to gigabytes and compared against the min and max values.
 - Group - This is matched against the group that Radarr parses based on Radarr's group detection logic.
+- Year - This is matched against the release year. The release year is compared against the min and max values.
 
 ### Profiling Settings and Ranking
 
 - Custom formats are implemented within and have their impact controlled by Quality Profiles. The Upgrade Until score prevents upgrading once a release with this desired score has been downloaded.
 - A score of 0 results in the custom format being informational only and has non impact on release ranking nor languages searched.
 - The Minimum Score requires releases cumulative custom format score to reach this threshold otherwise they will be rejected.
-  - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
-  - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
+    - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
+    - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
 - [Please see TRaSH's Guides for how to setup and use custom formats](https://trash-guides.info/Radarr/Radarr-setup-custom-formats/)
 
 #### Importing / Exporting Custom Formats
@@ -618,6 +634,7 @@ Profiles is where Custom Format Scores are configured.
 - API Key - The indexer provided key to access the API.
 - Categories - Default categories will be used unless edited. It is likely these default categories are suboptimal. Upon editing this setting, Radarr queries the indexer for its available categories and displays them in a selectable a list. The stale defaults will clear as soon as a category is toggled.
 - (Advanced Option) Additional Parameters - Additional Newznab parameters to add to the query link
+- (Advanced Option) Fail Downloads - While processing completed downloads Radarr will treat these selected filetypes as failed downloads. Options are Executables and Potentially Dangerous.
 - Remove year from search string - For text based queries should Radarr remove the year after the movie title when searching this indexer?
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
@@ -670,10 +687,10 @@ Profiles is where Custom Format Scores are configured.
 - Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
 - Prefer Indexer Flags - Prioritize releases with special flags. (See Required Flags above)
 - Availability Delay - Amount of time before (-#) or after (#) the available date to search for Movie
-  - This is helpful to delay searching for a release to give the community time to perform the best encodes.
-  - Typically, a Movie Availability of `Released` with a delay of `-21` or `-14` is suggested.
+    - This is helpful to delay searching for a release to give the community time to perform the best encodes.
+    - Typically, a Movie Availability of `Released` with a delay of `-21` or `-14` is suggested.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Radarr find movies?](faq.md#how-does-radarr-find-movies) for a better understanding of how RSS Sync will help you
+    - Please see [How does Radarr find movies?](faq.md#how-does-radarr-find-movies) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Radarr has been offline for an extended period of time, Radarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -734,7 +751,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+    - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+    - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Settings
 
@@ -753,8 +771,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
-    - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Radarr per the below table. Torrents must also stay in the same category.
+    - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+        - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Radarr per the below table. Torrents must also stay in the same category.
+    - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Remove Download Compatibility
 
@@ -783,8 +802,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 
 - (Advanced Global Setting) Enable - Automatically import completed downloads from the download client
 - (Advanced Option) Check For Finished Downloads Interval - Set how often to query the download clients' queues and refresh monitored downloads, minimum 1 minute
-- (Per Client Setting) Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
-  - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Radarr per the above table. Torrents must also stay in the same category.
+- (Per Client Setting) Remove Completed - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents)
+    - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Radarr per the above table. Torrents must also stay in the same category.
+- (Per Client Setting) Remove Failed - Remove failed downloads from the download client's history.
 
 ### Remove Completed Downloads
 
@@ -807,16 +827,17 @@ If you download using a BitTorrent client, the process is slightly different:
 - There are several components that make up the failed download handling process:
 
 - Check Downloader:
-  - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
-  - History - Check your downloader's history for failure (e.g. not enough to repair, or extraction failed)
+    - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
+    - History - Check your downloader's history for failure (e.g. not enough to repair, or extraction failed)
 - When Radarr finds a failed download it starts processing them and does a few things:
-  - Adds a failed event to Radarr's history
-  - Removes the failed download from Download Client to free space and clear downloaded files (optional)
-  - Starts searching for a replacement file (optional)
-  - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Radarr ever again (You can still force the download via a manual search).
-  - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Radarr, at this time, they are all on by default.
+    - Adds a failed event to Radarr's history
+    - Removes the failed download from Download Client to free space and clear downloaded files (optional)
+    - Starts searching for a replacement file (optional)
+    - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Radarr ever again (You can still force the download via a manual search).
+    - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Radarr, at this time, they are all on by default.
 
-- Redownload - Controls whether or not Radarr will search for the same file after a failure
+- Redownload Failed - Controls whether or not Radarr will search for the same file after a failure
+- (Advanced Option) Redownload Failed from Interactive Search - Only shown when Redownload Failed is enabled. Automatically search for and attempt to download a different release when the failed release was grabbed from an interactive search.
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ## Remote Path Mappings
@@ -851,11 +872,11 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 - (Advanced Option) List Update Interval - How often should Radarr poll the list for updates? This is provider dependent as per the UI.
 - (Advanced Option) Clean Library Level - Movies in library will be removed or unmonitored if not in your list(s)
-  - Disabled - Do not clean the library (Recommended)
-  - Log Only - Only log the movies are not on the list(s) and take no other actions
-  - Keep and Unmonitor Movie - Keep movies that are not on the list(s), but unmonitor them in Radarr.
-  - Remove Movie and Keep Files - Remove movies that are not on the list(s) from Radarr, but do not delete their files
-  - **DANGER** Remove Movie and Delete Files - Remove movies that are not on the list(s) from Radarr and delete their files
+    - Disabled - Do not clean the library (Recommended)
+    - Log Only - Only log the movies are not on the list(s) and take no other actions
+    - Keep and Unmonitor Movie - Keep movies that are not on the list(s), but unmonitor them in Radarr.
+    - Remove Movie and Keep Files - Remove movies that are not on the list(s) from Radarr, but do not delete their files
+    - **DANGER** Remove Movie and Delete Files - Remove movies that are not on the list(s) from Radarr and delete their files
 
 ## List Exclusions
 
@@ -885,7 +906,7 @@ Connections are how you want Radarr to communicate with the outside world.
 - On Movie File Delete - Be notified when movies files are deleted
 - On Movie File Delete For Upgrade - Be notified when movie files are deleted for upgrades
 - On Health Issue - Be notified on health check failures
-  - Include Health Warnings - Be notified on health warnings in addition to errors.
+    - Include Health Warnings - Be notified on health warnings in addition to errors.
 - On Health Restored - Be notified when a previously reported health issue is resolved
 - On Application Update - Be notified when Radarr gets updated to a new version
 - On Manual Interaction Required - Be notified when manual interaction is required for a download
@@ -910,15 +931,15 @@ Kodi will be one of the most commonly used options here if that is the software 
 - The tag section in Radarr is used to link different aspects of Radarr. They are also useful for tracking which movies come from which lists.
 - Tags are particularly useful for:
 
-  - Delay Profiles
-  - Restrictions
-  - Indexers
+    - Delay Profiles
+    - Restrictions
+    - Indexers
 
 - Tags can be used to link Delay Profiles, Indexers, and Restrictions and Movies together.
 - For Example:
-  - You only want a specific indexer to be used for a specific movie. You would create a tag and assign the movie and indexer that tag.
-  - You want a specific Restrictions to only apply to a specific movie. You would create a tag and assign the Restrictions and Movie that tag.
-  - This process is the same for Delay Profiles.
+    - You only want a specific indexer to be used for a specific movie. You would create a tag and assign the movie and indexer that tag.
+    - You want a specific Restrictions to only apply to a specific movie. You would create a tag and assign the Restrictions and Movie that tag.
+    - This process is the same for Delay Profiles.
 
 !!! warning
     A Movie will use both indexers that have matching tags and indexers that have have no tags.
@@ -931,9 +952,9 @@ Kodi will be one of the most commonly used options here if that is the software 
 ## Host
 
 - Bind Address - Valid IPv4 address or '*' for all interfaces
-  - 0.0.0.0 or `*` - any address can connect
-  - 127.0.0.1 or localhost - only localhost applications can connect
-  - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
+    - 0.0.0.0 or `*` - any address can connect
+    - 127.0.0.1 or localhost - only localhost applications can connect
+    - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
 - Port Number - The port number that you are wanting to use to access the webUI for Radarr
 
 !!! warning
@@ -944,6 +965,14 @@ Kodi will be one of the most commonly used options here if that is the software 
 !!! info
     Note: If using a reverse proxy (example: mydomain.com/radarr) you would enter '/radarr' for URL Base.
 
+- Allowed Hosts - Which hostnames (including FQDN, Fully Qualified Domain Names) or IP Addresses Radarr will accept as a valid host. This setting is required if Authentication Required is not set to `Enabled`. This is the host portion of the address you enter in your address bar of your browser to access Radarr.
+    - IP Address: `192.168.50.1`
+    - Hostname: `radarr`
+    - FQDN: `radarr.example.com`
+    - Wildcard subdomain: `*.example.com` - For example `radarr.example.com`, `movies.example.com` or any other subdomain would be accepted.
+    - Docker with a `.internal` suffix: `*.internal` - accepts container hostnames such as `radarr.internal` when you name your containers with a `.internal` suffix.
+    - A blank value is accepted only when Authentication Required is `Enabled`; otherwise at least one host is required and a blank value is rejected on save.
+
 - Enable SSL - If you have SSL credentials and would like to secure communication to and from your Radarr enable this option.
 
 !!! warning
@@ -952,22 +981,34 @@ Kodi will be one of the most commonly used options here if that is the software 
 ## Security
 
 - Authentication - How would you like to authenticate to access your Radarr instance
-  - As of Radarr v5, Authentication is now mandatory. [See the Mandatory Auth FAQ entry for details.](faq.md#forced-authentication)
-  - ~~None - You have no authentication to access your Radarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web~~
-  - Basic (Browser pop-up) - This option when accessing your Radarr will show a small pop-up allowing you to input a Username and Password
-  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
+    - As of Radarr v5, Authentication is now mandatory. [See the Mandatory Auth FAQ entry for details.](faq.md#forced-authentication)
+    - ~~None - You have no authentication to access your Radarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Radarr or your Radarr is not exposed to the web~~
+    - Basic (Browser pop-up) - Removed in Radarr v6.0.0; an existing `Basic` value in the config is converted to `Forms` on load. Previously a browser username/password pop-up.
+    - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Radarr
+    - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Radarr. Not selectable in the UI; set it via `config.xml` or the `RADARR__AUTH__METHOD` environment variable. Radarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses have no effect
+- Authentication Required - Controls which requests must authenticate. Do not change this unless you understand the risks.
+    - Enabled - Always require authentication (recommended)
+    - Disabled for Local Addresses - Skip authentication for requests Radarr identifies as coming from localhost or the LAN
+
+!!! warning
+    With Authentication Required set to `Disabled for Local Addresses`, a request that spoofs the `X-Forwarded-For` header can appear local and skip authentication unless Radarr is behind a properly configured reverse proxy whose address is listed under Trusted Networks below. Radarr only trusts `X-Forwarded-For` from addresses in that list. If you do not run a trusted reverse proxy, set Authentication Required to `Enabled`, or put Radarr behind a VPN or Tailscale rather than exposing it directly.
+
 - API Key - This is how other programs would communicate or have Radarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
-  - Enabled - Validate all HTTPS certificates (recommended)
-  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
-  - Disabled - Do not validate any HTTPS certificates
+    - Enabled - Validate all HTTPS certificates (recommended)
+    - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+    - Disabled - Do not validate any HTTPS certificates
+- Trusted Networks - Comma-separated list of IP addresses or CIDR networks that trusted reverse proxies are on (for example `172.17.0.1`, `10.0.0.0/8`, or `fc00::/7`). Radarr only trusts the `X-Forwarded-For` header from these addresses. Only add proxies that are properly configured to send the correct headers.
+
+!!! info
+    Trust CGNAT IP Addresses - Not exposed in the UI. Set via `config.xml` or the `RADARR__AUTH__TRUSTCGNATIPADDRESSES` environment variable (default `false`). When enabled, Radarr treats CGNAT addresses (`100.64.0.0/10`, the range Tailscale uses) as local for the Authentication Required `Disabled for Local Addresses` check. It has no effect with any other Authentication Required or Authentication setting.
 
 ## Proxy
 
 Proxy - This option allows you to run the information your Radarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
 - Use Proxy - Enable to use a Proxy
-- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Proxy Type - Select your proxy type (HTTP(S), Socks4, or Socks5)
 - Hostname - Enter your proxy hostname (Do not include http/https or any other protocol)
 - Port - Enter your proxy port
 - Username - Enter your proxy username if applicable
@@ -978,9 +1019,9 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 ## Logging
 
 - Log level - Probably one of the most useful troubleshooting tools
-  - Info - This is the most basic way that Radarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
-  - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
-  - Trace - The most advance and detailed logging on Radarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
+    - Info - This is the most basic way that Radarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
+    - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
+    - Trace - The most advance and detailed logging on Radarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
 
 ## Analytics
 
@@ -989,12 +1030,12 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Radarr that you are running on.
-  - [Please see this FAQ entry for more information](faq.md#how-do-i-update-radarr)
+    - [Please see this FAQ entry for more information](faq.md#how-do-i-update-radarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Radarr built-in updater or a script
-  - Built-in - Use Radarr's own updater
-  - Script - Have Radarr run the update script
-  - Docker - Do not update Radarr from inside the Docker, instead pull a brand new image with the new update
+    - Built-in - Use Radarr's own updater
+    - Script - Have Radarr run the update script
+    - Docker - Do not update Radarr from inside the Docker, instead pull a brand new image with the new update
 - Script - Visible only when Mechanism is set to Script - Path to update script
 - Update Process - Radarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Radarr is run under, it will need permissions to update the Radarr files as well as stop/start Radarr.
 - Built-in - The built-in method will backup Radarr files and settings, stop Radarr, update the installation and Start Radarr, if your system will not handle the stopping of Radarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Radarr will be restarted.
@@ -1005,8 +1046,8 @@ Proxy - This option allows you to run the information your Radarr pulls and sear
 - The backup section allows you to tell Radarr how you would like for it to handle backups
 
 - (Advanced Option) Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
-- (Advanced Option) Interval - How often would you like Radarr to make a backup
-- (Advanced Option) Retention - How long would you like Radarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+- (Advanced Option) Interval - How often would you like Radarr to make a backup (default: every 7 days)
+- (Advanced Option) Retention - How long would you like Radarr to hold on to each backup. After a new backup is made the oldest backup will be removed (default: 28 days)
 
 !!! info
     Manual backups are retained forever, stored in the same folder, and are named differently.

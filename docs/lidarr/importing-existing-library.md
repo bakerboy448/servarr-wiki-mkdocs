@@ -70,6 +70,8 @@ Most of these tools will rename folders and restructure files at the same time a
 !!! info
     Detailed use of Picard, Beets, and similar tools is beyond the scope of this wiki. See those projects' own documentation.
 
+Once files are imported, Lidarr can take over rewriting these same fields going forward. See the [Audio Tags Reference](audio-tags-reference.md) for the fields it writes and [Write Metadata to Audio Files](settings.md#write-metadata-to-audio-files) to turn it on.
+
 ## Pre-import considerations
 
 Once you have structured and tagged your files, check the following before pointing Lidarr at them. A failed import of a large library is expensive to recover from.
@@ -90,8 +92,8 @@ With files prepared and the pre-import checks done, add the library folder as a 
 2. Fill in the add-root-folder dialog:
    - **Name** — a friendly label for this root folder.
    - **Path** — the filesystem path to the library you prepared. The Lidarr user must have read and write access.
-   - **Monitor*** — the default monitoring option applied to each imported artist's existing releases (All, Future, Missing, Existing, Latest, First, None). This applies to every artist created by the import; you can change individual artists afterwards.
-   - **Monitor New Items*** — controls whether future releases added to MusicBrainz for an imported artist are automatically monitored (All, None, New).
+   - **Monitor*** — the default monitoring option applied once to each imported artist's existing releases (All, Future, Missing, Existing, Latest, First, None). This applies to every artist created by the import; you can change individual artists afterwards. See [Library → Monitor](library.md#monitor) for what each option does.
+   - **Monitor New Items*** — the ongoing rule for albums Lidarr discovers later for an imported artist (All, None, New). **New** monitors a newly discovered album only if its release date is on or after the most recent album already on file, not whether MusicBrainz just added it. See [Library → Monitor New Items](library.md#monitor-new-items).
    - **Quality Profile*** — the default quality profile assigned to each imported artist. Used later to decide which `Releases` are cutoff-met and what Lidarr will search for.
    - **Metadata Profile*** — the default metadata profile. Controls which `Release` types (studio albums, EPs, singles, etc.) are visible on each imported artist.
    - **Tags** — optional tags applied to every artist created by this import, useful for later filtering or automation rules.

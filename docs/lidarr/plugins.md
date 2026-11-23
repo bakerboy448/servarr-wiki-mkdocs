@@ -173,7 +173,7 @@ To search, you must also add Slskd as an Indexer.
 - Enter the API key.
 - Enter a '0' (Key) and your Soulseek username (Value) for 'Ignored Users'.
 - Select the Test button.
-  - The Indexer test will send a test search to slskd for "Silent Partner Chances."
+    - The Indexer test will send a test search to slskd for "Silent Partner Chances."
 - If the Test returns a green checkmark, select Save.
 
 ### Delay Profile
@@ -193,10 +193,10 @@ Slskd is now available for both automatic and interactive searches. During Lidar
 ### Core Features
 
 - **YouTube Music Downloader**:
-  - Downloads music from YouTube (requires cookies/trusted sessions for reliability)
-  - Optional FFmpeg audio extraction (recommended for compatibility)
+    - Downloads music from YouTube (requires cookies/trusted sessions for reliability)
+    - Optional FFmpeg audio extraction (recommended for compatibility)
 - **Soulseek Integration**:
-  - Slskd support as both indexer and download client
+    - Slskd support as both indexer and download client
 
 ### Toolbox Additions
 

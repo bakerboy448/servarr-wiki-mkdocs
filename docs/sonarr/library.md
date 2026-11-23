@@ -24,17 +24,17 @@ The add new feature allows you to add a new series for Sonarr to monitor and dow
 
 - Root Folder - The selected [root/library folder](settings.md#root-folders) in Sonarr for this series to use
 - Monitor - How do you want the series monitored initially?
-  - All Episodes - Monitor all episodes except specials
-  - Future Episodes - Monitor episodes that have not aired yet
-  - Missing Episodes - Monitor episodes that do not have files or have not aired yet
-  - Existing Episodes - Monitor episodes that have files or have not aired yet
-  - Recent Episodes - Monitor episodes aired within the last 90 days and future episodes
-  - Pilot Episode - Only monitor the first episode of the first season
-  - First Season - Monitor all episodes of the first season; all other seasons will be ignored
-  - Last Season - Monitor all episodes of the last season
-  - Monitor Specials - Monitor all special episodes without changing the monitored status of other episodes
-  - Unmonitor Specials - Unmonitor all special episodes without changing the monitored status of other episodes
-  - None - No episodes will be monitored
+    - All Episodes - Monitor all episodes except specials
+    - Future Episodes - Monitor episodes that have not aired yet
+    - Missing Episodes - Monitor episodes that do not have files or have not aired yet
+    - Existing Episodes - Monitor episodes that have files or have not aired yet
+    - Recent Episodes - Monitor episodes aired within the last 90 days and future episodes
+    - Pilot Episode - Only monitor the first episode of the first season
+    - First Season - Monitor all episodes of the first season; all other seasons will be ignored
+    - Last Season - Monitor all episodes of the last season
+    - Monitor Specials - Monitor all special episodes without changing the monitored status of other episodes
+    - Unmonitor Specials - Unmonitor all special episodes without changing the monitored status of other episodes
+    - None - No episodes will be monitored
 - Quality Profile - The [quality profile](settings.md#quality-profiles) to use for this series
 - Series Type - Which Series Type to use for this series; this changes how searches occur [See the FAQ entry for more info](faq.md#whats-the-different-series-types)
 - Season Folder - Enable or disable creation and usage of Season folders for this series
@@ -49,9 +49,9 @@ Library Import allows you to import existing, organized series and episode files
 - Library import is for adding and importing an existing organized library of  series into Sonarr.
 
 - Library Import cannot be used for:
-  - Importing files from a download folder
-  - Adding or Importing one or more files that are not properly named and organized in their own Series Folder within your root folder or a folder you wish to add as a root folder
-  - Any other uses that are not adding a series or episode to Sonarr and importing the series and its file(s) from the root (library) folder that was input to Library Import
+    - Importing files from a download folder
+    - Adding or Importing one or more files that are not properly named and organized in their own Series Folder within your root folder or a folder you wish to add as a root folder
+    - Any other uses that are not adding a series or episode to Sonarr and importing the series and its file(s) from the root (library) folder that was input to Library Import
 
 !!! warning
     \* Non-Windows: If you're using an NFS mount ensure `nolock` is enabled.

@@ -25,12 +25,12 @@ Synology Users can see [TRaSH's Synology Docker Guide](https://trash-guides.info
 - Portainer should only for viewing docker container logs / container status.
 - It's strongly suggested to use Docker compose and to not use Portainer.
 - Portainer has many issues, such as:
-  - Incorrect order of source and target of mounts
-  - Inconsistent case-sensitivity
-  - No automatically created custom networks for inter-container communication
-  - Inconsistent compose implementations on different architectures
-  - Pulls every tag on update when you don't set a specific tag
-  - Capabilities are hidden and some don't work at all on ARM platforms
+    - Incorrect order of source and target of mounts
+    - Inconsistent case-sensitivity
+    - No automatically created custom networks for inter-container communication
+    - Inconsistent compose implementations on different architectures
+    - Pulls every tag on update when you don't set a specific tag
+    - Capabilities are hidden and some don't work at all on ARM platforms
 
 See this [Docker Guide](../../docker-guide.md) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
 

@@ -27,23 +27,30 @@ The queue shows all items the application can recognize that is in the specified
 ## Queue Action Icons
 
 - X - Remove Item from Queue
-  - Remove Release From Download Client - Remove Release from Download Client. Mandatory for unmatched release items
-  - Blocklist Release - Add Release to Blocklist
+    - Remove Release From Download Client - Remove Release from Download Client. Mandatory for unmatched release items
+    - Blocklist Release - Add Release to Blocklist
 - Human Icon - Manual Import Release
 - Grab Icon - Send Release to Download Client
 
 ## Queue Statuses
 
-!!! warning
-    Note the below is incomplete
+!!! info
+    Hover over the status icon in the Queue to see the full status text and any associated messages.
 
-| Icon       | Status                   | Description                                                                                     | Resolution Steps                                         |
-| ---------- | ------------------------ | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| grey clock | Release Pending          | Download is awaiting Download Client to be available or for release to meet Delay Profile Rules | N/A                                                      |
-| yellow     | Warning Unable to Import | \*Arr was unable to import the release. Review the tool tip for more details                    | [See the Troubleshooting Guide](troubleshooting.md) |
-| purple     | Download Importing       | Download is Importing                                                                           | N/A                                                      |
-|            |                          |                                                                                                 |                                                          |
-|            |                          |                                                                                                 |                                                          |
+| Icon                | Status                                     | Description                                                                                              | Resolution Steps                                         |
+| ------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| blue cloud-download | Downloading                                | Release is actively downloading in the Download Client                                                   | N/A                                                      |
+| blue cloud          | Queued                                     | Release is queued in the Download Client and has not started                                            | N/A                                                      |
+| pause               | Paused                                     | Download is paused in the Download Client                                                                | Resume the download in your Download Client              |
+| grey clock          | Pending                                    | Release is awaiting the Delay Profile to elapse before being grabbed                                     | N/A                                                      |
+| yellow clock        | Pending - Download Client Unavailable      | \*Arr cannot reach the Download Client to send or check the release                                      | [See the Troubleshooting Guide](troubleshooting.md) |
+| grey download       | Downloaded - Waiting to Import             | Download completed and is queued for import                                                              | N/A                                                      |
+| blue download       | Downloaded - Importing                     | Download completed and is being imported                                                                 | N/A                                                      |
+| yellow download     | Downloaded - Unable to Import Automatically | Download completed but \*Arr could not import it automatically. Review the tool tip for more details     | [See the Troubleshooting Guide](troubleshooting.md) |
+| red download        | Downloaded - Waiting to Process            | Download completed and is queued for failed-download handling                                            | N/A                                                      |
+| yellow cloud-download | Warning                                  | Download Client reported a warning for the release. Review the tool tip for more details                 | [See the Troubleshooting Guide](troubleshooting.md) |
+| red cloud-download  | Download Failed                            | The download failed in the Download Client                                                               | [See the Troubleshooting Guide](troubleshooting.md) |
+| red download        | Import Failed                              | The completed download could not be imported                                                             | [See the Troubleshooting Guide](troubleshooting.md) |
 
 # History
 

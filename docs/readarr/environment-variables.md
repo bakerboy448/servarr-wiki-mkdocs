@@ -30,7 +30,7 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 ## Environment Variables Table
 
 | Config Option | Namespace | Variable Name | Full Environment Variable |
-|---------------|-----------|---------------|---------------------------|
+| --------------- | ----------- | --------------- | --------------------------- |
 | `InstanceName` | `APP` | `INSTANCENAME` | `READARR__APP__INSTANCENAME` |
 | `Theme` | `APP` | `THEME` | `READARR__APP__THEME` |
 | `LaunchBrowser` | `APP` | `LAUNCHBROWSER` | `READARR__APP__LAUNCHBROWSER` |
@@ -38,24 +38,23 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `AuthenticationEnabled` | `AUTH` | `ENABLED` | `READARR__AUTH__ENABLED` |
 | `AuthenticationMethod` | `AUTH` | `METHOD` | `READARR__AUTH__METHOD` |
 | `AuthenticationRequired` | `AUTH` | `REQUIRED` | `READARR__AUTH__REQUIRED` |
+| `TrustCgnatIpAddresses` | `AUTH` | `TRUSTCGNATIPADDRESSES` | `READARR__AUTH__TRUSTCGNATIPADDRESSES` |
 | `LogLevel` | `LOG` | `LEVEL` | `READARR__LOG__LEVEL` |
 | `FilterSentryEvents` | `LOG` | `FILTERSENTRYEVENTS` | `READARR__LOG__FILTERSENTRYEVENTS` |
 | `LogRotate` | `LOG` | `ROTATE` | `READARR__LOG__ROTATE` |
-| `LogSizeLimit` | `LOG` | `SIZELIMIT` | `READARR__LOG__SIZELIMIT` |
 | `LogSql` | `LOG` | `SQL` | `READARR__LOG__SQL` |
 | `ConsoleLogLevel` | `LOG` | `CONSOLELEVEL` | `READARR__LOG__CONSOLELEVEL` |
-| `ConsoleLogFormat` | `LOG` | `CONSOLEFORMAT` | `READARR__LOG__CONSOLEFORMAT` |
 | `AnalyticsEnabled` | `LOG` | `ANALYTICSENABLED` | `READARR__LOG__ANALYTICSENABLED` |
 | `SyslogServer` | `LOG` | `SYSLOGSERVER` | `READARR__LOG__SYSLOGSERVER` |
 | `SyslogPort` | `LOG` | `SYSLOGPORT` | `READARR__LOG__SYSLOGPORT` |
 | `SyslogLevel` | `LOG` | `SYSLOGLEVEL` | `READARR__LOG__SYSLOGLEVEL` |
-| `DbEnabled` | `LOG` | `DBENABLED` | `READARR__LOG__DBENABLED` |
 | `PostgresHost` | `POSTGRES` | `HOST` | `READARR__POSTGRES__HOST` |
 | `PostgresPort` | `POSTGRES` | `PORT` | `READARR__POSTGRES__PORT` |
 | `PostgresUser` | `POSTGRES` | `USER` | `READARR__POSTGRES__USER` |
 | `PostgresPassword` | `POSTGRES` | `PASSWORD` | `READARR__POSTGRES__PASSWORD` |
 | `PostgresMainDb` | `POSTGRES` | `MAINDB` | `READARR__POSTGRES__MAINDB` |
 | `PostgresLogDb` | `POSTGRES` | `LOGDB` | `READARR__POSTGRES__LOGDB` |
+| `PostgresCacheDb` | `POSTGRES` | `CACHEDB` | `READARR__POSTGRES__CACHEDB` |
 | `UrlBase` | `SERVER` | `URLBASE` | `READARR__SERVER__URLBASE` |
 | `BindAddress` | `SERVER` | `BINDADDRESS` | `READARR__SERVER__BINDADDRESS` |
 | `Port` | `SERVER` | `PORT` | `READARR__SERVER__PORT` |

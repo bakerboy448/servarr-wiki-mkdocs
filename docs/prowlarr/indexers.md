@@ -72,12 +72,12 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 - Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.
 - (Advanced Option) API Path - Path to the Indexer's API. Typically `/api`
 - Credentials - Many indexers and trackers require you to authenticate / login in some way. You may have to enter an API key, RSS key, a session id, a cookie, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
-  - API Key
-  - RSS Key
-  - Session ID
-  - Cookie
-  - Username/Password
-  - etc.
+    - API Key
+    - RSS Key
+    - Session ID
+    - Cookie
+    - Username/Password
+    - etc.
 - (Advanced Option) Additional Parameters - Additional parameters to add to the requests for this indexer.
 - VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank
 - Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
@@ -98,14 +98,14 @@ Once you've selected your indexer, there will be a pop-up containing further inf
 
 - Note that the yml definition is cached for a short period and if you make changes for development purposes you will need to wait out the cache or restart Prowlarr.
 - If you wish to add a custom Cardigann compatible YML definition file for an indexer that is not supported or to test changes to an existing definition file:
-  - Create (or if already created, navigate to) the Custom Indexer Definition folder named `Custom` within the `Definitions` folder of [Prowlarr's App Data folder](appdata-directory.md)
-    - Example paths:
-      - Windows: `C:\ProgramData\Prowlarr\Definitions\Custom`
-      - Linux: `/home/$USER/.config/Prowlarr/Definitions/Custom`
-      - OSX: `/Users/$USER/.config/Prowlarr/Definitions/Custom`
-      - Docker: `/config/Definitions/Custom`
-  - Create your custom definition '.yml'
-  - Save your [Cardigann compatible YML file](cardigann-yml-definition.md) within the custom definition folder and ensure Prowlarr has permissions to access it.
+    - Create (or if already created, navigate to) the Custom Indexer Definition folder named `Custom` within the `Definitions` folder of [Prowlarr's App Data folder](appdata-directory.md)
+        - Example paths:
+            - Windows: `C:\ProgramData\Prowlarr\Definitions\Custom`
+            - Linux: `/home/$USER/.config/Prowlarr/Definitions/Custom`
+            - OSX: `/Users/$USER/.config/Prowlarr/Definitions/Custom`
+            - Docker: `/config/Definitions/Custom`
+    - Create your custom definition '.yml'
+    - Save your [Cardigann compatible YML file](cardigann-yml-definition.md) within the custom definition folder and ensure Prowlarr has permissions to access it.
 
 !!! info
     The file name and id in the definition must be unique and cannot conflict with any other existing definitions.  It's strongly advised to have the name in the definition to be unique as well.

@@ -14,12 +14,12 @@ To initiate a search, click on `Search` on the left menu. There will be a mostly
 ![search_1_searchscreen.png](../assets/prowlarr/search_1_searchscreen.png)
 
 - Query - Enter your search terms in the Query field.
-  - Click the magnifying glass to change the search type, available options are:
-    - Basic Search - Basic Text Query
-    - TV Search - Search using TV parameters as displayed in the UI including ID based (TVDbId, IMDbId, TMDbID, etc.) and season/episode searches
-    - Movie Search - Search using Movie parameters as displayed in the UI including ID based (TMDbId, IMDbId, Genre, etc.)
-    - Audio Search - Search using Music parameters as displayed in the UI including Artist, Album, Label, Genre, etc.
-    - Book Search - Search using Book parameters as displayed in the UI including author, title, etc.
+    - Click the magnifying glass to change the search type, available options are:
+        - Basic Search - Basic Text Query
+        - TV Search - Search using TV parameters as displayed in the UI including ID based (TVDbId, IMDbId, TMDbID, etc.) and season/episode searches
+        - Movie Search - Search using Movie parameters as displayed in the UI including ID based (TMDbId, IMDbId, Genre, etc.)
+        - Audio Search - Search using Music parameters as displayed in the UI including Artist, Album, Label, Genre, etc.
+        - Book Search - Search using Book parameters as displayed in the UI including author, title, etc.
 
 !!! info
     These are generally formatted as `{VariableName:SearchValue}` e.g. For a TV Search of The Simpsons Season 32 the search input would be `{TvdbId:71663} {Season:32}`
@@ -51,7 +51,7 @@ You can bulk grab results at once by checking the select boxes on the left side 
 ### API Key in Query
 
 - `http://{prowlarrhost}:{prowlarrport}/{baseurl}/{indexerid}/api?t=search&q={term}&apikey={yourkey}&cat={comma separated list}`
-  - e.g. `http://192.168.1.100:9696/11/api?t=search&q=mike&apikey={yourkey}&cat=5000,2000`
+    - e.g. `http://192.168.1.100:9696/11/api?t=search&q=mike&apikey={yourkey}&cat=5000,2000`
 
 ### API Key in Header
 
@@ -59,27 +59,27 @@ You can bulk grab results at once by checking the select boxes on the left side 
     Be sure to pass `X-Api-Key` with the API Key as a header
 
 - `http://{prowlarrhost}:{prowlarrport}/{baseurl}/{indexerid}/api?t=search&q={term}&apikey={yourkey}&cat={comma separated list}`
-  - e.g. `http://192.168.1.100:9696/{indexerid}/api?t=search&q=mike&cat=5000,2000`
+    - e.g. `http://192.168.1.100:9696/{indexerid}/api?t=search&q=mike&cat=5000,2000`
 
 ## Search Feed
 
 - `http://{prowlarrhost}:{prowlarrport}/{baseurl}/api/v1/search?query={encoded term}&indexerIds={comma separated list}&categories={cat}&categories={other-cat}&type={searchtype}`
-  - e.g. `http://192.168.1.100/prowlarr/api/v1/search?query=black%20hawk%20down&indexerIds=-1&categories=2000&type=search`
-  - e.g. `http://192.168.1.100/prowlarr/api/v1/search?query=%7BTvdbId%3A71663%7D%20%7BSeason%3A32%7D&categories=5000&type=tvsearch`
+    - e.g. `http://192.168.1.100/prowlarr/api/v1/search?query=black%20hawk%20down&indexerIds=-1&categories=2000&type=search`
+    - e.g. `http://192.168.1.100/prowlarr/api/v1/search?query=%7BTvdbId%3A71663%7D%20%7BSeason%3A32%7D&categories=5000&type=tvsearch`
 
 Parameters
 
 - `query` - URL Encoded Search String
 - `indexerIds` - comma separated list of Indexer ID
-  - Leave parameter off the url for all indexers
-  - `-2` is all torrents
-  - `-1` is all usenet
-  - Indexer Ids
+    - Leave parameter off the url for all indexers
+    - `-2` is all torrents
+    - `-1` is all usenet
+    - Indexer Ids
 - `categories` - add a new parameter-value pair for each category to search
-  - leave off parameter for all
+    - leave off parameter for all
 - `type` - the search type to perform
-  - `search` - Basic Text Query
-  - `tvsearch` - TV Query - Supports TV parameters
-  - `movie` - Movie Query - Supports Movie parameters
-  - `music` - Audio/Music Query - Supports Music parameters
-  - `book` - Book Query - Supports Book parameters
+    - `search` - Basic Text Query
+    - `tvsearch` - TV Query - Supports TV parameters
+    - `movie` - Movie Query - Supports Movie parameters
+    - `music` - Audio/Music Query - Supports Music parameters
+    - `book` - Book Query - Supports Book parameters

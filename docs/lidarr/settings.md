@@ -63,14 +63,14 @@ Example: `{Artist Name}` → `/music/The Beatles/`
 ## Folders
 
 | Setting | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | **Create Empty Artist Folders** | Off | Lidarr creates an artist folder immediately when you add an artist, even before importing any tracks. |
 | **Delete Empty Folders** | Off | Lidarr automatically removes empty artist and album folders after deleting or moving files. |
 
 ## Importing
 
 | Setting | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | **Skip Free Space Check** | Off | Skip the available disk space check before importing. Only enable this if Lidarr can't correctly detect free space (some network shares and unusual storage setups). |
 | **Minimum Free Space** | 100 MB | Lidarr will refuse to import if available space in the root folder falls below this value. |
 | **Use Hardlinks Instead of Copy** | On | Use hardlinks when the source and destination are on the same filesystem. Hardlinks avoid copying data and allow seeding to continue. Falls back to copy if hardlinks aren't supported. |
@@ -99,11 +99,11 @@ Matching files are then filtered against the configured extension list. Files th
 ## File Management
 
 | Setting | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | **Unmonitor Deleted Tracks** | Off | When something outside Lidarr deletes a track file from disk, automatically unmonitor that track. |
 | **Download Propers and Repacks** | Prefer and Upgrade | How to handle proper/repack releases. **Prefer and Upgrade** grabs and upgrades to propers when found. **Don't Upgrade Automatically** includes them in scores but won't autograb. **Don't Prefer** treats them as equal to the original release. |
 | **Analyse Audio Files** | On | Read audio file metadata (bitrate, sample rate, bit depth) to improve quality detection. Disabling this makes quality detection rely solely on filename parsing. |
-| **Rescan Artist Folder after Refresh** | Always | When to rescan an artist folder after a metadata refresh. **Always** rescans every time. **After Manual Refresh** only rescans when triggered manually. **Never** disables rescanning. |
+| **Rescan Artist Folder after Refresh** | Always | When to rescan after a metadata refresh. Despite the name, this doesn't scope the rescan to just that artist: refreshing an existing artist rescans every configured root folder, not only the refreshed artist's own folder (a newly-added artist is the one exception, whose first scan is scoped to its own folder). **Always** rescans every time. **After Manual Refresh** only rescans when triggered manually. **Never** disables rescanning. |
 | **Watch Library for File Changes** | On | Monitor the library folder for external file changes (additions, deletions, renames). Disabling this means Lidarr only discovers changes during scheduled rescans. |
 
 ## Permissions
@@ -111,7 +111,7 @@ Matching files are then filtered against the configured extension list. Files th
 These settings apply to Linux and macOS only. Leave disabled on Windows.
 
 | Setting | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | **Set Permissions** | Off | Set file and folder permissions on imported files. |
 | **chmod Folder** | 755 | Octal permission mode applied to folders on import (for example, `755` = rwxr-xr-x). |
 | **chown Group** | (empty) | Group to assign to imported files and folders. The Lidarr process user must be a member of this group. |
@@ -119,7 +119,7 @@ These settings apply to Linux and macOS only. Leave disabled on Windows.
 ## Recycling Bin
 
 | Setting | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | **Recycle Bin** | (empty) | Path to a recycling bin folder. When Lidarr deletes files, they're moved here rather than permanently deleted. Leave empty to skip the recycle bin. |
 | **Recycle Bin Cleanup** | 7 days | Number of days before files in the recycle bin are permanently deleted. Set to `0` to disable automatic cleanup. |
 
@@ -132,7 +132,6 @@ Click **Add (+)** to add a root folder. The path must exist and Lidarr must have
 !!! warning
     Don't point a root folder at a cloud storage mount (Dropbox, OneDrive, Google Drive). Lidarr writes audio tags and metadata frequently; cloud storage APIs have rate limits that will cause failures.
 
-
 ## Metadata Profiles
 
 {#metadata-profiles}
@@ -142,14 +141,14 @@ Metadata profiles control which release types are visible per artist. Lidarr hid
 ### Fields
 
 | Field | Description |
-|---|---|
+| --- | --- |
 | **Name** | Profile name. |
 | **Release Types** | Checkboxes for each MusicBrainz release type. Only releases matching a checked type appear for artists using this profile. |
 
 ### Release Types
 
 | Type | Description |
-|---|---|
+| --- | --- |
 | **Albums** | Standard studio albums. |
 | **Singles** | Single releases (one or a few tracks). |
 | **EPs** | Extended plays, longer than a single but shorter than an album. |
@@ -161,7 +160,6 @@ You can include or exclude secondary types (Compilation, Soundtrack, Spokenword,
 !!! info
     MusicBrainz determines release types. If a release you expect to see is missing, check its entry on MusicBrainz: the type may be `Unknown`, which Lidarr can't filter on, or the primary type may be one you have unchecked in your profile.
 
-
 ## Release Profiles
 
 {#release-profiles}
@@ -171,7 +169,7 @@ Release profiles filter and score releases based on their titles. Use them to re
 ### Fields
 
 | Field | Description |
-|---|---|
+| --- | --- |
 | **Must Contain** | Comma-separated list of terms (or regex patterns) that a release title must include. Lidarr rejects releases that don't match. |
 | **Must Not Contain** | Comma-separated list of terms a release title must not include. Lidarr rejects releases that match any term. |
 | **Preferred** | Terms with associated scores. Positive scores boost a release; negative scores penalise it. Separate terms with commas to share a score across more than one term. |
@@ -181,7 +179,6 @@ Release profiles filter and score releases based on their titles. Use them to re
 
 !!! info
     Release profiles apply at **grab/download time**: they filter and score releases from indexers before Lidarr sends anything to a download client. They have no effect on which MusicBrainz release (pressing, edition, format) Lidarr matches your already-downloaded files to during import. See [FAQ → Can Lidarr prefer a specific pressing or format during import?](faq.md#can-lidarr-prefer-a-specific-pressing-or-format-during-import) for the import side of this.
-
 
 ## Custom Formats
 
@@ -201,7 +198,7 @@ Each custom format contains one or more specifications. A specification defines 
 Common specification types for music:
 
 | Specification | Matches against |
-|---|---|
+| --- | --- |
 | **Release Title** | The full release title string from the indexer. Supports regex. |
 | **Release Group** | The release group part of the title, if parseable. |
 | **Indexer Flag** | Indexer-specific flags (Freeleech, Halfleech, etc.) where the indexer supports them. |
@@ -217,7 +214,6 @@ Two ways to test how Lidarr will parse a release name before committing to a pro
 
 **Via the Servarr Discord bot:** In the `#bot-spam` channel, run `/parser lidarr <release title>` (for example, `/parser lidarr Artist.Album.2022.FLAC-GROUP`). The bot replies with the same parsed breakdown. Useful for quick spot-checks without opening the UI.
 
-
 # Quality
 
 {#quality}
@@ -227,7 +223,7 @@ The Quality page defines size thresholds for each quality level. Lidarr uses the
 For audio, size limits use **kilobits per second (kbps)**. Lidarr computes a bitrate from the file size and duration and compares it to the configured range.
 
 | Column | Description |
-|---|---|
+| --- | --- |
 | **Quality** | The quality name (for example, FLAC, MP3-320, MP3-256). |
 | **Min** | Minimum acceptable bitrate in kbps. Lidarr rejects releases below this. Set to `0` to disable the lower bound. |
 | **Preferred** | The bitrate Lidarr aims for when scoring releases. Releases at this level receive a higher score than those at the minimum. |
@@ -236,6 +232,41 @@ For audio, size limits use **kilobits per second (kbps)**. Lidarr computes a bit
 !!! info
     FLAC is lossless and doesn't have a consistent bitrate; its effective bitrate varies by content. The FLAC entry in quality definitions serves primarily as a file-size sanity check rather than strict bitrate enforcement.
 
+# Indexers
+
+{#indexer-settings}
+
+!!! info
+    Find information on supported indexers at the [Supported](supported.md#indexers) page.
+
+Indexers are the sources Lidarr searches for releases: Usenet indexers (Newznab-compatible) or torrent trackers. Click **Add (+)**, choose an indexer type, and fill in its connection details.
+
+## Common Fields (all indexers)
+
+| Field | Description |
+| --- | --- |
+| **Name** | Label for this indexer, shown in activity and logs. |
+| **Enable RSS** | Whether Lidarr includes this indexer in periodic RSS sync (the automatic background search for new releases). |
+| **Enable Automatic Search** | Whether Lidarr uses this indexer for automatic searches, triggered from the UI or by Lidarr itself (for example, on a missing-album search). |
+| **Enable Interactive Search** | Whether this indexer's results appear when you manually search for a release from the UI. |
+| **Indexer Priority** | 1 (highest) to 50 (lowest). Default: 25. Used as a tiebreaker when grabbing between otherwise-equal releases from different indexers. All enabled indexers are still used for RSS sync and searching regardless of priority. |
+| **(Advanced) Download Client** | Pin this indexer's grabs to a specific download client instead of Lidarr's normal client-selection logic. |
+| **Tags** | Restrict this indexer to artists with at least one matching tag. Leave empty to use it for all artists. |
+
+Most Usenet (Newznab-compatible) indexers additionally need a **URL**, **API Path** (defaults to `/api`), **API Key**, and **Categories**. Torrent indexers vary by type but commonly need a **URL** and either an **API Key** or a cookie/session-based login, plus **Minimum Seeders** and, for private trackers, seed ratio and seed time goals.
+
+## Options
+
+{#indexer-options}
+
+Global settings that apply across all indexers, found under **Settings → Indexers → Options**.
+
+| Setting | Description |
+| --- | --- |
+| **Minimum Age** | Usenet only. Minimum age in minutes of an NZB before Lidarr will grab it. Gives new releases time to propagate across Usenet providers. |
+| **Maximum Size** | Maximum release size in MB. Lidarr rejects releases larger than this. Set to `0` for unlimited. |
+| **Retention** | Usenet only. Set to `0` for unlimited retention. |
+| **(Advanced) RSS Sync Interval** | Interval in minutes between automatic RSS syncs. Set to `0` to disable all automatic release grabbing. This applies to every indexer; follow the usage rules each indexer sets for itself. See [FAQ → How does Lidarr work?](faq.md#how-does-lidarr-work) for how RSS sync fits into Lidarr's overall search cycle. |
 
 # Download Clients
 
@@ -274,7 +305,7 @@ Click **Add (+)**, choose a client type, and fill in the connection details.
 ### Common Fields (all clients)
 
 | Field | Description |
-|---|---|
+| --- | --- |
 | **Name** | Label for this client, shown in activity and logs. |
 | **Enable** | Whether Lidarr actively monitors this client. |
 | **Host** | Hostname or IP of the download client. |
@@ -296,7 +327,7 @@ Click **Add (+)**, choose a client type, and fill in the connection details.
 ### Torrent-Only Fields
 
 | Field | Description |
-|---|---|
+| --- | --- |
 | **Post-Import Category** | Category to assign after import. Note: setting this disables completed-download removal, since Lidarr can no longer identify the torrent as one it manages. |
 | **Initial State** | Whether new torrents start paused or downloading immediately. |
 
@@ -320,7 +351,7 @@ Lidarr can set seed ratio and time goals via the torrent client's API when you a
 ## Completed Download Handling
 
 | Setting | Description |
-|---|---|
+| --- | --- |
 | **Enable** (Advanced, global) | Automatically import completed downloads from the download client. Disabling this means Lidarr will never import anything, so leave it enabled unless you have a specific reason to disable it. |
 | **Remove** (per-client) | After import, ask the download client to remove the completed item. For torrents, removal only occurs when the client reports seeding is complete and the torrent is paused/stopped. |
 
@@ -329,7 +360,7 @@ Lidarr can set seed ratio and time goals via the torrent client's API when you a
 Failed download handling is available for SABnzbd and NZBGet only. It isn't supported for torrent clients.
 
 | Setting | Description |
-|---|---|
+| --- | --- |
 | **Redownload** | When a download fails, automatically search for a replacement. |
 | **(Advanced) Remove** | Remove the failed download from the client when Lidarr detects the failure. |
 
@@ -344,7 +375,6 @@ A mapping translates a remote path (as reported by the download client) to a loc
 !!! info
     If both Lidarr and the download client are in Docker containers on the same host with matching volume mounts, a remote path mapping isn't needed. See [TRaSH's Remote Path Mapping guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for diagnosis and setup.
 
-
 # Connect
 
 {#connections}
@@ -357,7 +387,7 @@ Connections send notifications or trigger actions when events occur in Lidarr. C
 Click **Add (+)** and select a connection type. Most connections share these fields:
 
 | Field | Description |
-|---|---|
+| --- | --- |
 | **Name** | Label for this connection. |
 | **On Grab** | Trigger when Lidarr sends a release to a download client. |
 | **On Release Import** | Trigger when a downloaded release is successfully imported. |
@@ -374,6 +404,34 @@ Click **Add (+)** and select a connection type. Most connections share these fie
 
 For **Custom Script** connections, see the [Custom Scripts](custom-scripts.md) page for the full list of environment variables available per event.
 
+# Metadata
+
+{#metadata}
+
+## Write Metadata to Audio Files
+
+{#write-metadata-to-audio-files}
+
+| Setting | Description |
+| --- | --- |
+| **Tag Audio Files with Metadata** | **All files, keep in sync with MusicBrainz**: writes tags on import and rewrites them whenever the MusicBrainz data changes. **All files, initial import only**: writes tags once, on import. **For new downloads only**: tags are written when a file comes in through a download client import or the Manual Import screen; files picked up by Lidarr's library scan are left alone. **Never**: Lidarr never writes audio tags. |
+| **Embed Cover Art in Audio Files** | Embeds Lidarr's album art into the audio file itself when writing tags. Only shown when tag writing is enabled. |
+| **Scrub Existing Tags** | Removes existing tags from a file before writing, leaving only the tags Lidarr itself adds. |
+
+!!! warning
+    Choosing **All files, keep in sync with MusicBrainz** or **All files, initial import only** alters existing files the first time they're imported or re-synced, not just new downloads.
+
+!!! warning
+    **For new downloads only** is keyed to how a file enters the library, not whether it is actually new. Pointing Lidarr at an existing collection and letting the library scan match it leaves those files untagged. Bringing the same collection in through Manual Import does not: Manual Import always counts as a new download, so those files get tagged even though nothing was downloaded.
+
+!!! danger
+    **Writing tags has no hardlink protection.** Renaming a file that a torrent client is still seeding is safe with hardlinks (see the warning under [Track Naming](#track-naming) above), because renaming just relinks a path. Writing tags is different: it rewrites the file's actual content in place, which changes the data at every hardlink to that file, including the copy your torrent client is still seeding. If **Tag Audio Files with Metadata** is enabled and a download is still seeding, retagging it can corrupt the seeding copy the same way editing it directly would.
+
+See [Audio Tags Reference](audio-tags-reference.md) for the complete list of fields Lidarr writes and where each one is stored per file format.
+
+## Metadata Consumers
+
+Below **Write Metadata to Audio Files**, the Metadata page lists external metadata formats Lidarr can write to disk alongside your music: NFO files for media-center software (Kodi/XBMC), and image sidecar formats for Roksbox and WD TV. Enable a consumer and choose which of Artist Metadata, Album Metadata, Artist Images, and Album Images it writes. See [Supported → Metadata](supported.md) for what each consumer generates and which media players read it.
 
 # Tags
 
@@ -387,3 +445,98 @@ Tags are particularly useful for:
 - Assigning a non-default delay profile to a subset of artists.
 - Restricting a release profile to certain artists.
 - Tracking which import list added an artist.
+
+# Host
+
+{#host}
+
+Host settings live under **Settings → General → Host** and control how the Lidarr web server itself is reachable. Most of these require a restart to take effect.
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| **(Advanced) Bind Address** | `*` | Network interface to listen on: a specific IP address, `localhost`, or `*` for all interfaces. |
+| **Port** | 8686 | The port Lidarr's web server listens on. |
+| **URL Base** | (empty) | Path prefix for reverse proxy setups, for example `/lidarr`. Leave empty unless your reverse proxy needs one. |
+| **Allowed Hosts** | (empty) | Comma-separated list of hostnames and IP addresses Lidarr will answer to. `*.` works as a subdomain wildcard (for example `*.example.com`). Leave empty to accept any host. See [System → Allowed Hosts Not Configured](system.md#allowed-hosts-not-configured) for what the health check does and does not catch here, a bare `*` entry is not the same as `*.` and isn't flagged by the check. |
+| **(Advanced) Instance Name** | Lidarr | Shown in the browser tab and used as the Syslog application name. |
+| **(Advanced) Application URL** | (empty) | This instance's full external URL, including scheme, port, and URL base. Used to build links back to Lidarr (for example in notifications). |
+| **(Advanced) Enable SSL** | Off | Serve the UI over HTTPS. Requires restarting Lidarr as an administrator to take effect. |
+| **(Advanced) SSL Port** | 6868 | Only shown when Enable SSL is on. |
+| **(Advanced) SSL Cert Path** | (empty) | Path to a `.pfx` certificate file. Only shown when Enable SSL is on. |
+| **(Advanced) SSL Cert Password** | (empty) | Password for the `.pfx` file. Only shown when Enable SSL is on. |
+| **Open Browser on Start** | On | Windows only, and not shown when running as a service. Opens Lidarr's homepage in a browser on launch. |
+
+# Security
+
+{#security}
+
+Security settings live under **Settings → General → Security**.
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| **Authentication** | Forms | **Forms** shows a username/password login page. **External** hands authentication to a reverse proxy in front of Lidarr and isn't selectable directly from this dropdown. Lidarr requires authentication to be enabled by default; disabling it entirely isn't offered as a supported option from the UI. |
+| **Authentication Required** | Enabled | Only shown once Authentication is on. **Enabled** requires login for every request. **Disabled for Local Addresses** skips login for requests from local/private IP ranges. |
+| **Username** / **Password** / **Confirm Password** | | Only shown once Authentication is on. |
+| **API Key** | Randomly generated | Read-only. Copy it with the clipboard button, or generate a new one with the reset button, which immediately invalidates the old key everywhere it's used (custom scripts, other *arr apps, third-party tools). Resetting requires a restart to take effect. |
+| **Certificate Validation** | Enabled | How strictly Lidarr validates HTTPS certificates on outgoing connections (to indexers, download clients, notifications, etc.). **Disabled for Local Addresses** and **Disabled** exist for troubleshooting self-signed certificates; don't change this unless you understand the risk of doing so. |
+| **Trusted Networks** | (empty) | Comma-separated list of IP addresses or CIDR ranges (for example `172.17.0.1`, `10.0.0.0/8`, `fc00::/7`) for reverse proxies that are configured to forward the real client IP. Only add proxies you control and that send the correct headers; adding an untrusted network here lets it spoof the client IP Lidarr sees. Requires a restart to take effect. |
+
+# Proxy
+
+{#proxy}
+
+Proxy settings live under **Settings → General → Proxy** and route Lidarr's own outgoing connections (indexers, download clients, notifications, metadata server) through a proxy. This doesn't affect how clients reach Lidarr's own web UI.
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| **Use Proxy** | Off | Enables the rest of this section. |
+| **Proxy Type** | HTTP(S) | HTTP(S), Socks4, or Socks5 (Socks5 supports routing through Tor). |
+| **Hostname** / **Port** | / 8080 | Proxy server address. |
+| **Username** / **Password** | (empty) | Only needed if the proxy requires authentication. |
+| **Ignored Addresses** | (empty) | Comma-separated hosts that bypass the proxy. `*.` works as a subdomain wildcard. |
+| **Bypass Proxy for Local Addresses** | On | Skips the proxy for local/private network destinations. |
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| **Log Level** | Info | `Info`, `Debug`, or `Trace`. Debug and Trace produce substantially more output; use them for diagnosing a specific problem, not as a permanent setting. |
+| **(Advanced) Log Size Limit** | 1 MB | Maximum size of a single log file before Lidarr archives it and starts a new one, in MB (1 to 10). |
+
+!!! warning
+    Trace logging should only be enabled temporarily. Leaving it on generates large log files and can itself affect performance on slower systems.
+
+See [System → Log Files](system.md#log-files) for where log files live on disk and how log rotation works.
+
+# Analytics
+
+{#analytics}
+
+Analytics settings live under **Settings → General → Analytics**.
+
+| Setting | Default | Description |
+|---|---|---|
+| **Send Anonymous Usage Data** | On | Sends anonymous usage and error information (browser type, which UI pages you use, error reports, OS and runtime version) to help prioritize features and bug fixes. Requires a restart to take effect. |
+
+# Updates
+
+{#updates}
+
+Update settings live under **Settings → General → Updates**. This entire section is Advanced-only. When Lidarr was installed through Docker or a package manager that manages its own updates, this section still shows, but Branch becomes read-only and Mechanism shows that external mechanism's name in place of Built-In.
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| **(Advanced) Branch** | master | `master`, `develop`, or `nightly`. Read-only when an external update mechanism (Docker, a package manager) manages updates instead of Lidarr's built-in updater; in that case this only controls which branch's Docker tag or package you should be pulling, not what Lidarr updates itself to. See [FAQ → How do I update Lidarr?](faq.md#how-do-i-update-lidarr). |
+| **(Advanced) Automatic** | On (Windows), Off (other platforms) | Automatically downloads and installs updates. Not functional under the Docker update mechanism, since the container image needs to be updated from outside Lidarr (or via a script); Lidarr warns about this on the setting itself rather than hiding it. You can still update manually from System → Updates regardless of this setting. |
+| **(Advanced) Mechanism** | Built-In | **Built-In** uses Lidarr's own updater. **Script** runs a custom script you provide instead. When an external update mechanism manages this install, this shows that mechanism's name in place of Built-In and isn't changeable. |
+| **(Advanced) Script Path** | (empty) | Path to a script that takes an extracted update package and completes the update. Only shown when Mechanism is Script. |
+
+# Backup
+
+{#backup}
+
+Backup settings live under **Settings → General → Backup**. This entire section is Advanced-only.
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| **(Advanced) Folder** | `Backups` | Where scheduled backups are written. A relative path resolves under Lidarr's AppData directory. |
+| **(Advanced) Interval** | 7 days | How often Lidarr backs up its database and settings automatically. |
+| **(Advanced) Retention** | 28 days | Automatic backups older than this are cleaned up automatically. Manually-triggered backups aren't affected. |

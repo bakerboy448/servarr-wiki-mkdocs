@@ -42,6 +42,8 @@ tags:
 # Troubleshooting
 
 - [:fontawesome-regular-life-ring:&emsp;General Troubleshooting](lidarr/troubleshooting.md)
+- [:fontawesome-solid-tags:&emsp;Metadata Troubleshooting *Missing or incorrect MusicBrainz data*](lidarr/metadata-troubleshooting.md)
+- [:fontawesome-solid-file-download:&emsp;Import Troubleshooting *Downloads that finish but don't import*](lidarr/import-troubleshooting.md)
 - [:fontawesome-solid-shield-alt:&emsp;VPN Guide *When and how to use VPNs properly*](vpn.md)
 {.links-list}
 

@@ -59,11 +59,13 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `PostgresLogDb`          | `POSTGRES` | `LOGDB`              | `SONARR__POSTGRES__LOGDB`         |
 | `UrlBase`                | `SERVER`   | `URLBASE`            | `SONARR__SERVER__URLBASE`         |
 | `BindAddress`            | `SERVER`   | `BINDADDRESS`        | `SONARR__SERVER__BINDADDRESS`     |
+| `AllowedHosts`           | `SERVER`   | `ALLOWEDHOSTS`       | `SONARR__SERVER__ALLOWEDHOSTS`    |
 | `Port`                   | `SERVER`   | `PORT`               | `SONARR__SERVER__PORT`            |
 | `EnableSsl`              | `SERVER`   | `ENABLESSL`          | `SONARR__SERVER__ENABLESSL`       |
 | `SslPort`                | `SERVER`   | `SSLPORT`            | `SONARR__SERVER__SSLPORT`         |
 | `SslCertPath`            | `SERVER`   | `SSLCERTPATH`        | `SONARR__SERVER__SSLCERTPATH`     |
 | `SslCertPassword`        | `SERVER`   | `SSLCERTPASSWORD`    | `SONARR__SERVER__SSLCERTPASSWORD` |
+| `TrustedNetworks`        | `SERVER`   | `TRUSTEDNETWORKS`    | `SONARR__SERVER__TRUSTEDNETWORKS` |
 | `UpdateMechanism`        | `UPDATE`   | `MECHANISM`          | `SONARR__UPDATE__MECHANISM`       |
 | `UpdateAutomatically`    | `UPDATE`   | `AUTOMATICALLY`      | `SONARR__UPDATE__AUTOMATICALLY`   |
 | `UpdateScriptPath`       | `UPDATE`   | `SCRIPTPATH`         | `SONARR__UPDATE__SCRIPTPATH`      |
@@ -145,7 +147,7 @@ Branch=main
 ### Available Keys
 
 | Key | Description | Example |
-|-----|-------------|---------|
+| ----- | ------------- | --------- |
 | `PackageVersion` | Custom package version identifier | `1.0.0-custom` |
 | `PackageAuthor` | Package maintainer name | `Community Package` |
 | `PackageGlobalMessage` | Message displayed in UI | `Custom build for Debian 11` |
@@ -157,7 +159,7 @@ Branch=main
 ### UpdateMethod Values
 
 | Value | Numeric | Description | Use Case |
-|-------|---------|-------------|----------|
+| ------- | --------- | ------------- | ---------- |
 | `BuiltIn` | 0 | Default built-in updater | Standard installations |
 | `Script` | 1 | Updates via custom script | Advanced custom setups |
 | `External` | 10 | Updates managed externally | Package managers, Docker |

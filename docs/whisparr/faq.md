@@ -13,68 +13,68 @@ tags:
 
 - [Table of Contents](#table-of-contents)
 - [Whisparr Basics](#whisparr-basics)
-  - [How does Whisparr work?](#how-does-whisparr-work)
-  - [How does Whisparr find movies?](#how-does-whisparr-find-movies)
-  - [How do I access Whisparr from another computer?](#how-do-i-access-whisparr-from-another-computer)
-  - [What is Minimum Availability?](#what-is-minimum-availability)
-  - [How are possible downloads compared?](#how-are-possible-downloads-compared)
-  - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
-  - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
-  - [Can all my movie files be stored in one folder?](#can-all-my-movie-files-be-stored-in-one-folder)
-  - [Can I put all my movies in my library into one folder?](#can-i-put-all-my-movies-in-my-library-into-one-folder)
-  - [How do I update Whisparr?](#how-do-i-update-whisparr)
-    - [Can I update Whisparr inside my Docker container?](#can-i-update-whisparr-inside-my-docker-container)
-    - [Installing a newer version](#installing-a-newer-version)
-      - [Native](#native)
-      - [Docker](#docker)
-  - [Can I switch from `nightly` back to `develop`?](#can-i-switch-from-nightly-back-to-develop)
-  - [Can I switch between branches?](#can-i-switch-between-branches)
-  - [How do I Backup/Restore Whisparr?](#how-do-i-backuprestore-whisparr)
-    - [Backing up Whisparr](#backing-up-whisparr)
-      - [Using built-in backup](#using-built-in-backup)
-      - [Using file system directly](#using-file-system-directly)
-    - [Restoring from Backup](#restoring-from-backup)
-      - [Using zip backup](#using-zip-backup)
-      - [Using file system backup](#using-file-system-backup)
-      - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
+    - [How does Whisparr work?](#how-does-whisparr-work)
+    - [How does Whisparr find movies?](#how-does-whisparr-find-movies)
+    - [How do I access Whisparr from another computer?](#how-do-i-access-whisparr-from-another-computer)
+    - [What is Minimum Availability?](#what-is-minimum-availability)
+    - [How are possible downloads compared?](#how-are-possible-downloads-compared)
+    - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
+    - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
+    - [Can all my movie files be stored in one folder?](#can-all-my-movie-files-be-stored-in-one-folder)
+    - [Can I put all my movies in my library into one folder?](#can-i-put-all-my-movies-in-my-library-into-one-folder)
+    - [How do I update Whisparr?](#how-do-i-update-whisparr)
+        - [Can I update Whisparr inside my Docker container?](#can-i-update-whisparr-inside-my-docker-container)
+        - [Installing a newer version](#installing-a-newer-version)
+            - [Native](#native)
+            - [Docker](#docker)
+    - [Can I switch from `nightly` back to `develop`?](#can-i-switch-from-nightly-back-to-develop)
+    - [Can I switch between branches?](#can-i-switch-between-branches)
+    - [How do I Backup/Restore Whisparr?](#how-do-i-backuprestore-whisparr)
+        - [Backing up Whisparr](#backing-up-whisparr)
+            - [Using built-in backup](#using-built-in-backup)
+            - [Using file system directly](#using-file-system-directly)
+        - [Restoring from Backup](#restoring-from-backup)
+            - [Using zip backup](#using-zip-backup)
+            - [Using file system backup](#using-file-system-backup)
+            - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
 - [Whisparr Common Problems](#whisparr-common-problems)
-  - [Path is Already Configured for an Existing Movie](#path-is-already-configured-for-an-existing-movie)
-  - [How can I rename my movie folders?](#how-can-i-rename-my-movie-folders)
-  - [Movie File and Folder Naming](#movie-file-and-folder-naming)
-  - [Movie Folders Named Incorrectly](#movie-folders-named-incorrectly)
-  - [Can I disable the refresh movies task](#can-i-disable-the-refresh-movies-task)
-  - [How do I request a feature for Whisparr?](#how-do-i-request-a-feature-for-whisparr)
-  - [Help, My Mac says Whisparr cannot be opened because the developer cannot be verified](#help-my-mac-says-whisparr-cannot-be-opened-because-the-developer-cannot-be-verified)
-  - [Help, My Mac says Whisparr.app is damaged and can’t be opened](#help-my-mac-says-whisparrapp-is-damaged-and-cant-be-opened)
-  - [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
-  - [I use Whisparr on a Mac and it suddenly stopped working. What happened?](#i-use-whisparr-on-a-mac-and-it-suddenly-stopped-working-what-happened)
-  - [Why can Whisparr not see my files on a remote server?](#why-can-whisparr-not-see-my-files-on-a-remote-server)
-    - [Whisparr runs under the LocalService account by default which doesn't have access to protected remote file shares](#whisparr-runs-under-the-localservice-account-by-default-which-doesnt-have-access-to-protected-remote-file-shares)
-    - [You're using a mapped network drive (not a UNC path)](#youre-using-a-mapped-network-drive-not-a-unc-path)
-  - [How do I change from the Windows Service to a Tray App?](#how-do-i-change-from-the-windows-service-to-a-tray-app)
-  - [Help I have locked myself out](#help-i-have-locked-myself-out)
-  - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
-  - [Weird UI Issues](#weird-ui-issues)
-  - [Web Interface Only Loads at localhost on Windows](#web-interface-only-loads-at-localhost-on-windows)
-  - [Permissions](#permissions)
-  - [System & Logs loads forever](#system--logs-loads-forever)
-  - [Finding Cookies](#finding-cookies)
-  - [Unpack Torrents](#unpack-torrents)
-  - [uTorrent is no longer working](#utorrent-is-no-longer-working)
-  - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
-  - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
-  - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
+    - [Path is Already Configured for an Existing Movie](#path-is-already-configured-for-an-existing-movie)
+    - [How can I rename my movie folders?](#how-can-i-rename-my-movie-folders)
+    - [Movie File and Folder Naming](#movie-file-and-folder-naming)
+    - [Movie Folders Named Incorrectly](#movie-folders-named-incorrectly)
+    - [Can I disable the refresh movies task](#can-i-disable-the-refresh-movies-task)
+    - [How do I request a feature for Whisparr?](#how-do-i-request-a-feature-for-whisparr)
+    - [Help, My Mac says Whisparr cannot be opened because the developer cannot be verified](#help-my-mac-says-whisparr-cannot-be-opened-because-the-developer-cannot-be-verified)
+    - [Help, My Mac says Whisparr.app is damaged and can’t be opened](#help-my-mac-says-whisparrapp-is-damaged-and-cant-be-opened)
+    - [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
+    - [I use Whisparr on a Mac and it suddenly stopped working. What happened?](#i-use-whisparr-on-a-mac-and-it-suddenly-stopped-working-what-happened)
+    - [Why can Whisparr not see my files on a remote server?](#why-can-whisparr-not-see-my-files-on-a-remote-server)
+        - [Whisparr runs under the LocalService account by default which doesn't have access to protected remote file shares](#whisparr-runs-under-the-localservice-account-by-default-which-doesnt-have-access-to-protected-remote-file-shares)
+        - [You're using a mapped network drive (not a UNC path)](#youre-using-a-mapped-network-drive-not-a-unc-path)
+    - [How do I change from the Windows Service to a Tray App?](#how-do-i-change-from-the-windows-service-to-a-tray-app)
+    - [Help I have locked myself out](#help-i-have-locked-myself-out)
+    - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
+    - [Weird UI Issues](#weird-ui-issues)
+    - [Web Interface Only Loads at localhost on Windows](#web-interface-only-loads-at-localhost-on-windows)
+    - [Permissions](#permissions)
+    - [System & Logs loads forever](#system--logs-loads-forever)
+    - [Finding Cookies](#finding-cookies)
+    - [Unpack Torrents](#unpack-torrents)
+    - [uTorrent is no longer working](#utorrent-is-no-longer-working)
+    - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
+    - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
+    - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
 - [Whisparr and Movie Issues + Metadata](#whisparr-and-movie-issues--metadata)
-  - [Why can I not add a new movie to Whisparr?](#why-can-i-not-add-a-new-movie-to-whisparr)
+    - [Why can I not add a new movie to Whisparr?](#why-can-i-not-add-a-new-movie-to-whisparr)
 - [Whisparr Searching & Downloading Common Problems](#whisparr-searching--downloading-common-problems)
-  - [Jackett shows more results than when manually searching](#jackett-shows-more-results-than-when-manually-searching)
-  - [How does Whisparr handle foreign movies or foreign titles?](#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
-  - [How does Whisparr handle "multi" in names?](#how-does-whisparr-handle-multi-in-names)
-  - [Help, Movie Added, But Not Searched](#help-movie-added-but-not-searched)
-  - [Jackett's /all Endpoint](#jacketts-all-endpoint)
-    - [Jackett /All Solutions](#jackett-all-solutions)
-  - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
-  - [Why doesn't Whisparr work behind a reverse proxy](#why-doesnt-whisparr-work-behind-a-reverse-proxy)
+    - [Jackett shows more results than when manually searching](#jackett-shows-more-results-than-when-manually-searching)
+    - [How does Whisparr handle foreign movies or foreign titles?](#how-does-whisparr-handle-foreign-movies-or-foreign-titles)
+    - [How does Whisparr handle "multi" in names?](#how-does-whisparr-handle-multi-in-names)
+    - [Help, Movie Added, But Not Searched](#help-movie-added-but-not-searched)
+    - [Jackett's /all Endpoint](#jacketts-all-endpoint)
+        - [Jackett /All Solutions](#jackett-all-solutions)
+    - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
+    - [Why doesn't Whisparr work behind a reverse proxy](#why-doesnt-whisparr-work-behind-a-reverse-proxy)
 
 # Whisparr Basics
 
@@ -149,10 +149,10 @@ tags:
 - The [Custom Folder GitHub Issue](https://github.com/Whisparr/Whisparr/issues/153) technically covers this request, but it is no guarantee that all movie files in one folder will be implemented at that time.
 - A slight hack-ish solution is described below. Please note that you mustn't trigger a rescan in Whisparr or it will show as missing and regardless the movie will never be upgraded.
 
-  - Use a Custom Script
-    - the script should be triggered on import
-    - it should be designed to move the file whenever you want it
-    - it then needs to call the Whisparr API and change the movie to unmonitored.
+    - Use a Custom Script
+        - the script should be triggered on import
+        - it should be designed to move the file whenever you want it
+        - it then needs to call the Whisparr API and change the movie to unmonitored.
 - If you're looking to moving all your movies from one folder to individual folders check out the [Tips and Tricks Section => Create a Folder for Each Movie](tips-and-tricks.md#creating-a-folder-for-each-movie) article
 
 ## Can I put all my movies in my library into one folder
@@ -208,7 +208,7 @@ tags:
 
 - If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
 - Failure to follow these instructions may result in your Whisparr becoming unusable or throwing errors. You have been warned
-  - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
+    - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
 ## How do I Backup/Restore Whisparr
 
@@ -223,8 +223,8 @@ tags:
 #### Using file system directly
 
 - Find the location of the AppData directory for Whisparr
-  - Via the Whisparr UI go to System => About
-  - [Whisparr Appdata Directory](appdata-directory.md)
+    - Via the Whisparr UI go to System => About
+    - [Whisparr Appdata Directory](appdata-directory.md)
 - Stop Whisparr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -247,8 +247,8 @@ tags:
 
 - Re-install Whisparr (if applicable / not already installed)
 - Find the location of the AppData directory for Whisparr
-  - Running Whisparr once and via the UI go to System => About
-  - [Whisparr Appdata Directory](appdata-directory.md)
+    - Running Whisparr once and via the UI go to System => About
+    - [Whisparr Appdata Directory](appdata-directory.md)
 - Stop Whisparr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -262,8 +262,8 @@ tags:
 
 - Re-install Whisparr (if applicable / not already installed)
 - Find the location of the AppData directory for Whisparr
-  - Running Whisparr once and via the UI go to System => About
-  - [Whisparr Appdata Directory](appdata-directory.md)
+    - Running Whisparr once and via the UI go to System => About
+    - [Whisparr Appdata Directory](appdata-directory.md)
 - Stop Whisparr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -296,10 +296,10 @@ tags:
 - This occurs when trying to add a movie or edit an existing movie's path that already is assigned to a different movie.
 - Likely this was caused by not correcting a mismatched movie when the user imported their library.
 - Locate and correct the movie that is already assigned to that movie's path.
-  - Movie Index
-  - Table View
-  - Options => Add path as a column
-  - Sort and find the movie at the noted problematic path.
+    - Movie Index
+    - Table View
+    - Options => Add path as a column
+    - Sort and find the movie at the noted problematic path.
 
 ## How can I rename my movie folders
 
@@ -321,7 +321,7 @@ tags:
 
 - Currently, Whisparr requires that each movie be in a folder with the format containing at minimum `Movie Title (Year)/`, optionally `_` or `.` are valid separators. To facilitate correct quality and resolution identification during import, a file name like `Movie Title (Year) [Quality-Resolution].ext` is best, again `_` or `.` are valid separators too.
 
-  - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
+    - A useful tool for making these changes to your collection is [filebot](http://www.filebot.net/#download) which has paid version in both the Apple and Windows stores, but can be found for free on their legacy [SourceForge](https://sourceforge.net/projects/filebot/files/latest/download) site. It has both a GUI and CLI, so you can use whatever you’re comfortable with. For the above example, `{ny}` expands to `Name (Year)` and `{vf}` gives the resolution like `1080p`. There is nothing to infer quality, so you can fake it using `{ny}/{ny} [{dim[0] >= 1280 ? 'Bluray' : 'DVD'}-{vf}]` which will name anything lower than 720p to `[DVD-572p]` and greater or equal to 720p like `[Bluray-1080p]`.
 
 - See [Tips and Tricks Section => Create a Folder for Each Movie](faq.md)whisparr/tips-and-tricks#creating-a-folder-for-each-movie) for more details.
 
@@ -329,21 +329,21 @@ tags:
 
 - Even if your movies are in folders already, the folders may not be named correctly. The folder name should be `Movie Title (Year)`, having the title and year in the folder’s name is critical right now.
 
-  - Examples that will work well:
-    - `/mnt/Movies/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-    - `/mnt/Kid Movies/Frozen (2013)/Frozen (2013) [Bluray-1080p].mkv`
-  - Examples that will work, but will require manual management:
-    - By letters: `/mnt/Movies/A-D/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-    - By rating: `/mnt/Movies/R/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-    - By genre: `/mnt/Movies/Crime, Drama, Sci-Fi/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
-    - These examples will require manual management when the movie is added. Each of the examples will have many root directories, like `A-D` and `E-G` in the first letter example, `R` and `PG-13` in the rating example and you can guess at the variety of genre folders. When adding a new movie, the correct base folder will need to be selected for this format to work.
-  - Examples that won’t work:
-    - Single folder: `/mnt/Kid Movies/Frozen (2013) [Bluray-1080p].mkv`
-      - At this time, movies simply have to be in a folder named after the movie. There is no way around this until development work is done to add this feature.
-    - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
-      - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
-      - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
-  - The [Tips and Tricks Section => Create a Folder for Each Movie](tips-and-tricks.md#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
+    - Examples that will work well:
+        - `/mnt/Movies/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+        - `/mnt/Kid Movies/Frozen (2013)/Frozen (2013) [Bluray-1080p].mkv`
+    - Examples that will work, but will require manual management:
+        - By letters: `/mnt/Movies/A-D/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+        - By rating: `/mnt/Movies/R/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+        - By genre: `/mnt/Movies/Crime, Drama, Sci-Fi/A Clockwork Orange (1971)/A Clockwork Orange (1971) [Bluray-1080p].mkv`
+        - These examples will require manual management when the movie is added. Each of the examples will have many root directories, like `A-D` and `E-G` in the first letter example, `R` and `PG-13` in the rating example and you can guess at the variety of genre folders. When adding a new movie, the correct base folder will need to be selected for this format to work.
+    - Examples that won’t work:
+        - Single folder: `/mnt/Kid Movies/Frozen (2013) [Bluray-1080p].mkv`
+            - At this time, movies simply have to be in a folder named after the movie. There is no way around this until development work is done to add this feature.
+        - **Movie** Folder Naming Formats from v0.2 that include **File** properties in the **movie folder** name such as ``{Movie.Title}.{Release Year}.{Quality.Full}-{MediaInfo.Simple}{`Release.Group}`` will not work in v3.
+            - Folders are related to the movie and independent of the file. Additionally, this will break with the planned multiple files per movie support.
+            - The other reason it was removed was it caused frequent confusion, database corruption, and generally was only half baked.
+    - The [Tips and Tricks Section => Create a Folder for Each Movie](tips-and-tricks.md#creating-a-folder-for-each-movie) is a great source for making sure your file and folder structure will work great.
 
 ## Can I disable the refresh movies task
 
@@ -374,7 +374,7 @@ tags:
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-whisparr). However, for users receiving this after upgrading to v4 it is highly unlikely the backup itself will work and you'll need to try the other recovery methods mentioned.
 - You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](../useful-tools.md#recovering-a-corrupt-db)
-  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
+    - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
@@ -390,8 +390,8 @@ tags:
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
-  - If you're using an NFS mount ensure `nolock` is enabled for your mount.
-  - If you're using an SMB mount ensure `nobrl` is enabled for your mount.
+    - If you're using an NFS mount ensure `nolock` is enabled for your mount.
+    - If you're using an SMB mount ensure `nobrl` is enabled for your mount.
 - For Windows: In short: the user \*Arr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is \*Arr  is running as a service, which causes the issues described below.
 
 ### Whisparr runs under the LocalService account by default which doesn't have access to protected remote file shares
@@ -503,9 +503,9 @@ Depending on your OS, there are multiple possible ways.
 {#why-cant-i-add-a-new-movie-to-whisparr}
 
 - Whisparr uses [The Movie Database (TMDb)](http://themoviedb.org) for movie information and images like fanart, banners and backgrounds. Generally, there are a few reasons why you may not be able to add a movie:
-  - TMDb doesn't like special characters to be used when searching for movies through the API (which Whisparr uses), so try searching a translated name, and/or without special characters.
-  - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
-  - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
+    - TMDb doesn't like special characters to be used when searching for movies through the API (which Whisparr uses), so try searching a translated name, and/or without special characters.
+    - You can also add by TMDb ID or, if TMDb has it, the IMDb ID
+    - The movie hasn't been added to TMDb yet, follow their [guide](https://www.themoviedb.org/bible/new_content#59f7933c9251413e93000006) to get it added.
 
 # Whisparr Searching & Downloading Common Problems
 
@@ -518,7 +518,7 @@ Depending on your OS, there are multiple possible ways.
 - Search will use the Movie's Original Title, English Title, and Translated Title from whatever languages you have preferred in the movie's quality profile and any custom formats with scores in the quality profile greater than zero. - Parsing (i.e. importing) looks for a match in all Translations and Alternative Titles.
 - To get a movie in a foreign language set your movie's Quality Profile Language to Original (Movie's Original Language), a specific language for that profile, or `Any` and use custom formats to determine which language to grab.
 - Note that this does not include any indexer languages configured in the indexer's settings as `multi`.
-  - Note that `multi` by default is assumed English and French
+    - Note that `multi` by default is assumed English and French
 
 !!! warning
     Note that for indexers that support ID based searches - such as many Usenet indexers and many private Torrent trackers - text queries are not used if results are returned for an ID based search. Therefore the above about searching does not apply. Whisparr will search the ID and if results are returned will not fall back to a name search. If you're missing results from your indexer then this is due to them having the release(s) associated with the incorrect movie id.
@@ -533,9 +533,9 @@ Depending on your OS, there are multiple possible ways.
 - Whisparr does not *actively* search for missing movies automatically. Instead, a periodic query of new posts is made to all indexers configured for RSS. When a wanted or cutoff unmet movie shows up in that list, it gets downloaded. This means that until a movie is posted (or reposted), it won’t get downloaded.
 - If you’re adding a movie that you want now, the best option is to check the “Start search for missing movie” box, to the left of the *Add Movie* (**1**) button. You can also go to the page for a movie you’ve added and click the magnifying glass “Search” (**2**) button or use the Wanted view to search for Missing or Cutoff Unmet movies.
 
-  - Add and Search for Movie when adding a movie
+    - Add and Search for Movie when adding a movie
 ![addmovie-add-and-search.png](../assets/whisparr/addmovie-add-and-search.png)
-  - Search an existing Movie
+    - Search an existing Movie
 ![searchmovie-movie-page.png](../assets/whisparr/searchmovie-movie-page.png)
 
 ## Jackett's /all Endpoint
@@ -549,12 +549,12 @@ Depending on your OS, there are multiple possible ways.
 - The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the /all endpoint has no advantages, only disadvantages:
-  - you lose control over indexer specific settings (categories, search modes, etc.)
-  - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) cannot be used.
-  - slow indexers will slow down the overall result
-  - total results are limited to 1000
-  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+    - you lose control over indexer specific settings (categories, search modes, etc.)
+    - mixing search modes (IMDB, query, etc.) might cause low-quality results
+    - indexer specific categories (\>= 100000) cannot be used.
+    - slow indexers will slow down the overall result
+    - total results are limited to 1000
+    - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
 
 ### Jackett /All Solutions
 

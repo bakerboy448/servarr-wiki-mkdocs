@@ -32,84 +32,84 @@ The Servarr Team
 - [Table of Contents](#table-of-contents)
 - [Menu options](#menu-options)
 - [Media Management](#media-management)
-  - [Root Folders](#root-folders)
-    - [Root Folder Settings](#root-folder-settings)
-  - [Remote Path Mappings](#remote-path-mappings)
-  - [Book File Naming](#book-file-naming)
-  - [Book Naming](#book-naming)
-    - [Standard Book Format](#standard-book-format)
-    - [Author](#author)
-    - [Book](#book)
-    - [Release Date](#release-date)
-    - [Quality](#quality)
-    - [Media Info](#media-info)
-    - [Other](#other)
-    - [Original](#original)
-  - [Author Folder Format](#author-folder-format)
-    - [Author](#author-1)
-  - [Folders](#folders)
-  - [Importing](#importing)
-  - [File Management](#file-management)
+    - [Root Folders](#root-folders)
+        - [Root Folder Settings](#root-folder-settings)
+    - [Remote Path Mappings](#remote-path-mappings)
+    - [Book File Naming](#book-file-naming)
+    - [Book Naming](#book-naming)
+        - [Standard Book Format](#standard-book-format)
+        - [Author](#author)
+        - [Book](#book)
+        - [Release Date](#release-date)
+        - [Quality](#quality)
+        - [Media Info](#media-info)
+        - [Other](#other)
+        - [Original](#original)
+    - [Author Folder Format](#author-folder-format)
+        - [Author](#author-1)
+    - [Folders](#folders)
+    - [Importing](#importing)
+    - [File Management](#file-management)
 - [Permissions](#permissions)
 - [Profiles](#profiles)
-  - [Quality Profiles](#quality-profiles)
-  - [Metadata Profiles](#metadata-profiles)
-  - [Release Profiles](#release-profiles)
-  - [Delay Profiles](#delay-profiles)
-    - [Uses](#uses)
-    - [How Delay Profiles Work](#how-delay-profiles-work)
-      - [Examples](#examples)
-        - [Example 1](#example-1)
-        - [Example 2](#example-2)
-        - [Example 3](#example-3)
+    - [Quality Profiles](#quality-profiles)
+    - [Metadata Profiles](#metadata-profiles)
+    - [Release Profiles](#release-profiles)
+    - [Delay Profiles](#delay-profiles)
+        - [Uses](#uses)
+        - [How Delay Profiles Work](#how-delay-profiles-work)
+            - [Examples](#examples)
+                - [Example 1](#example-1)
+                - [Example 2](#example-2)
+                - [Example 3](#example-3)
 - [Quality](#quality-1)
-  - [Quality Table Meanings](#quality-table-meanings)
-  - [Qualities Defined](#qualities-defined)
+    - [Quality Table Meanings](#quality-table-meanings)
+    - [Qualities Defined](#qualities-defined)
 - [Indexers](#indexers)
-  - [Supported Indexers](#supported-indexers)
-    - [Indexer Settings](#indexer-settings)
-    - [Usenet Indexer Configuration](#usenet-indexer-configuration)
-    - [Torrent Tracker Configuration](#torrent-tracker-configuration)
-  - [Options](#options)
+    - [Supported Indexers](#supported-indexers)
+        - [Indexer Settings](#indexer-settings)
+        - [Usenet Indexer Configuration](#usenet-indexer-configuration)
+        - [Torrent Tracker Configuration](#torrent-tracker-configuration)
+    - [Options](#options)
 - [Download Clients](#download-clients)
-  - [Overview](#overview)
-  - [Download Client Processes](#download-client-processes)
-    - [Usenet Process](#usenet-process)
-    - [Torrent Process](#torrent-process)
-  - [Download Clients](#download-clients-1)
-    - [Supported Download Clients](#supported-download-clients)
-    - [Usenet Client Settings](#usenet-client-settings)
-    - [Torrent Client Settings](#torrent-client-settings)
-    - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
-  - [Completed Download Handling](#completed-download-handling)
-    - [Remove Completed Downloads](#remove-completed-downloads)
-    - [Failed Download Handling](#failed-download-handling)
-  - [Remote Path Mappings](#remote-path-mappings-1)
+    - [Overview](#overview)
+    - [Download Client Processes](#download-client-processes)
+        - [Usenet Process](#usenet-process)
+        - [Torrent Process](#torrent-process)
+    - [Download Clients](#download-clients-1)
+        - [Supported Download Clients](#supported-download-clients)
+        - [Usenet Client Settings](#usenet-client-settings)
+        - [Torrent Client Settings](#torrent-client-settings)
+        - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
+    - [Completed Download Handling](#completed-download-handling)
+        - [Remove Completed Downloads](#remove-completed-downloads)
+        - [Failed Download Handling](#failed-download-handling)
+    - [Remote Path Mappings](#remote-path-mappings-1)
 - [Import Lists](#import-lists)
-  - [Import Lists](#import-lists-1)
-  - [Import List Exclusions](#import-list-exclusions)
-  - [Adding an Import List](#adding-an-import-list)
+    - [Import Lists](#import-lists-1)
+    - [Import List Exclusions](#import-list-exclusions)
+    - [Adding an Import List](#adding-an-import-list)
 - [Connect](#connect)
-  - [Connections](#connections)
-  - [Connection Triggers](#connection-triggers)
+    - [Connections](#connections)
+    - [Connection Triggers](#connection-triggers)
 - [Metadata](#metadata)
-  - [Calibre Metadata](#calibre-metadata)
-  - [Write Metadata to Audio Files](#write-metadata-to-audio-files)
+    - [Calibre Metadata](#calibre-metadata)
+    - [Write Metadata to Audio Files](#write-metadata-to-audio-files)
 - [Tags](#tags)
 - [General](#general)
-  - [Host](#host)
-  - [Security](#security)
-  - [Proxy](#proxy)
-  - [Logging](#logging)
-  - [Analytics](#analytics)
-  - [Updates](#updates)
-  - [Updates](#updates-1)
-  - [Backups](#backups)
+    - [Host](#host)
+    - [Security](#security)
+    - [Proxy](#proxy)
+    - [Logging](#logging)
+    - [Analytics](#analytics)
+    - [Updates](#updates)
+    - [Updates](#updates-1)
+    - [Backups](#backups)
 - [UI (User Interface)](#ui-user-interface)
-  - [Calendar](#calendar)
-  - [Dates](#dates)
-  - [Style](#style)
-  - [Language](#language)
+    - [Calendar](#calendar)
+    - [Dates](#dates)
+    - [Style](#style)
+    - [Language](#language)
 
 This page will go through all the settings available in Readarr and how they work. This is not meant to be a comprehensive "how to set up Readarr." If you want that, please use the [Quick Start](quick-start-guide.md) page instead.
 
@@ -141,13 +141,13 @@ Also, note that for each individual settings page, there are some options at the
 
 - Name - The name of the Root Folder for UI Purposes
 - Path - The folder containing your book library i.e. the final destination as Readarr sees it.
-  - Note that this must be different than the location your download client places files.
-  - If you are using docker and Calibre integration, the mounts must be the same to your books folder.
+    - Note that this must be different than the location your download client places files.
+    - If you are using docker and Calibre integration, the mounts must be the same to your books folder.
 
 {#calibre}
 
 - Calibre Specific Settings (Only if Use Calibre is enabled)
-  - Use Calibre - Enable / Disable the use of Calibre Content Server to manage your Root Folder.
+    - Use Calibre - Enable / Disable the use of Calibre Content Server to manage your Root Folder.
 
 !!! warning
     \* **Only for use with ebooks, not audiobooks!**
@@ -165,19 +165,19 @@ Also, note that for each individual settings page, there are some options at the
 - Calibre Password - Password to use to access Calibre Content Server
 - Calibre Library - Calibre Content Server library name. Leave blank for default
 - Convert to Format - (Optional) Ask Calibre Content Server to convert to other formats with a comma separated list.
-  - Review the (i) icon within the app for a current list of options.
-  - Options are: MOBI, EPUB, AZW3, DOCX, FB2, HTMLZ, LIT, LRF, PDB, PDF, PMLZ, RB, RTF, SNB, TCR, TXT, TXTZ, ZIP
+    - Review the (i) icon within the app for a current list of options.
+    - Options are: MOBI, EPUB, AZW3, DOCX, FB2, HTMLZ, LIT, LRF, PDB, PDF, PMLZ, RB, RTF, SNB, TCR, TXT, TXTZ, ZIP
 - Calibre Output Profile - Select the Calibre Content Server Output Profile to use
-  - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
+    - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
 - Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
 - Monitor - Configure your monitoring options for books detected in this folder
-  - All Books - Monitor all books
-  - Future Books - Monitor books that have not released yet
-  - Missing Books - Monitor books that do not have files or have not released yet
-  - Existing Books - Monitor books that have files or have not released yet
-  - First Book - Monitor the first book. All other books will be ignored
-  - Latest Book - Monitor the latest book and future books
-  - None - No books will be monitored unless explicitly added
+    - All Books - Monitor all books
+    - Future Books - Monitor books that have not released yet
+    - Missing Books - Monitor books that do not have files or have not released yet
+    - Existing Books - Monitor books that have files or have not released yet
+    - First Book - Monitor the first book. All other books will be ignored
+    - Latest Book - Monitor the latest book and future books
+    - None - No books will be monitored unless explicitly added
 - Quality Profile - Default Quality Profile for books and authors detected within this folder
 - Metadata Profile - Select the Metadata Profile to use for authors detected in this folder. To only load books that were explicitly added or detected select None.
 - Default Readarr Tags - Default tags for authors detected within this folder
@@ -204,18 +204,18 @@ Also, note that for each individual settings page, there are some options at the
 Commonly used naming schema are:
 
 - Standard Book Format
-  - `{Book Title}\{Author Name}` - `{Book Title}` which would then output a folder named `Cujo`, and a subdirectory containing a file with the name `Stephen King - Cujo.m4b`
+    - `{Book Title}\{Author Name}` - `{Book Title}` which would then output a folder named `Cujo`, and a subdirectory containing a file with the name `Stephen King - Cujo.m4b`
 
 - Author Folder Format
-  - `{Author Name}` which would then output: `Stephen King`
+    - `{Author Name}` which would then output: `Stephen King`
 
 ## Book Naming
 
 - Rename Books - If this is toggled off (no check in the box) Readarr will use the existing file name if renaming is disabled.
-  - If unchecked:
-    - Download Client Import
-      - Download Client's Release Title is used
-    - Manual (Ad-Hoc) Import: Original File Name
+    - If unchecked:
+        - Download Client Import
+            - Download Client's Release Title is used
+        - Manual (Ad-Hoc) Import: Original File Name
 
 !!! info
     If you leave Rename Books unchecked, then none of the naming below applies - you have told Readarr you do not want any renaming done at all. The book will be imported directly into the author folder.
@@ -230,15 +230,15 @@ Commonly used naming schema are:
 - Select  the naming
 
 - Dropdown Box (upper right corner)
-  - Left Box - Space Handling
-    - `Space ( )` - Use spaces in naming (Default)
-    - `Period (.)` - Use periods in lieu of spaces in naming
-    - `Underscore (_)` - Use underscores in lieu of spaces in naming
-    - `Dash (-)` - Use dashes in lieu of spaces in naming
-  - Right Box - Case Handling
-    - `Default Case` - Make title uppercase and lowercase (~camel-case) (Default)
-    - `Uppercase` - Make title all uppercase
-    - `Lowercase` - Make title all lowercase
+    - Left Box - Space Handling
+        - `Space ( )` - Use spaces in naming (Default)
+        - `Period (.)` - Use periods in lieu of spaces in naming
+        - `Underscore (_)` - Use underscores in lieu of spaces in naming
+        - `Dash (-)` - Use dashes in lieu of spaces in naming
+    - Right Box - Case Handling
+        - `Default Case` - Make title uppercase and lowercase (~camel-case) (Default)
+        - `Uppercase` - Make title all uppercase
+        - `Lowercase` - Make title all lowercase
 
 ### Author
 
@@ -350,9 +350,9 @@ Commonly used naming schema are:
 
 - Ignore Deleted Books - Check this box to unmonitor books detected as deleted or inaccessible from Readarr's root folder.
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
-  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
-  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
+    - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+    - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+    - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
 
 !!! info
     \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
@@ -360,16 +360,16 @@ Commonly used naming schema are:
 
 - (Advanced Option) Watch Root Folders for file changes - Check this box to trigger a rescan when it is detected that the root folder had changes.
 - (Advanced Option) Rescan Author Folder after Refresh -  Choose when to rescan an author folder after refreshing the author.
-  - Always - This will rescan author folders based upon Tasks Schedule
-  - After Manual Refresh - You will have to manually rescan the disk
-  - Never - Just as it says, never rescan the author folders.
+    - Always - This will rescan author folders based upon Tasks Schedule
+    - After Manual Refresh - You will have to manually rescan the disk
+    - Never - Just as it says, never rescan the author folders.
 - (Advanced Option) Allow Fingerprinting - Choose how to handle fingerprinting, which allows increased accuracy for book matching, at the expense of CPU/disk time.
-  - Always - Always use fingerprinting if possible
-  - For new imports only - Only fingerprint newly imported releases
-  - Never - Just as it says, never use fingerprinting
+    - Always - Always use fingerprinting if possible
+    - For new imports only - Only fingerprint newly imported releases
+    - Never - Just as it says, never use fingerprinting
 - (Advanced Option) Change File Date - Change file date on import/rescan
-  - None - Readarr will not change the date that shows in your given file browser
-  - Book Release Date - The date the book was released.
+    - None - Readarr will not change the date that shows in your given file browser
+    - Book Release Date - The date the book was released.
 - (Advanced Option) Recycling Bin - Book files will go here when deleted instead of being permanently deleted
 - (Advanced Option) Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
@@ -379,7 +379,7 @@ Commonly used naming schema are:
 # Permissions
 
 - Set Permissions - Should `chmod` be run when files are imported/renamed?
-  - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
+    - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
 
 !!! info
     The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
@@ -410,15 +410,15 @@ Quality profiles are used to determine what formats of books are acceptable for 
 
 - Name - Enter a **UNIQUE** name for the quality profile you are creating
 - Upgrades Allowed - When this option is checked and you tell Readarr to download a `EPUB` as it is the first release of a specific book then later somebody is able to upload a `AZW3` Readarr will automatically upgrade to the better quality ***if*** `Upgrade Until` has that quality selected
-  - Upgrade Until - Once this quality is reached Readarr will no longer download movies
+    - Upgrade Until - Once this quality is reached Readarr will no longer download movies
 
 !!! warning
     Note: This is only applicable if you have `AZW3` higher than `EPUB` within the `Qualities` section
 
 - Qualities - Qualities higher in the list are more preferred regardless of wanted (enabled/checked) status. for ranking regardless of enabled status. Qualities within the same group are equal. Only checked (enabled) qualities are wanted (allowed)
-  - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
+    - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups.
 
-  - [See Qualities](#qualities-defined)
+    - [See Qualities](#qualities-defined)
 
 !!! info
     By default the qualities are set from "worst" (bottom) to "best" (top)
@@ -624,7 +624,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Retention - Usenet only: Set to zero to set for unlimited retention
 - Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Readarr find books?](faq.md#how-does-readarr-find-books) for a better understanding of how RSS Sync will help you
+    - Please see [How does Readarr find books?](faq.md#how-does-readarr-find-books) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Readarr has been offline for an extended period of time, Readarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -748,14 +748,14 @@ If you download using a BitTorrent client, the process is slightly different:
 - There are several components that make up the failed download handling process:
 
 - Check Downloader:
-  - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
-  - History - Check your downloader's history for failure (e.g. not enough to repair, or extraction failed)
+    - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
+    - History - Check your downloader's history for failure (e.g. not enough to repair, or extraction failed)
 - When Readarr finds a failed download it starts processing them and does a few things:
-  - Adds a failed event to Readarr's history
-  - Removes the failed download from Download Client to free space and clear downloaded files (optional)
-  - Starts searching for a replacement file (optional)
-  - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Readarr ever again (You can still force the download via a manual search).
-  - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Readarr, at this time, they are all on by default.
+    - Adds a failed event to Readarr's history
+    - Removes the failed download from Download Client to free space and clear downloaded files (optional)
+    - Starts searching for a replacement file (optional)
+    - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Readarr ever again (You can still force the download via a manual search).
+    - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Readarr, at this time, they are all on by default.
 
 - Redownload - Controls whether or not Readarr will search for the same file after a failure
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
@@ -842,7 +842,7 @@ Connections are how you want Readarr to communicate with the outside world.
 - On Book File Delete For Upgrade  - Be notified when a book file is deleted for an upgrade
 - On Book Retag - Be notified when books are retagged
 - On Health Issue - Be notified on health check failures
-  - Include Health Warnings - Be notified on health warnings in addition to errors.
+    - Include Health Warnings - Be notified on health warnings in addition to errors.
 
 # Metadata
 
@@ -860,9 +860,9 @@ This page allows you to create/update metadata tags/covers.
 If you are using Calibre to manage your ebook collection, you will use these options to control it.
 
 - Send Metadata to Calibre
-  - All files; keep in sync with GoodReads - Write tags to all files and update if GoodReads updates
-  - All files; initial import only - Write tags to all files once and do not update if GoodReads updates
-  - For new downloads only - Write tags to only new downloads when they are imported
+    - All files; keep in sync with GoodReads - Write tags to all files and update if GoodReads updates
+    - All files; initial import only - Write tags to all files once and do not update if GoodReads updates
+    - For new downloads only - Write tags to only new downloads when they are imported
 - Update Covers - Enable to tell Calibre Content Server to use the same book covers as Readarr
 - Embed Metadata in Book Files - Enable to tell Calibre Content Server to write and embed metadata into the book files.
 
@@ -871,9 +871,9 @@ If you are using Calibre to manage your ebook collection, you will use these opt
 If you are using audiobooks, you will use these options to control it.
 
 - Tag Audio Files with Metadata
-  - All files; keep in sync with GoodReads - Write tags to all files and update if GoodReads updates
-  - All files; initial import only - Write tags to all files once and do not update if GoodReads updates
-  - For new downloads only - Write tags to only new downloads when they are imported
+    - All files; keep in sync with GoodReads - Write tags to all files and update if GoodReads updates
+    - All files; initial import only - Write tags to all files once and do not update if GoodReads updates
+    - For new downloads only - Write tags to only new downloads when they are imported
 - Scrub Existing Tags - Enable to remove all tags from files except those added by Readarr
 
 # Tags
@@ -881,14 +881,14 @@ If you are using audiobooks, you will use these options to control it.
 - The tag section in Readarr is used to link different aspects of Readarr.
 - Tags are particularly useful for:
 
-  - Release Profiles
-  - Indexers
-  - Import Lists
+    - Release Profiles
+    - Indexers
+    - Import Lists
 
 - Tags can be used to link Release Profiles, Indexers, Import Lists and Authors/Books together.
 - For Example:
-  - You want a specific Author/Book to only use a specific indexer. You would create a tag and assign the Author/Book and indexer that tag.
-  - You want a specific Import List to only use a specific Release Profile. You would create a tag and assign the Import List and Release Profile that tag.
+    - You want a specific Author/Book to only use a specific indexer. You would create a tag and assign the Author/Book and indexer that tag.
+    - You want a specific Import List to only use a specific Release Profile. You would create a tag and assign the Import List and Release Profile that tag.
 
 > It is highly recommended that you add a descriptive tag to an Import List aside from what is mentioned above.
 
@@ -904,9 +904,9 @@ This page is for general Readarr settings that are not covered in other sections
 ![genhost.png](../assets/readarr/genhost.png)
 
 - Bind Address - Valid IP4 address or '*' for all interfaces
-  - 0.0.0.0 or `*` - any address can connect
-  - 127.0.0.1 or localhost - only localhost applications can connect
-  - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
+    - 0.0.0.0 or `*` - any address can connect
+    - 127.0.0.1 or localhost - only localhost applications can connect
+    - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
 - Port Number - The port number that you are wanting to use to access the webUI for Readarr
 
 !!! warning
@@ -927,14 +927,14 @@ This page is for general Readarr settings that are not covered in other sections
 ![gensecurity.png](../assets/readarr/gensecurity.png)
 
 - Authentication - How would you like to authenticate to access your Readarr instance
-  - None - You have no authentication to access your Readarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Readarr or your Readarr is not exposed to the web
-  - Basic (Browser pop-up) - This option when accessing your Readarr will show a small pop-up allowing you to input a Username and Password
-  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Readarr
+    - None - You have no authentication to access your Readarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Readarr or your Readarr is not exposed to the web
+    - Basic (Browser pop-up) - This option when accessing your Readarr will show a small pop-up allowing you to input a Username and Password
+    - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Readarr
 - API Key - This is how other programs would communicate or have Readarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
-  - Enabled - Validate all HTTPS certificates (recommended)
-  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
-  - Disabled - Do not validate any HTTPS certificates
+    - Enabled - Validate all HTTPS certificates (recommended)
+    - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+    - Disabled - Do not validate any HTTPS certificates
 
 ## Proxy
 
@@ -956,9 +956,9 @@ This page is for general Readarr settings that are not covered in other sections
 ![genlogging.png](../assets/readarr/genlogging.png)
 
 - Log level - Probably one of the most useful troubleshooting tools
-  - Info - This is the most basic way that Readarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
-  - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
-  - Trace - The most advance and detailed logging on Readarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
+    - Info - This is the most basic way that Readarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
+    - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
+    - Trace - The most advance and detailed logging on Readarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
 
 ## Analytics
 
@@ -973,12 +973,12 @@ This page is for general Readarr settings that are not covered in other sections
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Readarr that you are running on.
-  - [Please see this FAQ entry for more information](faq.md#how-do-i-update-readarr)
+    - [Please see this FAQ entry for more information](faq.md#how-do-i-update-readarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Readarr built-in updater or a script
-  - Built-in - Use Readarr's own updater
-  - Script - Have Readarr run the update script
-  - Docker - Do not update Readarr from inside the Docker, instead pull a brand new image with the new update
+    - Built-in - Use Readarr's own updater
+    - Script - Have Readarr run the update script
+    - Docker - Do not update Readarr from inside the Docker, instead pull a brand new image with the new update
 - Script - Visible only when Mechanism is set to Script - Path to update script
 - Update Process - Readarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Readarr is run under, it will need permissions to update the Readarr files as well as stop/start Readarr.
 - Built-in - The built-in method will backup Readarr files and settings, stop Readarr, update the installation and Start Readarr, if your system will not handle the stopping of Readarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Readarr will be restarted.

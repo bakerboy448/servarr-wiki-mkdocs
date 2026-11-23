@@ -47,18 +47,20 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 ## Artist tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{Artist Name}` | Full artist name as stored in MusicBrainz. |
 | `{Artist NameThe}` | Artist name with a leading "The" moved to the end, for example, `Beatles, The`. Useful for consistent alphabetical sorting. |
 | `{Artist CleanName}` | Artist name with illegal filesystem characters removed. |
 | `{Artist CleanNameThe}` | Clean artist name with "The" moved to the end. |
 | `{Artist Disambiguation}` | Disambiguation string from MusicBrainz, for example, `UK band`. Empty for most artists. |
 | `{Artist Genre}` | First genre tag associated with the artist. |
+| `{Artist NameFirstCharacter}` | First character of the artist's name, with a leading "The" moved to the end before taking the character. Useful for A-Z folder sorting. |
+| `{Artist MbId}` | The artist's MusicBrainz identifier. |
 
 ## Album tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{Album Title}` | Album title. |
 | `{Album TitleThe}` | Album title with a leading "The" moved to the end. |
 | `{Album CleanTitle}` | Album title with illegal filesystem characters removed. |
@@ -66,32 +68,40 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 | `{Album Disambiguation}` | Disambiguation string from MusicBrainz. Useful when an artist has two albums with the same name. |
 | `{Album Type}` | Release group type: Album, Single, EP, Compilation, Live, Remix, Soundtrack, etc. |
 | `{Album Genre}` | First genre tag for the album. |
+| `{Album MbId}` | The album's (release group's) MusicBrainz identifier. |
 | `{Release Year}` | Four-digit release year. |
 
 ## Track tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{Track Title}` | Track title. |
+| `{Track CleanTitle}` | Track title with illegal filesystem characters removed. |
 | `{Track ArtistName}` | Track-level artist name. Useful for Various Artists compilations where each track has a different credited artist. |
+| `{Track ArtistCleanName}` | Track-level artist name with illegal filesystem characters removed. |
 | `{Track ArtistNameThe}` | Track artist name with "The" moved to the end. |
+| `{Track ArtistCleanNameThe}` | Clean track-level artist name with "The" moved to the end. |
+| `{Track ArtistMbId}` | The track-level artist's MusicBrainz identifier. |
 | `{track:00}` | Track number zero-padded to 2 digits (01, 02 … 99). Use `{track:000}` for 3-digit padding on large releases. |
 
 ## Medium (disc) tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{medium:0}` | Disc number, single digit. |
 | `{medium:00}` | Disc number zero-padded to 2 digits. |
+| `{Medium Name}` | The disc's title as stored in MusicBrainz, distinct from `{Medium Format}` (the physical media type). |
 | `{Medium Format}` | Physical format of the disc: CD, Vinyl, Digital Media, etc. |
 
 ## Quality and technical tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
 | `{Quality Title}` | Quality profile name as defined in Lidarr (for example, FLAC, MP3-320). |
 | `{Quality Full}` | Full quality string including proper/repack designation. |
+| `{Quality Proper}` | Proper/repack designation for the track's quality, for example `Proper`. Empty when the release wasn't a proper. |
 | `{MediaInfo AudioBitRate}` | Audio bitrate (for example, 320kbps). Only available after import; blank on pre-import rename previews. |
+| `{MediaInfo AudioBitsPerSample}` | Audio bit depth (for example, 16bit). |
 | `{MediaInfo AudioChannels}` | Number of audio channels. |
 | `{MediaInfo AudioCodec}` | Audio codec (for example, FLAC, MP3). |
 | `{MediaInfo AudioSampleRate}` | Audio sample rate (for example, 44100Hz). |
@@ -99,9 +109,15 @@ Wrap tokens in `{}`. Lidarr substitutes them at import time. Any token that reso
 ## Miscellaneous tokens
 
 | Token | Description |
-|---|---|
+| --- | --- |
+| `{Original Title}` | The original release title as parsed from the track file's release name. |
+| `{Original Filename}` | The literal original filename of the imported file, unmodified. |
 | `{Release Group}` | Ripping or encoding group tag from the file. |
-| `{Preferred Words}` | Matched preferred words from Release Profiles, joined by spaces. |
+| `{Custom Formats}` | Every Custom Format that matched the release and has "Include Custom Format when Renaming" enabled, joined by spaces. |
+| `{Custom Format:Name}` | A single named Custom Format. `Name` is a placeholder for the exact Custom Format name, for example `{Custom Format:FLAC}`. Produces no output unless a format with that name matched and has "Include Custom Format when Renaming" enabled. |
+
+!!! warning
+    **A Custom Format that matched at grab time can stop matching at rename time.** Renaming re-evaluates Custom Format conditions against the track file's stored scene name (falling back to its current filename if there's no scene name), not the original release title Lidarr grabbed. If a format's conditions only matched something present in the release title but absent from the scene name or filename, `{Custom Formats}` and `{Custom Format:Name}` can render empty on a file that matched the same format when it was grabbed. This is a known limitation, not a bug in your naming template.
 
 # Community naming conventions
 
@@ -131,7 +147,7 @@ From Davo's [community guide](community-guide.md). Puts the album folder inside 
 
 ## B's convention
 
-Limits folder and file lengths to avoid Windows path-limit issues. **Not recommended for Windows**: the truncated paths can become inaccessible after a Lidarr rename on that OS. See the [FAQ entry on Windows folder access after rename](faq.md#why-cant-i-access-a-folder-in-windows-after-lidarr-rename). Useful for libraries containing artists with notoriously long album titles.
+Limits folder and file lengths to avoid Windows path-limit issues. **Not recommended for Windows**: the truncated paths can become inaccessible after a Lidarr rename on that OS. See [OS path limits and illegal characters](#os-path-limits-and-illegal-characters) above. Useful for libraries containing artists with notoriously long album titles.
 
 ### Standard Track Format
 

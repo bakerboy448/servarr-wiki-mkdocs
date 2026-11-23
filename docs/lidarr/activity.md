@@ -33,7 +33,7 @@ The queue table shows the following columns by default: Status, Artist, Album Ti
 ### Queue statuses
 
 | Icon | Status | Description | Resolution |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Grey cloud | Queued | The item is waiting in the download client and hasn't started downloading yet. | Wait for the download client to start it. |
 | Grey clock | Release Pending | The download is waiting for a Delay Profile timer to expire before Lidarr sends it to the download client. | Wait for the delay to pass, or adjust your Delay Profile in Settings. |
 | Yellow arrow | Downloading | The item is actively downloading in the download client. | N/A. |
@@ -46,16 +46,22 @@ Each row has action icons on the right:
 
 - **Manual Import** (person icon): opens the manual import dialog for this item, letting you match and import it yourself.
 - **Grab** (download icon): re-sends the release to the download client. Useful if the client removed an item that's still in the Lidarr queue.
-- **Remove** (✕): removes the item from the Lidarr queue. When removing, you can also choose to:
-  - **Remove from Download Client:** deletes the item from the download client as well. Use this for unmatched items Lidarr shouldn't download.
-  - **Add to Blocklist:** prevents Lidarr from grabbing this release again.
+- **Remove** (✕): opens the Remove dialog, where you choose a **Removal Method** and a **Blocklist Method**.
+    - Removal Method:
+        - **Remove from Download Client:** deletes the item from the download client as well. Use this for unmatched items Lidarr shouldn't download.
+        - **Change Category:** moves the item to the download client's post-import category instead of deleting it (only available when a post-import category is configured).
+        - **Ignore Download:** leaves the item in the download client but stops Lidarr from processing it any further.
+    - Blocklist Method:
+        - **Do Not Blocklist:** removes the item without blocklisting the release.
+        - **Blocklist and Search:** blocklists the release and triggers a new search for a replacement.
+        - **Blocklist Only:** blocklists the release without searching for a replacement.
 
 ### Queue options
 
 Click **Options** in the queue toolbar to open Table Options:
 
 | Option | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | Page Size | 20 | Number of queue items shown per page. |
 | Show Unknown Artist Items | On | Shows items in Lidarr's download client category that Lidarr can't match to any artist in your library (for example, removed artists or items added to the category manually). |
 | Columns | (see below) | Choose which columns are visible and their display order. |

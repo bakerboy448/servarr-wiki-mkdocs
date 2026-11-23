@@ -32,55 +32,55 @@ The Servarr Team
 
 - [Table of Contents](#table-of-contents)
 - [Status](#status)
-  - [Health](#health)
-    - [System Warnings](#system-warnings)
-      - [Servarr - Metadata Issues Message](#servarr---metadata-issues-message)
-      - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
-      - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
-      - [New update is available](#new-update-is-available)
-      - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
-      - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
-      - [Branch is for a previous version](#branch-is-for-a-previous-version)
-      - [Could not connect to signalR](#could-not-connect-to-signalr)
-        - [Nginx](#nginx)
-      - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
-      - [Proxy Failed Test](#proxy-failed-test)
-      - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
-    - [Download Clients](#download-clients)
-      - [No download client is available](#no-download-client-is-available)
-      - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
-      - [Download clients are unavailable due to failure](#download-clients-are-unavailable-due-to-failure)
-      - [Enable Completed Download Handling](#enable-completed-download-handling)
-      - [Docker bad remote path mapping](#docker-bad-remote-path-mapping)
-      - [Downloading into Root Folder](#downloading-into-root-folder)
-      - [Bad Download Client Settings](#bad-download-client-settings)
-      - [Bad Remote Path Mapping](#bad-remote-path-mapping)
-      - [Permissions Error](#permissions-error)
-      - [Author Mount is Read Only](#author-mount-is-read-only)
-      - [Remote File was removed part way through processing](#remote-file-was-removed-part-way-through-processing)
-      - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
-    - [Completed/Failed Download Handling](#completedfailed-download-handling)
-      - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
-      - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
-    - [Indexers](#indexers)
-      - [No indexers available with automatic search enabled, Readarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-readarr-will-not-provide-any-automatic-search-results)
-      - [No indexers available with RSS sync enabled, Readarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-readarr-will-not-grab-new-releases-automatically)
-      - [No indexers are enabled](#no-indexers-are-enabled)
-    - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
-      - [No indexers available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
-      - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
-      - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
-        - [Solutions](#solutions)
-    - [Book Folders](#book-folders)
-      - [Missing Root Folder](#missing-root-folder)
-    - [Import Lists](#import-lists)
-      - [Import Lists are unavailable due to failures](#import-lists-are-unavailable-due-to-failures)
-  - [Disk Space](#disk-space)
-  - [About](#about)
-  - [More Info](#more-info)
+    - [Health](#health)
+        - [System Warnings](#system-warnings)
+            - [Servarr - Metadata Issues Message](#servarr---metadata-issues-message)
+            - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
+            - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
+            - [New update is available](#new-update-is-available)
+            - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+            - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
+            - [Branch is for a previous version](#branch-is-for-a-previous-version)
+            - [Could not connect to signalR](#could-not-connect-to-signalr)
+                - [Nginx](#nginx)
+            - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
+            - [Proxy Failed Test](#proxy-failed-test)
+            - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
+        - [Download Clients](#download-clients)
+            - [No download client is available](#no-download-client-is-available)
+            - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
+            - [Download clients are unavailable due to failure](#download-clients-are-unavailable-due-to-failure)
+            - [Enable Completed Download Handling](#enable-completed-download-handling)
+            - [Docker bad remote path mapping](#docker-bad-remote-path-mapping)
+            - [Downloading into Root Folder](#downloading-into-root-folder)
+            - [Bad Download Client Settings](#bad-download-client-settings)
+            - [Bad Remote Path Mapping](#bad-remote-path-mapping)
+            - [Permissions Error](#permissions-error)
+            - [Author Mount is Read Only](#author-mount-is-read-only)
+            - [Remote File was removed part way through processing](#remote-file-was-removed-part-way-through-processing)
+            - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
+        - [Completed/Failed Download Handling](#completedfailed-download-handling)
+            - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
+            - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
+        - [Indexers](#indexers)
+            - [No indexers available with automatic search enabled, Readarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-readarr-will-not-provide-any-automatic-search-results)
+            - [No indexers available with RSS sync enabled, Readarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-readarr-will-not-grab-new-releases-automatically)
+            - [No indexers are enabled](#no-indexers-are-enabled)
+        - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
+            - [No indexers available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
+            - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
+            - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
+                - [Solutions](#solutions)
+        - [Book Folders](#book-folders)
+            - [Missing Root Folder](#missing-root-folder)
+        - [Import Lists](#import-lists)
+            - [Import Lists are unavailable due to failures](#import-lists-are-unavailable-due-to-failures)
+    - [Disk Space](#disk-space)
+    - [About](#about)
+    - [More Info](#more-info)
 - [Tasks](#tasks)
-  - [Scheduled](#scheduled)
-  - [Queue](#queue)
+    - [Scheduled](#scheduled)
+    - [Queue](#queue)
 - [Backup](#backup)
 - [Updates](#updates)
 - [Events](#events)
@@ -219,14 +219,14 @@ Note: you will also need to add the websocket directive to your readarr configur
 - This error is typically associated with bad docker paths within either your download client or Readarr
 
 - An example of this would be:
-  - Download client: Download Path: /mnt/user/downloads:/downloads
-  - Readarr: Download Path: /mnt/user/downloads:/data
+    - Download client: Download Path: /mnt/user/downloads:/downloads
+    - Readarr: Download Path: /mnt/user/downloads:/data
 - Within this example the download client places its downloads into /downloads and therefore tells Readarr when its complete that the finished book is in /downloads. Readarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Readarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
 - The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 - Team Readarr is a big fan of simply using /data.
-  - Download client: /mnt/user/data/downloads:/data/downloads
-  - Readarr: /mnt/user/data:/data
+    - Download client: /mnt/user/data/downloads:/data/downloads
+    - Readarr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/books and since you used /data in Readarr when the download client tells Readarr it's done Readarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/books all is right in the world."
 - There are many great write ups: our wiki [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hard links and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
@@ -289,7 +289,7 @@ Note: you will also need to add the websocket directive to your readarr configur
 {#download-client-removes-completed-downloads}
 
 - It's required that your download client retain its history of completed downloads until Readarr has imported them. If history retention is disabled then \*Arr may not see the completed download before it is removed from the download client. Your download client should be set to keep (usenet) and pause not remove (torrents) downloads after completion: **either indefinitely or for at least 14 days**.
-  - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
+    - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
 - Removing completed downloads from your client can be managed by Readarr and enabled via the download client settings in \*Arr. Thus \*Arr can ensure that your download client history is cleaned up.
 
 ### Indexers
@@ -328,12 +328,12 @@ Note: you will also need to add the websocket directive to your readarr configur
 - The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the /all endpoint has no advantages, only disadvantages:
-  - you lose control over indexer specific settings (categories, search modes, etc.)
-  - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) cannot be used.
-  - slow indexers will slow down the overall result
-  - total results are limited to 1000
-  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+    - you lose control over indexer specific settings (categories, search modes, etc.)
+    - mixing search modes (IMDB, query, etc.) might cause low-quality results
+    - indexer specific categories (\>= 100000) cannot be used.
+    - slow indexers will slow down the overall result
+    - total results are limited to 1000
+    - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
 
 ##### Solutions
 
@@ -351,11 +351,11 @@ Note: you will also need to add the websocket directive to your readarr configur
 
 - Easiest way to find the problem author is to:
 
-  - Go to the Author (Library) Tab
-  - Create a custom filter with the old root folder path
-  - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these author to be moved to.
-  - Next you will receive a pop-up that states Would you like to move the Author folders to 'root path' ? This will also state This will also rename the Author folder per the Author folder format in settings. Simply select No if the you do not want Lidarr to move your files
-  - Run the Check Health Task in System => Tasks
+    - Go to the Author (Library) Tab
+    - Create a custom filter with the old root folder path
+    - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these author to be moved to.
+    - Next you will receive a pop-up that states Would you like to move the Author folders to 'root path' ? This will also state This will also rename the Author folder per the Author folder format in settings. Simply select No if the you do not want Lidarr to move your files
+    - Run the Check Health Task in System => Tasks
 
 ### Import Lists
 
@@ -420,12 +420,12 @@ The queue will show you running and upcoming tasks as well as a history of recen
 
 - Backup Now - This option will trigger a manual backup of your Readarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
-  - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Readarr Zip backup
+    - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Readarr Zip backup
 
 - If you have any previous backups and would like to download them from Readarr to be placed in a non standard location you simply can select one of these files to download them
 - Off to the right of each of the previous download you have two options.
-  - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
-  - Delete (Trashcan) - To delete a previous backup
+    - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
+    - Delete (Trashcan) - To delete a previous backup
 
 # Updates
 
@@ -446,8 +446,8 @@ The queue will show you running and upcoming tasks as well as a history of recen
 - Message - This column will tell you what message as been sent from the component from the previous column.
 - Gear Icon - This option will allow you to change how many Components/Messages are displayed per page (Default is 50)
 - Options at the top of the page
-  - Refresh - This option will refresh the current page, pulling a new events log
-  - Clear - This will clear the current events log allowing you to start from fresh
+    - Refresh - This option will refresh the current page, pulling a new events log
+    - Clear - This will clear the current events log allowing you to start from fresh
 
 # Log Files
 
@@ -456,8 +456,8 @@ The queue will show you running and upcoming tasks as well as a history of recen
 - On the top row there are several options to allow you to control your log files.
 
 - The top row on the far left there is a dropdown that will allow you to switch from Log files and Updater Log Files
-  - Log Files - The bread and butter of any support issue more on log files can be found here.
-  - Updater Log Files - This will show the log files associated with Readarr's updater script
+    - Log Files - The bread and butter of any support issue more on log files can be found here.
+    - Updater Log Files - This will show the log files associated with Readarr's updater script
 
 !!! info
     If you're on docker this will be empty as you should be updating by downloading a new docker image
@@ -466,6 +466,6 @@ The queue will show you running and upcoming tasks as well as a history of recen
 - Delete - This will clear all logs allowing you to start from fresh
 - File Name - This will display the file name associated with the log
 - Last Written - This is the local time that this particular log file was written to.
-  - Readarr uses rolling log files limited to 1MB each. The current log file is always readarr.txt, for the the other files readarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
-  - When Debug log level is enabled, additional readarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
-  - When Trace log level is enabled, additional readarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+    - Readarr uses rolling log files limited to 1MB each. The current log file is always readarr.txt, for the the other files readarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
+    - When Debug log level is enabled, additional readarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
+    - When Trace log level is enabled, additional readarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.

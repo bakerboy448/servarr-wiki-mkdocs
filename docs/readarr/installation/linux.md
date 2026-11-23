@@ -74,10 +74,10 @@ sudo apt install curl sqlite3
     By continuing below, you acknowledge that you have read and met the above requirements.
 
 - Download the correct binaries for your architecture.
-  - You can determine your architecture with `dpkg --print-architecture`
-    - AMD64 use `arch=x64`
-    - ARM, armf, and armh use `arch=arm`
-    - ARM64 use `arch=arm64`
+    - You can determine your architecture with `dpkg --print-architecture`
+        - AMD64 use `arch=x64`
+        - ARM, armf, and armh use `arch=arm`
+        - ARM64 use `arch=arm64`
 
 ```shell
 wget --content-disposition 'http://readarr.servarr.com/v1/update/develop/updatefile?os=linux&runtime=netcore&arch=x64'
