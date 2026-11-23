@@ -15,29 +15,29 @@ tags:
 - [Table of Contents](#table-of-contents)
 - [Asking for Help](#asking-for-help)
 - [Logging and Log Files](#logging-and-log-files)
-  - [Standard Logs Location](#standard-logs-location)
-  - [Update Logs Location](#update-logs-location)
-  - [Sharing Logs](#sharing-logs)
-  - [Trace/Debug Logs](#tracedebug-logs)
-  - [Clearing Logs](#clearing-logs)
+    - [Standard Logs Location](#standard-logs-location)
+    - [Update Logs Location](#update-logs-location)
+    - [Sharing Logs](#sharing-logs)
+    - [Trace/Debug Logs](#tracedebug-logs)
+    - [Clearing Logs](#clearing-logs)
 - [Multiple Log Files](#multiple-log-files)
 - [Recovering from a Failed Update](#recovering-from-a-failed-update)
-  - [Determine the issue](#determine-the-issue)
-    - [Migration Issue](#migration-issue)
-    - [Permission Issue](#permission-issue)
-  - [Resolving the issue](#resolving-the-issue)
-    - [Permissions Issues](#permissions-issues)
-    - [Manually upgrading](#manually-upgrading)
+    - [Determine the issue](#determine-the-issue)
+        - [Migration Issue](#migration-issue)
+        - [Permission Issue](#permission-issue)
+    - [Resolving the issue](#resolving-the-issue)
+        - [Permissions Issues](#permissions-issues)
+        - [Manually upgrading](#manually-upgrading)
 - [NGINX errors](#nginx-errors)
 - [Indexer, Application, and Download Client Issues](#indexer-application-and-download-client-issues)
-  - [DNS & SSL Connection Issues](#dns-ssl-connection-issues)
-  - [Cannot determine the frame size or a corrupted frame was received](#cannot-determine-the-frame-size-or-a-corrupted-frame-was-received)
-  - [Connection Timed Out](#connection-timed-out)
-  - [Sonarr HTTP 404 Errors](#sonarr-http-404-errors)
-  - [\*Arr HTTP 400 Errors](#arr-http-400-errors)
-  - [503 HTTP Service Unavailable](#503-http-service-unavailable)
-  - [Invalid Torrents](#invalid-torrents)
-  - [Searches Indexers and Trackers](#searches-indexers-and-trackers)
+    - [DNS & SSL Connection Issues](#dns-ssl-connection-issues)
+    - [Cannot determine the frame size or a corrupted frame was received](#cannot-determine-the-frame-size-or-a-corrupted-frame-was-received)
+    - [Connection Timed Out](#connection-timed-out)
+    - [Sonarr HTTP 404 Errors](#sonarr-http-404-errors)
+    - [\*Arr HTTP 400 Errors](#arr-http-400-errors)
+    - [503 HTTP Service Unavailable](#503-http-service-unavailable)
+    - [Invalid Torrents](#invalid-torrents)
+    - [Searches Indexers and Trackers](#searches-indexers-and-trackers)
 
 # Asking for Help
 
@@ -142,7 +142,7 @@ You can clear log files and the logs database directly from the UI, under `Syste
 
 # Multiple Log Files
 
-Prowlarr uses rolling log files limited to 1MB each. The current log file is always Prowlarr.txt, for the the other files Prowlarr.0.txt is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
+Prowlarr uses rolling log files limited to 1MB each. The current log file is always `prowlarr.txt`, for the the other files `prowlarr.0.txt` is the next newest (the higher the number the older it is). This log file contains `fatal`, `error`, `warn`, and `info` entries.
 
 When Debug log level is enabled, additional `prowlarr.debug.txt` rolling log files will be present. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a 40h period.
 
@@ -311,13 +311,14 @@ This is typically caused by:
 - local DNS issues - Try changing to a different DNS provider
 - local IPv6 issues - typically IPv6 is enabled, but non-functional
 - the use of Privoxy
+- podman/containerized setups where the CNI/netavark bridge MTU defaults to `1500` while DNS and non-Cloudflare sites still work, but Cloudflare-protected indexers time out. Recreate the container network with a lower MTU, e.g. `podman network create --opt mtu=1460 servarr`, then attach Prowlarr to it
 
 ## Sonarr HTTP 404 Errors
 
 - This is typically due to running an end of life (EOL) version of Sonarr which does not have the v3 API endpoints
 - Prowlarr does not support Sonarr v2
 - Prowlarr only supports Sonarr v3 and v4
-  - Note that Sonarr v3 is end of life and support may be dropped at any time.
+    - Note that Sonarr v3 is end of life and support may be dropped at any time.
 
 ## \*Arr HTTP 400 Errors
 

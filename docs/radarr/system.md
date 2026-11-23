@@ -14,71 +14,71 @@ tags:
 
 - [Table of Contents](#table-of-contents)
 - [Status](#status)
-  - [Health](#health)
-    - [System Warnings](#system-warnings)
-      - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
-      - [Update to .NET version](#update-to-net-version)
-        - [Fixing Docker installs](#fixing-docker-installs)
-        - [Fixing FreeBSD installs](#fixing-freebsd-installs)
-        - [Fixing Standalone installs](#fixing-standalone-installs)
-      - [Currently installed mono version is old and unsupported](#currently-installed-mono-version-is-old-and-unsupported)
-      - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
-      - [Database Failed Integrity Check](#database-failed-integrity-check)
-      - [New update is available](#new-update-is-available)
-      - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
-      - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
-      - [Branch is for a previous version](#branch-is-for-a-previous-version)
-      - [Could not connect to signalR](#could-not-connect-to-signalr)
-        - [Nginx](#nginx)
-        - [Apache2](#apache2)
-        - [Caddy](#caddy)
-      - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
-      - [Proxy Failed Test](#proxy-failed-test)
-      - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
-      - [PTP Indexer Settings Out of Date](#ptp-indexer-settings-out-of-date)
-      - [Invalid API Key](#invalid-api-key)
-      - [Package Maintainer Message](#package-maintainer-message)
-    - [Download Clients](#download-clients)
-      - [No download client is available](#no-download-client-is-available)
-      - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
-      - [Download clients are unavailable due to failure](#download-clients-are-unavailable-due-to-failure)
-      - [Enable Completed Download Handling](#enable-completed-download-handling)
-      - [Docker bad remote path mapping](#docker-bad-remote-path-mapping)
-      - [Downloading into Root Folder](#downloading-into-root-folder)
-      - [Bad Download Client Settings](#bad-download-client-settings)
-      - [Bad Remote Path Mapping](#bad-remote-path-mapping)
-      - [Permissions Error](#permissions-error)
-      - [Remote File was removed part way through processing](#remote-file-was-removed-part-way-through-processing)
-      - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
-      - [Download Client Sorting Enabled](#download-client-sorting-enabled)
-    - [Completed/Failed Download Handling](#completedfailed-download-handling)
-      - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
-      - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
-    - [Indexers](#indexers)
-      - [No indexers available with automatic search enabled, Radarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-radarr-will-not-provide-any-automatic-search-results)
-      - [No indexers available with RSS sync enabled, Radarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-radarr-will-not-grab-new-releases-automatically)
-      - [No indexers available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
-      - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
-      - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
-        - [Solutions](#solutions)
-      - [Invalid Indexer Download Client Setting](#invalid-indexer-download-client-setting)
-    - [Movie Folders](#movie-folders)
-      - [Missing Root Folder](#missing-root-folder)
-      - [Movie Path Mount is Read Only](#movie-path-mount-is-read-only)
-    - [Movies](#movies)
-      - [Movie was removed from TMDb](#movie-was-removed-from-tmdb)
-      - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
-      - [Import List Missing Root Folder](#import-list-missing-root-folder)
-    - [Notifications](#notifications)
-      - [Notifications are unavailable due to failures](#notifications-are-unavailable-due-to-failures)
-      - [Discord as Slack Notification](#discord-as-slack-notification)
-    - [Cannot Write Recycle Bin](#cannot-write-recycle-bin)
-  - [Disk Space](#disk-space)
-  - [About](#about)
-  - [More Info](#more-info)
+    - [Health](#health)
+        - [System Warnings](#system-warnings)
+            - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
+            - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
+            - [New update is available](#new-update-is-available)
+            - [Cannot install update because startup folder is in an App Translocation folder](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder)
+            - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+            - [Cannot install update because UI folder is not writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
+            - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
+            - [Branch is for a previous version](#branch-is-for-a-previous-version)
+            - [Movie Folder Format uses deprecated tokens](#movie-folder-format-uses-deprecated-tokens)
+            - [Kometa metadata is deprecated](#kometa-metadata-is-deprecated)
+            - [Could not connect to signalR](#could-not-connect-to-signalr)
+            - [Reverse Proxy Websocket Configuration](#reverse-proxy-websocket-configuration)
+                - [Nginx](#nginx)
+                - [Apache2](#apache2)
+                - [Caddy](#caddy)
+            - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
+            - [Proxy Failed Test](#proxy-failed-test)
+            - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
+            - [PTP Indexer Settings Out of Date](#ptp-indexer-settings-out-of-date)
+            - [Invalid API Key](#invalid-api-key)
+            - [Package Maintainer Message](#package-maintainer-message)
+            - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
+        - [Download Clients](#download-clients)
+            - [No download client is available](#no-download-client-is-available)
+            - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
+            - [Download clients are unavailable due to failure](#download-clients-are-unavailable-due-to-failure)
+            - [Enable Completed Download Handling](#enable-completed-download-handling)
+            - [Docker bad remote path mapping](#docker-bad-remote-path-mapping)
+            - [Downloading into Root Folder](#downloading-into-root-folder)
+            - [Bad Download Client Settings](#bad-download-client-settings)
+            - [Bad Remote Path Mapping](#bad-remote-path-mapping)
+            - [Permissions Error](#permissions-error)
+            - [Remote File was removed part way through processing](#remote-file-was-removed-part-way-through-processing)
+            - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
+            - [Download Client Sorting Enabled](#download-client-sorting-enabled)
+        - [Completed/Failed Download Handling](#completedfailed-download-handling)
+            - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
+            - [Download Client Removes Completed Downloads](#download-client-removes-completed-downloads)
+        - [Indexers](#indexers)
+            - [No indexers available with automatic search enabled, Radarr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-radarr-will-not-provide-any-automatic-search-results)
+            - [No indexers available with RSS sync enabled, Radarr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-radarr-will-not-grab-new-releases-automatically)
+            - [No indexers available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
+            - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
+            - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
+                - [Solutions](#solutions)
+            - [Invalid Indexer Download Client Setting](#invalid-indexer-download-client-setting)
+        - [Movie Folders](#movie-folders)
+            - [Missing Root Folder](#missing-root-folder)
+            - [Movie Path Mount is Read Only](#movie-path-mount-is-read-only)
+        - [Movies](#movies)
+            - [Movie was removed from TMDb](#movie-was-removed-from-tmdb)
+            - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
+            - [Import List Missing Root Folder](#import-list-missing-root-folder)
+        - [Notifications](#notifications)
+            - [Notifications are unavailable due to failures](#notifications-are-unavailable-due-to-failures)
+            - [Discord as Slack Notification](#discord-as-slack-notification)
+        - [Cannot Write Recycle Bin](#cannot-write-recycle-bin)
+    - [Disk Space](#disk-space)
+    - [About](#about)
+    - [More Info](#more-info)
 - [Tasks](#tasks)
-  - [Scheduled](#scheduled)
-  - [Queue](#queue)
+    - [Scheduled](#scheduled)
+    - [Queue](#queue)
 - [Backup](#backup)
 - [Updates](#updates)
 - [Events](#events)
@@ -96,111 +96,12 @@ tags:
 
 - The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](faq.md#how-do-i-update-radarr).
 
-#### Update to .NET version
-
-{#update-to-net-core-version}
-
-- Newer versions of Radarr are targeted for .NET6 or newer. Mono builds are not provided nor supported starting with v4. v3.2.2 is the last version of Radarr to support legacy mono builds. You are running one of these legacy mono builds, but your platform supports .NET.
-
-See the below entries for how to switch from unsupported, end-of-life mono versions to dotnet.
-
-- [Fixing Docker installs](#fixing-docker-installs)
-- [Fixing FreeBSD installs](#fixing-freebsd-installs)
-- [Fixing Standalone installs](#fixing-standalone-installs)
-{.links-list}
-
-##### Fixing Docker installs
-
-- Ensure your branch is correct for your docker maintainer and repull your container
-
-##### Fixing FreeBSD installs
-
-- Simply update the Radarr Port with `pkg update && pkg upgrade`
-- (Optional) Remove the mono package if you wish
-
-##### Fixing Standalone installs
-
-Errors such as:
-
-```none
-Cannot open assembly '/opt/Radarr/Radarr': File does not contain a valid CIL image
-```
-
-- Back-Up your existing configuration before the next step.
-- This should only happen on Linux hosts. Do not install .NET runtime or SDK from Microsoft.
-- To remedy, download the correct build for your architecture and replace your existing binaries (application)
-- In short you will need to delete your existing binaries (contents or folder of /opt/Radarr) and replace with the contents of the .tar.gz you just downloaded and then update your service file to not use mono.
-
-!!! warning
-    DO NOT JUST EXTRACT THE DOWNLOAD OVER THE TOP OF YOUR EXISTING BINARIES.
-    YOU MUST DELETE THE OLD ONES FIRST.
-
-- The below is a community developed script to remove your mono installation and replace it with the .NET installation. Contributions and corrections are welcome.
-- This assumes you are on the `master` Radarr branch, so update the variable if needed
-- This assumes that Radarr runs as the user `radarr`, so update the variables if needed
-- This assumes Radarr is installed at `/opt/Radarr`, so update the variables if needed
-
-```bash
-#!/bin/bash
-## User Variables
-installdir="/opt/Radarr"
-APPUSER="radarr"
-branch="master"
-## /User Variables
-app="radarr"
-ARCH=$(dpkg --print-architecture)
-# Stop \*arr
-sudo systemctl stop $app
-# get arch
-dlbase="https://$app.servarr.com/v1/update/$branch/updatefile?os=linux&runtime=netcore"
-case "$ARCH" in
-"amd64") DLURL="${dlbase}&arch=x64" ;;
-"armhf") DLURL="${dlbase}&arch=arm" ;;
-"arm64") DLURL="${dlbase}&arch=arm64" ;;
-*)
-    echo_error "Arch not supported"
-    exit 1
-    ;;
-esac
-echo "Downloading..."
-wget --content-disposition "$DLURL"
-tar -xvzf ${app^}.*.tar.gz
-echo "Installation files downloaded and extracted"
-echo "Moving existing installation"
-sudo mv "$installdir/" "$installdir.old/"
-echo "Installing..."
-sudo mv "${app^}" "$installdir"
-sudo chown $APPUSER:$APPUSER -R $installdir
-sudo sed -i "s|ExecStart=/usr/bin/mono --debug /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo sed -i "s|ExecStart=/usr/bin/mono /opt/${app^}/${app^}.exe|ExecStart=/opt/${app^}/${app^}|g" /etc/systemd/system/$app.service
-sudo systemctl daemon-reload
-echo "App Installed"
-sudo rm -rf "$installdir.old/"
-rm -rf "${app^}.*.tar.gz"
-sudo systemctl start $app
-```
-
-#### Currently installed mono version is old and unsupported
-
-- Radarr is written in .NET and required Mono to run on very old ARM processors. Mono 5.20 is the absolute minimum for Radarr.
-- The upgrade procedure for Mono varies per platform.
-
-!!! warning
-    Mono is no longer supported starting in Radarr version 4.0
-
 #### Currently installed SQLite version is not supported
 
 - Radarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Radarr requires at least version 3.9.0.
 
 !!! info
     Note that Radarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
-
-#### Database Failed Integrity Check
-
-- Your database(s) failed a [SQLite Pragma Integrity Check](https://www.sqlite.org/pragma.html#pragma_integrity_check) and have some corruption.
-- If `Radarr.db` is corrupt [please see this FAQ Entry](faq.md#i-am-getting-an-error-database-disk-image-is-malformed)
-- If `logs.db` is corrupt: Stop Radarr, delete `logs.db` and any `logs.wal` files.
-- If both are corrupt, review the respective processes above.
 
 #### New update is available
 
@@ -209,9 +110,18 @@ sudo systemctl start $app
 !!! info
     This warning will not appear if your current version is less than 14 days old
 
+#### Cannot install update because startup folder is in an App Translocation folder
+
+- macOS Gatekeeper can silently relocate an unopened, un-trusted copy of Radarr into a randomized, read-only App Translocation path. Radarr detects when it is running from that path and refuses to auto-update, since it cannot write to a translocated location.
+- Move Radarr to a normal folder (e.g. `/Applications`) and launch it from there so macOS stops translocating it, then retry the update.
+
 #### Cannot install update because startup folder is not writable by the user
 
 - This means Radarr will be unable to update itself. You’ll have to update Radarr manually or set the permissions on Radarr’s Startup directory (the installation directory) to allow Radarr to update itself.
+
+#### Cannot install update because UI folder is not writable by the user
+
+- This means Radarr will be unable to update itself. You’ll have to update Radarr manually or set the permissions on Radarr’s UI directory (inside the installation directory) to allow Radarr to update itself.
 
 #### Updating will not be possible to prevent deleting AppData on Update
 
@@ -225,10 +135,23 @@ sudo systemctl start $app
 
 - The update branch setup in Settings/General is for a previous version of Radarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
 
-#### Could not connect to signalR
+#### Movie Folder Format uses deprecated tokens
 
-- signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
-- The most common occurrence of this is use of a reverse proxy or cloudflare
+- Your [Movie Folder Format](settings.md#movie-folder-format) includes one or more tokens that are deprecated for folder names, such as `{Original Title}`, `{Release Group}`, `{Edition Tags}`, `{Quality Full}`, or the `{MediaInfo ...}` tokens. These are file-naming tokens, not folder-naming tokens, and Radarr will not save the format until they are removed.
+- Edit your Movie Folder Format and remove the deprecated tokens, keeping only the tokens listed under [Movie Naming](settings.md#movie-naming-2).
+
+#### Kometa metadata is deprecated
+
+- The [Kometa](supported.md#kometametadata) metadata consumer is deprecated. Radarr will stop creating Kometa metadata files, and support will be removed completely in a future v6 release.
+- Disable the Kometa metadata consumer in Settings => Metadata to clear this warning.
+
+#### Reverse Proxy Websocket Configuration
+
+{#reverse-proxy-websocket-configuration}
+{#could-not-connect-to-signalr}
+
+- Radarr uses signalR to drive dynamic UI updates in the browser. If your reverse proxy does not pass websocket connections through, the UI will not receive real-time updates.
+- The most common occurrence of this is use of a reverse proxy or Cloudflare.
 - Cloudflare needs websockets enabled.
 
 ##### Nginx
@@ -277,6 +200,8 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Failed to resolve the IP Address for the Configured Proxy Host
 
+{#proxy-failed-resolve-ip}
+
 - Review your proxy settings and ensure they are accurate
 - Ensure your proxy is up, running, and accessible
 
@@ -286,10 +211,14 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### System Time is off by more than 1 day
 
+{#system-time-off}
+
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 - Review your system time and ensure it is synced to an authoritative time server and accurate
 
 #### PTP Indexer Settings Out of Date
+
+{#ptp-settings-old}
 
 - The following PassThePopcorn indexers have deprecated settings and should be updated.
 
@@ -305,6 +234,13 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 - Your package maintainer has provided a message. This is typically used to communicate important information about your Radarr installation or package.
 
+#### Allowed Hosts Not Configured
+
+{#allowed-hosts-not-configured}
+
+- Allowed Hosts is not configured, so Radarr will accept requests for any hostname. Set [Allowed Hosts](settings.md#host) to a comma-separated list of the hostnames and IP addresses Radarr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Radarr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
+
 ### Download Clients
 
 #### No download client is available
@@ -315,13 +251,15 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 - Radarr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
 - This is typically due to improperly configured download client. Things you can typically check:
-  - Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-  - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Radarr.
-  - Ensure SSL encryption is not turned on if you're using both your Radarr instance and your download client on a local network. See the SSL FAQ entry for more information.
-  - Ensure IPv6 is disabled on the system if it is not functional
-  - Ensure a DNS server (e.g. pihole) is not rate limiting queries
+    - Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
+    - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Radarr.
+    - Ensure SSL encryption is not turned on if you're using both your Radarr instance and your download client on a local network. See the SSL FAQ entry for more information.
+    - Ensure IPv6 is disabled on the system if it is not functional
+    - Ensure a DNS server (e.g. pihole) is not rate limiting queries
 
 #### Download clients are unavailable due to failure
+
+{#download-clients-are-unavailable-due-to-failures}
 
 - One or more of your download clients is not responding to requests made by Radarr. Therefore Radarr has decided to temporarily stop querying the download client on it’s normal 1 minute cycle, which is normally used to track active downloads and import finished ones. However, Radarr will continue to attempt to send downloads to the client, but will in all likeliness fail.
 - You should inspect System=>Logs to see what the reason is for the failures.
@@ -336,14 +274,14 @@ Note: you will also need to add the websocket directive to your radarr configura
 - This error is typically associated with bad docker paths within either your download client or Radarr
 
 - An example of this would be:
-  - Download client: Download Path: /mnt/user/downloads:/downloads
-  - Radarr: Download Path: /mnt/user/downloads:/data
+    - Download client: Download Path: /mnt/user/downloads:/downloads
+    - Radarr: Download Path: /mnt/user/downloads:/data
 - Within this example the download client places its downloads into /downloads and therefore tells Radarr when its complete that the finished movie is in /downloads. Radarr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Radarr you did not allocate a /downloads path you allocated a /data path so it throws this error.
 - The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 - Team Radarr is a big fan of simply using /data.
-  - Download client: /mnt/user/data/downloads:/data/downloads
-  - Radarr: /mnt/user/data:/data
+    - Download client: /mnt/user/data/downloads:/data/downloads
+    - Radarr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Radarr when the download client tells Radarr it's done Radarr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
 - There are many great write ups: our wiki [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hard links and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
@@ -351,8 +289,8 @@ Note: you will also need to add the websocket directive to your radarr configura
 - See [TRaSH's Remote Path Guide](https://trash-guides.info/Radarr/Radarr-remote-path-mapping/) for more information.
 
 - For Linux ensure:
-  - If you're using an NFS mount ensure `nolock` is enabled for your mount.
-  - If you're using an SMB mount ensure `nobrl` is enabled for your mount.
+    - If you're using an NFS mount ensure `nolock` is enabled for your mount.
+    - If you're using an SMB mount ensure `nobrl` is enabled for your mount.
 
 #### Downloading into Root Folder
 
@@ -383,9 +321,13 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Remote File was removed part way through processing
 
+{#remote-path-file-removed}
+
 - A file accessible via a remote path map appears to have been removed prior to processing completing.
 
 #### Remote Path is Used and Import Failed
+
+{#remote-path-import-failed}
 
 - Check your logs for more info; Refer to our Troubleshooting Guides
 
@@ -408,7 +350,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 {#download-client-removes-completed-downloads}
 
 - It's required that your download client retain its history of completed downloads until Radarr has imported them. If history retention is disabled then \*Arr may not see the completed download before it is removed from the download client. Your download client should be set to keep (usenet) and pause not remove (torrents) downloads after completion: **either indefinitely or for at least 14 days**.
-  - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
+    - Sabnzbd: Switches => Post Processing => Keep Jobs **must** be set to 14 days or greater OR be set to Keep All History
 - Removing completed downloads from your client can be managed by Radarr and enabled via the download client settings in \*Arr. Thus \*Arr can ensure that your download client history is cleaned up.
 
 ### Indexers
@@ -439,12 +381,12 @@ Note: you will also need to add the websocket directive to your radarr configura
 - The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the /all endpoint has no advantages, only disadvantages:
-  - you lose control over indexer specific settings (categories, search modes, etc.)
-  - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) cannot be used.
-  - slow indexers will slow down the overall result
-  - total results are limited to 1000
-  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+    - you lose control over indexer specific settings (categories, search modes, etc.)
+    - mixing search modes (IMDB, query, etc.) might cause low-quality results
+    - indexer specific categories (\>= 100000) cannot be used.
+    - slow indexers will slow down the overall result
+    - total results are limited to 1000
+    - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
 
 ##### Solutions
 
@@ -488,7 +430,7 @@ Note: you will also need to add the websocket directive to your radarr configura
 
 #### Movie Path Mount is Read Only
 
-{#movie-mount-ro}
+{#movies-mount-ro}
 
 A mount containing a movie path is read only and is not writable by the user Radarr is running as.
 
@@ -507,6 +449,8 @@ A mount containing a movie path is read only and is not writable by the user Rad
   1. Click save and select the newly created filter from the filter dropdown menu
 
 #### Lists are unavailable due to failures
+
+{#import-lists-are-unavailable-due-to-failures}
 
 - Typically this simply means that Radarr is no longer able to communicate via API or via logging in to your chosen list provider. Your best bet if the problem persists is to contact them in order to rule them out, as their systems maybe overloaded from time to time.
 - Review System => Events filtered for Warning (Warning & Errors) to see the historical failures or check logs for details.
@@ -594,12 +538,12 @@ A mount containing a movie path is read only and is not writable by the user Rad
 
 - Backup Now - This option will trigger a manual backup of your Radarr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
-  - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Radarr Zip backup
+    - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Radarr Zip backup
 
 - If you have any previous backups and would like to download them from Radarr to be placed in a non standard location you simply can select one of these files to download them
 - Off to the right of each of the previous download you have two options.
-  - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
-  - Delete (Trashcan) - To delete a previous backup
+    - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
+    - Delete (Trashcan) - To delete a previous backup
 
 # Updates
 
@@ -620,8 +564,8 @@ A mount containing a movie path is read only and is not writable by the user Rad
 - Message - This column will tell you what message as been sent from the component from the previous column.
 - Gear Icon - This option will allow you to change how many Components/Messages are displayed per page (Default is 50)
 - Options at the top of the page
-  - Refresh - This option will refresh the current page, pulling a new events log
-  - Clear - This will clear the current events log allowing you to start from fresh
+    - Refresh - This option will refresh the current page, pulling a new events log
+    - Clear - This will clear the current events log allowing you to start from fresh
 
 # Log Files
 
@@ -630,8 +574,8 @@ A mount containing a movie path is read only and is not writable by the user Rad
 - On the top row there are several options to allow you to control your log files.
 
 - The top row on the far left there is a dropdown that will allow you to switch from Log files and Updater Log Files
-  - Log Files - The bread and butter of any support issue more on log files can be found here.
-  - Updater Log Files - This will show the log files associated with Radarr's updater script
+    - Log Files - The bread and butter of any support issue more on log files can be found here.
+    - Updater Log Files - This will show the log files associated with Radarr's updater script
 
 !!! info
     If you're on docker this will be empty as you should be updating by downloading a new docker image
@@ -640,6 +584,20 @@ A mount containing a movie path is read only and is not writable by the user Rad
 - Delete - This will clear all logs allowing you to start from fresh
 - File Name - This will display the file name associated with the log
 - Last Written - This is the local time that this particular log file was written to.
-  - Radarr uses rolling log files limited to 1MB each. The current log file is always radarr.txt, for the the other files radarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
-  - When Debug log level is enabled, additional radarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
-  - When Trace log level is enabled, additional radarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+    - Radarr uses rolling log files limited to 1MB each. The current log file is always radarr.txt, for the the other files radarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
+    - When Debug log level is enabled, additional radarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
+    - When Trace log level is enabled, additional radarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+
+# Unsupported legacy build health checks
+
+These health checks only appear on unsupported, end-of-life builds (legacy Mono, before the switch to .NET) and are not present in current releases. If you see one of them, your install is on an unsupported build. [Update to a supported release](faq.md#how-do-i-update-radarr).
+
+## Update to .NET version
+
+{#update-to-net-core-version}
+
+Unsupported legacy mono build. [Update to a supported release](faq.md#how-do-i-update-radarr).
+
+## Currently installed mono version is old and unsupported
+
+Unsupported legacy mono build. [Update to a supported release](faq.md#how-do-i-update-radarr).

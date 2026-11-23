@@ -35,55 +35,55 @@ The Servarr Team
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
-  - [How does Readarr work?](#how-does-readarr-work)
-  - [Forced Authentication](#forced-authentication)
-    - [Authentication Method](#authentication-method)
-    - [Authentication Required](#authentication-required)
-  - [How does Readarr find books?](#how-does-readarr-find-books)
-  - [How are possible downloads compared?](#how-are-possible-downloads-compared)
-  - [A Task was Canceled](#a-task-was-canceled)
-  - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
-  - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
-  - [Why can I not add a new book or author to Readarr?](#why-can-i-not-add-a-new-book-or-author-to-readarr)
-  - [Metadata Profile "None" allowing Foreign Releases](#metadata-profile-none-allowing-foreign-releases)
-  - [Book Match is not Close Enough: XX% vs YY% \[book\]](#book-match-is-not-close-enough-xx-vs-yy-book)
-  - [How can I rename my author folders?](#how-can-i-rename-my-author-folders)
-  - [How can I mass delete authors from the wanted list?](#how-can-i-mass-delete-authors-from-the-wanted-list)
-  - [Why doesn't Readarr work behind a reverse proxy](#why-doesnt-readarr-work-behind-a-reverse-proxy)
-  - [How do I update Readarr?](#how-do-i-update-readarr)
-    - [Can I update Readarr inside my Docker container?](#can-i-update-readarr-inside-my-docker-container)
-    - [Installing a newer version](#installing-a-newer-version)
-      - [Native](#native)
-      - [Docker](#docker)
-  - [Can I switch from `nightly` back to `develop`?](#can-i-switch-from-nightly-back-to-develop)
-  - [Can I switch between branches?](#can-i-switch-between-branches)
-  - [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
-  - [How do I Backup/Restore my Readarr?](#how-do-i-backuprestore-my-readarr)
-    - [Backing up Readarr](#backing-up-readarr)
-      - [Using built-in backup](#using-built-in-backup)
-      - [Using file system directly](#using-file-system-directly)
-    - [Restoring from Backup](#restoring-from-backup)
-      - [Using zip backup](#using-zip-backup)
-      - [Using file system backup](#using-file-system-backup)
-      - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
-  - [Help, Book Added, But Not Searched](#help-book-added-but-not-searched)
-  - [Root path for authors imported from lists becomes “C:” or other weird paths](#root-path-for-authors-imported-from-lists-becomes-c-or-other-weird-paths)
-  - [Book Imported, But Source File And Torrent Not Deleted](#book-imported-but-source-file-and-torrent-not-deleted)
-  - [Can I disable the refresh books task](#can-i-disable-the-refresh-books-task)
-  - [Can I have BOTH an ebook and an audiobook version of the same book?](#can-i-have-both-an-ebook-and-an-audiobook-version-of-the-same-book)
-  - [Do I need to use Calibre?](#do-i-need-to-use-calibre)
-  - [Why can Readarr not see my files on a remote server?](#why-can-readarr-not-see-my-files-on-a-remote-server)
-    - [Readarr runs under the LocalService account by default which doesn't have access to protected remote file shares](#readarr-runs-under-the-localservice-account-by-default-which-doesnt-have-access-to-protected-remote-file-shares)
-    - [You're using a mapped network drive (not a UNC path)](#youre-using-a-mapped-network-drive-not-a-unc-path)
-  - [Help I have locked myself out](#help-i-have-locked-myself-out)
-  - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
-  - [Weird UI Issues](#weird-ui-issues)
-  - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
-    - [Use of a VPN](#use-of-a-vpn)
-  - [Jackett's /all Endpoint](#jacketts-all-endpoint)
-    - [Jackett /All Solutions](#jackett-all-solutions)
-  - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
-  - [Calibre is saying "Calibre rejected duplicate book" but it's not](#calibre-is-saying-calibre-rejected-duplicate-book-but-its-not)
+    - [How does Readarr work?](#how-does-readarr-work)
+    - [Forced Authentication](#forced-authentication)
+        - [Authentication Method](#authentication-method)
+        - [Authentication Required](#authentication-required)
+    - [How does Readarr find books?](#how-does-readarr-find-books)
+    - [How are possible downloads compared?](#how-are-possible-downloads-compared)
+    - [A Task was Canceled](#a-task-was-canceled)
+    - [What are Lists and what can they do for me?](#what-are-lists-and-what-can-they-do-for-me)
+    - [Why are lists sync times so long and can I change it?](#why-are-lists-sync-times-so-long-and-can-i-change-it)
+    - [Why can I not add a new book or author to Readarr?](#why-can-i-not-add-a-new-book-or-author-to-readarr)
+    - [Metadata Profile "None" allowing Foreign Releases](#metadata-profile-none-allowing-foreign-releases)
+    - [Book Match is not Close Enough: XX% vs YY% \[book\]](#book-match-is-not-close-enough-xx-vs-yy-book)
+    - [How can I rename my author folders?](#how-can-i-rename-my-author-folders)
+    - [How can I mass delete authors from the wanted list?](#how-can-i-mass-delete-authors-from-the-wanted-list)
+    - [Why doesn't Readarr work behind a reverse proxy](#why-doesnt-readarr-work-behind-a-reverse-proxy)
+    - [How do I update Readarr?](#how-do-i-update-readarr)
+        - [Can I update Readarr inside my Docker container?](#can-i-update-readarr-inside-my-docker-container)
+        - [Installing a newer version](#installing-a-newer-version)
+            - [Native](#native)
+            - [Docker](#docker)
+    - [Can I switch from `nightly` back to `develop`?](#can-i-switch-from-nightly-back-to-develop)
+    - [Can I switch between branches?](#can-i-switch-between-branches)
+    - [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
+    - [How do I Backup/Restore my Readarr?](#how-do-i-backuprestore-my-readarr)
+        - [Backing up Readarr](#backing-up-readarr)
+            - [Using built-in backup](#using-built-in-backup)
+            - [Using file system directly](#using-file-system-directly)
+        - [Restoring from Backup](#restoring-from-backup)
+            - [Using zip backup](#using-zip-backup)
+            - [Using file system backup](#using-file-system-backup)
+            - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
+    - [Help, Book Added, But Not Searched](#help-book-added-but-not-searched)
+    - [Root path for authors imported from lists becomes “C:” or other weird paths](#root-path-for-authors-imported-from-lists-becomes-c-or-other-weird-paths)
+    - [Book Imported, But Source File And Torrent Not Deleted](#book-imported-but-source-file-and-torrent-not-deleted)
+    - [Can I disable the refresh books task](#can-i-disable-the-refresh-books-task)
+    - [Can I have BOTH an ebook and an audiobook version of the same book?](#can-i-have-both-an-ebook-and-an-audiobook-version-of-the-same-book)
+    - [Do I need to use Calibre?](#do-i-need-to-use-calibre)
+    - [Why can Readarr not see my files on a remote server?](#why-can-readarr-not-see-my-files-on-a-remote-server)
+        - [Readarr runs under the LocalService account by default which doesn't have access to protected remote file shares](#readarr-runs-under-the-localservice-account-by-default-which-doesnt-have-access-to-protected-remote-file-shares)
+        - [You're using a mapped network drive (not a UNC path)](#youre-using-a-mapped-network-drive-not-a-unc-path)
+    - [Help I have locked myself out](#help-i-have-locked-myself-out)
+    - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
+    - [Weird UI Issues](#weird-ui-issues)
+    - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
+        - [Use of a VPN](#use-of-a-vpn)
+    - [Jackett's /all Endpoint](#jacketts-all-endpoint)
+        - [Jackett /All Solutions](#jackett-all-solutions)
+    - [Why are there two files? | Why is there a file left in downloads?](#why-are-there-two-files--why-is-there-a-file-left-in-downloads)
+    - [Calibre is saying "Calibre rejected duplicate book" but it's not](#calibre-is-saying-calibre-rejected-duplicate-book-but-its-not)
 
 ## How does Readarr work
 
@@ -106,12 +106,12 @@ As of Readarr v1, Authentication is Mandatory.
 - `Basic` (Browser pop-up) - This option when accessing your Readarr will show a small pop-up allowing you to input a Username and Password. Note this is not recommended and will be removed in the next major version.
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Readarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+    - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
 
 ### Authentication Required
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
-  - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
+    - The config file equivalent of this is `<AuthenticationType>DisabledForLocalAddresses</AuthenticationType>`
 - `<AuthenticationType>Enabled</AuthenticationType>` is also a valid value
 
 ## How does Readarr find books
@@ -141,12 +141,12 @@ As of Readarr v1, Authentication is Mandatory.
 
 - Readarr received no response from the server the request was made to after 100 seconds.
 - This is often caused by:
-  - improperly configured or use of a VPN
-  - improperly configured or use of a proxy
-  - local DNS issues
-  - local IPv6 issues - *most common* - typically IPv6 is enabled on the host system, but non-functional
-  - the use of Privoxy and it being improperly configured
-  - PiHole [Rate Limiting](https://docs.pi-hole.net/ftldns/configfile/#rate_limit) requests
+    - improperly configured or use of a VPN
+    - improperly configured or use of a proxy
+    - local DNS issues
+    - local IPv6 issues - *most common* - typically IPv6 is enabled on the host system, but non-functional
+    - the use of Privoxy and it being improperly configured
+    - PiHole [Rate Limiting](https://docs.pi-hole.net/ftldns/configfile/#rate_limit) requests
 
 ## What are Lists and what can they do for me
 
@@ -256,19 +256,19 @@ This change was due to not have our server get killed by people updating lists e
 
 - If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `master`; `nightly` to `develop`; or `develop` to `master` for your given build.
 - Failure to follow these instructions may result in your Readarr becoming unusable or throwing errors. You have been warned
-  - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
+    - The most common error is something like `Error parsing column 45 (Language=31 - Int64)` or other similar database errors around missing columns or tables.
 
 ## I am getting an error: Database disk image is malformed
 
 - **Errors of `Error creating log database` indicate issues with log.db**
-  - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
+    - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` or generic `database disk image is malformed` with no specified database indicate issues with readarr.db**
-  - Continue with the steps noted below
+    - Continue with the steps noted below
 - This means your SQLite database that stores most of the information for Readarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-readarr)
 - You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](../useful-tools.md#recovering-a-corrupt-db)
-  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
+    - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
@@ -285,8 +285,8 @@ This change was due to not have our server get killed by people updating lists e
 #### Using file system directly
 
 - Find the location of the AppData directory for Readarr
-  - Via the Readarr UI go to System => About
-  - [Readarr Appdata Directory](appdata-directory.md)
+    - Via the Readarr UI go to System => About
+    - [Readarr Appdata Directory](appdata-directory.md)
 - Stop Readarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -309,8 +309,8 @@ This change was due to not have our server get killed by people updating lists e
 
 - Re-install Readarr (if applicable / not already installed)
 - Find the location of the AppData directory for Readarr
-  - Running Readarr once and via the UI go to System => About
-  - [Readarr Appdata Directory](appdata-directory.md)
+    - Running Readarr once and via the UI go to System => About
+    - [Readarr Appdata Directory](appdata-directory.md)
 - Stop Readarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -324,8 +324,8 @@ This change was due to not have our server get killed by people updating lists e
 
 - Re-install Readarr (if applicable / not already installed)
 - Find the location of the AppData directory for Readarr
-  - Running Readarr once and via the UI go to System => About
-  - [Readarr Appdata Directory](appdata-directory.md)
+    - Running Readarr once and via the UI go to System => About
+    - [Readarr Appdata Directory](appdata-directory.md)
 - Stop Readarr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -382,8 +382,8 @@ chmod -R 0644 *
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
-  - If you're using an NFS mount ensure nolock is enabled for your mount.
-  - If you're using an SMB mount ensure nobrl is enabled for your mount.
+    - If you're using an NFS mount ensure nolock is enabled for your mount.
+    - If you're using an SMB mount ensure nobrl is enabled for your mount.
 - For Windows: In short: the user \*Arr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is \*Arr  is running as a service, which causes the issues described below.
 
 ### Readarr runs under the LocalService account by default which doesn't have access to protected remote file shares
@@ -448,12 +448,12 @@ Depending on your OS, there are multiple possible ways.
 - The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the /all endpoint has no advantages, only disadvantages:
-  - you lose control over indexer specific settings (categories, search modes, etc.)
-  - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) cannot be used.
-  - slow indexers will slow down the overall result
-  - total results are limited to 1000
-  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+    - you lose control over indexer specific settings (categories, search modes, etc.)
+    - mixing search modes (IMDB, query, etc.) might cause low-quality results
+    - indexer specific categories (\>= 100000) cannot be used.
+    - slow indexers will slow down the overall result
+    - total results are limited to 1000
+    - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
 
 ### Jackett /All Solutions
 

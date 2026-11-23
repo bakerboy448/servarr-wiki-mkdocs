@@ -7,7 +7,11 @@ tags:
   - arm
   - installation
   - nas
+  - deprecated
 ---
+
+!!! warning
+    **This guide is outdated and deprecated.** It dates from 2021 and relies on an unmaintained third-party bootstrap that installs Docker 20.10.0 and Docker Compose v1 (`docker-compose`). It has not been validated against current DSM releases and may no longer work. Prefer Synology's official Container Manager on supported hardware; use this only if you understand the risks.
 
 # Introduction
 

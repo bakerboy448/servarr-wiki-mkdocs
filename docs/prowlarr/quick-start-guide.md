@@ -15,11 +15,12 @@ tags:
 - [Table of Contents](#table-of-contents)
 - [Indexers](#indexers)
 - [Apps](#apps)
-  - [Application Settings](#application-settings)
-- [Download Clients](#download-clients)
-  - [Usenet Client Settings](#usenet-client-settings)
-  - [Torrent Client Settings](#torrent-client-settings)
-  - [Testing the Download Client](#testing-the-download-client)
+    - [Application Settings](#application-settings)
+    - [Sync Profiles](#sync-profiles)
+- [Download Clients (Prowlarr Searches)](#download-clients-prowlarr-searches)
+    - [Usenet Client Settings](#usenet-client-settings)
+    - [Torrent Client Settings](#torrent-client-settings)
+    - [Testing the Download Client](#testing-the-download-client)
 - [Setup Complete](#setup-complete)
 
 > This page is still in progress and not complete.
@@ -62,12 +63,12 @@ Some indexers have special settings, but most are standard as shown.
 - Download Link - If you're adding a torrent indexer, you may need to choose what kind of download link to use.
 - (Advanced Option) API Path - Path to the Indexer's API. Typically `/api`
 - Credentials - Many indexers and trackers require you to authenticate / login in some way. You may have to enter an API key, RSS key, a session id, a cookie, or other credentials from your indexer (usually found in your Profile Page or under Security), select search orders, or other options for your specific indexer.
-  - API Key
-  - RSS Key
-  - Session ID
-  - Cookie
-  - Username/Password
-  - etc.
+    - API Key
+    - RSS Key
+    - Session ID
+    - Cookie
+    - Username/Password
+    - etc.
 - (Advanced Option) Additional Parameters - Additional parameters to add to the requests for this indexer.
 - VIP Expiration - Enter the date in ISO format (yyyy-MM-DD) to be notified 1 week prior to expiration; otherwise leave blank
 - Tags - Use tags to specify default download clients, specify Indexer Proxies, specify indexers to applications or just to organize your indexers.
@@ -101,9 +102,9 @@ When you add an app, you will need to enter values in the pop-up screen:
 
 - Name - Enter a name for this App.
 - Sync Level - Select the sync level to use
-  - `Add and Remove Only` - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.
-  - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync)
-  - `Disabled` - will keep indexers from syncing with the program entirely.
+    - `Add and Remove Only` - When indexers are added or removed from Prowlarr, it will update this remote app. If the indexer is down at the time of sync - it will be disabled on the remote app.
+    - `Full Sync` - Full Sync will keep this app's indexers fully in sync. Changes made to indexers in Prowlarr are then synced to this app. Any change made to the settings on the FAQ for these indexers remotely within this app will be overridden by Prowlarr on the next sync. A list of factors used to compare and determine if a sync should occur can be found in the [FAQ](faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync)
+    - `Disabled` - will keep indexers from syncing with the program entirely.
 
 !!! warning
     `Full Sync` means Prowlarr will override most settings including user selected categories configurable in Prowlarr. However, non-Prowlarr managed settings will not be touched. However, [just about every other factor of changes](faq.md#what-arr-indexer-settings-are-compared-for-app-full-sync) will trigger a sync and overwrite the corresponding settings in \*Arr
@@ -116,7 +117,7 @@ When you add an app, you will need to enter values in the pop-up screen:
 - Application Server - Enter the App server URL (including http, port, and baseurl if needed) of your program here. Again, enter the full URL Base if used.
 - API Key - Enter the API Key of your program here. For \*Arrs this can be found in Settings => General. You can get this from your program in the `Settings` => `General` tab, and copy/paste it here.
 - (Advanced Setting) Sync Categories - Select the categories to sync to this app. Indexers that support these categories will be synced.
-  - Indexer Custom Categories get mapped into the Standard Torznab/Newznab categories, so searching for the Standardized Categories includes all underlying custom categories. Indexer Custom Categories are listed for fine tuning if you don't want them all at once.
+    - Indexer Custom Categories get mapped into the Standard Torznab/Newznab categories, so searching for the Standardized Categories includes all underlying custom categories. Indexer Custom Categories are listed for fine tuning if you don't want them all at once.
 
 > When you save this, it's going to sync your indexers to the app. They are all added with the Name you've chosen for your indexer plus (Prowlarr) after it. e.g. `{Indexer Name} (Prowlarr)`
 

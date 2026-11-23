@@ -16,52 +16,54 @@ tags:
 
 - [Table of Contents](#table-of-contents)
 - [Recovering a Corrupt DB](#recovering-a-corrupt-db)
-  - [Recovering a Corrupt DB (UI) (Windows)](#recovering-a-corrupt-db-ui-windows)
-  - [Command Line DB Recovery](#command-line-db-recovery)
+    - [Recovering a Corrupt DB (UI) (Windows)](#recovering-a-corrupt-db-ui-windows)
+    - [Command Line DB Recovery](#command-line-db-recovery)
 - [Finding Cookies](#finding-cookies)
-  - [General Instructions](#general-instructions)
-    - [Notes](#notes)
-  - [Chrome](#chrome)
-  - [Firefox](#firefox)
+    - [General Instructions](#general-instructions)
+        - [Notes](#notes)
+    - [Chrome](#chrome)
+    - [Firefox](#firefox)
 - [Clearing Cookies and Local Storage](#clearing-cookies-and-local-storage)
-  - [Chrome](#chrome-1)
-  - [Firefox](#firefox-1)
-  - [Microsoft Edge (Chromium)](#microsoft-edge-chromium)
+    - [Chrome](#chrome-1)
+    - [Firefox](#firefox-1)
+    - [Microsoft Edge (Chromium)](#microsoft-edge-chromium)
 - [Using Environment Variables for Config](#using-environment-variables-for-config)
 - [Other Projects and Programs - Request Apps \*Arrs](#other-projects-and-programs---request-apps-arrs)
-  - [Notifiarr (fka Discord Notifier)](#notifiarr-fka-discord-notifier)
-  - [Ombi](#ombi)
-  - [Seerr](#seerr)
-  - [Petio](#petio)
+    - [Notifiarr (fka Discord Notifier)](#notifiarr-fka-discord-notifier)
+    - [Ombi](#ombi)
+    - [Seerr](#seerr)
+    - [Petio](#petio)
 - [Other Projects and Programs - \*Arr Related](#other-projects-and-programs---arr-related)
-  - [Remote Control](#remote-control)
-    - [LunaSea](#lunasea)
-    - [Radarr \& Sonarr Companion - Android App](#radarr--sonarr-companion---android-app)
-    - [nzb360 - Android App](#nzb360---android-app)
-  - [Lidarr](#lidarr)
-    - [AMD](#amd)
-    - [AMVD](#amvd)
-  - [Radarr](#radarr)
-  - [AMTD](#amtd)
-  - [Subtitles](#subtitles)
-  - [Bazarr](#bazarr)
+    - [Remote Control](#remote-control)
+        - [Managarr](#managarr)
+        - [LunaSea](#lunasea)
+        - [Radarr \& Sonarr Companion - Android App](#radarr--sonarr-companion---android-app)
+        - [nzb360 - Android App](#nzb360---android-app)
+    - [Lidarr](#lidarr)
+        - [AMD](#amd)
+        - [AMVD](#amvd)
+    - [Radarr](#radarr)
+    - [AMTD](#amtd)
+    - [Subtitles](#subtitles)
+    - [Bazarr](#bazarr)
 - [Other Projects and Programs - Torrents/Downloading](#other-projects-and-programs---torrentsdownloading)
-  - [Cross-Seed](#cross-seed)
-  - [Toolbarr](#toolbarr)
-  - [Unpackerr](#unpackerr)
-  - [qBit Management](#qbit-management)
+    - [Cross-Seed](#cross-seed)
+    - [Toolbarr](#toolbarr)
+    - [Unpackerr](#unpackerr)
+    - [qBit Management](#qbit-management)
 - [Other Projects and Programs](#other-projects-and-programs)
-  - [Filebot](#filebot)
-  - [JDupes](#jdupes)
-  - [Drazzilb's UserScripts](#drazzilbs-userscripts)
-  - [Just A Bunch Of Starr Scripts](#just-a-bunch-of-starr-scripts)
-  - [Just A Bunch Of Plex Scripts](#just-a-bunch-of-plex-scripts)
-  - [Kometa (Plex Meta Manager)](#kometa)
-  - [Tautulli](#tautulli)
-  - [Tdarr](#tdarr)
-  - [tdarr\_inform](#tdarr_inform)
-  - [Deleterr](#deleterr)
-  - [Twitter Connect](#twitter-connect)
+    - [Filebot](#filebot)
+    - [JDupes](#jdupes)
+    - [Drazzilb's UserScripts](#drazzilbs-userscripts)
+    - [Just A Bunch Of Starr Scripts](#just-a-bunch-of-starr-scripts)
+    - [Just A Bunch Of Plex Scripts](#just-a-bunch-of-plex-scripts)
+    - [Kometa (Plex Meta Manager)](#kometa)
+    - [Tautulli](#tautulli)
+    - [Tdarr](#tdarr)
+    - [tdarr\_inform](#tdarr_inform)
+    - [Deleterr](#deleterr)
+    - [Prunerr](#prunerr)
+    - [Twitter Connect](#twitter-connect)
 
 The following apps are companions to the \*Arr Suite of Applications or media hoarding in general. They are not maintained, developed, nor supported by the \*Arr Development Team. Please direct any specific support questions to the respective application development team.
 
@@ -126,17 +128,18 @@ Please note that the gif does not cover the `VACUUM;` command
 The below instructions are for \*Nix Operating Systems, but the concept will be similar on Windows Command Line.
 
 !!! info
-    This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database) is ideal. Note that it requires Sqlite 3.29+
+    This uses the [sqlite3 `.recover` command](https://www.sqlite.org/cli.html#recover_data_from_a_corrupted_database), which is ideal. Note that it requires Sqlite 3.29+
 
 !!! info
-    Given sqlite3 is required by \*Arrs it is assumed you have sqlite3 installed on your system
+    The `sqlite3` command-line tool (Debian/Ubuntu package `sqlite3`) provides the `.recover` command and is separate from the SQLite library the \*Arrs ship with. Install it with `sudo apt install sqlite3`, or the equivalent package on other distributions. Check your version with `sqlite3 --version`; if it is older than 3.29 upgrade sqlite3 or use [the UI method above](#recovering-a-corrupt-db-ui) instead.
 
 1. Stop the application
 1. SSH into your box or otherwise get a shell up
-1. Enter `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
+1. Confirm the database is actually corrupt with `sqlite3 <path to bad database> "PRAGMA integrity_check;"` — a healthy database returns `ok`
+1. Recover it with `sqlite3 <path to bad database> ".recover" | sqlite3 <output path for recovered database>`
 1. Correct permissions for the recovered database if needed. The owner should be the user and group \*Arr is configured to run as.
 1. Remove or move/rename the old corrupt database and any `wal` or `shm` in the folder
-1. Rename the covered database. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
+1. Rename the recovered database to match what the \*Arr expects. All \*Arrs name their database as `<appname>.db` e.g. `radarr.db`
 1. Start the application
 
 # Finding Cookies
@@ -177,7 +180,7 @@ The below instructions are for \*Nix Operating Systems, but the concept will be 
 
 - Click on "Pass" on that tab or a similar entry, and it will pop up a box that says "Cookie Value" with a string about 25-30 chars long. Copy that and paste it into the application that needs it.
 
-  - If the string looks similar to `cid=cid-that-you-got-from-the-browser; sid=sid-that-you-got-from-the-browser` then the entire entry should be used.
+    - If the string looks similar to `cid=cid-that-you-got-from-the-browser; sid=sid-that-you-got-from-the-browser` then the entire entry should be used.
 
 ![cookie_chrome.png](assets/prowlarr/cookie_chrome.png)
 
@@ -270,6 +273,10 @@ The app is built to appear instantly familiar and intuitive to even the most tec
 
 ## Remote Control
 
+### Managarr
+
+[Managarr](https://github.com/Dark-Alex-17/managarr) is a TUI (Text-based User Interface) and CLI (Command Line Interface) for managing *arr servers from the terminal, built in Rust. It supports Radarr, Sonarr, and Lidarr with an interactive terminal UI and a scriptable CLI for automation. Available on Linux, macOS, and Windows.
+
 ### LunaSea
 
 [LunaSea](https://www.lunasea.app/) is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software. Manage new media content fetched via Lidarr, Radarr, and Sonarr.
@@ -353,12 +360,12 @@ nzb360 provides management of Sonarr, Radarr, Lidarr, torrents, usenet, and othe
 ## Drazzilb's UserScripts
 
 - [Drazzilb's collection of unRAID (and native compatible) userscripts](https://github.com/Drazzilb08/userScripts) and other scripts around the internet that he finds neat/useful. The [list of scripts can be found on his wiki](https://github.com/Drazzilb08/userScripts/wiki).
-  - [Drazzilb's Upgradinatorr](https://github.com/Drazzilb08/userScripts/wiki/upgradinatorr) is a script is designed to keep your media in sync with your Radarr/Sonarr's Custom Formats/Scoring. It is a python script to manually search N items that are not tagged with a specific tag in your Radarr/Sonarr media library. N is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :) This script is a python port of [Cuban's Powershell Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md); thanks again Cuban.
+    - [Drazzilb's Upgradinatorr](https://github.com/Drazzilb08/userScripts/wiki/upgradinatorr) is a script is designed to keep your media in sync with your Radarr/Sonarr's Custom Formats/Scoring. It is a python script to manually search N items that are not tagged with a specific tag in your Radarr/Sonarr media library. N is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :) This script is a python port of [Cuban's Powershell Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md); thanks again Cuban.
 
 ## Just A Bunch Of Starr Scripts
 
 - [Just A Bunch Of Starr Scripts](https://github.com/angrycuban13/Just-A-Bunch-Of-Starr-Scripts)
-  - [Cuban's Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md) is a Powershell script to manually search N items that are not tagged with a specific tag in your Radarr/Sonarr media library. N is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :)
+    - [Cuban's Upgradinatorr](https://github.com/angrycuban13/Scripts/blob/main/Upgradinatorr/README.md) is a Powershell script to manually search N items that are not tagged with a specific tag in your Radarr/Sonarr media library. N is the number of items this script will search for, this has the added benefit that you don't hammer your indexers and get banned :)
 
 ## Just A Bunch Of Plex Scripts
 
@@ -386,6 +393,10 @@ Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give
 ## Deleterr
 
 [Deleterr](https://github.com/rfsbraz/deleterr) is a tool to delete stale and inactive media from Plex/Sonarr/Radarr. It helps managing limited space when you allow users to request shows via Seerr/Ombi but don't want to manually monitor available disk space. It's configurable to support only deleting media meeting your defined criteria.
+
+## Prunerr
+
+[Prunerr](https://github.com/helliott20/prunerr) is a media library cleanup tool for [Plex](plex.md)/[Sonarr](sonarr.md)/[Radarr](radarr.md) that reclaims disk space by flagging and removing unwanted content based on customisable rules covering watch status, age, file size and resolution. It features a review-and-approve deletion queue, configurable grace periods, a disk-pressure reactive mode that automatically reclaims space when free space drops below a target you set, and outbound webhooks with Home Assistant integration. All service connections are configured through the web UI.
 
 ## Twitter Connect
 

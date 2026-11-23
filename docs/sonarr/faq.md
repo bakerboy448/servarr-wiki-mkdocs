@@ -21,19 +21,19 @@ description: Sonarr Frequently Asked Questions
 Active searching (via the indexer's API) is only done in the below situations. Note that the same rules as normal apply: series + episode must be monitored and episodes without an airdate are skipped
 
 - Triggered Automatic or Manual Search
-  - User or API triggered search. Typically executed by clicking the Automatic or Manual Search buttons on a specific episode, season, or series.
+    - User or API triggered search. Typically executed by clicking the Automatic or Manual Search buttons on a specific episode, season, or series.
 - Adding a show using the Add and Search button
 - Using Wanted => Missing or Wanted => Cutoff Unmet to do one or more searches
 - Recent Episodes
-  - **New episodes** from TVDb in Skyhook that aired in the last 14 days or within 1 day into the future (to cover those episodes that may release a bit early) will be automatically searched for those episodes after the series folder is rescanned (to catch things imported outside of Sonarr)
-  - **Absolute Numbering** Episodes with absolute numbers added to TVDb in Skyhook that aired in the last 14 days or within 1 day into the future
+    - **New episodes** from TVDb in Skyhook that aired in the last 14 days or within 1 day into the future (to cover those episodes that may release a bit early) will be automatically searched for those episodes after the series folder is rescanned (to catch things imported outside of Sonarr)
+    - **Absolute Numbering** Episodes with absolute numbers added to TVDb in Skyhook that aired in the last 14 days or within 1 day into the future
 
 ## How are possible downloads compared
 
 !!! info
     Generally Quality Trumps All. If you wish to have Quality not be the main priority - you can merge your qualities together. [See TRaSH's Guide](https://trash-guides.info/merge-quality)
 
-- The current logic [can always be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs#L31-L41s).
+- The current logic [can always be found here](https://github.com/Sonarr/Sonarr/blob/develop/src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs).
 
 - As of 2024-01-16 the logic is as follows:
 
@@ -73,8 +73,8 @@ Active searching (via the indexer's API) is only done in the below situations. N
 #### Using file system directly
 
 - Find the location of the AppData directory for Sonarr
-  - Via the Sonarr UI go to System => About
-  - [Sonarr Appdata Directory](appdata-directory.md)
+    - Via the Sonarr UI go to System => About
+    - [Sonarr Appdata Directory](appdata-directory.md)
 - Stop Sonarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -97,8 +97,8 @@ Active searching (via the indexer's API) is only done in the below situations. N
 
 - Re-install Sonarr (if applicable / not already installed)
 - Find the location of the AppData directory for Sonarr
-  - Running Sonarr once and via the UI go to System => About
-  - [Sonarr Appdata Directory](appdata-directory.md)
+    - Running Sonarr once and via the UI go to System => About
+    - [Sonarr Appdata Directory](appdata-directory.md)
 - Stop Sonarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -112,8 +112,8 @@ Active searching (via the indexer's API) is only done in the below situations. N
 
 - Re-install Sonarr (if applicable / not already installed)
 - Find the location of the AppData directory for Sonarr
-  - Running Sonarr once and via the UI go to System => About
-  - [Sonarr Appdata Directory](appdata-directory.md)
+    - Running Sonarr once and via the UI go to System => About
+    - [Sonarr Appdata Directory](appdata-directory.md)
 - Stop Sonarr
 - Connect to the Synology NAS through SSH and log in as root
 
@@ -178,8 +178,8 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 
 - There are two parts to the episode count, one being the number of episodes (Episode Count) and the other being the number of episodes with files (Episode File Count), each one uses slightly different logic to give you the overall progress for a series or season.
 
-  - Episode Count => Episode has already aired AND is monitored OR - Episode has a file
-  - Episode File Count => Episode has a file
+    - Episode Count => Episode has already aired AND is monitored OR - Episode has a file
+    - Episode File Count => Episode has a file
 
 - If a series has 10 episodes that have all aired and you do not have any files for them you would have 0/10 episodes, if you unmonitored all the episodes in that series you would have 0/0 and if you got all the episodes for that series, regardless of if the episodes are monitored or not, you would have 10/10 episodes.
 
@@ -195,8 +195,8 @@ Sonarr consists of two main branches of code, `main` and `develop`.
 - No you cannot disable the task nor should you through any SQL hackery. The refresh series task queries the upstream Skyhook proxy and checks to see if the metadata for each series (ids, episodes, summaries, etc.) has updated compared to what is currently in Sonarr. If necessary, it will then update the applicable movies.
 - A common complaint is the Refresh task causes heavy I/O usage.
 - The main setting is "Rescan Series Folder after Refresh". If your disk I/O usage spikes during a Refresh then you may want to change the Rescan setting to `Manual`.
-  - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Sonarr.
-  - If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
+    - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Sonarr.
+    - If you delete movie files manually or via Plex or another third party program, do not set this to `Never`.
 - The other setting that can be changed is "Analyze video files" which is advised to be enabled if you use tdarr or otherwise externally modify your files. If you do not you can safely disable "Analyze video files" to reduce some I/O.
 
 !!! warning
@@ -325,11 +325,11 @@ If you have adjusted your Series Name format after Sonarr has already created so
 - `main` can go to `develop`
 - See below or otherwise check with the development team to see if you can switch from `develop` to `main` for your given build.
 - Failure to follow these instructions may result in your Sonarr becoming unusable or throwing errors. You have been warned. If the below errors are encountered then you are using a newer database with an older \*Arr version which is not supported. Upgrade \*Arr to the version you were previously on or newer.
-  - Example Error Messages:
-    - `Error parsing column 45 (Language=31 - Int64)`
-    - `The DataMapper was unable to load the following field: 'Languages' value`
-    - `ID does not match a known language Parameter name: id`
-    - Other similar database errors around missing columns or tables.
+    - Example Error Messages:
+        - `Error parsing column 45 (Language=31 - Int64)`
+        - `The DataMapper was unable to load the following field: 'Languages' value`
+        - `ID does not match a known language Parameter name: id`
+        - Other similar database errors around missing columns or tables.
 
 # Sonarr and Series Issues + Metadata
 
@@ -358,34 +358,34 @@ If you have adjusted your Series Name format after Sonarr has already created so
 
 - This is an incomplete list of the known shows and how/why they're problematic:
 - American Dad {#problemshow-americandad}
-  - Due to network season changes, American Dad is typically off by 1 season between releases and TVDb. Refer to the XEM map for details
-  - [American Dad](https://thexem.info/xem/show/4948) is currently on S19 based on TVDb or S18 based on Scene at the time of this writing. So searching in Sonarr for Season 19 will **only** return Season 18 results because of the XEM map.
-  - If you have an indexer / release groups with Season 19 episodes, please submit them via the scene mapping form and ensure they are not already requested
-    - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
-    - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+    - Due to network season changes, American Dad is typically off by 1 season between releases and TVDb. Refer to the XEM map for details
+    - [American Dad](https://thexem.info/xem/show/4948) is currently on S19 based on TVDb or S18 based on Scene at the time of this writing. So searching in Sonarr for Season 19 will **only** return Season 18 results because of the XEM map.
+    - If you have an indexer / release groups with Season 19 episodes, please submit them via the scene mapping form and ensure they are not already requested
+        - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+        - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
    {.links-list}
 - Paw Patrol {#problemshow-pawpatrol}
-  - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
+    - Double episode files vs single episode TVDb but also not all episodes are doubles so the map can get added wrong pointing to which ones are singles vs doubles
 - Pokémon {#problemshow-pokemon}
-  - On TheXem, [Pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDb and not XEM mapping, please submit them via the scene mapping form and ensure they are not already requested
-    - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
-    - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
+    - On TheXem, [Pokemon](http://thexem.info/xem/show/4638) is tracking *dubbed* episodes. So if you want subbed episodes, you may be out of luck. If certain release groups are following TVDb and not XEM mapping, please submit them via the scene mapping form and ensure they are not already requested
+        - [Services Requested Mappings *Review and ensure the alias and release have not already been requested or added*](https://docs.google.com/spreadsheet/ccc?key=0Atcf2VZ47O8tdGdQN1ZTbjFRanhFSTBlU0xhbzhuMGc#gid=0)
+        - [Services Scene Mapping Request Form *Make a new request for an alias. Ensure the form is filled out in full*](https://docs.google.com/forms/d/15S6FKZf5dDXOThH4Gkp3QCNtS9Q-AmxIiOpEBJJxi-o/viewform)
    {.links-list}
 - La Casa de Papel / Money Heist  {#problemshow-moneyheist}
-  - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information can be found on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
+    - TVDb has the original airing order from the Spanish network, but Netflix bought the rights and re-cut the series into a different episode count. This is causing "season 5" to be imported over existing "season 3" episodes. [Additional information can be found on this reddit thread](https://old.reddit.com/r/sonarr/comments/pdrr6l/money_heist_mess/)
 - Kamen Rider {#problemshow-kamenrider}
-  - The anthology entry ([TVDb ID 74096](https://thetvdb.com/series/kamen-rider)) should be used in Sonarr for automation
+    - The anthology entry ([TVDb ID 74096](https://thetvdb.com/series/kamen-rider)) should be used in Sonarr for automation
  as this show has both an anthology entry (collecting all seasons) and the individual seasons listed as separate entries on TVDb. Due to the anthology entry having individual season name mappings on [TheXEM](https://thexem.info/xem/show/5376) it is not possible to add the individual season entries to Sonarr without manually downloading and importing releases.
 - Bleach: Thousand-Year Blood War {#problemshow-bleach}
-  - The newest season of Bleach: Thousand-Year Blood War is being released with a variety of different naming schemes making it difficult to automate and potentially overwriting some of your existing episodes. It can only be automated if your release group is either:
-    - Releasing the episodes as S17Exx numbering, or
-    - Releasing them with the correct Season 2 series title (found here <https://thexem.info/xem/show/5476>) and have began this new arc at absolute episode number 1.
+    - The newest season of Bleach: Thousand-Year Blood War is being released with a variety of different naming schemes making it difficult to automate and potentially overwriting some of your existing episodes. It can only be automated if your release group is either:
+        - Releasing the episodes as S17Exx numbering, or
+        - Releasing them with the correct Season 2 series title (found here <https://thexem.info/xem/show/5476>) and have began this new arc at absolute episode number 1.
 - Great Asian Railway Journeys {#problemshow-greatasianrail}
-  - Great Asian Railway Journeys was first aired as 20 smaller episodes, but was later re-aired as 10 long episodes. These longer combined episodes were added as Specials, and should be named accordingly. (S00E01, etc, ...)
+    - Great Asian Railway Journeys was first aired as 20 smaller episodes, but was later re-aired as 10 long episodes. These longer combined episodes were added as Specials, and should be named accordingly. (S00E01, etc, ...)
 - Horizon {#problemshow-horizon}
-  - A show that sporadically airs episodes since 1964. This makes mapping particularly difficult, as you can see on [TheXEM](https://thexem.info/xem/show/5495). Those interested can find the original discussion [on the Sonarr discord server](https://discord.com/channels/383686866005917708/649018968559845376/1046898050909622312).
+    - A show that sporadically airs episodes since 1964. This makes mapping particularly difficult, as you can see on [TheXEM](https://thexem.info/xem/show/5495). Those interested can find the original discussion [on the Sonarr discord server](https://discord.com/channels/383686866005917708/649018968559845376/1046898050909622312).
 - Kaleidoscope (2023) {#problemshow-kaleidoscope}
-  - Kaleidoscope (2023) was released on Netflix as a non-linear show meaning that every user got a different order when watching the series. This causes an issue for Sonarr as release groups have different episode orders for the show. In order to prevent incorrect mapping of episodes Sonarr will not automatically grab episodes and you will need to grab and import the episodes manually. You can match them based on episode title, or by previewing the first few seconds and seeing the episode 'color' matching the title.
+    - Kaleidoscope (2023) was released on Netflix as a non-linear show meaning that every user got a different order when watching the series. This causes an issue for Sonarr as release groups have different episode orders for the show. In order to prevent incorrect mapping of episodes Sonarr will not automatically grab episodes and you will need to grab and import the episodes manually. You can match them based on episode title, or by previewing the first few seconds and seeing the episode 'color' matching the title.
 
 Some examples of other shows that commonly have issues, most of which may be resolved by TheXEM mappings are: Arrested Development, Kitchen Nightmares (US), Mythbusters, Pawn Stars.
 
@@ -425,8 +425,8 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - The show must be a TV Series, and not a movie. It must also exist on TVDb. If it is on IMDB, TMDB, or anywhere else, but not on TVDb you cannot add the show.
 - The series must exist on TVDb
 - Certain series may actually be considered continuations are and seasons in their primary series.
-  - Some series/seasons known are:
-  - [Dexter New Blood was Season 9](https://thetvdb.com/series/dexter/seasons/official/9) but it is now [it's own series](https://thetvdb.com/series/dexter-new-blood)
+    - Some series/seasons known are:
+    - [Dexter New Blood was Season 9](https://thetvdb.com/series/dexter/seasons/official/9) but it is now [it's own series](https://thetvdb.com/series/dexter-new-blood)
 
 ## Why can I not add a series when I know the TVDb ID
 
@@ -442,15 +442,15 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 ## Duplicate Names No Year
 
 - This error often occurs when two series are named with the same title on TheTVDB, if this is the case the second series should have the year appended to the series title.
-  - Series A
-  - Series A (2021)
+    - Series A
+    - Series A (2021)
 - To rectify this, wait for someone to eventually (maybe) update TVDb or update TVDb yourself. Once corrected **and once approved by TVDb's moderators**, due to [TVDb's API issues](#tvdb-is-updated-why-isnt-sonarr), once updated you'll need to wait 30+ hours before the corrected title can be used in Sonarr.
 
 ## Duplicate Names Punctuation
 
 - It will also happen with two similarly named series that may only differ by punctuation, if this is the case please report this on the [Sonarr Discord](https://discord.sonarr.tv/).
-  - Joe's Show (2022)
-  - Joes Show (2022)
+    - Joe's Show (2022)
+    - Joes Show (2022)
 
 ## Episode does not have an absolute number
 
@@ -461,8 +461,8 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - Within Sonarr, Episode Air Date and Times shown in the browser are based of the client's time/timezone, all times are sent from Sonarr to the browser as UTC times (ISO-8601 formatted to be exact)
 - TVDb dictates - with exceptions for streaming services - that the airtime and date is based on the Primary Airing Network's local time in the country's most popular city. [See TVDb's FAQ entry for details](https://support.thetvdb.com/kb/faq.php?id=29)
 - Episode Air Dates and Air Time on TVDb is converted to UTC and uses Sonarr's Timezone that is mapped in Skyhook by the Sonarr team for the Network TVDb has for the series.
-  - In the rare case a network is not mapped then the time in TVDb will be assumed to be US EST (UTC-5).
-  - If the airtime does not seem to align when converting from the airtime Network's local timezone to your browser's timezone then it is likely the network needs to be mapped in Skyhook. [Contact the development team on Discord](https://discord.sonarr.tv/) for support with updating the Network's timezone.
+    - In the rare case a network is not mapped then the time in TVDb will be assumed to be US EST (UTC-5).
+    - If the airtime does not seem to align when converting from the airtime Network's local timezone to your browser's timezone then it is likely the network needs to be mapped in Skyhook. [Contact the development team on Discord](https://discord.sonarr.tv/) for support with updating the Network's timezone.
 
 # Sonarr Common Problems
 
@@ -472,10 +472,10 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 - This occurs when trying to add a series or edit an existing series's path that already is assigned to a different series.
 - Likely this was caused by not correcting a mismatched series when the user imported their library.
 - Locate and correct the movie that is already assigned to that series's path.
-  - Series Index
-  - Table View
-  - Options => Add path as a column
-  - Sort and find the movie at the noted problematic path.
+    - Series Index
+    - Table View
+    - Options => Add path as a column
+    - Sort and find the movie at the noted problematic path.
 - Alternatively, delete the series using the existing path from Sonarr
 
 ## System & Logs loads forever
@@ -496,10 +496,10 @@ There can be multiple reasons why Sonarr is not able to find or import episodes 
 
 ## Invalid Certificate and other HTTPS or SSL issues
 
-- If you're on non-Windows, most likely your mono's certificates are out of date and need to be synced. [See the section about mono ssl in the installation article for details](installation.md#mono-ssl-issues)
+- If you're on non-Windows and seeing certificate errors, make sure your operating system's CA certificate store is current (for example, run `update-ca-certificates` on Debian/Ubuntu). Sonarr v4 runs on .NET, so the old mono certificate-sync steps no longer apply.
 - Your download client stopped working and you're getting an error like `Localhost is an invalid certificate`?
-  - Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
-  - If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
+    - Sonarr now validates SSL certificates. If there is no SSL certificate set in the download client, or you're using a self-signed https certificate without the CA certificate added to your local certificate store, then Sonarr will refuse to connect. Free properly signed certificates are available from [let's encrypt](https://letsencrypt.org/).
+    - If your download client and Sonarr are on the same machine there is no reason to use HTTPS, so the easiest solution is to disable SSL for the connection. Most would agree it's not required on a local network either. It is possible to disable certificate validation in advanced settings if you want to keep an insecure SSL setup.
 
 ## How do I stop the browser from launching on startup
 
@@ -528,9 +528,9 @@ Depending on your OS, there are multiple possible ways.
 - If a VPN is required and Docker is not used your VPN client ***must*** support split tunneling so only the required (Download Client) apps are behind the VPN.
 - Many issues with accessing trackers can be resolved by using Google or Cloudflare's DNS servers in lieu of your ISP's DNS servers.
 - In some cases (i.e. UK ISPs) you may need to put your torrent download client behind a VPN and Jackett/Prowlarr as follows:
-  - put Jackett behind the VPN and ensure split tunneling allows local access
-  - for Prowlarr configure your vpn client to provide a proxy and add the proxy in Settings => Indexers. Give the proxy a tag and any indexers that need to use it the same tag.
-    - If absolutely required and if your vpn does not provide a way to create a proxy you may put Prowlarr behind the VPN and ensure split tunneling allows local access.
+    - put Jackett behind the VPN and ensure split tunneling allows local access
+    - for Prowlarr configure your vpn client to provide a proxy and add the proxy in Settings => Indexers. Give the proxy a tag and any indexers that need to use it the same tag.
+        - If absolutely required and if your vpn does not provide a way to create a proxy you may put Prowlarr behind the VPN and ensure split tunneling allows local access.
 
 ## I see log messages for shows I do not have/do not want
 
@@ -556,14 +556,14 @@ Depending on your OS, there are multiple possible ways.
     Database corruption occurring when upgrading to v4 means your existing v3 database is corrupt. v4 does not create database corruption. Downgrading to v3 or staying on v3 does not and will never fix the underlying corruption. **Sonarr v3 is end of life and unsupported**
 
 - **Errors of `Error creating log database` indicate issues with logs.db**
-  - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
+    - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` or generic `database disk image is malformed` with no specified database indicate issues with sonarr.db**
-  - Continue with the steps noted below
+    - Continue with the steps noted below
 - This means your SQLite database that stores most of the information for Sonarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
 - Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-sonarr)
 - You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](../useful-tools.md#recovering-a-corrupt-db)
-  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
+    - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
@@ -577,8 +577,8 @@ Depending on your OS, there are multiple possible ways.
 
 - For all OSes ensure the user/group you're running \*Arr as has read and write access to the mounted drive.
 - For Linux ensure:
-  - If you're using an NFS mount ensure `nolock` is enabled for your mount.
-  - If you're using an SMB mount ensure `nobrl` is enabled for your mount.
+    - If you're using an NFS mount ensure `nolock` is enabled for your mount.
+    - If you're using an SMB mount ensure `nobrl` is enabled for your mount.
 - For Windows: In short: the user \*Arr is running as (if service) or under (if tray app) cannot access the file path on the remote server. This can be for various reasons, but the most common is \*Arr  is running as a service, which causes the issues described below.
 
 ### Sonarr runs under the LocalService account by default which doesn't have access to protected remote file shares
@@ -655,12 +655,12 @@ First, make sure you read and understand the section above called ["How does Son
 - The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the /all endpoint has no advantages, only disadvantages:
-  - you lose control over indexer specific settings (categories, search modes, etc.)
-  - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) cannot be used.
-  - slow indexers will slow down the overall result
-  - total results are limited to 1000
-  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+    - you lose control over indexer specific settings (categories, search modes, etc.)
+    - mixing search modes (IMDB, query, etc.) might cause low-quality results
+    - indexer specific categories (\>= 100000) cannot be used.
+    - slow indexers will slow down the overall result
+    - total results are limited to 1000
+    - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
 
 ### Jackett /All Solutions
 

@@ -2,12 +2,12 @@
 title: Sonarr Settings
 description: Documentation of Sonarr Settings Page. Needs work to reflect v4 changes.
 tags:
-  - settings
-  - configuration
   - sonarr
-  - profiles
-  - quality
+  - settings
   - indexers
+  - configuration
+  - quality
+  - profiles
 ---
 
 # Table of Contents
@@ -15,89 +15,89 @@ tags:
 - [Table of Contents](#table-of-contents)
 - [Menu options](#menu-options)
 - [Media Management](#media-management)
-  - [Community Naming Suggestions](#community-naming-suggestions)
-  - [Episode Naming](#episode-naming)
-    - [Standard Episode Format](#standard-episode-format)
-    - [Series Naming](#series-naming)
-    - [Series IDs](#series-ids)
-    - [Seasons](#seasons)
-    - [Episodes](#episodes)
-    - [Air Date](#air-date)
-    - [Episode Title](#episode-title)
-    - [Quality](#quality)
-    - [Media Info](#media-info)
-    - [Other](#other)
-    - [Original](#original)
-  - [Daily Episode Format](#daily-episode-format)
-  - [Anime Episode Format](#anime-episode-format)
-    - [Absolute Episode Number](#absolute-episode-number)
-  - [Series Folder Format](#series-folder-format)
-    - [Series Naming](#series-naming-1)
-    - [Series IDs](#series-ids-1)
-  - [Season Folder Format](#season-folder-format)
-    - [Seasons](#seasons-1)
-  - [Season Folder Format](#season-folder-format-1)
-    - [Specials](#specials)
-  - [Multi-Episode Style](#multi-episode-style)
-  - [Folders](#folders)
-  - [Importing](#importing)
-  - [File Management](#file-management)
-  - [Permissions](#permissions)
-  - [Root Folders](#root-folders)
+    - [Community Naming Suggestions](#community-naming-suggestions)
+    - [Episode Naming](#episode-naming)
+        - [Standard Episode Format](#standard-episode-format)
+        - [Series Naming](#series-naming)
+        - [Series IDs](#series-ids)
+        - [Seasons](#seasons)
+        - [Episodes](#episodes)
+        - [Air Date](#air-date)
+        - [Episode Title](#episode-title)
+        - [Quality](#quality)
+        - [Media Info](#media-info)
+        - [Other](#other)
+        - [Original](#original)
+    - [Daily Episode Format](#daily-episode-format)
+    - [Anime Episode Format](#anime-episode-format)
+        - [Absolute Episode Number](#absolute-episode-number)
+    - [Series Folder Format](#series-folder-format)
+        - [Series Naming](#series-naming-1)
+        - [Series IDs](#series-ids-1)
+    - [Season Folder Format](#season-folder-format)
+        - [Seasons](#seasons-1)
+    - [Season Folder Format](#season-folder-format-1)
+        - [Specials](#specials)
+    - [Multi-Episode Style](#multi-episode-style)
+    - [Folders](#folders)
+    - [Importing](#importing)
+    - [File Management](#file-management)
+    - [Permissions](#permissions)
+    - [Root Folders](#root-folders)
 - [Profiles](#profiles)
-  - [Quality Profiles](#quality-profiles)
-  - [Custom Formats](#custom-formats-1)
-  - [Delay Profiles](#delay-profiles)
-    - [Uses](#uses)
-    - [How Delay Profiles Work](#how-delay-profiles-work)
-      - [Examples](#examples)
-        - [Example 1](#example-1)
-        - [Example 2](#example-2)
-        - [Example 3](#example-3)
+    - [Quality Profiles](#quality-profiles)
+    - [Custom Formats](#custom-formats-1)
+    - [Delay Profiles](#delay-profiles)
+        - [Uses](#uses)
+        - [How Delay Profiles Work](#how-delay-profiles-work)
+            - [Examples](#examples)
+                - [Example 1](#example-1)
+                - [Example 2](#example-2)
+                - [Example 3](#example-3)
 - [Quality](#quality-1)
-  - [Quality Table Meanings](#quality-table-meanings)
-  - [Qualities Defined](#qualities-defined)
+    - [Quality Table Meanings](#quality-table-meanings)
+    - [Qualities Defined](#qualities-defined)
 - [Indexers](#indexers)
-  - [Supported Indexers](#supported-indexers)
-    - [Indexer Settings](#indexer-settings)
-    - [Usenet Indexer Configuration](#usenet-indexer-configuration)
-    - [Torrent Tracker Configuration](#torrent-tracker-configuration)
-  - [Options](#options)
+    - [Supported Indexers](#supported-indexers)
+        - [Indexer Settings](#indexer-settings)
+        - [Usenet Indexer Configuration](#usenet-indexer-configuration)
+        - [Torrent Tracker Configuration](#torrent-tracker-configuration)
+    - [Options](#options)
 - [Download Clients](#download-clients)
-  - [Overview](#overview)
-  - [Download Client Processes](#download-client-processes)
-  - [Usenet](#usenet)
-  - [BitTorrent](#bittorrent)
-  - [Download Clients](#download-clients-1)
-    - [Supported Download Clients](#supported-download-clients)
-    - [Usenet Client Settings](#usenet-client-settings)
-    - [Torrent Client Settings](#torrent-client-settings)
-    - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
-  - [Completed Download Handling](#completed-download-handling)
-    - [Remove Completed Downloads](#remove-completed-downloads)
-    - [Failed Download Handling](#failed-download-handling)
-  - [Remote Path Mappings](#remote-path-mappings)
+    - [Overview](#overview)
+    - [Download Client Processes](#download-client-processes)
+    - [Usenet](#usenet)
+    - [BitTorrent](#bittorrent)
+    - [Download Clients](#download-clients-1)
+        - [Supported Download Clients](#supported-download-clients)
+        - [Usenet Client Settings](#usenet-client-settings)
+        - [Torrent Client Settings](#torrent-client-settings)
+        - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
+    - [Completed Download Handling](#completed-download-handling)
+        - [Remove Completed Downloads](#remove-completed-downloads)
+        - [Failed Download Handling](#failed-download-handling)
+    - [Remote Path Mappings](#remote-path-mappings)
 - [Import Lists](#import-lists)
-  - [Lists](#lists)
-  - [List Exclusions](#list-exclusions)
+    - [Lists](#lists)
+    - [List Exclusions](#list-exclusions)
 - [Connect](#connect)
-  - [Connections](#connections)
-  - [Connection Triggers](#connection-triggers)
+    - [Connections](#connections)
+    - [Connection Triggers](#connection-triggers)
 - [Metadata](#metadata)
-  - [Metadata](#metadata-1)
+    - [Metadata](#metadata-1)
 - [Tags](#tags)
 - [General](#general)
-  - [Host](#host)
-  - [Security](#security)
-  - [Proxy](#proxy)
-  - [Logging](#logging)
-  - [Analytics](#analytics)
-  - [Updates](#updates)
-  - [Backups](#backups)
+    - [Host](#host)
+    - [Security](#security)
+    - [Proxy](#proxy)
+    - [Logging](#logging)
+    - [Analytics](#analytics)
+    - [Updates](#updates)
+    - [Backups](#backups)
 - [UI](#ui)
-  - [Calendar](#calendar)
-  - [Dates](#dates)
-  - [Style](#style)
+    - [Calendar](#calendar)
+    - [Dates](#dates)
+    - [Style](#style)
 
 This page will go through all the settings available in Sonarr and how they work. This is not meant to be a comprehensive "How to set up Sonarr." Refer to the [Quick Start](quick-start-guide.md) page instead.
 
@@ -143,37 +143,37 @@ Also, note that for each individual settings page, there are some options at the
 ## Episode Naming
 
 - Rename Episodes - Check to enable Sonarr to rename files
-  - If unchecked (i.e. disabled):
-    - Download Client Import
-      - Non-Season Pack: Download Client's Release Title is used
-      - Season Pack: Original File Name
-    - Manual (Ad-Hoc) Import: Original File Name
+    - If unchecked (i.e. disabled):
+        - Download Client Import
+            - Non-Season Pack: Download Client's Release Title is used
+            - Season Pack: Original File Name
+        - Manual (Ad-Hoc) Import: Original File Name
 
 - Replace Illegal Characters - If unchecked, Sonarr will remove them instead.
-  - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
+    - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 
 - Colon Replacement Format - Select how colons are handled in episode names
-  - Delete - Remove colons (e.g. `Series Title Part 1`)
-  - Dash - Replace with a dash (e.g. `Series Title - Part 1`)
-  - Space Dash - Replace with a space and a dash (e.g. `Series Title - Part 1`)
-  - Space Dash Space - Replace with a space, dash, and space (e.g. `Series Title - Part 1`)
-  - Smart - Replaces a colon followed by a space with ` - `, otherwise deletes the colon (Default)
-  - Custom - Use a custom replacement string
+    - Delete - Remove colons (e.g. `Series Title Part 1`)
+    - Dash - Replace with a dash (e.g. `Series Title-Part 1`)
+    - Space Dash - Replace with a space and a dash (e.g. `Series Title -Part 1`)
+    - Space Dash Space - Replace with a space, dash, and space (e.g. `Series Title - Part 1`)
+    - Smart - Replaces a colon followed by a space with ` - `, otherwise replaces it with a dash (Default)
+    - Custom - Use a custom replacement string
 
 ### Standard Episode Format
 
 Standard Episode Format - Set the naming convention for your Standard Series Type episodes. Click on the `?` icon to bring up the `File Name Tokens` dialog box.
 
 - Dropdown Box (upper right corner)
-  - Left Box - Space Handling
-  - Space ( ) - Use spaces in naming (Default)
-  - Period (.) - Use periods in lieu of spaces in naming
-  - Underscore (\_) - Use underscores in lieu of spaces in naming
-  - Dash (-) - Use dashes in lieu of spaces in naming
-  - Right Box - Case Handling
-  - Default Case - Make title uppercase and lowercase (~camel-case) (Default)
-  - Uppercase - Make title all uppercase
-  - Lowercase - Make title all lowercase
+    - Left Box - Space Handling
+    - Space ( ) - Use spaces in naming (Default)
+    - Period (.) - Use periods in lieu of spaces in naming
+    - Underscore (\_) - Use underscores in lieu of spaces in naming
+    - Dash (-) - Use dashes in lieu of spaces in naming
+    - Right Box - Case Handling
+    - Default Case - Make title uppercase and lowercase (~camel-case) (Default)
+    - Uppercase - Make title all uppercase
+    - Lowercase - Make title all lowercase
 
 ### Series Naming
 
@@ -190,7 +190,7 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 - `{Series TitleTheWithoutYear}` = Series Name's Title!, The
 - `{Series CleanTitleTheWithoutYear}` = Series Names Title!, The
 - `{Series TitleFirstCharacter}` = S
-- `{Series Year}` = (2010)
+- `{Series Year}` = 2010
 
 ### Series IDs
 
@@ -230,12 +230,14 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 
 - `{MediaInfo Simple}` = x264 DTS
 - `{MediaInfo Full}` = x264 DTS \[EN+DE\]
+- `{MediaInfo Audio}` = DTS
 - `{MediaInfo AudioCodec}` = DTS
 - `{MediaInfo AudioChannels}` = 5.1
 - `{MediaInfo AudioLanguages}` = \[EN+DE\]
 - `{MediaInfo AudioLanguagesAll}` = \[DE\]
 - `{MediaInfo SubtitleLanguages}` = \[EN\]
 - `{MediaInfo SubtitleLanguagesAll}` = \[EN+DE\]
+- `{MediaInfo Video}` = x264
 - `{MediaInfo VideoCodec}` = x264
 - `{MediaInfo VideoBitDepth}` = 8
 - `{MediaInfo VideoDynamicRange}` = HDR
@@ -243,6 +245,9 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 
 !!! info
     `MediaInfo Full`, `AudioLanguages`, and `SubtitleLanguages` support a `:EN+DE` suffix allowing you to filter the languages included in the filename. Use `-DE` to exclude specific languages. Appending <kb>+</kb> (e.g.: `:EN+`) will output `[EN]`,`[EN+--]` or `[--]` depending on excluded languages. For example `{MediaInfo Full:EN+DE}`.
+
+!!! info
+    `MediaInfo Video` and `MediaInfo Audio` are aliases of `MediaInfo VideoCodec` and `MediaInfo AudioCodec` respectively.
 
 !!! info
     `AudioLanguages` will not display a language for audio if only one language exists and it is EN (English). To get the desired behavior and as an example display German and English, use {MediaInfo AudioLanguagesAll:DE+EN} instead.
@@ -253,8 +258,12 @@ Standard Episode Format - Set the naming convention for your Standard Series Typ
 ### Other
 
 - `{Release Group}` = Rls Grp
+- `{Release Hash}` = 79AFD88
 - `{Custom Formats}` = iNTERNAL or NF
 - `{Custom Format:FormatName}` = AMZN
+
+!!! info
+    `{Release Hash}` outputs the scene release hash when the episode file's release includes one, and produces no output otherwise.
 
 !!! info
     `{Custom Formats}` outputs every Custom Format that matched the release and has "Include Custom Format when Renaming" enabled, separated by spaces. Add an optional name filter to narrow it: `{Custom Formats:NameA,NameB}` includes only those formats, while `{Custom Formats:-NameA,NameB}` excludes them.
@@ -309,7 +318,7 @@ See [Standard Episode Format](settings.md#standard-episode-format) for more info
 - `{Series TitleTheWithoutYear}` = Series Title, The
 - `{Series CleanTitleTheWithoutYear}` = Series Title, The
 - `{Series TitleFirstCharacter}` = S
-- `{Series Year}` = (2010)
+- `{Series Year}` = 2010
 
 ### Series IDs
 
@@ -339,7 +348,7 @@ Name for the `Specials` (Season) folder
 ## Multi-Episode Style
 
 - `Extend` = `S01E01-02-03`
-- `Duplicate` = `S01E01.S01E01`
+- `Duplicate` = `S01E01.S01E02`
 - `Repeat` = `S01E01E02E03`
 - `Scene` = `S01E01-E02-E03`
 - `Range` = `S01E01-03`
@@ -356,19 +365,19 @@ Name for the `Specials` (Season) folder
 ## Importing
 
 - Episode Title Required - Prevent importing for up to 48 hours from the episodes [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) airdate time if the episode title is in the naming format and the episode title is TBA. After 48 hours the release will be imported even if the title is still TBA.
-  - Always - Always wait up to 48 hours for a title prior to importing if the episode is TBA
-  - Only for Bulk Season Releases - Only if a season pack or bulk release is found wait up to 48 hours for a title prior to importing if the episode is TBA. <- This is recommended.
-  - Never - Do not delay importing if the episode is TBA.
+    - Always - Always wait up to 48 hours for a title prior to importing if the episode is TBA
+    - Only for Bulk Season Releases - Only if a season pack or bulk release is found wait up to 48 hours for a title prior to importing if the episode is TBA. <- This is recommended.
+    - Never - Do not delay importing if the episode is TBA.
 - Skip Free Space Check - Use when Sonarr is unable to detect free space from your series root folder
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
-  - For more information on this click [TRaSH Guides hardlinks documentation](https://trash-guides.info/hardlinks)
+    - For more information on this click [TRaSH Guides hardlinks documentation](https://trash-guides.info/hardlinks)
 
 !!! warning
     Rarely - but possibly - file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Sonarr's rename function as a work around.
 
 - Import Using Script - Execute a custom script to import rather than the native import functionality.
-  - Import Script Path - Path to executable script.
+    - Import Script Path - Path to executable script.
 - Import Extra Files - Import matching extra files (subtitles, nfo, etc) after importing a file.
   If a subtitle filename contains additional tags such as `cc` or `forced`, they will be preserved as long as they are recognized (currently in develop version).
 
@@ -376,9 +385,9 @@ Name for the `Specials` (Season) folder
 
 - Unmonitor Deleted Episodes - Episodes deleted from disk are automatically unmonitored in Sonarr
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
-  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
-  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with Custom Formats
+    - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+    - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+    - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with Custom Formats
 
 !!! info
     `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
@@ -389,17 +398,17 @@ Name for the `Specials` (Season) folder
 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Sonarr to read parts of the file which may cause high disk or network activity during scans.
 - Rescan Series Folder after Refresh - Rescan the series folder after refreshing the series
-  - Always - This will rescan series folder based upon Tasks Schedule
-  - After Manual Refresh - You will have to manually rescan the disk
-  - Never - Just as it says, never rescan the series folder.
-    - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Sonarr.
-    - If you delete episode files manually or via Plex or another third party program, do not set this to `Never`.
+    - Always - This will rescan series folder based upon Tasks Schedule
+    - After Manual Refresh - You will have to manually rescan the disk
+    - Never - Just as it says, never rescan the series folder.
+        - Do not change this to `Never` unless all changes to your library (new movies, upgrades, deletions etc) are done through Sonarr.
+        - If you delete episode files manually or via Plex or another third party program, do not set this to `Never`.
  !!! warning
 
 - Change File Date - Change file date on import/rescan
-  - None - Sonarr will not change the date that shows in your given file browser
-  - Local Release - The date the video was aired locally
-  - UTC Release Date - The date the video was released based upon the UTC
+    - None - Sonarr will not change the date that shows in your given file browser
+    - Local Release - The date the video was aired locally
+    - UTC Release Date - The date the video was released based upon the UTC
 - Recycling Bin - Episode files will go here when deleted instead of being permanently deleted
 - Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
@@ -409,7 +418,7 @@ Name for the `Specials` (Season) folder
 ## Permissions
 
 - Set Permissions - Should `chmod` be run when files are imported/renamed?
-  - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
+    - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
 
 !!! info
     The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
@@ -458,7 +467,7 @@ Name for the `Specials` (Season) folder
 
 - Qualities - Qualities higher in the list are more preferred even if not checked. Qualities within the same group are equal. Only checked qualities are wanted.
 - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups. [See TRaSh's Guide for how to Merge Qualities](https://trash-guides.info/merge-quality)
-  - [See Qualities](#qualities-defined)
+    - [See Qualities](#qualities-defined)
 
 !!! info
     By default the qualities are set from lowest (bottom) to highest (top)
@@ -471,8 +480,8 @@ Name for the `Specials` (Season) folder
 - Custom formats are calculated on-the-fly instead of being stored in the database, so they update as soon as you change the definitions.
 - Custom formats are used within your Quality Profiles to determine the scoring of each custom format. Within each quality profile, you can set a minimum custom format score for a release to be grabbed and an upgrade until score as well.
 - It's strongly recommended to add the below Custom Formats from [TRaSH's Guides](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/) to avoid unwanted downloads. Refer to the linked TRaSH Guide Custom Format article and additional referenced 3 TRaSH Custom Format Guides on the top of the Collection of Custom Formats page for more information.
-  - [DV (WEB-DL)](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
-  - [BR-DISK](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
+    - [DV (WEB-DL)](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#dv-webdl) will avoid grabbing releases with Dolby Vision (DV) that have a green hue if DV is not supported.
+    - [BR-DISK](https://trash-guides.info/Sonarr/sonarr-collection-of-custom-formats/#br-disk) to avoid grabbing poorly named BR-DISKs that do not match the BR-DISK quality parsing.
 
 ---
 
@@ -498,23 +507,25 @@ Profiles is where Custom Format Scores are configured.
 
 - **Any conditions that use RegEx are case insensitive**
 - Note the following GitHub Issues
-  - [Improve CF Comparison Between Release and File #5598](https://github.com/Sonarr/Sonarr/issues/5598)
+    - [Improve CF Comparison Between Release and File #5598](https://github.com/Sonarr/Sonarr/issues/5598)
 - Release Title - This is a regular expression matched against the release title and, after download, the filename on disk.
-  - Note: Sonarr only considers text after the series title which means anything preceding the title is ignored.
-  - Note that the matching text is needed to be included in the renamed file to ensure continual matching of the custom format after import.
+    - Note: Sonarr only considers text after the series title which means anything preceding the title is ignored.
+    - Note that the matching text is needed to be included in the renamed file to ensure continual matching of the custom format after import.
 - Language - This language is matched against any language(s) Sonarr parses. All languages previously selectable in profiles work here.
 - Source - The source where a release was ripped from (e.g. BLURAY).
 - Resolution - The resolution parsed from either the release name or media info (if available).
 - Size - This is matched against the release size. The release size is converted to gigabytes and compared against the min and max values.
-- Group - This is matched against the group that Sonarr parses based on Sonarr's group detection logic.
+- Release Group - This is matched against the release group that Sonarr parses based on Sonarr's group detection logic.
+- Indexer Flag - This is matched against the indexer flags reported for the release (e.g. Freeleech).
+- Release Type - This is matched against the type of release Sonarr parses: Single Episode, Multi-Episode, or Season Pack.
 
 ### Profiling Settings and Ranking
 
 - Custom formats are implemented within and have their impact controlled by Quality Profiles. The Upgrade Until score prevents upgrading once a release with this desired score has been downloaded.
 - A score of 0 results in the custom format being informational only and has non impact on release ranking nor languages searched.
 - The Minimum Score requires releases cumulative custom format score to reach this threshold otherwise they will be rejected.
-  - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
-  - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
+    - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
+    - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
 - [**Please see TRaSH's Guides for how to setup and use custom formats**](https://trash-guides.info/Sonarr/sonarr-setup-custom-formats/)
 
 #### Importing / Exporting Custom Formats
@@ -535,8 +546,9 @@ Profiles is where Custom Format Scores are configured.
 - Preferred Protocol - This will either be `Usenet` or `Torrent` depending on which download protocol you prefer
 - Usenet Delay - Set by the number of minutes you will want to wait before the download to start
 - Torrent Delay - Set by the number of minutes you will want to wait before the download to start
-- Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
-- Bypass if Highest Quality - Bypass delay when release has the highest enabled quality profile with the preferred protocol
+- Bypass if Highest Quality - Bypass delay when release has the highest enabled quality in the quality profile with the preferred protocol
+- Bypass if Above Custom Format Score - Bypass delay when release has a score higher than the configured minimum custom format score
+    - Minimum Custom Format Score - Minimum Custom Format Score required to bypass delay for the preferred protocol
 - Tags - With giving this delay profile a tag you will be able to tag a given series to have it play by the rules set here.
 - Wrench icon - This will allow you to edit the delay profile
 - Plus icon (<kb>+</kb>) - Create a new delay profile
@@ -596,6 +608,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Must Contain - The release must contain at least one of these terms (case insensitive)
 - Must Not Contain - The release will be rejected if it contains one or more of terms (case insensitive)
 - Indexer - Specify what indexer the profile applies to.
+- Reject Unaired Releases - Sonarr v5 only. Rejects releases for episodes that have not aired yet. A release is rejected when its publish date is before the episode air date plus the grace period
+    - Air Date Grace Period - Sonarr v5 only. Shown when Reject Unaired Releases is on. Measured in hours, and negative values allow grabbing before the air date
+- Allow Season Pack Before All Episodes Have Aired - Sonarr v5 only. Allows season pack releases that match this profile even if not all episodes in the season have aired, or an episode has no air date. If another release profile for the series leaves this off, the more restrictive setting wins
 
 !!! info
     This is useful if you only want specific releases from a given indexer/tracker
@@ -616,6 +631,9 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Min - The minimum Megabytes per Minute (MB/min) a quality can have.
 - Max - The maximum Megabytes per Minute (MB/min) a quality can have.
 
+!!! info
+    In Sonarr v5 the size limits (Minimum, Preferred, and Maximum, in MiB per minute) are set per quality inside each Quality Profile instead of on this page. Only the Title remains here.
+
 ## Qualities Defined
 
 - Unknown - Self Explanatory
@@ -628,17 +646,18 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - HDTV-720p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1280x720 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4.
 - HDTV-1080p - A re-encode of the final released Blu-ray, but broadcast over HD cable or satellite (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). It may be modified for runtime or content depending on the network it came from. This is released usually several months after a retail release, but sometimes upscaled versions of a Standard Definition film are released on cable channels such as STARZ or HBO, and they would be the only HD copies of that specific film available. These are generally MKV or MP4 container.
 - Raw-HD - A raw feed of an HD stream.
+- WEBDL-720p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 720p quality.
 - WEBRip-720p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 720p quality.
 - Bluray-720p - A re-encode of the final released Blu-ray, downscaled to 720p resolution (1280x720 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality for the resolution. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while drastically reducing filesize. These are generally MKV or MP4 container.
 - WEBDL-1080p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 1080p quality.
 - WEBRip-1080p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 1080p quality.
 - Bluray-1080p - A re-encode of the final released Blu-ray, at its native 1080p resolution (1920x1080 @ 16:9, any other aspect ratio may be a different resolution). If possible this is released PRE retail. It should be excellent quality and the same resolution as the source. Bitrates may vary, but these are generally encoded to AVC or HEVC and offer the tradeoff of a small perceived quality reduction over the original source while slightly reducing filesize. These are generally MKV or MP4 container.
-- Remux-1080p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 1080p quality.
+- Bluray-1080p Remux - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 video/episode quality as on original disc. This is at 1080p quality.
 - HDTV-2160p - TVRip is a capture source from an capture card. HDTV stands for captured source from HD television. With an HDTV source, the quality can sometimes even surpass DVD. Movies in this format are starting to grow in popularity. Some advertisement and commercial banner can be seen on some releases during playback. This is at 2160p (4K) quality.
 - WEBDL-2160p - WEB-DL (P2P) refers to a file losslessly ripped from a streaming service, such as Netflix, Amazon Video, Hulu, Crunchyroll, Discovery GO, BBC iPlayer, etc., or downloaded via an online distribution website such as iTunes. The quality is quite good, since they are not reencoded. The video (H.264 or H.265) and audio (AC3/AAC) streams are usually extracted from the iTunes or Amazon Video and remuxed into a MKV container without sacrificing quality. An advantage with these releases is that, like BD/DVDRips, they usually have no onscreen network logos. These are nearly as good as a Blu-ray source but can suffer from audio lag or visual artifacts from the adaptive bitrate of streaming services. If a ripper's internet connection drops to a point where the bitrate lowers, the source bitrate could change dynamically, causing variations in picture quality. Most releases that suffer from an extreme amount of visual artifacts are NUKED and a PROPER is generally released to fix any wild variations in adaptive bitrate. This will be in 2160p (4K) quality.
 - WEBRip-2160p - In a WEB-Rip (P2P), the file is often extracted using the HLS or RTMP/E protocols and remuxed from a TS, MP4 or FLV container to MKV. This will be in 2160p (4k) quality.
 - Bluray-2160p - A re-encode of the final released Blu-ray, at its native 2160p resolution (3840x2160 @ 16:9, any other aspect ratio may be a different resolution). 4K versions of films that are released in generally HEVC codec and could be either 8-bit or 10-bit color reproduction or from an HDR source. slightly reducing filesize. These are generally MKV or MP4 container.
-- Remux-2160p - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 movie quality as on original disc. This is at 2160p (4K) quality.
+- Bluray-2160p Remux - A remux is a rip of a Blu-ray or HD DVD disc to another container format or just stripping the disc of menus and bonus material while keeping the contents of its audio and video streams intact (also keeping the current codecs), guaranteeing the exact 1:1 video/episode quality as on original disc. This is at 2160p (4K) quality.
 
 # Indexers
 
@@ -676,8 +695,8 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
 - (Advanced Option) Fail Downloads - Mark the download are failed if the specified file extensions are encountered.
   {#indexer-fail-extension-details-usenet}
-  - Dangerous Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_dangerousExtensions&type=code). As of 2024-12-07 they are: `.lnk`,`.ps1`,`.vbs`, and `.zipx`
-  - Executable Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_executableExtensions&type=code). As of 2024-12-07 they are: `.bat`,`.cmd`,`.exe`, and `.sh`
+    - Dangerous Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_dangerousExtensions&type=code). As of 2024-12-07 they are: `.lnk`,`.ps1`,`.vbs`, and `.zipx`
+    - Executable Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_executableExtensions&type=code). As of 2024-12-07 they are: `.bat`,`.cmd`,`.exe`, and `.sh`
 
 !!! info
     Sonarr also detects [**archived extensions**](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_archiveExtensions&type=code). As of 2024-12-07 they are: `.7z` `.bz2` `.gz` `.r00` `.rar` `.tar.bz2` `.tar.gz` `.tar` `.tb2` `.tbz2` `.tgz` `.zip`  These are not Failureable and Unpackerr ([website](https://unpackerr.zip/)|[Github](https://github.com/Unpackerr/unpackerr)) can be used to handle these.
@@ -705,12 +724,13 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - (Advanced Option) Minimum Seeders - The minimum number of seeders required for a release from this tracker to be grabbed.
 - (Advanced Option) Seed Ratio - If empty, use the download client default. Otherwise, the minimum seed ratio required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
 - (Advanced Option) Seed Time - If empty, use the download client default. Otherwise, the minimum seed time in minutes required for your download client to meet for releases from this indexer prior to it being paused by your client and removed by Sonarr (Requires Completed Download Handling - Remove enabled)
+- (Advanced Option) Season-Pack Seed Time - If empty, use the Seed Time value above. Otherwise, the minimum seed time in minutes required for season-pack torrents from this indexer, applied instead of the regular Seed Time for those releases.
 - (Advanced Option) Indexer Priority - Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios. 1 is highest priority and 50 is lowest priority.
 - (Advanced Option) Download Client - Select and specify which download client is used for grabs from this indexer
 - (Advanced Option) Fail Downloads - Mark the download are failed if the specified file extensions are encountered.
   {#indexer-fail-extension-details-torrent}
-  - Dangerous Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_dangerousExtensions&type=code). As of 2024-12-07 they are: `.lnk`,`.ps1`,`.vbs`, and `.zipx`
-  - Executable Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_executableExtensions&type=code). As of 2024-12-07 they are: `.bat`,`.cmd`,`.exe`, and `.sh`
+    - Dangerous Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_dangerousExtensions&type=code). As of 2024-12-07 they are: `.lnk`,`.ps1`,`.vbs`, and `.zipx`
+    - Executable Extensions can be found by searching the [source code](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_executableExtensions&type=code). As of 2024-12-07 they are: `.bat`,`.cmd`,`.exe`, and `.sh`
 
 !!! info
     Sonarr also detects [**archived extensions**](https://github.com/search?q=repo%3ASonarr%2FSonarr%20_archiveExtensions&type=code). As of 2024-12-07 they are: `.7z` `.bz2` `.gz` `.r00` `.rar` `.tar.bz2` `.tar.gz` `.tar` `.tb2` `.tbz2` `.tgz` `.zip`  These are not Failureable and Unpackerr ([website](https://unpackerr.zip/)|[Github](https://github.com/Unpackerr/unpackerr)) can be used to handle these.
@@ -723,7 +743,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Retention - Usenet only: Set to zero to set for unlimited retention
 - Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Sonarr find episodes?](faq.md#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
+    - Please see [How does Sonarr find episodes?](faq.md#how-does-sonarr-find-episodes) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Sonarr has been offline for an extended period of time, Sonarr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -742,7 +762,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ## Usenet
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
-  - Examples: movies, tv, series, music, etc.
+    - Examples: movies, tv, series, music, etc.
 - Sonarr will monitor your download clients active downloads that use that category name. It monitors this via your download client's API.
 - When the download is completed, Sonarr will know the final file location as reported by your download client. This file location can be almost anywhere, as long as it is somewhere separate from your media folder and accessible by Sonarr
 - Sonarr will scan that completed file location for files that Sonarr can use. It will parse the file name to match it against the requested media. If it can do that, it will rename the file according to your specifications, and move it to the specified media location.
@@ -752,7 +772,7 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 ## BitTorrent
 
 - Sonarr will send a download request to your client, and associate it with a label or category name that you have configured in the download client settings.
-  - Examples: movies, tv, series, music, etc.
+    - Examples: movies, tv, series, music, etc.
 - Sonarr will monitor your download clients active downloads that use that category name. This monitoring occurs via your download client's API.
 - Completed files are left in their original location to allow you to seed the file (ratio or time can be adjusted in the download client or from within Sonarr under the specific download client). When files are imported to your media folder Sonarr will hardlinkthe file if supported by your setup or copy if not hard links are not supported.
 - Hard links are enabled by default. [A hard link will allow not use any additional disk space.](https://trash-guides.info/Hardlinks/Hardlinks-and-Instant-Moves/) The file system and mounts must be the same for your completed download directory and your media library. If the hard link creation fails or your setup does not support hard links then Sonarr will fall back and copy the file.
@@ -784,7 +804,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+    - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+    - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Settings
 
@@ -803,8 +824,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
-    - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the below table. Torrents must also stay in the same category.
+    - Remove Completed (Per Client Setting) - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+        - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the below table. Torrents must also stay in the same category.
+    - Remove Failed (Per Client Setting) - Remove failed downloads from the download client's history.
 
 ### Torrent Client Remove Download Compatibility
 
@@ -832,8 +854,9 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Completed Download Handling is how Sonarr imports media from your download client to your series folders. Many common issues are related to bad Docker paths and/or other Docker permissions issues.
 
 - (Advanced Global Setting) Enable - Automatically import completed downloads from the download client
-- (Per Client Setting) Remove - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
-  - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the above table. Torrents must also stay in the same category.
+- (Per Client Setting) Remove Completed - Remove imported downloads from the download client's history when finished (usenet) or stopped/complete (torrents)
+    - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Sonarr per the above table. Torrents must also stay in the same category.
+- (Per Client Setting) Remove Failed - Remove failed downloads from the download client's history.
 
 ### Remove Completed Downloads
 
@@ -855,17 +878,18 @@ If you download using a BitTorrent client, the process is slightly different:
 - There are several components that make up the failed download handling process:
 
 - Check Downloader:
-  - Indexer Settings for "Fail Downloads"
-  - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
-  - History - Check your downloader's history for failure (e.g. not enough blocks to repair, or extraction failed)
+    - Indexer Settings for "Fail Downloads"
+    - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
+    - History - Check your downloader's history for failure (e.g. not enough blocks to repair, or extraction failed)
 - When Sonarr finds a failed download it starts processing them and does a few things:
-  - Adds a failed event to Sonarr's history
-  - Removes the failed download from Download Client to free space and clear downloaded files (optional)
-  - Starts searching for a replacement file (optional)
-  - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Sonarr ever again (You can still force the download via a manual search).
-  - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Sonarr, at this time, they are all on by default.
+    - Adds a failed event to Sonarr's history
+    - Removes the failed download from Download Client to free space and clear downloaded files (optional)
+    - Starts searching for a replacement file (optional)
+    - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Sonarr ever again (You can still force the download via a manual search).
+    - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Sonarr, at this time, they are all on by default.
 
-- Redownload - Controls whether or not Sonarr will search for the same file after a failure
+- Redownload Failed - Controls whether or not Sonarr will search for the same file after a failure
+- (Advanced Option) Redownload Failed from Interactive Search - Only shown when Redownload Failed is enabled. Automatically search for and attempt to download a different release when the failed release was grabbed from an interactive search.
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
 
 ## Remote Path Mappings
@@ -898,12 +922,12 @@ If you download using a BitTorrent client, the process is slightly different:
 
 ### List Options
 
-- (Advanced Option) List Update Interval - How often should Radarr poll the list for updates?  This is provided dependent as per the UI.
+- (Advanced Option) List Update Interval - How often should Sonarr poll the list for updates?  This is provider dependent as per the UI.
 - (Advanced Option) Clean Library Level - Series in library will be removed or unmonitored if not in at least one of your list(s)
-  - Disabled - Do not clean the library (Recommended)
-  - Log Only - Only log the series are not on the list(s) and take no other actions
-  - Keep and Unmonitor Series - Keep series that are not on the list(s), but unmonitor them in Sonarr.
-  - Keep and Tag Series - Keep series that are not on the list(s) and tag them in Sonarr.
+    - Disabled - Do not clean the library (Recommended)
+    - Log Only - Only log the series are not on the list(s) and take no other actions
+    - Keep and Unmonitor Series - Keep series that are not on the list(s), but unmonitor them in Sonarr.
+    - Keep and Tag Series - Keep series that are not on the list(s) and tag them in Sonarr.
 
 ## List Exclusions
 
@@ -934,7 +958,7 @@ If you download using a BitTorrent client, the process is slightly different:
 - On Episode File Delete - Be notified when episodes files are deleted
 - On Episode File Delete For Upgrade - Be notified when episode files are deleted for upgrades
 - On Health Issue - Be notified on health check failures
-  - Include Health Warnings - Be notified on health warnings in addition to errors.
+    - Include Health Warnings - Be notified on health warnings in addition to errors.
 - On Health Restored - Be notified when a previously reported health issue is resolved
 - On Application Update - Be notified when Sonarr gets updated to a new version
 - On Manual Interaction Required - Be notified when manual interaction is required to resolve an import
@@ -954,13 +978,13 @@ If you download using a BitTorrent client, the process is slightly different:
 
 - The tag section in Sonarr is used to link different aspects of Sonarr.
 - Tags are particularly useful for:
-  - Delay Profiles
-  - Release Profiles
-  - Indexers
+    - Delay Profiles
+    - Release Profiles
+    - Indexers
 - Tags can be used to link Delay Profiles, Release Profiles, Indexers and Series together.
 - For Example:
-  - You only want a specific indexer to be used for a specific series. You would create a tag and assign the series and indexer that tag.
-  - You want a specific Release Profile to only use a specific Delay Profile. You would create a tag and assign the Release Profile and Delay Profile that tag.
+    - You only want a specific indexer to be used for a specific series. You would create a tag and assign the series and indexer that tag.
+    - You want a specific Release Profile to only use a specific Delay Profile. You would create a tag and assign the Release Profile and Delay Profile that tag.
 
 !!! warning
     A Series will use both indexers that have matching tags and indexers that have have no tags.
@@ -973,9 +997,9 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Host
 
 - Bind Address - Valid IP4 address or '*' for all interfaces
-  - 0.0.0.0 or `*` - any address can connect
-  - 127.0.0.1 or localhost - only localhost applications can connect
-  - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
+    - 0.0.0.0 or `*` - any address can connect
+    - 127.0.0.1 or localhost - only localhost applications can connect
+    - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
 - Port Number - The port number that you are wanting to use to access the webUI for Sonarr
 
 !!! warning
@@ -985,6 +1009,13 @@ If you download using a BitTorrent client, the process is slightly different:
 
 !!! info
     Note: If using a reverse proxy (example: mydomain.com/sonarr) you would enter '/sonarr' for URL Base.
+
+- Allowed Hosts - Which hostnames (including FQDN, Fully Qualified Domain Names) or IP Addresses Sonarr will accept as a valid host. This setting is required if Authentication Required is not set to `Enabled`. This is the host portion of the address you enter in your address bar of your browser to access Sonarr.
+    - IP Address: `192.168.50.1`
+    - Hostname: `sonarr`
+    - FQDN: `sonarr.example.com`
+    - Wildcard subdomain: `*.example.com` - For example `sonarr.example.com`, `tv.example.com` or any other subdomain would be accepted.
+    - Docker with a `.internal` suffix: `*.internal` - accepts container hostnames such as `sonarr.internal` when you name your containers with a `.internal` suffix.
 
 - Instance Name - Instance name in tab and for Syslog app name
 
@@ -999,21 +1030,37 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Security
 
 - Authentication - How would you like to authenticate to access your Sonarr instance
-  - None - You have no authentication to access your Sonarr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Sonarr or your Sonarr is not exposed to the web
-  - Basic (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password
-  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr
+    - None - No authentication is required to access Sonarr. No longer selectable in the UI for new configurations; existing installs still using it should switch to Basic or Forms. In Sonarr v5, None is treated as Forms
+    - Basic (Browser pop-up) - This option when accessing your Sonarr will show a small pop-up allowing you to input a Username and Password. Sonarr v4 only: v5 treats Basic as Forms
+    - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Sonarr. Default in Sonarr v5
+    - OpenID Connect (OIDC) - Sonarr v5 only. Sign in through an external OpenID Connect identity provider
+    - External - Hands authentication off entirely to a reverse proxy (e.g. Authelia, Organizr) placed in front of Sonarr. Not selectable in the UI; set it via `config.xml` or the `SONARR__AUTH__METHOD` environment variable. Sonarr performs no authentication of its own in this mode, so Authentication Required and Trust CGNAT IP Addresses below have no effect
+- Sonarr v5 generates a 20-character password on first setup when the password is left blank
+- Authentication Required - Controls when the Authentication setting above is enforced
+    - Enabled - Always require authentication (recommended)
+    - Disabled for Local Addresses - Skip authentication for requests Sonarr identifies as coming from localhost or the LAN
+
+!!! warning
+    `Disabled for Local Addresses` without a properly configured reverse proxy caused [CVE-2026-30975 / GHSA-h5qx-5hjf-7c9r](https://github.com/Sonarr/Sonarr/security/advisories/GHSA-h5qx-5hjf-7c9r) (High severity, patched in v4.0.16.2942 nightly / v4.0.16.2944 stable). A caller could spoof the `X-Forwarded-For` header to appear local and skip authentication. "Properly configured" means the proxy's address is listed under Trusted Networks below. Sonarr only trusts `X-Forwarded-For` from addresses in that list and ignores it from anyone else. If you don't run a trusted reverse proxy, set Authentication Required to `Enabled` instead, or put Sonarr behind a VPN/Tailscale rather than exposing it directly.
+
 - API Key - This is how other programs would communicate or have Sonarr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
-  - Enabled - Validate all HTTPS certificates (recommended)
-  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
-  - Disabled - Do not validate any HTTPS certificates
+    - Enabled - Validate all HTTPS certificates (recommended)
+    - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+    - Disabled - Do not validate any HTTPS certificates
+- Trusted Networks - Use to limit which IP Addresses/Networks Sonarr will trust for Reverse Proxies. You should only enter IP Addresses/Networks that you trust for reverse proxies that are properly configured to send the correct headers. Supported formats include:
+    - IP Address: `192.168.50.1` or `fd12:3456:789a::1`
+    - Subnet (CIDR format): `192.168.50.0/24` or `fc00::/7`
+
+!!! info
+    Trust CGNAT IP Addresses - Not exposed in the UI. Set via `config.xml` or the `SONARR__AUTH__TRUSTCGNATIPADDRESSES` environment variable (default `false`, see [Environment Variables](environment-variables.md#environment-variables-table)). When enabled, Sonarr treats CGNAT addresses (`100.64.0.0/10`, the range Tailscale uses) as local for the Authentication Required `Disabled for Local Addresses` check above. It has no effect with any other Authentication Required or Authentication setting.
 
 ## Proxy
 
 - Proxy - This option allows you to run the information your Sonarr pulls and searches for through a proxy. This can be useful if you're in a country that does not allow the downloading of Torrent files
 
 - Use Proxy - Enable to use a Proxy
-- Proxy Type - Select your proxy type (HTTPS, Socks4, or Socks5)
+- Proxy Type - Select your proxy type (HTTP(S), Socks4, or Socks5)
 - Hostname - Enter your proxy hostname (Do not include http/https or any other protocol)
 - Port - Enter your proxy port
 - Username - Enter your proxy username if applicable
@@ -1024,23 +1071,23 @@ If you download using a BitTorrent client, the process is slightly different:
 ## Logging
 
 - Log level - Probably one of the most useful troubleshooting tools
-  - Info - This is the most basic way that Sonarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
-  - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
-  - Trace - The most advance and detailed logging on Sonarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
+    - Info - This is the most basic way that Sonarr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
+    - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
+    - Trace - The most advance and detailed logging on Sonarr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
 
 ## Analytics
 
-- Analytics - Send anonymous usage and error information to Sonarr's servers (SkyHook). This includes information on your browser, which Sonarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
+- Analytics - Send anonymous usage and error information to Sonarr's servers. This includes information on your browser, which Sonarr WebUI pages you use, error reporting as well as OS and runtime version. We will use this information to prioritize features and bug fixes.
 
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Sonarr that you are running on.
-  - [Please see this FAQ entry for more information](faq.md#how-do-i-update-sonarr)
+    - [Please see this FAQ entry for more information](faq.md#how-do-i-update-sonarr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Sonarr built-in updater or a script
-  - Built-in - Use Sonarr's own updater
-  - Script - Have Sonarr run the update script
-  - Docker - Do not update Sonarr from inside the Docker, instead pull a brand new image with the new update
+    - Built-in - Use Sonarr's own updater
+    - Script - Have Sonarr run the update script
+    - Docker - Do not update Sonarr from inside the Docker, instead pull a brand new image with the new update
 - Script - Visible only when Mechanism is set to Script - Path to update script
 - Update Process - Sonarr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Sonarr is run under, it will need permissions to update the Sonarr files as well as stop/start Sonarr.
 - Built-in - The built-in method will backup Sonarr files and settings, stop Sonarr, update the installation and Start Sonarr, if your system will not handle the stopping of Sonarr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Sonarr will be restarted.
@@ -1051,8 +1098,8 @@ If you download using a BitTorrent client, the process is slightly different:
 - The backup section allows you to tell Sonarr how you would like for it to handle backups
 
 - Folder - This allows you to select the backup location. In docker you will be limited to what you allow the container to see. Paths are relative to the appdata folder; if necessary, you can set an absolute path to backup outside of the appdata folder.
-- Interval - How often would you like Sonarr to make a backup
-- Retention - How long would you like Sonarr to hold on to each backup. After a new backup is made the oldest backup will be removed
+- Interval - How often would you like Sonarr to make a backup (default: every 7 days)
+- Retention - How long would you like Sonarr to hold on to each backup. After a new backup is made the oldest backup will be removed (default: 28 days)
 
 # UI
 

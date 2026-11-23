@@ -15,93 +15,93 @@ tags:
 - [Table of Contents](#table-of-contents)
 - [Menu options](#menu-options)
 - [Media Management](#media-management)
-  - [Community Naming Suggestions](#community-naming-suggestions)
-  - [Movie Naming](#movie-naming)
-    - [Standard Movie Format](#standard-movie-format)
-    - [Movie Naming](#movie-naming-1)
-    - [Movie IDs](#movie-ids)
-    - [Quality](#quality)
-    - [Media Info](#media-info)
-    - [Release Group](#release-group)
-    - [Edition](#edition)
-    - [Custom Formats (Naming)](#custom-formats-naming)
-    - [Original](#original)
-  - [Movie Folder Format](#movie-folder-format)
-    - [Movie Naming](#movie-naming-2)
-    - [Movie ID](#movie-id)
-  - [Folders](#folders)
-  - [Importing](#importing)
-  - [File Management](#file-management)
-  - [Permissions](#permissions)
-  - [Root Folders](#root-folders)
+    - [Community Naming Suggestions](#community-naming-suggestions)
+    - [Movie Naming](#movie-naming)
+        - [Standard Movie Format](#standard-movie-format)
+        - [Movie Naming](#movie-naming-1)
+        - [Movie IDs](#movie-ids)
+        - [Quality](#quality)
+        - [Media Info](#media-info)
+        - [Release Group](#release-group)
+        - [Edition](#edition)
+        - [Custom Formats (Naming)](#custom-formats-naming)
+        - [Original](#original)
+    - [Movie Folder Format](#movie-folder-format)
+        - [Movie Naming](#movie-naming-2)
+        - [Movie ID](#movie-id)
+    - [Folders](#folders)
+    - [Importing](#importing)
+    - [File Management](#file-management)
+    - [Permissions](#permissions)
+    - [Root Folders](#root-folders)
 - [Profiles](#profiles)
-  - [Quality Profiles](#quality-profiles)
-  - [Delay Profiles](#delay-profiles)
-    - [Uses](#uses)
-    - [How Delay Profiles Work](#how-delay-profiles-work)
-    - [Uses](#uses-1)
-    - [How Delay Profiles Work](#how-delay-profiles-work-1)
-      - [Examples](#examples)
-        - [Example 1](#example-1)
-        - [Example 2](#example-2)
-        - [Example 3](#example-3)
+    - [Quality Profiles](#quality-profiles)
+    - [Delay Profiles](#delay-profiles)
+        - [Uses](#uses)
+        - [How Delay Profiles Work](#how-delay-profiles-work)
+        - [Uses](#uses-1)
+        - [How Delay Profiles Work](#how-delay-profiles-work-1)
+            - [Examples](#examples)
+                - [Example 1](#example-1)
+                - [Example 2](#example-2)
+                - [Example 3](#example-3)
 - [Quality](#quality-1)
-  - [Quality Table Meanings](#quality-table-meanings)
-  - [Qualities Defined](#qualities-defined)
+    - [Quality Table Meanings](#quality-table-meanings)
+    - [Qualities Defined](#qualities-defined)
 - [Custom Formats](#custom-formats)
-  - [Custom Format Conditions](#custom-format-conditions)
-    - [Modifiers](#modifiers)
-    - [Conditions](#conditions)
-    - [Profiling Settings and Ranking](#profiling-settings-and-ranking)
-      - [Importing / Exporting Custom Formats](#importing-exporting-custom-formats)
-      - [Importing / Updating Existing Custom Formats](#importing-updating-existing-custom-formats)
-    - [Collection of Custom Formats](#collection-of-custom-formats)
+    - [Custom Format Conditions](#custom-format-conditions)
+        - [Modifiers](#modifiers)
+        - [Conditions](#conditions)
+        - [Profiling Settings and Ranking](#profiling-settings-and-ranking)
+            - [Importing / Exporting Custom Formats](#importing-exporting-custom-formats)
+            - [Importing / Updating Existing Custom Formats](#importing-updating-existing-custom-formats)
+        - [Collection of Custom Formats](#collection-of-custom-formats)
 - [Indexers](#indexers)
-  - [Supported Indexers](#supported-indexers)
-    - [Indexer Settings](#indexer-settings)
-    - [Usenet Indexer Configuration](#usenet-indexer-configuration)
-    - [Torrent Tracker Configuration](#torrent-tracker-configuration)
-      - [Indexer Flags](#indexer-flags)
-  - [Options](#options)
+    - [Supported Indexers](#supported-indexers)
+        - [Indexer Settings](#indexer-settings)
+        - [Usenet Indexer Configuration](#usenet-indexer-configuration)
+        - [Torrent Tracker Configuration](#torrent-tracker-configuration)
+            - [Indexer Flags](#indexer-flags)
+    - [Options](#options)
 - [Download Clients](#download-clients)
-  - [Overview](#overview)
-  - [Download Client Processes](#download-client-processes)
-    - [Usenet Process](#usenet-process)
-    - [Torrent Process](#torrent-process)
-  - [Download Clients](#download-clients-1)
-    - [Supported Download Clients](#supported-download-clients)
-    - [Usenet Client Settings](#usenet-client-settings)
-    - [Torrent Client Settings](#torrent-client-settings)
-    - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
-  - [Completed Download Handling](#completed-download-handling)
-    - [Remove Completed Downloads](#remove-completed-downloads)
-    - [Failed Download Handling](#failed-download-handling)
-  - [Remote Path Mappings](#remote-path-mappings)
+    - [Overview](#overview)
+    - [Download Client Processes](#download-client-processes)
+        - [Usenet Process](#usenet-process)
+        - [Torrent Process](#torrent-process)
+    - [Download Clients](#download-clients-1)
+        - [Supported Download Clients](#supported-download-clients)
+        - [Usenet Client Settings](#usenet-client-settings)
+        - [Torrent Client Settings](#torrent-client-settings)
+        - [Torrent Client Remove Download Compatibility](#torrent-client-remove-download-compatibility)
+    - [Completed Download Handling](#completed-download-handling)
+        - [Remove Completed Downloads](#remove-completed-downloads)
+        - [Failed Download Handling](#failed-download-handling)
+    - [Remote Path Mappings](#remote-path-mappings)
 - [Import Lists](#import-lists)
-  - [Lists](#lists)
-  - [List Options](#list-options)
-  - [List Exclusions](#list-exclusions)
+    - [Lists](#lists)
+    - [List Options](#list-options)
+    - [List Exclusions](#list-exclusions)
 - [Connect](#connect)
-  - [Connections](#connections)
-  - [Connection Triggers](#connection-triggers)
+    - [Connections](#connections)
+    - [Connection Triggers](#connection-triggers)
 - [Metadata](#metadata)
-  - [Options](#options-1)
-  - [Metadata Consumers](#metadata-consumers)
+    - [Options](#options-1)
+    - [Metadata Consumers](#metadata-consumers)
 - [Tags](#tags)
 - [General](#general)
-  - [Host](#host)
-  - [Security](#security)
-  - [Proxy](#proxy)
-  - [Logging](#logging)
-  - [Analytics](#analytics)
-  - [Updates](#updates)
-  - [Backups](#backups)
+    - [Host](#host)
+    - [Security](#security)
+    - [Proxy](#proxy)
+    - [Logging](#logging)
+    - [Analytics](#analytics)
+    - [Updates](#updates)
+    - [Backups](#backups)
 - [UI](#ui)
-  - [Calendar](#calendar)
-  - [Movies](#movies)
-  - [Dates](#dates)
-  - [Style](#style)
-  - [Language](#language)
+    - [Calendar](#calendar)
+    - [Movies](#movies)
+    - [Dates](#dates)
+    - [Style](#style)
+    - [Language](#language)
 This page will go through all the settings available in Whisparr and how they work. This is not meant to be a comprehensive "how to set up Whisparr." If you want that, please use the [Quick Start](quick-start-guide.md) page instead.
 
 # Menu options
@@ -140,28 +140,28 @@ Also, note that for each individual settings page, there are some options at the
 - Rename Movies - If unchecked, Whisparr will use the existing file name if renaming is disabled
 - Replace Illegal` Characters - If unchecked, Whisparr will remove them instead.
 
-  - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
+    - The characters are: `:` `\` `/` `>` `<` `?` `*` `|` `"`
 - Colon (`:`) Replacement - This setting will dictate how Whisparr handles colons within the movie file. This is only available when Replace Illegal Characters is enabled.
-  - Delete - Self explanatory
-    - Example: Movie,The.mkv => MovieThe.mkv
-  - Replace with Dash - Removes the colon and adds a dash in its place
-    - Example: Movie,The.mkv => Movie-The.mkv
-  - Replace with Space - Removes the colon and adds a space in its place
-    - Example: Movie,The.mkv => Movie The.mkv
-  - Replace with Space Dash Space - self explanatory
-    - Example: Movie,The.mkv => Movie - The.mkv
+    - Delete - Self explanatory
+        - Example: Movie,The.mkv => MovieThe.mkv
+    - Replace with Dash - Removes the colon and adds a dash in its place
+        - Example: Movie,The.mkv => Movie-The.mkv
+    - Replace with Space - Removes the colon and adds a space in its place
+        - Example: Movie,The.mkv => Movie The.mkv
+    - Replace with Space Dash Space - self explanatory
+        - Example: Movie,The.mkv => Movie - The.mkv
 
 ### Standard Movie Format
 
 - Here you will select the naming convention for your movies
 
 - Dropdown Box (upper right corner)
-  - Left Box - Space Handling
+    - Left Box - Space Handling
     Space ( ) - Use spaces in naming (Default)
     Period (.) - Use periods in lieu of spaces in naming
     Underscore (_) - Use underscores in lieu of spaces in naming
     Dash (-) - Use dashes in lieu of spaces in naming
-  - Right Box - Case Handling
+    - Right Box - Case Handling
     Default Case - Make title uppercase and lowercase (~camel-case) (Default)
     Uppercase - Make title all uppercase
     Lowercase - Make title all lowercase
@@ -264,7 +264,7 @@ Here you will set the naming convention for the folder that contains the season 
 - Minimum Free Space - Toggling this will prevent import if it would leave less than this amount of disk space available
 - Use Hard links instead of Copy - Use Hard links when trying to copy files from torrents that are still being seeded
 
-  - For more information on this click [TRaSH Guides hardlinks documentation](https://trash-guides.info/hardlinks)
+    - For more information on this click [TRaSH Guides hardlinks documentation](https://trash-guides.info/hardlinks)
 
  !!! warning
      Rarely - but possibly -, file locks may prevent renaming files that are being seeded. You may temporarily disable seeding and use Whisparr's rename function as a work around.
@@ -276,13 +276,13 @@ Here you will set the naming convention for the folder that contains the season 
 - Unmonitor Deleted Movies - Movies deleted from disk are automatically unmonitored in Whisparr
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
 
-  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
-  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Custom Formats](#custom-formats).
+    - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+    - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+    - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Custom Formats](#custom-formats).
 !!! info
-    - > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
+        - > `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
 !!! info
-    - > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
+        - > `REPACK` - means there was a problem with the previous release and is corrected by the original Group. Downloads tagged as REPACK shows that the problems have been fixed in that release. This is done by a Group that did release the original.
 
 !!! info
     [Use custom formats for automatic upgrades to propers/repacks](https://trash-guides.info/Whisparr/Whisparr-collection-of-custom-formats/)
@@ -290,13 +290,13 @@ Here you will set the naming convention for the folder that contains the season 
 - Analyse video files - Extract file information such as resolution, runtime and codec information from files. This requires Whisparr to read parts of the file which may cause high disk or network activity during scans.
 - Rescan Movie Folder after Refresh - Rescan the series folder after refreshing the series
 
-  - Always - This will rescan movie folders based upon Tasks Schedule
-  - After Manual Refresh - You will have to manually rescan the disk
-  - Never - Just as it says, never rescan the movie folders.
+    - Always - This will rescan movie folders based upon Tasks Schedule
+    - After Manual Refresh - You will have to manually rescan the disk
+    - Never - Just as it says, never rescan the movie folders.
 - Change File Date - Change file date on import/rescan
-  - None - Whisparr will not change the date that shows in your given file browser
-  - In Cinemas Date - The date the movie was released in theaters.
-  - Physical Release Date - The date the movie was released either on disk (physical) or on the web.
+    - None - Whisparr will not change the date that shows in your given file browser
+    - In Cinemas Date - The date the movie was released in theaters.
+    - Physical Release Date - The date the movie was released either on disk (physical) or on the web.
 - Recycling Bin - Movie files will go here when deleted instead of being permanently deleted
 - Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
@@ -306,7 +306,7 @@ Here you will set the naming convention for the folder that contains the season 
 ## Permissions
 
 - Set Permissions - Should `chmod` be run when files are imported/renamed?
-  - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
+    - chmod Folder - Octal, applied during import/rename to media folders and files (without execute bits)
 
 !!! info
     The drop down box has a preset list of very commonly used permissions that can be used. However, you can manually enter a folder octal if you wish.
@@ -355,9 +355,9 @@ Add Root Folder - This allows you to select a root path for a place to either pl
     Note: This is only applicable if you have `Bluray-1080p` higher than `WEB 1080p` within the `Qualities` section
 
 - Qualities - Qualities higher in the list are more preferred even if not checked. Qualities within the same group are equal. Only checked qualities are wanted.
-  - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups. [See TRaSh's Guide for how to Merge Qualities](https://trash-guides.info/merge-quality)
+    - Edit Groups - Some qualities are grouped together to reduce the size of the list as well grouping like releases. Prime example of this is `WebDL` and `WebRip` as these are very similar and typically have similar bitrates. When editing the groups you can change the preference within each of the groups. [See TRaSh's Guide for how to Merge Qualities](https://trash-guides.info/merge-quality)
 
-  - [See Qualities](#qualities-defined)
+    - [See Qualities](#qualities-defined)
 
 !!! info
     By default the qualities are set from lowest (bottom) to highest (top)
@@ -619,10 +619,10 @@ The timer period can be different for Usenet and Torrents. Each profile can be a
 - Maximum Size - Maximum size for a release to be grabbed in MB. Set to zero to set to unlimited. Please note that this applies globally.
 - Prefer Indexer Flags - Prioritize releases with special flags. (See Required Flags above)
 - Availability Delay - Amount of time before (-#) or after (#) the available date to search for Movie
-  - This is helpful to delay searching for a release to give the community time to perform the best encodes.
-  - Typically, a Movie Availability of `Released` with a delay of `-21` or `-14` is suggested.
+    - This is helpful to delay searching for a release to give the community time to perform the best encodes.
+    - Typically, a Movie Availability of `Released` with a delay of `-21` or `-14` is suggested.
 - RSS Sync interval - Interval in minutes. Set to zero to disable (this will stop all automatic release grabbing) Minimum: 10 minutes Maximum: 120 minutes
-  - Please see [How does Whisparr find movies?](faq.md#how-does-whisparr-find-movies) for a better understanding of how RSS Sync will help you
+    - Please see [How does Whisparr find movies?](faq.md#how-does-whisparr-find-movies) for a better understanding of how RSS Sync will help you
 
 !!! info
     If Whisparr has been offline for an extended period of time, Whisparr will attempt to page back to find the last release it processed in an attempt to avoid missing a release. As long as your indexer supports paging and it hasn’t been too long will be able to process the releases it would have missed and avoid you needing to perform a search for the missed releases.
@@ -683,7 +683,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Older Priority - download client priority for media released not recently
 - Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+    - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
 
 ### Torrent Client Settings
 
@@ -702,8 +702,8 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Initial State - Initial state for torrents (Qbittorrent Only: Forced bypasses all seed thresholds)
 - (Advanced Option) Client Priority - Priority of the download client. Round-Robin is used for clients of the same type (torrent/usenet) that have the same priority. 1 is highest priority and 50 is lowest priority
 - Completed Download Handling
-  - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
-    - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Whisparr per the below table. Torrents must also stay in the same category.
+    - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents). See [Completed Download Handling for more details](#completed-download-handling)
+        - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Whisparr per the below table. Torrents must also stay in the same category.
 
 ### Torrent Client Remove Download Compatibility
 
@@ -733,7 +733,7 @@ Select the download client you wish to add, and there will be a pop-up box to en
 - Enable (Advanced Global Setting) - Automatically import completed downloads from the download client
 - (Advanced Option) Check For Finished Downloads Interval - Set how often to query the download clients' queues
 - Remove (Per Client Setting) - Remove completed downloads when finished (usenet) or stopped/complete (torrents)
-  - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Whisparr per the above table. Torrents must also stay in the same category.
+    - For torrents this requires your download client to pause upon hitting the seed goals. It also requires the seed goals to be supported by Whisparr per the above table. Torrents must also stay in the same category.
 
 ### Remove Completed Downloads
 
@@ -756,14 +756,14 @@ If you download using a BitTorrent client, the process is slightly different:
 - There are several components that make up the failed download handling process:
 
 - Check Downloader:
-  - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
-  - History - Check your downloader's history for failure (e.g. not enough to repair, or extraction failed)
+    - Queue - Check your downloader's queue for password-protected (encrypted) releases marked as a failure
+    - History - Check your downloader's history for failure (e.g. not enough to repair, or extraction failed)
 - When Whisparr finds a failed download it starts processing them and does a few things:
-  - Adds a failed event to Whisparr's history
-  - Removes the failed download from Download Client to free space and clear downloaded files (optional)
-  - Starts searching for a replacement file (optional)
-  - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Whisparr ever again (You can still force the download via a manual search).
-  - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Whisparr, at this time, they are all on by default.
+    - Adds a failed event to Whisparr's history
+    - Removes the failed download from Download Client to free space and clear downloaded files (optional)
+    - Starts searching for a replacement file (optional)
+    - Blocklisting (fka 'Blacklisting') allows automatic skipping of nzbs when they fail, this means that nzb will not be automatically downloaded by Whisparr ever again (You can still force the download via a manual search).
+    - There are 2 advanced options (on 'Download Client' settings page) that control the behavior of failed downloading in Whisparr, at this time, they are all on by default.
 
 - Redownload - Controls whether or not Whisparr will search for the same file after a failure
 - (Advanced Option) Remove - Whether or not the download should automatically be removed from Download Client when the failure is detected
@@ -800,11 +800,11 @@ Most of the lists settings are fairly self explanatory, some lists require you t
 
 - (Advanced Option) List Update Interval - How often should Whisparr poll the list for updates?  [This is a minimum of 6 hours.](faq.md#why-are-lists-sync-times-so-long-and-can-i-change-it)
 - (Advanced Option) Clean Library Level - Movies in library will be removed or unmonitored if not in your list(s)
-  - Disabled - Do not clean the library (Recommended)
-  - Log Only - Only log the movies are not on the list(s) and take no other actions
-  - Keep and Unmonitor Movie - Keep movies that are not on the list(s), but unmonitor them in Whisparr.
-  - Remove Movie and Keep Files - Remove movies that are not on the list(s) from Whisparr, but do not delete their files
-  - Remove Movie and Delete Files - Remove movies that are not on the list(s) from Whisparr and delete their files
+    - Disabled - Do not clean the library (Recommended)
+    - Log Only - Only log the movies are not on the list(s) and take no other actions
+    - Keep and Unmonitor Movie - Keep movies that are not on the list(s), but unmonitor them in Whisparr.
+    - Remove Movie and Keep Files - Remove movies that are not on the list(s) from Whisparr, but do not delete their files
+    - Remove Movie and Delete Files - Remove movies that are not on the list(s) from Whisparr and delete their files
 
 ## List Exclusions
 
@@ -833,7 +833,7 @@ Connections are how you want Whisparr to communicate with the outside world.
 - On Movie File Delete - Be notified when movies files are deleted
 - On Movie File Delete For Upgrade - Be notified when movie files are deleted for upgrades
 - On Health Issue - Be notified on health check failures
-  - Include Health Warnings - Be notified on health warnings in addition to errors.
+    - Include Health Warnings - Be notified on health warnings in addition to errors.
 - On Application Update - Be notified when Whisparr gets updated to a new version
 
 # Metadata
@@ -856,15 +856,15 @@ Kodi will be one of the most commonly used options here if that is the software 
 - The tag section in Whisparr is used to link different aspects of Whisparr. They are also useful for tracking which movies come from which lists.
 - Tags are particularly useful for:
 
-  - Delay Profiles
-  - Release Profiles
-  - Indexers
+    - Delay Profiles
+    - Release Profiles
+    - Indexers
 
 - Tags can be used to link Delay Profiles, Indexers, and Release Profiles and Sites together.
 - For Example:
-  - You only want a specific indexer to be used for a specific movie. You would create a tag and assign the movie and indexer that tag.
-  - You want a specific Release Profile to only apply to a specific movie. You would create a tag and assign the Release Profile and Site that tag.
-  - This process is the same for Delay Profiles.
+    - You only want a specific indexer to be used for a specific movie. You would create a tag and assign the movie and indexer that tag.
+    - You want a specific Release Profile to only apply to a specific movie. You would create a tag and assign the Release Profile and Site that tag.
+    - This process is the same for Delay Profiles.
 
 !!! info
     Note: Tags do not influence any "Custom Formats", "Quality Profiles" or any other aspect not mentioned above.
@@ -874,9 +874,9 @@ Kodi will be one of the most commonly used options here if that is the software 
 ## Host
 
 - Bind Address - Valid IPv4 address or '*' for all interfaces
-  - 0.0.0.0 or `*` - any address can connect
-  - 127.0.0.1 or localhost - only localhost applications can connect
-  - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
+    - 0.0.0.0 or `*` - any address can connect
+    - 127.0.0.1 or localhost - only localhost applications can connect
+    - Any other IP (e.g. 1.2.3.4) - only that IP (1.2.3.4) can connect
 - Port Number - The port number that you are wanting to use to access the webUI for Whisparr
 
 !!! warning
@@ -887,6 +887,14 @@ Kodi will be one of the most commonly used options here if that is the software 
 !!! info
     Note: If using a reverse proxy (example: mydomain.com/whisparr) you would enter '/whisparr' for URL Base.
 
+- Allowed Hosts - Which hostnames (including FQDN, Fully Qualified Domain Names) or IP Addresses Whisparr will accept as a valid host. This setting is required if Authentication Required is not set to `Enabled`. This is the host portion of the address you enter in your address bar of your browser to access Whisparr.
+    - IP Address: `192.168.50.1`
+    - Hostname: `whisparr`
+    - FQDN: `whisparr.example.com`
+    - Wildcard subdomain: `*.example.com` - For example `whisparr.example.com` or any other subdomain would be accepted.
+    - Docker with a `.internal` suffix: `*.internal` - accepts container hostnames such as `whisparr.internal` when you name your containers with a `.internal` suffix.
+    - A blank value is accepted only when Authentication Required is `Enabled`; otherwise at least one host is required and a blank value is rejected on save.
+
 - Enable SSL - If you have SSL credentials and would like to secure communication to and from your Whisparr enable this option.
 
 !!! warning
@@ -895,14 +903,14 @@ Kodi will be one of the most commonly used options here if that is the software 
 ## Security
 
 - Authentication - How would you like to authenticate to access your Whisparr instance
-  - None - You have no authentication to access your Whisparr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Whisparr or your Whisparr is not exposed to the web
-  - Basic (Browser pop-up) - This option when accessing your Whisparr will show a small pop-up allowing you to input a Username and Password
-  - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Whisparr
+    - None - You have no authentication to access your Whisparr. Typically if you're the only user of your network, do not have anybody on your network that would care to access your Whisparr or your Whisparr is not exposed to the web
+    - Basic (Browser pop-up) - This option when accessing your Whisparr will show a small pop-up allowing you to input a Username and Password
+    - Forms (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Whisparr
 - API Key - This is how other programs would communicate or have Whisparr communicate to other programs. This key if given to the wrong person with access could do all kinds of things to your library. This is why in the logs the API key is redacted
 - Certificate Validation - Change how strict HTTPS certification validation is
-  - Enabled - Validate all HTTPS certificates (recommended)
-  - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
-  - Disabled - Do not validate any HTTPS certificates
+    - Enabled - Validate all HTTPS certificates (recommended)
+    - Disabled for Local Addresses - Validate all HTTPS certificates except those on localhost and the LAN
+    - Disabled - Do not validate any HTTPS certificates
 
 ## Proxy
 
@@ -920,9 +928,9 @@ Proxy - This option allows you to run the information your Whisparr pulls and se
 ## Logging
 
 - Log level - Probably one of the most useful troubleshooting tools
-  - Info - This is the most basic way that Whisparr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
-  - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
-  - Trace - The most advance and detailed logging on Whisparr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
+    - Info - This is the most basic way that Whisparr gathers information this will include very minimal amount of information in the logs. This log file contains fatal, error, warn and info entries.
+    - Debug - Debug will include all the information that Info includes plus more information that can be useful. This log files contains fatal, error, warn, info and debug entries
+    - Trace - The most advance and detailed logging on Whisparr, Trace will include all the information gathered by Info and Debug and more. This is the most common type of log that is going to be asked for when troubleshooting on Discord or Reddit. If you're needing help please select your log to Trace and redo the task that was giving you problems to capture the log. This log files contains fatal, error, warn, info, debug and trace entries.
 
 ## Analytics
 
@@ -931,12 +939,12 @@ Proxy - This option allows you to run the information your Whisparr pulls and se
 ## Updates
 
 - (Advanced Option) Branch - This is the branch of Whisparr that you are running on.
-  - [Please see this FAQ entry for more information](faq.md#how-do-i-update-whisparr)
+    - [Please see this FAQ entry for more information](faq.md#how-do-i-update-whisparr)
 - Automatic - Automatically download and install updates. You will still be able to install from System: Updates. Note: Windows Users are always automatically updated.
 - Mechanism - Use Whisparr built-in updater or a script
-  - Built-in - Use Whisparr's own updater
-  - Script - Have Whisparr run the update script
-  - Docker - Do not update Whisparr from inside the Docker, instead pull a brand new image with the new update
+    - Built-in - Use Whisparr's own updater
+    - Script - Have Whisparr run the update script
+    - Docker - Do not update Whisparr from inside the Docker, instead pull a brand new image with the new update
 - Script - Visible only when Mechanism is set to Script - Path to update script
 - Update Process - Whisparr will download the update file, verify its integrity and extract it to a temporary location and call the chosen method. The update process will be be run under the same user that Whisparr is run under, it will need permissions to update the Whisparr files as well as stop/start Whisparr.
 - Built-in - The built-in method will backup Whisparr files and settings, stop Whisparr, update the installation and Start Whisparr, if your system will not handle the stopping of Whisparr and will attempt to restart it automatically it may be best to use a script instead. In the event of failure the previous version of Whisparr will be restarted.

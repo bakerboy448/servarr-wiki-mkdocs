@@ -15,40 +15,40 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 {#downloadclient}
 
 - Aria2 {#aria2}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Deluge {#deluge}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Download Station {#torrentdownloadstation}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Download Station {#usenetdownloadstation}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Flood {#flood}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Hadouken {#hadouken}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - NZBGet {#nzbget}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - NZBVortex {#nzbvortex}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Pneumatic {#pneumatic}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - qBittorrent {#qbittorrent}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - rTorrent {#rtorrent}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - SABnzbd {#sabnzbd}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Torrent Blackhole {#torrentblackhole}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Transmission {#transmission}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Usenet Blackhole {#usenetblackhole}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 - uTorrent {#utorrent}
-  - [Refer to the Settings Page](settings.md#download-clients)
-  - Due to utorrent being adware and formerly spyware, it is not recommended. Most users use Qbittorrent.
+    - [Refer to the Settings Page](settings.md#download-clients)
+    - Due to utorrent being adware and formerly spyware, it is not recommended. Most users use Qbittorrent.
 - Vuze {#vuze}
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - [Refer to the Settings Page](settings.md#download-clients)
 
 # Indexers
 
@@ -57,46 +57,46 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 ## Usenet
 
 - Newznab {#newznab}
-  - [Refer to the Settings Page](settings.md#indexer-settings)
-  - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
-  - Indexer Applications like [Prowlarr](../prowlarr.md) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Newznab is a standardized API used by many usenet indexing sites. Many presets are available, but all require an API key to be accessible.
+    - Indexer Applications like [Prowlarr](../prowlarr.md) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can provide advanced capabilities such as stat tracking.
 - omgwtfnzbs {#omgwtfnzbs}
-  - A private usenet indexer.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - A private usenet indexer.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 
 ## Torrents
 
 - FileList {#filelist}
-  - Private Tracker
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Private Tracker
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - HDBits {#hdbits}
-  - Private Tracker
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Private Tracker
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - IP Torrents {#iptorrents}
-  - Private Tracker
+    - Private Tracker
   !!! info
       IP Torrents' native implementation does not support Search
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Nyaa {#nyaa}
-  - Torrent Tracker for Japanese Media (Anime) exclusively.
+    - Torrent Tracker for Japanese Media (Anime) exclusively.
   !!! info
       Nyaa frowns upon automation and frequently will ban your IP.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Pass The Popcorn (PTP) {#passthepopcorn}
-  - Private Tracker
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Private Tracker
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
-  - Generic torrent RSS feed parser.
+    - Generic torrent RSS feed parser.
   !!! info
       The RSS feed must contain a `pubdate`. The release size is recommended as well.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - TorrentPotato {#torrentpotato}
-  - A legacy Couchpotato pre-Torznab format.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - A legacy Couchpotato pre-Torznab format.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Torznab {#torznab}
-  - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
-  - This is primarily only supported by [Prowlarr](../prowlarr.md) and [Jackett](https://github.com/Jackett/Jackett)
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Torznab is a wordplay on Torrent and Newznab. It uses the same structure and syntax as the Newznab API specification, but exposing torrent-specific attributes and .torrent files. Thus supports a recent RSS feed AND backlog searching capabilities. The specification is not maintained nor supported by the Newznab organization. (The same API  specification is shared with nZEDb)
+    - This is primarily only supported by [Prowlarr](../prowlarr.md) and [Jackett](https://github.com/Jackett/Jackett)
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 
 !!! warning
     Many torrent trackers thrive on the community and may have rules in place that mandate site visits, karma, votes, comments, etc.
@@ -109,11 +109,11 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 
 - Boxcar {#boxcar}
 - Custom Script {#customscript}
-  - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](custom-scripts.md) for more details.
+    - This allows you to make a custom script for when a particular action happens this script will run. See [Custom Scripts](custom-scripts.md) for more details.
 - Discord {#discord}
-  - By far one of the most common ways to push notifications of actions happening on your Whisparr
+    - By far one of the most common ways to push notifications of actions happening on your Whisparr
 - Email {#email}
-  - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
+    - Simply send yourself or somebody you want to annoy with email. If you're using Gmail, you need to enable less secure apps. If you're using Gmail and have 2-factor authentication enabled you need to use an App Specific password.
 
 !!! info
     You can use a "pretty address" like `SomePrettyName <email@example.org>`
@@ -122,14 +122,14 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Gotify {#gotify}
 - Join {#join}
 - Kodi {#xbmc}
-  - Kodi spawned from the love of media. It is an entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customizable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community. By adding Kodi as a connection you can update Kodi's library when a new movie has been added to Whisparr.
+    - Kodi spawned from the love of media. It is an entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customizable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community. By adding Kodi as a connection you can update Kodi's library when a new movie has been added to Whisparr.
 - Mailgun {#mailgun}
 - Notifiarr {#notifiarr}
-  - See the entry on [Useful Tools - Notifiarr](../useful-tools.md#notifiarr-fka-discord-notifier)
+    - See the entry on [Useful Tools - Notifiarr](../useful-tools.md#notifiarr-fka-discord-notifier)
 - Plex Media Server {#plexserver}
-  - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded movie is available.
-  - This is rarely needed and is only required if Plex is unable to watch the file system for changes.
-  - In the handful of situations where Plex is unable to watch the file system using ionotift - such as certain types of remote mounts and a handful of older network mounts - it is suggested to use the app plexautoscan rather than the Plex connection
+    - The server for your self hosted Plex system, Enabling this is much like Kodi will allow you to push an update to your plex server notifying it that a new/upgraded movie is available.
+    - This is rarely needed and is only required if Plex is unable to watch the file system for changes.
+    - In the handful of situations where Plex is unable to watch the file system using ionotift - such as certain types of remote mounts and a handful of older network mounts - it is suggested to use the app plexautoscan rather than the Plex connection
 
 !!! warning
     Note that this may trigger a full library scan for the library/root folder the movie is in.  It is strongly suggested to use the native Plex functionality that just watches the file system or to use a tool like [plexautoscan](https://github.com/l3uddz/plex_autoscan)
@@ -143,7 +143,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - Telegram {#telegram}
 - Trakt {#trakt}
 - Twitter {#twitter}
-  - See this [Tips and Tricks entry](../useful-tools.md#twitter-connect)
+    - See this [Tips and Tricks entry](../useful-tools.md#twitter-connect)
 - Webhook {#webhook}
 
 # Lists
@@ -153,7 +153,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - CouchPotato {#couchpotatoimport}
 - Custom Lists {#whisparrlistimport}
 - IMDb Lists {#imdblistimport}
-  - To add your IMDb Watchlist, go to your list and click edit. Make sure privacy setting is set to public. In the address bar you will find the `lsxxxxxx` number that you will need to enter into Whisparr
+    - To add your IMDb Watchlist, go to your list and click edit. Make sure privacy setting is set to public. In the address bar you will find the `lsxxxxxx` number that you will need to enter into Whisparr
 
     1. Go to your IMDB List Settings
     1. Ensure Privacy is set to `Public` (i.e. `Disabled)`
@@ -161,7 +161,7 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 
 - ![imdb-list-ls.png](../assets/whisparr/imdb-list-ls.png)
 - Whisparr {#whisparrimport}
-  - TRaSH has [a guide](https://trash-guides.info/Whisparr/Tips/Sync-2-whisparr-sonarr/) for syncing two instances
+    - TRaSH has [a guide](https://trash-guides.info/Whisparr/Tips/Sync-2-whisparr-sonarr/) for syncing two instances
 - RSS List {#rssimport}
 - StevenLu Custom {#stevenluimport}
 - StevenLu List {#stevenlu2import}
@@ -173,34 +173,34 @@ This page is the disambiguation page for all `supported` wiki links (i.e. typica
 - TMDb Popular {#tmdbpopularimport}
 - TMDb User {#tmdbuserimport}
 - Trakt List {#traktlistimport}
-  - Username - Ensure you enter the actual username of the user and not the user's name
-  - List - Ensure you use the list name as presented in the list URL
-  - Example: `https://trakt.tv/users/some-user-name/lists/trakt-list-name?sort=rank,asc`
-    - Username: `some-user-name`
-    - List: `trakt-list-name`
+    - Username - Ensure you enter the actual username of the user and not the user's name
+    - List - Ensure you use the list name as presented in the list URL
+    - Example: `https://trakt.tv/users/some-user-name/lists/trakt-list-name?sort=rank,asc`
+        - Username: `some-user-name`
+        - List: `trakt-list-name`
 - Trakt Popular List {#traktpopularimport}
 - Trakt User {#traktuserimport}
-  - This type should be used when using your own watchlist
+    - This type should be used when using your own watchlist
 
 # Metadata
 
 {#metadata}
 
 - Emby (Legacy) {#mediabrowsermetadata}
-  - Enable - Enable metadata file creation for this metadata type
-  - Movie Metadata - Enable metadata file creation for this metadata type
+    - Enable - Enable metadata file creation for this metadata type
+    - Movie Metadata - Enable metadata file creation for this metadata type
 - Kodi (XBMC) / Emby {#xbmcmetadata}
-  - Enable - Enable metadata file creation for this metadata type
-  - Movie Metadata - Create a `<filename>.nfo` with the movie metadata
-  - (Advanced Option) Movie Metadata URL - Create `movie.nfo` with TMDb and IMDb movie URLs
-  - Metadata Language - Select the language Whisparr should use to write the metadata if available in that language
-  - Movie Images - Create various Season images including posters and banners
-  - Use Movie.nfo - Write the nfo file as `movie.nfo` rather than the default
+    - Enable - Enable metadata file creation for this metadata type
+    - Movie Metadata - Create a `<filename>.nfo` with the movie metadata
+    - (Advanced Option) Movie Metadata URL - Create `movie.nfo` with TMDb and IMDb movie URLs
+    - Metadata Language - Select the language Whisparr should use to write the metadata if available in that language
+    - Movie Images - Create various Season images including posters and banners
+    - Use Movie.nfo - Write the nfo file as `movie.nfo` rather than the default
 - Roksbox {#roksboxmetadata}
-  - Enable - Enable metadata file creation for this metadata type
-  - Movie Metadata - Create xml file for each movie
-  - Movie Images - Create `Movie.jpg`
+    - Enable - Enable metadata file creation for this metadata type
+    - Movie Metadata - Create xml file for each movie
+    - Movie Images - Create `Movie.jpg`
 - WDTV {#wdtvmetadata}
-  - Enable - Enable metadata file creation for this metadata type
-  - Movie Metadata - Create `<filename>.xml` for each episode
-  - Movie Images - Create `folder.jpg`
+    - Enable - Enable metadata file creation for this metadata type
+    - Movie Metadata - Create `<filename>.xml` for each episode
+    - Movie Images - Create `folder.jpg`

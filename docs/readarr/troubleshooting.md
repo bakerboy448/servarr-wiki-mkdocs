@@ -32,68 +32,68 @@ The Servarr Team
 - [Table of Contents](#table-of-contents)
 - [Asking for Help](#asking-for-help)
 - [Logging and Log Files](#logging-and-log-files)
-  - [Standard Logs Location](#standard-logs-location)
-  - [Update Logs Location](#update-logs-location)
-  - [Sharing Logs](#sharing-logs)
-  - [Trace/Debug Logs](#tracedebug-logs)
-  - [Clearing Logs](#clearing-logs)
+    - [Standard Logs Location](#standard-logs-location)
+    - [Update Logs Location](#update-logs-location)
+    - [Sharing Logs](#sharing-logs)
+    - [Trace/Debug Logs](#tracedebug-logs)
+    - [Clearing Logs](#clearing-logs)
 - [Multiple Log Files](#multiple-log-files)
 - [Recovering from a Failed Update](#recovering-from-a-failed-update)
-  - [Determine the issue](#determine-the-issue)
-    - [Migration Issue](#migration-issue)
-    - [Permission Issue](#permission-issue)
-  - [Resolving the issue](#resolving-the-issue)
-    - [Permissions Issues](#permissions-issues)
-    - [Manually upgrading](#manually-upgrading)
+    - [Determine the issue](#determine-the-issue)
+        - [Migration Issue](#migration-issue)
+        - [Permission Issue](#permission-issue)
+    - [Resolving the issue](#resolving-the-issue)
+        - [Permissions Issues](#permissions-issues)
+        - [Manually upgrading](#manually-upgrading)
 - [Downloads and Importing](#downloads-and-importing)
-  - [Testing the Download Client](#testing-the-download-client)
-  - [Testing a Download](#testing-a-download)
-  - [Testing an Import](#testing-an-import)
-  - [Common Problems](#common-problems)
-    - [You prefer one format, but it imported another format instead](#you-prefer-one-format-but-it-imported-another-format-instead)
-    - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
-    - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
-    - [Can’t see share on Windows](#cant-see-share-on-windows)
-    - [Mapped network drives are not reliable](#mapped-network-drives-are-not-reliable)
-    - [Docker and user, group, ownership, permissions and paths](#docker-and-user-group-ownership-permissions-and-paths)
-    - [Remote Path Mapping](#remote-path-mapping)
-      - [Remote Mount or Remote Sync (Syncthing)](#remote-mount-or-remote-sync-syncthing)
-    - [Permissions on the Library Folder](#permissions-on-the-library-folder)
-    - [Permissions on the Downloads Folder](#permissions-on-the-downloads-folder)
-    - [Download folder and library folder not different folders](#download-folder-and-library-folder-not-different-folders)
-    - [Incorrect category](#incorrect-category)
-    - [Packed torrents](#packed-torrents)
-    - [Repeated downloads](#repeated-downloads)
-    - [Usenet download misses import](#usenet-download-misses-import)
-    - [Download client clearing items](#download-client-clearing-items)
-    - [Download cannot be matched to a library item](#download-cannot-be-matched-to-a-library-item)
-    - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send)
-    - [The request timed out](#the-request-timed-out)
-  - [Problem Not Listed](#problem-not-listed)
+    - [Testing the Download Client](#testing-the-download-client)
+    - [Testing a Download](#testing-a-download)
+    - [Testing an Import](#testing-an-import)
+    - [Common Problems](#common-problems)
+        - [You prefer one format, but it imported another format instead](#you-prefer-one-format-but-it-imported-another-format-instead)
+        - [Download Client's WebUI is not enabled](#download-clients-webui-is-not-enabled)
+        - [SSL in use and incorrectly configured](#ssl-in-use-and-incorrectly-configured)
+        - [Can’t see share on Windows](#cant-see-share-on-windows)
+        - [Mapped network drives are not reliable](#mapped-network-drives-are-not-reliable)
+        - [Docker and user, group, ownership, permissions and paths](#docker-and-user-group-ownership-permissions-and-paths)
+        - [Remote Path Mapping](#remote-path-mapping)
+            - [Remote Mount or Remote Sync (Syncthing)](#remote-mount-or-remote-sync-syncthing)
+        - [Permissions on the Library Folder](#permissions-on-the-library-folder)
+        - [Permissions on the Downloads Folder](#permissions-on-the-downloads-folder)
+        - [Download folder and library folder not different folders](#download-folder-and-library-folder-not-different-folders)
+        - [Incorrect category](#incorrect-category)
+        - [Packed torrents](#packed-torrents)
+        - [Repeated downloads](#repeated-downloads)
+        - [Usenet download misses import](#usenet-download-misses-import)
+        - [Download client clearing items](#download-client-clearing-items)
+        - [Download cannot be matched to a library item](#download-cannot-be-matched-to-a-library-item)
+        - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send)
+        - [The request timed out](#the-request-timed-out)
+    - [Problem Not Listed](#problem-not-listed)
 - [Searches Indexers and Trackers](#searches-indexers-and-trackers)
-  - [Turn logging up to trace](#turn-logging-up-to-trace)
-  - [Testing an Indexer or Tracker](#testing-an-indexer-or-tracker)
-  - [Testing a Search](#testing-a-search)
-  - [Common Problems](#common-problems-1)
-    - [Unable to Load Search Results](#unable-to-load-search-results)
-    - [Media is Unmonitored](#media-is-unmonitored)
-    - [Wrong categories](#wrong-categories)
-    - [Wrong results](#wrong-results)
-    - [Query Successful - No Results returned](#query-successful---no-results-returned)
-    - [Missing Results](#missing-results)
-    - [Certificate validation](#certificate-validation)
-    - [Hitting rate limits](#hitting-rate-limits)
-    - [IP Ban](#ip-ban)
-    - [Using the Jackett /all endpoint](#using-the-jackett-all-endpoint)
-    - [Using NZBHydra2 as a single entry](#using-nzbhydra2-as-a-single-entry)
-    - [Book imported with incorrect edition](#book-imported-with-incorrect-edition)
-    - [Problem Not Listed](#problem-not-listed-1)
-  - [Errors](#errors)
-    - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send-1)
-    - [The request timed out](#the-request-timed-out-1)
-    - [Invalid Response Received from Metadata API](#invalid-response-received-from-metadata-api)
-    - [Problem Not Listed](#problem-not-listed-2)
-  - [Metadata API Issues](#metadata-api-issues)
+    - [Turn logging up to trace](#turn-logging-up-to-trace)
+    - [Testing an Indexer or Tracker](#testing-an-indexer-or-tracker)
+    - [Testing a Search](#testing-a-search)
+    - [Common Problems](#common-problems-1)
+        - [Unable to Load Search Results](#unable-to-load-search-results)
+        - [Media is Unmonitored](#media-is-unmonitored)
+        - [Wrong categories](#wrong-categories)
+        - [Wrong results](#wrong-results)
+        - [Query Successful - No Results returned](#query-successful---no-results-returned)
+        - [Missing Results](#missing-results)
+        - [Certificate validation](#certificate-validation)
+        - [Hitting rate limits](#hitting-rate-limits)
+        - [IP Ban](#ip-ban)
+        - [Using the Jackett /all endpoint](#using-the-jackett-all-endpoint)
+        - [Using NZBHydra2 as a single entry](#using-nzbhydra2-as-a-single-entry)
+        - [Book imported with incorrect edition](#book-imported-with-incorrect-edition)
+        - [Problem Not Listed](#problem-not-listed-1)
+    - [Errors](#errors)
+        - [The underlying connection was closed: An unexpected error occurred on a send](#the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-send-1)
+        - [The request timed out](#the-request-timed-out-1)
+        - [Invalid Response Received from Metadata API](#invalid-response-received-from-metadata-api)
+        - [Problem Not Listed](#problem-not-listed-2)
+    - [Metadata API Issues](#metadata-api-issues)
 
 # Asking for Help
 
@@ -328,15 +328,15 @@ Thus `/volume3/data` does not exist within Readarr's container or is not accessi
 #### Remote Mount or Remote Sync (Syncthing)
 
 - You need it to be syncing the whole time it is downloading. And you need that local sync destination to be able to be hard links when \*Arr import, which means same file system and look like it.
-  - Sync at a lower, common folder that contains both incomplete and complete.
-  - Sync to a location that is on the same file system locally as your library and looks like it (docker and network shares make this easy to misconfigure)
-  - You want to sync the incomplete and complete so that when the torrent client does the move, that is reflected locally and all the files are already "there" (even if they're still downloading). Then you want to use hard links because even if it imports before its done, they'll still finish.
-  - This way the whole time it downloads, it is syncing, then torrent client moves to tv sub-folder and sync reflects that. That way downloads are mostly there when declared finished. And even if they're not totally done, having the hard link possible means that is still okay.
-  - (Optional - if applicable and/or required (e.g. remote usenet client)) Configure a custom script to run on import/download/upgrade to remove the remote file
+    - Sync at a lower, common folder that contains both incomplete and complete.
+    - Sync to a location that is on the same file system locally as your library and looks like it (docker and network shares make this easy to misconfigure)
+    - You want to sync the incomplete and complete so that when the torrent client does the move, that is reflected locally and all the files are already "there" (even if they're still downloading). Then you want to use hard links because even if it imports before its done, they'll still finish.
+    - This way the whole time it downloads, it is syncing, then torrent client moves to tv sub-folder and sync reflects that. That way downloads are mostly there when declared finished. And even if they're not totally done, having the hard link possible means that is still okay.
+    - (Optional - if applicable and/or required (e.g. remote usenet client)) Configure a custom script to run on import/download/upgrade to remove the remote file
 - Alternatively a remote mount rather than a remote sync setup is significantly less complicated to configure, but typically slowly.
-  - Mount your remote storage with sshfs or another network file system protocol
-  - Ensure the user and group \*Arr is configured to run as has read or write access.
-  - Configure a remote path map to find the REMOTE path and replace it with the LOCAL equivalent
+    - Mount your remote storage with sshfs or another network file system protocol
+    - Ensure the user and group \*Arr is configured to run as has read or write access.
+    - Configure a remote path map to find the REMOTE path and replace it with the LOCAL equivalent
 
 ### Permissions on the Library Folder
 
@@ -349,8 +349,8 @@ Logs will look like
 Don’t forget to check permissions and ownership of the *destination*. It is easy to get fixated on the download’s ownership and permissions and that is *usually* the cause of permissions related issues, but it *could* be the destination as well. Check that the destination folder(s) exist. Check that a destination *file* doesn’t already exist or can’t be deleted or moved to recycle bin. Check that ownership and permissions allow the downloaded file to be copied, hard linked or moved. The user or group that runs as needs to be able to read and write the root folder.
 
 - For Windows Users this may be due to running as a service:
-  - the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
-  - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer. See the FAQ for how to convert from a service to tray app.
+    - the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
+    - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer. See the FAQ for how to convert from a service to tray app.
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
@@ -368,8 +368,8 @@ Logs will look like
 Don’t forget to check permissions and ownership of the *source*. It is easy to get fixated on the destination's ownership and permissions and that is a *possible* cause of permissions related issues, but it *typically* is the source. Check that the source folder(s) exist. Check that ownership and permissions allow the downloaded file to be copied/hardlinked or copy+delete/moved. The user or group that runs as needs to be able to read and write the downloads folder.
 
 - For Windows Users this may be due to running as a service:
-  - the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
-  - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer. See the FAQ for how to convert from a service to tray app.
+    - the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.
+    - 'Local Service' also generally has very limited permissions. It's therefore advisable to install the app as a system tray application if the user can remain logged in. The option to do so is provided during the installer. See the FAQ for how to convert from a service to tray app.
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 

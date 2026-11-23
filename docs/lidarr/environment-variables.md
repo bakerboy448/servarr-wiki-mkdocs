@@ -60,11 +60,13 @@ The config namespaces are shared between all Servarr apps and correspond to the 
 | `PostgresLogDbConnectionString`  | `POSTGRES` | `LOGDBCONNECTIONSTRING`  | `LIDARR__POSTGRES__LOGDBCONNECTIONSTRING`  |
 | `UrlBase`                | `SERVER`   | `URLBASE`            | `LIDARR__SERVER__URLBASE`         |
 | `BindAddress`            | `SERVER`   | `BINDADDRESS`        | `LIDARR__SERVER__BINDADDRESS`     |
+| `AllowedHosts`           | `SERVER`   | `ALLOWEDHOSTS`       | `LIDARR__SERVER__ALLOWEDHOSTS`    |
 | `Port`                   | `SERVER`   | `PORT`               | `LIDARR__SERVER__PORT`            |
 | `EnableSsl`              | `SERVER`   | `ENABLESSL`          | `LIDARR__SERVER__ENABLESSL`       |
 | `SslPort`                | `SERVER`   | `SSLPORT`            | `LIDARR__SERVER__SSLPORT`         |
 | `SslCertPath`            | `SERVER`   | `SSLCERTPATH`        | `LIDARR__SERVER__SSLCERTPATH`     |
 | `SslCertPassword`        | `SERVER`   | `SSLCERTPASSWORD`    | `LIDARR__SERVER__SSLCERTPASSWORD` |
+| `TrustedNetworks`        | `SERVER`   | `TRUSTEDNETWORKS`    | `LIDARR__SERVER__TRUSTEDNETWORKS` |
 | `UpdateMechanism`        | `UPDATE`   | `MECHANISM`          | `LIDARR__UPDATE__MECHANISM`       |
 | `UpdateAutomatically`    | `UPDATE`   | `AUTOMATICALLY`      | `LIDARR__UPDATE__AUTOMATICALLY`   |
 | `UpdateScriptPath`       | `UPDATE`   | `SCRIPTPATH`         | `LIDARR__UPDATE__SCRIPTPATH`      |
@@ -144,7 +146,7 @@ Branch=master
 ### Available Keys
 
 | Key | Description | Example |
-|-----|-------------|---------|
+| ----- | ------------- | --------- |
 | `PackageVersion` | Custom package version identifier | `1.0.0-custom` |
 | `PackageAuthor` | Package maintainer name | `Community Package` |
 | `PackageGlobalMessage` | Message displayed in UI | `Custom build for Debian 11` |
@@ -156,7 +158,7 @@ Branch=master
 ### UpdateMethod Values
 
 | Value | Numeric | Description | Use Case |
-|-------|---------|-------------|----------|
+| ------- | --------- | ------------- | ---------- |
 | `BuiltIn` | 0 | Default built-in updater | Standard installations |
 | `Script` | 1 | Updates via custom script | Advanced custom setups |
 | `External` | 10 | Updates managed externally | Package managers, Docker |

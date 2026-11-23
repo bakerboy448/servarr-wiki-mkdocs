@@ -14,45 +14,46 @@ tags:
 
 - [Table of Contents](#table-of-contents)
 - [Status](#status)
-  - [Health](#health)
-    - [System Warnings](#system-warnings)
-      - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
-      - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
-      - [New update is available](#new-update-is-available)
-      - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
-      - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
-      - [Branch is for a previous version](#branch-is-for-a-previous-version)
-      - [Could not connect to signalR](#could-not-connect-to-signalr)
-      - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
-      - [Proxy Failed Test](#proxy-failed-test)
-      - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
-      - [Invalid API Key](#invalid-api-key)
-    - [Download Clients](#download-clients)
-      - [Download clients are unavailable due to failures](#download-clients-are-unavailable-due-to-failures)
-    - [Indexers](#indexers)
-      - [Indexers Have No Definition](#indexers-have-no-definition)
-      - [Indexers are Obsolete](#indexers-are-obsolete)
-        - [Obsolete due to Code Changes](#obsolete-due-to-code-changes)
-        - [Obsolete due to Site Removals](#obsolete-due-to-site-removals)
-      - [No indexers are enabled](#no-indexers-are-enabled)
-      - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
-      - [Indexers are unavailable due to failures for more than 6 hours](#indexers-are-unavailable-due-to-failures-for-more-than-6-hours)
-      - [Indexer VIP Expiring](#indexer-vip-expiring)
-      - [Indexer VIP Expired](#indexer-vip-expired)
-      - [Indexers with invalid download clients](#indexers-with-invalid-download-clients)
-    - [Indexer Proxies](#indexer-proxies)
-      - [Indexer proxies are unavailable due to failures](#indexer-proxies-are-unavailable-due-to-failures)
-    - [Applications](#applications)
-      - [Applications are unavailable due to failures](#applications-are-unavailable-due-to-failures)
-      - [Applications are unavailable due to failures for more than 6 hours](#applications-are-unavailable-due-to-failures-for-more-than-6-hours)
-    - [Notifications](#notifications)
-      - [Notifications are unavailable due to failures](#notifications-are-unavailable-due-to-failures)
-  - [Disk Space](#disk-space)
-  - [About](#about)
-  - [More Info](#more-info)
+    - [Health](#health)
+        - [System Warnings](#system-warnings)
+            - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
+            - [New update is available](#new-update-is-available)
+            - [Cannot install update because startup folder is in an App Translocation folder](#cannot-install-update-because-startup-folder-is-in-an-app-translocation-folder)
+            - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+            - [Cannot install update because UI folder is not writable by the user](#cannot-install-update-because-ui-folder-is-not-writable-by-the-user)
+            - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
+            - [Could not connect to signalR](#could-not-connect-to-signalr)
+            - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
+            - [Proxy Failed Test](#proxy-failed-test)
+            - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
+            - [Invalid API Key](#invalid-api-key)
+            - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
+        - [Download Clients](#download-clients)
+            - [Download clients are unavailable due to failures](#download-clients-are-unavailable-due-to-failures)
+        - [Indexers](#indexers)
+            - [Indexers Have No Definition](#indexers-have-no-definition)
+            - [Indexers are Obsolete](#indexers-are-obsolete)
+                - [Obsolete due to Code Changes](#obsolete-due-to-code-changes)
+                - [Obsolete due to Site Removals](#obsolete-due-to-site-removals)
+            - [No indexers are enabled](#no-indexers-are-enabled)
+            - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
+            - [Indexers are unavailable due to failures for more than 6 hours](#indexers-are-unavailable-due-to-failures-for-more-than-6-hours)
+            - [Indexer VIP Expiring](#indexer-vip-expiring)
+            - [Indexer VIP Expired](#indexer-vip-expired)
+            - [Indexers with invalid download clients](#indexers-with-invalid-download-clients)
+        - [Indexer Proxies](#indexer-proxies)
+            - [Indexer proxies are unavailable due to failures](#indexer-proxies-are-unavailable-due-to-failures)
+        - [Applications](#applications)
+            - [Applications are unavailable due to failures](#applications-are-unavailable-due-to-failures)
+            - [Applications are unavailable due to failures for more than 6 hours](#applications-are-unavailable-due-to-failures-for-more-than-6-hours)
+        - [Notifications](#notifications)
+            - [Notifications are unavailable due to failures](#notifications-are-unavailable-due-to-failures)
+    - [Disk Space](#disk-space)
+    - [About](#about)
+    - [More Info](#more-info)
 - [Tasks](#tasks)
-  - [Scheduled](#scheduled)
-  - [Queue](#queue)
+    - [Scheduled](#scheduled)
+    - [Queue](#queue)
 - [Backup](#backup)
 - [Updates](#updates)
 - [Events](#events)
@@ -70,10 +71,6 @@ This page contains a list of health checks errors. These health checks are perio
 
 - The branch you have set is not a valid release branch. You will not receive updates. Please change to one of the [current release branches](faq.md#how-do-i-update-prowlarr).
 
-#### Currently installed SQLite version is not supported
-
-- Prowlarr stores its data in an SQLite database. The SQLite3 library installed on your system is too old. Prowlarr requires at least version 3.9.0. Note that Prowlarr uses `libSQLite3.so` which may or may not be contained in a SQLite3 upgrade package.
-
 #### New update is available
 
 - Rejoice, the developers have released a new update. This generally means awesome new features and squashed piles of bugs (right?). Apparently you don’t have Auto-Updating enabled, so you’ll have to figure out how to update on your platform. Pressing the Install button on the System => Updates page is probably a good starting point.
@@ -84,9 +81,17 @@ This page contains a list of health checks errors. These health checks are perio
 !!! warning
     If your installed version is more than 180 days old, this escalates from a Warning to an Error.
 
+#### Cannot install update because startup folder is in an App Translocation folder
+
+- macOS Gatekeeper moved Prowlarr's app bundle into a randomized App Translocation folder because it was launched from an unapproved location. Prowlarr cannot write to its own Startup folder from there, so updates fail. Move the app to a stable location such as /Applications and relaunch it to resolve this.
+
 #### Cannot install update because startup folder is not writable by the user
 
 - This means Prowlarr will be unable to update itself. You’ll have to update Prowlarr manually or set the permissions on Prowlarr’s Startup directory (the installation directory) to allow Prowlarr to update itself.
+
+#### Cannot install update because UI folder is not writable by the user
+
+- This means Prowlarr will be unable to update itself. You’ll have to update Prowlarr manually or set the permissions on Prowlarr’s UI directory (inside the installation directory) to allow Prowlarr to update itself.
 
 #### Updating will not be possible to prevent deleting AppData on Update
 
@@ -96,17 +101,13 @@ This page contains a list of health checks errors. These health checks are perio
 - This means Prowlarr will be unable to update itself without risking data-loss.
 - If you’re on linux, you’ll probably have to change the home directory for the user that is running Prowlarr and copy the current contents of the ~/.config/Prowlarr directory to preserve your database.
 
-#### Branch is for a previous version
-
-- The update branch setup in Settings/General is for a previous version of Prowlarr, therefore the instance will not see correct update information in the System/Updates feed and may not receive new updates when released.
-
 #### Could not connect to signalR
 
 - signalR drives the dynamic UI updates, so if your browser cannot connect to signalR on your server you won’t see any real time updates in the UI.
 
 - The most common occurrence of this is use of a reverse proxy or cloudflare
-  - Cloudflare needs websockets enabled.
-  - Nginx requires the following addition to the location block for the app:
+    - Cloudflare needs websockets enabled.
+    - Nginx requires the following addition to the location block for the app:
 
 ```nginx
  proxy_http_version 1.1;
@@ -148,6 +149,8 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 #### Failed to resolve the IP Address for the Configured Proxy Host
 
+{#proxy-failed-resolve-ip}
+
 - Review your proxy settings and ensure they are accurate
 - Ensure your proxy is up, running, and accessible
 
@@ -157,12 +160,21 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 
 #### System Time is off by more than 1 day
 
+{#system-time-off}
+
 - System time is off by more than 1 day. Scheduled tasks may not run correctly until the time is corrected
 - Review your system time and ensure it is synced to an authoritative time server and accurate
 
 #### Invalid API Key
 
 - Your Prowlarr API key is shorter than the required minimum of 20 characters. Update your API key in Settings or the config file to be at least 20 characters long.
+
+#### Allowed Hosts Not Configured
+
+{#allowed-hosts-not-configured}
+
+- Allowed Hosts is not configured, so Prowlarr will accept requests for any hostname. Set [Allowed Hosts](settings.md#host) to a comma-separated list of the hostnames and IP addresses Prowlarr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Prowlarr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
 
 ### Download Clients
 
@@ -193,10 +205,10 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 ##### Obsolete due to Site Removals
 
 - Certain sites may be requested to be removed from Prowlarr or Jackett. These may then be marked as Obsolete.
-  - [TVVault](https://github.com/Prowlarr/Prowlarr/issues/573) in [Prowlarr #700](https://github.com/Prowlarr/Prowlarr/pull/700)
-  - Audiobookbay has requested that Prowlarr not access their API
-  - Ebookbay has requested that Prowlarr not access their API
-  - Rarbg has [shutdown effective 2023-05-31](https://torrentfreak.com/iconic-torrent-site-rarbg-shuts-down-all-content-releases-stop-230531/)
+    - [TVVault](https://github.com/Prowlarr/Prowlarr/issues/573) in [Prowlarr #700](https://github.com/Prowlarr/Prowlarr/pull/700)
+    - Audiobookbay has requested that Prowlarr not access their API
+    - Ebookbay has requested that Prowlarr not access their API
+    - Rarbg has [shutdown effective 2023-05-31](https://torrentfreak.com/iconic-torrent-site-rarbg-shuts-down-all-content-releases-stop-230531/)
 
 #### No indexers are enabled
 
@@ -226,6 +238,8 @@ If Prowlarr is not running on the same machine as your reverse proxy. Replace 12
 - Your VIP subscription or benefits to your indexer have expired based on the expiration date you configured into for indexer in Prowlarr.
 
 #### Indexers with invalid download clients
+
+{#invalid-indexer-download-client-setting}
 
 - One or more of your indexers is configured with a download client that is either disabled or no longer exists. Check Settings => Download Clients and update or remove the download client assignment on the affected indexer(s).
 
@@ -344,8 +358,8 @@ The events tab will show you what has been happening within your Prowlarr. This 
 - Message - This column will tell you what message as been sent from the component from the previous column.
 - Gear Icon - This option will allow you to change how many Components/Messages are displayed per page (Default is 50)
 - Options at the top of the page
-  - Refresh - This option will refresh the current page, pulling a new events log
-  - Clear - This will clear the current events log allowing you to start from fresh
+    - Refresh - This option will refresh the current page, pulling a new events log
+    - Clear - This will clear the current events log allowing you to start from fresh
 
 # Log Files
 
@@ -354,8 +368,8 @@ This page will allow you to download and see what current log files are availabl
 On the top row there are several options to allow you to control your log files.
 
 - The top row on the far left there is a dropdown that will allow you to switch from Log files and Updater Log Files
-  - Log Files - The bread and butter of any support issue more on log files can be found here.
-  - Updater Log Files - This will show the log files associated with Prowlarr's updater script
+    - Log Files - The bread and butter of any support issue more on log files can be found here.
+    - Updater Log Files - This will show the log files associated with Prowlarr's updater script
 
 !!! info
     If you're on docker this will be empty as you should be updating by downloading a new docker image
@@ -364,6 +378,18 @@ On the top row there are several options to allow you to control your log files.
 - Delete - This will clear all logs allowing you to start from fresh
 - File Name - This will display the file name associated with the log
 - Last Written - This is the local time that this particular log file was written to.
-  - Prowlarr uses rolling log files limited to 1MB each. The current log file is always prowlarr.txt, for the the other files prowlarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
-  - When Debug log level is enabled, additional prowlarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
-  - When Trace log level is enabled, additional prowlarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+    - Prowlarr uses rolling log files limited to 1MB each. The current log file is always prowlarr.txt, for the the other files prowlarr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
+    - When Debug log level is enabled, additional prowlarr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
+    - When Trace log level is enabled, additional prowlarr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+
+# Health checks not present in current releases
+
+These health checks were removed from current Prowlarr and only appear on older versions. If you see one of them, [update to a supported release](faq.md#how-do-i-update-prowlarr).
+
+## Currently installed SQLite version is not supported
+
+Not present in current Prowlarr. [Update to a supported release](faq.md#how-do-i-update-prowlarr).
+
+## Branch is for a previous version
+
+Not present in current Prowlarr. [Update to a supported release](faq.md#how-do-i-update-prowlarr).

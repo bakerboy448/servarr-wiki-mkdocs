@@ -21,59 +21,59 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
 {#downloadclient}
 
 - Aria2 {#aria2}
-  - Open-source, multi-protocol download utility supporting HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Open-source, multi-protocol download utility supporting HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Deluge {#deluge}
-  - Open-source, cross-platform BitTorrent client with a web UI and remote daemon.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Open-source, cross-platform BitTorrent client with a web UI and remote daemon.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Download Station {#torrentdownloadstation}
-  - Synology NAS built-in download manager. Handles torrent downloads natively without a separate client.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Synology NAS built-in download manager. Handles torrent downloads natively without a separate client.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Download Station {#usenetdownloadstation}
-  - Synology NAS built-in download manager. Handles Usenet downloads natively without a separate client.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Synology NAS built-in download manager. Handles Usenet downloads natively without a separate client.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Flood {#flood}
-  - Modern web UI for rTorrent (and other torrent backends) with a clean interface and real-time updates.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Modern web UI for rTorrent (and other torrent backends) with a clean interface and real-time updates.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Freebox Download {#torrentfreeboxdownload}
-  - Download client built into Free's Freebox home router/gateway.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Download client built into Free's Freebox home router/gateway.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Hadouken {#hadouken}
-  - Open-source BitTorrent client with a web UI.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Open-source BitTorrent client with a web UI.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - NZBGet {#nzbget}
-  - Efficient, low-resource Usenet downloader. A common alternative to SABnzbd.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Efficient, low-resource Usenet downloader. A common alternative to SABnzbd.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - NZBVortex {#nzbvortex}
-  - Mac-native Usenet client.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Mac-native Usenet client.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Pneumatic {#pneumatic}
-  - NZB client that drops files into a watch folder. Primarily used with Kodi.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - NZB client that drops files into a watch folder. Primarily used with Kodi.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - qBittorrent {#qbittorrent}
-  - Popular open-source BitTorrent client with a web UI. Widely recommended as the default choice.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Popular open-source BitTorrent client with a web UI. Widely recommended as the default choice.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - rTorrent {#rtorrent}
-  - Terminal-based BitTorrent client, often paired with the ruTorrent web UI.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Terminal-based BitTorrent client, often paired with the ruTorrent web UI.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - SABnzbd {#sabnzbd}
-  - Open-source Usenet client. One of the most widely used Usenet downloaders.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Open-source Usenet client. One of the most widely used Usenet downloaders.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Torrent Blackhole {#torrentblackhole}
-  - Watches a folder for `.torrent` files. Use this if your torrent client doesn't have a direct API integration.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Watches a folder for `.torrent` files. Use this if your torrent client doesn't have a direct API integration.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Transmission {#transmission}
-  - Lightweight, cross-platform BitTorrent client with a web UI. Popular on Linux and NAS devices.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Lightweight, cross-platform BitTorrent client with a web UI. Popular on Linux and NAS devices.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Usenet Blackhole {#usenetblackhole}
-  - Watches a folder for `.nzb` files. Use this if your Usenet client doesn't have a direct API integration.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Watches a folder for `.nzb` files. Use this if your Usenet client doesn't have a direct API integration.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - uTorrent {#utorrent}
-  - Avoid uTorrent. It's adware and has a history of including spyware. Most users choose qBittorrent.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Long-standing BitTorrent client. Past versions bundled adware in the installer, which led many users toward alternatives such as qBittorrent.
+    - [Refer to the Settings Page](settings.md#download-clients)
 - Vuze {#vuze}
-  - Java-based BitTorrent client with an advanced feature set including swarm merging and built-in search.
-  - [Refer to the Settings Page](settings.md#download-clients)
+    - Java-based BitTorrent client with an advanced feature set including swarm merging and built-in search.
+    - [Refer to the Settings Page](settings.md#download-clients)
 
 ## Indexers
 
@@ -82,132 +82,137 @@ This page is the disambiguation target for all **More Info** links in the Lidarr
 ### Usenet
 
 - Newznab {#newznab}
-  - Standardised API used by most Usenet indexing sites. Many presets are available, but all require an API key. Indexer aggregators like [Prowlarr](../prowlarr.md) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can manage more than one Newznab indexer from a single interface.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Standardised API used by most Usenet indexing sites. Many presets are available, but all require an API key. Indexer aggregators like [Prowlarr](../prowlarr.md) and [NZBHydra2](https://github.com/theotherp/nzbhydra2) can manage more than one Newznab indexer from a single interface.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 
 ### Torrents
 
 - FileList {#filelist}
-  - Private torrent tracker with a broad content library.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Private torrent tracker with a broad content library.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Gazelle API {#gazelle}
-  - Used by Gazelle-based private trackers such as Redacted (formerly What.CD).
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Generic indexer for Gazelle-based private trackers. If your tracker has its own dedicated entry on this page, for example Redacted, use that entry instead; use Gazelle API only for Gazelle-based trackers without a specific Lidarr indexer type.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Headphones VIP {#headphones}
-  - Legacy music indexer aggregator from the Headphones era.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Legacy music indexer aggregator from the Headphones era.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - IP Torrents {#iptorrents}
-  - Private tracker.
+    - Private tracker.
   !!! info
       IP Torrents' native implementation doesn't support Search.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Nyaa {#nyaa}
-  - Public Japanese torrent indexer. Covers anime, manga, and music.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Public Japanese torrent indexer. Covers anime, manga, and music.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Redacted {#redacted}
-  - Premier private music tracker. Requires an account with the Redacted community.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Premier private music tracker. Requires an account with the Redacted community.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Torrent RSS Feed {#torrentrssindexer}
-  - Generic torrent RSS feed parser.
+    - Generic torrent RSS feed parser.
   !!! info
       The RSS feed must contain a `pubdate`. The release size is recommended as well.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - TorrentLeech {#torrentleech}
-  - Private tracker.
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Private tracker.
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 - Torznab {#torznab}
-  - Standardised API for torrent indexers, based on the Newznab specification with torrent-specific extensions. Supports RSS feeds and backlog searching. Primarily provided by [Prowlarr](../prowlarr.md) and [Jackett](https://github.com/Jackett/Jackett).
-  - [Refer to the Settings Page](settings.md#indexer-settings)
+    - Standardised API for torrent indexers, based on the Newznab specification with torrent-specific extensions. Supports RSS feeds and backlog searching. Primarily provided by [Prowlarr](../prowlarr.md) and [Jackett](https://github.com/Jackett/Jackett).
+    - [Refer to the Settings Page](settings.md#indexer-settings)
 
 ## Notifications
 
 {#notification}
 
 - Apprise {#apprise}
-  - Allows notifications to be sent to many popular notification services via a single interface.
+    - Allows notifications to be sent to many popular notification services via a single interface.
 - Custom Script {#customscript}
-  - Runs a user-supplied script when a specified event occurs. See [Custom Scripts](custom-scripts.md) for the full list of available environment variables and example scripts.
+    - Runs a user-supplied script when a specified event occurs. See [Custom Scripts](custom-scripts.md) for the full list of available environment variables and example scripts.
 - Discord {#discord}
-  - Sends notifications to a Discord channel via webhook. One of the most commonly used notification integrations.
+    - Sends notifications to a Discord channel via webhook. One of the most commonly used notification integrations.
 - Email {#email}
-  - Sends notification emails. If you use Gmail, enable App Passwords under your Google account security settings rather than using your main password.
+    - Sends notification emails. If you use Gmail, enable App Passwords under your Google account security settings rather than using your main password.
   !!! info
       You can use a display name with the address: `Your Name <email@example.com>`
 - Emby / Jellyfin {#mediabrowser}
-  - Notifies an Emby or Jellyfin server to refresh its music library after a track is imported or upgraded.
+    - Notifies an Emby or Jellyfin server to refresh its music library after a track is imported or upgraded.
 - Gotify {#gotify}
-  - Self-hosted push notification server.
+    - Self-hosted push notification server.
 - Join {#join}
-  - Push notification service for Android devices.
+    - Push notification service for Android devices.
 - Kodi {#xbmc}
-  - Notifies a Kodi instance to refresh its music library after a track is imported or upgraded. Kodi is a free, open-source media centre application.
+    - Notifies a Kodi instance to refresh its music library after a track is imported or upgraded. Kodi is a free, open-source media centre application.
 - Mailgun {#mailgun}
-  - Transactional email API service for sending notification emails.
+    - Transactional email API service for sending notification emails.
 - Notifiarr {#notifiarr}
-  - See [Useful Tools — Notifiarr](../useful-tools.md#notifiarr-fka-discord-notifier)
+    - See [Useful Tools — Notifiarr](../useful-tools.md#notifiarr-fka-discord-notifier)
 - ntfy.sh {#ntfy}
-  - Self-hostable push notification service with a simple HTTP API.
+    - Self-hostable push notification service with a simple HTTP API.
 - Plex Media Server {#plexserver}
-  - Notifies a Plex Media Server to refresh its music library after a track is imported or upgraded.
+    - Notifies a Plex Media Server to refresh its music library after a track is imported or upgraded.
 - Prowl {#prowl}
-  - iOS push notification service.
+    - iOS push notification service.
 - Pushbullet {#pushbullet}
-  - Cross-platform notification and file sharing service.
+    - Cross-platform notification and file sharing service.
 - Pushcut {#pushcut}
-  - iOS app for automation and notifications.
+    - iOS app for automation and notifications.
 - Pushover {#pushover}
-  - Simple push notification service for mobile devices.
+    - Simple push notification service for mobile devices.
 - SendGrid {#sendgrid}
-  - Transactional email API service for sending notification emails.
+    - Transactional email API service for sending notification emails.
 - Signal {#signal}
-  - Sends notifications via the Signal messaging app. Requires a running [Signal-CLI](https://github.com/AsamK/signal-cli) instance.
+    - Sends notifications via the Signal messaging app. Requires a running [Signal-CLI](https://github.com/AsamK/signal-cli) instance.
 - Simplepush {#simplepush}
-  - Simple push notification service requiring no account.
+    - Simple push notification service requiring no account.
 - Slack {#slack}
-  - Sends notifications to a Slack channel via webhook.
+    - Sends notifications to a Slack channel via webhook.
 - Subsonic {#subsonic}
-  - Notifies a Subsonic-compatible server to update its music library.
+    - Notifies a Subsonic-compatible server to update its music library.
 - Synology Indexer {#synologyindexer}
-  - Triggers a Synology NAS media indexer scan after a track is imported or upgraded.
+    - Triggers a Synology NAS media indexer scan after a track is imported or upgraded.
 - Telegram {#telegram}
-  - Sends notifications to a Telegram chat or channel via a bot.
+    - Sends notifications to a Telegram chat or channel via a bot.
 - Twitter {#twitter}
-  - Posts notifications to a Twitter account.
+    - Posts notifications to a Twitter account.
 - Webhook {#webhook}
-  - Sends an HTTP POST request to a configured URL when events occur.
+    - Sends an HTTP POST request to a configured URL when events occur.
 
 ## Lists
 
 {#importlist}
 
-- Custom List {#customlist}
-  - Import artists from a manually maintained list.
+- Custom List {#customimport}
+    - Import artists from a manually maintained list.
 - Headphones {#headphonesimport}
-  - Import artists from a [Headphones](https://github.com/rembo10/headphones) instance.
+    - Import artists from a [Headphones](https://github.com/rembo10/headphones) instance.
 - Last.fm Tag {#lastfmtag}
-  - Import artists via a Last.fm genre or style tag.
+    - Import artists via a Last.fm genre or style tag.
 - Last.fm User {#lastfmuser}
-  - Import artists from a Last.fm user's listening history or loved tracks.
+    - Import artists from a Last.fm user's listening history or loved tracks.
 - Lidarr {#lidarrimport}
-  - Sync monitored artists from another Lidarr instance.
+    - Sync monitored artists from another Lidarr instance.
 - Lidarr Lists {#lidarrlists}
-  - Import artists from curated Lidarr community lists.
+    - Import artists from curated Lidarr community lists.
 - MusicBrainz Series {#musicbrainzseries}
-  - Import artists belonging to a [MusicBrainz Series](https://musicbrainz.org/doc/Series).
+    - Import artists belonging to a [MusicBrainz Series](https://musicbrainz.org/doc/Series).
 - Spotify Followed Artists {#spotifyfollowedartists}
-  - Import artists you follow on Spotify.
+    - Import artists you follow on Spotify.
 - Spotify Playlists {#spotifyplaylist}
-  - Import artists from your Spotify playlists.
+    - Import artists from your Spotify playlists.
 - Spotify Saved Albums {#spotifysavedalbums}
-  - Import artists from your Spotify saved albums.
+    - Import artists from your Spotify saved albums.
 
 ## Metadata
 
 {#metadata}
 
+Each consumer below is configured separately under **Settings → Metadata**. Enabling a consumer expands its own settings block with **Artist Metadata**, **Album Metadata**, **Artist Images**, and **Album Images** toggles, distinct from the **Write Metadata to Audio Files** panel used for tagging audio files themselves.
+
 - Kodi (XBMC) / Emby {#xbmcmetadata}
-  - Generates `.nfo` sidecar files for artist and album folders, compatible with Kodi and Emby/Jellyfin.
+    - Writes `artist.nfo` and `album.nfo` sidecar files. Also writes images: for artists, the poster as `folder.jpg` alongside banner, fanart, and logo/clearlogo files; for albums, the cover as `folder.jpg` and disc art as `discart.jpg`. Compatible with Kodi and Emby/Jellyfin.
+    - [Refer to the Settings Page](settings.md#metadata)
 - Roksbox {#roksboxmetadata}
-  - Generates metadata files compatible with Roksbox media players.
+    - Writes `.xml` track metadata files. For artist images, writes a single image, the poster if one exists, otherwise the first available image, named after the artist folder itself. Doesn't write album images.
+    - [Refer to the Settings Page](settings.md#metadata)
 - WDTV {#wdtvmetadata}
-  - Generates metadata files compatible with WD TV media players.
+    - Writes `.xml` track metadata files only. The Artist Images and Album Images toggles appear in its settings but don't do anything; this consumer never writes image files.
+    - [Refer to the Settings Page](settings.md#metadata)

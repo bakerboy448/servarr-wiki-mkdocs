@@ -41,8 +41,8 @@ The queue shows all items the application can recognize that is in the specified
 ## Queue Action Icons
 
 - X - Remove Item from Queue
-  - Remove Release From Download Client - Remove Release from Download Client. Mandatory for unmatched release items
-  - Blocklist Release - Add Release to Blocklist
+    - Remove Release From Download Client - Remove Release from Download Client. Mandatory for unmatched release items
+    - Blocklist Release - Add Release to Blocklist
 - Human Icon - Manual Import Release
 - Grab Icon - Send Release to Download Client
 

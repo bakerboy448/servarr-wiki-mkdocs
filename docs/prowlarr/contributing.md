@@ -31,15 +31,15 @@ Prowlarr is written in C# (backend) and JS (frontend). The backend is built on t
 - HTML/Javascript editor of choice (VS Code/Sublime Text/Webstorm/Atom/etc)
 - [Git](https://git-scm.com/downloads)
 - The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
-  - **20** (any minor or patch version within this)
+    - **20** (any minor or patch version within this)
 {.grid-list}
 
 !!! warning
     The Application will **NOT** run on older versions such as `18.x`, `16.x` or any version below 20.0! Due to a dependency issue, it will also not run on `21.x` and is untested on other versions.
 
 - [Yarn](https://yarnpkg.com/getting-started/install) is required to build the frontend
-  - Yarn is included with **Node 20**+ by default. Enable it with `corepack enable`
-  - For other Node versions, install it with `npm i -g corepack`
+    - Yarn is included with **Node 20**+ by default. Enable it with `corepack enable`
+    - For other Node versions, install it with `npm i -g corepack`
 
 ## Getting started
 
@@ -126,10 +126,10 @@ dotnet msbuild -restore src/Prowlarr.sln -p:Configuration=Debug -p:Platform=Posi
 - You're probably going to get some comments or questions from us, they will be to ensure consistency and maintainability
 - We'll try to respond to pull requests as soon as possible, if its been a day or two, please reach out to us, we may have missed it
 - Each PR should come from its own [feature branch](http://martinfowler.com/bliki/FeatureBranch.html) not develop in your fork, it should have a meaningful branch name (what is being added/fixed)
-  - `new-feature` (Good)
-  - `fix-bug` (Good)
-  - `patch` (Bad)
-  - `develop` (Bad)
+    - `new-feature` (Good)
+    - `fix-bug` (Good)
+    - `patch` (Bad)
+    - `develop` (Bad)
 - Commits should be wrote as `New:` or `Fixed:` for changes that would not be considered a `maintenance release`
 
 ## Unit Testing

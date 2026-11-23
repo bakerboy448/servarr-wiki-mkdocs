@@ -7,7 +7,7 @@ tags:
   - freebsd
 ---
 
-## FreeBSD
+# FreeBSD
 
 The Lidarr team only provides builds for FreeBSD. The FreeBSD community maintains Plugins and Ports.
 
@@ -102,10 +102,10 @@ You can now close the shell.
 ## Troubleshooting
 
 - The service appears to be running but the UI isn't loading or the page is timing out
-  - Double check that `allow_mlock` is on in the jail
+    - Double check that `allow_mlock` is on in the jail
 
 - `System.NET.Sockets.SocketException (43): Protocol not supported`
-  - Make sure you have `VNET` turned on for your jail, ip6=inherit, or ip6=new
+    - Make sure you have `VNET` turned on for your jail, ip6=inherit, or ip6=new
 
 !!! info
     The service script works around the lack of VNET and/or IP6, so VNET or ip6=inherit isn't required.

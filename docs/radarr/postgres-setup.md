@@ -107,12 +107,12 @@ Before starting a migration please ensure that you have run Radarr against the c
 1. Open your preferred database management tool and connect to the Postgres database instance
 1. Run the following commands:
 
-	```SQL
-	DELETE FROM "QualityProfiles";
-	DELETE FROM "QualityDefinitions";
-	DELETE FROM "DelayProfiles";
-	DELETE FROM "Metadata";
-	```
+ ```SQL
+ DELETE FROM "QualityProfiles";
+ DELETE FROM "QualityDefinitions";
+ DELETE FROM "DelayProfiles";
+ DELETE FROM "Metadata";
+ ```
 
 1. Start the migration by using either of these options:
 
@@ -170,4 +170,4 @@ Before starting a migration please ensure that you have run Radarr against the c
     select setval('public."Users_Id_seq"', (SELECT MAX("Id")+1 FROM "Users"));
     ```
 
-3. Start Radarr
+1. Start Radarr

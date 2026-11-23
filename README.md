@@ -4,7 +4,7 @@ MkDocs Material build of the [Servarr Wiki](https://github.com/Servarr/Wiki) (Li
 
 Upstream WikiJS markdown is converted to MkDocs Material (admonitions, icons, relative links, tabsets) and published from this repository.
 
-> **Upstream sync:** Servarr/Wiki `578505a7` (2026-07-13)
+> **Upstream sync:** Servarr/Wiki `16017b74` (2026-11-21)
 
 ## Quick start
 

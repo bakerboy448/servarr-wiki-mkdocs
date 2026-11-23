@@ -65,7 +65,7 @@ To provide good and useful logs for sharing:
 - When using [0bin](https://0bin.net/), be sure to disable colorization and don't burn after reading.
 
 - To search across old log files in Windows, use the Notepad++ **Find in Files** function.
-- **Unix only:** To search across old log files, use `grep`. For example, to find entries for an artist or release named "Shooter": `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt`. If your [Appdata Directory](appdata-directory.md) is in your home folder: `grep -inr -C 100 -e 'Shooter' /home/$User/.config/logs/*.trace*.txt`
+- **Unix only:** To search across old log files, use `grep`. For example, to find entries for an artist or release named "Shooter": `grep -inr -C 100 -e 'Shooter' /path/to/logs/*.trace*.txt`. If your [Appdata Directory](appdata-directory.md) is in your home folder: `grep -inr -C 100 -e 'Shooter' /home/$USER/.config/Lidarr/logs/*.trace*.txt`
 
 ```none
 
@@ -125,7 +125,7 @@ If an upgrade goes wrong, these steps will help you recover your installation.
 
 ## Determine the issue
 
-- The best place to look when the application won't start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those don't have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](settings.md#logging) and [Log Files](system.md#log-files) to find them and increase the log level.
+- The best place to look when the application won't start after an update is to review the [update logs](#update-logs-location) and see if the update completed successfully. If those don't have an issue then the next step is to look at your regular application log files, before trying to start again, use [Logging](#tracedebug-logs) and [Log Files](system.md#log-files) to find them and increase the log level.
 - Most often, the host system messes with the `/tmp` directory and deletes critical Lidarr files during the upgrade, causing both the upgrade and rollback to fail. In this case, reinstall in-place over the existing installation.
 
 ### Migration Issue
@@ -201,11 +201,11 @@ Lidarr communicates with your download client via its API through the client's w
 
 ### SSL in use and incorrectly configured
 
-Ensure SSL encryption isn't turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](faq.md#invalid-certificate-and-other-HTTPS-or-SSL-issues) for more information.
+Ensure SSL encryption isn't turned on if you're using both your instance and your download client on a local network. See [the SSL FAQ entry](../radarr/faq.md#invalid-certificate-and-other-https-or-ssl-issues) for more information.
 
 ### Can’t see share on Windows
 
-The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t see my files on a remote server](faq.md#why-cant-see-my-files-on-a-remote-server) for details.
+The default user for a Windows service is `LocalService` which typically doesn’t have access to your shares. Edit the service and set it up to run as your own user, see the FAQ entry [why can’t Lidarr see my files on a remote server](faq.md#why-cant-lidarr-see-my-files-on-a-remote-server) for details.
 
 ### Mapped network drives aren't reliable
 
@@ -240,15 +240,15 @@ Thus `/volume3/data` doesn't exist within Lidarr's container or isn't accessible
 #### Remote Mount or Remote Sync (Syncthing)
 
 - You need it to be syncing the whole time it's downloading. And you need that local sync destination to be able to be hard links when \Lidarr imports, which means same filesystem and look like it.
-  - Sync at a lower, common folder that contains both incomplete and complete.
-  - Sync to a location that's on the same file system locally as your library and looks like it (docker and network shares make this easy to misconfigure)
-  - You want to sync the incomplete and complete so that when the torrent client does the move, that's reflected locally and all the files are already "there" (even if they're still downloading). Then you want to use hard links because even if it imports before its done, they'll still finish.
-  - This way the whole time it downloads, it's syncing, then torrent client moves to tv sub-folder and sync reflects that. That way downloads are in place when declared finished. And even if they're not totally done, having the hard link possible means that's still okay.
-  - (Optional - if applicable and/or required (for example, remote usenet client)) Configure a custom script to run on import/download/upgrade to remove the remote file
+    - Sync at a lower, common folder that contains both incomplete and complete.
+    - Sync to a location that's on the same file system locally as your library and looks like it (docker and network shares make this easy to misconfigure)
+    - You want to sync the incomplete and complete so that when the torrent client does the move, that's reflected locally and all the files are already "there" (even if they're still downloading). Then you want to use hard links because even if it imports before its done, they'll still finish.
+    - This way the whole time it downloads, it's syncing, then torrent client moves to tv sub-folder and sync reflects that. That way downloads are in place when declared finished. And even if they're not totally done, having the hard link possible means that's still okay.
+    - (Optional - if applicable and/or required (for example, remote usenet client)) Configure a custom script to run on import/download/upgrade to remove the remote file
 - A remote mount is simpler to configure than a sync setup, though it tends to be slower.
-  - Mount your remote storage with sshfs or another network file system protocol
-  - Ensure the user and group that Lidarr runs as has read or write access.
-  - Configure a remote path map to find the remote path and replace it with the local path
+    - Mount your remote storage with sshfs or another network file system protocol
+    - Ensure the user and group that Lidarr runs as has read or write access.
+    - Configure a remote path map to find the remote path and replace it with the local path
 
 ### Permissions on the Library Folder
 
@@ -261,8 +261,8 @@ Logs will look like
 Don’t forget to check permissions and ownership of the *destination*. It's easy to get fixated on the download’s ownership and permissions and that's often the cause of permissions issues, but the destination can also be at fault. Check that the destination folders exist. Check that no destination *file* already exists, or that you can delete or move any existing file to the recycle bin. Check that ownership and permissions allow you to copy, hard link, or move the downloaded file. The user or group that runs as needs to be able to read and write the root folder.
 
 - For Windows Users this may be due to running as a service:
-  - the Windows Service runs under the 'Local Service' account, by default this account doesn't have permissions to access your user's home directory unless you assign permissions manually. This is particularly relevant when using download clients configured to download to your home directory.
-  - 'Local Service' also has limited permissions. Install the app as a system tray application to install the app as a system tray application if the user can remain logged in. The installer provides this option. See the FAQ for how to convert from a service to tray app.
+    - the Windows Service runs under the 'Local Service' account, by default this account doesn't have permissions to access your user's home directory unless you assign permissions manually. This is particularly relevant when using download clients configured to download to your home directory.
+    - 'Local Service' also has limited permissions. Install the app as a system tray application to install the app as a system tray application if the user can remain logged in. The installer provides this option. See the FAQ for how to convert from a service to tray app.
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
@@ -280,8 +280,8 @@ Logs will look like
 Don’t forget to check permissions and ownership of the *source*. It's easy to get fixated on the destination's ownership and permissions and that's a *possible* cause of permissions related issues, but it *typically* is the source. Check that the source folders exist - and if docker that the mounts are aligned and consistent. Check that ownership and permissions allow you to copy, hard-link, or move the downloaded file. The user or group that runs as needs to be able to read and write the downloads folder.
 
 - For Windows Users this may be due to running as a service:
-  - the Windows Service runs under the 'Local Service' account, by default this account doesn't have permissions to access your user's home directory unless you assign permissions manually. This is particularly relevant when using download clients configured to download to your home directory.
-  - 'Local Service' also has limited permissions. Install the app as a system tray application to install the app as a system tray application if the user can remain logged in. The installer provides this option. See the FAQ for how to convert from a service to tray app.
+    - the Windows Service runs under the 'Local Service' account, by default this account doesn't have permissions to access your user's home directory unless you assign permissions manually. This is particularly relevant when using download clients configured to download to your home directory.
+    - 'Local Service' also has limited permissions. Install the app as a system tray application to install the app as a system tray application if the user can remain logged in. The installer provides this option. See the FAQ for how to convert from a service to tray app.
 
 - For Synology Users refer to [SynoCommunity's Permissions Article for their Packages](https://github.com/SynoCommunity/spksrc/wiki/Permission-Management)
 
@@ -332,6 +332,12 @@ Lidarr only looks at the 60 most recent downloads in SABnzbd and NZBGet. If you 
 The download client shouldn’t be responsible for removing downloads. Configure usenet clients so they *don’t* remove downloads from history. Set up torrent clients so they *don’t* remove torrents when they’re finished seeding (pause or stop instead). Lidarr communicates with the download client to know what to import. If items are *removed*, Lidarr has nothing to import, even if a folder full of files exists.
 
 For SABnzbd, use the History Retention setting.
+
+### Removing a queue item fails with a 500 error
+
+If a queued download couldn't be matched to an artist at all (for example, a release parsed as "Unknown Artist" or one where multiple artists matched ambiguously), clicking the plain **Remove** button on that queue item throws an internal server error instead of removing it.
+
+**Workaround:** use **Remove and Blocklist** instead of plain Remove for these items. It takes a different code path that doesn't hit this crash, and removes the item just as effectively; blocklisting only prevents Lidarr from grabbing that exact same release again, which is rarely a downside for something you're removing anyway.
 
 ### Download doesn't match a library item
 
@@ -484,6 +490,32 @@ You can still add the album to Lidarr and it will appear in your library, but no
 
 !!! info
     If you can't edit MusicBrainz (for example, the release has a pending vote), the only workaround is **Manual Import**: download the files through other means and use Lidarr’s manual import flow to match and move them.
+
+### Release Rejected: Release year does not match album year
+
+Lidarr checks the release year parsed from a release's title/filename against the album's actual release year before grabbing it. Reject a release outright and you'll see:
+
+```none
+Release Rejected
+* Release year 2009 does not match album year 2001 8
+```
+
+The trailing number isn't a typo, it's the year difference (8 years, in this example) with no label attached. The rule itself:
+
+- **0-1 years off:** treated as an exact match, no penalty.
+- **2-3 years off:** accepted, small scoring penalty.
+- **4-5 years off:** accepted, larger scoring penalty (lower-confidence match).
+- **More than 5 years off:** rejected outright with the message above.
+
+Lidarr also checks other monitored releases under the same album (reissues, remasters) before rejecting. If one of those has a release date close enough to the parsed year, Lidarr uses that instead of the primary release's year, so a mismatch against the primary release date doesn't automatically fail the release.
+
+These thresholds aren't configurable. If a release is legitimately correct but the album's release date is wrong or missing on MusicBrainz, fix the date there ([Metadata Troubleshooting → Updating MusicBrainz](metadata-troubleshooting.md#updating-musicbrainz)) and let it propagate, or use **Manual Import** to bypass this check entirely, manual import doesn't run the automatic-grab specification pipeline at all.
+
+### Release silently rejected as "Unknown Artist"
+
+Some rejection reasons only appear in Debug or Trace-level logs, never in the visible **Release Rejected** panel or at Info level. "Unknown Artist" is one of them: if Lidarr can't match the release's parsed artist name against anything in your library or on MusicBrainz, the release is rejected before it reaches the specifications that populate the visible rejection list, so no on-screen reason ever shows for it. Turn logging up to Debug or Trace (see [Turn logging up to trace](#turn-logging-up-to-trace)) to see it as a log line: `Release rejected for the following reasons: [Permanent] Unknown Artist`.
+
+One confirmed cause: some indexers serve release titles with double-HTML-encoded punctuation, for example a literal `&amp;rsquo;` instead of an apostrophe. Lidarr's feed parser only unwraps one layer of HTML-entity encoding before matching, so a double-encoded title (`&amp;rsquo;`, `&amp;amp;`, `&amp;ndash;`) still has a literal entity string sitting where an apostrophe, ampersand, or dash should be, and matching fails silently as a result. There's no in-app fix; if you suspect this, check the raw indexer feed for double-encoded entities and report it to the indexer, or use **Manual Import** to bypass matching for that one release.
 
 ### Certificate validation
 

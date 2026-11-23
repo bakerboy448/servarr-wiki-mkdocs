@@ -10,49 +10,48 @@ tags:
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
-  - [Forced Authentication](#forced-authentication)
-    - [Authentication Method](#authentication-method)
-    - [Authentication Required](#authentication-required)
-  - [How do I reset Stats?](#how-do-i-reset-stats)
-  - [Category Not Available or Missing](#category-not-available-or-missing)
-  - [Can I add any (generic) Torrent RSS Feed?](#can-i-add-any-generic-torrent-rss-feed)
-  - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
-  - [Can I use flaresolverr indexers?](#can-i-use-flaresolverr-indexers)
-  - [How can I add an indexer that is down or not functional?](#how-can-i-add-an-indexer-that-is-down-or-not-functional)
-  - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
-  - [Prowlarr will not sync X Indexer to App](#prowlarr-will-not-sync-x-indexer-to-app)
-  - [What \*Arr Indexer Settings are Compared for App Full Sync](#what-arr-indexer-settings-are-compared-for-app-full-sync)
-  - [How do I update Prowlarr?](#how-do-i-update-prowlarr)
-    - [Can I update Prowlarr inside my Docker container?](#can-i-update-prowlarr-inside-my-docker-container)
-    - [Installing a newer version](#installing-a-newer-version)
-      - [Native](#native)
-      - [Docker](#docker)
-  - [Can I switch from `nightly` back to `develop`?](#can-i-switch-from-nightly-back-to-develop)
-  - [Can I switch between branches?](#can-i-switch-between-branches)
-  - [Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified](#help-my-mac-says-prowlarr-cannot-be-opened-because-the-developer-cannot-be-verified)
-  - [Help, my Mac says Prowlarr.app is damaged and can’t be opened](#help-my-mac-says-prowlarrapp-is-damaged-and-cant-be-opened)
-  - [How do I request a feature for Prowlarr?](#how-do-i-request-a-feature-for-prowlarr)
-  - [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
-  - [I use Prowlarr on a Mac and it suddenly stopped working. What happened?](#i-use-prowlarr-on-a-mac-and-it-suddenly-stopped-working-what-happened)
-  - [How do I change from the Windows Service to a Tray App?](#how-do-i-change-from-the-windows-service-to-a-tray-app)
-  - [How do I Backup/Restore Prowlarr?](#how-do-i-backuprestore-prowlarr)
-    - [Backing up Prowlarr](#backing-up-prowlarr)
-      - [Using built-in backup](#using-built-in-backup)
-      - [Using file system directly](#using-file-system-directly)
-    - [Restoring from Backup](#restoring-from-backup)
-      - [Using zip backup](#using-zip-backup)
-      - [Using file system backup](#using-file-system-backup)
-      - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
-  - [WebUI only Loads at localhost on Windows](#webui-only-loads-at-localhost-on-windows)
-  - [Finding Cookies](#finding-cookies)
-  - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
-  - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
-  - [Help I have locked myself out](#help-i-have-locked-myself-out)
-  - [Weird UI Issues](#weird-ui-issues)
-  - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
-    - [Use of a VPN](#use-of-a-vpn)
-  - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
-  - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
+    - [Forced Authentication](#forced-authentication)
+        - [Authentication Method](#authentication-method)
+        - [Authentication Required](#authentication-required)
+    - [How do I reset Stats?](#how-do-i-reset-stats)
+    - [Category Not Available or Missing](#category-not-available-or-missing)
+    - [Can I add any (generic) Torrent RSS Feed?](#can-i-add-any-generic-torrent-rss-feed)
+    - [Can I add any (generic) Torznab or Newznab indexer?](#can-i-add-any-generic-torznab-or-newznab-indexer)
+    - [Can I use FlareSolverr indexers?](#can-i-use-flaresolverr-indexers)
+    - [How can I add an indexer that is down or not functional?](#how-can-i-add-an-indexer-that-is-down-or-not-functional)
+    - [Prowlarr will not sync to Sonarr](#prowlarr-will-not-sync-to-sonarr)
+    - [Prowlarr will not sync X Indexer to App](#prowlarr-will-not-sync-x-indexer-to-app)
+    - [What \*Arr Indexer Settings are Compared for App Full Sync](#what-arr-indexer-settings-are-compared-for-app-full-sync)
+    - [How do I update Prowlarr?](#how-do-i-update-prowlarr)
+        - [Can I update Prowlarr inside my Docker container?](#can-i-update-prowlarr-inside-my-docker-container)
+        - [Installing a newer version](#installing-a-newer-version)
+            - [Native](#native)
+            - [Docker](#docker)
+    - [Can I switch from `nightly` back to `develop`?](#can-i-switch-from-nightly-back-to-develop)
+    - [Can I switch between branches?](#can-i-switch-between-branches)
+    - [Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified](#help-my-mac-says-prowlarr-cannot-be-opened-because-the-developer-cannot-be-verified)
+    - [Help, my Mac says Prowlarr.app is damaged and can’t be opened](#help-my-mac-says-prowlarrapp-is-damaged-and-cant-be-opened)
+    - [How do I request a feature for Prowlarr?](#how-do-i-request-a-feature-for-prowlarr)
+    - [I am getting an error: Database disk image is malformed](#i-am-getting-an-error-database-disk-image-is-malformed)
+    - [I use Prowlarr on a Mac and it suddenly stopped working. What happened?](#i-use-prowlarr-on-a-mac-and-it-suddenly-stopped-working-what-happened)
+    - [How do I change from the Windows Service to a Tray App?](#how-do-i-change-from-the-windows-service-to-a-tray-app)
+    - [How do I Backup/Restore Prowlarr?](#how-do-i-backuprestore-prowlarr)
+        - [Backing up Prowlarr](#backing-up-prowlarr)
+            - [Using built-in backup](#using-built-in-backup)
+            - [Using file system directly](#using-file-system-directly)
+        - [Restoring from Backup](#restoring-from-backup)
+            - [Using zip backup](#using-zip-backup)
+            - [Using file system backup](#using-file-system-backup)
+            - [File System Restore on Synology NAS](#file-system-restore-on-synology-nas)
+    - [WebUI only Loads at localhost on Windows](#webui-only-loads-at-localhost-on-windows)
+    - [Finding Cookies](#finding-cookies)
+    - [I got a pop-up that said config.xml was corrupt, what now?](#i-got-a-pop-up-that-said-configxml-was-corrupt-what-now)
+    - [Invalid Certificate and other HTTPS or SSL issues](#invalid-certificate-and-other-https-or-ssl-issues)
+    - [Help I have locked myself out](#help-i-have-locked-myself-out)
+    - [Weird UI Issues](#weird-ui-issues)
+    - [VPNs, Jackett, and the \*ARRs](#vpns-jackett-and-the-arrs)
+    - [How do I stop the browser from launching on startup?](#how-do-i-stop-the-browser-from-launching-on-startup)
+    - [Can I easily add all indexers at once?](#can-i-easily-add-all-indexers-at-once)
 
 ## Forced Authentication
 
@@ -64,15 +63,15 @@ As of Prowlarr v1, Authentication is Mandatory.
 
 ### Authentication Method
 
-- `Basic` (Browser pop-up) - Basic Auth is not supported as of Prowlarr v1
+- `Basic` (Browser pop-up) - Removed in Prowlarr v2.0.0. From v2.0.1, a `Basic` value left in the config is rewritten to `Forms` on load
 - `Forms` (Login Page) - This option will have a familiar looking login screen much like other websites have to allow you to log onto your Prowlarr. This is recommended.
 - `External` - Configurable via Config File Only
-  - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
+    - Disables app authentication completely. *Use at your own risk especially if exposed to the internet* Suggested only if you use an **external authentication** such as Authelia, Authetik, NGINX Basic auth, etc. you can prevent needing to double authenticate by shutting down the app, setting `<AuthenticationMethod>External</AuthenticationMethod>` in the [config file](appdata-directory.md), and restarting the app. **Note that multiple `AuthenticationMethod` entries in the file are not supported and only the topmost value will be used**
 
 ### Authentication Required
 
 - If you do not expose the app externally and/or do not wish to have auth required for local (e.g. LAN) access then change in Settings => General Security => Authentication Required to `Disabled For Local Addresses`
-  - The config file equivalent of this is `<AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired>`
+    - The config file equivalent of this is `<AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired>`
 - `<AuthenticationRequired>Enabled</AuthenticationRequired>` is also a valid value
 
 ## How do I reset Stats
@@ -112,19 +111,22 @@ The following attributes are optional, but recommended:
 - Yes.
 - Go to `Indexers` => `Add Indexer` (<kb>+</kb>) => `Generic Torznab` or `Generic Newznab`
 
-## Can I use flaresolverr indexers
+## Can I use FlareSolverr indexers
 
 - Yes.
 
-1. Configure your flaresolverr instance by adding it as a proxy in [Settings => Indexers](settings.md#indexer-proxies)
-1. Add a tag to the created flaresolverr proxy
+1. Configure your FlareSolverr instance by adding it as a proxy in [Settings => Indexers](settings.md#indexer-proxies)
+1. Add a tag to the created FlareSolverr proxy
 1. Add the same tag to your [Indexer](indexers.md)
 
 !!! warning
-    The tags must match & Cloudflare must be detected for Flaresolverr to be used. A Flaresolverr proxy is disabled if no tags are used.
+    The tags must match & Cloudflare must be detected for FlareSolverr to be used. A FlareSolverr proxy is disabled if no tags are used.
+
+!!! warning
+    For FlareSolverr to return valid cookies to Prowlarr, the same IP address must be used by both. This includes use of a proxy or VPN, and the internet protocol (IPv6 may need to be disabled). See [FlareSolverr's Troubleshooting Wiki](https://github.com/FlareSolverr/FlareSolverr/wiki/Troubleshooting) for more details.
 
 !!! info
-    [See TRaSH's Guides on "How to setup Flaresolverr"](https://trash-guides.info/Prowlarr/prowlarr-setup-flaresolverr/) for more details
+    See [TRaSH's Guides on "How to setup FlareSolverr"](https://trash-guides.info/Prowlarr/prowlarr-setup-flaresolverr/) for more details
 
 ## How can I add an indexer that is down or not functional
 
@@ -147,16 +149,16 @@ The following attributes are optional, but recommended:
 - Prowlarr only syncs if Add and Remove or Full Sync is enabled for the app.
 - Only in instances where an App and Indexer have matching tags or no tags at all will an indexer be synced to an app
 - Indexers are synced based on the capabilities/categories they claim to support.
-  - If an indexer supports only TV categories it will not be synced to Lidarr, Radarr, and Readarr.
+    - If an indexer supports only TV categories it will not be synced to Lidarr, Radarr, and Readarr.
 - A given indexer will only be synced to Sonarr if "Supported" Categories can be selected as an advanced setting on a per app basis.
 - Indexers will not be attempted to be synced if the specific Categories supported by the Indexer are not selected in Settings => Application => {App} => Sync Categories (Advanced Settings) and logs will not show any indication of a sync attempt.
 - The most common cause for this is that the \*Arrs only accept indexers whose test queries return results containing at least one of the configured categories. In other words, if you're syncing to an App and your indexer's empty query does not return results with any release within the categories configured for the App then it will be unable to add the indexer to \*Arr.
 - The specific error will be an HTTP 400 from \*Arr stating `Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.`
-  - Possibly that indexer simply cannot be used with that \*Arr. This is common for attempting to use public trackers or usenet indexers with Readarr and Lidarr.
-  - Adjust the categories synced in the advanced settings for the \*Arr application within Prowlarr
-    - Note that certain Trackers - primarily "crappy" public trackers - require one to select and sync the `8000 - Other` category. This is often - but not always - noted within the Tracker's details within Prowlarr.
-  - Try again later
-  - If the issue persist you may have a corrupted database. Check your logs for instances of `Database disk image is malformed` or `Error creating main database`. See [this heading](https://wiki.servarr.com/prowlarr/faq#i-am-getting-an-error-database-disk-image-is-malformed) for possible solutions.
+    - Possibly that indexer simply cannot be used with that \*Arr. This is common for attempting to use public trackers or usenet indexers with Readarr and Lidarr.
+    - Adjust the categories synced in the advanced settings for the \*Arr application within Prowlarr
+        - Note that certain Trackers - primarily "crappy" public trackers - require one to select and sync the `8000 - Other` category. This is often - but not always - noted within the Tracker's details within Prowlarr.
+    - Try again later
+    - If the issue persist you may have a corrupted database. Check your logs for instances of `Database disk image is malformed` or `Error creating main database`. See [this heading](https://wiki.servarr.com/prowlarr/faq#i-am-getting-an-error-database-disk-image-is-malformed) for possible solutions.
 
 ## What \*Arr Indexer Settings are Compared for App Full Sync
 
@@ -165,7 +167,7 @@ When Full Sync is enabled, Prowlarr compares the following settings between the 
 ### Sonarr
 
 | Setting | Description | Code Reference |
-|---------|-------------|----------------|
+| --------- | ------------- | ---------------- |
 | **Indexer Name** | The name of the indexer (with "(Prowlarr)" suffix) | `SonarrIndexer.cs:71` |
 | **Enable RSS** | Whether RSS feeds are enabled for the indexer | `SonarrIndexer.cs:68` |
 | **Enable Automatic Search** | Whether automatic searches are enabled | `SonarrIndexer.cs:69` |
@@ -187,7 +189,7 @@ When Full Sync is enabled, Prowlarr compares the following settings between the 
 ### Radarr
 
 | Setting | Description | Code Reference |
-|---------|-------------|----------------|
+| --------- | ------------- | ---------------- |
 | **Indexer Name** | The name of the indexer (with "(Prowlarr)" suffix) | `RadarrIndexer.cs:61` |
 | **Enable RSS** | Whether RSS feeds are enabled for the indexer | `RadarrIndexer.cs:58` |
 | **Enable Automatic Search** | Whether automatic searches are enabled | `RadarrIndexer.cs:59` |
@@ -206,7 +208,7 @@ When Full Sync is enabled, Prowlarr compares the following settings between the 
 ### Lidarr
 
 | Setting | Description | Code Reference |
-|---------|-------------|----------------|
+| --------- | ------------- | ---------------- |
 | **Indexer Name** | The name of the indexer (with "(Prowlarr)" suffix) | `LidarrIndexer.cs:65` |
 | **Enable RSS** | Whether RSS feeds are enabled for the indexer | `LidarrIndexer.cs:62` |
 | **Enable Automatic Search** | Whether automatic searches are enabled | `LidarrIndexer.cs:63` |
@@ -276,7 +278,7 @@ With Full Sync enabled, if any of the above settings differ between the \*Arr ap
 
 - If version is identical you can switch, otherwise check with the development team to see if you can switch from `nightly` to `develop`; or `develop` to `nightly` for your given build.
 - Failure to follow these instructions may result in your Prowlarr becoming unusable or throwing errors. You have been warned
-  - The most common errors are database errors around missing columns or tables.
+    - The most common errors are database errors around missing columns or tables.
 
 ## Help, my Mac says Prowlarr cannot be opened because the developer cannot be verified
 
@@ -296,14 +298,14 @@ To request a feature for Prowlarr, first search on GitHub to ensure no similar r
 ## I am getting an error: Database disk image is malformed
 
 - **Errors of `Error creating log database` indicate issues with logs.db**
-  - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
+    - This can quickly be resolved by renaming or removing the database. The logs database contains unimportant information regarding commands history and update install history, and Info, Warn, and Error entries
 - **Errors of `Error creating main database` or generic `database disk image is malformed` with no specified database indicate issues with prowlarr.db**
-  - Continue with the steps noted below
+    - Continue with the steps noted below
 - This means your SQLite database that stores most of the information for Prowlarr is corrupt. Your options are to try (a) backup(s), try recovering the existing database, try recovering the backup(s), or if all else fails starting over with a fresh new database.
 - This error may show if the database file is not writable by the user/group \*Arr is running as. Permissions being the cause will likely only be an issue for new installs, migrated installs to a new server, if you recently modified your appdata directory permissions, or if you changed the user and group \*Arr run as.
-- Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-my-prowlarr)
+- Your best and first option is to [try restoring from a backup](#how-do-i-backuprestore-prowlarr)
 - You can also try recovering your database. This is typically the only option for when this issue occurs after an update. Try the [sqlite3 `.recover` command](../useful-tools.md#recovering-a-corrupt-db)
-  - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
+    - If your sqlite does not have `.recover` or you wish a more GUI (i.e. Windows) friendly way then follow [our instructions on this wiki.](../useful-tools.md#recovering-a-corrupt-db-ui)
 - Another possible cause of you getting an error with your Database is that you're placing your database on a network drive (nfs or smb or something else not local). **SQLite is designed for situations where the data and application coexist on the same machine.** Thus your \*Arr AppData Folder (/config mount for docker) MUST be on local storage. [SQLite and network drives not play nice together and will cause a malformed database eventually](https://www.sqlite.org/draft/useovernet.html).
 - If you are using mergerFS you need to remove `direct_io` as SQLite uses mmap which isn’t supported by `direct_io` as explained in the mergerFS [docs here](https://github.com/trapexit/mergerfs#plex-doesnt-work-with-mergerfs)
 
@@ -390,8 +392,8 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 #### Using file system directly
 
 - Find the location of the AppData directory for Prowlarr
-  - Via the Prowlarr UI go to System => About
-  - [Prowlarr Appdata Directory](appdata-directory.md)
+    - Via the Prowlarr UI go to System => About
+    - [Prowlarr Appdata Directory](appdata-directory.md)
 - Stop Prowlarr - This will prevent the database from being corrupted
 - Copy the contents to a safe location
 
@@ -414,8 +416,8 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 
 - Re-install Prowlarr (if applicable / not already installed)
 - Find the location of the AppData directory for Prowlarr
-  - Running Prowlarr once and via the UI go to System => About
-  - [Prowlarr Appdata Directory](appdata-directory.md)
+    - Running Prowlarr once and via the UI go to System => About
+    - [Prowlarr Appdata Directory](appdata-directory.md)
 - Stop Prowlarr
 - Delete the contents of the AppData directory **(Including the .db-wal/.db-journal files if they exist)**
 - Restore from your backup
@@ -429,8 +431,8 @@ After creating the symlink, restart Prowlarr. It will now use the system's SQLit
 
 - Re-install Prowlarr (if applicable / not already installed)
 - Find the location of the AppData directory for Prowlarr
-  - Running Prowlarr once and via the UI go to System => About
-  - [Prowlarr Appdata Directory](appdata-directory.md)
+    - Running Prowlarr once and via the UI go to System => About
+    - [Prowlarr Appdata Directory](appdata-directory.md)
 - Stop Prowlarr
 - Connect to the Synology NAS through SSH and log in as root
 

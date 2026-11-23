@@ -42,9 +42,9 @@ This guide will show you how to run multiple instances of Radarr on Windows usin
 
 #### Prerequisites (Service)
 
-- [You must have Radarr already installed](#windows)
+- [You must have Radarr already installed](windows.md)
 - You must have [NSSM (Non-Sucking Service Manager](http://nssm.cc) installed. To install, download the latest release (2.24 at the time of writing) and copy either the 32-bit or 64-bit nssm.exe file to C:/windows/system32.
-  - If you aren’t sure if you have a 32-bit or 64-bit system, check Settings => System => About => System type.
+    - If you aren’t sure if you have a 32-bit or 64-bit system, check Settings => System => About => System type.
 
 #### Configuring Radarr Service
 
@@ -84,15 +84,15 @@ may have to change your paths here.
     This is crucial, as it keeps all the data files from both instances in
     separate locations.
 
-3. Click *Install service*. The window should close and the service
+1. Click *Install service*. The window should close and the service
     will now be available to run.
-4. Continue to [Configuring Radarr-4k](#windows-multi-config-second)
+2. Continue to [Configuring Radarr-4k](#windows-multi-config-second)
 
 ### Tray App (Windows)
 
 #### Prerequisites (Tray App)
 
-- [You must have Radarr already installed](#windows)
+- [You must have Radarr already installed](windows.md)
 - Radarr's shortcut must be configured with a `/data=` argument in the 'target' field to allow multiple instances.
 
 1. Navigate to the Startup Folder for the current user `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` and edit the existing shortcut if needed.
@@ -150,11 +150,11 @@ may have to change your paths here.
 
 - Otherwise the script will be unable to manipulate services
 
-5. Trigger: `On Launch`
-6. Repeat task every: `5` or `10` minutes
-7. Action: `Start a Program`
-8. Program/script: `powershell`
-9. Argument: `-File D:\RadarrInstancesChecker.ps1`
+1. Trigger: `On Launch`
+2. Repeat task every: `5` or `10` minutes
+3. Action: `Start a Program`
+4. Program/script: `powershell`
+5. Argument: `-File D:\RadarrInstancesChecker.ps1`
 
 - Be sure to use the full path to your script's location
 
@@ -277,9 +277,9 @@ Write-Log 'END ====================='
 
 - [Swizzin Users](https://github.com/ComputerByte/radarr4k)
 - Non-Swizzin Users
-  - Ensure your first instance has the `-data=` argument passed.
-  - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop radarr`
-  - Disable automatic updates on one of your Radarr Instances`
+    - Ensure your first instance has the `-data=` argument passed.
+    - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop radarr`
+    - Disable automatic updates on one of your Radarr Instances`
 
 !!! danger
     Below is an example script to create a Radarr4K instance. The below systemd creation script will use a data directory of `/var/lib/radarr4k/`. Ensure the directory exists or modify it as needed.

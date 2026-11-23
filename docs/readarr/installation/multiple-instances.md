@@ -39,7 +39,7 @@ The following requirements should be noted:
 - If non-docker, the same binaries (program files) should be used
 - If non-docker, all instances *must* have a `-data=` or `/data=` argument passed
 - If non-docker, different ports must be used
-  - If docker, different external ports must be used
+    - If docker, different external ports must be used
 - Different download client categories must be used
 - Different root folders must be used.
 - If non-docker, disable automatic updates on all but 1 instance.
@@ -54,9 +54,9 @@ This guide will show you how to run multiple instances of Readarr on Windows usi
 
 #### Prerequisites (Service)
 
-- [You must have Readarr already installed](#windows)
+- [You must have Readarr already installed](windows.md)
 - You must have [NSSM (Non-Sucking Service Manager](http://nssm.cc) installed. To install, download the latest release (2.24 at the time of writing) and copy either the 32-bit or 64-bit nssm.exe file to C:/windows/system32.
-  - If you aren’t sure if you have a 32-bit or 64-bit system, check Settings => System => About => System type.
+    - If you aren’t sure if you have a 32-bit or 64-bit system, check Settings => System => About => System type.
 
 #### Configuring Readarr Service
 
@@ -100,7 +100,7 @@ may have to change your paths here.
 
 #### Prerequisites (Tray App)
 
-- [You must have Readarr already installed](#windows)
+- [You must have Readarr already installed](windows.md)
 - Readarr must be configured with a `/data=` argument to allow multiple instances
 - Navigate to the Startup Folder for the current user `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` and edit the existing shortcut if needed.
 
@@ -139,13 +139,13 @@ may have to change your paths here.
 1. [Create a scheduled task](https://www.thewindowsclub.com/schedule-task-in-windows-7-task-scheduler) to run the script on a repeating schedule.
 
 - Security Options: Enable `Run with highest privileges`
-  - Otherwise the script will be unable to manipulate services
+    - Otherwise the script will be unable to manipulate services
 - Trigger: `On Launch`
 - Repeat task every: `5` or `10` minutes
 - Action: `Start a Program`
 - Program/script: `powershell`
 - Argument: `-File D:\ReadarrInstancesChecker.ps1`
-  - Be sure to use the full path to your script's location
+    - Be sure to use the full path to your script's location
 
 ```powershell
 ################################################################################################
@@ -266,9 +266,9 @@ Write-Log 'END ====================='
 
 - [Swizzin Users](https://github.com/ComputerByte/readarr-audiobooks)
 - Non-Swizzin Users
-  - Ensure your first instance has the `-data=` argument passed.
-  - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop readarr`
-  - Disable automatic updates on one of your Readarr Instances`
+    - Ensure your first instance has the `-data=` argument passed.
+    - Temporarily stop your first instance, so you can change the second instance's port `systemctl stop readarr`
+    - Disable automatic updates on one of your Readarr Instances`
 
 !!! danger
     Below is an example script to create a Readarr-audiobooks instance. The below systemd creation script will use a data directory of `/var/lib/readarr-audiobooks/`. Ensure the directory exists or modify it as needed.

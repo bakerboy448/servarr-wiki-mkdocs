@@ -39,8 +39,8 @@ tags:
 
 - [Settings => Media Management (Advanced Settings Shown) => Movie Naming](settings.md#media-management)
 
-  - File: `{Movie CleanTitle} {(Release Year)} {Edition Tags} {[Quality Title]}`
-  - Folder: `{Movie CleanTitle} {(Release Year)}`
+    - File: `{Movie CleanTitle} {(Release Year)} {Edition Tags} {[Quality Title]}`
+    - Folder: `{Movie CleanTitle} {(Release Year)}`
 
 - Note: You can replace the spaces above with `.` or `_` if you prefer that naming format.
 
@@ -90,11 +90,10 @@ If you need to clean up empty directories, this command will do that:
 Alternatively in Windows you can run the following script in Powershell to iterate over each file in a directory, and move it to a folder with the same name.
 
 ```powershell
-Get-ChildItem -File
-  | ForEach-Object {
+Get-ChildItem -File | ForEach-Object {
     $dir = New-Item -ItemType Directory -Name $_.BaseName -Force
     $_ | Move-Item -Destination $dir
-  }
+}
 ```
 
 # Configuring Radarr to Auto-Remove Completed Torrents
@@ -114,12 +113,12 @@ If you use Prowlarr on full sync, then you should be setting these values in Pro
 
 1. In Radarr, go to Settings -> Indexers. Click on each indexer. In that indexer, click Show Advanced. Set the Seed Ratio value to at least "1", and the Seed Time value to at least 300. You may leave one of those values blank, if you only want either time or ratio. If you set both, the first value that is met triggers the removal (i.e. if it hits 1.0 ratio in 120 minutes, it would be removed even though it hasn't met the time value).
 
-	![radarr-seed-time.png](../images/radarr-seed-time.png)
+ ![radarr-seed-time.png](../images/radarr-seed-time.png)
 
 1. Repeat this for all of your torrent indexers. You can set different goals for each indexer. Note that you should add 10-20% over what your private indexers require, because the way that your download client calculates time/ratio is slightly different than what your indexers do, and setting it too close to requirements can result in hit & runs.
 
 1. In Qbittorrent, go to Tools / Options / BitTorrent. You will have to check one of the seed goal items in order to be able to select from the drop-down. Change the drop-down to "Stop Torrent" (on older versions of Qbittorrent, this is Pause Torrent). Then you can un-check the box again, if you don't want Qbittorrent to have any default values set.
 
-	![qbit-remove-settings.png](../images/qbit-remove-settings.png)
+ ![qbit-remove-settings.png](../images/qbit-remove-settings.png)
 
 Now you're done. New grabs should have the values you've set, and when they're done they should Stop in Qbittorrent, and be removed shortly thereafter by Radarr.

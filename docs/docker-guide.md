@@ -22,48 +22,48 @@ tags:
 - [Portainer](#portainer)
 - [Introduction](#introduction)
 - [Multiple users and a shared group](#multiple-users-and-a-shared-group)
-  - [Permissions](#permissions)
-  - [UMASK](#umask)
-  - [PUID and PGID](#puid-and-pgid)
-  - [Example](#example)
+    - [Permissions](#permissions)
+    - [UMASK](#umask)
+    - [PUID and PGID](#puid-and-pgid)
+    - [Example](#example)
 - [Single user and optional shared group](#single-user-and-optional-shared-group)
 - [Ownership and permissions of /config](#ownership-and-permissions-of-config)
 - [Consistent and well planned paths](#consistent-and-well-planned-paths)
-  - [Examples](#examples)
-    - [Torrents](#torrents)
-    - [Usenet](#usenet)
-    - [Media Server](#media-server)
-    - [Sonarr, Radarr and Lidarr](#sonarr-radarr-and-lidarr)
-  - [Issues](#issues)
+    - [Examples](#examples)
+        - [Torrents](#torrents)
+        - [Usenet](#usenet)
+        - [Media Server](#media-server)
+        - [Sonarr, Radarr and Lidarr](#sonarr-radarr-and-lidarr)
+    - [Issues](#issues)
 - [Running containers using](#running-containers-using)
-  - [Docker Compose](#docker-compose)
-    - [Update all images and containers](#update-all-images-and-containers)
-    - [Update individual image and container](#update-individual-image-and-container)
-  - [docker run](#docker-run)
-  - [Systemd](#systemd)
+    - [Docker Compose](#docker-compose)
+        - [Update all images and containers](#update-all-images-and-containers)
+        - [Update individual image and container](#update-individual-image-and-container)
+    - [docker run](#docker-run)
+    - [Systemd](#systemd)
 - [Helpful commands](#helpful-commands)
-  - [List running containers](#list-running-containers)
-  - [Shell *inside* a container](#shell-inside-a-container)
-    - [Examples as Specific Users](#examples-as-specific-users)
-      - [LSIO Radarr](#lsio-radarr)
-      - [Hotio Sonarr](#hotio-sonarr)
-  - [Prune Docker](#prune-docker)
-  - [Get docker run command](#get-docker-run-command)
-  - [Get docker-compose](#get-docker-compose)
-  - [Troubleshoot networking](#troubleshoot-networking)
-  - [Recursively chown user and group](#recursively-chown-user-and-group)
-  - [Recursively chmod to 775/664](#recursively-chmod-to-775664)
-  - [Find UID/GID for user](#find-uidgid-for-user)
-  - [Examine files for hard links](#examine-files-for-hard-links)
+    - [List running containers](#list-running-containers)
+    - [Shell *inside* a container](#shell-inside-a-container)
+        - [Examples as Specific Users](#examples-as-specific-users)
+            - [LSIO Radarr](#lsio-radarr)
+            - [Hotio Sonarr](#hotio-sonarr)
+    - [Prune Docker](#prune-docker)
+    - [Get docker run command](#get-docker-run-command)
+    - [Get docker-compose](#get-docker-compose)
+    - [Troubleshoot networking](#troubleshoot-networking)
+    - [Recursively chown user and group](#recursively-chown-user-and-group)
+    - [Recursively chmod to 775/664](#recursively-chmod-to-775664)
+    - [Find UID/GID for user](#find-uidgid-for-user)
+    - [Examine files for hard links](#examine-files-for-hard-links)
 - [Interesting Docker Images](#interesting-docker-images)
-  - [All-in-One Solutions](#all-in-one-solutions)
+    - [All-in-One Solutions](#all-in-one-solutions)
 - [Custom Docker Network and DNS](#custom-docker-network-and-dns)
 - [Common Problems](#common-problems)
-  - [Correct *outside* paths, incorrect *inside* paths](#correct-outside-paths-incorrect-inside-paths)
-  - [Running Docker containers as root or changing users around](#running-docker-containers-as-root-or-changing-users-around)
-  - [Running Docker containers with umask 000](#running-docker-containers-with-umask-000)
+    - [Correct *outside* paths, incorrect *inside* paths](#correct-outside-paths-incorrect-inside-paths)
+    - [Running Docker containers as root or changing users around](#running-docker-containers-as-root-or-changing-users-around)
+    - [Running Docker containers with umask 000](#running-docker-containers-with-umask-000)
 - [Getting Help](#getting-help)
-  - [Chat Support (Discord)](#chat-support-discord)
+    - [Chat Support (Discord)](#chat-support-discord)
 
 # The Best Docker Setup
 
@@ -84,12 +84,12 @@ tags:
 - Portainer should only for viewing docker container logs / container status.
 - It's strongly suggested to use Docker compose and to not use Portainer.
 - Portainer has many issues, such as:
-  - Incorrect order of source and target of mounts
-  - Inconsistent case-sensitivity
-  - No automatically created custom networks for inter-container communication
-  - Inconsistent compose implementations on different architectures
-  - Pulls every tag on update when you don't set a specific tag
-  - Capabilities are hidden and some don't work at all on ARM platforms
+    - Incorrect order of source and target of mounts
+    - Inconsistent case-sensitivity
+    - No automatically created custom networks for inter-container communication
+    - Inconsistent compose implementations on different architectures
+    - Pulls every tag on update when you don't set a specific tag
+    - Capabilities are hidden and some don't work at all on ARM platforms
 
 See this [Docker Guide](docker-guide.md) and [TRaSH's Docker Tutorial](https://trash-guides.info/hardlinks/) instead for how to setup Docker Compose.
 
@@ -496,41 +496,41 @@ Most Docker images don’t have many useful tools in them for troubleshooting, b
 - [rasmunk/sshfs](https://github.com/rasmunk/docker-volume-sshfs)
 {.links-list}
 - [hotio’s](https://hotio.dev/) The documentation and Dockerfile don’t make any poor path suggestions. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests (except Sonarr) which may be useful for testing.
-  - [sonarr](https://hotio.dev/containers/sonarr)
-  - [radarr](https://hotio.dev/containers/radarr)
-  - [lidarr](https://hotio.dev/containers/lidarr)
-  - [readarr](https://hotio.dev/containers/readarr)
-  - [prowlarr](https://hotio.dev/containers/prowlarr) for usenet and torrent tracker searching
-  - [qbittorrent](https://hotio.dev/containers/qbittorrent/)
-  - [NZBGet](https://hotio.dev/containers/nzbget/)
-  - [SABnzbd](https://hotio.dev/containers/sabnzbd/)
-  - [qflood](https://hotio.dev/containers/qflood/)
-  - [seerr](https://hotio.dev/containers/seerr/) for requesting media
-  - [jackett](https://hotio.dev/containers/jackett) for torrent tracker searching
-  - [nzbhydra2](https://hotio.dev/containers/nzbhydra2) for usenet indexer searching
-  - [bazarr](https://hotio.dev/containers/bazarr) for subtitles
-  - [pullio](https://hotio.dev/pullio/) for auto updating containers
-  - [unpackerr](https://hotio.dev/containers/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
+    - [sonarr](https://hotio.dev/containers/sonarr)
+    - [radarr](https://hotio.dev/containers/radarr)
+    - [lidarr](https://hotio.dev/containers/lidarr)
+    - [readarr](https://hotio.dev/containers/readarr)
+    - [prowlarr](https://hotio.dev/containers/prowlarr) for usenet and torrent tracker searching
+    - [qbittorrent](https://hotio.dev/containers/qbittorrent/)
+    - [NZBGet](https://hotio.dev/containers/nzbget/)
+    - [SABnzbd](https://hotio.dev/containers/sabnzbd/)
+    - [qflood](https://hotio.dev/containers/qflood/)
+    - [overseerr](https://hotio.dev/containers/overseerr/) for requesting media
+    - [jackett](https://hotio.dev/containers/jackett) for torrent tracker searching
+    - [nzbhydra2](https://hotio.dev/containers/nzbhydra2) for usenet indexer searching
+    - [bazarr](https://hotio.dev/containers/bazarr) for subtitles
+    - [pullio](https://hotio.dev/pullio/) for auto updating containers
+    - [unpackerr](https://hotio.dev/containers/unpackerr) is useful for packed torrent extraction across a variety of torrent clients where unpacking is lacking or missing entirely.
 {.links-list}
 - [linuxserver.io](https://hub.docker.com/u/linuxserver) images have images for a *lot* of software and they’re well maintained. However, avoid their 'suggested (optional)' paths.
-  - [SWAG Proxy](https://hub.docker.com/r/linuxserver/swag)
-  - [qbittorrent](https://hub.docker.com/r/linuxserver/qbittorrent/)
-  - [deluge](https://hub.docker.com/r/linuxserver/deluge/)
-  - [rtorrent](https://hub.docker.com/r/linuxserver/rutorrent/)
-  - [SABnzbd](https://hub.docker.com/r/linuxserver/sabnzbd/)
-  - [NZBGet](https://hub.docker.com/r/linuxserver/nzbget/)
-  - [sonarr](https://hub.docker.com/r/linuxserver/sonarr/)
-  - [radarr](https://hub.docker.com/r/linuxserver/radarr/)
-  - [lidarr](https://hub.docker.com/r/linuxserver/lidarr/)
+    - [SWAG Proxy](https://hub.docker.com/r/linuxserver/swag)
+    - [qbittorrent](https://hub.docker.com/r/linuxserver/qbittorrent/)
+    - [deluge](https://hub.docker.com/r/linuxserver/deluge/)
+    - [rtorrent](https://hub.docker.com/r/linuxserver/rutorrent/)
+    - [SABnzbd](https://hub.docker.com/r/linuxserver/sabnzbd/)
+    - [NZBGet](https://hub.docker.com/r/linuxserver/nzbget/)
+    - [sonarr](https://hub.docker.com/r/linuxserver/sonarr/)
+    - [radarr](https://hub.docker.com/r/linuxserver/radarr/)
+    - [lidarr](https://hub.docker.com/r/linuxserver/lidarr/)
 - [binhex](https://hub.docker.com/u/binhex) another popular maintainer
-  - [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/)
-  - [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/)
-  - [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/)
-  - [SABnzbd](https://hub.docker.com/r/binhex/arch-sabnzbd/)
-  - [NZBGet](https://hub.docker.com/r/binhex/arch-nzbget/)
-  - [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/)
-  - [radarr](https://hub.docker.com/r/binhex/arch-radarr/)
-  - [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/)
+    - [qbittorrent](https://hub.docker.com/r/binhex/arch-qbittorrentvpn/)
+    - [deluge](https://hub.docker.com/r/binhex/arch-delugevpn/)
+    - [rtorrent](https://hub.docker.com/r/binhex/arch-rtorrentvpn/)
+    - [SABnzbd](https://hub.docker.com/r/binhex/arch-sabnzbd/)
+    - [NZBGet](https://hub.docker.com/r/binhex/arch-nzbget/)
+    - [sonarr](https://hub.docker.com/r/binhex/arch-sonarr/)
+    - [radarr](https://hub.docker.com/r/binhex/arch-radarr/)
+    - [lidarr](https://hub.docker.com/r/binhex/arch-lidarr/)
 {.links-list}
 
 ## All-in-One Solutions
@@ -579,12 +579,12 @@ This works with any container name in your Docker setup. If your qBittorrent con
 Many people read this and think they understand, but they end up seeing the outside path correctly to something like `/data/usenet`, but then they miss the point and set the *inside* path to `/downloads` still.
 
 - Good:
-  - `/host/data/usenet:/data/usenet`
-  - `/data/media:/data/media`
+    - `/host/data/usenet:/data/usenet`
+    - `/data/media:/data/media`
 - Bad:
-  - `/host/data:/downloads`
-  - `/host/data:/media`
-  - `/data/downloads:/data`
+    - `/host/data:/downloads`
+    - `/host/data:/media`
+    - `/data/downloads:/data`
 
 ## Running Docker containers as root or changing users around
 

@@ -37,13 +37,13 @@ The Servarr Team
 - [Importing](#importing)
 - [File Management](#file-management)
 - [Root Folders and Calibre Integration](#root-folders-and-calibre-integration)
-  - [Calibre Content Server (Optional)](#calibre-content-server-optional)
-  - [Calibre Integration](#calibre-integration)
+    - [Calibre Content Server (Optional)](#calibre-content-server-optional)
+    - [Calibre Integration](#calibre-integration)
 - [Download Clients](#download-clients)
     - [Usenet](#usenet)
     - [BitTorrent](#bittorrent)
 - [How to import your existing organized media library](#how-to-import-your-existing-organized-media-library)
-  - [Importing Existing Media](#importing-existing-media)
+    - [Importing Existing Media](#importing-existing-media)
 - [Add New Books](#add-new-books)
 
 # Quick Start Setup Guide
@@ -122,9 +122,9 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 - Ignore Deleted Books - Check this box to unmonitor books detected as deleted or inaccessible from Readarr's root folder.
 - Download Proper & Repacks - Whether or not to automatically upgrade to Propers/Repacks. Use `Do not Prefer` to sort by preferred word score over propers/repacks
-  - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
-  - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
-  - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
+    - Prefer and Upgrade - Rank repacks and propers higher than non-repacks and non-propers. Treat new repacks and propers as upgrade to current releases.
+    - Do Not Upgrade Automatically - Rank repacks and propers higher than non-repacks and non-propers. Do not treat new repacks and propers as upgrade to current releases.
+    - Do Not Prefer - Effectively this ignores repacks and propers. You'll need to manage any preference for those with [Preferred Words](#release-profiles).
 
 !!! info
     \* `PROPER` - means there was a problem with the previous release. Downloads tagged as PROPER shows that the problems have been fixed in that release. This is done by a Group that did not release the original.
@@ -132,16 +132,16 @@ First we’re going to take a look at the `Media Management` settings where we c
 
 - (Advanced Option) Watch Root Folders for file changes - Check this box to trigger a rescan when it is detected that the root folder had changes.
 - (Advanced Option) Rescan Author Folder after Refresh -  Choose when to rescan an author folder after refreshing the author.
-  - Always - This will rescan author folders based upon Tasks Schedule
-  - After Manual Refresh - You will have to manually rescan the disk
-  - Never - Just as it says, never rescan the author folders.
+    - Always - This will rescan author folders based upon Tasks Schedule
+    - After Manual Refresh - You will have to manually rescan the disk
+    - Never - Just as it says, never rescan the author folders.
 - (Advanced Option) Allow Fingerprinting - Choose how to handle fingerprinting, which allows increased accuracy for book matching, at the expense of CPU/disk time.
-  - Always - Always use fingerprinting if possible
-  - For new imports only - Only fingerprint newly imported releases
-  - Never - Just as it says, never use fingerprinting
+    - Always - Always use fingerprinting if possible
+    - For new imports only - Only fingerprint newly imported releases
+    - Never - Just as it says, never use fingerprinting
 - (Advanced Option) Change File Date - Change file date on import/rescan
-  - None - Readarr will not change the date that shows in your given file browser
-  - Book Release Date - The date the book was released.
+    - None - Readarr will not change the date that shows in your given file browser
+    - Book Release Date - The date the book was released.
 - (Advanced Option) Recycling Bin - Book files will go here when deleted instead of being permanently deleted
 - (Advanced Option) Recycling Bin Cleanup - This is how old a given file can be before it is deleted permanently
 
@@ -230,10 +230,10 @@ The below are Calibre Specific Settings and only display if `Use Calibre` is ena
 - Calibre Password - Password to use to access Calibre Content Server
 - Calibre Library - Calibre Content Server library name. Leave blank for default
 - Convert to Format - (Optional) Ask Calibre Content Server to convert to other formats with a  comma separated list.
-  - Review the (i) icon within the app for a current list of options.
-  - Options are: MOBI, EPUB, AZW3, DOCX, FB2, HTMLZ, LIT, LRF, PDB, PDF, PMLZ, RB, RTF, SNB, TCR, TXT, TXTZ, ZIP
+    - Review the (i) icon within the app for a current list of options.
+    - Options are: MOBI, EPUB, AZW3, DOCX, FB2, HTMLZ, LIT, LRF, PDB, PDF, PMLZ, RB, RTF, SNB, TCR, TXT, TXTZ, ZIP
 - Calibre Output Profile - Select the Calibre Content Server Output Profile to use
-  - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
+    - The output profile tells the Calibre Content Server conversion system how to optimize the created document for the specified device (such as by resizing images for the device screen size). In some cases, an output profile can be used to optimize the output for a particular device, but this is rarely necessary.
 - Use SSL - Enable or Disable the use of SSL (HTTPS) for Calibre Content Server
 
 !!! warning

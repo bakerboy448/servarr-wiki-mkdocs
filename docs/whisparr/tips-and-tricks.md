@@ -39,8 +39,8 @@ tags:
 
 - [Settings => Media Management (Advanced Settings Shown) => Movie Naming](settings.md#media-management)
 
-  - File: `{Movie CleanTitle} {(Release Year)} {Edition Tags} {\[Quality Title]}`
-  - Folder: `{Movie CleanTitle} {(Release Year)}`
+    - File: `{Movie CleanTitle} {(Release Year)} {Edition Tags} {\[Quality Title]}`
+    - Folder: `{Movie CleanTitle} {(Release Year)}`
 
 - Note: You can replace the spaces above with `.` or `_` if you prefer that naming format.
 

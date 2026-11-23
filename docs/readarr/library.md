@@ -35,40 +35,40 @@ This section is for managing your library of [authors](#authors) and [books](#bo
 # Authors
 
 - Library View
-  - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan book files (if enabled)
-  - Refresh & Scan - Refresh the currently viewed author's metadata and rescan its folder
-  - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
-  - Author Editor / Author Index - Toggle between Mass Editor mode and Author Index (Library) mode
-  - Options - Change display options
-  - View - Toggle View Type
-    - Table - Tabular View (list view)
-    - Posters - Display Posters (similar to Plex)
-    - Overview - Display overview information and the poster (detailed view)
-  - Sort - Sort the current view
-  - Filter - Filter the current view
+    - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan book files (if enabled)
+    - Refresh & Scan - Refresh the currently viewed author's metadata and rescan its folder
+    - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
+    - Author Editor / Author Index - Toggle between Mass Editor mode and Author Index (Library) mode
+    - Options - Change display options
+    - View - Toggle View Type
+        - Table - Tabular View (list view)
+        - Posters - Display Posters (similar to Plex)
+        - Overview - Display overview information and the poster (detailed view)
+    - Sort - Sort the current view
+    - Filter - Filter the current view
 
 # Books
 
 - Library View
-  - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan book files (if enabled)
-  - Refresh & Scan - Refresh the currently viewed author's metadata and rescan its folder
-  - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
-  - Search All / Search Filtered / Search Selected - Search all books or selected books in the current view
-  - Book Editor / Book Index - Toggle between Mass Editor mode and Book Index (Library) mode
-  - Options - Change display options
-  - View - Toggle View Type
-    - Table - Tabular View (list view)
-    - Posters - Display Posters (similar to Plex)
-    - Overview - Display overview information and the poster (detailed view)
-  - Sort - Sort the current view
-  - Filter - Filter the current view
+    - Update All - Update metadata for all authors, refresh posters, rescan author folders, and rescan book files (if enabled)
+    - Refresh & Scan - Refresh the currently viewed author's metadata and rescan its folder
+    - RSS Sync - Refresh the RSS feed from your Indexers and see if anything new has been posted to be grabbed
+    - Search All / Search Filtered / Search Selected - Search all books or selected books in the current view
+    - Book Editor / Book Index - Toggle between Mass Editor mode and Book Index (Library) mode
+    - Options - Change display options
+    - View - Toggle View Type
+        - Table - Tabular View (list view)
+        - Posters - Display Posters (similar to Plex)
+        - Overview - Display overview information and the poster (detailed view)
+    - Sort - Sort the current view
+    - Filter - Filter the current view
 
 # Add New
 
 ![addnew.png](../assets/readarr/addnew.png)
 
 - You can add new authors or individual books by entering the author's name or a book name here, and selecting it from the result list.
-  - You'll find the how-to in our [Quick Start Guide](quick-start-guide.md)
+    - You'll find the how-to in our [Quick Start Guide](quick-start-guide.md)
 - You can also add authors by GoodReads ID, ISBN, or ASIN as needed, using the format shown.
 
 ![poe.png](../assets/readarr/poe.png)

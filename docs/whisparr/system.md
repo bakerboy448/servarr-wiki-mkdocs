@@ -14,62 +14,61 @@ tags:
 
 - [Table of Contents](#table-of-contents)
 - [Status](#status)
-  - [Health](#health)
-    - [System Warnings](#system-warnings)
-      - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
-      - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
-      - [Database Failed Integrity Check](#database-failed-integrity-check)
-      - [New update is available](#new-update-is-available)
-      - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
-      - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
-      - [Branch is for a previous version](#branch-is-for-a-previous-version)
-      - [Could not connect to signalR](#could-not-connect-to-signalr)
-        - [Nginx](#nginx)
-        - [Apache2](#apache2)
-        - [Caddy](#caddy)
-      - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
-      - [Proxy Failed Test](#proxy-failed-test)
-      - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
-      - [MediaInfo Library Could not be Loaded](#mediainfo-library-could-not-be-loaded)
-      - [PTP Indexer Settings Out of Date](#ptp-indexer-settings-out-of-date)
-      - [Mono Legacy TLS enabled](#mono-legacy-tls-enabled)
-      - [Mono and x86 builds are ending](#mono-and-x86-builds-are-ending)
-    - [Download Clients](#download-clients)
-      - [No download client is available](#no-download-client-is-available)
-      - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
-      - [Download clients are unavailable due to failure](#download-clients-are-unavailable-due-to-failure)
-      - [Enable Completed Download Handling](#enable-completed-download-handling)
-      - [Docker bad remote path mapping](#docker-bad-remote-path-mapping)
-      - [Downloading into Root Folder](#downloading-into-root-folder)
-      - [Bad Download Client Settings](#bad-download-client-settings)
-      - [Bad Remote Path Mapping](#bad-remote-path-mapping)
-      - [Permissions Error](#permissions-error)
-      - [Remote File was removed part way through processing](#remote-file-was-removed-part-way-through-processing)
-      - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
-    - [Completed/Failed Download Handling](#completedfailed-download-handling)
-      - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
-    - [Indexers](#indexers)
-      - [No indexers available with automatic search enabled, Whisparr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-whisparr-will-not-provide-any-automatic-search-results)
-      - [No indexers available with RSS sync enabled, Whisparr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-whisparr-will-not-grab-new-releases-automatically)
-      - [No indexers are enabled](#no-indexers-are-enabled)
-    - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
-      - [No indexers available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
-      - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
-      - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
-        - [Solutions](#solutions)
-    - [Movie Folders](#movie-folders)
-      - [Missing Root Folder](#missing-root-folder)
-    - [Movies](#movies)
-      - [Movie was removed from TMDb](#movie-was-removed-from-tmdb)
-      - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
-    - [Notifications](#notifications)
-    - [Discord as Slack Notification](#discord-as-slack-notification)
-  - [Disk Space](#disk-space)
-  - [About](#about)
-  - [More Info](#more-info)
+    - [Health](#health)
+        - [System Warnings](#system-warnings)
+            - [Branch is not a valid release branch](#branch-is-not-a-valid-release-branch)
+            - [Currently installed SQLite version is not supported](#currently-installed-sqlite-version-is-not-supported)
+            - [Database Failed Integrity Check](#database-failed-integrity-check)
+            - [New update is available](#new-update-is-available)
+            - [Cannot install update because startup folder is not writable by the user](#cannot-install-update-because-startup-folder-is-not-writable-by-the-user)
+            - [Updating will not be possible to prevent deleting AppData on Update](#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update)
+            - [Branch is for a previous version](#branch-is-for-a-previous-version)
+            - [Could not connect to signalR](#could-not-connect-to-signalr)
+                - [Nginx](#nginx)
+                - [Apache2](#apache2)
+                - [Caddy](#caddy)
+            - [Failed to resolve the IP Address for the Configured Proxy Host](#failed-to-resolve-the-ip-address-for-the-configured-proxy-host)
+            - [Proxy Failed Test](#proxy-failed-test)
+            - [System Time is off by more than 1 day](#system-time-is-off-by-more-than-1-day)
+            - [MediaInfo Library Could not be Loaded](#mediainfo-library-could-not-be-loaded)
+            - [PTP Indexer Settings Out of Date](#ptp-indexer-settings-out-of-date)
+            - [Allowed Hosts Not Configured](#allowed-hosts-not-configured)
+        - [Download Clients](#download-clients)
+            - [No download client is available](#no-download-client-is-available)
+            - [Unable to communicate with download client](#unable-to-communicate-with-download-client)
+            - [Download clients are unavailable due to failure](#download-clients-are-unavailable-due-to-failure)
+            - [Enable Completed Download Handling](#enable-completed-download-handling)
+            - [Docker bad remote path mapping](#docker-bad-remote-path-mapping)
+            - [Downloading into Root Folder](#downloading-into-root-folder)
+            - [Bad Download Client Settings](#bad-download-client-settings)
+            - [Bad Remote Path Mapping](#bad-remote-path-mapping)
+            - [Permissions Error](#permissions-error)
+            - [Remote File was removed part way through processing](#remote-file-was-removed-part-way-through-processing)
+            - [Remote Path is Used and Import Failed](#remote-path-is-used-and-import-failed)
+        - [Completed/Failed Download Handling](#completedfailed-download-handling)
+            - [Completed Download Handling is disabled](#completed-download-handling-is-disabled)
+        - [Indexers](#indexers)
+            - [No indexers available with automatic search enabled, Whisparr will not provide any automatic search results](#no-indexers-available-with-automatic-search-enabled-whisparr-will-not-provide-any-automatic-search-results)
+            - [No indexers available with RSS sync enabled, Whisparr will not grab new releases automatically](#no-indexers-available-with-rss-sync-enabled-whisparr-will-not-grab-new-releases-automatically)
+            - [No indexers are enabled](#no-indexers-are-enabled)
+        - [Enabled indexers do not support searching](#enabled-indexers-do-not-support-searching)
+            - [No indexers available with Interactive Search Enabled](#no-indexers-available-with-interactive-search-enabled)
+            - [Indexers are unavailable due to failures](#indexers-are-unavailable-due-to-failures)
+            - [Jackett All Endpoint Used](#jackett-all-endpoint-used)
+                - [Solutions](#solutions)
+        - [Movie Folders](#movie-folders)
+            - [Missing Root Folder](#missing-root-folder)
+        - [Movies](#movies)
+            - [Movie was removed from TMDb](#movie-was-removed-from-tmdb)
+            - [Lists are unavailable due to failures](#lists-are-unavailable-due-to-failures)
+        - [Notifications](#notifications)
+        - [Discord as Slack Notification](#discord-as-slack-notification)
+    - [Disk Space](#disk-space)
+    - [About](#about)
+    - [More Info](#more-info)
 - [Tasks](#tasks)
-  - [Scheduled](#scheduled)
-  - [Queue](#queue)
+    - [Scheduled](#scheduled)
+    - [Queue](#queue)
 - [Backup](#backup)
 - [Updates](#updates)
 - [Events](#events)
@@ -196,13 +195,12 @@ Note: you will also need to add the websocket directive to your whisparr configu
 
 - The following PassThePopcorn indexers have deprecated settings and should be updated.
 
-#### Mono Legacy TLS enabled
+#### Allowed Hosts Not Configured
 
-- Mono 4.x tls workaround still enabled, consider removing MONO_TLS_PROVIDER=legacy environment option
+{#allowed-hosts-not-configured}
 
-#### Mono and x86 builds are ending
-
-- Mono and x86 builds will no longer be supported in the next build of the application. If you are receiving this error then you are running the mono version of the application or the x86 version. Unfortunately, due to increasing difficulty in development support for these legacy versions we will be discontinuing their support and thus releases for them going forward. Thus it is advised you upgrade to a supported Operating System that does not require neither x86 nor mono. You may also be able to explore using Docker for your needs.
+- Allowed Hosts is not configured, so Whisparr will accept requests for any hostname. Set [Allowed Hosts](settings.md#host) to a comma-separated list of the hostnames and IP addresses Whisparr should answer to; use `*.` as a wildcard for subdomains (for example `*.example.com`). When Authentication Required is not `Enabled`, at least one host is required and Whisparr rejects a blank value on save; a blank value is accepted only when Authentication Required is `Enabled`.
+- This warning only appears when Authentication Required is not set to `Enabled`, because restricting hostnames adds no protection once every request must authenticate. The check runs at startup and whenever the config is saved.
 
 ### Download Clients
 
@@ -214,9 +212,9 @@ Note: you will also need to add the websocket directive to your whisparr configu
 
 - Whisparr was unable to communicate with the configured download client. Please verify if the download client is operational and double check the url. This could also indicate an authentication error.
 - This is typically due to improperly configured download client. Things you can typically check:
-  - Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
-  - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Whisparr.
-  - Ensure SSL encryption is not turned on if you're using both your Whisparr instance and your download client on a local network. See the SSL FAQ entry for more information.
+    - Your download clients IP Address if its on the same bare metal machine this is typically 127.0.0.1
+    - The Port number of that your download client is using these are filled out with the default port number but if you've changed it you will need to have the same one entered into Whisparr.
+    - Ensure SSL encryption is not turned on if you're using both your Whisparr instance and your download client on a local network. See the SSL FAQ entry for more information.
 
 #### Download clients are unavailable due to failure
 
@@ -233,14 +231,14 @@ Note: you will also need to add the websocket directive to your whisparr configu
 - This error is typically associated with bad docker paths within either your download client or Whisparr
 
 - An example of this would be:
-  - Download client: Download Path: /mnt/user/downloads:/downloads
-  - Whisparr: Download Path: /mnt/user/downloads:/data
+    - Download client: Download Path: /mnt/user/downloads:/downloads
+    - Whisparr: Download Path: /mnt/user/downloads:/data
 - Within this example the download client places its downloads into /downloads and therefore tells Whisparr when its complete that the finished movie is in /downloads. Whisparr then comes along and says "Okay, cool, let me check in /downloads" Well, inside Whisparr you did not allocate a /downloads path you allocated a /data path so it throws this error.
 - The easiest fix for this is CONSISTENCY if you use one scheme in your download client, use it across the board.
 
 - Team Whisparr is a big fan of simply using /data.
-  - Download client: /mnt/user/data/downloads:/data/downloads
-  - Whisparr: /mnt/user/data:/data
+    - Download client: /mnt/user/data/downloads:/data/downloads
+    - Whisparr: /mnt/user/data:/data
 
 - Now within the download client you can specify where in /data you'd like to place your downloads, now this varies depending on the client but you should be able to tell it "Yeah download client place my files into." /data/torrents (or usenet)/movies and since you used /data in Whisparr when the download client tells Whisparr it's done Whisparr will come along and say "Sweet, I have a /data and I also can see /torrents (or usenet)/movies all is right in the world."
 - There are many great write ups: our wiki [Docker Guide](../docker-guide.md) and TRaSH's [Hard links and Instant Moves (Atomic-Moves)](https://trash-guides.info/hardlinks/). Now these guides place heavy emphasis on Hard links and Atomic moves, but the general concept of containers and how path mapping works is the core of these discussions.
@@ -326,12 +324,12 @@ Note: you will also need to add the websocket directive to your whisparr configu
 - The Jackett /all endpoint is convenient, but that is its only benefit. Everything else is potential problems, so adding each tracker individually is now required.
 - [Even Jackett's Devs says it should be avoided and should not be used.](https://github.com/Jackett/Jackett#aggregate-indexers)
 - Using the /all endpoint has no advantages, only disadvantages:
-  - you lose control over indexer specific settings (categories, search modes, etc.)
-  - mixing search modes (IMDB, query, etc.) might cause low-quality results
-  - indexer specific categories (\>= 100000) cannot be used.
-  - slow indexers will slow down the overall result
-  - total results are limited to 1000
-  - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
+    - you lose control over indexer specific settings (categories, search modes, etc.)
+    - mixing search modes (IMDB, query, etc.) might cause low-quality results
+    - indexer specific categories (\>= 100000) cannot be used.
+    - slow indexers will slow down the overall result
+    - total results are limited to 1000
+    - if one of the trackers in /all returns an error, \*Arr will disable it and now you do not get any results.
 
 ##### Solutions
 
@@ -349,11 +347,11 @@ Note: you will also need to add the websocket directive to your whisparr configu
 
 - Easiest way to find the problem movie is to:
 
-  - Go to the Movies (Library) Tab
-  - Create a custom filter with the old root folder path
-  - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these movie to be moved to.
-  - Next you will receive a pop-up that states Would you like to move the Movie folders to 'root path' ? This will also state This will also rename the Movie folder per the Movie folder format in settings. Simply select No if the you do not want Lidarr to move your files
-  - Run the Check Health Task in System => Tasks
+    - Go to the Movies (Library) Tab
+    - Create a custom filter with the old root folder path
+    - Select mass edit on the top bar and from the Root Paths drop down select the new root path that you want these movie to be moved to.
+    - Next you will receive a pop-up that states Would you like to move the Movie folders to 'root path' ? This will also state This will also rename the Movie folder per the Movie folder format in settings. Simply select No if the you do not want Lidarr to move your files
+    - Run the Check Health Task in System => Tasks
 
 ### Movies
 
@@ -437,12 +435,12 @@ Note: you will also need to add the websocket directive to your whisparr configu
 
 - Backup Now - This option will trigger a manual backup of your Whisparr's database
 - Restore Backup - This will open a new screen to restore from a previous backup
-  - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Whisparr Zip backup
+    - By selecting Choose File this will prompt your browser to open a dialog box to restore from a Whisparr Zip backup
 
 - If you have any previous backups and would like to download them from Whisparr to be placed in a non standard location you simply can select one of these files to download them
 - Off to the right of each of the previous download you have two options.
-  - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
-  - Delete (Trashcan) - To delete a previous backup
+    - Restore (Clock Icon) - To restore from a previous backup - This will open a new window to confirm you want to restore from this backup
+    - Delete (Trashcan) - To delete a previous backup
 
 # Updates
 
@@ -463,8 +461,8 @@ Note: you will also need to add the websocket directive to your whisparr configu
 - Message - This column will tell you what message as been sent from the component from the previous column.
 - Gear Icon - This option will allow you to change how many Components/Messages are displayed per page (Default is 50)
 - Options at the top of the page
-  - Refresh - This option will refresh the current page, pulling a new events log
-  - Clear - This will clear the current events log allowing you to start from fresh
+    - Refresh - This option will refresh the current page, pulling a new events log
+    - Clear - This will clear the current events log allowing you to start from fresh
 
 # Log Files
 
@@ -473,8 +471,8 @@ Note: you will also need to add the websocket directive to your whisparr configu
 - On the top row there are several options to allow you to control your log files.
 
 - The top row on the far left there is a dropdown that will allow you to switch from Log files and Updater Log Files
-  - Log Files - The bread and butter of any support issue more on log files can be found here.
-  - Updater Log Files - This will show the log files associated with Whisparr's updater script
+    - Log Files - The bread and butter of any support issue more on log files can be found here.
+    - Updater Log Files - This will show the log files associated with Whisparr's updater script
 
 !!! info
     If you're on docker this will be empty as you should be updating by downloading a new docker image
@@ -483,6 +481,18 @@ Note: you will also need to add the websocket directive to your whisparr configu
 - Delete - This will clear all logs allowing you to start from fresh
 - File Name - This will display the file name associated with the log
 - Last Written - This is the local time that this particular log file was written to.
-  - Whisparr uses rolling log files limited to 1MB each. The current log file is always whisparr.txt, for the the other files whisparr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
-  - When Debug log level is enabled, additional whisparr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
-  - When Trace log level is enabled, additional whisparr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+    - Whisparr uses rolling log files limited to 1MB each. The current log file is always whisparr.txt, for the the other files whisparr.0.txt is the next newest (the higher the number the older it is) up to 51 log files total. This log file contains `fatal`, `error`, `warn`, and `info` entries.
+    - When Debug log level is enabled, additional whisparr.debug.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, and `debug` entries. It usually covers a ~40h period.
+    - When Trace log level is enabled, additional whisparr.trace.txt rolling log files will be present, up to 51 files. This log files contains `fatal`, `error`, `warn`, `info`, `debug`, and `trace` entries. Due to trace verbosity it only covers a couple of hours at most.
+
+# Unsupported legacy build health checks
+
+These health checks only appear on unsupported, end-of-life builds (legacy Mono or x86, before the switch to .NET) and are not present in current releases. If you see one of them, your install is on an unsupported build. [Update to a supported release](faq.md#how-do-i-update-whisparr).
+
+## Mono Legacy TLS enabled
+
+Unsupported legacy mono build. [Update to a supported release](faq.md#how-do-i-update-whisparr).
+
+## Mono and x86 builds are ending
+
+Unsupported legacy mono or x86 build. [Update to a supported release](faq.md#how-do-i-update-whisparr).
