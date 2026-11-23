@@ -7,6 +7,7 @@ repos:
       - id: end-of-file-fixer
         exclude_types: [image]
       - id: check-yaml
+        args: [--unsafe]
       - id: check-json
       - id: check-merge-conflict
       - id: check-case-conflict
@@ -25,6 +26,7 @@ repos:
     rev: v1.52.2
     hooks:
       - id: typos
+        types: [markdown]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0

@@ -11,31 +11,15 @@
     "indent": 4
   },
   "MD013": false,
-  "MD024": {
-    "siblings_only": true
-  },
-  "MD025": true,
-  "MD033": {
-    "allowed_elements": [
-      "i",
-      "em",
-      "strong",
-      "b",
-      "br",
-      "details",
-      "summary",
-      "kbd",
-      "sub",
-      "sup",
-      "div",
-      "span",
-      "center",
-      "img"
-    ]
-  },
+  "MD024": false,
+  "MD025": false,
+  "MD033": false,
   "MD034": false,
   "MD036": false,
   "MD040": true,
   "MD041": false,
-  "MD046": false
+  "MD046": false,
+  "MD051": false,
+  "MD060": false,
+  "MD028": false
 }

@@ -1,7 +1,3 @@
-[default]
-# Only check markdown files
-extend-glob = ["*.md"]
-
 [default.extend-words]
 # Technical terms and proper nouns commonly used in the Servarr ecosystem
 api = "api"
@@ -21,6 +17,7 @@ aling = "aling" # tracker
 broadcas = "broadcas" # Part of tracker name BroadcasTheNet
 hda = "hda" # Tracker acronym
 nam = "nam" # Part of "Viet Nam"
+rin = "rin" # Part of tracker name RinTor
 searchin = "searchin" # API field name
 tey = "tey" # Part of tracker name PTTey
 titel = "titel" # German word for "title" used in examples
