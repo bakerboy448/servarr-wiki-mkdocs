@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://wiki.servarr.com/sitemap.xml
+Disallow: /

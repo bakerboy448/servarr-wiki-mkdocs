@@ -1,7 +1,7 @@
 site_name: Servarr Wiki
-site_description: Official wiki for Lidarr, Radarr, Readarr, Sonarr, Whisparr, and Prowlarr
+site_description: Unofficial preview of the Servarr wiki for Lidarr, Radarr, Readarr, Sonarr, Whisparr, and Prowlarr
 site_author: Servarr
-site_url: https://bakerboy448.github.io/servarr-wiki-mkdocs/
+site_url: https://servarrwiki.bakerflix.xyz/
 repo_url: https://github.com/bakerboy448/servarr-wiki-mkdocs
 repo_name: bakerboy448/servarr-wiki-mkdocs
 edit_uri: edit/main/docs/
@@ -29,6 +29,7 @@ validation:
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - scheme: slate
       primary: indigo
