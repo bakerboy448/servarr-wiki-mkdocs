@@ -56,9 +56,6 @@ if [[ -f "$TMP/dbrecover.gif" ]]; then
   cp -a "$TMP/dbrecover.gif" "$ROOT/dbrecover.gif"
   cp -a "$TMP/dbrecover.gif" "$ROOT/docs/dbrecover.gif"
 fi
-if [[ -f "$TMP/.typos.toml" ]]; then
-  cp -a "$TMP/.typos.toml" "$ROOT/.typos.toml"
-fi
 
 # App-scoped binary assets (e.g. lidarr/images/*.png) live beside markdown upstream
 for app in lidarr radarr readarr sonarr whisparr prowlarr; do
